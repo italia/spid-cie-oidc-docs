@@ -1,0 +1,14 @@
+# Jekyll
+Gemfile.lock
+_site
+.jekyll-metadata
+
+# Mac generic
+.DS_Store
+
+# Windows generic
+Thumbs.db
+
+# Swap files
+*.swp
+html

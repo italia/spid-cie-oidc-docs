@@ -1,0 +1,11 @@
+document:
+  name: SPID/CIE OIDC Regole tecniche
+  description: |
+    Regole tecniche OIDC per i sistemi nazionali di Identità Digitale.
+  tags:
+    - standard 
+    - interoperabilità
+    - spid
+    - cie
+    - oidc
+  

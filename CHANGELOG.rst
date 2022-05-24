@@ -1,0 +1,22 @@
+Changelog
+=========
+
+All notable changes to this project will be documented in this file.
+
+[initial]
+-------------------------
+
+Added
+~~~~~
+
+-  ...
+
+Changed
+~~~~~~~
+
+-  ...
+
+Removed
+~~~~~~~
+
+-  ...
