@@ -1,14 +1,11 @@
-Regole Tecniche SID/CIE OIDC
+Regole Tecniche SPID/CIE OIDC
 ==============================
 
 TODO: ....
   
 e molte altre informazioni rilevanti.
 
-Changelog
----------
-
-- ...
+CHANGELOG.rst
 
 
 Link utili
