@@ -1,0 +1,4 @@
+Introspection endpoint
+======================
+
+testo
