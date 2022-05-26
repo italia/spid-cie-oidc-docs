@@ -1,0 +1,4 @@
+Revocation endpoint
+===================
+
+testo
