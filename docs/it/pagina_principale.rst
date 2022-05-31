@@ -1,7 +1,6 @@
-Introduzione
-============
+Pagina principale
+=================
 
-Affinché le parti si riconoscano all’interno della medesima Federazione delle identità è necessario che ognuna di queste ottenga la prova della reciproca aderenza ad un medesimo quadro regolatorio. Le parti ottengono i metadati gli uni degli altri,  contenenti le chiavi pubbliche per le operazioni di firma digitale e criptazione e le definizioni necessarie all'interscambio delle informazioni, secondo le regole prestabilite.
 
 Changelog
 ---------

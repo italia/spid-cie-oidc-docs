@@ -11,7 +11,7 @@ Indice dei contenuti
 .. toctree:: 
    :maxdepth: 2
 
-   introduzione.rst
+   pagina_principale.rst
    come_iniziare.rst
    la_federazione_delle_identita.rst
    metadata_oidc.rst
