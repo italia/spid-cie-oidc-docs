@@ -59,11 +59,11 @@ L’unico metodo di autenticazione all’endpoint token previsto è il private_k
      - Descrizione
      - Valori ammessi
      - Obbligatorio
-   * - client_id
+   * - **client_id**
      - URI che identifica univocamente il RP come da Registro SPID 
      - 
      - SI
-   * - client_assertion
+   * - **client_assertion**
      - JWT firmato con la chiave privata del Relying Party contenente i seguenti parametri: 
 	 
 	 **iss**: Identificatore del RP registrato presso gli OP e che contraddistingue univocamente l’entità nella federazione nel formato Uniform Resource Locator (URL); corrisponde al client_id usato nella richiesta di autenticazione 
@@ -79,26 +79,26 @@ L’unico metodo di autenticazione all’endpoint token previsto è il private_k
 	 **jti**: Identificatore univoco per questa richiesta di autenticazione, generato dal client casualmente con almeno 128bit di entropia.
      -
      - SI
-   * - client_assertion_type
+   * - **client_assertion_type**
      -  
      - Deve assumere il seguente valore: **urn:ietf:params:oauth:client-assertion-type:jwtbearer**
      - SI
-   * - code
+   * - **code**
      - Codice di autorizzazione restituito nell’Authentication response.
      - 
      - Solo se **grant_type** è **authorization_code**
-   * - code_verifier
+   * - **code_verifier**
      - Codice di verifica del code_challenge 
      - 
      - Solo se **grant_type** è **authorization_code** 
-   * - grant_type
+   * - **grant_type**
      - Tipo di credenziale presentata dal Client per la richiesta corrente.
      - Può assumere uno dei seguenti valori: 
 	 
 	 **authorization_code** 
 	 **refresh_token**
      - SI
-   * - refresh_token
+   * - **refresh_token**
      -
      - 
      - Solo se **grant_type** è **refresh_code**   
@@ -136,7 +136,7 @@ L’ID Token deve essere formato secondo le indicazioni del paragrafo successivo
    * - **token_type**
      - Tipo di *access token* restituito.
      - Deve essere valorizzato sempre con **Bearer**
-   * - refresh_token
+   * - **refresh_token**
      - Il *refresh token*, in formato JWT firmato, consente di chiamare nuovamente il Token Endpoint per ottenere un nuovo *access token* e quindi recuperare una sessione lunga revocabile.
      - 
    * - **expires_in**
