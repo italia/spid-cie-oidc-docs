@@ -1,8 +1,6 @@
 La Federazione delle identità
 =============================
 
-testo
-
 
 Che cos'è una Federazione
 -------------------------
@@ -18,7 +16,8 @@ Come le parti stabiliscono la fiducia tra di loro
 Affinché le parti si riconoscano all’interno della medesima Federazione delle identità, è necessario che ognuna di queste ottenga la prova della reciproca aderenza ad un medesimo quadro regolatorio. Le parti ottengono i metadati gli uni degli altri, contenenti le chiavi pubbliche per le operazioni di firma digitale e criptazione e le definizioni necessarie all'interscambio delle informazioni, secondo le regole prestabilite.
 
 
-OIDC Federation (usare regole tecniche SPID e CIE - riportare le sezioni e le illustrazioni)
---------------------------------------------------------------------------------------------
+OIDC Federation 
+---------------
 
-testo
+(usare regole tecniche SPID e CIE - riportare le sezioni e le illustrazioni)
+TODO
