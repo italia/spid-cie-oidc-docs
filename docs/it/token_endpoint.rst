@@ -130,19 +130,19 @@ L’ID Token deve essere formato secondo le indicazioni del paragrafo successivo
    * - Parametro
      - Descrizione
      - Valori ammessi
-   * - access_token
+   * - **access_token**
      - L’access token, in formato JWT firmato, consente l’accesso allo UserInfo endpoint per ottenere gli attributi.
      - 
-   * - token_type
+   * - **token_type**
      - Tipo di *access token* restituito.
      - Deve essere valorizzato sempre con **Bearer**
    * - refresh_token
      - Il *refresh token*, in formato JWT firmato, consente di chiamare nuovamente il Token Endpoint per ottenere un nuovo *access token* e quindi recuperare una sessione lunga revocabile.
      - 
-   * - expires_in
+   * - **expires_in**
      - Scadenza dell’*access token*, in secondi
      - Secondo le modalità definite dall’Agenzia per l’Italia Digitale.
-   * - id_token
+   * - **id_token**
      - ID Token in formato JWT (v. paragrafo dedicato)
      - 
     
