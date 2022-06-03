@@ -112,7 +112,7 @@ L’oggetto request DEVE essere un token JWT firmato, secondo le modalità defin
      - Lista di codici RFC5646 separati da spazi.
      - NO	 
 
-*Riferimenti:*::
+.. seealso::
 
  - https://openid.net/specs/openid-connect-core-1_0.html#FormSerialization
  - https://openid.net/specs/openid-connect-core-1_0.html#AuthRequest
@@ -136,7 +136,7 @@ attributi elencati sotto "userinfo" sono disponibili al momento della chiamata a
  }
 
 
-*Riferimenti:*::
+.. seealso::
 
  - https://openid.net/specs/openid-connect-core-1_0.html#IndividualClaimsRequests
 
@@ -152,7 +152,7 @@ Il *code verifier* e il *code challenge* devono essere generati secondo le modal
 dall’Agenzia per l’Italia Digitale
 
 
-*Riferimenti:*::
+.. seealso::
 
  - https://openid.net/specs/openid-igov-oauth2-1_0-03.html#rfc.section.3.1.7
  - https://tools.ietf.org/html/rfc7636
