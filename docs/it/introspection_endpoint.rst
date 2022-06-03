@@ -3,9 +3,7 @@ Introspection Endpoint (verifica validità token)
 
 L’Introspection Endpoint esposto dall’OP consente ai RP di ottenere informazioni su un token in loro possesso, come ad esempio la sua validità.
 
-**Riferimenti:**
-
-.. code-block::
+.. seealso::
 
  - https://tools.ietf.org/html/rfc7662
  - https://openid.net/specs/openid-igov-oauth2-1_0-03.html#rfc.section.3.2.2
@@ -151,9 +149,7 @@ Di seguito i codici di errore:
 Eventuali ulteriori codici di errore possono essere definiti dall’Agenzia per l’Italia Digitale con
 proprio atto. 
 
-**Riferimenti:**
-
-.. code-block:: 
+.. seealso:: 
 
  - https://tools.ietf.org/html/rfc7662#section-2.3
 

@@ -7,9 +7,7 @@ Quando l’utente esegue il logout o quando la sua sessione presso il RP scade (
 
 L’OP dovrà revocare il token specificato nella richiesta e dovrà terminare la sessione di Single Sign-On se ancora attiva. Eventuali altri token attivi per l’utente dovranno invece essere mantenuti validi.
 
-**Riferimenti:**
-
-.. code-block::
+.. seealso::
 
  - https://tools.ietf.org/html/rfc7009
  

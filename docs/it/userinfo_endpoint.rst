@@ -10,7 +10,7 @@ Lo UserInfo Endpoint deve supportare l’uso del solo metodo HTTP GET [RFC2616],
  GET https://op.spid.agid.gov.it/userinfo
   Authorization: Bearer dC34Pf6kdG
   
-*Riferimenti:*::
+.. seealso::
 
  - https://openid.net/specs/openid-connect-core-1_0.html#UserInfo
  - https://openid.net/specs/openid-igov-openid-connect-1_0-03.html#rfc.section.4
@@ -67,6 +67,6 @@ Il payload del JWT è un JSON contenente i seguenti parametri:
 
 In caso di errore di autenticazione, lo UserInfo Endpoint restituisce un errore HTTP in accordo con quanto indicato nel par. 5.3.3., “UserInfo Error Response” di “OpenID Connect Core 1.0”.
 
-**Riferimenti:**::
+.. seealso::
 
  - https://openid.net/specs/openid-connect-core-1_0.html#UserInfoError
