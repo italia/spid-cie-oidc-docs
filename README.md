@@ -34,6 +34,7 @@ piattaforma di riferimento per visualizzare questo standard.
 ## Developers
 
 ````
+pip install -r requirements.txt
 sphinx-build -b html -d html/it/doctrees docs/it/  html/it
 ````
 
