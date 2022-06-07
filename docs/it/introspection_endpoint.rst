@@ -75,7 +75,7 @@ L’Introspection Endpoint risponde con un oggetto JSON definito come segue.
   "scope": "foo bar",
   "exp": 1519033149,
   "sub": "OP-1234567890",
-  "client_id": https://rp.agid.gov.it/
+  "client_id": "https://rp.agid.gov.it/"
   "iss": "https://op.spid.agid.gov.it/",
   "aud": "https://rp.spid.agid.gov.it/auth",
  }
