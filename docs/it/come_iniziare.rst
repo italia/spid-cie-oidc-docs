@@ -2,22 +2,22 @@ Come iniziare
 =============
 
 
-Introduzione e scopo di questa documentazione
----------------------------------------------
+Introduzione
+------------
 
-Questo documento definisce le regole di funzionamento della Federazione OpenID Connect SPID per Fornitori di Servizio pubblici e privati (RP), Identity Providers (OP) e Soggetti Aggregatori (SA). Definisce inoltre gli schemi dei metadati di RP, OP e SA in contesto Federativo, le modalità di registrazione dei RP presso gli OP, le risorse e gli endpoint a supporto della Federazione.
+Questo documento definisce le regole di funzionamento della Federazione OpenID Connect SPID (link alla pagina ufficiale) e CIE id (link alla pagina ufficiale) per Fornitori di Servizio pubblici e privati (RP), Identity Providers (OP) e Soggetti Aggregatori (SA). Definisce inoltre gli schemi dei metadati di RP, OP e SA in contesto Federativo, le modalità di registrazione dei RP presso gli OP, le risorse e gli endpoint a supporto della Federazione.
 
 
 Che cosa sono le identità digitali
 ----------------------------------
 
-Grazie all’`identità digitale <https://identitadigitale.gov.it/>`_, la Pubblica Amministrazione fornisce la chiave per accedere ai servizi online attraverso una credenziale unica, che si attiva una sola volta ed è sempre valida.
+Grazie all’`identità digitale <https://identitadigitale.gov.it/>`_, la Pubblica Amministrazione e i fornitori di servizi privati forniscono la chiave per accedere ai servizi online attraverso una credenziale unica, che si attiva una sola volta ed è sempre valida.
 
 Semplice, veloce e sicuro, l’accesso ai servizi pubblici online è possibile con il `Sistema Pubblico di Identità Digitale (SPID) <https://www.spid.gov.it/>`_ e la `Carta d’Identità Elettronica (CIE) <https://www.cartaidentita.interno.gov.it/>`_. SPID e CIE sono gli strumenti di identificazione per accedere ai servizi online della PA e ai servizi dei privati aderenti.
 
-Tutte le pubbliche amministrazioni devono integrare nei propri sistemi informativi SPID e CIE, come unici sistemi di identità digitale per l'accesso ai servizi digitali, abbandonando le vecchie credenziali. Grazie a SPID e CIE diventa uniforme l’accesso ai servizi pubblici in tutto il territorio nazionale.
+Grazie a SPID e CIE id diventa uniforme l’accesso ai servizi pubblici in tutto il territorio nazionale.
 
-Secondo l’`articolo 65 <https://docs.italia.it/italia/piano-triennale-ict/codice-amministrazione-digitale-docs/it/v2021-07-30/_rst/capo_V-sezione_III-articolo_65.html>`_ del Codice dell’Amministrazione digitale, i cittadini possono presentare per via telematica istanze e dichiarazioni alla Pubblica Amministrazione esclusivamente identificandosi attraverso SPID, CIE o CNS. In questo caso le istanze e dichiarazioni sono equivalenti alle istanze e alle dichiarazioni sottoscritte con firma autografa apposta in presenza del dipendente addetto al procedimento.
+Si rimanda al Codice dell'`Amministrazione Digitale <https://docs.italia.it/italia/piano-triennale-ict/codice-amministrazione-digitale-docs/it/v2021-07-30/_rst/capo_V-sezione_III-articolo_65.html>`_ in relazione agli obblighi di adozione dei sistemi di identità digitale.
 
 
 Acronimi IAM e AAI
@@ -29,44 +29,44 @@ In questa sezione sono definiti tutti gli acronimi utilizzati all’interno del 
     :widths: 15 85
     :header-rows: 0
 
-    * - AdF
+    * - **AdF**
       - Autorità di Federazione, che è AgID
-    * - OIDC
+    * - **OIDC**
       - OpenID Connect
-    * - OIDC-FED
+    * - **OIDC-FED**
       - OIDC Federation 1.0
-    * - IOF
+    * - **IOF**
       - Italian OIDC Federation 1.0
-    * - SPID
+    * - **SPID**
       - Sistema Pubblico di Identità Digitale
-    * - AgID
+    * - **AgID**
       - Agenzia per l’Italia Digitale
-    * - SA
+    * - **SA**
       - Soggetti Aggregatori
-    * - TA
+    * - **TA**
       - OIDC Federation Trust Anchor
-    * - OP
+    * - **OP**
       - OpenID Provider
-    * - RP
+    * - **RP**
       - Relying Party	
-    * - AA
+    * - **AA**
       - Attribute Authority, OAuth Resource Server, Gestore degli Attributi qualificati
-    * - TM
+    * - **TM**
       - Trust Mark
-    * - EC
+    * - **EC**
       - Entity Configuration
-    * - ES
+    * - **ES**
       - Entity Statement
-    * - URL
+    * - **URL**
       - Uniform Resource Locator, corrispondente ad un indirizzo web
-    * - JWT
-      - Vedi [RFC7519]	
+    * - **JWT**
+      - Vedi `[RFC7519] <https://datatracker.ietf.org/doc/html/rfc7519>`_ Jones, M., Bradley, J. and N. Sakimura, "JSON Web Token (JWT)", RFC 7519, DOI 10.17487/RFC7519, May 2015.	
 
 
 Termini utilizzati
 ------------------
 
-Seguono i termini utilizzati da [OIDC-FED#Section_1.2] e in questo documento
+Seguono i termini utilizzati da `[OIDC-FED#Section_1.2] <https://openid.net/specs/openid-connect-federation-1_0.html#rfc.section.1.2>`_ e in questo documento
 
 .. list-table::
     :widths: 15 85
@@ -100,47 +100,47 @@ Standard di riferimento
     :widths: 25 75
     :header-rows: 0
 
-    * - [SPID-OIDC-CORE]
-      - Linee Guida per OpenID Connect in SPID
-    * - [OIDC-FED]
-      - OpenID Connect Federation 1.0
-    * - [LG-AA]
+    * - `[SPID-OIDC-CORE] <https://www.agid.gov.it/sites/default/files/repository_files/linee_guida_openid_connect_in_spid.pdf>`_
+      - Linee Guida per OpenID Connect in SPID 
+    * - `[OIDC-FED] <https://openid.net/specs/openid-connect-federation-1_0.html>`_
+      - OpenID Connect Federation 1.0 
+    * - `[LG-AA] <https://docs.italia.it/AgID/documenti-in-consultazione/lg-spid-attribute-authority-docs/it/master/index.html>`_
       - Attribute Authority Guidelines – “Linee Guida Attribute Authority SPID” 
-    * - [OpenID.Core]
+    * - `[OpenID.Core] <https://openid.net/specs/openid-connect-core-1_0-27.html>`_
       - Sakimura, N., Bradley, J., Jones, M., de Medeiros, B. and C. Mortimore, "OpenID Connect Core 1.0", August 2015.
-    * - [OpenID.Registration]
+    * - `[OpenID.Registration] <https://openid.net/specs/openid-connect-registration-1_0.html>`_
       - Sakimura, N., Bradley, J., and M. Jones, “OpenID Connect Dynamic Client Registration 1.0,” November 2014.
-    * - [OpenID.Discovery]
+    * - `[OpenID.Discovery] <https://openid.net/specs/openid-connect-discovery-1_0.html>`_
       - Sakimura, N., Bradley, J., Jones, M., and E. Jay, “OpenID Connect Discovery 1.0,” November 2014.
-    * - [RFC2119]
+    * - `[RFC2119] <https://datatracker.ietf.org/doc/html/rfc2119>`_
       - Bradner, S., “Key words for use in RFCs to Indicate Requirement Levels,” BCP 14, RFC 2119, March 1997.
-    * - [RFC7515]
+    * - `[RFC7515] <https://datatracker.ietf.org/doc/html/rfc7515>`_
       - Jones, M., Bradley, J. and N. Sakimura, "JSON Web Signature (JWS)", RFC 7515, DOI 10.17487/RFC7515, May 2015.
-    * - [RFC7517]
+    * - `[RFC7517] <https://datatracker.ietf.org/doc/html/rfc7517>`_
       - Jones, M., "JSON Web Key (JWK)", RFC 7517, DOI 10.17487/RFC7517, May 2015.
-    * - [RFC7519]
+    * - `[RFC7519] <https://datatracker.ietf.org/doc/html/rfc7519>`_
       - Jones, M., Bradley, J. and N. Sakimura, "JSON Web Token (JWT)", RFC 7519, DOI 10.17487/RFC7519, May 2015.
-    * - [RFC8174]
+    * - `[RFC8174] <https://datatracker.ietf.org/doc/html/rfc8174>`_
       - Leiba, B., "Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words", RFC 8174, DOI 10.17487/RFC8174, May 2017.
-    * - [RFC3339]
+    * - `[RFC3339] <https://www.ietf.org/rfc/rfc3339.txt>`_
       - Klyne, G. and C. Newman, "Date and Time on the Internet: Timestamps", RFC 3339, DOI 10.17487/RFC3339, July 2002.
-    * - [RFC8414]
+    * - `[RFC8414] <https://datatracker.ietf.org/doc/html/rfc8414>`_
       - Jones, M., Sakimura, N., and J. Bradley, "OAuth 2.0 Authorization Server Metadata", RFC 8414, DOI 10.17487/RFC8414, June 2018.
-    * - [RFC7591]
+    * - `[RFC7591] <https://datatracker.ietf.org/doc/html/rfc7591>`_
       - Richer, J., Ed., Jones, M., Bradley, J., Machulak, M., and P. Hunt, "OAuth 2.0 Dynamic Client Registration Protocol", RFC 7591, DOI 10.17487/RFC7591, July 2015.
-    * - [RFC3986]
+    * - `[RFC3986] <https://www.ietf.org/rfc/rfc2396.txt#:~:text=A%20Uniform%20Resource%20Identifier%20(URI,RFC%201738%20and%20RFC%201808.>`_
       - Uniform Resource Identifier (URI): Generic Syntax
-    * - [EN319-412-1]
+    * - `[EN319-412-1] <https://www.etsi.org/deliver/etsi_en/319400_319499/31941202/02.02.01_60/en_31941202v020201p.pdf>`_
       - Electronic Signatures and Infrastructures (ESI); Certificate Profiles;
-    * - [DM-CIE]
+    * - `[DM-CIE] <https://www.gazzettaufficiale.it/eli/id/2015/12/30/15A09809/sg>`_
       - DM 23 December 2015 n.210: “Modalità tecniche di emissione della Carta d’identità elettronica.” (15A09809) (GU Serie Generale n.302 30-12-2015)
-    * - [CAD]
+    * - `[CAD] <https://www.gazzettaufficiale.it/eli/gu/2005/05/16/112/so/93/sg/pdf>`_
       - DL 7 March 2005 n.82: “Codice dell'amministrazione digitale.” (GU Serie Generale n.112 16-05-2005 - Suppl. Ordinario n. 93)
-    * - [DL-SEMPLIFICAZIONI]
+    * - `[DL-SEMPLIFICAZIONI] <https://www.gazzettaufficiale.it/eli/id/2020/09/14/20G00139/sg>`_
       - DL 16 July 2020 n.76: “Misure urgenti per la semplificazione e l'innovazione digitale.” (20A04921) (GU Serie Generale n.228 14-09-2020 - Suppl. Ordinario n. 33) and its conversion into Law, with amendments, Law 11 September 2020 n. 120.
-    * - [EIDAS]
+    * - `[EIDAS] <https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv%3AOJ.L_.2014.257.01.0073.01.ENG>`_
       - Regulation (Eu) No 910/2014 of the European Parliament and of the Council 23 July 2014 “on electronic identification and trust services for electronic transactions in the internal market and repealing Directive 1999/93/EC.”
-    * - [SPID-OIDC]
+    * - `[SPID-OIDC] <https://www.agid.gov.it/sites/default/files/repository_files/linee_guida_openid_connect_in_spid.pdf>`_
       - AgID Guidelines: “Linee Guida OpenID Connect in SPID”
     * - [CIE-OIDC-FED]
       - CIE OIDC Federation – at the writing stage

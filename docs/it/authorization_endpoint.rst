@@ -1,3 +1,5 @@
+.. include:: ./common_definitions.rst
+
 Authorization Endpoint (Authentication Request)
 ===============================================
 
@@ -9,9 +11,12 @@ I parametri **client_id**, **response_type** e **scope** devono essere trasmessi
 
 L’oggetto request DEVE essere un token JWT firmato, secondo le modalità definite dall’Agenzia per l’Italia Digitale. 
 
+.. warning::
+    |warning-message|
+
 **Esempio (chiamata HTTP):**::
 
- https://op.spid.agid.gov.it/auth?client_id=https%3A%2F%2Frp.spid.agid.gov.it&
+ GET /auth?client_id=https://rp.spid.agid.gov.it&
  response_type=code&scope=openid& code_challenge=qWJlMe0xdbXrKxTm72EpH659bUxAxw80&
  code_challenge_method=S256&request=eyJhbGciOiJSUzI1NiIsImtpZCI6ImsyYmRjIn0.ew0KIC
  Jpc3MiOiAiczZCaGRSa3F0MyIsDQogImF1ZCI6ICJodHRwczovL3NlcnZlci5leGFtcGxlLmNvbSIsDQo
@@ -20,32 +25,34 @@ L’oggetto request DEVE essere un token JWT firmato, secondo le modalità defin
  GUiOiAib3BlbmlkIiwNCiAic3RhdGUiOiAiYWYwaWZqc2xka2oiLA0KICJub25jZSI6ICJuLTBTNl9Xek
  EyTWoiLA0KICJtYXhfYWdlIjogODY0MDAsDQogImNsYWltcyI6IA0KICB7DQogICAidXNlcmluZm8iOiA
  NCiAgICB7DQogICAgICJnaXZlbl9uYW1lIjogeyJlc3NlbnRpYWwiOiB0cnVlfSwNCiAgICAgI…
+
+ Host: https://op.spid.agid.gov.it
+ HTTP/1.1
  
-**Esempio (contenuto del JWT):**::
+**Esempio (contenuto del JWT):**:: 
 
  {
-     client_id=https%3A%2F%2Frp.spid.agid.gov.it
-     response_type=code
-     scope=openid
-     code_challenge=qWJlMe0xdbXrKxTm72EpH659bUxAxw80
-     code_challenge_method=S256
-     nonce=MBzGqyf9QytD28eupyWhSqMj78WNqpc2
-     prompt=login
-     redirect_uri=https%3A%2F%2Frp.spid.agid.gov.it%2Fcallback1%2F
-     acr_values=https://www.spid.gov.it/SpidL1 https://www.spid.gov.it/SpidL2
-     claims={
-             "id_token":{
-                         "nbf": { essential: true},
-                         jti": { essential: true }
-                        },
-             "userinfo":{
-                         "https://attributes.spid.gov.it/name": null,
-                         "https://attributes.spid.gov.it/familyName": null
-                        },
-            }
-  state=fyZiOL9Lf2CeKuNT2JzxiLRDink0uPcd
+      client_id=https://rp.spid.agid.gov.it
+      response_type=code
+      scope=openid
+      code_challenge=qWJlMe0xdbXrKxTm72EpH659bUxAxw80
+      code_challenge_method=S256
+      nonce=MBzGqyf9QytD28eupyWhSqMj78WNqpc2
+      prompt=login
+      redirect_uri=https%3A%2F%2Frp.spid.agid.gov.it%2Fcallback1%2F
+      acr_values=https://www.spid.gov.it/SpidL1 https://www.spid.gov.it/SpidL2
+      claims={
+          "id_token": {
+              "nbf": { essential: true },
+              "jti": { essential: true }
+          },
+          "userinfo": {
+              "https://attributes.spid.gov.it/name": null,
+              "https://attributes.spid.gov.it/familyName": null
+          },
+      }
+      state=fyZiOL9Lf2CeKuNT2JzxiLRDink0uPcd
  }
-
 
 .. list-table:: 
    :widths: 25 25 25 25
@@ -58,19 +65,19 @@ L’oggetto request DEVE essere un token JWT firmato, secondo le modalità defin
    * - **client_id**
      - URI che identifica univocamente il RP come da Registro SPID 
      - Deve corrispondere ad un valore nel Registro SPID.
-     - SI
+     - |check-icon|
    * - **code_challenge**
      - Un challenge per PKCE da riportare anche nella successiva richiesta al Token endpoint.
      - V. paragrafo "Generazione del code_challenge per PKCE"
-     - SI
+     - |check-icon|
    * - **code_challenge_method**
      - Metodo di costruzione del challenge PKCE
      - È obbligatorio specificare il valore **S256**
-     - SI
+     - |check-icon|
    * - **nonce**
      - Valore che serve ad evitare attacchi Reply, generato casualmente e non prevedibile da terzi. Questo valore sarà restituito nell’ID Token fornito dal Token Endpoint, in modo da consentire al client di verificare che sia uguale a quello inviato nella richiesta di autenticazione.
      - Stringa di almeno 32 caratteri alfanumerici.
-     - SI
+     - |check-icon|
    * - **prompt**
      - Definisce se l’OP deve occuparsi di eseguire una richiesta di autenticazione all’utente o meno
      - consent: l’OP chiederà le credenziali di autenticazione all’utente (se non è già attiva una sessione di Single Sign-On) e successivamente chiederà il consenso al trasferimento degli attributi (valore consigliato). Se è già attiva una sessione di Single Sign-On, chiederà il consenso al trasferimento degli attributi.
@@ -78,39 +85,39 @@ L’oggetto request DEVE essere un token JWT firmato, secondo le modalità defin
 	 **consent login**: l’OP chiederà sempre le credenziali di autenticazione all’utente e successivamente chiederà il consenso al trasferimento degli attributi (valore da utilizzarsi limitatamente ai casi in cui si vuole forzare la riautenticazione).
 	 
 	 **verify**: l’OP verifica la presenza dell’utente tramite una prova di autenticazione, se è già attiva una sessione di Single Sign-On, e, successivamente, chiederà il consenso al trasferimento degli attributi. Se non è già attiva una sessione di Single Sign-On, l’OP chiederà le credenziali di autenticazione all’utente e, successivamente, chiederà il consenso al trasferimento degli attributi (valore facoltativo).
-     - SI
+     - |check-icon|
    * - **redirect_uri**
      - URL dove l’OP reindirizzerà l’utente al termine del processo di autenticazione.
      - Deve essere uno degli URL indicati nel client metadata (v. paragrafo 3.2). 
-     - SI
+     - |check-icon|
    * - **response_type**
      - Il tipo di credenziali che deve restituire l’OP.
      - **code**
-     - SI
+     - |check-icon|
    * - **scope**
      - Lista degli scope richiesti.
      - **openid** (obbligatorio).
 
-       **offline_access**: se specificato, l’OP rilascerà oltre all’access token anche un refresh token necessario per instaurare sessioni lunghe revocabili. L’uso di questo valore è consentito solo se se si intende offrire all’utente una sessione lunga revocabile.
-     - SI
+       **offline_access**: se specificato, l’OP rilascerà oltre all’access token anche un refresh token necessario per instaurare sessioni lunghe revocabili. L’uso di questo valore è consentito solo se se si intende offrire all’utente una `sessione lunga revocabile <https://www.agid.gov.it/sites/default/files/repository_files/spid-avviso-n41-integrazione_ll.gg_._openid_connect_in_spid.pdf#page=6>`_.
+     - |check-icon|
    * - **acr_values**
      - Valori di riferimento della classe di contesto dell’autenticazion e richiesta. Stringa separata da uno spazio, che specifica i valori “acr” richiesti al server di autorizzazione per l’elaborazione della richiesta di autenticazione, con i valori visualizzati in ordine di preferenza. L’OP ha facoltà di utilizzare un’autenticazione ad un livello più alto di quanto richiesto. Tale scelta non deve comportare un esito negativo della richiesta.
-     - https://www.spid.gov.it/Spid L1
-       https://www.spid.gov.it/Spid L2
-       https://www.spid.gov.it/Spid L3
-     - SI
+     - https://www.spid.gov.it/SpidL1
+       https://www.spid.gov.it/SpidL2
+       https://www.spid.gov.it/SpidL3
+     - |check-icon|
    * - **claims**
      - Lista dei claims (attributi) che un RP intende richiedere.
      - v. paragrafo *Claims*
-     - SI
+     - |check-icon|
    * - **state**
      - Valore univoco utilizzato per mantenere lo stato tra la request e il callback. Questo valore verrà restituito al client nella risposta al termine dell’autenticazione. Il valore deve essere significativo esclusivamente per il RP e non deve essere intellegibile ad altri.
      - Stringa di almeno 32 caratteri alfanumerici.
-     - SI
+     - |check-icon|
    * - **ui_locales**
      - Lingue preferibili per visualizzare le pagine dell’OP. L’OP può ignorare questo parametro se non dispone di nessuna delle lingue indicate.
      - Lista di codici RFC5646 separati da spazi.
-     - NO	 
+     - |uncheck-icon|	 
 
 .. seealso::
 
@@ -131,8 +138,8 @@ attributi elencati sotto "userinfo" sono disponibili al momento della chiamata a
 
  {
     "userinfo": {
-                 "https://attributes.spid.gov.it/familyName": {"essential": true}
-                },
+        "https://attributes.spid.gov.it/familyName": {"essential": true}
+    },
  }
 
 
@@ -151,6 +158,11 @@ Quando il client contatta il Token Endpoint al termine del flusso di autenticazi
 Il *code verifier* e il *code challenge* devono essere generati secondo le modalità definite
 dall’Agenzia per l’Italia Digitale
 
+
+Esempio
+*******
+.. literalinclude :: ../../static/pkce.py
+   :language: python
 
 .. seealso::
 

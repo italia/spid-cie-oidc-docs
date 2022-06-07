@@ -1,12 +1,14 @@
+.. include:: ./common_definitions.rst
+
 Token Endpoint (richiesta token)
 ================================
 
 Il Token Endpoint rilascia *access token, ID Token e refresh token*; vi sono due scenari distinti
 in cui il client chiama il Token Endpoint:
 
- 1. al termine del flusso di autenticazione descritto nel paragrafo precedente, il Client chiama il Token Endpoint inviando l’Authorization code ricevuto dall’OP (code=usDwMnEzJPpG5oaV8x3j) per ottenere un ID Token e un access token (necessario per poi chiedere gli attributi/claim allo UserInfo Endpoint) ed eventualmente un refresh token (se è stata avviata una sessione lunga revocabile);
+ 1. al termine del flusso di autenticazione descritto nel paragrafo precedente, il Client chiama il Token Endpoint inviando l’Authorization code ricevuto dall’OP (code=usDwMnEzJPpG5oaV8x3j) per ottenere un ID Token e un access token (necessario per poi chiedere gli attributi/claim allo UserInfo Endpoint) ed eventualmente un refresh token (se è stata avviata una `sessione lunga revocabile <https://www.agid.gov.it/sites/default/files/repository_files/spid-avviso-n41-integrazione_ll.gg_._openid_connect_in_spid.pdf#page=6>`_);
 
- 2. in presenza di una sessione lunga revocabile, il Client chiama il Token Endpoint inviando il refresh token in suo possesso per ottenere un nuovo access token.
+ 2. in presenza di una `sessione lunga revocabile <https://www.agid.gov.it/sites/default/files/repository_files/spid-avviso-n41-integrazione_ll.gg_._openid_connect_in_spid.pdf#page=6>`_, il Client chiama il Token Endpoint inviando il refresh token in suo possesso per ottenere un nuovo access token.
 
 .. seealso:: 
 
@@ -20,18 +22,24 @@ Request
 
 L’unico metodo di autenticazione all’endpoint token previsto è il private_key_jwt (OIDC Connect Core 1.0 par. 9)
 
+.. warning::
+    |warning-message|
+
 **Esempio di richiesta con authorization code (caso 1)**
 
 .. code-block:: 
 
- POST https://op.spid.agid.gov.it/token?
- client_id=https%3A%2F%2Frp.spid.agid.gov.it&
+ POST /token?
+ client_id=https://rp.spid.agid.gov.it&
  client_assertion=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiw
  ibmFtZSI6IlNQSUQiLCJhZG1pbiI6dHJ1ZX0.LVyRDPVJm0S9q7oiXcYVIIqGWY0wWQlqxvFGYswL…&
  client_assertion_type=urn%3Aietf%3Aparams%3Aoauth%3Aclient-assertion-type%3Ajwtbearer&
  code=usDwMnEzJPpG5oaV8x3j&
  code_verifier=9g8S40MozM3NSqjHnhi7OnsE38jklFv2&
- grant_type=authorization_code 
+ grant_type=authorization_code
+
+ Host: https://op.spid.agid.gov.it
+ HTTP/1.1
 
 
 .. seealso::
@@ -42,13 +50,16 @@ L’unico metodo di autenticazione all’endpoint token previsto è il private_k
 
 .. code-block:: 
 
- POST https://op.spid.agid.gov.it/token?
- client_id=https%3A%2F%2Frp.spid.agid.gov.it&
+ POST /token?
+ client_id=https://rp.spid.agid.gov.it&
  client_assertion=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiw
  ibmFtZSI6IlNQSUQiLCJhZG1pbiI6dHJ1ZX0.LVyRDPVJm0S9q7oiXcYVIIqGWY0wWQlqxvFGYswL…&
  client_assertion_type=urn%3Aietf%3Aparams%3Aoauth%3Aclient-assertion-type%3Ajwtbearer&
  grant_type=refresh_token&
  refresh_token=8xLOxBtZp8
+
+ Host: https://op.spid.agid.gov.it
+ HTT/P1.1
 
  
 .. list-table:: 
@@ -62,7 +73,7 @@ L’unico metodo di autenticazione all’endpoint token previsto è il private_k
    * - **client_id**
      - URI che identifica univocamente il RP come da Registro SPID 
      - 
-     - SI
+     - |check-icon|
    * - **client_assertion**
      - JWT firmato con la chiave privata del Relying Party contenente i seguenti parametri: 
 	 
@@ -78,11 +89,11 @@ L’unico metodo di autenticazione all’endpoint token previsto è il private_k
 	 
 	 **jti**: Identificatore univoco per questa richiesta di autenticazione, generato dal client casualmente con almeno 128bit di entropia.
      -
-     - SI
+     - |check-icon|
    * - **client_assertion_type**
      -  
      - Deve assumere il seguente valore: **urn:ietf:params:oauth:client-assertion-type:jwtbearer**
-     - SI
+     - |check-icon|
    * - **code**
      - Codice di autorizzazione restituito nell’Authentication response.
      - 
@@ -97,7 +108,7 @@ L’unico metodo di autenticazione all’endpoint token previsto è il private_k
 	 
 	 **authorization_code** 
 	 **refresh_token**
-     - SI
+     - |check-icon|
    * - **refresh_token**
      -
      - 
@@ -137,7 +148,7 @@ L’ID Token deve essere formato secondo le indicazioni del paragrafo successivo
      - Tipo di *access token* restituito.
      - Deve essere valorizzato sempre con **Bearer**
    * - **refresh_token**
-     - Il *refresh token*, in formato JWT firmato, consente di chiamare nuovamente il Token Endpoint per ottenere un nuovo *access token* e quindi recuperare una sessione lunga revocabile.
+     - Il *refresh token*, in formato JWT firmato, consente di chiamare nuovamente il Token Endpoint per ottenere un nuovo *access token* e quindi recuperare una `sessione lunga revocabile <https://www.agid.gov.it/sites/default/files/repository_files/spid-avviso-n41-integrazione_ll.gg_._openid_connect_in_spid.pdf#page=6>`_.
      - 
    * - **expires_in**
      - Scadenza dell’*access token*, in secondi
