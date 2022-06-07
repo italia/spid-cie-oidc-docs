@@ -1,3 +1,5 @@
+.. include:: ./common_definitions.rst
+
 Regole Tecniche SPID/CIE OIDC
 =============================
 
@@ -23,3 +25,5 @@ Indice dei contenuti
    introspection_endpoint.rst
    revocation_endpoint.rst
    come_contribuire.rst
+   esempi.rst
+   

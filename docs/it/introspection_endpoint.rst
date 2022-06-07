@@ -1,3 +1,5 @@
+.. include:: ./common_definitions.rst
+
 Introspection Endpoint (verifica validità token) 
 ================================================
 
@@ -13,11 +15,14 @@ Request
 
 La richiesta all’Introspection Endpoint consiste nell’invio del token su cui si vogliono ottenere informazioni unitamente a una Client Assertion che consente di identificare il RP che esegue la richiesta.
 
+.. warning::
+    |warning-message|
+
 **Esempio:**
 
 .. code-block:: 
 
- POST https://op.spid.agid.gov.it/introspection?
+ POST /introspection?
  client_assertion=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiw
  ibmFtZSI6IlNQSUQiLCJhZG1pbiI6dHJ1ZX0.LVyRDPVJm0S9q7oiXcYVIIqGWY0wWQlqxvFGYswLF88…
  &
@@ -30,6 +35,9 @@ La richiesta all’Introspection Endpoint consiste nell’invio del token su cui
  RJUbdjmFFfRRW23cMbpGQCIk7Nq4L012X_1J4IewOQXXMLTyWQQ_BcBMjcW3MtPrY1AoOcfBOJPx1k2jw
  RkYtyVTLWlff6S5gKciYf3b0bAdjoQEHd_IvssIPH3xuBJkmtkrTlfWR0Q0pdpeyVePkMSI28XZvDaGnxA4j7QI5loZYeyzGR9
  h70xQLVzqwwl1P0-F_0JaDFMJFO1yl4IexfpoZZsB3HhF2vFdL6D_lLeHRyH2g2OzF59eMIsM_Ccs4G47862w…
+
+ Host: https://op.spid.agid.gov.it
+ HTTP/1.1
  
 
 .. list-table:: 
