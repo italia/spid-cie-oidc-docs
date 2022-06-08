@@ -31,4 +31,3 @@
 .. _[SPID-OIDC]: https://www.agid.gov.it/sites/default/files/repository_files/linee_guida_openid_connect_in_spid.pdf
 .. _[OIDC-FED#Section_1.2]: https://openid.net/specs/openid-connect-federation-1_0.html#rfc.section.1.2
 .. _[OIDC-FED#Section.5.1]: https://openid.net/specs/openid-connect-federation-1_0.html#rfc.section.5.1
-.. _[SPID-OIDC-CORE]: https://www.agid.gov.it/sites/default/files/repository_files/linee_guida_openid_connect_in_spid.pdf
