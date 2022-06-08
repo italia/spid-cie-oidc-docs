@@ -83,8 +83,6 @@ L’oggetto request DEVE essere un token JWT firmato, secondo le modalità defin
      - consent: l’OP chiederà le credenziali di autenticazione all’utente (se non è già attiva una sessione di Single Sign-On) e successivamente chiederà il consenso al trasferimento degli attributi (valore consigliato). Se è già attiva una sessione di Single Sign-On, chiederà il consenso al trasferimento degli attributi.
 	 
 	 **consent login**: l’OP chiederà sempre le credenziali di autenticazione all’utente e successivamente chiederà il consenso al trasferimento degli attributi (valore da utilizzarsi limitatamente ai casi in cui si vuole forzare la riautenticazione).
-	 
-	 **verify**: l’OP verifica la presenza dell’utente tramite una prova di autenticazione, se è già attiva una sessione di Single Sign-On, e, successivamente, chiederà il consenso al trasferimento degli attributi. Se non è già attiva una sessione di Single Sign-On, l’OP chiederà le credenziali di autenticazione all’utente e, successivamente, chiederà il consenso al trasferimento degli attributi (valore facoltativo).
      - |check-icon|
    * - **redirect_uri**
      - URL dove l’OP reindirizzerà l’utente al termine del processo di autenticazione.
