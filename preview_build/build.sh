@@ -2,4 +2,4 @@
 
 rm -rf ./build && \
 cp ./preview_configuration.py ./conf.py && \
-sphinx-build .. build -c .
+sphinx-build ../docs/it build -c .
