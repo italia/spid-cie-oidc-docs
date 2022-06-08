@@ -13,3 +13,5 @@ Thumbs.db
 *.swp
 html
 env
+build
+env-preview
