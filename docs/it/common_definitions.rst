@@ -21,7 +21,7 @@
 .. _[RFC8174]: https://datatracker.ietf.org/doc/html/rfc8174
 .. _[RFC3339]: https://www.ietf.org/rfc/rfc3339.txt
 .. _[RFC8414]: https://datatracker.ietf.org/doc/html/rfc8414
-.. _[RFC7591]: https://datatracker.ietf.org/doc/html/rfc7591_
+.. _[RFC7591]: https://datatracker.ietf.org/doc/html/rfc7591
 .. _[RFC3986]: https://www.ietf.org/rfc/rfc2396.txt#:~:text=A%20Uniform%20Resource%20Identifier%20(URI,RFC%201738%20and%20RFC%201808.
 .. _[EN319-412-1]: https://www.etsi.org/deliver/etsi_en/319400_319499/31941202/02.02.01_60/en_31941202v020201p.pdf
 .. _[DM-CIE]: https://www.gazzettaufficiale.it/eli/id/2015/12/30/15A09809/sg
