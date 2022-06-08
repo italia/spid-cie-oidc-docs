@@ -15,12 +15,6 @@ SPID implementa OpenID Connect Federation 1.0 ed estende alcune funzionalità de
 
 
 
-Come le parti stabiliscono la fiducia tra di loro
--------------------------------------------------
-
-Affinché le parti si riconoscano all’interno della medesima Federazione delle identità, è necessario che ognuna di queste ottenga la prova della reciproca aderenza ad un medesimo quadro regolatorio. Le parti ottengono i metadati gli uni degli altri, contenenti le chiavi pubbliche per le operazioni di firma digitale e criptazione e le definizioni necessarie all'interscambio delle informazioni, secondo le regole prestabilite.
-
-
 Entità della Federazione
 ------------------------
 
@@ -358,6 +352,8 @@ Dove il contenuto del JWT firmato all’interno del claim **trust_mark** corrisp
  }
 
 
+.. _Entity_Configuration:
+
 Entity Statement e Configuration
 --------------------------------
 
@@ -433,34 +429,173 @@ Gli oggetti Entity Configuration delle Entità di tipo Foglia contengono in aggi
         - trust_mark_issue
  
 
+Gli oggetti Entity Configuration della Federation Authority che è AgID, contiene in aggiunta ai claim comuni anche i seguenti:
 
-.. _Entity_Configuration:
+.. list-table::
+    :widths: 20 10 70
+    :header-rows: 1
 
-Entity Statement e Configuration
---------------------------------
+    * - **Nome**
+      - **Tipo**
+      - **Descrizione**
+    * - **constraints**
+      - JSON object
+      - RICHIESTO e include l’elemento max_path_length al quale viene assegnato un valore Integer. 
+        
+        Indica il numero massimo di intermediari consentiti tra una Foglia e il suo Trust Anchor.
+    * - **trust_marks_issuers**
+      - JSON array
+      - RICHIESTO. Indica quali autorità sono considerate attendibili nella federazione per l’emissione di specifici Trust Mark, questi assegnati mediante il proprio identificativo univoco.
 
-TODO
+
+Gli Entity Statement emessi dal Trust Ancor o suo Intermediario per i propri diretti discendenti, contengono in aggiunta ai claim comuni anche i seguenti:
+
+.. list-table::
+    :widths: 20 10 70
+    :header-rows: 1
+
+    * - **Nome**
+      - **Tipo**
+      - **Descrizione**
+    * - **metadata_policy**
+      - JSON object
+      - OPZIONALE. Oggetto JSON che descrive un criterio di metadati. Ogni chiave dell'oggetto JSON rappresenta un identificatore del tipo di metadati e ogni valore DEVE essere un oggetto JSON che rappresenta la politica dei metadati in base allo schema di quel tipo di metadati. Si rimanda alla specifica `[OIDC-FED#Section.5.1]`_ per i dettagli implementativi.
+    * - **trust_marks**
+      - JSON array
+      - RICHIESTO. Un array JSON contenente i Trust Mark emessi da se stesso per il soggetto discendente.
+
+
 
 
 Endpoint per Trust Anchor ed Intermediari
 -----------------------------------------
 Il Trust Anchor e i suoi Intermediari (federation_entity) DEVONO in aggiunta esporre al pubblico i seguenti endpoint:
 
+
 Fetch entity statement endpoint
 +++++++++++++++++++++++++++++++
+
 Il recupero degli Entity Statement viene effettuato presso questo endpoint secondo le modalità definite all’interno di OIDC-FED “7.1. Fetching Entity Statements”.
+
 
 .. _Trust_mark_status_endpoint:
 
 Trust mark status endpoint
 ++++++++++++++++++++++++++
+
 L’assegnazione di un Trust Mark ad un soggetto viene effettuato presso questo endpoint secondo le modalità definite all’interno di OIDC-FED “7.4. Trust Mark Status”.
+
 
 .. _Entity_Listing_endpoint:
 
 Entity Listing endpoint
 +++++++++++++++++++++++
+
 Per ottenere la lista dei discendenti registrati presso la TA o un suo Intermediario è possibile interrogare questo endpoint secondo le modalità descritte in OIDC-FED “7.3. Entity Listings”. Ai parametri esistenti già definiti nella specifica, si aggiunge per SPID il parametro entity_type come filtro sul tipo di entità dei discendenti (<entity-type>).
+
+
+
+Differenze con OIDC Federation 1.0
+----------------------------------
+
+In questa sezione sono elencate le differenze che intercorrono tra lo standard ufficiale e l’implementazione SPID.
+
+
+Client Registration
++++++++++++++++++++
+
+SPID supporta esclusivamente **automatic_client_registration**. La modalità **implicit** è da intendersi come non supportata. 
+
+
+Listing endpoint
+++++++++++++++++
+
+In SPID viene adottato il parametro aggiuntivo **entity_type** a quelli esistenti nello Standard [OIDC-FED] per questo endpoint, con lo scopo di ottenere un filtro sulla tipologia delle entità discendenti. Questa esigenza consente nello specifico di filtrare entità di tipo **federation_entity**, **openid_relying_party**, **openid_provider** e **oauth_resource**.
+
+
+Trust Mark
+++++++++++
+
+In OIDC-FED l’uso dei Trust Mark non è obbligatorio. In SPID piuttosto l’esposizione dei Trust Mark è obbligatoria. Per approfondimenti sulla ragione dell’obbligo dei Trust Mark si rimanda alla sezione :ref:`Considerazioni di Sicurezza<Considerazioni_di_Sicurezza>`.
+
+
+Claim non supportati negli Entity Statement
++++++++++++++++++++++++++++++++++++++++++++
+
+Poiché SPID non necessita di alcun claim aggiuntivo in ambito federativo, non necessita dei claim crit. Inoltre non sono supportati i claim **aud**, **naming_constraints**, **policy_language_crit** e **trust_anchor_id**. L’eventuale presenza di questi claim non presenta alcuna implicazione, questi verranno semplicemente ignorati fino ad ulteriori avvisi che li normino.
+
+
+
+.. _Considerazioni_di_Sicurezza:
+
+Considerazioni di Sicurezza
+---------------------------
+
+In questa sezione descriviamo alcune considerazioni di sicurezza in ambito OIDC Federation.
+
+
+Trust Mark come deterrente contro gli abusi
++++++++++++++++++++++++++++++++++++++++++++
+
+L’implementazione dei Trust Mark e il filtro su questi in fase di Metadata Discovery risulta necessario contro gli attacchi destinati al consumo delle risorse. Un OP attaccato con un numero ingente di connessioni presso il suo endpoint di *authorization*, contenenti **client_id** e **authority_hints** fasulli, produrrebbe svariate connessioni verso sistemi di terze parti nel tentativo di trovare un percorso verso la TA e instaurare la fiducia con il richiedente.
+
+L’OP DEVE validare staticamente il TM oppure DEVE escludere a priori la richiesta ove il TM non risultasse presente, in caso di assenza o non validità di un TM la procedura di Metadata Discovery NON DEVE essere avviata e NON DEVE creare di conseguenza connessioni verso sistemi di terze parti.
+
+
+Numero Massimo di authority_hints
++++++++++++++++++++++++++++++++++
+
+All’interno di una Federazione il Trust Anchor decide quante intermediazioni consentire tra di lui e le Foglie, mediante la constraint denominata **max_path_lenght**. Questo tipo di relazione è di tipo verticale, dalla foglia alla radice. Questo attributo se valorizzato ad esempio con un valore numerico intero pari a 1 indica che soltanto un SA è consentito tra una Foglia e il TA.
+
+Ogni Foglia DEVE pubblicare i suoi superiori all’interno della lista contenuta nel claim **authority_hints**. Una Foglia all’interno della Federazione PUÒ avere superiori afferenti a diverse Federazioni, si pensi a CIE id per esempio. L’analisi dei superiori disponibili introduce un modello di navigazione orizzontale, ad esempio un OP tenta di trovare il percorso più breve verso il Trust Anchor attraverso tutti gli URL contenuti all’interno dell’array **authority_hints** prima di fare un ulteriore movimento verticale, a salire, verso uno degli Intermediari presenti in questo array.
+
+La soglia **max_path_lenght** si applica per la navigazione verticale e superata questa soglia senza aver trovato il TA la procedura di Metadata Discovery DEVE essere interrotta. Si faccia l’esempio di un RP discendente di un 1 SA che quest’ultimo a sua volta è discendente di  un altro SA, essendo il valore di **max_path_lenght** pari a uno e superata questa soglia senza aver trovato il Trust Anchor, la procedura DEVE essere interrotta.
+
+Allo stesso tempo la specifica OIDC Federation 1.0 non definisce un limite per il numero di **authority_hints**, questo perché nessun Trust Anchor può limitare il numero di Federazioni alle quali un partecipante può aderire. Per questa ragione è utile che gli implementatori adottino un limite massimo del numero di elementi consentiti all’interno dell’Array authority_hint. Questo per evitare che un numero esagerato di URL contenuti nella lista di **authority_hints**, dovuto ad una cattiva configurazione di una Foglia, produca un consumo di risorse eccessivo.
+
+Resolve Entity Statement
+++++++++++++++++++++++++
+
+Questo endpoint DEVE rilasciare i metadata, i Trust Marks e la Trust Chain già precedentemente elaborata e NON DEVE innescare una procedura di Metadata Discovery ad ogni richiesta pervenuta, a meno che questo endpoint non venga protetto con un meccanismo di autenticazione dei client, come ad esempio private_key_jwt `[SPID-OIDC-CORE]`_.
+
+
+
+
+Buone Pratiche
+--------------
+
+In questa sezione descriviamo alcune buone pratiche per ottenere la massima resa dalle entità di Federazione.
+
+
+Specializzare le chiavi pubbliche OpenID Core e Federation
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+È buona pratica usare chiavi pubbliche specializzate per i due tipi di operazioni, Core e Federation.
+
+Modalità di aggiornamento dei metadata OpenID Core
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+L’interoperabilità tra i partecipanti funziona mediante i metadata ottenuti dal calcolo e dalla conservazione delle Trust Chain. Questo significa che se un OP al tempo T calcola la Trust Chain per un RP e questo al tempo T+n modifica i propri metadata, l’OP di conseguenza potrebbe incorrere in problematiche di validazione delle richieste di autorizzazione del RP, fino a quando non avrà aggiornato la Trust Chain relativa a questo.
+
+La buona pratica per evitare le interruzioni di servizio relative alle operazioni di OIDC Core è quella di aggiungere le nuove chiavi pubbliche all’interno degli oggetti *jwks* senza rimuovere i valori preesistenti. Oppure, ad esempio, i nuovi *redirect_uri*.
+
+In questa maniera dopo il limite massimo di durata delle Trust Chain, definito con il claim **exp** e pubblicato nella Entity Configuration della TA, si ha la certezza che tutti i partecipanti abbiano rinnovato le loro Trust Chain, e sarà possibile agli amministratori della Foglia rimuovere le vecchie definizioni in cima alla lista.
+
+Periodo di grazia per le Trust Chain scadute
+++++++++++++++++++++++++++++++++++++++++++++
+
+In una Federazione distribuita come quella di OIDC-FED è possibile che al tempo T+x un OP necessiti di aggiornare alcune Trust Chain, relative a diversi RP, prossime alla scadenza. Si faccia l’esempio che parte di questi RP risultino aggregati da una SA e i servizi di questo risultino temporaneamente non raggiungibili.
+
+In questi casi, ove vi fosse l’impossibilità di aggiornare una Trust Chain a causa di irraggiungibilità dei servizi web di federazione, è possibile continuare ad utilizzare le Trust Chain scadute fino ad un massimo di 24 ore successive al primo tentativo di aggiornamento. All’interno di questo intervallo temporale “di grazia” sono comunque necessari periodici tentativi di aggiornamento.
+
+
+
+
+
+
+
+
+
 
 
 
