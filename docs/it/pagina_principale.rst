@@ -80,6 +80,11 @@ Standard di riferimento
     * - [CIE-OIDC-FED]
       - CIE OIDC Federation – at the writing stage
 
+
+.. warning::
+    |warning-message|
+
+
 Avvisi SPID
 -----------
 

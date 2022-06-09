@@ -15,8 +15,6 @@ Request
 
 La richiesta all’Introspection Endpoint consiste nell’invio del token su cui si vogliono ottenere informazioni unitamente a una Client Assertion che consente di identificare il RP che esegue la richiesta.
 
-.. warning::
-    |warning-message|
 
 **Esempio:**
 

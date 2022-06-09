@@ -17,9 +17,8 @@ Indice dei contenuti
    come_iniziare.rst
    la_federazione_delle_identita.rst
    metadata_oidc.rst
-   authorization_request.rst
    authorization_endpoint.rst
-   authorization_errors.rst
+   authentication_response.rst
    token_endpoint.rst
    userinfo_endpoint.rst
    introspection_endpoint.rst

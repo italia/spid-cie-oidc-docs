@@ -11,8 +11,6 @@ I parametri **client_id**, **response_type** e **scope** devono essere trasmessi
 
 L’oggetto request DEVE essere un token JWT firmato, secondo le modalità definite dall’Agenzia per l’Italia Digitale. 
 
-.. warning::
-    |warning-message|
 
 **Esempio (chiamata HTTP):**::
 

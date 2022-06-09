@@ -7,9 +7,6 @@ In questa sezione sono raccolti tutti gli esempi non normativi delle richieste e
 
 Tutte le response di tipo jose sono state decodificate e rappresentate insieme alle loro intestazioni per migliorare la lettura.
 
-.. warning::
-   |warning-message|
-
 
 .. _Esempio_EN1:
 
@@ -595,7 +592,7 @@ EN 5. Trust Mark Status request
 
 
 EN 5.1. Trust Mark Status response
-+++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++
 
 .. code-block:: 
 

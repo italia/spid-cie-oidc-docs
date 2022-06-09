@@ -22,8 +22,6 @@ Request
 
 L’unico metodo di autenticazione all’endpoint token previsto è il private_key_jwt (OIDC Connect Core 1.0 par. 9)
 
-.. warning::
-    |warning-message|
 
 **Esempio di richiesta con authorization code (caso 1)**
 
@@ -260,10 +258,10 @@ In caso di errore, l’OP restituisce una response con un JSON nel body costitui
      - Codice dell’errore (v. tabella sotto)
      - 
    * - **error_description** 
-     - Descrizione più dettagliata dell’errore, finalizzata ad aiutare lo sviluppatore per eventuale debugging. Questo messaggio non è destinato ad essere visualizzato all’utente (a tal fine si faccia riferimento alle Linee Guida UX SPID).
+     - Descrizione più dettagliata dell’errore, finalizzata ad aiutare lo sviluppatore per eventuale debugging. Questo messaggio non è destinato ad essere visualizzato all’utente (a tal fine si faccia riferimento alle `Linee Guida UX SPID`_).
      -
 	
-I codici di stato HTTP ed i valori dei parametri *error* e *error_description* sono descritti nelle tabelle relative ai messaggi di anomalia definiti dalle Linee Guida UX SPID.
+I codici di stato HTTP ed i valori dei parametri *error* e *error_description* sono descritti nelle tabelle relative ai messaggi di anomalia.
 
 
 .. seealso::

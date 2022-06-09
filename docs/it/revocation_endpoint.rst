@@ -18,8 +18,6 @@ Request
 
 La richiesta al Revocation Endpoint consiste nell’invio del token che si vuole revocare unitamente a una Client Assertion che consente di identificare il RP che esegue la richiesta.
 
-.. warning::
-    |warning-message|
 
 **Esempio:**
 
