@@ -1,10 +1,10 @@
 .. include:: ./common_definitions.rst
 
+=============================
 Regole Tecniche SPID/CIE OIDC
 =============================
 
 Regole tecniche OIDC per i sistemi nazionali di Identità Digitale.
-
 
 
 Indice dei contenuti

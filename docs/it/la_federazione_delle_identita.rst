@@ -25,11 +25,14 @@ Le parti coinvolte all’interno di una Federazione OpenID Connect sono le segue
    :header-rows: 0
 
    * - **Autorità di Federazione**
-     - Agenzia per l'Italia Digitale (AgID). Norma il funzionamento e le modalità di registrazione e riconoscimento dei partecipanti.
+     - Un'entità che gestisce la fiducia tra le parti coinvolte nella Federazione e norma il funzionamento e le modalità 
+       di registrazione e riconoscimento dei partecipanti. Si tratta di un **Trust Anchor** (la radice del *trust*) o di un **Intermediario**. 
    * - **Trust Anchor**
-     - Sistema gestito dalla AgID il cui compito è quello di pubblicare la configurazione della Federazione e le affermazioni di riconoscimento delle parti che afferiscono alla Federazione. Il Trust Anchor corrisponde alla Autorità di Federazione e rappresenta la Federazione stessa.
+     - Un'Autorità della Federazione, che rappresenta una terza parte fidata e può delegare altre Autorità della Federazione
+       (**Intermediari**) a portare avanti l'**onboarding** delle **Foglie**.
    * - **Intermediario**
-     - Soggetto Aggregatore (SA), facilita l'ingresso nella Federazione e PUÒ gestire le funzionalità per conto di un suo discendente (Aggregato), pubblica la propria configurazione all’interno della Federazione e le affermazioni di riconoscimento delle parti sue discendenti (Aggregati) in conformità alle regole definite dalla AgID.
+     - Soggetto Aggregatore (SA), facilita l'ingresso nella Federazione e PUÒ gestire le funzionalità per conto di un suo discendente
+       (Aggregato); pubblica la propria configurazione all’interno della Federazione e le affermazioni di riconoscimento delle parti sue discendenti (Aggregati) in conformità alle regole definite dalla Federazione.
    * - **Foglia**
      - Entità definita dal protocollo OIDC come Relying Party e Provider OpenID.
    * - **Entità**
@@ -39,15 +42,56 @@ Le parti coinvolte all’interno di una Federazione OpenID Connect sono le segue
 Configurazione della Federazione SPID
 -------------------------------------
 
+Nella Federazione OIDC SPID, il **Trust Anchor** viene svolto dall'Agenzia per l'Italia Digitale (`AgID`_).
+
 La configurazione della Federazione SPID è pubblicata dal Trust Anchor all'interno della sua :ref:`Entity Configuration<Esempio_EN1.4>`, presso un web path ben noto e corrispondente a **.well-known/openid-federation**.
 
 Tutti i partecipanti DEVONO ottenere prima della fase di esercizio la configurazione della Federazione e mantenere questa aggiornata su base giornaliera. All’interno della Configurazione della Federazione è presente la chiave pubblica del Trust Anchor usata per le operazioni di firma, il numero massimo di Intermediari consentiti tra una Foglia e il Trust Anchor (**max_path length**) e le autorità abilitate all’emissione dei Trust Marks (**trust_marks_issuers**).
 
+
+.. image:: ../../images/spid_oidc_federation_model.png
+    :width: 100%
+
+*Schema ad albero che rappresenta la struttura della Federazione SPID OIDC. Alla Base c'è l’Autorità di Federazione e, salendo, gli OP che non hanno intermediari, gli RP e gli Intermediari che a loro volta Aggregano altri RP.*
+
 Si veda la Sezione dedicata alle :ref:`Entity Configuration<Entity_Configuration>` per ulteriori dettagli.
 
 
-Modalità di partecipazione alla Federazione
--------------------------------------------
+
+Configurazione della Federazione CIE
+------------------------------------
+
+Nella Federazione OIDC CIE, identifichiamo i seguenti attori:
+
+ - Il ruolo di **Trust Anchor** viene svolto dal Ministero dell'Interno;
+ - Il **CIE OpenID Provider (OP)** è un'entità **Foglia** cher agisce come CIE Identity Provider;
+ - Le **Relying Parties (RPs)** sono entità **Foglia** che agiscono da Service Provider;
+ - Le **Attribute Authorities (AAs)** sono entità **Foglia** che agiscono come OAuth Resource Server e svolgono il ruolo di Attribute 
+   Authority nell'ecosistema OIDC.
+
+
+.. image:: ../../images/cie_oidc_federation_model.png
+    :width: 100%
+
+*Modello della Federazione CIE OIDC*
+
+Come si vede dalla figura qui sopra, la Federazione OIDC è un modello gerarchico basato su un meccanismo di delega dinamica ad alta interoperabilità e scalabilità. Il modello di fiducia dietro la Federazione OIDC è:
+
+ - **Dinamico**. La fiducia può essere stabilita dinamicamente nella fase di richiesta autenticazione; un aggiornamento di metadati può
+   essere risolto senza richiedere un'azione di **onboarding**. Le Autorità della Federazione espongono un endpoint di Federazione che fornisce “dichiarazioni” firmate riguardo alle entità discendenti, contenenti le loro chiavi pubbliche e la politica dei metadati. In più, le Autorità della Federazione possono disabilitare un'entità nella Federazione senza espliciti aggiornamenti agli altri membri.
+ - **Distribuito**. La fiducia viene distribuita fra molte parti; è il verificatore che decide quale percorso prendere per risolvere la 
+   fiducia (molte parti e molte Autorità di Federazione).
+ - **Scalabile**. Riduce significativamente i problemi del processo di onboarding, in accordo al principio di delega, con l'istituzione
+   di entità intermediatrici.
+ - **Trasparente**. Qualsiasi entità coinvolta nella Federazione può in ciascun momento costruire la fiducia indipendentemente e
+   in modo sicuro.
+ - **Interoperabile**. La Federazione CIE OIDC, da un punto di vista tecnico, è pienamente interoperabile con la Federazione SPID OIDC e 
+   permette, per esempio, al processo di onboarding, di scalare verso l'alto.
+
+
+
+Modalità di partecipazione alla Federazione SPID
+------------------------------------------------
 
 Per aderire alla Federazione SPID una entità di tipo Foglia deve pubblicare la propria configurazione (Entity Configuration) presso il web endpoint :ref:`.well-known/openid-federation<Esempio_EN1>`.
 
@@ -59,12 +103,6 @@ La Foglia DEVE includere il TM all’interno della propria configurazione di Fed
 
 L’Autorità di Federazione o suo Intermediario DEVE pubblicare la dichiarazione di riconoscimento della Foglia (Entity Statement) contenente le chiavi pubbliche di federazione della Foglia e i TM a questa rilasciati. L’Autorità di Federazione o suo Intermediario PUÒ pubblicare una politica dei `metadata <https://openid.net/specs/openid-connect-federation-1_0.html#rfc.section.5.1>`_ per forzare la modifica dei metadata OIDC della Foglia, nelle parti in cui questo fosse necessario.
 
-
-.. image:: ../../images/federation_structure.png
-    :width: 100%
-
-
-*Schema ad albero che rappresenta la struttura della Federazione. Alla Base l’Autorità di Federazione e a salire gli OP che non hanno intermediari, gli RP e gli Intermediari che a loro volta Aggregano altri RP.*
 
 
 Modalità di riconoscimento e instaurazione della fiducia tra le parti
