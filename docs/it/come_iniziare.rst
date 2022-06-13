@@ -38,7 +38,7 @@ In questa sezione sono definiti tutti gli acronimi utilizzati all’interno del 
     * - **OIDC-FED**
       - OIDC Federation 1.0
     * - **IOF**
-      - Italian OIDC Federation 1.0
+      - Italian OIDC Federation 1.0.
     * - **SPID**
       - Sistema Pubblico di Identità Digitale
     * - **AgID**

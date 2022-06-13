@@ -79,6 +79,8 @@ Standard di riferimento
       - AgID Guidelines: “Linee Guida OpenID Connect in SPID”
     * - [CIE-OIDC-FED]
       - CIE OIDC Federation – at the writing stage
+    * - [CIE-OIDC-CORE]: 
+      - CIE OpenID Connect Core – Web App Specifications
 
 
 .. warning::

@@ -90,8 +90,8 @@ Come si vede dalla figura qui sopra, la Federazione OIDC è un modello gerarchic
 
 
 
-Modalità di partecipazione alla Federazione SPID
-------------------------------------------------
+SPID: Modalità di partecipazione alla Federazione
+-------------------------------------------------
 
 Per aderire alla Federazione SPID una entità di tipo Foglia deve pubblicare la propria configurazione (Entity Configuration) presso il web endpoint :ref:`.well-known/openid-federation<Esempio_EN1>`.
 
@@ -105,13 +105,13 @@ L’Autorità di Federazione o suo Intermediario DEVE pubblicare la dichiarazion
 
 
 
-Modalità di riconoscimento e instaurazione della fiducia tra le parti
----------------------------------------------------------------------
+SPID: Modalità di riconoscimento e instaurazione della fiducia tra le parti
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 In questa sezione vi sono illustrate le modalità di mutuo riconoscimento tra RP e OP, le modalità con le quali le Foglie della Federazione SPID si riconoscono all’interno della medesima Federazione e ottengono gli uni i metadata degli altri.
 
-Relying Party
--------------
+SPID:Relying Party
+++++++++++++++++++
 
 Il RP ottiene la lista degli OP in formato JSON interrogando l’:ref:`endpoint list<Entity_Listing_endpoint>` disponibile presso il :ref:`Trust Anchor<Esempio_EN3>`. Per ogni soggetto contenuto nella :ref:`risposta<Esempio_EN3.1>` dell’endpoint list e corrispondente ad un OP, il RP :ref:`richiede<Esempio_EN2>` ed ottiene l’Entity Configuration self-signed presso l’OP. 
 
@@ -130,8 +130,8 @@ La procedura di Metadata Discovery risulta semplificata per i RP SPID perché no
 *La procedura di Metadata Discovery a partire dalla Foglia fino al Trust Anchor. Si noti come dall’Entity Statement rilasciato da un superiore si ottiene la chiave pubblica per la validazione dell’Entity Configuration dell’entità discendente.*
 
 
-OpenID Provider
----------------
+SPID: OpenID Provider
++++++++++++++++++++++
 
 Quando un Provider (OP) riceve una richiesta di autorizzazione da parte di un RP non precedentemente riconosciuto avviene la procedura di **automatic client registration**. Sono di seguito descritte le operazioni compiute dal OP per registrare un RP dinamicamente.
 
@@ -166,8 +166,8 @@ Nei casi in cui un RP avesse come entità superiore un SA e non direttamente la 
 *Ogni partecipante espone la propria configurazione e i propri Trust Mark. Il collegamento tra una Foglia e il Trust Anchor avviene in maniera diretta oppure mediante un Intermediario (Soggetto Aggregatore) come in Figura.*
 
 
-Modalità di accesso alla Entity Configuration
----------------------------------------------
+SPID: Modalità di accesso alla Entity Configuration
++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 In questa sezione viene descritto come individuare per un determinato soggetto  l’URL `[RFC3986]`_ per il download della Entity Configuration. 
 
@@ -181,16 +181,52 @@ Esempi:
 Se l’URL che identifica il soggetto non presenta il simbolo di slash finale (“/”) è necessario aggiungerlo prima di appendere il web path della risorsa **well-known**.
 
 
+
+CIE: Modalità di partecipazione alla Federazione
+------------------------------------------------
+
+Per partecipare alla Federazione CIE, un RP, OP o SA deve per prima cosa pubblicare la sua propria Configurazione di Entità
+sull'Endpoint dell'Openid Federation e condividere con l'FA (SA o TA) tutte le informazioni tecniche necessarie per far
+partire il processo di federazione. L'FA, dopo aver svolto tutti i controlli tecnici richiesti, rilascia una Dischiarazione di Entità (Entity Statement) sull'RP, OP o SA, contenente almeno la chiave pubblica usata dall'RP, OP o SA, per firmare
+la propria configurazione di entità; e uno o più Trust Mark a seconda del profilo e della politica dei metadati. Alla fine, l'RP, OP o SA deve includere i Trust Mark nella Configurazione d'Entità, come risultato del processo di Onboarding.  Questo viene illustrato in maniera semplificata(cioè senza la gestione degli errori) nella figura sottostante per una procedura di onboarding di un RP Mal TA.
+
+
+.. image:: ../../images/cie_onboarding_semplificato.png
+    :width: 100%
+
+*Procedura di onboarding semplificato per CIE*
+
+
+Una volta che un RP viene riconosciuto come parte della Federazione CIE, ottiene il permesso di mandare una Richiesta di Autenticazione come definito in `[CIE-OIDC-CORE]`_. L'OP CIE che non riconosce l'RP che fa la richiesta, è in grado, usando CIE OIDC-FED, di risolvere correttamente la il Trust. L'OP CIE inizia richiedendo la configurazione di entità dell'RP al .well-known endpoint dell'RP e, seguendo il percorso dato dall “authority_hint”, raggiunge la radice del Trust, cioè la TA. In ogni passo della catena, l'OP CIE può eseguire tutti i controlli di sicurezza richiedendo le dichiarazioni di entità da ciascuna entità e convalidando i Trust Mark e le firme. La figura che segue dà un esempio rappresentativo di come funziona la catena del Trust.
+
+
+.. image:: ../../images/cie_esempio_trust_chain.png
+    :width: 100%
+
+*CIE: esempio di Catena del Trust*
+
+
+Pertanto, come mostrato nella figura successiva, l'Onboarding è una procedura dalla Radice (TA) alle entità Foglie, mentre il processo di ottenimento di una catena di Trust, parte dalle entità Foglie e, seguendo il percorso dato dall'“authority_hint”, raggiunge la Radice del Trust.
+
+
+.. image:: ../../images/cie_onboarding_e_direzioni_trust_chain.png
+    :width: 50%
+
+*CIE: Onboarding e direzioni Trust Chain*
+
+
+
+
 .. _Trust_Mark:
 
-Trust Mark
-----------
+Trust Mark dello SPID
+---------------------
 
 I Trust Mark, letteralmente tradotti come marchi di fiducia, sono oggetti JSON firmati in formato Jose `[RFC7515]`_ e rappresentano la dichiarazione di conformità a un insieme ben definito di requisiti di fiducia e/o di interoperabilità o un accordo tra le parti coinvolte all’interno della Federazione. I Trust Marks sono rilasciati principalmente durante il processo di registrazione di una nuova entità di tipo Foglia (onboarding) dal Trust Anchor o suoi Intermediari.
 
 Lo scopo principale di questi marchi di fiducia è quello di esporre alcune informazioni non richieste dal protocollo OpenID Connect Core ma che risultano utili in contesto Federativo.
 
-Esempi tipici includono il codice di identificazione nazionale o internazionale dell'entità [3]_, i contatti istituzionali e altro. Ulteriori dati possono essere aggiunti dall'emittente se resi comprensibili all’interno della Federazione.
+Esempi tipici includono il codice di identificazione nazionale o internazionale dell'entità (Codice Fiscale, IPA Code, Partita IVA, VAT Number, etc.), i contatti istituzionali e altro. Ulteriori dati possono essere aggiunti dall'emittente se resi comprensibili all’interno della Federazione.
 
 I Trust Marks riconoscibili all’interno della Federazione SPID sono emessi e firmati dalla AgID (TA) o suoi intermediari (SA) o dai Gestori di attributi qualificati (AA) se definiti all’interno del claim **trust_mark_issuers** pubblicato all’interno dell’Entity Configuration del TA. Ogni partecipante DEVE esporre nella propria configurazione (EC) i Trust Mark rilasciati dalle autorità emittenti. 
 
@@ -202,15 +238,13 @@ All’interno della Federazione SPID i Trust Mark presentano degli identificativ
 
 Alcuni esempi non normativi sono di seguito riportati:
 
-
-profilo RP public: https://registry.agid.gov.it/openid_relying_party/public/
-profilo SA private: https://registry.agid.gov.it/federation_entity/private/
-
-.. [3] Codice Fiscale, IPA Code, Partita IVA, VAT Number, etc.
+ - profilo RP public: https://registry.agid.gov.it/openid_relying_party/public/
+ - profilo SA private: https://registry.agid.gov.it/federation_entity/private/
 
 
-Validazione dei Trust Mark
-++++++++++++++++++++++++++
+
+SPID: Validazione dei Trust Mark
+++++++++++++++++++++++++++++++++
 
 Esistono due modi per validare un Trust Mark:
 
@@ -221,14 +255,14 @@ Esistono due modi per validare un Trust Mark:
 Tutti gli emittenti di Trust Mark DEVONO esporre un endpoint di trust mark status per consentire la validazione **dinamica**.
 
 
-Revoca dei Trust Mark
-+++++++++++++++++++++
+SPID: Revoca dei Trust Mark
++++++++++++++++++++++++++++
 
 Un Trust Mark può essere revocato in qualsiasi momento. In caso di esclusione di un Soggetto Aggregato da parte della Autorità di Federazione, questa comunica al Soggetto Aggregatore l’esclusione dell'Aggregato. Di conseguenza il SA revoca il TM per il suo discendente.
 
 
-Pubblicazione dei Trust Marks
-+++++++++++++++++++++++++++++
+SPID: Pubblicazione dei Trust Marks
++++++++++++++++++++++++++++++++++++
 
 La TA definisce i TM e gli emittenti di questi abilitati nella Federazione mediante il claim **trust_mark_issuers**, presente all’interno del proprio Entity Configuration. Il valore del claim **trust_mark_issuers** è composto da un oggetto JSON, avente come chiavi gli id dei TM e come valori la lista degli emittenti abilitati.
 
@@ -263,10 +297,10 @@ Di seguito un esempio non normativo dell’oggetto **trust_marks** all’interno
  ]
 
 
-Composizione dei Trust Mark 
-+++++++++++++++++++++++++++
+SPID: Composizione dei Trust Mark 
++++++++++++++++++++++++++++++++++
 
-I claim definiti all’interno dei Trust Marks aderiscono a quanto definito all’interno dello standard OIDC Federation 1.0 [4]_. Questi sono di seguito riportati.
+I claim definiti all’interno dei Trust Marks aderiscono a quanto definito all’interno dello standard OIDC Federation 1.0 (documento giunto attualmente al DRAFT 18). Questi sono di seguito riportati.
 
 .. list-table::
     :widths: 20 20 60
@@ -307,10 +341,10 @@ La seguente tabella riassume tutti i profili supportati per le entità di tipo R
       - **Descrizione**
       - **Entità**
     * - **public**
-      - Indica che il RP afferisce ad una Pubblica Amministrazione.
+      - Indica che il RP appartiene ad una Pubblica Amministrazione.
       - All
     * - **private**
-      - Indica che il RP afferisce ad una Pubblica Amministrazione.
+      - Indica che il RP appartiene al settore privato.
       - All
 
 
@@ -331,8 +365,6 @@ Agli attributi dei TM definiti nella tabella precedente, i Trust Mark SPID aggiu
     * - **organization_name**
       - RICHIESTO. Il nome completo dell'entità che fornisce i servizi
 
-
-.. [4] Al momento della pubblicazione di questo documento OIDC Federation 1.0 è giunto al DRAFT 18
 
 
 Quello che segue è un esempio non normativo di un marchio di fiducia emesso da AgID per un intermediario privato.
@@ -388,6 +420,21 @@ Dove il contenuto del JWT firmato all’interno del claim **trust_mark** corrisp
    "organization_name": "Full name of the RP",
    "ref": "https://reference_to_some_documentation.it/"
  }
+
+
+
+Trust Mark della CIE
+--------------------
+
+I Trust Mark sono JSON Web Token (JWT) firmati che rappresentano una dichiarazione di conformità ad un insieme ben definito di requisiti di fiducia e/o interoperabilità, oppure ad un accordo fra le parti coinvolte nella Federazione e vengono emessi da entità accreditate, principalmente durante il processo di Onboarding. Lo scopo principale è convogliare alcune informazioni non propriamente richieste dal protocollo stesso OIDC, ma che potrebbero essere utili all'interno della Federazione. Tipici esempi includono il codice di identificazione nazionale dell'entità, contatti istituzionali e caratteristiche supportate disponibili all'interno dell'ecosistema CIE. Dati aggiuntivi possono essere aggiunti dall'emittente e devono essere ben compresi.
+
+Nello scenario CIE, un Trust Mark viene firmato da **MinInterno** (TA) o da un'entità accreditata (es. entità intermedie (SA) o Autorità Attributo (AA) che giocano il ruolo di entità Risorse Protette OAuth - un'entità che agisce come AA all'interno del sistema della Federazione CIE, può essere visto come un tipo di entità Risorsa Protetta OAuth, in accordo a `[OIDC-FED#Section.4.5]`_) e DEVONO essere incluse nella richiesta (claim) dei Trust Mark della configurazione di entità delle foglie (RP e OP) e di intermediari (SA). La presenza di un Trust Mark è richiesta prima di iniziare una scoperta di metadati (vedere sezione), altrimenti la federazione può essere soddisfatta da aggressori che cercano di propagare attacchi. to propagate attacks.
+
+Un Trust Mark può essere inoltrato dalla TA o da entità accreditate, come risultato di una procedura di Onboarding di federazione
+o come risultato di un accordo fra le parti. Mentre nel secondo caso viene inoltrato solo un Trust Mark, durante il processo di Onboarding la FA deve anche esporre la dichiarazione di entità dell'entità imbarcata nei suoi endpoint di federazione.
+
+
+
 
 
 .. _Entity_Configuration:

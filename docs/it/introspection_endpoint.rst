@@ -132,7 +132,7 @@ In caso di errore, l’OP restituisce un codice HTTP 401 con un JSON nel body av
      - Codice dell’errore (v. tabella sotto)
      - 
    * - **error_description**
-     - Descrizione più dettagliata dell’errore, finalizzata ad aiutare lo sviluppatore per eventuale debugging. Questo messaggio non è destinato ad essere visualizzato all’utente (a tal fine si faccia riferimento alle Linee Guida UX SPID).
+     - Descrizione più dettagliata dell’errore, finalizzata ad aiutare lo sviluppatore per eventuale debugging. Questo messaggio non è destinato ad essere visualizzato all’utente (a tal fine si faccia riferimento alle `Linee Guida UX SPID`_).
      - 
 
 Di seguito i codici di errore:
