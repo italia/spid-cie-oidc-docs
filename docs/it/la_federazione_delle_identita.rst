@@ -433,6 +433,266 @@ Nello scenario CIE, un Trust Mark viene firmato da **MinInterno** (TA) o da un'e
 Un Trust Mark può essere inoltrato dalla TA o da entità accreditate, come risultato di una procedura di Onboarding di federazione
 o come risultato di un accordo fra le parti. Mentre nel secondo caso viene inoltrato solo un Trust Mark, durante il processo di Onboarding la FA deve anche esporre la dichiarazione di entità dell'entità imbarcata nei suoi endpoint di federazione.
 
+CIE: Profili dei Trust Mark
++++++++++++++++++++++++++++
+
+Si possono definire svariati profili in accordo agli specifici bisogni delle FA e della TA. Nella CIE FED, durante la fase
+di Onboarding, DEVONO essere emessi almeno i seguenti *trustmark_profile*:
+
+ - public: l'entità nel claim *sub* appartiene alla pubblica amministrazione italiana
+ - private: l'entità nel claim *sub* appartiene al settore privato.
+
+La tabella seguente riassume tutti i profili disponibili supportati per tutte le entità coinvolte nella CIE FED
+
+
+.. list-table::
+    :widths: 20 60 20
+    :header-rows: 1
+
+    * - **Profilo TM**
+      - **Descrizione**
+      - **Tipi di entità sub**
+    * - **public**
+      - l'entità nel claim *sub* appartiene alla pubblica amministrazione italiana
+      - Tutte
+    * - **private**
+      - l'entità nel claim *sub* appartiene al settore privato.
+      - Tutte
+    * - **web**
+      - l'entità nel claim *sub* è compatibile con `[CIE-OIDC-CORE]`_
+      - RP
+    * - **native**
+      - l'entità nel claim *sub* è compatibile con `[CIE-OIDC-MOBILE]`_ – non ancora supportato
+      - RP
+    * - **underage**
+      - l'entità nel claim *sub* fornisce servizi online per underage in accordo a [] – non ancora supportato
+      - RP
+    * - **aggregator**
+      - l'entità nel claim *sub* è un soggetto aggregatore in accordo a []
+      - SA
+
+
+CIE: Claim generali dei Trust Mark
+++++++++++++++++++++++++++++++++++
+
+La tabella sottostante riporta i claim considerati da OIDC-FED. Le specifiche permettono di aggiungere qualsiasi altro claim 
+personalizzato, se richiesto.
+
+
+
+.. list-table::
+    :widths: 20 20 60
+    :header-rows: 1
+
+    * - **Claim**
+      - **Tipo**
+      - **Descrizione**
+    * - **iss**
+      - String
+      - OBBLIGATORIO. L'emittente del Trust Mark
+    * - **sub**
+      - String
+      - OBBLIGATORIO. L'entità alla quale il Trust Mark si applica
+    * - **id**
+      - String
+      - OBBLIGATORIO. Un identificatore del Trust Mark
+    * - **iat**
+      - UTC Timestamp
+      - OBBLIGATORIO. Quando questo Trust Mark è stato emesso. Espresso in seconds dall'inizio dell'epoca `[RFC7519]`_
+    * - **logo_uri**
+      - String
+      - OPZIONALE. Un URL che punta ad un logo che il soggetto può mostrare ad un utente dell'entità.
+    * - **exp**
+      - UTC Timestamp
+      - OPZIONALE. Quando questo Trust Mark non è più valido. Espresso in seconds dall'inizio dell'epoca `[RFC7519]`_.
+        Se non è presente, significa che il Trust Mark è valido per sempre.
+    * - **ref**
+      - UTC Timestamp
+      - OPZIONALE. URL che punta alle informazioni connesse all'emissione di questo Trust Mark
+
+
+Nella Federazione CIE il claim id è un URL con la struttura seguente:
+
+
+	<TA_domain> / <entity_type> / <trustmark_profile> 
+
+
+Un esempio non normativo di id claim è il seguente:
+
+ - https://registry.servizicie.interno.gov.it/openid_relying_party/public/
+
+.. seealso::
+
+ * `[OIDC-FED#Section.5.3.1]`_
+
+
+
+CIE: Claim dei Trust Mark
++++++++++++++++++++++++++
+
+Oltre ai Trust Mark definiti alla sezione precedente, la tabella sottostante mostra i claim che possono essere aggiunti per il processo di Onboarding.
+
+
+.. list-table::
+    :widths: 20 80
+    :header-rows: 1
+
+    * - **Claim**
+      - **Descrizione**
+    * - **organization_type**
+      - Specifica se l'entità appartiene all'aministrazione pubblica italiana on al settore privato (es. *private*, *public*)
+    * - **id_code**
+      - Codice identificativo dell'organizzazione; dipende dal valore di *organization_type*, deve essere dato il codice IPA (per il tipo pubblica amministrazione) o la Partita Iva (per i provati)
+    * - **email**
+      - Email istituzionale o PEC dell'organizzazione
+    * - **organization_name**
+      - Il nome completo dell'entità che fornisce i servizi
+
+
+CIE: Esempi di Trust Mark
++++++++++++++++++++++++++
+
+Il seguente è un esempio non normativo di un Trust Mark emesso da *MinInterno* per un'entità privata intermediaria.
+
+.. code-block::
+
+ "trust_marks": [
+  {
+   "id":"https://registry.servizicie.interno.gov.it/federation_entity/private/",
+   "iss": "https://registry.servizicie.interno.gov.it",
+   "trust_mark": $JWT
+  }
+ ]
+
+
+Dove il payload JWT sarebbe come segue:
+
+.. code-block::
+
+ {
+   "id":"https://registry.servizicie.interno.gov.it/federation_entity/private/",
+   "iss": "https://registry.servizicie.interno.gov.it",
+   "sub": "https://intermediate.example.it",
+   "iat": 1579621160,
+   "organization_type": "private",
+   "id_code": "12345678900",
+   "email": "email_or_pec@intermediate.it",
+   "organization_name#it": "Full name of the SA",
+   "ref": "https://reference_to_some_documentation.it/"
+ }
+
+
+
+Un'entità intermediaria dovrebbe essa stessa essere un emettitore di Trust Mark verso entità foglia (RP). Il seguente è un esempio non normativo di un Trust Mark emesso da un'entità intermediaria verso un'entità foglia RP.
+
+.. code-block::
+
+ "trust_marks": [
+  {
+   "id":"https://registry.servizicie.interno.gov.it/openid_relying_party/public/",
+   "iss": "https://intermediary.example.it",
+   "trust_mark": $JWT
+   }
+ ]
+
+
+Dove il payload $JWT potrebbe essere come nel seguente esempio non normativo:
+
+.. code-block::
+
+ {
+   "id":"https://registry.servizicie.interno.gov.it/openid_relying_party/public/",
+   "iss": "https://intermediary.example.it",
+   "sub": "https://rp.example.it",
+   "iat": 1579621160,
+   "organization_type": "public",
+   "id_code": "123456",
+   "email": "email_or_pec@rp.it",
+   "organization_name#it": "Full name of the RP",
+   "ref": "https://reference_to_some_documentation.it/"
+ }
+
+
+
+CIE: Trust Mark Attribute Authority
++++++++++++++++++++++++++++++++++++
+
+Il registro degli AA è gestito da `[LG-AA]`_ che è responsabile dell'esecuzione del processo di Onboarding per gli AA che forniscono attributi qualificati “protected” e “private”. Come risultato, l'OP e la TA CIE DEVONO riconoscere l'AgID come emettitore di Trust Mark per gli AA. Oltre ai claim di Trust Mark descritti sopra, vengono aggiunti i seguenti claim.
+
+
+
+.. list-table::
+    :widths: 20 80
+    :header-rows: 1
+
+    * - **Claim**
+      - **Descrizione**
+    * - **claims**
+      - OBBLIGATORIO. attributi utente lookup richiesti dall'AA per fornire gli attributi richiesti.
+    * - **service_documentation**
+      - OPZIONALE. È un URL contenente la documentazione OAS3riferita all' AA in the claim *sub*, come definito in `[LG-AA]`_).
+    * - **policy_uri**
+      - OPZIONALE. URL ad una politica di privacy di AA
+    * - **tos_uri**
+      - OPZIONALE. URL ad una info policy di AA
+
+
+Un esempio non normativo è dato qui sotto:
+
+.. code-block::
+
+ "trust_marks": [
+  {
+   "id":"https://registry.spid.gov.it/oauth_resource/aa/",
+   "iss": "https://registry.spid.gov.it",
+   "trust_mark": $JWT
+  }
+ ]
+
+Dove il payload di JWT sarebbe come segue:
+
+.. code-block::
+
+ {
+   "id":"https://registry.spid.gov.it/oauth_resource/aa/",
+   "iss": "https://registry.spid.gov.it",
+   "sub": "https://aa.example.it",
+   "iat": 1579621160,
+   "organization_type": "public",
+   "id_code": "123456",
+   "email": "email_or_pec@aa.it",
+   "organization_name#it": "Full name of the AA",
+   "policy_uri#it": "url to AA privacy policy",
+   "tos_uri#it": "url to AA info policy",
+   "service_documentation": "url to AA OAS3 document",
+   "claims": {
+      "https://attributes.eid.gov.it/fiscalNumber": {"essential": true},
+      }  
+   "ref": "https://reference_to_some_documentation.it/"
+ }
+
+
+
+CIE: Convalidare un Trust Mark
+++++++++++++++++++++++++++++++
+
+Un Trust Mark può essere revocato. Nello specifico:
+
+L'emettitore di un Trust Mark PUÒ revocarlo direttamente
+
+ 1. TA requests the revocation of an aggregate from the SA, who must revoke its trust mark
+ 2. Osservazione: Per (1) TA può revocare i Trust Mark di SA direttamente.
+
+Per convalidare un Trust Mark, i memnri della Federazione possono interrogare lo status endpoint del Trust Mark, servito da un emettitore di Trust Mark (vedere sezione `Trust_Mark_Status`_) per verificare se un Trust Mark è ancora valido (può essere revocato
+dall'emettitore di Trust Mark).
+
+L'endpoint riceve come input l'*entity_id* per l'entità verso la quale il Trust Mark è stato emesso (sub) e un identificatore del Trust Mark (id). Queste informazioni, assieme all'emettitore, formano la terna che identifica unicamente un Trust Mark.
+
+Un'entità NON DEVE cercare di convalidare un Trust Mark finché non saprà quale TA. Nello scenario CIE, tutti gli emettitori di Trust Mark (*MinInterno* come TA e gli SA come intermediari) DEVONO esporre uno status endpoint di Trust Mark.
+
+.. seealso:: 
+
+  `[OIDC-FED#Section.5.3.2]`_
 
 
 
@@ -441,6 +701,9 @@ o come risultato di un accordo fra le parti. Mentre nel secondo caso viene inolt
 
 Entity Statement e Configuration
 --------------------------------
+
+Il componente basilare per costruire una catena di fiducia (trust chain) è l'*Entity Statement*, un JWT crittografico che contiene 
+le chiavi di firma delle entità e ulteriori dati usati per controllare il processo di risoluzione della trust chain (come l'*authority_hints* che specifica chi è il superiore di un'entità). Quando uno statement è autofirmato da un'entità, viene chiamato *Entity Configuration.*
 
 Un Entity Configuration è un metadata di federazione in formato Jose e firmato dal soggetto che lo emette e riguardante se stesso, all’interno del quale i valori dei claim **iss** e **sub** contengono il medesimo valore (URL).
 
@@ -637,6 +900,7 @@ Ogni Foglia DEVE pubblicare i suoi superiori all’interno della lista contenuta
 La soglia **max_path_lenght** si applica per la navigazione verticale e superata questa soglia senza aver trovato il TA la procedura di Metadata Discovery DEVE essere interrotta. Si faccia l’esempio di un RP discendente di un 1 SA che quest’ultimo a sua volta è discendente di  un altro SA, essendo il valore di **max_path_lenght** pari a uno e superata questa soglia senza aver trovato il Trust Anchor, la procedura DEVE essere interrotta.
 
 Allo stesso tempo la specifica OIDC Federation 1.0 non definisce un limite per il numero di **authority_hints**, questo perché nessun Trust Anchor può limitare il numero di Federazioni alle quali un partecipante può aderire. Per questa ragione è utile che gli implementatori adottino un limite massimo del numero di elementi consentiti all’interno dell’Array authority_hint. Questo per evitare che un numero esagerato di URL contenuti nella lista di **authority_hints**, dovuto ad una cattiva configurazione di una Foglia, produca un consumo di risorse eccessivo.
+
 
 Resolve Entity Statement
 ++++++++++++++++++++++++

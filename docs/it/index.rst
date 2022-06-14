@@ -23,6 +23,7 @@ Indice dei contenuti
    userinfo_endpoint.rst
    introspection_endpoint.rst
    revocation_endpoint.rst
+   federation_endpoint.rst
    come_contribuire.rst
    esempi.rst
    

@@ -60,7 +60,7 @@ Ogni OP DEVE esporre all’interno dei propri metadati i seguenti claim come obb
    * - Claim
      - Tipo
      - Descrizione
-   * - **organization_name **
+   * - **organization_name**
      - String
      - OBBLIGATORIO. Un nome leggibile che rappresenta l'organizzazione proprietaria dell'OP
    * - **jwks**
@@ -106,7 +106,7 @@ Ogni RP DEVE esporre all’interno dei propri Metadata i seguenti claim come obb
    * - Claim
      - Tipo
      - Descrizione
-   * - **organization_name **
+   * - **organization_name**
      - String
      - OBBLIGATORIO. Un nome leggibile che rappresenta l'organizzazione proprietaria dell'RP
    * - **jwks**
