@@ -683,24 +683,24 @@ L'emettitore di un Trust Mark PUÒ revocarlo direttamente
  1. TA requests the revocation of an aggregate from the SA, who must revoke its trust mark
  2. Osservazione: Per (1) TA può revocare i Trust Mark di SA direttamente.
 
-Per convalidare un Trust Mark, i memnri della Federazione possono interrogare lo status endpoint del Trust Mark, servito da un emettitore di Trust Mark (vedere sezione `Trust_Mark_Status`_) per verificare se un Trust Mark è ancora valido (può essere revocato
+Per convalidare un Trust Mark, i membri della Federazione possono interrogare lo status endpoint del Trust Mark, servito da un emettitore di Trust Mark (vedere sezione :ref:`Trust Mark Status<Trust_Mark_Status>`) per verificare se un Trust Mark è ancora valido (può essere revocato
 dall'emettitore di Trust Mark).
 
-L'endpoint riceve come input l'*entity_id* per l'entità verso la quale il Trust Mark è stato emesso (sub) e un identificatore del Trust Mark (id). Queste informazioni, assieme all'emettitore, formano la terna che identifica unicamente un Trust Mark.
+L’endpoint riceve come input l’*entity_id* per l’entità verso la quale il Trust Mark è stato emesso (sub) e un identificatore del Trust Mark (id). Queste informazioni, assieme all'emettitore, formano la terna che identifica unicamente un Trust Mark.
 
-Un'entità NON DEVE cercare di convalidare un Trust Mark finché non saprà quale TA. Nello scenario CIE, tutti gli emettitori di Trust Mark (*MinInterno* come TA e gli SA come intermediari) DEVONO esporre uno status endpoint di Trust Mark.
+Un’entità NON DEVE cercare di convalidare un Trust Mark finché non saprà quale TA. Nello scenario CIE, tutti gli emettitori di Trust Mark (*MinInterno* come TA e gli SA come intermediari) DEVONO esporre uno status endpoint di Trust Mark.
 
 .. seealso:: 
 
-  `[OIDC-FED#Section.5.3.2]`_
+  - `[OIDC-FED#Section.5.3.2]`_
 
 
 
 
 .. _Entity_Configuration:
 
-Entity Statement e Configuration
---------------------------------
+Entity Statement e Entity Configuration
+---------------------------------------
 
 Il componente basilare per costruire una catena di fiducia (trust chain) è l'*Entity Statement*, un JWT crittografico che contiene 
 le chiavi di firma delle entità e ulteriori dati usati per controllare il processo di risoluzione della trust chain (come l'*authority_hints* che specifica chi è il superiore di un'entità). Quando uno statement è autofirmato da un'entità, viene chiamato *Entity Configuration.*
@@ -713,12 +713,13 @@ Un Entity Statement è un documento di riconoscimento che una Autorità di Feder
 Firma
 +++++
 
-La firma dei JWT `[RFC7515]`_ avviene mediante l'algoritmo RSA SHA-256 (RS256), tutti i partecipanti DEVONO supportare questo algoritmo di firma all’interno della Federazione. Tutte le operazioni di firma relative agli Entity Statements, Entity Configuration e Trust Mark sono condotte con le chiavi pubbliche di Federazione [5]_.
+La firma dei JWT `[RFC7515]`_ avviene mediante l'algoritmo RSA SHA-256 (RS256), tutti i partecipanti DEVONO supportare questo algoritmo di firma all’interno della Federazione. Tutte le operazioni di firma relative agli Entity Statements, Entity Configuration e Trust Mark sono condotte con le chiavi pubbliche di Federazione (Distinguiamo le chiavi di Federazione da quelle di OIDC Core, questi ultimi risiedono nei metadata OIDC. Un Entity Statement o Configuration contiene sia le chiavi pubbliche di Federazione che i metadata OIDC).
 
-Attributi (claim)
-+++++++++++++++++
 
-Entity Configuration e Statement presentano i seguenti claim comuni:
+SPID: Attributi (claim)
++++++++++++++++++++++++
+
+Entity Configuration e Statement presentano i seguenti attributi (claim) comuni:
 
 .. list-table::
     :widths: 20 20 60
@@ -746,8 +747,6 @@ Entity Configuration e Statement presentano i seguenti claim comuni:
       - JSON array
       - RICHIESTO per tutti i partecipanti fatta esclusione del Trust Anchor. Un array JSON contenente i Trust Mark. Vedere la Sezione :ref:`Trust Mark <Trust_Mark>`.
 
-
-.. [5] Distinguiamo le chiavi  di Federazione da quelle di OIDC Core, questi ultimi risiedono nei metadata OIDC. Un Entity Statement o Configuration contiene sia le chiavi pubbliche di Federazione che i metadata OIDC.
 
 
 Gli oggetti Entity Configuration delle Entità di tipo Foglia contengono in aggiunta ai claim comuni anche i seguenti:
@@ -811,6 +810,191 @@ Gli Entity Statement emessi dal Trust Ancor o suo Intermediario per i propri dir
     * - **trust_marks**
       - JSON array
       - RICHIESTO. Un array JSON contenente i Trust Mark emessi da se stesso per il soggetto discendente.
+
+
+CIE: Attributi (claim)
+++++++++++++++++++++++
+
+La tabella sottostante riporta gli attributi considerati da OIDC-FED e contestualizzati nella CIE Federation. Nella colonna “Obbligatorio/Opzionale”, specifichiamo se l'attributo deve essere presente in un *Entity Statement* (ES), *Entity Configuration* (EC) o entrambi (ES/EC) e per quali tipi di entità (L=foglia/leaf, I=intermediate, TA o tutte).
+
+
+.. note::
+   Quando un Entity Statement è relativo ad una subordinata, le entità foglia espongono solo Entity Configuration (attraverso l'endpointil /.well-known/openid-federation).
+
+
+.. list-table::
+    :widths: 20 20 40 20
+    :header-rows: 1
+
+    * - **Claim**
+      - **Tipo**
+      - **Descrizione**
+      - **Obbligatorio/Opzionale**
+    * - **iss**
+      - String
+      - L'identificatore di entità dell'emittente dello statement
+      - OBBLIGATORIO in ES/EC per tutte le entità. 
+    * - **sub**
+      - String
+      - L'identificatore di entità del soggetto. Se l'*iss* e il *sub* sono identici, l'emittente sta facendo uno statement relativo a se stessa e questo Entity Statement è un Entity Configuration
+      - OBBLIGATORIO in ES/EC per tutte le entità. 
+    * - **iat**
+      - UTC Timestamp
+      - Data/ora nella quale lo statement è stato emesso
+      - OBBLIGATORIO in ES/EC per tutte le entità. 
+    * - **exp**
+      - UTC Timestamp
+      - Data/ora di scandenza o dopo la quale lo statement NON DEVE PIÙ essere accettato per l'elaborazione
+      - OBBLIGATORIO in ES/EC per tutte le entità. 
+    * - **jwks**
+      - JWKS
+      - Un JSON Web Key Set (JWKS) `[RFC7517]`_ che rappresenta la parte pubblica delle chiavi di firma dell'entità soggetto. Le chiavi
+        di questo set sono per firmare statement e NON DEVONO essere usate in altri protocolli (chiavi da usare in altri protocolli, p.es. OpenID Connect, vengono passate nell'elemento metadata del rispettivo ES). Ogni JWK nell'insieme JWKS DEVE avere un Key ID (*kid*)
+      - OBBLIGATORIO in ES/EC per tutte le entità. 
+    * - **aud**
+      - String
+      - L'ES  PUÒ essere specificatamente creato per un'entità. L'identificatore di entità per quell'entità DEVE apparire in questo claim.
+      - OPZIONALE in ES/EC per tutte le entità. 
+    * - **authority_hints**
+      - Array di stringhe
+      - Rappresenta gli identificatori di entità delle entità intermedie o delle TA che POSSONO emettere un ES riguardo l'entità
+        emittente.
+      - OBBLIGATORIO (NON DEVE essere una lista vuota []) in EC per tutte le entità eccetto per le TA che non hanno alcun superiore.
+    * - **metadata**
+      - JSON Object
+      - Oggetto JSON che include attributi di metadata specifici di protocollo che rappresentano i metadati dell'entità. Ogni chiave
+        dell'oggetto JSON rappresenta un identificatore del tipo di metadato, ed ogni valore DEVE essere un Oggetto JSON che rappresenta il metadato in acvcordo allo schema di metadati del tipo di metadato. Un EC PUÒ contenere statement multipli diu metadato, ma uno solo per ciascun tipo di metadato.
+      - OPZIONALE in ES per Is e TA (le entità L NON DEVONO contenere un claim *metadata_policy*)
+    * - **constraints**
+      - JSON Object
+      - Oggetto JSON che descrive un insieme di vincoli della Trust Chain. Un vincolo può contenere i seguenti attributi:
+          
+          - **max_path_length**. OBBLIGATORIO. Numero intero. Il massimo numero di ES fra questo ES e l'ultimo ES nella trust chain.
+            Nella CIE FED questo attributo è XX
+          - **naming_constraints**. OPZIONALE. JSON Object. Restrizione sugli identificatori di entità delle entità al di sotto di questa entità. Il comportamento di questo attributo riproduce ciò che è definito in `[RFC5280#Section.4.2.1.10]`_. Le restrizioni sono definite in termini di sottoalberi permessi o esclusi.
+
+        Se un ES subordinato contiene una specifica di vincolo più restrittiva di quella effettiva, allora il vincolo più
+        restrittivo è effettivo da qui in avanti. Se un ES subordinato contiene una specifica di vincolo meno restrittiva di quella
+        in effetto, allora DEVE essere ignorata.
+
+      - OBBLIGATORIO in EC per TA
+    * - **trust_marks**
+      - JSON Array
+      - Un array JSON di Web Token JSON firmati, ciascuno che rappresenta un marchio di certificazione. Vedere sezione XX.
+      - OBBLIGATORIO in EC per entità L e I. OPZIONALE in ES per entità L e I.
+    * - **trust_marks_issuers**
+      - JSON Array
+      - TA PUÒ usare questo attributo per dire quali identificatori di Trust Mark e i loro emettitori sono fidati nella Federazione.
+        Questo attributo DEVE essere ignorato se presente in un ES di altre entità rispetto alla TA. È un array JSON con chiavi che rappresentano identificatori Trust Mark e valori che sono un array di entità fidate che rappresentano l'autorità di accreditazione. Un valore speciale * permette TRust Mark auto firmati.
+      - OPZIONALE in EC per TA.
+
+
+
+.. seealso:: 
+
+  `[OIDC-FED#Section_3.1]`_
+
+
+CIE: Metadati
++++++++++++++
+
+Riguardo a *metadata*, OIDC-FED usa valori di metadati da OpenID Connect Discovery 1.0 e OpenID Connect Dynamic Client Registration 1.0 `[OpenID.Discovery]`_, `[OpenID.Registration]`_ e aggiunge valori aggiuntivi usati per le federazioni descritte nelle seguenti sottosezioni per i ruoli differenti.
+
+
+CIE: Metadato OP per la Federazione
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+L'identificatore del tipo di metadato è *openid_provider*. La tabella qui sotto presenta i valori del metadato OP definiti in `[OIDC-FED]`_, contestualizzati nella CIE Federation.
+
+
+.. list-table::
+    :widths: 40 20 40
+    :header-rows: 1
+
+    * - **Claim**
+      - **Tipo**
+      - **Descrizione**
+    * - **client_registration_types_supported**
+      - Array of string
+      - OBBLIGATORIO. Array che specifica i tipi di federazione supportati. Nella CIE Federation è supportato solo il valore *automatic*
+    * - **organization_name**
+      - String
+      - OPZIONALE. Un nome umanamente leggibile che rappresenta l'organizzazione proprietaria dell'OP. È inteso che va usato
+        nell'interfaccia utente per essere riconosciuto dagli utenti finali che userebbero l'OP per autenticarsi.
+    * - **request_authentication_methods_supported**
+      - JSON Object
+      - OPZIONALE. Un oggetto JSON con membri che rappresentano processi e come valori liste di metodi di request authentication
+        supportati dall'authorization endpoint. L'unico metodo supportato nella CIE Federation è *request_object* per il processo Authorization Request (*ar*).
+    * - **signed_jwks_uri**
+      - URI
+      - OPZIONALE. Un URI che punta a un JWT firmato che come payload il JWK Set dell'entità (vedere esempio sotto). Il JWT è firmato
+        con una chiave inclusa nel JWK che l'entità ha pubblicato nel suo Entity Statement autofirmato.
+
+
+
+
+CIE: Metadato RP per la Federazione
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+L'identificatore del tipo di metadato è *openid_provider*. La tabella qui sotto presenta i valori del metadato RP definiti in `[OIDC-FED]`_, contestualizzati nella CIE Federation.
+
+
+.. list-table::
+    :widths: 40 20 40
+    :header-rows: 1
+
+    * - **Claim**
+      - **Tipo**
+      - **Descrizione**
+    * - **client_registration_types**
+      - Array of string
+      - OBBLIGATORIO. Array di stringhe che specifica i tipi di registrazione client che RP vuole usare. Nella CIE Federation è supportato solo il valore *automatic*
+    * - **organization_name**
+      - String
+      - OPZIONALE. Un nome umanamente leggibile che rappresenta l'organizzazione proprietaria dell'RP. 
+
+
+
+CIE: Metadato FA per la Federazione
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+L'identificatore del tipo di metadato è *federation_entity*. La tabella qui sotto presenta i valori del metadato FA definiti in `[OIDC-FED]`_, contestualizzati nella CIE Federation.
+
+
+.. list-table::
+    :widths: 40 20 40
+    :header-rows: 1
+
+    * - **Claim**
+      - **Tipo**
+      - **Descrizione**
+    * - **federation_fetch_endpoint**
+      - URL
+      - OPZIONALE. Il Fetch Endpoint descritto nella Sezione XX. Entità intermedie e TA DEVONO pubblicare un *federation_fetch_endpoint*. Entità Foglia NON DEVONO.
+
+
+
+CIE: Altri metadati per la Federazione
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Nel contesto OAuth context, `[OIDC-FED]`_ supporta:
+
+ - OAuth AS con identificatore del tipo di metadato *oauth_authorization_server*. Tutti i parametri definiti in `[RFC8414#Section_2]`_ sono applicabili.
+ - OAuth Client con identificatore del tipo di metadato *oauth_client*. Tutti i parametri definiti in `[RFC7591#Section_2]`_ sono applicabili.
+ - OAuth Protected Resource con identificatore del tipo di metadato *oauth_resource*. Non c'è uno standard che specifichi quali
+   parametri possono occorrere nel metadato per questo tipo di entità. Quindi per il momento questo può essere visto come un placeholder.
+ - Emittente di Trust Mark con identificatore del tipo di metadato *trust_mark_issuer*. Tutte le entità che partecipano in una
+   federazione possono essere di questo tipo. Le seguenti proprietà sono permesse:
+
+    - *status_endpoint*. OPZIONALE. L'endpoint per l'operazione di status è descritto nella Sezione XX. 
+
+   **Esempio**
+
+    .. code-block:: 
+
+       "trust_mark_issuer": {
+           "status_endpoint": "https://trust_marks_are_us.example.com/status"
+       }
 
 
 

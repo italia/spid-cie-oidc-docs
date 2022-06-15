@@ -25,7 +25,9 @@
 .. _[RFC8174]: https://datatracker.ietf.org/doc/html/rfc8174
 .. _[RFC3339]: https://www.ietf.org/rfc/rfc3339.txt
 .. _[RFC8414]: https://datatracker.ietf.org/doc/html/rfc8414
+.. _[RFC8414#Section_2]: https://datatracker.ietf.org/doc/html/rfc8414#section-2
 .. _[RFC7591]: https://datatracker.ietf.org/doc/html/rfc7591
+.. _[RFC7591#Section_2]: https://datatracker.ietf.org/doc/html/rfc7591#section-2
 .. _[RFC3986]: https://www.ietf.org/rfc/rfc2396.txt#:~:text=A%20Uniform%20Resource%20Identifier%20(URI,RFC%201738%20and%20RFC%201808.
 .. _[EN319-412-1]: https://www.etsi.org/deliver/etsi_en/319400_319499/31941202/02.02.01_60/en_31941202v020201p.pdf
 .. _[DM-CIE]: https://www.gazzettaufficiale.it/eli/id/2015/12/30/15A09809/sg
@@ -34,12 +36,14 @@
 .. _[EIDAS]: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv%3AOJ.L_.2014.257.01.0073.01.ENG
 .. _[SPID-OIDC]: https://www.agid.gov.it/sites/default/files/repository_files/linee_guida_openid_connect_in_spid.pdf
 .. _[OIDC-FED#Section_1.2]: https://openid.net/specs/openid-connect-federation-1_0.html#rfc.section.1.2
+.. _[OIDC-FED#Section_3.1]: https://openid.net/specs/openid-connect-federation-1_0.html#rfc.section.3.1
 .. _[OIDC-FED#Section.4.5]: https://openid.net/specs/openid-connect-federation-1_0.html#rfc.section.4.5
 .. _[OIDC-FED#Section.5.1]: https://openid.net/specs/openid-connect-federation-1_0.html#rfc.section.5.1
 .. _[OIDC-FED#Section.5.3.1]: https://openid.net/specs/openid-connect-federation-1_0.html#rfc.section.5.3.1
 .. _[OIDC-FED#Section.5.3.2]: https://openid.net/specs/openid-connect-federation-1_0.html#rfc.section.5.3.2
 .. _[OIDC-FED#Section.6]: https://openid.net/specs/openid-connect-federation-1_0.html#rfc.section.6
 .. _[OIDC-FED#Section.10.1]: https://openid.net/specs/openid-connect-federation-1_0.html#rfc.section.10.1
+.. _[RFC5280#Section.4.2.1.10]: https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.10
 .. _Linee Guida UX SPID: https://www.agid.gov.it/sites/default/files/repository_files/regole_tecniche/spid-notetecnicheinterfacce.pdf
 .. _OpenID.Discovery: OpenID.Discovery <https://openid.net/specs/openid-connect-discovery-1_0.html
 .. _OpenID.Registration: https://openid.net/specs/openid-connect-registration-1_0.html
