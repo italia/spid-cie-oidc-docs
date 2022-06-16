@@ -14,8 +14,13 @@ Indice dei contenuti
    :maxdepth: 2
 
    pagina_principale.rst
-   come_iniziare.rst
+   standards.rst
+   avvisi_spid.rst
+   termini_acronimi.rst
+   diventa_fornitore.rst
    la_federazione_delle_identita.rst
+   configurazione_federazione.rst
+   trust_marks.rst
    metadata_oidc.rst
    authorization_endpoint.rst
    authentication_response.rst
@@ -26,4 +31,3 @@ Indice dei contenuti
    federation_endpoint.rst
    come_contribuire.rst
    esempi.rst
-   

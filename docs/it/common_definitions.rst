@@ -4,7 +4,7 @@
 .. |uncheck-icon| image:: ../../images/Eo_circle_red_letter-x.svg
    :width: 25
 
-.. |warning-message| replace:: Tutti gli esempi qui riportati sono non normativi
+.. |warning-message| replace:: Tutti gli esempi contenuti in questa documentazione sono da intendersi come non normativi
 
 .. _[OIDC-FED]: https://openid.net/specs/openid-connect-federation-1_0.html
 .. _[OpenID.Core]: https://openid.net/specs/openid-connect-core-1_0-27.html
@@ -54,8 +54,3 @@
 .. _[CIE-OIDC-CORE]:
 .. _[CIE-OIDC-MOBILE]:
 .. _sessione lunga revocabile: https://www.agid.gov.it/sites/default/files/repository_files/spid-avviso-n41-integrazione_ll.gg_._openid_connect_in_spid.pdf#page=6
-
-
-
-
-

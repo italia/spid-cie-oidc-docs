@@ -1,29 +1,5 @@
-.. include:: ./common_definitions.rst
-
-Come iniziare
-=============
-
-
-Introduzione
-------------
-
-Questo documento definisce le regole di funzionamento della Federazione OpenID Connect SPID (`[OIDC-FED]`_) e `CIE id <https://www.cartaidentita.interno.gov.it/cittadini/cie-id/>`_ per Fornitori di Servizio pubblici e privati (RP), Identity Providers (OP) e Soggetti Aggregatori (SA). Definisce inoltre gli schemi dei metadati di RP, OP e SA in contesto Federativo, le modalità di registrazione dei RP presso gli OP, le risorse e gli endpoint a supporto della Federazione.
-
-
-Che cosa sono le identità digitali
-----------------------------------
-
-Grazie all’`identità digitale <https://identitadigitale.gov.it/>`_, la Pubblica Amministrazione e i fornitori di servizi privati forniscono la chiave per accedere ai servizi online attraverso una credenziale unica, che si attiva una sola volta ed è sempre valida.
-
-Semplice, veloce e sicuro, l’accesso ai servizi pubblici online è possibile con il `Sistema Pubblico di Identità Digitale (SPID) <https://www.spid.gov.it/>`_ e la `Carta d’Identità Elettronica (CIE) <https://www.cartaidentita.interno.gov.it/>`_. SPID e CIE sono gli strumenti di identificazione per accedere ai servizi online della PA e ai servizi dei privati aderenti.
-
-Grazie a SPID e CIE id diventa uniforme l’accesso ai servizi pubblici in tutto il territorio nazionale.
-
-Si rimanda al Codice dell'`Amministrazione Digitale <https://docs.italia.it/italia/piano-triennale-ict/codice-amministrazione-digitale-docs/it/v2021-07-30/_rst/capo_V-sezione_III-articolo_65.html>`_ in relazione agli obblighi di adozione dei sistemi di identità digitale.
-
-
-Acronimi IAM e AAI
-------------------
+Acronimi 
+--------
 
 In questa sezione sono definiti tutti gli acronimi utilizzati all’interno del testo.
 
@@ -51,7 +27,7 @@ In questa sezione sono definiti tutti gli acronimi utilizzati all’interno del 
     * - **OP**
       - OpenID Provider
     * - **RP**
-      - Relying Party	
+      - Relying Party   
     * - **AA**
       - Attribute Authority, OAuth Resource Server, Gestore degli Attributi qualificati
     * - **TM**
@@ -63,7 +39,7 @@ In questa sezione sono definiti tutti gli acronimi utilizzati all’interno del 
     * - **URL**
       - Uniform Resource Locator, corrispondente ad un indirizzo web
     * - **JWT**
-      - Vedi `[RFC7519]`_ Jones, M., Bradley, J. and N. Sakimura, "JSON Web Token (JWT)", RFC 7519, DOI 10.17487/RFC7519, May 2015.	
+      - Vedi `[RFC7519]`_ Jones, M., Bradley, J. and N. Sakimura, "JSON Web Token (JWT)", RFC 7519, DOI 10.17487/RFC7519, May 2015. 
     * - **FA**
       - Autorità di Federazione (Federation Authority). Un'entità legale che gestisce uno schema di identità nazionale basato su 
         un protocollo di federazione.
@@ -112,15 +88,3 @@ Seguono i termini utilizzati da `[OIDC-FED#Section_1.2]`_ e in questo documento
       - Procedura di registrazione di una nuova entità all’interno della Federazione SPID
     * - **Federation Endpoint**
       - Endpoint usati per prendere e risolvere gli statement delle entità, interrogare una lista di tutte le entità subordinate e verificare lo stato dei trust mark.
-
-
-
-Come diventare fornitore di servizi 
------------------------------------
-
-Qui di seguito riportiamo gli indirizzi di riferimento per le procedure di "onboarding" di SPID e CIE, cioè per diventare fornitori di servizi.
-
- - `Come diventare fornitori di servizi SPID <https://www.spid.gov.it/cos-e-spid/diventa-fornitore-di-servizi/>`_
-
- - `Come diventare fornitori di servizi CIE <https://www.cartaidentita.interno.gov.it/esercenti/come-attivare-entra-con-cie/>`_
-
