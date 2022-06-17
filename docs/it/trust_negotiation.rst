@@ -95,4 +95,3 @@ Pertanto, come mostrato nella figura successiva, l'Onboarding è una procedura d
 *CIE: Onboarding e direzioni Trust Chain*
 
 
-.. _Trust_Mark:

@@ -1,5 +1,8 @@
 .. include:: ./common_definitions.rst
 
+
+.. _Trust_Mark:
+
 Trust Marks
 ---------------------
 
