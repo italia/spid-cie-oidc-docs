@@ -6,9 +6,9 @@ Token Endpoint (richiesta token)
 Il Token Endpoint rilascia *access token, ID Token e refresh token*; vi sono due scenari distinti
 in cui il client chiama il Token Endpoint:
 
- 1. al termine del flusso di autenticazione descritto nel paragrafo precedente, il Client chiama il Token Endpoint inviando l’Authorization code ricevuto dall’OP (code=usDwMnEzJPpG5oaV8x3j) per ottenere un ID Token e un access token (necessario per poi chiedere gli attributi/claim allo UserInfo Endpoint) ed eventualmente un refresh token (se è stata avviata una `sessione lunga revocabile <https://www.agid.gov.it/sites/default/files/repository_files/spid-avviso-n41-integrazione_ll.gg_._openid_connect_in_spid.pdf#page=6>`_);
+ 1. al termine del flusso di autenticazione descritto nel paragrafo precedente, il Client chiama il Token Endpoint inviando l’Authorization code ricevuto dall’OP (code=usDwMnEzJPpG5oaV8x3j) per ottenere un ID Token e un access token (necessario per poi chiedere gli attributi/claim allo UserInfo Endpoint) ed eventualmente un refresh token (se è stata avviata una `sessione lunga revocabile`_);
 
- 2. in presenza di una `sessione lunga revocabile <https://www.agid.gov.it/sites/default/files/repository_files/spid-avviso-n41-integrazione_ll.gg_._openid_connect_in_spid.pdf#page=6>`_, il Client chiama il Token Endpoint inviando il refresh token in suo possesso per ottenere un nuovo access token.
+ 2. in presenza di una `sessione lunga revocabile`_, il Client chiama il Token Endpoint inviando il refresh token in suo possesso per ottenere un nuovo access token.
 
 .. seealso:: 
 
@@ -22,8 +22,6 @@ Request
 
 L’unico metodo di autenticazione all’endpoint token previsto è il private_key_jwt (OIDC Connect Core 1.0 par. 9)
 
-.. warning::
-    |warning-message|
 
 **Esempio di richiesta con authorization code (caso 1)**
 
@@ -148,7 +146,7 @@ L’ID Token deve essere formato secondo le indicazioni del paragrafo successivo
      - Tipo di *access token* restituito.
      - Deve essere valorizzato sempre con **Bearer**
    * - **refresh_token**
-     - Il *refresh token*, in formato JWT firmato, consente di chiamare nuovamente il Token Endpoint per ottenere un nuovo *access token* e quindi recuperare una `sessione lunga revocabile <https://www.agid.gov.it/sites/default/files/repository_files/spid-avviso-n41-integrazione_ll.gg_._openid_connect_in_spid.pdf#page=6>`_.
+     - Il *refresh token*, in formato JWT firmato, consente di chiamare nuovamente il Token Endpoint per ottenere un nuovo *access token* e quindi recuperare una `sessione lunga revocabile`_.
      - 
    * - **expires_in**
      - Scadenza dell’*access token*, in secondi
@@ -260,10 +258,10 @@ In caso di errore, l’OP restituisce una response con un JSON nel body costitui
      - Codice dell’errore (v. tabella sotto)
      - 
    * - **error_description** 
-     - Descrizione più dettagliata dell’errore, finalizzata ad aiutare lo sviluppatore per eventuale debugging. Questo messaggio non è destinato ad essere visualizzato all’utente (a tal fine si faccia riferimento alle Linee Guida UX SPID).
+     - Descrizione più dettagliata dell’errore, finalizzata ad aiutare lo sviluppatore per eventuale debugging. Questo messaggio non è destinato ad essere visualizzato all’utente (a tal fine si faccia riferimento alle `Linee Guida UX SPID`_).
      -
 	
-I codici di stato HTTP ed i valori dei parametri *error* e *error_description* sono descritti nelle tabelle relative ai messaggi di anomalia definiti dalle Linee Guida UX SPID.
+I codici di stato HTTP ed i valori dei parametri *error* e *error_description* sono descritti nelle tabelle relative ai messaggi di anomalia.
 
 
 .. seealso::

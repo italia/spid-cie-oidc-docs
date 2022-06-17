@@ -1,4 +1,0 @@
-Authorization request
-=====================
-
-TODO
