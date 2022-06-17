@@ -28,7 +28,7 @@ La Federazione OIDC è un modello gerarchico basato su un meccanismo di delega d
 Ritratto di una Federazione
 ---------------------------
 
-.. image:: ../../images/spid_oidc_federation_model.png
+.. image:: ../../images/spid_cie_oidc_federation_model.svg
     :width: 100%
 
 *Schema ad albero che rappresenta la struttura della Federazione SPID OIDC. Alla Base c'è l’Autorità di Federazione e, salendo, gli OP che non hanno intermediari, gli RP e gli Intermediari che a loro volta Aggregano altri RP.*

@@ -1,5 +1,7 @@
+.. include:: ./common_definitions.rst
+
 Standards di riferimento
------------------------
+------------------------
 
 .. list-table::
     :widths: 25 75

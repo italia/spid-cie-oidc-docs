@@ -69,13 +69,13 @@ L’Introspection Endpoint risponde con un oggetto JSON definito come segue.
 .. code-block:: 
 
  {
-  "active": true,
-  "scope": "foo bar",
-  "exp": 1519033149,
-  "sub": "OP-1234567890",
-  "client_id": "https://rp.agid.gov.it/"
-  "iss": "https://op.spid.agid.gov.it/",
-  "aud": "https://rp.spid.agid.gov.it/auth",
+     "active":true,
+     "scope":"foo bar",
+     "exp":1519033149,
+     "sub":"OP-1234567890",
+     "client_id":"https://rp.agid.gov.it/",
+     "iss":"https://op.spid.agid.gov.it/",
+     "aud":"https://rp.spid.agid.gov.it/auth"
  }
 
 .. list-table:: 
@@ -117,8 +117,8 @@ In caso di errore, l’OP restituisce un codice HTTP 401 con un JSON nel body av
 .. code-block:: 
 
  {
-  "error": "invalid_client",
-  "error_description: "client_id non riconosciuto."
+     "error":"invalid_client",
+     "error_description":"client_id non riconosciuto."
  }
 
 .. list-table:: 

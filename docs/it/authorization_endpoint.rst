@@ -133,9 +133,11 @@ attributi elencati sotto "userinfo" sono disponibili al momento della chiamata a
 .. code-block:: 
 
  {
-    "userinfo": {
-        "https://attributes.spid.gov.it/familyName": {"essential": true}
-    },
+     "userinfo":{
+         "https://attributes.spid.gov.it/familyName":{
+             "essential":true
+         }
+     }
  }
 
 

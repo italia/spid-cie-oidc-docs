@@ -1,3 +1,5 @@
+.. include:: ./common_definitions.rst
+
 Acronimi 
 --------
 

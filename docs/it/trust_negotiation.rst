@@ -1,3 +1,5 @@
+.. include:: ./common_definitions.rst
+
 Trust negotiation
 +++++++++++++++++
 
@@ -53,7 +55,7 @@ Nei casi in cui un RP avesse come entità superiore un SA e non direttamente la 
 .. [2] Un RP può esporre più di una entità superiore all’interno del proprio claim di **authority_hints**. Si pensi ad un RP che partecipa sia alla Federazione SPID che a quella CIE. Inoltre un RP può risultare come aggregato di molteplici intermediari, se questi SPID o CIE.
 
 
-.. image:: ../../images/trust_anchor.png
+.. image:: ../../images/trust_anchor.svg
     :width: 100%
 
 *Ogni partecipante espone la propria configurazione e i propri Trust Mark. Il collegamento tra una Foglia e il Trust Anchor avviene in maniera diretta oppure mediante un Intermediario (Soggetto Aggregatore) come in Figura.*

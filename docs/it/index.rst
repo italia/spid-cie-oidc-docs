@@ -20,7 +20,12 @@ Indice dei contenuti
    diventa_fornitore.rst
    la_federazione_delle_identita.rst
    configurazione_federazione.rst
+   entity_statement_entity_configuration.rst
+   trust_anchor_intermediari_endpoint.rst
+   differenze_oidc_fed.rst
+   considerazioni_sicurezza_buone_pratiche.rst
    trust_marks.rst
+   trust_negotiation.rst
    metadata_oidc.rst
    authorization_endpoint.rst
    authentication_response.rst

@@ -1,3 +1,4 @@
+.. include:: ./common_definitions.rst
 
 Trust Marks
 ---------------------
@@ -50,16 +51,18 @@ Di seguito un esempio non normativo dell’oggetto **trust_mark_issuers** all’
 
 .. code-block::
 
- "trust_marks_issuers":{
-      "https://registry.agid.gov.it/openid_relying_party/public/":[
-         "https://registry.spid.agid.gov.it/",
-         "https://public.intermediary.spid.it/"
-      ],
-      "https://registry.agid.gov.it/openid_relying_party/private/":[
-         "https://registry.spid.agid.gov.it/",
-         "https://private.other.intermediary.it/"
-      ]
-   }
+ {
+     "trust_marks_issuers":{
+         "https://registry.agid.gov.it/openid_relying_party/public/":[
+             "https://registry.spid.agid.gov.it/",
+             "https://public.intermediary.spid.it/"
+         ],
+         "https://registry.agid.gov.it/openid_relying_party/private/":[
+             "https://registry.spid.agid.gov.it/",
+             "https://private.other.intermediary.it/"
+         ]
+     }
+ }
 
 
 I TM emessi per le Foglie DEVONO essere pubblicati dalle stesse all’interno della proprie Entity Configuration, all’interno del claim **trust_marks**. Questo è composto da lista di oggetti JSON, ognuno di questi DEVE contenere almeno i claim **id** e **trust_mark**, il primo identifica il TM, il secondo contiene il JWT firmato del TM.
@@ -69,12 +72,14 @@ Di seguito un esempio non normativo dell’oggetto **trust_marks** all’interno
 
 .. code-block::
 
- "trust_marks": [
-    {
-      "id": "https://www.spid.gov.it/openid-federation/agreement/sp-public/", 
-      "trust_mark": …
-    }
- ]
+ {
+     "trust_marks":[
+         {
+             "id":"https://www.spid.gov.it/openid-federation/agreement/sp-public/",
+             "trust_mark":"…"
+         }
+     ]
+ }
 
 
 SPID: Composizione dei Trust Mark 
@@ -151,54 +156,59 @@ Quello che segue è un esempio non normativo di un marchio di fiducia emesso da 
 
 .. code-block::
 
- "trust_marks": [
-  {
-   "id":"https://registry.agid.gov.it/federation_entity/private/",
-   "trust_mark": …
-  }
- ]
+ {
+     "trust_marks":[
+         {
+             "id":"https://registry.agid.gov.it/federation_entity/private/",
+             "trust_mark":"…"
+         }
+     ]
+ }
 
 Dove il contenuto del JWT firmato all’interno del claim **trust_mark** corrisponde a:
 
 .. code-block::
 
  {
-   "id":"https://registry.agid.gov.it/federation_entity/private/",
-   "iss": "https://registry.agid.gov.it",
-   "sub": "https://intermediary.example.it",
-   "iat": 1579621160,
-   "organization_type": "private",
-   "id_code": "12345678900",
-   "email": "email_or_pec@example.it",
-   "organization_name": "Full name of the SA",
-   "ref": "https://reference_to_some_documentation.example.it/"
+     "id":"https://registry.agid.gov.it/federation_entity/private/",
+     "iss":"https://registry.agid.gov.it",
+     "sub":"https://intermediary.example.it",
+     "iat":1579621160,
+     "organization_type":"private",
+     "id_code":"12345678900",
+     "email":"email_or_pec@example.it",
+     "organization_name":"Full name of the SA",
+     "ref":"https://reference_to_some_documentation.example.it/"
  }
 
 Un'entità intermediaria (SA) è riconoscibile come emittente di Trust Mark. Quello che segue è un esempio non normativo di un Trust Mark emesso da un Soggetto Aggregatore a favore di un RP suo discendente.
 
 .. code-block::
 
- "trust_marks": [
-  {
-   "id":"https://registry.agid.gov.it/openid_relying_party/public/",
-   "trust_mark": …
-   }
- ]
+ {
+     "trust_marks":[
+         {
+             "id":"https://registry.agid.gov.it/openid_relying_party/public/",
+             "trust_mark":"…"
+         }
+     ]
+ }
+
 
 Dove il contenuto del JWT firmato all’interno del claim **trust_mark** corrisponde al seguente esempio non normativo.
 
 .. code-block::
 
  {
-   "id":"https://registry.agid.gov.it/openid_relying_party/public/",
-   "iss": "https://intermediary.example.it",
-   "sub": "https://rp.example.it",
-   "iat": 1579621160,
-   "organization_type": "public",
-   "id_code": "123456",
-   "email": "email_or_pec@rp.it",
-   "organization_name": "Full name of the RP",
-   "ref": "https://reference_to_some_documentation.it/"
+     "id":"https://registry.agid.gov.it/openid_relying_party/public/",
+     "iss":"https://intermediary.example.it",
+     "sub":"https://rp.example.it",
+     "iat":1579621160,
+     "organization_type":"public",
+     "id_code":"123456",
+     "email":"email_or_pec@rp.it",
+     "organization_name":"Full name of the RP",
+     "ref":"https://reference_to_some_documentation.it/"
  }
 
 
@@ -336,13 +346,15 @@ Il seguente è un esempio non normativo di un Trust Mark emesso da *MinInterno* 
 
 .. code-block::
 
- "trust_marks": [
-  {
-   "id":"https://registry.servizicie.interno.gov.it/federation_entity/private/",
-   "iss": "https://registry.servizicie.interno.gov.it",
-   "trust_mark": $JWT
-  }
- ]
+ {
+     "trust_marks":[
+         {
+             "id":"https://registry.servizicie.interno.gov.it/federation_entity/private/",
+             "iss":"https://registry.servizicie.interno.gov.it",
+             "trust_mark":"$JWT"
+         }
+     ]
+ }
 
 
 Dove il payload JWT sarebbe come segue:
@@ -350,15 +362,15 @@ Dove il payload JWT sarebbe come segue:
 .. code-block::
 
  {
-   "id":"https://registry.servizicie.interno.gov.it/federation_entity/private/",
-   "iss": "https://registry.servizicie.interno.gov.it",
-   "sub": "https://intermediate.example.it",
-   "iat": 1579621160,
-   "organization_type": "private",
-   "id_code": "12345678900",
-   "email": "email_or_pec@intermediate.it",
-   "organization_name#it": "Full name of the SA",
-   "ref": "https://reference_to_some_documentation.it/"
+     "id":"https://registry.servizicie.interno.gov.it/federation_entity/private/",
+     "iss":"https://registry.servizicie.interno.gov.it",
+     "sub":"https://intermediate.example.it",
+     "iat":1579621160,
+     "organization_type":"private",
+     "id_code":"12345678900",
+     "email":"email_or_pec@intermediate.it",
+     "organization_name#it":"Full name of the SA",
+     "ref":"https://reference_to_some_documentation.it/"
  }
 
 
@@ -367,13 +379,15 @@ Un'entità intermediaria dovrebbe essa stessa essere un emettitore di Trust Mark
 
 .. code-block::
 
- "trust_marks": [
-  {
-   "id":"https://registry.servizicie.interno.gov.it/openid_relying_party/public/",
-   "iss": "https://intermediary.example.it",
-   "trust_mark": $JWT
-   }
- ]
+ {
+     "trust_marks":[
+         {
+             "id":"https://registry.servizicie.interno.gov.it/openid_relying_party/public/",
+             "iss":"https://intermediary.example.it",
+             "trust_mark":"$JWT"
+         }
+     ]
+ }
 
 
 Dove il payload $JWT potrebbe essere come nel seguente esempio non normativo:
@@ -381,15 +395,15 @@ Dove il payload $JWT potrebbe essere come nel seguente esempio non normativo:
 .. code-block::
 
  {
-   "id":"https://registry.servizicie.interno.gov.it/openid_relying_party/public/",
-   "iss": "https://intermediary.example.it",
-   "sub": "https://rp.example.it",
-   "iat": 1579621160,
-   "organization_type": "public",
-   "id_code": "123456",
-   "email": "email_or_pec@rp.it",
-   "organization_name#it": "Full name of the RP",
-   "ref": "https://reference_to_some_documentation.it/"
+     "id":"https://registry.servizicie.interno.gov.it/openid_relying_party/public/",
+     "iss":"https://intermediary.example.it",
+     "sub":"https://rp.example.it",
+     "iat":1579621160,
+     "organization_type":"public",
+     "id_code":"123456",
+     "email":"email_or_pec@rp.it",
+     "organization_name#it":"Full name of the RP",
+     "ref":"https://reference_to_some_documentation.it/"
  }
 
 
@@ -421,34 +435,38 @@ Un esempio non normativo è dato qui sotto:
 
 .. code-block::
 
- "trust_marks": [
-  {
-   "id":"https://registry.spid.gov.it/oauth_resource/aa/",
-   "iss": "https://registry.spid.gov.it",
-   "trust_mark": $JWT
-  }
- ]
+ {
+     "trust_marks":[
+         {
+             "id":"https://registry.spid.gov.it/oauth_resource/aa/",
+             "iss":"https://registry.spid.gov.it",
+             "trust_mark":"$JWT"
+         }
+     ]
+ } 
 
 Dove il payload di JWT sarebbe come segue:
 
 .. code-block::
 
  {
-   "id":"https://registry.spid.gov.it/oauth_resource/aa/",
-   "iss": "https://registry.spid.gov.it",
-   "sub": "https://aa.example.it",
-   "iat": 1579621160,
-   "organization_type": "public",
-   "id_code": "123456",
-   "email": "email_or_pec@aa.it",
-   "organization_name#it": "Full name of the AA",
-   "policy_uri#it": "url to AA privacy policy",
-   "tos_uri#it": "url to AA info policy",
-   "service_documentation": "url to AA OAS3 document",
-   "claims": {
-      "https://attributes.eid.gov.it/fiscalNumber": {"essential": true},
-      }  
-   "ref": "https://reference_to_some_documentation.it/"
+     "id":"https://registry.spid.gov.it/oauth_resource/aa/",
+     "iss":"https://registry.spid.gov.it",
+     "sub":"https://aa.example.it",
+     "iat":1579621160,
+     "organization_type":"public",
+     "id_code":"123456",
+     "email":"email_or_pec@aa.it",
+     "organization_name#it":"Full name of the AA",
+     "policy_uri#it":"url to AA privacy policy",
+     "tos_uri#it":"url to AA info policy",
+     "service_documentation":"url to AA OAS3 document",
+     "claims":{
+         "https://attributes.eid.gov.it/fiscalNumber":{
+             "essential":true
+         }
+     },
+     "ref":"https://reference_to_some_documentation.it/"
  }
 
 

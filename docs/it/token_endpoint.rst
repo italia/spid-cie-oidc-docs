@@ -125,11 +125,11 @@ L’ID Token deve essere formato secondo le indicazioni del paragrafo successivo
 .. code-block:: 
 
  {
-  "access_token": "dC34Pf6kdG...",
-  "token_type": "Bearer",
-  "refresh_token": "wJ848BcyLP...",
-  "expires_in": 1800,
-  "id_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY..."
+     "access_token":"dC34Pf6kdG...",
+     "token_type":"Bearer",
+     "refresh_token":"wJ848BcyLP...",
+     "expires_in":1800,
+     "id_token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY..."
  }
  
 .. list-table:: 
@@ -166,17 +166,18 @@ L’ID Token è un JSON Web Token (JWT) che contiene informazioni sull’utente 
 .. code-block:: 
 
  {
-  "iss": "https://op.spid.agid.gov.it/",
-  "sub": "OP-1234567890",
-  "aud": "https://rp.spid.agid.gov.it/auth",
-  "acr": "https://www.spid.gov.it/SpidL2",
-  "at_hash": "qiyh4XPJGsOZ2MEAyLkfWqeQ",
-  "iat": 1519032969,
-  "nbf": 1519032969,
-  "exp": 1519033149,
-  "jti": "nw4J0zMwRk4kRbQ53G7z",
-  "nonce": "MBzGqyf9QytD28eupyWhSqMj78WNqpc2"
+     "iss":"https://op.spid.agid.gov.it/",
+     "sub":"OP-1234567890",
+     "aud":"https://rp.spid.agid.gov.it/auth",
+     "acr":"https://www.spid.gov.it/SpidL2",
+     "at_hash":"qiyh4XPJGsOZ2MEAyLkfWqeQ",
+     "iat":1519032969,
+     "nbf":1519032969,
+     "exp":1519033149,
+     "jti":"nw4J0zMwRk4kRbQ53G7z",
+     "nonce":"MBzGqyf9QytD28eupyWhSqMj78WNqpc2"
  }
+
 
 .. list-table:: 
    :widths: 25 25 50
@@ -242,8 +243,8 @@ In caso di errore, l’OP restituisce una response con un JSON nel body costitui
 .. code-block:: 
 
  {
-  "error": "codice errore",
-  "error_description: "descrizione dell’errore"
+     "error":"codice errore",
+     "error_description":"descrizione dell’errore"
  }
 
 

@@ -15,9 +15,14 @@ OpenID Connect Provider Metadata (OP)
 
 .. code-block:: 
 
- "metadata":{
-     "openid_provider": { … }
+ {
+     "metadata":{
+         "openid_provider":{
+             ...
+         }
+     }
  }
+
 
 Dove un OP non disponesse all’interno dei propri metadata dei claim **client_registration_types_supported** e/o **request_authentication_methods_supported** i valori da intendersi come impliciti sono i seguenti.
 
@@ -35,20 +40,24 @@ Dove un OP non disponesse all’interno dei propri metadata dei claim **client_r
      - String
      - OPZIONALE. Un nome leggibile che rappresenta l'organizzazione proprietaria dell'OP. È inteso per l'utilizzo nell'interfaccia
        utente, per essere riconosciuto dagli utenti finali che usano l'OP per autenticarsi.
-   * - **request_authentication_methods_supported**
-     - JSON Object
-     - OPZIONALE. Un oggetto JSON con membri che rappresentano metodi di richiesta autenticazione e come valori liste di metodi di
-       richieste di autenticazione che sono supportati dall'authorization endpoint.
-       
+
        L'unico metodo di richiesta autenticazione supportato **request_object** per le Richieste di Autorizzazione (ar)
 
        ..code-block::
 
         {
-            "authorization_endpointar":[
-                "request_object"
+            "authorization_endpointer":[
+                 "request_object"
             ]
         }
+   * - **request_authentication_methods_supported**
+     - JSON Object
+     - OPZIONALE. Un oggetto JSON con membri che rappresentano metodi di richiesta autenticazione e come valori liste di metodi di
+       richieste di autenticazione che sono supportati dall'authorization endpoint.
+   * - **signed_jwks_uri**
+     - URI
+     - OPZIONALE. Un URI che punta a un JWT firmato che come payload il JWK Set dell'entità (vedere esempio sotto). Il JWT è firmato
+       con una chiave inclusa nel JWK che l'entità ha pubblicato nel suo Entity Statement autofirmato.
 
 
 Ogni OP DEVE esporre all’interno dei propri metadati i seguenti claim come obbligatori.
@@ -79,8 +88,12 @@ OpenID Connect Relying Party Metadata (RP)
 
 .. code-block:: 
 
- "metadata":{
-     "openid_relying_party":{ … }
+ {
+     "metadata":{
+         "openid_relying_party":{
+             ...
+         }
+     }
  }
 
 
@@ -96,6 +109,8 @@ Dove un RP non disponesse all’interno dei propri metadati dei claim **client_r
    * - **client_registration_types**
      - String
      - OBBLIGATORIO. Array che specifica i tipi supportati dalla federazione (solo *automatic*)
+
+
 
 Ogni RP DEVE esporre all’interno dei propri Metadata i seguenti claim come obbligatori
 
@@ -125,9 +140,14 @@ OpenID Connect Federation Entity Metadata (FA)
 
 .. code-block:: 
 
- "metadata":{
-     "federation_entity":{ … }
+ {
+     "metadata":{
+         "federation_entity":{
+             ...
+         }
+     }
  }
+
 
 L’oggetto **federation_entity** è composto dai seguenti claim
 
@@ -167,4 +187,46 @@ L’oggetto **federation_entity** è composto dai seguenti claim
      - Nome umanamente leggibile di questa entità.
 
        *Non contestualizzato in CIE Federation*
+
+
+La tabella qui sotto presenta i valori del metadato FA definiti in `[OIDC-FED]`_, contestualizzati nella CIE Federation.
+
+
+.. list-table::
+    :widths: 40 20 40
+    :header-rows: 1
+
+    * - **Claim**
+      - **Tipo**
+      - **Descrizione**
+    * - **federation_fetch_endpoint**
+      - URL
+      - OPZIONALE. Il Fetch Endpoint descritto nella Sezione XX. Entità intermedie e TA DEVONO pubblicare un *federation_fetch_endpoint*. Entità Foglia NON DEVONO.
+
+
+
+
+Altri metadati per la Federazione CIE
++++++++++++++++++++++++++++++++++++++
+
+Nel contesto OAuth context, `[OIDC-FED]`_ supporta:
+
+ - OAuth AS con identificatore del tipo di metadato *oauth_authorization_server*. Tutti i parametri definiti in `[RFC8414#Section_2]`_ sono applicabili.
+ - OAuth Client con identificatore del tipo di metadato *oauth_client*. Tutti i parametri definiti in `[RFC7591#Section_2]`_ sono applicabili.
+ - OAuth Protected Resource con identificatore del tipo di metadato *oauth_resource*. Non c'è uno standard che specifichi quali
+   parametri possono occorrere nel metadato per questo tipo di entità. Quindi per il momento questo può essere visto come un placeholder.
+ - Emittente di Trust Mark con identificatore del tipo di metadato *trust_mark_issuer*. Tutte le entità che partecipano in una
+   federazione possono essere di questo tipo. Le seguenti proprietà sono permesse:
+
+    - *status_endpoint*. OPZIONALE. L'endpoint per l'operazione di status è descritto nella Sezione XX. 
+
+   **Esempio**
+
+    .. code-block:: 
+
+      {
+           "trust_mark_issuer":{
+               "status_endpoint":"https://trust_marks_are_us.example.com/status"
+           }
+      }
 
