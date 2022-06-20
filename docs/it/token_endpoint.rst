@@ -1,7 +1,7 @@
 .. include:: ./common_definitions.rst
 
 Token Endpoint (richiesta token)
-================================
+--------------------------------
 
 Il Token Endpoint rilascia *access token, ID Token e refresh token*; vi sono due scenari distinti
 in cui il client chiama il Token Endpoint:

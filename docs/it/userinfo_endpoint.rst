@@ -1,7 +1,7 @@
 .. include:: ./common_definitions.rst
 
 UserInfo Endpoint (attributi)
-=============================
+-----------------------------
 
 Lo UserInfo Endpoint è una risorsa protetta OAuth 2.0 che restituisce attributi dell’utente autenticato. Per ottenere gli attributi richiesti, il Relying Party inoltra una richiesta allo UserInfo endpoint utilizzando l’Access token.
 
@@ -48,22 +48,29 @@ Lo UserInfo Endpoint restituisce i claim autorizzati nella Authentication Reques
 Il payload del JWT è un JSON contenente i seguenti parametri:
 
 .. list-table:: 
-   :widths: 20 40 40
+   :widths: 20 20 40 20
    :header-rows: 1
 
-   * - Parametro
-     - Descrizione
-     - Valori ammessi
+   * - **Claim**
+     - **Tipo**
+     - **Descrizione**
+     - **Obbligatorio**
    * - **sub**
+     - String
      - Identificatore del soggetto, coincidente con quello già rilasciato nell’ID Token
-     - Il RP deve verificare che il valore coincida con quello contenuto nell’ID Token.
+       Il RP deve verificare che il valore coincida con quello contenuto nell’ID Token.
+     - 
    * - **aud**
+     - String
      - Identificatore del soggetto destinatario della response (RP)
-     - Il RP deve verificare che il valore coincida con il proprio client_id.
+       Il RP deve verificare che il valore coincida con il proprio client_id.
+     - 
    * - **iss**
+     - String
      - URI che identifica univocamente l’OP.
      - 
    * - **<attributo>**
+     - 
      - I claim richiesti al momento dell’autenticazione
      - 
 

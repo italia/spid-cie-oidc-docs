@@ -61,6 +61,17 @@ In questa sezione sono definiti tutti gli acronimi utilizzati all’interno del 
 
 
 
+Convenzioni e Terminologia
+--------------------------
+
+Le parole chiave “DEVE” e “DEVONO”, "NON DEVE” e “NON DEVONO”, “RICHIEDE” e “RICHIESTO”, “NON DEVE”, “DOVREBBE”, “NON DOVREBBE”, “RACCOMANDATO”, “PUÒ” e “OPZIONALE” nel presente documento devono essere interpretate come descritte nel BCP 14 `[RFC2119]`_ `[RFC8174]`_ quando e solo quando appaiono in maiuscolo.
+
+Le notazioni [...] e ... indicano che il testo è stato troncato per esigenze editoriali.
+
+*base64url* denota la codifica URL-safe base64 senza padding definita in `[RFC7515#Section_2]`_.
+
+
+
 Termini utilizzati
 ------------------
 

@@ -1,7 +1,7 @@
 .. include:: ./common_definitions.rst
 
 Authentication response
-=======================
+-----------------------
 
 Un’Authentication response è un messaggio di risposta di autorizzazione OAuth 2.0
 restituito dall’authorization endpoint dell’OpenID Provider (OP) al termine del flusso di

@@ -1,6 +1,7 @@
 .. commenti
    `[...]`_
    ’
+   “”
 
 .. |check-icon| image:: ../../images/Eo_circle_green_checkmark.svg
    :width: 25
@@ -23,6 +24,7 @@
 .. _[RFC2616]: https://datatracker.ietf.org/doc/html/rfc2616
 .. _[RFC6750]: https://datatracker.ietf.org/doc/html/rfc6750
 .. _[RFC7515]: https://datatracker.ietf.org/doc/html/rfc7515
+.. _[RFC7515#Section_2]: https://datatracker.ietf.org/doc/html/rfc7515#section-2
 .. _[RFC7517]: https://datatracker.ietf.org/doc/html/rfc7517
 .. _[RFC7517#appendix-A.1]: https://datatracker.ietf.org/doc/html/rfc7517#appendix-A.1
 .. _[RFC7519]: https://datatracker.ietf.org/doc/html/rfc7519
@@ -46,7 +48,9 @@
 .. _[OIDC-FED#Section.5.3.1]: https://openid.net/specs/openid-connect-federation-1_0.html#rfc.section.5.3.1
 .. _[OIDC-FED#Section.5.3.2]: https://openid.net/specs/openid-connect-federation-1_0.html#rfc.section.5.3.2
 .. _[OIDC-FED#Section.6]: https://openid.net/specs/openid-connect-federation-1_0.html#rfc.section.6
+.. _[OIDC-FED#Section.7.1]: https://openid.net/specs/openid-connect-federation-1_0.html#rfc.section.7.1
 .. _[OIDC-FED#Section.7.3]: https://openid.net/specs/openid-connect-federation-1_0.html#rfc.section.7.3
+.. _[OIDC-FED#Section.7.4]: https://openid.net/specs/openid-connect-federation-1_0.html#rfc.section.7.4
 .. _[OIDC-FED#Section.10.1]: https://openid.net/specs/openid-connect-federation-1_0.html#rfc.section.10.1
 .. _[RFC5280#Section.4.2.1.10]: https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.10
 .. _Linee Guida UX SPID: https://www.agid.gov.it/sites/default/files/repository_files/regole_tecniche/spid-notetecnicheinterfacce.pdf

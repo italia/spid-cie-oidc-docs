@@ -1,7 +1,7 @@
 .. include:: ./common_definitions.rst
 
 Introspection Endpoint (verifica validità token) 
-================================================
+------------------------------------------------
 
 L’Introspection Endpoint esposto dall’OP consente ai RP di ottenere informazioni su un token in loro possesso, come ad esempio la sua validità.
 
@@ -39,22 +39,28 @@ La richiesta all’Introspection Endpoint consiste nell’invio del token su cui
  
 
 .. list-table:: 
-   :widths: 25 50 25
+   :widths: 20 20 40 20
    :header-rows: 1
 
-   * - Parametro
-     - Descrizione
-     - Valori ammessi
+   * - **Claim**
+     - **Tipo**
+     - **Descrizione**
+     - **Obbligatorio**
    * - **client_assertion**
-     - JWT firmato con la chiave privata del Relying Party contenente gli stessi parametri documentati per le richieste al Token Endpoint.
-     - L’OP deve verificare la validità di tutti i campi presenti nel JWT, nonché la validità della sua firma in relazione al parametro **client_id**.
-   * - **client_assertion_type**
+     - JWT
+     - JWT firmato con la chiave privata del Relying Party contenente gli stessi parametri documentati per le richieste al 
+       Token Endpoint. L’OP deve verificare la validità di tutti i campi presenti nel JWT, nonché la validità della sua firma in relazione al parametro **client_id**.
      - 
-     - **urn:ietf:params:oauth:clientassertion-type:jwt-bearer**
+   * - **client_assertion_type**
+     - String
+     - Valori ammessi: **urn:ietf:params:oauth:clientassertion-type:jwt-bearer**
+     - 
    * - **client_id**
-     - URI che identifica univocamente il RP come da Registro SPID. 
-     - L’OP deve verificare che il client_id sia noto.
+     - String
+     - URI che identifica univocamente il RP come da Registro SPID. L’OP deve verificare che il client_id sia noto.
+     - 
    * - **token**
+     - 
      - Il token su cui il RP vuole ottenere informazioni.
      - 
 
@@ -79,33 +85,46 @@ L’Introspection Endpoint risponde con un oggetto JSON definito come segue.
  }
 
 .. list-table:: 
-   :widths: 25 50 25
+   :widths: 20 20 40 20
    :header-rows: 1
 
-   * - Parametro
-     - Descrizione
-     - Valori ammessi
+   * - **Claim**
+     - **Tipo**
+     - **Descrizione**
+     - **Obbligatorio**
    * - **active**
+     - Boolean
      - Valore booleano che indica la validità del token. Se il token è scaduto, è revocato o non è mai stato emesso per il client_id chiamante, l’Introspection Endpoint deve restituire false.
      - 
    * - **scope**
+     - 
      - Lista degli scope richiesti al momento dell’Authorization Request
      - 
    * - **exp**
+     - UNIX Timestamp
      - Scadenza del token.
      - 
    * - **sub**
-     - Identificatore del soggetto, coincidente con quello già rilasciato nell’ID Token 
-     - Il RP deve verificare che il valore coincida con quello contenuto nell’ID Token.
+     - String
+     - Identificatore del soggetto, coincidente con quello già rilasciato nell’ID Token. 
+       Il RP deve verificare che il valore coincida con quello contenuto nell’ID Token.
+     - 
    * - **client_id**
+     - String
      - URI che identifica univocamente il RP come da Registro SPID. 
-     - Il RP deve verificare che il valore coincida con il proprio client_id.
+       Il RP deve verificare che il valore coincida con il proprio client_id.
+     - 
    * - **iss**
+     - String
      - Identificatore dell’OP che lo contraddistingue univocamente nella federazione nel formato Uniform Resource Locator (URL).
-     - Il client è tenuto a verificare che questo valore corrisponda all’OP chiamato.
+       Il client è tenuto a verificare che questo valore corrisponda all’OP chiamato.
+     - 
    * - **aud**
+     - String
      - Contiene il client ID.
-     - Il client è tenuto a verificare che questo valore corrisponda al proprio client ID. 
+       Il client è tenuto a verificare che questo valore corrisponda al proprio client ID. 
+     - 
+
 	 
 Errori
 ++++++
@@ -120,6 +139,7 @@ In caso di errore, l’OP restituisce un codice HTTP 401 con un JSON nel body av
      "error":"invalid_client",
      "error_description":"client_id non riconosciuto."
  }
+
 
 .. list-table:: 
    :widths: 25 50 25

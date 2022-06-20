@@ -1,7 +1,7 @@
 .. include:: ./common_definitions.rst
 
 Authorization Endpoint (Authentication Request)
-===============================================
+-----------------------------------------------
 
 Per avviare il processo di autenticazione, il RP reindirizza l’utente all’Authorization Endpoint dell’OP selezionato, passando in POST o in GET una richiesta avente nel parametro **request** un oggetto in formato JWT.
 
@@ -30,27 +30,35 @@ L’oggetto request DEVE essere un token JWT firmato, secondo le modalità defin
 **Esempio (contenuto del JWT):**:: 
 
  {
-      client_id=https://rp.spid.agid.gov.it
-      response_type=code
-      scope=openid
-      code_challenge=qWJlMe0xdbXrKxTm72EpH659bUxAxw80
-      code_challenge_method=S256
-      nonce=MBzGqyf9QytD28eupyWhSqMj78WNqpc2
-      prompt=login
-      redirect_uri=https%3A%2F%2Frp.spid.agid.gov.it%2Fcallback1%2F
-      acr_values=https://www.spid.gov.it/SpidL1 https://www.spid.gov.it/SpidL2
-      claims={
-          "id_token": {
-              "nbf": { essential: true },
-              "jti": { essential: true }
-          },
-          "userinfo": {
-              "https://attributes.spid.gov.it/name": null,
-              "https://attributes.spid.gov.it/familyName": null
-          },
-      }
-      state=fyZiOL9Lf2CeKuNT2JzxiLRDink0uPcd
+     "client_id":"https://rp.spid.agid.gov.it",
+     "response_type":"code",
+     "scope":"openid",
+     "code_challenge":"qWJlMe0xdbXrKxTm72EpH659bUxAxw80",
+     "code_challenge_method":"S256",
+     "nonce":"MBzGqyf9QytD28eupyWhSqMj78WNqpc2",
+     "prompt":"login",
+     "redirect_uri":"https://rp.spid.agid.gov.it/callback1",
+     "acr_values":{
+         "https://www.spid.gov.it/SpidL1":null,
+         "https://www.spid.gov.it/SpidL2":null
+     },
+     "claims":{
+         "id_token":{
+             "nbf":{
+                 "essential":true
+             },
+             "jti":{
+                 "essential":true
+             }
+         },
+         "userinfo":{
+             "https://attributes.spid.gov.it/name":null,
+             "https://attributes.spid.gov.it/familyName":null
+         }
+     },
+     "state":"fyZiOL9Lf2CeKuNT2JzxiLRDink0uPcd"
  }
+
 
 .. list-table:: 
    :widths: 25 25 25 25

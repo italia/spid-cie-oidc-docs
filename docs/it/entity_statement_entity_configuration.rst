@@ -36,10 +36,10 @@ EC ed ES contengono i seguenti attributi comuni:
       - String
       - OBBLIGATORIO. Identificativo del soggetto a cui è riferito. 
     * - **iat**
-      - UTC Timestamp
+      - UNIX Timestamp
       - OBBLIGATORIO. Data di emissione. 
     * - **exp**
-      - UTC Timestamp
+      - UNIX Timestamp
       - OBBLIGATORIO. Data di scadenza.
     * - **jwks**
       - JWKS

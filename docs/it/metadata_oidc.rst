@@ -1,7 +1,7 @@
 .. include:: ./common_definitions.rst
 
 Metadati OIDC
-=============
+-------------
 
 OIDC-FED utilizza i claim dei metadati così come definiti all’interno delle specifiche di OpenID Connect Discovery 1.0 e OpenID Connect Dynamic Client Registration 1.0 `[OpenID.Discovery]`_,`[OpenID.Registration]`_ rispettivamente per OP e RP. 
 
@@ -27,18 +27,20 @@ OpenID Connect Provider Metadata (OP)
 Dove un OP non disponesse all’interno dei propri metadata dei claim **client_registration_types_supported** e/o **request_authentication_methods_supported** i valori da intendersi come impliciti sono i seguenti.
 
 .. list-table:: 
-   :widths: 30 10 60
+   :widths: 20 20 40 20
    :header-rows: 1
 
-   * - Claim
-     - Tipo
-     - Descrizione
+   * - **Claim**
+     - **Tipo**
+     - **Descrizione**
+     - **Obbligatorio**
    * - **client_registration_types_supported**
      - String
-     - OBBLIGATORIO. Array che specifica i tipi supportati dalla federazione (solo *automatic*)
+     - Array che specifica i tipi supportati dalla federazione (solo *automatic*)
+      - |check-icon|
    * - **organization_name**
      - String
-     - OPZIONALE. Un nome leggibile che rappresenta l'organizzazione proprietaria dell'OP. È inteso per l'utilizzo nell'interfaccia
+     - Un nome leggibile che rappresenta l'organizzazione proprietaria dell'OP. È inteso per l'utilizzo nell'interfaccia
        utente, per essere riconosciuto dagli utenti finali che usano l'OP per autenticarsi.
 
        L'unico metodo di richiesta autenticazione supportato **request_object** per le Richieste di Autorizzazione (ar)
@@ -50,14 +52,17 @@ Dove un OP non disponesse all’interno dei propri metadata dei claim **client_r
                  "request_object"
             ]
         }
+      - |uncheck-icon|
    * - **request_authentication_methods_supported**
      - JSON Object
-     - OPZIONALE. Un oggetto JSON con membri che rappresentano metodi di richiesta autenticazione e come valori liste di metodi di
+     - Un oggetto JSON con membri che rappresentano metodi di richiesta autenticazione e come valori liste di metodi di
        richieste di autenticazione che sono supportati dall'authorization endpoint.
+      - |uncheck-icon|
    * - **signed_jwks_uri**
      - URI
-     - OPZIONALE. Un URI che punta a un JWT firmato che come payload il JWK Set dell'entità (vedere esempio sotto). Il JWT è firmato
+     - Un URI che punta a un JWT firmato che come payload il JWK Set dell'entità (vedere esempio sotto). Il JWT è firmato
        con una chiave inclusa nel JWK che l'entità ha pubblicato nel suo Entity Statement autofirmato.
+      - |uncheck-icon|
 
 
 Ogni OP DEVE esporre all’interno dei propri metadati i seguenti claim come obbligatori.
@@ -66,18 +71,22 @@ Ogni OP DEVE esporre all’interno dei propri metadati i seguenti claim come obb
    :widths: 30 10 60
    :header-rows: 1
 
-   * - Claim
-     - Tipo
-     - Descrizione
+   * - **Claim**
+     - **Tipo**
+     - **Descrizione**
+     - **Obbligatorio**
    * - **organization_name**
      - String
-     - OBBLIGATORIO. Un nome leggibile che rappresenta l'organizzazione proprietaria dell'OP
+     - Un nome leggibile che rappresenta l'organizzazione proprietaria dell'OP
+     - |check-icon|
    * - **jwks**
      - JSON
-     - OBBLIGATORIO in assenza del claim **signed_jwks_uri**. JSON Web Key Set `[RFC7517#appendix-A.1]`_
+     - JSON Web Key Set `[RFC7517#appendix-A.1]`_
+     - |check-icon| in assenza del claim **signed_jwks_uri**. 
    * - **signed_jwks_uri**
      - String
-     - OBBLIGATORIO in assenza del claim **jwks**. URL del JWT auto firmato e verificabile con la chiave pubblica di Federazione (JWK).
+     - URL del JWT auto firmato e verificabile con la chiave pubblica di Federazione (JWK).
+     - |check-icon| in assenza del claim **jwks**. 
 
 
 
@@ -103,33 +112,39 @@ Dove un RP non disponesse all’interno dei propri metadati dei claim **client_r
    :widths: 30 10 60
    :header-rows: 1
 
-   * - Claim
-     - Tipo
-     - Descrizione
+   * - **Claim**
+     - **Tipo**
+     - **Descrizione**
+     - **Obbligatorio** 
    * - **client_registration_types**
      - String
-     - OBBLIGATORIO. Array che specifica i tipi supportati dalla federazione (solo *automatic*)
+     - Array che specifica i tipi supportati dalla federazione (solo *automatic*)
+     - |check-icon| 
 
 
 
 Ogni RP DEVE esporre all’interno dei propri Metadata i seguenti claim come obbligatori
 
 .. list-table:: 
-   :widths: 30 10 60
+   :widths: 20 20 40 20
    :header-rows: 1
 
-   * - Claim
-     - Tipo
-     - Descrizione
+   * - **Claim**
+     - **Tipo**
+     - **Descrizione**
+     - **Obbligatorio**
    * - **organization_name**
      - String
-     - OBBLIGATORIO. Un nome leggibile che rappresenta l'organizzazione proprietaria dell'RP
+     - Un nome leggibile che rappresenta l'organizzazione proprietaria dell'RP
+     - |check-icon| 
    * - **jwks**
      - JSON
-     - OBBLIGATORIO in assenza del claim **signed_jwks_uri**. JSON Web Key Set `[RFC7517#appendix-A.1]`_
+     - JSON Web Key Set `[RFC7517#appendix-A.1]`_
+     - |check-icon| in assenza del claim **signed_jwks_uri**. 
    * - **signed_jwks_uri**
      - String
-     - OBBLIGATORIO in assenza del claim **jwks**. URL del JWT auto firmato e verificabile con la chiave pubblica di Federazione (JWK).
+     - URL del JWT auto firmato e verificabile con la chiave pubblica di Federazione (JWK).
+     - |check-icon| in assenza del claim **jwks**. 
 
 
 
@@ -152,33 +167,38 @@ OpenID Connect Federation Entity Metadata (FA)
 L’oggetto **federation_entity** è composto dai seguenti claim
 
 .. list-table:: 
-   :widths: 30 10 60
+   :widths: 20 20 40 20
    :header-rows: 1
 
-   * - Claim
-     - Tipo
-     - Descrizione
+   * - **Claim**
+     - **Tipo**
+     - **Descrizione**
+     - **Obbligatorio**
    * - **federation_fetch_endpoint**
-     - URL
-     - OBBLIGATORIO. Url presso il quale sono pubblicati gli Entity Statements in formato JWT dei soggetti discendenti.
+     - String
+     - Url presso il quale sono pubblicati gli Entity Statements in formato JWT dei soggetti discendenti.
+     - |check-icon| 
    * - **federation_list_endpoint**
-     - URL
-     - OBBLIGATORIO. Url presso il quale è possibile ottenere la lista dei discendenti in formato JSON.
-
+     - String
+     - Url presso il quale è possibile ottenere la lista dei discendenti in formato JSON.
+       
        *Non contestualizzato in CIE Federation*
+     - |check-icon| 
    * - **federation_resolve_endpoint**
-     - URL
-     - OBBLIGATORIO. Url presso il quale è possibile ottenere i trust mark validati,il metadata finale e la Trust Chain, 
+     - String
+     - Url presso il quale è possibile ottenere i trust mark validati,il metadata finale e la Trust Chain, 
        relativamente ad un soggetto.
-
+       
        *Non contestualizzato in CIE Federation*
+     - |check-icon| 
    * - **federation_status_endpoint**
-     - URL
-     - OBBLIGATORIO. Url presso il quale è possibile validare l’assegnazione di un Trust Mark ad uno specifico soggetto.
+     - String
+     - Url presso il quale è possibile validare l’assegnazione di un Trust Mark ad uno specifico soggetto.
 
        *Non contestualizzato in CIE Federation*
+     - |check-icon| 
    * - **homepage_uri**
-     - URL
+     - String
      - Url della pagina web del Trust Anchor o SA.
 
        *Non contestualizzato in CIE Federation*
@@ -187,27 +207,29 @@ L’oggetto **federation_entity** è composto dai seguenti claim
      - Nome umanamente leggibile di questa entità.
 
        *Non contestualizzato in CIE Federation*
-
+     - |uncheck-icon| 
 
 La tabella qui sotto presenta i valori del metadato FA definiti in `[OIDC-FED]`_, contestualizzati nella CIE Federation.
 
 
 .. list-table::
-    :widths: 40 20 40
-    :header-rows: 1
+   :widths: 20 20 40 20
+   :header-rows: 1
 
-    * - **Claim**
-      - **Tipo**
-      - **Descrizione**
-    * - **federation_fetch_endpoint**
-      - URL
-      - OPZIONALE. Il Fetch Endpoint descritto nella Sezione XX. Entità intermedie e TA DEVONO pubblicare un *federation_fetch_endpoint*. Entità Foglia NON DEVONO.
+   * - **Claim**
+     - **Tipo**
+     - **Descrizione**
+     - **Obbligatorio**
+   * - **federation_fetch_endpoint**
+     - String
+     - URL al Fetch Endpoint descritto nella Sezione XX. Entità intermedie e TA DEVONO pubblicare un  *federation_fetch_endpoint*.
+       Entità Foglia NON DEVONO.
+     - |uncheck-icon| 
 
 
 
-
-Altri metadati per la Federazione CIE
-+++++++++++++++++++++++++++++++++++++
+Altri metadati
+++++++++++++++
 
 Nel contesto OAuth context, `[OIDC-FED]`_ supporta:
 

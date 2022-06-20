@@ -10,7 +10,7 @@ Il Trust Anchor e i suoi Intermediari (federation_entity) DEVONO in aggiunta esp
 Fetch entity statement endpoint
 +++++++++++++++++++++++++++++++
 
-Il recupero degli Entity Statement viene effettuato presso questo endpoint secondo le modalità definite all’interno di OIDC-FED “7.1. Fetching Entity Statements”.
+Il recupero degli Entity Statement viene effettuato presso questo endpoint secondo le modalità definite all’interno di `[OIDC-FED#Section.7.1]`_.
 
 
 .. _Trust_mark_status_endpoint:
@@ -18,7 +18,7 @@ Il recupero degli Entity Statement viene effettuato presso questo endpoint secon
 Trust mark status endpoint
 ++++++++++++++++++++++++++
 
-L’assegnazione di un Trust Mark ad un soggetto viene effettuato presso questo endpoint secondo le modalità definite all’interno di OIDC-FED “7.4. Trust Mark Status”.
+L’assegnazione di un Trust Mark ad un soggetto viene effettuato presso questo endpoint secondo le modalità definite all’interno di `[OIDC-FED#Section.7.4]`_.
 
 
 .. _Entity_Listing_endpoint:

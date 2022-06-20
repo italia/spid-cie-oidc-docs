@@ -1,7 +1,7 @@
 .. include:: ./common_definitions.rst
 
 Le Federazioni eID Italiane
-===========================
+---------------------------
 
 Una Federazione delle Identità Digitali è una infrastruttura di delega della responsabilità di autenticazione di un individuo o di un'entità a una parte esterna fidata. Ogni partner nella federazione svolge un ruolo e questo può essere quello di un RP, di un OP o di un SA.
 
@@ -13,7 +13,7 @@ SPID e CIE id implementano OpenID Connect Federation 1.0 e ne estendono alcune f
 
 
 Perché OIDC Federation
-----------------------
+++++++++++++++++++++++
 
 La Federazione OIDC è un modello gerarchico basato su un meccanismo di delega dinamica. Il modello di fiducia dietro la Federazione OIDC è:
 
@@ -26,7 +26,7 @@ La Federazione OIDC è un modello gerarchico basato su un meccanismo di delega d
 
 
 Ritratto di una Federazione
----------------------------
++++++++++++++++++++++++++++
 
 .. image:: ../../images/spid_cie_oidc_federation_model.svg
     :width: 100%
@@ -35,7 +35,7 @@ Ritratto di una Federazione
 
 
 Entità della Federazione
-------------------------
+++++++++++++++++++++++++
 
 Le parti coinvolte all’interno di una Federazione OpenID Connect sono le seguenti:
 

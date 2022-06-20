@@ -26,7 +26,7 @@ EN 1.1. Entity Configuration response Relying Party
 
 .. code-block:: 
 
- 200 OK
+ HTTP/1.1 200 OK
  Last-Modified: Wed, 22 Jul 2018 19:15:56 GMT
  Content-Type: application/jose 
  
@@ -108,7 +108,7 @@ EN 1.2. Entity Configuration response Openid Provider
 
 .. code-block:: 
 
- 200 OK
+ HTTP/1.1 200 OK
  Last-Modified: Wed, 22 Jul 2018 19:15:56 GMT
  Content-Type: application/jose 
  
@@ -290,6 +290,10 @@ EN 1.3. Entity Configuration response Soggetto Aggregatore
 
 .. code-block:: 
 
+ HTTP/1.1 200 OK
+ Last-Modified: Wed, 22 Jul 2018 19:15:56 GMT
+ Content-Type: application/jose 
+
  {
      "alg":"RS256",
      "kid":"em3cmnZgHIYFsQ090N6B3Op7LAAqj8rghMhxGmJstqg",
@@ -344,7 +348,7 @@ EN 1.4. Entity Configuration response Trust Anchor
 
 .. code-block:: 
 
- 200 OK
+ HTTP/1.1 200 OK
  Last-Modified: Wed, 22 Jul 2018 19:15:56 GMT
  Content-Type: application/jose
  
@@ -416,7 +420,7 @@ EN 2.1 Entity Statement response
 
 .. code-block:: 
 
- 200 OK
+ HTTP/1.1 200 OK
  Last-Modified: Wed, 22 Jul 2018 19:15:56 GMT
  Content-Type: application/jose
  
@@ -465,7 +469,7 @@ EN 2.1 Entity Statement response
              "trust_mark":"eyJhb …"
          }
      ]
-} 
+ } 
 
 
 
@@ -489,7 +493,7 @@ EN 3.1. Entity List response
 
 .. code-block:: 
 
- 200 OK
+ HTTP/1.1 200 OK
  Last-Modified: Wed, 22 Jul 2018 19:15:56 GMT
  Content-Type: application/json
  
@@ -513,7 +517,7 @@ EN 4.1. Resolve Entity Statement Endpoint response
 
 .. code-block:: 
 
- 200 OK
+ HTTP/1.1 200 OK
  Last-Modified: Wed, 22 Jul 2018 19:15:56 GMT
  Content-Type: application/jose 
  
@@ -595,7 +599,7 @@ EN 5.1. Trust Mark Status response
 
 .. code-block:: 
 
- 200 OK
+ HTTP/1.1 200 OK
  Last-Modified: Wed, 22 Jul 2018 19:15:56 GMT
  Content-Type: application/json
  
