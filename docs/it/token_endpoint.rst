@@ -3,10 +3,10 @@
 Token Endpoint (richiesta token)
 --------------------------------
 
-Il Token Endpoint rilascia *access token, ID Token e refresh token*; vi sono due scenari distinti
+Il Token Endpoint rilascia *access token, ID Token e refresh token*. Vi sono due scenari distinti
 in cui il client chiama il Token Endpoint:
 
- 1. al termine del flusso di autenticazione descritto nel paragrafo precedente, il Client chiama il Token Endpoint inviando l’Authorization code ricevuto dall’OP (code=usDwMnEzJPpG5oaV8x3j) per ottenere un ID Token e un access token (necessario per poi chiedere gli attributi/claim allo UserInfo Endpoint) ed eventualmente un refresh token (se è stata avviata una `sessione lunga revocabile`_);
+ 1. al termine del flusso di autenticazione descritto nel paragrafo precedente, il Client chiama il Token Endpoint inviando l’Authorization code ricevuto dall’OP (code=usDwMnEzJPpG5oaV8x3j) per ottenere un ID Token e un access token (necessario per poi chiedere gli attributi/claim allo UserInfo Endpoint) ed eventualmente un refresh token (se è stata avviata una `sessione lunga revocabile`_)
 
  2. in presenza di una `sessione lunga revocabile`_, il Client chiama il Token Endpoint inviando il refresh token in suo possesso per ottenere un nuovo access token.
 
@@ -75,7 +75,7 @@ L’unico metodo di autenticazione all’endpoint token previsto è il private_k
    * - **client_assertion**
      - JWT firmato con la chiave privata del Relying Party contenente i seguenti parametri: 
 	 
-	 **iss**: Identificatore del RP registrato presso gli OP e che contraddistingue univocamente l’entità nella federazione nel formato Uniform Resource Locator (URL); corrisponde al client_id usato nella richiesta di autenticazione 
+	 **iss**: Identificatore del RP registrato presso gli OP e che contraddistingue univocamente l’entità nella federazione nel formato Uniform Resource Locator (URL). Corrisponde al client_id usato nella richiesta di autenticazione 
 	 
 	 **sub**: uguale al parametro **iss** 
 	 
@@ -199,7 +199,7 @@ L’ID Token è un JSON Web Token (JWT) che contiene informazioni sull’utente 
      - Livello di autenticazione effettivo. Può essere uguale o superiore a quello richiesto dal client nella Authentication Request.
      - 
    * - **at_hash** 
-     - Hash dell’Access Token; il suo valore è la codifica base64url della prima metà dell’hash del valore access_token, usando l’algoritmo di hashing indicato in **alg** nell’header dell’ID Token.
+     - Hash dell’Access Token. Il suo valore è la codifica base64url della prima metà dell’hash del valore access_token, usando l’algoritmo di hashing indicato in **alg** nell’header dell’ID Token.
      - Il client è tenuto a verificare che questo valore corrisponda all’*access token* restituito insieme all’ID Token.
    * - **iat** 
      - Data/ora di emissione del token in formato NumericDate, come indicato in RFC 7519 – JSON Web Token (JWT). 

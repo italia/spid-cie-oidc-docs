@@ -165,7 +165,7 @@ Agli attributi dei TM definiti nella tabella precedente, i Trust Mark SPID aggiu
       - |check-icon|
     * - **id_code**
       - String
-      - Codice di identificazione dell’organizzazione; a seconda del valore del tipo di organizzazione deve essere
+      - Codice di identificazione dell’organizzazione. A seconda del valore del tipo di organizzazione, deve essere
         indicato il codice IPA (per il tipo di organizzazione pubblica) o il numero di partita IVA (per quello privato).
       - |check-icon|
     * - **email**
@@ -373,7 +373,7 @@ Oltre ai Trust Mark definiti alla sezione precedente, la tabella sottostante mos
       - |uncheck-icon|
     * - **id_code**
       - String
-      - Codice identificativo dell’organizzazione; dipende dal valore di *organization_type*, deve essere dato il codice IPA (per il tipo pubblica amministrazione) o la Partita Iva (per i provati)
+      - Codice identificativo dell’organizzazione. Dipende dal valore di *organization_type*, deve essere dato il codice IPA (per il tipo pubblica amministrazione) o la Partita Iva (per i provati)
       - |uncheck-icon|
     * - **email**
       - String
