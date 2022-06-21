@@ -37,7 +37,7 @@ Dove un OP non disponesse all’interno dei propri metadata dei claim **client_r
    * - **client_registration_types_supported**
      - String
      - Array che specifica i tipi supportati dalla federazione (solo *automatic*)
-      - |check-icon|
+     - |check-icon|
    * - **organization_name**
      - String
      - Un nome leggibile che rappresenta l'organizzazione proprietaria dell'OP. È inteso per l'utilizzo nell'interfaccia
@@ -52,23 +52,23 @@ Dove un OP non disponesse all’interno dei propri metadata dei claim **client_r
                  "request_object"
             ]
         }
-      - |uncheck-icon|
+     - |uncheck-icon|
    * - **request_authentication_methods_supported**
      - JSON Object
      - Un oggetto JSON con membri che rappresentano metodi di richiesta autenticazione e come valori liste di metodi di
        richieste di autenticazione che sono supportati dall'authorization endpoint.
-      - |uncheck-icon|
+     - |uncheck-icon|
    * - **signed_jwks_uri**
      - URI
      - Un URI che punta a un JWT firmato che come payload il JWK Set dell'entità (vedere esempio sotto). Il JWT è firmato
        con una chiave inclusa nel JWK che l'entità ha pubblicato nel suo Entity Statement autofirmato.
-      - |uncheck-icon|
+     - |uncheck-icon|
 
 
 Ogni OP DEVE esporre all’interno dei propri metadati i seguenti claim come obbligatori.
 
 .. list-table:: 
-   :widths: 30 10 60
+   :widths: 20 20 40 20
    :header-rows: 1
 
    * - **Claim**
@@ -109,7 +109,7 @@ OpenID Connect Relying Party Metadata (RP)
 Dove un RP non disponesse all’interno dei propri metadati dei claim **client_registration_types** i valori da intendersi come impliciti sono i seguenti.
 
 .. list-table:: 
-   :widths: 30 10 60
+   :widths: 20 20 40 20
    :header-rows: 1
 
    * - **Claim**
@@ -202,6 +202,7 @@ L’oggetto **federation_entity** è composto dai seguenti claim
      - Url della pagina web del Trust Anchor o SA.
 
        *Non contestualizzato in CIE Federation*
+     -      
    * - **organization_name**
      - String
      - Nome umanamente leggibile di questa entità.

@@ -61,20 +61,20 @@ L’oggetto request DEVE essere un token JWT firmato, secondo le modalità defin
 
 
 .. list-table:: 
-   :widths: 25 25 25 25
+   :widths: 20 20 40 20
    :header-rows: 1
 
-   * - Parametro
-     - Descrizione
-     - Valori ammessi
-     - Obbligatorio
+   * - **Claim**
+     - **Tipo**
+     - **Descrizione**
+     - **Obbligatorio**
    * - **client_id**
-     - URI che identifica univocamente il RP come da Registro SPID 
-     - Deve corrispondere ad un valore nel Registro SPID.
+     - String
+     - URI che identifica univocamente il RP come da Registro SPID. Deve corrispondere ad un valore nel Registro SPID.
      - |check-icon|
    * - **code_challenge**
-     - Un challenge per PKCE da riportare anche nella successiva richiesta al Token endpoint.
-     - V. paragrafo "Generazione del code_challenge per PKCE"
+     - 
+     - Un challenge per PKCE da riportare anche nella successiva richiesta al Token endpoint. V. paragrafo :ref:`Generazione del code_challenge per PKCE<PKCE_code_challenge_generation>`
      - |check-icon|
    * - **code_challenge_method**
      - Metodo di costruzione del challenge PKCE
@@ -153,6 +153,8 @@ attributi elencati sotto "userinfo" sono disponibili al momento della chiamata a
 
  - https://openid.net/specs/openid-connect-core-1_0.html#IndividualClaimsRequests
 
+
+.. _PKCE_code_challenge_generation:
 
 Generazione del code challenge per PKCE
 +++++++++++++++++++++++++++++++++++++++

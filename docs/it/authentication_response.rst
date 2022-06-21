@@ -31,18 +31,21 @@ reindirizza l’utente con i seguenti parametri:
 
 
 .. list-table:: 
-   :widths: 25 50 25
+   :widths: 20 20 40 20
    :header-rows: 1
 
-   * - Parametro
-     - Descrizione
-     - Valori ammessi
+   * - **Claim**
+     - **Tipo**
+     - **Descrizione**
+     - **Obbligatorio**
    * - **code**
+     - String
      - Codice univoco di autorizzazione (*authorization code*) che il client poi passerà al Token Endpoint, secondo le modalità definite dall’Agenzia per l’Italia Digitale.
      - 
    * - **state**
-     - Valore state incluso nell’Authentication request. Il client è tenuto a verificarne la corrispondenza.
-     - Deve essere lo stesso valore indicato dal client nella Authorization Request.
+     - 
+     - Valore state incluso nell’Authentication request. Il client è tenuto a verificarne la corrispondenza. Deve essere lo stesso valore indicato dal client nella Authorization Request.
+     - 
 
 
 Errori
@@ -68,22 +71,26 @@ i seguenti parametri.
 
 
 .. list-table:: 
-   :widths: 25 50 25
+   :widths: 20 20 40 20
    :header-rows: 1
 
-   * - Parametro
-     - Descrizione
-     - Valori ammessi
+   * - **Claim**
+     - **Tipo**
+     - **Descrizione**
+     - **Obbligatorio**
    * - **error**
+     - 
      - Codice dell’errore
      - 
    * - **error_description**
+     - 
      - Descrizione più dettagliata dell’errore, finalizzata ad aiutare lo sviluppatore per eventuale debugging. Questo messaggio non è 
        destinato ad essere visualizzato all’utente (a tal fine si faccia riferimento alle `Linee Guida UX SPID`_
      - 
    * - **state**
-     - Valore *state* incluso nella Authentication Request. 
-     - Il client è tenuto a verificare che corrisponda a quello inviato nella Authentication Request.
+     - 
+     - Valore *state* incluso nella Authentication Request.  Il client è tenuto a verificare che corrisponda a quello inviato nella Authentication Request.
+     - 
 
 
 .. seealso::
