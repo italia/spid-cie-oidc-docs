@@ -3,6 +3,7 @@ Babel==2.10.1
 certifi==2022.5.18.1
 charset-normalizer==2.0.12
 commonmark==0.9.1
+doc8==0.11.1
 docs-italia-theme @ git+https://github.com/italia/docs-italia-theme.git@3209d99db00ef965c528fd2932ae7da7dcee26b0
 docutils==0.18.1
 idna==3.3
