@@ -62,7 +62,7 @@ Nei casi in cui un RP avesse come entità superiore un SA e non direttamente la 
 Accesso alla Entity Configuration
 +++++++++++++++++++++++++++++++++
 
-In questa sezione viene descritto come individuare per un determinato soggetto  l’URL `[RFC3986]`_ per il download della Entity Configuration. 
+In questa sezione viene descritto come individuare per un determinato soggetto  l’URL :rfc:`3986` per il download della Entity Configuration. 
 
 La risorsa attraverso la quale un partecipante pubblica la sua configurazione (Entity Configuration) corrisponde al webpath **.well-known/openid-federation** e DEVE essere appesa all’URL che identifica il soggetto.
 

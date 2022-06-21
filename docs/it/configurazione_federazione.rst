@@ -44,7 +44,7 @@ Un Entity Statement è un documento di riconoscimento che una Autorità di Feder
 Firma
 +++++
 
-La firma dei JWT `[RFC7515]`_ avviene mediante l'algoritmo RSA SHA-256 (RS256), tutti i partecipanti DEVONO supportare questo algoritmo di firma all’interno della Federazione. Tutte le operazioni di firma relative agli Entity Statements, Entity Configuration e Trust Mark sono condotte con le chiavi pubbliche di Federazione (Distinguiamo le chiavi di Federazione da quelle di OIDC Core, questi ultimi risiedono nei metadata OIDC. Un Entity Statement o Configuration contiene sia le chiavi pubbliche di Federazione che i metadata OIDC).
+La firma dei JWT :rfc:`7515` avviene mediante l'algoritmo RSA SHA-256 (RS256), tutti i partecipanti DEVONO supportare questo algoritmo di firma all’interno della Federazione. Tutte le operazioni di firma relative agli Entity Statements, Entity Configuration e Trust Mark sono condotte con le chiavi pubbliche di Federazione (Distinguiamo le chiavi di Federazione da quelle di OIDC Core, questi ultimi risiedono nei metadata OIDC. Un Entity Statement o Configuration contiene sia le chiavi pubbliche di Federazione che i metadata OIDC).
 
 
 SPID: Attributi (claim)
@@ -73,7 +73,7 @@ Entity Configuration e Statement presentano i seguenti attributi (claim) comuni:
       - RICHIESTO. Data di scadenza.
     * - **jwks**
       - JWKS
-      - RICHIESTO. Un JSON Web Key Set (JWKS) `[RFC7517]`_ che rappresenta la parte pubblica delle chiavi di firma dell'entità interessata. Ogni JWK nel set JWK DEVE avere un ID chiave (claim kid).
+      - RICHIESTO. Un JSON Web Key Set (JWKS) :rfc:`7517` che rappresenta la parte pubblica delle chiavi di firma dell'entità interessata. Ogni JWK nel set JWK DEVE avere un ID chiave (claim kid).
     * - **trust_marks**
       - JSON array
       - RICHIESTO per tutti i partecipanti fatta esclusione del Trust Anchor. Un array JSON contenente i Trust Mark. Vedere la Sezione :ref:`Trust Mark <Trust_Mark>`.
@@ -179,7 +179,7 @@ La tabella sottostante riporta gli attributi considerati da OIDC-FED e contestua
       - OBBLIGATORIO in ES/EC per tutte le entità. 
     * - **jwks**
       - JWKS
-      - Un JSON Web Key Set (JWKS) `[RFC7517]`_ che rappresenta la parte pubblica delle chiavi di firma dell'entità soggetto. Le chiavi
+      - Un JSON Web Key Set (JWKS) :rfc:`7517` che rappresenta la parte pubblica delle chiavi di firma dell'entità soggetto. Le chiavi
         di questo set sono per firmare statement e NON DEVONO essere usate in altri protocolli (chiavi da usare in altri protocolli, p.es. OpenID Connect, vengono passate nell'elemento metadata del rispettivo ES). Ogni JWK nell'insieme JWKS DEVE avere un Key ID (*kid*)
       - OBBLIGATORIO in ES/EC per tutte le entità. 
     * - **aud**
@@ -202,7 +202,7 @@ La tabella sottostante riporta gli attributi considerati da OIDC-FED e contestua
           
           - **max_path_length**. OBBLIGATORIO. Numero intero. Il massimo numero di ES fra questo ES e l'ultimo ES nella trust chain.
             Nella CIE FED questo attributo è XX
-          - **naming_constraints**. OPZIONALE. JSON Object. Restrizione sugli identificatori di entità delle entità al di sotto di questa entità. Il comportamento di questo attributo riproduce ciò che è definito in `[RFC5280#Section.4.2.1.10]`_. Le restrizioni sono definite in termini di sottoalberi permessi o esclusi.
+          - **naming_constraints**. OPZIONALE. JSON Object. Restrizione sugli identificatori di entità delle entità al di sotto di questa entità. Il comportamento di questo attributo riproduce ciò che è definito in :rfc:`5280#4.2.1.10`. Le restrizioni sono definite in termini di sottoalberi permessi o esclusi.
 
         Se un ES subordinato contiene una specifica di vincolo più restrittiva di quella effettiva, allora il vincolo più
         restrittivo è effettivo da qui in avanti. Se un ES subordinato contiene una specifica di vincolo meno restrittiva di quella
@@ -223,7 +223,7 @@ La tabella sottostante riporta gli attributi considerati da OIDC-FED e contestua
 
 .. seealso:: 
 
-  `[OIDC-FED#Section_3.1]`_
+  [OIDC-FED#Section_3.1]_
 
 
 CIE: Metadati
@@ -310,8 +310,8 @@ CIE: Altri metadati per la Federazione
 
 Nel contesto OAuth context, `[OIDC-FED]`_ supporta:
 
- - OAuth AS con identificatore del tipo di metadato *oauth_authorization_server*. Tutti i parametri definiti in `[RFC8414#Section_2]`_ sono applicabili.
- - OAuth Client con identificatore del tipo di metadato *oauth_client*. Tutti i parametri definiti in `[RFC7591#Section_2]`_ sono applicabili.
+ - OAuth AS con identificatore del tipo di metadato *oauth_authorization_server*. Tutti i parametri definiti in :rfc:`8414#section-2` sono applicabili.
+ - OAuth Client con identificatore del tipo di metadato *oauth_client*. Tutti i parametri definiti in :rfc:`7591#section-2` sono applicabili.
  - OAuth Protected Resource con identificatore del tipo di metadato *oauth_resource*. Non c'è uno standard che specifichi quali
    parametri possono occorrere nel metadato per questo tipo di entità. Quindi per il momento questo può essere visto come un placeholder.
  - Emittente di Trust Mark con identificatore del tipo di metadato *trust_mark_issuer*. Tutte le entità che partecipano in una
