@@ -3,7 +3,7 @@
 
 .. _Entity_Configuration:
 
-Entity Statement e Entity Configuration
+Entity Statement e Configuration
 ---------------------------------------
 
 Il componente basilare per costruire una Catena di Fiducia (Trust Chain) è l'*Entity Statement (ES)*, un JWT crittografico che contiene le chiavi di firma delle entità e ulteriori dati usati per controllare il processo di risoluzione della Trust Chain (come l'*authority_hints* che specifica chi è il superiore di un'entità). Quando uno statement è autofirmato da un’entità, viene chiamato *Entity Configuration (EC)*.

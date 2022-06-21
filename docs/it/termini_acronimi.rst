@@ -1,5 +1,35 @@
 .. include:: ./common_definitions.rst
 
+Termini utilizzati
+------------------
+
+Seguono i termini utilizzati da `[OIDC-FED#Section_1.2]`_ e in questo documento
+
+.. list-table::
+    :widths: 15 85
+    :header-rows: 0
+
+    * - **Entity configuration**
+      - Dichiarazione di una entità emessa per proprio conto, nella forma di JWT auto firmato :rfc:`7515` e contenente la configurazione di se stessa. Contiene le chiavi pubbliche di Federazione, il metadata OIDC, gli URL delle autorità sue superiori e i Trust Mark emessi da autorità riconoscibili nella Federazione che attestano l’aderenza del soggetto a determinati profili.
+    * - **Entity statement**
+      - Dichiarazione di riconoscimento emessa da un'entità superiore (Trust Anchor o Intermediario) riguardante un'entità discendente (RP, OP o Intermediario) in formato JWT firmato :rfc:`7515`, contenente la chiave pubblica del soggetto discendente, i Trust Mark emessi per i quali è emittente e la politica dei metadati da applicare ai metadati del soggetto.
+    * - **Trust Mark**
+      - JWT firmato :rfc:`7515` dall'ente emittente e relativo ad un partecipante. Attesta la conformità di questo ai profili riconoscibili all’interno Federazione (RP pubblico o privato, Soggetto Aggregatore Pubblico o Privato, etc.). La Foglia che acquisisce il marchio di fiducia durante la fase di onboarding DEVE includere questo nella sua Entity Configuration a mò di Badge di riconoscimento.
+    * - **Metadata**
+      - Un documento di metadati descrive una implementazione di una entità OpenID Connect. Le implementazioni di ogni Entità condividono i metadati per stabilire una base di fiducia e interoperabilità.
+    * - **Metadata policy**
+      - Il Trust Anchor pubblica le regole e le politiche da applicare sui metadata dei discendenti, specificando quali valori o sottoinsiemi di valori sono consentiti per un dato parametro di metadati.
+    * - **Authority hint**
+      - Un Array di valori url corrispondenti agli identificativi delle entità superiori, Trust Anchor o Intermediario, che DEVONO emettere un Entity Statement per i propri discendenti.
+    * - **Metadata Discovery**
+      - Raccolta di Entity Configuration e Statement. Inizia da un'entità Foglia fino al raggiungimento del Trust Anchor.
+    * - **Trust Chain**
+      - Procedura di validazione della sequenza di Entity Configuration e Statement raccolta mediante Metadata Discovery, il cui esito positivo è un metadata finale relativo ad una entità e la data di scadenza entro la quale questo deve essere aggiornato.
+    * - **Onboarding**
+      - Procedura di registrazione di una nuova entità all’interno della Federazione SPID
+    * - **Federation Endpoint**
+      - Endpoint usati per prendere e risolvere gli statement delle entità, interrogare una lista di tutte le entità subordinate e verificare lo stato dei trust mark.
+
 Acronimi 
 --------
 
@@ -70,34 +100,5 @@ Le notazioni [...] e ... indicano che il testo è stato troncato per esigenze ed
 
 *base64url* denota la codifica URL-safe base64 senza padding definita in `[RFC7515#Section_2]`_.
 
-
-
-Termini utilizzati
-------------------
-
-Seguono i termini utilizzati da `[OIDC-FED#Section_1.2]`_ e in questo documento
-
-.. list-table::
-    :widths: 15 85
-    :header-rows: 0
-
-    * - **Entity configuration**
-      - Dichiarazione di una entità emessa per proprio conto, nella forma di JWT auto firmato :rfc:`7515` e contenente la configurazione di se stessa. Contiene le chiavi pubbliche di Federazione, il metadata OIDC, gli URL delle autorità sue superiori e i Trust Mark emessi da autorità riconoscibili nella Federazione che attestano l’aderenza del soggetto a determinati profili.
-    * - **Entity statement**
-      - Dichiarazione di riconoscimento emessa da un'entità superiore (Trust Anchor o Intermediario) riguardante un'entità discendente (RP, OP o Intermediario) in formato JWT firmato :rfc:`7515`, contenente la chiave pubblica del soggetto discendente, i Trust Mark emessi per i quali è emittente e la politica dei metadati da applicare ai metadati del soggetto.
-    * - **Trust Mark**
-      - JWT firmato :rfc:`7515` dall'ente emittente e relativo ad un partecipante. Attesta la conformità di questo ai profili riconoscibili all’interno Federazione (RP pubblico o privato, Soggetto Aggregatore Pubblico o Privato, etc.). La Foglia che acquisisce il marchio di fiducia durante la fase di onboarding DEVE includere questo nella sua Entity Configuration a mò di Badge di riconoscimento.
-    * - **Metadata**
-      - Un documento di metadati descrive una implementazione di una entità OpenID Connect. Le implementazioni di ogni Entità condividono i metadati per stabilire una base di fiducia e interoperabilità.
-    * - **Metadata policy**
-      - Il Trust Anchor pubblica le regole e le politiche da applicare sui metadata dei discendenti, specificando quali valori o sottoinsiemi di valori sono consentiti per un dato parametro di metadati.
-    * - **Authority hint**
-      - Un Array di valori url corrispondenti agli identificativi delle entità superiori, Trust Anchor o Intermediario, che DEVONO emettere un Entity Statement per i propri discendenti.
-    * - **Metadata Discovery**
-      - Raccolta di Entity Configuration e Statement. Inizia da un'entità Foglia fino al raggiungimento del Trust Anchor.
-    * - **Trust Chain**
-      - Procedura di validazione della sequenza di Entity Configuration e Statement raccolta mediante Metadata Discovery, il cui esito positivo è un metadata finale relativo ad una entità e la data di scadenza entro la quale questo deve essere aggiornato.
-    * - **Onboarding**
-      - Procedura di registrazione di una nuova entità all’interno della Federazione SPID
-    * - **Federation Endpoint**
-      - Endpoint usati per prendere e risolvere gli statement delle entità, interrogare una lista di tutte le entità subordinate e verificare lo stato dei trust mark.
+.. warning::
+    |warning-message|
