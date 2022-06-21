@@ -10,7 +10,7 @@ adottano e adottano gli standard OpenID Connect Core e OpenID Connect Federation
 Grazie all’`identità digitale <https://identitadigitale.gov.it/>`_, la Pubblica Amministrazione e i fornitori di servizi privati forniscono 
 la chiave per accedere ai servizi online attraverso una credenziale unica, che si attiva una sola volta ed è sempre valida.
 
-Questa Documentazione è rivolta agli sviluppatori e agni analisti che devono approacciarsi
+Questa Documentazione è rivolta agli sviluppatori e agni analisti che devono approcciarsi
 al funzionamento delle Federazioni 
 OpenID Connect SPID e CIE id 
 per i Fornitori di Servizio pubblici e privati (RP), Identity Providers (OP) e 
