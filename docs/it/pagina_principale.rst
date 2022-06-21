@@ -2,7 +2,7 @@
 
 
 Introduzione
-============
+------------
 
 **SPID** e **CIE id** sono i Sistemi Pubblici di Identità Digitale Italiani.
 

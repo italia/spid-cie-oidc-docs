@@ -1,7 +1,7 @@
 .. include:: ./common_definitions.rst
 
 Authorization Endpoint (Authentication Request)
-===============================================
+-----------------------------------------------
 
 Per avviare il processo di autenticazione, il RP reindirizza l’utente all’Authorization Endpoint dell’OP selezionato, passando in POST o in GET una richiesta avente nel parametro **request** un oggetto in formato JWT.
 
@@ -30,43 +30,51 @@ L’oggetto request DEVE essere un token JWT firmato, secondo le modalità defin
 **Esempio (contenuto del JWT):**:: 
 
  {
-      client_id=https://rp.spid.agid.gov.it
-      response_type=code
-      scope=openid
-      code_challenge=qWJlMe0xdbXrKxTm72EpH659bUxAxw80
-      code_challenge_method=S256
-      nonce=MBzGqyf9QytD28eupyWhSqMj78WNqpc2
-      prompt=login
-      redirect_uri=https%3A%2F%2Frp.spid.agid.gov.it%2Fcallback1%2F
-      acr_values=https://www.spid.gov.it/SpidL1 https://www.spid.gov.it/SpidL2
-      claims={
-          "id_token": {
-              "nbf": { essential: true },
-              "jti": { essential: true }
-          },
-          "userinfo": {
-              "https://attributes.spid.gov.it/name": null,
-              "https://attributes.spid.gov.it/familyName": null
-          },
-      }
-      state=fyZiOL9Lf2CeKuNT2JzxiLRDink0uPcd
+     "client_id":"https://rp.spid.agid.gov.it",
+     "response_type":"code",
+     "scope":"openid",
+     "code_challenge":"qWJlMe0xdbXrKxTm72EpH659bUxAxw80",
+     "code_challenge_method":"S256",
+     "nonce":"MBzGqyf9QytD28eupyWhSqMj78WNqpc2",
+     "prompt":"login",
+     "redirect_uri":"https://rp.spid.agid.gov.it/callback1",
+     "acr_values":{
+         "https://www.spid.gov.it/SpidL1":null,
+         "https://www.spid.gov.it/SpidL2":null
+     },
+     "claims":{
+         "id_token":{
+             "nbf":{
+                 "essential":true
+             },
+             "jti":{
+                 "essential":true
+             }
+         },
+         "userinfo":{
+             "https://attributes.spid.gov.it/name":null,
+             "https://attributes.spid.gov.it/familyName":null
+         }
+     },
+     "state":"fyZiOL9Lf2CeKuNT2JzxiLRDink0uPcd"
  }
 
+
 .. list-table:: 
-   :widths: 25 25 25 25
+   :widths: 20 20 40 20
    :header-rows: 1
 
-   * - Parametro
-     - Descrizione
-     - Valori ammessi
-     - Obbligatorio
+   * - **Claim**
+     - **Tipo**
+     - **Descrizione**
+     - **Obbligatorio**
    * - **client_id**
-     - URI che identifica univocamente il RP come da Registro SPID 
-     - Deve corrispondere ad un valore nel Registro SPID.
+     - String
+     - URI che identifica univocamente il RP come da Registro SPID. Deve corrispondere ad un valore nel Registro SPID.
      - |check-icon|
    * - **code_challenge**
-     - Un challenge per PKCE da riportare anche nella successiva richiesta al Token endpoint.
-     - V. paragrafo "Generazione del code_challenge per PKCE"
+     - 
+     - Un challenge per PKCE da riportare anche nella successiva richiesta al Token endpoint. V. paragrafo :ref:`Generazione del code_challenge per PKCE<PKCE_code_challenge_generation>`
      - |check-icon|
    * - **code_challenge_method**
      - Metodo di costruzione del challenge PKCE
@@ -133,9 +141,11 @@ attributi elencati sotto "userinfo" sono disponibili al momento della chiamata a
 .. code-block:: 
 
  {
-    "userinfo": {
-        "https://attributes.spid.gov.it/familyName": {"essential": true}
-    },
+     "userinfo":{
+         "https://attributes.spid.gov.it/familyName":{
+             "essential":true
+         }
+     }
  }
 
 
@@ -143,6 +153,8 @@ attributi elencati sotto "userinfo" sono disponibili al momento della chiamata a
 
  - https://openid.net/specs/openid-connect-core-1_0.html#IndividualClaimsRequests
 
+
+.. _PKCE_code_challenge_generation:
 
 Generazione del code challenge per PKCE
 +++++++++++++++++++++++++++++++++++++++

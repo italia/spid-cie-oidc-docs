@@ -1,10 +1,13 @@
+.. include:: ./common_definitions.rst
+
 Trust negotiation
-+++++++++++++++++
+-----------------
 
 In questa sezione vi sono illustrate le modalità di mutuo riconoscimento tra RP e OP, le modalità con le quali le Foglie della Federazione SPID si riconoscono all’interno della medesima Federazione e ottengono gli uni i metadata degli altri.
 
+
 Relying Party
-++++++++++++++++++
++++++++++++++
 
 Il RP ottiene la lista degli OP in formato JSON interrogando l’:ref:`endpoint list<Entity_Listing_endpoint>` disponibile presso il :ref:`Trust Anchor<Esempio_EN3>`. Per ogni soggetto contenuto nella :ref:`risposta<Esempio_EN3.1>` dell’endpoint list e corrispondente ad un OP, il RP :ref:`richiede<Esempio_EN2>` ed ottiene l’Entity Configuration self-signed presso l’OP. 
 
@@ -53,7 +56,7 @@ Nei casi in cui un RP avesse come entità superiore un SA e non direttamente la 
 .. [2] Un RP può esporre più di una entità superiore all’interno del proprio claim di **authority_hints**. Si pensi ad un RP che partecipa sia alla Federazione SPID che a quella CIE. Inoltre un RP può risultare come aggregato di molteplici intermediari, se questi SPID o CIE.
 
 
-.. image:: ../../images/trust_anchor.png
+.. image:: ../../images/trust_anchor.svg
     :width: 100%
 
 *Ogni partecipante espone la propria configurazione e i propri Trust Mark. Il collegamento tra una Foglia e il Trust Anchor avviene in maniera diretta oppure mediante un Intermediario (Soggetto Aggregatore) come in Figura.*
@@ -93,4 +96,3 @@ Pertanto, come mostrato nella figura successiva, l'Onboarding è una procedura d
 *CIE: Onboarding e direzioni Trust Chain*
 
 
-.. _Trust_Mark:

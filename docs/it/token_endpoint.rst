@@ -1,12 +1,12 @@
 .. include:: ./common_definitions.rst
 
 Token Endpoint (richiesta token)
-================================
+--------------------------------
 
-Il Token Endpoint rilascia *access token, ID Token e refresh token*; vi sono due scenari distinti
+Il Token Endpoint rilascia *access token, ID Token e refresh token*. Vi sono due scenari distinti
 in cui il client chiama il Token Endpoint:
 
- 1. al termine del flusso di autenticazione descritto nel paragrafo precedente, il Client chiama il Token Endpoint inviando l’Authorization code ricevuto dall’OP (code=usDwMnEzJPpG5oaV8x3j) per ottenere un ID Token e un access token (necessario per poi chiedere gli attributi/claim allo UserInfo Endpoint) ed eventualmente un refresh token (se è stata avviata una `sessione lunga revocabile`_);
+ 1. al termine del flusso di autenticazione descritto nel paragrafo precedente, il Client chiama il Token Endpoint inviando l’Authorization code ricevuto dall’OP (code=usDwMnEzJPpG5oaV8x3j) per ottenere un ID Token e un access token (necessario per poi chiedere gli attributi/claim allo UserInfo Endpoint) ed eventualmente un refresh token (se è stata avviata una `sessione lunga revocabile`_)
 
  2. in presenza di una `sessione lunga revocabile`_, il Client chiama il Token Endpoint inviando il refresh token in suo possesso per ottenere un nuovo access token.
 
@@ -61,13 +61,13 @@ L’unico metodo di autenticazione all’endpoint token previsto è il private_k
 
  
 .. list-table:: 
-   :widths: 25 25 25 25
+   :widths: 20 20 40 20
    :header-rows: 1
 
-   * - Parametro
-     - Descrizione
-     - Valori ammessi
-     - Obbligatorio
+   * - **Claim**
+     - **Tipo**
+     - **Descrizione**
+     - **Obbligatorio**
    * - **client_id**
      - URI che identifica univocamente il RP come da Registro SPID 
      - 
@@ -75,7 +75,7 @@ L’unico metodo di autenticazione all’endpoint token previsto è il private_k
    * - **client_assertion**
      - JWT firmato con la chiave privata del Relying Party contenente i seguenti parametri: 
 	 
-	 **iss**: Identificatore del RP registrato presso gli OP e che contraddistingue univocamente l’entità nella federazione nel formato Uniform Resource Locator (URL); corrisponde al client_id usato nella richiesta di autenticazione 
+	 **iss**: Identificatore del RP registrato presso gli OP e che contraddistingue univocamente l’entità nella federazione nel formato Uniform Resource Locator (URL). Corrisponde al client_id usato nella richiesta di autenticazione 
 	 
 	 **sub**: uguale al parametro **iss** 
 	 
@@ -125,36 +125,42 @@ L’ID Token deve essere formato secondo le indicazioni del paragrafo successivo
 .. code-block:: 
 
  {
-  "access_token": "dC34Pf6kdG...",
-  "token_type": "Bearer",
-  "refresh_token": "wJ848BcyLP...",
-  "expires_in": 1800,
-  "id_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY..."
+     "access_token":"dC34Pf6kdG...",
+     "token_type":"Bearer",
+     "refresh_token":"wJ848BcyLP...",
+     "expires_in":1800,
+     "id_token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY..."
  }
  
 .. list-table:: 
-   :widths: 25 50 25
+   :widths: 20 20 40 20
    :header-rows: 1
 
-   * - Parametro
-     - Descrizione
-     - Valori ammessi
+   * - **Claim**
+     - **Tipo**
+     - **Descrizione**
+     - **Obbligatorio**
    * - **access_token**
+     - 
      - L’access token, in formato JWT firmato, consente l’accesso allo UserInfo endpoint per ottenere gli attributi.
      - 
    * - **token_type**
-     - Tipo di *access token* restituito.
-     - Deve essere valorizzato sempre con **Bearer**
+     - 
+     - Tipo di *access token* restituito. Deve essere valorizzato sempre con **Bearer**
+     - 
    * - **refresh_token**
+     - 
      - Il *refresh token*, in formato JWT firmato, consente di chiamare nuovamente il Token Endpoint per ottenere un nuovo *access token* e quindi recuperare una `sessione lunga revocabile`_.
      - 
    * - **expires_in**
-     - Scadenza dell’*access token*, in secondi
-     - Secondo le modalità definite dall’Agenzia per l’Italia Digitale.
-   * - **id_token**
-     - ID Token in formato JWT (v. paragrafo dedicato)
+     - UNIX Timestamp
+     - Scadenza dell’*access token*, in secondi, secondo le modalità definite dall’Agenzia per l’Italia Digitale.
      - 
-    
+   * - **id_token**
+     - JWT
+     - ID Token in formato JWT (v. paragrafo successivo)
+     - 
+
 
 ID Token
 ++++++++
@@ -166,64 +172,78 @@ L’ID Token è un JSON Web Token (JWT) che contiene informazioni sull’utente 
 .. code-block:: 
 
  {
-  "iss": "https://op.spid.agid.gov.it/",
-  "sub": "OP-1234567890",
-  "aud": "https://rp.spid.agid.gov.it/auth",
-  "acr": "https://www.spid.gov.it/SpidL2",
-  "at_hash": "qiyh4XPJGsOZ2MEAyLkfWqeQ",
-  "iat": 1519032969,
-  "nbf": 1519032969,
-  "exp": 1519033149,
-  "jti": "nw4J0zMwRk4kRbQ53G7z",
-  "nonce": "MBzGqyf9QytD28eupyWhSqMj78WNqpc2"
+     "iss":"https://op.spid.agid.gov.it/",
+     "sub":"OP-1234567890",
+     "aud":"https://rp.spid.agid.gov.it/auth",
+     "acr":"https://www.spid.gov.it/SpidL2",
+     "at_hash":"qiyh4XPJGsOZ2MEAyLkfWqeQ",
+     "iat":1519032969,
+     "nbf":1519032969,
+     "exp":1519033149,
+     "jti":"nw4J0zMwRk4kRbQ53G7z",
+     "nonce":"MBzGqyf9QytD28eupyWhSqMj78WNqpc2"
  }
 
+
 .. list-table:: 
-   :widths: 25 25 50
+   :widths: 20 20 40 20
    :header-rows: 1
 
-   * - Parametro
-     - Descrizione
-     - Validazione
+   * - **Claim**
+     - **Tipo**
+     - **Descrizione**
+     - **Obbligatorio**
    * - **iss** 
-     - Identificatore dell’OP che lo contraddistingue univocamente nella federazione nel formato Uniform Resource Locator (URL).
-     - Il client è tenuto a verificare che questo valore corrisponda all’OP chiamato.
+     - 
+     - Identificatore dell’OP che lo contraddistingue univocamente nella federazione nel formato Uniform Resource Locator (URL). Il client è tenuto a verificare che questo valore corrisponda all’OP chiamato.
+     - 
    * - **sub** 
+     - 
      - Per il valore di questo parametro fare riferimento allo standard “OpenID Connect Core 1.0”, “Pairwise Identifier Algorithm”. 
      -
    * - **aud** 
-     - Contiene il client ID. 
-     - Il client è tenuto a verificare che questo valore corrisponda al proprio client ID.
+     - 
+     - Contiene il client ID. Il client è tenuto a verificare che questo valore corrisponda al proprio client ID.
+     - 
    * - **acr** 
+     - 
      - Livello di autenticazione effettivo. Può essere uguale o superiore a quello richiesto dal client nella Authentication Request.
      - 
    * - **at_hash** 
-     - Hash dell’Access Token; il suo valore è la codifica base64url della prima metà dell’hash del valore access_token, usando l’algoritmo di hashing indicato in **alg** nell’header dell’ID Token.
-     - Il client è tenuto a verificare che questo valore corrisponda all’*access token* restituito insieme all’ID Token.
+     - 
+     - Hash dell’Access Token. Il suo valore è la codifica base64url della prima metà dell’hash del valore access_token, usando l’algoritmo di hashing indicato in **alg** nell’header dell’ID Token. Il client è tenuto a verificare che questo valore corrisponda all’*access token* restituito insieme all’ID Token.
+     - 
    * - **iat** 
-     - Data/ora di emissione del token in formato NumericDate, come indicato in RFC 7519 – JSON Web Token (JWT). 
+     - UNIX Timestamp
+     - Data/ora di emissione del token in formato NumericDate, come indicato in `[RFC7519#JWT]`_.
      - 
    * - **nbf** 
+     - UNIX Timestamp     
      - Data/ora di inizio validità del token in formato NumericDate, come indicato in RFC 7519–JSON Web Token (JWT). Deve corrispondere con il valore di **iat**.
-     - .. code-block:: 
+
+       .. code-block:: 
 	   
-	   {
-             userinfo: {...}
-             id_token: {
-               acr: {...},
-               nbf: { essential: true },
-               jti: { essential: true }
-             }
-	   } 
+	    {
+              userinfo: {...}
+              id_token: {
+                acr: {...},
+                nbf: { essential: true },
+                jti: { essential: true }
+              }
+	    } 
+     - 
    * - **exp**
+     - UNIX Timestamp     
      - Data/ora di scadenza del token in formato NumericDate, come indicato in RFC 7519 – JSON Web Token (JWT), secondo le modalità definite dall’Agenzia per l’Italia Digitale.
      - 
    * - **jti** 
+     - String
      - Identificatore unico dell’ID Token che il client più utilizzare per prevenirne il riuso, rifiutando l’ID Token se già processato. Deve essere di difficile individuazione da parte di un attaccante e composto da una stringa casuale.
      - 
    * - **nonce** 
-     - Stringa casuale generata dal Client per ciascuna sessione utente ed inviata nell’Authentication Request (parametro nonce), finalizzata a mitigare attacchi replay.
-     - Il client è tenuto a verificare che coincida con quella inviata  nell’Authentication Request.
+     - String
+     - Stringa casuale generata dal Client per ciascuna sessione utente ed inviata nell’Authentication Request (parametro nonce), finalizzata a mitigare attacchi replay. Il client è tenuto a verificare che coincida con quella inviata  nell’Authentication Request.
+     - 
 
 
 .. seealso::
@@ -242,8 +262,8 @@ In caso di errore, l’OP restituisce una response con un JSON nel body costitui
 .. code-block:: 
 
  {
-  "error": "codice errore",
-  "error_description: "descrizione dell’errore"
+     "error":"codice errore",
+     "error_description":"descrizione dell’errore"
  }
 
 

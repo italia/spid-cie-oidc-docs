@@ -1,4 +1,6 @@
-Standards di riferimento
+.. include:: ./common_definitions.rst
+
+Standard di riferimento
 -----------------------
 
 .. list-table::
