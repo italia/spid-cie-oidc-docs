@@ -2,7 +2,7 @@
 Trust Marks
 ---------------------
 
-I Trust Mark, letteralmente tradotti come marchi di fiducia, sono oggetti JSON firmati in formato Jose `[RFC7515]`_ e rappresentano la dichiarazione di conformità a un insieme ben definito di requisiti di fiducia e/o di interoperabilità o un accordo tra le parti coinvolte all’interno della Federazione. I Trust Marks sono rilasciati principalmente durante il processo di registrazione di una nuova entità di tipo Foglia (onboarding) dal Trust Anchor o suoi Intermediari.
+I Trust Mark, letteralmente tradotti come marchi di fiducia, sono oggetti JSON firmati in formato Jose :rfc:`7515` e rappresentano la dichiarazione di conformità a un insieme ben definito di requisiti di fiducia e/o di interoperabilità o un accordo tra le parti coinvolte all’interno della Federazione. I Trust Marks sono rilasciati principalmente durante il processo di registrazione di una nuova entità di tipo Foglia (onboarding) dal Trust Anchor o suoi Intermediari.
 
 Lo scopo principale di questi marchi di fiducia è quello di esporre alcune informazioni non richieste dal protocollo OpenID Connect Core ma che risultano utili in contesto Federativo.
 
@@ -100,13 +100,13 @@ I claim definiti all’interno dei Trust Marks aderiscono a quanto definito all�
       - RICHIESTO. Identificativo univoco del Trust Mark.
     * - **iat**
       - UTC Timestamp
-      - RICHIESTO. Quando è stato emesso questo marchio di fiducia. Espresso come “Seconds Since the Epoch” `[RFC7519]`_.
+      - RICHIESTO. Quando è stato emesso questo marchio di fiducia. Espresso come “Seconds Since the Epoch” :rfc:`7519`.
     * - **logo_uri**
       - String
       - OPZIONALE. Un URL che punta al logo rappresentante il Trust Mark.
     * - **exp**
       - UTC Timestamp
-      - RICHIESTO. Momento oltre il quale non sarà più valido. Espresso come “Seconds Since the Epoch” `[RFC7519]`_ e corrispondente o inferiore alla durata della validità della convenzione amministrativa di adesione alla Federazione.
+      - RICHIESTO. Momento oltre il quale non sarà più valido. Espresso come “Seconds Since the Epoch” :rfc:`7519` e corrispondente o inferiore alla durata della validità della convenzione amministrativa di adesione alla Federazione.
     * - **ref**
       - String
       - OPZIONALE. URL che punta a informazioni presenti sul web relative a questo marchio di fiducia
@@ -278,13 +278,13 @@ personalizzato, se richiesto.
       - OBBLIGATORIO. Un identificatore del Trust Mark
     * - **iat**
       - UTC Timestamp
-      - OBBLIGATORIO. Quando questo Trust Mark è stato emesso. Espresso in seconds dall'inizio dell'epoca `[RFC7519]`_
+      - OBBLIGATORIO. Quando questo Trust Mark è stato emesso. Espresso in seconds dall'inizio dell'epoca :rfc:`7519`
     * - **logo_uri**
       - String
       - OPZIONALE. Un URL che punta ad un logo che il soggetto può mostrare ad un utente dell'entità.
     * - **exp**
       - UTC Timestamp
-      - OPZIONALE. Quando questo Trust Mark non è più valido. Espresso in seconds dall'inizio dell'epoca `[RFC7519]`_.
+      - OPZIONALE. Quando questo Trust Mark non è più valido. Espresso in seconds dall'inizio dell'epoca :rfc:`7519`.
         Se non è presente, significa che il Trust Mark è valido per sempre.
     * - **ref**
       - UTC Timestamp

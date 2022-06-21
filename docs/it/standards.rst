@@ -17,23 +17,23 @@ Standards di riferimento
       - Sakimura, N., Bradley, J., and M. Jones, “OpenID Connect Dynamic Client Registration 1.0,” November 2014.
     * - `[OpenID.Discovery]`_
       - Sakimura, N., Bradley, J., Jones, M., and E. Jay, “OpenID Connect Discovery 1.0,” November 2014.
-    * - `[RFC2119]`_
+    * - :rfc:`2119`
       - Bradner, S., “Key words for use in RFCs to Indicate Requirement Levels,” BCP 14, RFC 2119, March 1997.
-    * - `[RFC7515]`_
+    * - :rfc:`7515`
       - Jones, M., Bradley, J. and N. Sakimura, "JSON Web Signature (JWS)", RFC 7515, DOI 10.17487/RFC7515, May 2015.
-    * - `[RFC7517]`_
+    * - :rfc:`7517`
       - Jones, M., "JSON Web Key (JWK)", RFC 7517, DOI 10.17487/RFC7517, May 2015.
-    * - `[RFC7519]`_
+    * - :rfc:`7519`
       - Jones, M., Bradley, J. and N. Sakimura, "JSON Web Token (JWT)", RFC 7519, DOI 10.17487/RFC7519, May 2015.
-    * - `[RFC8174]`_
+    * - :rfc:`8174`
       - Leiba, B., "Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words", RFC 8174, DOI 10.17487/RFC8174, May 2017.
-    * - `[RFC3339]`_
+    * - :rfc:`3339`
       - Klyne, G. and C. Newman, "Date and Time on the Internet: Timestamps", RFC 3339, DOI 10.17487/RFC3339, July 2002.
-    * - `[RFC8414]`_
+    * - :rfc:`8414`
       - Jones, M., Sakimura, N., and J. Bradley, "OAuth 2.0 Authorization Server Metadata", RFC 8414, DOI 10.17487/RFC8414, June 2018.
-    * - `[RFC7591]`_
+    * - :rfc:`7591`
       - Richer, J., Ed., Jones, M., Bradley, J., Machulak, M., and P. Hunt, "OAuth 2.0 Dynamic Client Registration Protocol", RFC 7591, DOI 10.17487/RFC7591, July 2015.
-    * - `[RFC3986]`_
+    * - :rfc:`3986`
       - Uniform Resource Identifier (URI): Generic Syntax
     * - `[EN319-412-1]`_
       - Electronic Signatures and Infrastructures (ESI); Certificate Profiles;
