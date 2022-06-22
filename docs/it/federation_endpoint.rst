@@ -56,7 +56,7 @@ Per esempi di $ENTITY_CONFIGURATION vedere la sezione :ref:`Esempi di Entity Con
 
 .. seealso::
 
- `[OIDC-FED#Section.6]`_
+ `OIDC-FED#Section.6`_
 
 
 .. _fetching_entity_statements:
@@ -128,7 +128,7 @@ Per esempi di $ENTITY_STATEMENT vedere la sezione :ref:`Esempi di Entity Stateme
 
 .. seealso::
 
- `[OIDC-FED#Section.7.1]`_
+ `OIDC-FED#Section.7.1`_
 
 
 
@@ -220,7 +220,7 @@ Segue un esempio non normativo di risposta, prima di serializzare e aggiungere u
 
 .. seealso::
 
- `[OIDC-FED#Section.7.2]`_
+ `OIDC-FED#Section.7.2`_
 
 
 
@@ -314,7 +314,7 @@ Segue un esempio non normativo di risposta:
 
 .. seealso::
 
- `[OIDC-FED#Section.7.4]`_
+ `OIDC-FED#Section.7.4`_
 
 
 
@@ -377,7 +377,7 @@ Segue un esempio non normativo di risposta:
 
 .. seealso::
 
- `[OIDC-FED#Section.7.3]`_
+ `OIDC-FED#Section.7.3`_
 
 
 

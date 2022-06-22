@@ -56,11 +56,13 @@
 .. _[OIDC-FED#Section.5.3.2]: https://openid.net/specs/openid-connect-federation-1_0.html#rfc.section.5.3.2
 .. _OIDC-FED#Section.5.3.2: https://openid.net/specs/openid-connect-federation-1_0.html#rfc.section.5.3.2
 .. _[OIDC-FED#Section.6]: https://openid.net/specs/openid-connect-federation-1_0.html#rfc.section.6
+.. _OIDC-FED#Section.6: https://openid.net/specs/openid-connect-federation-1_0.html#rfc.section.6
 .. _[OIDC-FED#Section.7.1]: https://openid.net/specs/openid-connect-federation-1_0.html#rfc.section.7.1
 .. _OIDC-FED#Section.7.1: https://openid.net/specs/openid-connect-federation-1_0.html#rfc.section.7.1
 .. _[OIDC-FED#Section.7.1.1]: https://openid.net/specs/openid-connect-federation-1_0.html#rfc.section.7.1.1
 .. _OIDC-FED#Section.7.1.1: https://openid.net/specs/openid-connect-federation-1_0.html#rfc.section.7.1.1
 .. _[OIDC-FED#Section.7.2]: https://openid.net/specs/openid-connect-federation-1_0.html#rfc.section.7.2
+.. _OIDC-FED#Section.7.2: https://openid.net/specs/openid-connect-federation-1_0.html#rfc.section.7.2
 .. _[OIDC-FED#Section.7.3]: https://openid.net/specs/openid-connect-federation-1_0.html#rfc.section.7.3
 .. _OIDC-FED#Section.7.3: https://openid.net/specs/openid-connect-federation-1_0.html#rfc.section.7.3
 .. _[OIDC-FED#Section.7.4]: https://openid.net/specs/openid-connect-federation-1_0.html#rfc.section.7.4
