@@ -24,7 +24,7 @@ OpenID Connect Provider Metadata (OP)
  }
 
 
-Dove un OP non disponesse all’interno dei propri metadata dei claim **client_registration_types_supported** e/o **request_authentication_methods_supported** i valori da intendersi come impliciti sono i seguenti.
+Se un OP nei propri metadata non ha i claim **client_registration_types_supported** e/o **request_authentication_methods_supported** i valori da intendersi come impliciti sono i seguenti.
 
 .. list-table:: 
    :widths: 20 20 40 20
@@ -65,7 +65,7 @@ Dove un OP non disponesse all’interno dei propri metadata dei claim **client_r
      - |uncheck-icon|
 
 
-Ogni OP DEVE esporre all’interno dei propri metadati i seguenti claim come obbligatori.
+Ogni OP DEVE esporre all’interno dei propri metadati i seguenti claim obbligatori.
 
 .. list-table:: 
    :widths: 20 20 40 20
