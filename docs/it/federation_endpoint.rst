@@ -51,12 +51,12 @@ Una risposta positiva è una configurazione di entità (come descritto in :ref:`
 
  $ENTITY_CONFIGURATION
 
-Per esempi di $ENTITY_CONFIGURATION vedere la sezione :ref:`Esempi di Entity Configuration<examples_of_entity_configurations>`.
+Per esempi di $ENTITY_CONFIGURATION vedere la sezione :ref:`Esempi di Entity Configuration<Esempio_EN1>`.
 
 
 .. seealso::
 
- `[OIDC-FED#Section.6]`_
+ `OIDC-FED#Section.6`_
 
 
 .. _fetching_entity_statements:
@@ -122,13 +122,13 @@ Segue un esempio non normativo di risposta, prima della serializzazione e dell�
 
  $ENTITY_STATEMENT 
 
-Per esempi di $ENTITY_STATEMENT vedere la sezione :ref:`Esempi di Entity Statement<examples_of_entity_statements>`.
+Per esempi di $ENTITY_STATEMENT vedere la sezione :ref:`Esempi di Entity Statement<Esempio_EN2>`.
 
 
 
 .. seealso::
 
- `[OIDC-FED#Section.7.1]`_
+ `OIDC-FED#Section.7.1`_
 
 
 
@@ -220,7 +220,7 @@ Segue un esempio non normativo di risposta, prima di serializzare e aggiungere u
 
 .. seealso::
 
- `[OIDC-FED#Section.7.2]`_
+ `OIDC-FED#Section.7.2`_
 
 
 
@@ -314,7 +314,7 @@ Segue un esempio non normativo di risposta:
 
 .. seealso::
 
- `[OIDC-FED#Section.7.4]`_
+ `OIDC-FED#Section.7.4`_
 
 
 
@@ -377,7 +377,7 @@ Segue un esempio non normativo di risposta:
 
 .. seealso::
 
- `[OIDC-FED#Section.7.3]`_
+ `OIDC-FED#Section.7.3`_
 
 
 
@@ -501,5 +501,5 @@ The following is a non-normative example of an error response:
 
 .. seealso::
 
- `[OIDC-FED#Section.7.5]`_
+ `OIDC-FED#Section.7.5`_
 

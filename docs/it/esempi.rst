@@ -10,7 +10,7 @@ Tutte le response di tipo jose sono state decodificate e rappresentate insieme a
 
 .. _Esempio_EN1:
 
-EN 1. Entity Configuration request
+EN 1. Entity Configuration Request
 ++++++++++++++++++++++++++++++++++
 
 .. code-block:: 
@@ -21,7 +21,7 @@ EN 1. Entity Configuration request
 
 .. _Esempio_EN1.1:
 
-EN 1.1. Entity Configuration response Relying Party
+EN 1.1. Entity Configuration Response Relying Party
 +++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. code-block:: 
@@ -103,7 +103,7 @@ EN 1.1. Entity Configuration response Relying Party
 
 
 
-EN 1.2. Entity Configuration response Openid Provider
+EN 1.2. Entity Configuration Response Openid Provider
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. code-block:: 
@@ -285,7 +285,7 @@ EN 1.2. Entity Configuration response Openid Provider
 
 
 
-EN 1.3. Entity Configuration response Soggetto Aggregatore
+EN 1.3. Entity Configuration Response Soggetto Aggregatore
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. code-block:: 
@@ -343,7 +343,7 @@ EN 1.3. Entity Configuration response Soggetto Aggregatore
 
 .. _Esempio_EN1.4:
 
-EN 1.4. Entity Configuration response Trust Anchor
+EN 1.4. Entity Configuration Response Trust Anchor
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. code-block:: 
@@ -415,7 +415,7 @@ EN 2. Entity Statement request
 
 
 
-EN 2.1 Entity Statement response
+EN 2.1 Entity Statement Response
 ++++++++++++++++++++++++++++++++
 
 .. code-block:: 
@@ -475,7 +475,7 @@ EN 2.1 Entity Statement response
 
 .. _Esempio_EN3:
 
-EN 3. Entity List request
+EN 3. Entity List Request
 +++++++++++++++++++++++++
 
 .. code-block:: 
@@ -488,7 +488,7 @@ EN 3. Entity List request
 
 .. _Esempio_EN3.1:
 
-EN 3.1. Entity List response
+EN 3.1. Entity List Response
 ++++++++++++++++++++++++++++
 
 .. code-block:: 
@@ -501,7 +501,7 @@ EN 3.1. Entity List response
 
 
 
-EN 4. Resolve Entity Statement Endpoint request
+EN 4. Resolve Entity Statement Endpoint Request
 +++++++++++++++++++++++++++++++++++++++++++++++
 
 .. code-block:: 
@@ -512,7 +512,7 @@ EN 4. Resolve Entity Statement Endpoint request
 
 
 
-EN 4.1. Resolve Entity Statement Endpoint response
+EN 4.1. Resolve Entity Statement Endpoint Response
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. code-block:: 
@@ -580,7 +580,7 @@ EN 4.1. Resolve Entity Statement Endpoint response
      ]
  }
 
-EN 5. Trust Mark Status request
+EN 5. Trust Mark Status Request
 +++++++++++++++++++++++++++++++
 
 .. code-block:: 
@@ -594,7 +594,7 @@ EN 5. Trust Mark Status request
 
 
 
-EN 5.1. Trust Mark Status response
+EN 5.1. Trust Mark Status Response
 ++++++++++++++++++++++++++++++++++
 
 .. code-block:: 
