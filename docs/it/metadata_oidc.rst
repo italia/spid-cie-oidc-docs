@@ -223,7 +223,7 @@ La tabella qui sotto presenta i valori del metadato FA definiti in `[OIDC-FED]`_
      - **Obbligatorio**
    * - **federation_fetch_endpoint**
      - String
-     - URL al Fetch Endpoint descritto nella Sezione XX. Entità intermedie e TA DEVONO pubblicare un  *federation_fetch_endpoint*.
+     - URL al Fetch Endpoint descritto nella Sezione `[OIDC-FED#Section.7.1.1]`_. Entità intermedie e TA DEVONO pubblicare un  *federation_fetch_endpoint*.
        Entità Foglia NON DEVONO.
      - |uncheck-icon| 
 
@@ -241,7 +241,7 @@ Nel contesto OAuth context, `[OIDC-FED]`_ supporta:
  - Emittente di Trust Mark con identificatore del tipo di metadato *trust_mark_issuer*. Tutte le entità che partecipano in una
    federazione possono essere di questo tipo. Le seguenti proprietà sono permesse:
 
-    - *status_endpoint*. OPZIONALE. L'endpoint per l'operazione di status è descritto nella Sezione XX. 
+    - *status_endpoint*. OPZIONALE. L'endpoint per l'operazione di status è descritto nella Sezione `[OIDC-FED#Section.7.4.1]`_. 
 
    **Esempio**
 

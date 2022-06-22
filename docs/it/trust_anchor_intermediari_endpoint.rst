@@ -13,7 +13,7 @@ Fetch entity statement endpoint
 Il recupero degli Entity Statement viene effettuato presso questo endpoint secondo le modalità definite all’interno di `[OIDC-FED#Section.7.1]`_.
 
 
-.. _Trust_mark_status_endpoint_DAELIMINARE:
+.. _Trust_mark_status_endpoint:
 
 Trust mark status endpoint
 ++++++++++++++++++++++++++
@@ -21,7 +21,7 @@ Trust mark status endpoint
 L’assegnazione di un Trust Mark ad un soggetto viene effettuato presso questo endpoint secondo le modalità definite all’interno di `[OIDC-FED#Section.7.4]`_.
 
 
-.. _Entity_Listing_endpoint_DAELIMINARE:
+.. _Entity_Listing_endpoint:
 
 Entity Listing endpoint
 +++++++++++++++++++++++
