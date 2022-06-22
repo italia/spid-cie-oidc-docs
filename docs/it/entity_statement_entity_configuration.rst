@@ -4,23 +4,27 @@
 .. _Entity_Configuration:
 
 Entity Statement e Configuration
----------------------------------------
+--------------------------------
 
 Il componente basilare per costruire una Catena di Fiducia (Trust Chain) è l'*Entity Statement (ES)*, un JWT crittografico che contiene le chiavi di firma delle entità e ulteriori dati usati per controllare il processo di risoluzione della Trust Chain (come l'*authority_hints* che specifica chi è il superiore di un'entità). Quando uno statement è autofirmato da un’entità, viene chiamato *Entity Configuration (EC)*.
 
 Un *EC* è un metadata di federazione in formato Jose e firmato dal soggetto che lo emette e riguardante se stesso, all’interno del quale i valori degli attributi **iss** e **sub** contengono il medesimo valore (URL).
 
 
-Firma
-+++++
+Firma di Entity Statement e Configuration
++++++++++++++++++++++++++++++++++++++++++
 
 La firma dei JWT :rfc:`7515` avviene mediante l'algoritmo RSA SHA-256 (RS256). Tutti i partecipanti della Federazione DEVONO supportare questo algoritmo di firma. Tutte le operazioni di firma relative agli ES, EC e TM sono eseguite con le chiavi pubbliche di Federazione (distinguiamo le chiavi di Federazione da quelle di OIDC Core. Qujesti ultimi risiedono nei metadata OIDC. Un ES o EC contiene sia le chiavi pubbliche di Federazione che i metadata OIDC).
 
 
-Attributi (claim)
-+++++++++++++++++
+Metadata di Federazione
++++++++++++++++++++++++
 
-EC ed ES contengono i seguenti attributi comuni:
+OIDC Federation definisce i metadata di federazione contenenti le informazioni di seguito definite, e i metadata OIDC per 
+ogni tipo di entità.
+
+Entity Configuration comuni
++++++++++++++++++++++++++++
 
 .. list-table::
    :widths: 20 20 40 20
@@ -56,8 +60,10 @@ EC ed ES contengono i seguenti attributi comuni:
      - |check-icon| per tutti i partecipanti fatta esclusione del Trust Anchor. 
 
 
+Entity Configuration Foglia
++++++++++++++++++++++++++++
 
-Gli EC delle entità di tipo Foglia contengono in aggiunta anche i seguenti attributi:
+Gli EC Foglia, in aggiunta ai claim precedentemente definiti, contengono in aggiunta anche i seguenti:
 
 .. list-table::
    :widths: 20 20 40 20
@@ -87,7 +93,11 @@ Gli EC delle entità di tipo Foglia contengono in aggiunta anche i seguenti attr
        - trust_mark_issue
      - |check-icon|
 
-Gli EC di entrambe le FA contengono anche i seguenti attributi:
+
+Entity Configuration Trust Anchor
++++++++++++++++++++++++++++++++++
+
+Gli EC di un TA, in aggiunta ai claim comuni a tutti i partecipanti, contengono anche i seguenti:
 
 .. list-table::
    :widths: 20 20 40 20
@@ -112,7 +122,8 @@ Gli EC di entrambe le FA contengono anche i seguenti attributi:
      - Indica quali autorità sono considerate attendibili nella federazione per l’emissione di specifici TM, questi assegnati mediante il proprio identificativo univoco.
      - |check-icon|
 
-
+Entity Statement
+++++++++++++++++
 
 Gli ES emessi dal TA o da un suo Intermediario per i propri diretti discendenti, contengono anche i seguenti attributi:
 
@@ -136,4 +147,6 @@ Gli ES emessi dal TA o da un suo Intermediario per i propri diretti discendenti,
 
 .. seealso:: 
 
-  `OIDC-FED#Section_3.1`_
+   - `OIDC-FED#Section_3.1`_
+   - :ref:`Esempio non normativo <Esempio_EN1.4>`
+

@@ -13,6 +13,7 @@
 
 .. _[OIDC-FED]: https://openid.net/specs/openid-connect-federation-1_0.html
 .. _OIDC-FED: https://openid.net/specs/openid-connect-federation-1_0.html
+.. _OIDC-FED#Federation_Entity: https://openid.net/specs/openid-connect-federation-1_0.html#rfc.section.4.6
 .. _[SPID-OIDC-CORE]: https://www.agid.gov.it/sites/default/files/repository_files/linee_guida_openid_connect_in_spid.pdf
 .. _[LG-AA]: https://docs.italia.it/AgID/documenti-in-consultazione/lg-spid-attribute-authority-docs/it/master/index.html
 .. _[OpenID.Core]: https://openid.net/specs/openid-connect-core-1_0-27.html

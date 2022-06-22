@@ -36,6 +36,9 @@ Indice dei contenuti
    trust_marks.rst
    trust_negotiation.rst
    metadata_oidc.rst
+   metadata_oidc_op.rst
+   metadata_oidc_rp.rst
+   metadata_oidc_fa.rst
    authorization_endpoint.rst
    authentication_response.rst
    token_endpoint.rst
