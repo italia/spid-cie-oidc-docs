@@ -14,7 +14,7 @@ Un *EC* è un metadata di federazione in formato Jose e firmato dal soggetto che
 Firma
 +++++
 
-La firma dei JWT `[RFC7515]`_ avviene mediante l'algoritmo RSA SHA-256 (RS256). Tutti i partecipanti della Federazione DEVONO supportare questo algoritmo di firma. Tutte le operazioni di firma relative agli ES, EC e TM sono eseguite con le chiavi pubbliche di Federazione (distinguiamo le chiavi di Federazione da quelle di OIDC Core. Qujesti ultimi risiedono nei metadata OIDC. Un ES o EC contiene sia le chiavi pubbliche di Federazione che i metadata OIDC).
+La firma dei JWT :rfc:`7515` avviene mediante l'algoritmo RSA SHA-256 (RS256). Tutti i partecipanti della Federazione DEVONO supportare questo algoritmo di firma. Tutte le operazioni di firma relative agli ES, EC e TM sono eseguite con le chiavi pubbliche di Federazione (distinguiamo le chiavi di Federazione da quelle di OIDC Core. Qujesti ultimi risiedono nei metadata OIDC. Un ES o EC contiene sia le chiavi pubbliche di Federazione che i metadata OIDC).
 
 
 Attributi (claim)
@@ -48,7 +48,7 @@ EC ed ES contengono i seguenti attributi comuni:
      - |check-icon|
    * - **jwks**
      - JWKS
-     - Un JSON Web Key Set (JWKS) `[RFC7517]`_ che rappresenta la parte pubblica delle chiavi di firma dell'entità interessata. Ogni JWK nel set JWK DEVE avere un ID chiave (claim kid).
+     - Un JSON Web Key Set (JWKS) :rfc:`7517` che rappresenta la parte pubblica delle chiavi di firma dell'entità interessata. Ogni JWK nel set JWK DEVE avere un ID chiave (claim kid).
      - |check-icon|
    * - **trust_marks**
      - JSON array
@@ -103,7 +103,7 @@ Gli EC di entrambe le FA contengono anche i seguenti attributi:
        Un vincolo può contenere i seguenti attributi:
           
          - **max_path_length**. OBBLIGATORIO. Numero intero. Il massimo numero di ES fra questo ES e l'ultimo ES nella trust chain.
-         - **naming_constraints**. OPZIONALE. JSON Object. Restrizione sugli identificatori delle entità al di sotto di questa. Il comportamento di questo attributo riproduce ciò che è definito in `[RFC5280#Section.4.2.1.10]`_. Le restrizioni sono definite in termini di sottoalberi permessi o esclusi.
+         - **naming_constraints**. OPZIONALE. JSON Object. Restrizione sugli identificatori delle entità al di sotto di questa. Il comportamento di questo attributo riproduce ciò che è definito in :rfc:`5280#Section.4.2.1.10`. Le restrizioni sono definite in termini di sottoalberi permessi o esclusi.
 
        Se un ES subordinato contiene una specifica di vincolo più restrittiva di quella effettiva, allora il vincolo più restrittivo è effettivo da qui in avanti. Se invece il vincolo è meno restrittiva, allora sarà ignorato.
      - |check-icon|
@@ -126,7 +126,7 @@ Gli ES emessi dal TA o da un suo Intermediario per i propri diretti discendenti,
      - **Obbligatorio**
    * - **metadata_policy**
      - JSON Object
-     - Oggetto JSON che descrive un criterio di metadati. Ogni chiave dell'oggetto JSON rappresenta un identificatore del tipo di metadati e ogni valore DEVE essere un oggetto JSON che rappresenta la politica dei metadati in base allo schema di quel tipo di metadati. Si rimanda alla specifica `[OIDC-FED#Section.5.1]`_ per i dettagli implementativi.
+     - Oggetto JSON che descrive un criterio di metadati. Ogni chiave dell'oggetto JSON rappresenta un identificatore del tipo di metadati e ogni valore DEVE essere un oggetto JSON che rappresenta la politica dei metadati in base allo schema di quel tipo di metadati. Si rimanda alla specifica `OIDC-FED#Section.5.1`_ per i dettagli implementativi.
      - |check-icon|
    * - **trust_marks**
      - JSON Array
@@ -136,23 +136,4 @@ Gli ES emessi dal TA o da un suo Intermediario per i propri diretti discendenti,
 
 .. seealso:: 
 
-  `[OIDC-FED#Section_3.1]`_
-
-
-
-
-.. _examples_of_entity_configurations:
-
-Esempi di Entity Configuration
-++++++++++++++++++++++++++++++
-
-TODO
-
-
-
-.. _examples_of_entity_statements:
-
-Esempi di Entity Statement
-++++++++++++++++++++++++++
-
-TODO
+  `OIDC-FED#Section_3.1`_

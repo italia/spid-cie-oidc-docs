@@ -257,8 +257,8 @@ Profili dei Trust Mark
 Si possono definire svariati profili in accordo agli specifici bisogni delle FA e della TA. Nella CIE FED, durante la fase
 di Onboarding, DEVONO essere emessi almeno i seguenti *trustmark_profile*:
 
- - public: l’entità nel attributo *sub* appartiene alla pubblica amministrazione italiana
- - private: l’entità nel attributo *sub* appartiene al settore privato.
+ - public: l’entità nel claim *sub* appartiene alla pubblica amministrazione italiana
+ - private: l’entità nel claim *sub* appartiene al settore privato.
 
 La tabella seguente riassume tutti i profili disponibili supportati per tutte le entità coinvolte nella CIE FED
 
@@ -271,22 +271,22 @@ La tabella seguente riassume tutti i profili disponibili supportati per tutte le
       - **Descrizione**
       - **Tipi di entità sub**
     * - **public**
-      - l’entità nel attributo *sub* appartiene alla pubblica amministrazione italiana
+      - l’entità nel claim *sub* appartiene alla pubblica amministrazione italiana
       - Tutte
     * - **private**
-      - l’entità nel attributo *sub* appartiene al settore privato.
+      - l’entità nel claim *sub* appartiene al settore privato.
       - Tutte
     * - **web**
-      - l’entità nel attributo *sub* è compatibile con `[CIE-OIDC-CORE]`_
+      - l’entità nell attributo *sub* è compatibile con [CIE-OIDC-CORE]
       - RP
     * - **native**
-      - l’entità nel attributo *sub* è compatibile con `[CIE-OIDC-MOBILE]`_ – non ancora supportato
+      - l’entità nell attributo *sub* è compatibile con [CIE-OIDC-MOBILE] – non ancora supportato
       - RP
     * - **underage**
-      - l’entità nel attributo *sub* fornisce servizi online per underage in accordo a [] – non ancora supportato
+      - l’entità nel claim *sub* fornisce servizi online per underage in accordo a [] – non ancora supportato
       - RP
     * - **aggregator**
-      - l’entità nel attributo *sub* è un soggetto aggregatore in accordo a []
+      - l’entità nel claim *sub* è un soggetto aggregatore in accordo a []
       - SA
 
 
@@ -305,7 +305,7 @@ personalizzato, se richiesto.
     * - **Claim**
       - **Tipo**
       - **Descrizione**
-      - **obbligatorio**
+      - **Obbligatorio**
     * - **iss**
       - String
       - L’emittente del Trust Mark
@@ -546,4 +546,4 @@ Un’entità NON DEVE cercare di convalidare un Trust Mark finché non saprà qu
 
 .. seealso:: 
 
-  - `[OIDC-FED#Section.5.3.2]`_
+  - `OIDC-FED#Section.5.3.2`_

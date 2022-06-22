@@ -45,10 +45,8 @@ Indice dei contenuti
    federation_endpoint.rst
    trust_anchor_intermediari_endpoint.rst
    differenze_oidc_fed.rst
-   considerazioni_sicurezza_buone_pratiche.rst
    come_contribuire.rst
    diventa_fornitore.rst
-   differences.rst
    standards.rst
    avvisi_spid.rst
    seccons_bcps.rst

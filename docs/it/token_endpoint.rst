@@ -215,7 +215,7 @@ L’ID Token è un JSON Web Token (JWT) che contiene informazioni sull’utente 
      - 
    * - **iat** 
      - UNIX Timestamp
-     - Data/ora di emissione del token in formato NumericDate, come indicato in `[RFC7519#JWT]`_.
+     - Data/ora di emissione del token in formato NumericDate, come indicato in :rfc:`7519#JWT`.
      - 
    * - **nbf** 
      - UNIX Timestamp     

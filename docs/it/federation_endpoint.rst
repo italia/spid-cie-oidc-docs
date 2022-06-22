@@ -51,7 +51,7 @@ Una risposta positiva è una configurazione di entità (come descritto in :ref:`
 
  $ENTITY_CONFIGURATION
 
-Per esempi di $ENTITY_CONFIGURATION vedere la sezione :ref:`Esempi di Entity Configuration<examples_of_entity_configurations>`.
+Per esempi di $ENTITY_CONFIGURATION vedere la sezione :ref:`Esempi di Entity Configuration<Esempio_EN1>`.
 
 
 .. seealso::
@@ -122,7 +122,7 @@ Segue un esempio non normativo di risposta, prima della serializzazione e dell�
 
  $ENTITY_STATEMENT 
 
-Per esempi di $ENTITY_STATEMENT vedere la sezione :ref:`Esempi di Entity Statement<examples_of_entity_statements>`.
+Per esempi di $ENTITY_STATEMENT vedere la sezione :ref:`Esempi di Entity Statement<Esempio_EN2>`.
 
 
 
@@ -501,5 +501,5 @@ The following is a non-normative example of an error response:
 
 .. seealso::
 
- `[OIDC-FED#Section.7.5]`_
+ `OIDC-FED#Section.7.5`_
 

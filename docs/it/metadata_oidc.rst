@@ -3,7 +3,7 @@
 Metadati OIDC
 -------------
 
-OIDC-FED utilizza i claim dei metadati così come definiti all’interno delle specifiche di OpenID Connect Discovery 1.0 e OpenID Connect Dynamic Client Registration 1.0 `[OpenID.Discovery]`_,`[OpenID.Registration]`_ rispettivamente per OP e RP. 
+OIDC-FED utilizza i claim dei metadati così come definiti all’interno delle specifiche di OpenID Connect Discovery 1.0 e OpenID Connect Dynamic Client Registration 1.0 `OpenID.Discovery`_, `OpenID.Registration`_ rispettivamente per OP e RP. 
 
 In OIDC-FED il metadato OIDC relativo a RP e OP viene definito all’interno del claim **metadata** e del suo sotto claim **<entity_type>**, all’interno dell’Entity Configuration, come oggetto JSON.
 
@@ -81,7 +81,7 @@ Ogni OP DEVE esporre all’interno dei propri metadati i seguenti claim obbligat
      - |check-icon|
    * - **jwks**
      - JSON
-     - JSON Web Key Set `[RFC7517#appendix-A.1]`_
+     - JSON Web Key Set :rfc:`7517#appendix-A.1`
      - |check-icon| in assenza del claim **signed_jwks_uri**. 
    * - **signed_jwks_uri**
      - String
@@ -139,7 +139,7 @@ Ogni RP DEVE esporre all’interno dei propri Metadata i seguenti claim come obb
      - |check-icon| 
    * - **jwks**
      - JSON
-     - JSON Web Key Set `[RFC7517#appendix-A.1]`_
+     - JSON Web Key Set :rfc:`7517#appendix-A.1`
      - |check-icon| in assenza del claim **signed_jwks_uri**. 
    * - **signed_jwks_uri**
      - String
@@ -210,7 +210,7 @@ L’oggetto **federation_entity** è composto dai seguenti claim
        *Non contestualizzato in CIE Federation*
      - |uncheck-icon| 
 
-La tabella qui sotto presenta i valori del metadato FA definiti in `[OIDC-FED]`_, contestualizzati nella CIE Federation.
+La tabella qui sotto presenta i valori del metadato FA definiti in `OIDC-FED`_, contestualizzati nella CIE Federation.
 
 
 .. list-table::
@@ -223,7 +223,7 @@ La tabella qui sotto presenta i valori del metadato FA definiti in `[OIDC-FED]`_
      - **Obbligatorio**
    * - **federation_fetch_endpoint**
      - String
-     - URL al Fetch Endpoint descritto nella Sezione `[OIDC-FED#Section.7.1.1]`_. Entità intermedie e TA DEVONO pubblicare un  *federation_fetch_endpoint*.
+     - URL al Fetch Endpoint descritto nella Sezione `OIDC-FED#Section.7.1.1`_. Entità intermedie e TA DEVONO pubblicare un  *federation_fetch_endpoint*.
        Entità Foglia NON DEVONO.
      - |uncheck-icon| 
 
@@ -232,16 +232,16 @@ La tabella qui sotto presenta i valori del metadato FA definiti in `[OIDC-FED]`_
 Altri metadati
 ++++++++++++++
 
-Nel contesto OAuth context, `[OIDC-FED]`_ supporta:
+Nel contesto OAuth context, `OIDC-FED`_ supporta:
 
- - OAuth AS con identificatore del tipo di metadato *oauth_authorization_server*. Tutti i parametri definiti in `[RFC8414#Section_2]`_ sono applicabili.
- - OAuth Client con identificatore del tipo di metadato *oauth_client*. Tutti i parametri definiti in `[RFC7591#Section_2]`_ sono applicabili.
+ - OAuth AS con identificatore del tipo di metadato *oauth_authorization_server*. Tutti i parametri definiti in :rfc:`8414#Section_2` sono applicabili.
+ - OAuth Client con identificatore del tipo di metadato *oauth_client*. Tutti i parametri definiti in :rfc:`7591#Section_2` sono applicabili.
  - OAuth Protected Resource con identificatore del tipo di metadato *oauth_resource*. Non c'è uno standard che specifichi quali
    parametri possono occorrere nel metadato per questo tipo di entità. Quindi per il momento questo può essere visto come un placeholder.
  - Emittente di Trust Mark con identificatore del tipo di metadato *trust_mark_issuer*. Tutte le entità che partecipano in una
    federazione possono essere di questo tipo. Le seguenti proprietà sono permesse:
 
-    - *status_endpoint*. OPZIONALE. L'endpoint per l'operazione di status è descritto nella Sezione `[OIDC-FED#Section.7.4.1]`_. 
+    - *status_endpoint*. OPZIONALE. L'endpoint per l'operazione di status è descritto nella Sezione `OIDC-FED#Section.7.4.1`_. 
 
    **Esempio**
 

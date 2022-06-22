@@ -1,3 +1,5 @@
+.. include:: ./common_definitions.rst
+
 .. _Considerazioni_di_Sicurezza:
 
 Considerazioni di Sicurezza
@@ -29,7 +31,7 @@ Allo stesso tempo la specifica OIDC Federation 1.0 non definisce un limite per i
 Resolve Entity Statement
 ++++++++++++++++++++++++
 
-Questo endpoint DEVE rilasciare i metadata, i Trust Marks e la Trust Chain già precedentemente elaborata e NON DEVE innescare una procedura di Metadata Discovery ad ogni richiesta pervenuta, a meno che questo endpoint non venga protetto con un meccanismo di autenticazione dei client, come ad esempio private_key_jwt `[SPID-OIDC-CORE]`_.
+Questo endpoint DEVE rilasciare i metadata, i Trust Marks e la Trust Chain già precedentemente elaborata e NON DEVE innescare una procedura di Metadata Discovery ad ogni richiesta pervenuta, a meno che questo endpoint non venga protetto con un meccanismo di autenticazione dei client, come ad esempio private_key_jwt [SPID-OIDC-CORE].
 
 
 
@@ -57,4 +59,4 @@ In questa maniera dopo il limite massimo di durata delle Trust Chain, definito c
 Periodo di grazia per le Trust Chain scadute
 ++++++++++++++++++++++++++++++++++++++++++++
 
-L’Autorità di Federazione o il suo Intermediario PUÒ pubblicare una politica dei metadata (vedi `[OIDC-FED#Section.5.1]`_) per forzare la modifica dei metadata OIDC della Foglia, nelle parti in cui questo fosse necessario.
+L’Autorità di Federazione o il suo Intermediario PUÒ pubblicare una politica dei metadata (vedi `OIDC-FED#Section.5.1`_) per forzare la modifica dei metadata OIDC della Foglia, nelle parti in cui questo fosse necessario.
