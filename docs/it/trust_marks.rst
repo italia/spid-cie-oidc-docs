@@ -245,7 +245,7 @@ Trust Mark per CIE
 
 I Trust Mark sono JSON Web Token (JWT) firmati che rappresentano una dichiarazione di conformità ad un insieme ben definito di requisiti di fiducia e/o interoperabilità, oppure ad un accordo fra le parti coinvolte nella Federazione e vengono emessi da entità accreditate, principalmente durante il processo di Onboarding. Lo scopo principale è convogliare alcune informazioni non propriamente richieste dal protocollo stesso OIDC, ma che potrebbero essere utili all’interno della Federazione. Tipici esempi includono il codice di identificazione nazionale dell’entità, contatti istituzionali e caratteristiche supportate disponibili all’interno dell’ecosistema CIE. Dati aggiuntivi possono essere aggiunti dall’emittente e devono essere ben compresi.
 
-Nello scenario CIE, un Trust Mark viene firmato da **MinInterno** (TA) o da un’entità accreditata (es. entità intermedie (SA) o Autorità Attributo (AA) che giocano il ruolo di entità Risorse Protette OAuth - un’entità che agisce come AA all’interno del sistema della Federazione CIE, può essere visto come un tipo di entità Risorsa Protetta OAuth, in accordo a `[OIDC-FED#Section.4.5]`_) e DEVONO essere incluse nella richiesta (attributo) dei Trust Mark della configurazione di entità delle foglie (RP e OP) e di intermediari (SA). La presenza di un Trust Mark è richiesta prima di iniziare una scoperta di metadati (vedere sezione), altrimenti la federazione può essere soddisfatta da aggressori che cercano di propagare attacchi. to propagate attacks.
+Nello scenario CIE, un Trust Mark viene firmato da **MinInterno** (TA) o da un’entità accreditata (es. entità intermedie (SA) o Autorità Attributo (AA) che giocano il ruolo di entità Risorse Protette OAuth - un’entità che agisce come AA all’interno del sistema della Federazione CIE, può essere visto come un tipo di entità Risorsa Protetta OAuth, in accordo a `OIDC-FED#Section.4.5`_) e DEVONO essere incluse nella richiesta (attributo) dei Trust Mark della configurazione di entità delle foglie (RP e OP) e di intermediari (SA). La presenza di un Trust Mark è richiesta prima di iniziare una scoperta di metadati (vedere sezione), altrimenti la federazione può essere soddisfatta da aggressori che cercano di propagare attacchi. to propagate attacks.
 
 Un Trust Mark può essere inoltrato dalla TA o da entità accreditate, come risultato di una procedura di Onboarding di federazione
 o come risultato di un accordo fra le parti. Mentre nel secondo caso viene inoltrato solo un Trust Mark, durante il processo di Onboarding la FA deve anche esporre la dichiarazione di entità dell’entità imbarcata nei suoi endpoint di federazione.
@@ -277,16 +277,16 @@ La tabella seguente riassume tutti i profili disponibili supportati per tutte le
       - l’entità nel claim *sub* appartiene al settore privato.
       - Tutte
     * - **web**
-      - l’entità nell attributo *sub* è compatibile con [CIE-OIDC-CORE]
+      - l’entità nell attributo *sub* è compatibile con CIE-OIDC-CORE
       - RP
     * - **native**
-      - l’entità nell attributo *sub* è compatibile con [CIE-OIDC-MOBILE] – non ancora supportato
+      - l’entità nell attributo *sub* è compatibile con CIE-OIDC-MOBILE – non ancora supportato
       - RP
     * - **underage**
-      - l’entità nel claim *sub* fornisce servizi online per underage in accordo a [] – non ancora supportato
+      - l’entità nel claim *sub* fornisce servizi online per underage (non ancora supportato)
       - RP
     * - **aggregator**
-      - l’entità nel claim *sub* è un soggetto aggregatore in accordo a []
+      - l’entità nel claim *sub* è un soggetto aggregatore
       - SA
 
 
@@ -349,7 +349,7 @@ Un esempio non normativo di id attributo è il seguente:
 
 .. seealso::
 
- * `[OIDC-FED#Section.5.3.1]`_
+ * `OIDC-FED#Section.5.3.1`_
 
 
 
@@ -457,7 +457,7 @@ Dove il payload $JWT potrebbe essere come nel seguente esempio non normativo:
 Trust Mark Attribute Authority
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Il registro degli AA è gestito da `[LG-AA]`_ che è responsabile dell’esecuzione del processo di Onboarding per gli AA che forniscono attributi qualificati “protected” e “private”. Come risultato, l’OP e la TA CIE DEVONO riconoscere l’AgID come emettitore di Trust Mark per gli AA. Oltre agli attributi di Trust Mark descritti sopra, vengono aggiunti i seguentgli attributi.
+Il registro degli AA è gestito da `LG-AA`_ che è responsabile dell’esecuzione del processo di Onboarding per gli AA che forniscono attributi qualificati “protected” e “private”. Come risultato, l’OP e la TA CIE DEVONO riconoscere l’AgID come emettitore di Trust Mark per gli AA. Oltre agli attributi di Trust Mark descritti sopra, vengono aggiunti i seguentgli attributi.
 
 
 
@@ -475,7 +475,7 @@ Il registro degli AA è gestito da `[LG-AA]`_ che è responsabile dell’esecuzi
       - |check-icon|
     * - **service_documentation**
       - String
-      - È un URL contenente la documentazione OAS3riferita all’ AA in the attributo *sub*, come definito in `[LG-AA]`_).
+      - È un URL contenente la documentazione OAS3riferita all’ AA in the attributo *sub*, come definito in `LG-AA`_).
       - |uncheck-icon|
     * - **policy_uri**
       - String

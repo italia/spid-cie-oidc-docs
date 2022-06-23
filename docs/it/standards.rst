@@ -7,17 +7,17 @@ Standard di riferimento
     :widths: 25 75
     :header-rows: 0
 
-    * - `[SPID-OIDC-CORE]`_
+    * - `SPID-OIDC-CORE`_
       - Linee Guida per OpenID Connect in SPID 
-    * - `[OIDC-FED]`_
+    * - `OIDC-FED`_
       - OpenID Connect Federation 1.0 
-    * - `[LG-AA]`_
+    * - `LG-AA`_
       - Attribute Authority Guidelines – “Linee Guida Attribute Authority SPID” 
-    * - `[OpenID.Core]`_
+    * - `OpenID.Core`_
       - Sakimura, N., Bradley, J., Jones, M., de Medeiros, B. and C. Mortimore, "OpenID Connect Core 1.0", August 2015.
-    * - `[OpenID.Registration]`_
+    * - `OpenID.Registration`_
       - Sakimura, N., Bradley, J., and M. Jones, “OpenID Connect Dynamic Client Registration 1.0,” November 2014.
-    * - `[OpenID.Discovery]`_
+    * - `OpenID.Discovery`_
       - Sakimura, N., Bradley, J., Jones, M., and E. Jay, “OpenID Connect Discovery 1.0,” November 2014.
     * - :rfc:`2119`
       - Bradner, S., “Key words for use in RFCs to Indicate Requirement Levels,” BCP 14, RFC 2119, March 1997.
@@ -37,19 +37,19 @@ Standard di riferimento
       - Richer, J., Ed., Jones, M., Bradley, J., Machulak, M., and P. Hunt, "OAuth 2.0 Dynamic Client Registration Protocol", RFC 7591, DOI 10.17487/RFC7591, July 2015.
     * - :rfc:`3986`
       - Uniform Resource Identifier (URI): Generic Syntax
-    * - `[EN319-412-1]`_
+    * - `EN319-412-1`_
       - Electronic Signatures and Infrastructures (ESI); Certificate Profiles;
-    * - `[DM-CIE]`_
+    * - `DM-CIE`_
       - DM 23 December 2015 n.210: “Modalità tecniche di emissione della Carta d’identità elettronica.” (15A09809) (GU Serie Generale n.302 30-12-2015)
-    * - `[CAD]`_
+    * - `CAD`_
       - DL 7 March 2005 n.82: “Codice dell'amministrazione digitale.” (GU Serie Generale n.112 16-05-2005 - Suppl. Ordinario n. 93)
-    * - `[DL-SEMPLIFICAZIONI]`_
+    * - `DL-SEMPLIFICAZIONI`_
       - DL 16 July 2020 n.76: “Misure urgenti per la semplificazione e l'innovazione digitale.” (20A04921) (GU Serie Generale n.228 14-09-2020 - Suppl. Ordinario n. 33) and its conversion into Law, with amendments, Law 11 September 2020 n. 120.
-    * - `[EIDAS]`_
+    * - `EIDAS`_
       - Regulation (Eu) No 910/2014 of the European Parliament and of the Council 23 July 2014 “on electronic identification and trust services for electronic transactions in the internal market and repealing Directive 1999/93/EC.”
-    * - `[SPID-OIDC]`_
+    * - `SPID-OIDC`_
       - AgID Guidelines: “Linee Guida OpenID Connect in SPID”
-    * - [CIE-OIDC-FED]
+    * - CIE-OIDC-FED
       - CIE OIDC Federation – at the writing stage
-    * - [CIE-OIDC-CORE]: 
+    * - CIE-OIDC-CORE: 
       - CIE OpenID Connect Core – Web App Specifications
