@@ -36,9 +36,6 @@ Indice dei contenuti
    trust_marks.rst
    trust_negotiation.rst
    metadata_oidc.rst
-   metadata_oidc_op.rst
-   metadata_oidc_rp.rst
-   metadata_oidc_fa.rst
    authorization_endpoint.rst
    authentication_response.rst
    token_endpoint.rst
@@ -46,7 +43,6 @@ Indice dei contenuti
    introspection_endpoint.rst
    revocation_endpoint.rst
    federation_endpoint.rst
-   trust_anchor_intermediari_endpoint.rst
    differenze_oidc_fed.rst
    come_contribuire.rst
    diventa_fornitore.rst
