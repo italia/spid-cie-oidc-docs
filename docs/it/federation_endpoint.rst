@@ -14,10 +14,6 @@ Un **FA** (**SA** o **TA**) DEVE, in aggiunta, offrire i seguenti endpoint:
  - il *trust mark introspection endpoint* per ottenere, da parte dell’emittente del trust mark, una vista dello stato del trust mark (vedere sezione :ref:`Stato del Trust Mark<trust_mark_status>`)
  - l’*entity listing endpoint* per ottenere una lista di tutte le subordinate di un’entità (vedere sezione :ref:`Elenchi di Entità<entity_listings>`)
 
-A scopo di utilità, un FA può anche offrire:
-
- - l’*advanced entity listing endpoint* (vedere sezione :ref:`Advanced Entity Listing Endpoint<advanced_entity_listing_endpoint>`)
-
 
 
 .. _obtaining_federation_entity_configuration_information:
@@ -134,14 +130,14 @@ Per esempi di $ENTITY_STATEMENT vedere la sezione :ref:`Esempi di Entity Stateme
 
 .. _resolve_entity_statements:
 
-Risolvere Entity Statements
-+++++++++++++++++++++++++++
+Risolvere i Metadata di Federazione
++++++++++++++++++++++++++++++++++++
 
 Un’entità PUÒ usare il resolve endpoint per prelevare metadata risolti e TM per un’entità vista/fidata da parte del risolutore (cioè la visione del risolutore di un’altra entità). Ci si aspetta che il risolutore prelevi l’ES autofirmato dei soggetti, prelevi una Trust Chain che inizia con l’ES dei soggetti e finisce con il TA specificato, verifichi la Trust Chain e quindi applichi tutte le politiche presenti nella Trust Chain ai metadata degli ES. Ciu si aspetta anche che il risolutore verifichi che i TM presenti siano attivi. Se trova TM non attivi, allora quelli dovrebbero essere lasciati fuori dall’insieme di risposta.
 
 
-Risolvere Entity Statements Request
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Resolve Endpoint Request
+^^^^^^^^^^^^^^^^^^^^^^^^
 
 La richiesta DEVE essere una richiesta HTTP che usa un metodo GET e lo schema https ad resolve endpoint con i seguenti parametri della stringa di query:
 
@@ -186,8 +182,8 @@ Segue un esempio non normativo di **Resolve request**:
 
 
 
-Risolvere Entity Statements Response
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Resolve Endpoint Response
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Il response è un JWT firmato contenente metadata risolti e TM verificati. Le chiavi usate dal risolutore dovrebbero essere le stesse usate per costruire un ES autofirmato. Questo significa che l’emettitore della richiesta può facilmente trovare e verificare le chiavi di firma del risolutore raccogliendo e verificando l’appropriata Trust Chain.
 
@@ -321,8 +317,8 @@ Segue un esempio non normativo di risposta:
 
 .. _entity_listings:
 
-Elenchi di Entità
-+++++++++++++++++
+Lista delle Entità di Federazione
++++++++++++++++++++++++++++++++++
 
 UN’entità PUÒ interrogare un’altra entità per ottenere una lista di tutte le entità a lei immediatamente subordinate e circa le quali quell’entità è pronta a emettere statement (in alcuni casi PUÒ essere una lista molto lunga).
 
@@ -341,9 +337,9 @@ DEVE essere una richiesta HTTP che usa il metodo GET e lo schema https verso un 
      - **Tipo**
      - **Descrizione**
      - **Obbligatorio**
-   * - **is_leaf**
-     - Boolean
-     - Se omesso, il risultato DOVREBBE includere sia le entità foglia che i nodi intermedi. Se impostato a *true*, solo entità foglia. Se impostato a *false*, solo nodi internedi.
+   * - **entity_type**
+     - Set (federation_entity, openid_relying_party, openid_provider)
+     - Filtra il tipo di entità. 
      - |uncheck-icon|
 
 
@@ -378,19 +374,6 @@ Segue un esempio non normativo di risposta:
 .. seealso::
 
  `OIDC-FED#Section.7.3`_
-
-
-
-.. _advanced_entity_listing_endpoint:
-
-Entity Listing Endpoint Avanzato
-++++++++++++++++++++++++++++++++
-
-L’**advanced entity listing endpoint** estende l’*entity listings endpoint* di OIDC-FED (vedi sezione :ref:`Elenchi di Entità<entity_listings>`) con diversi cambiamenti:
-
- - ritorna un JSON Object con i claim di entità valorizzati come segue: solo il claim **iat** è OBBLIGATORIO per ciascuna entità, gli altri claim sono OPZIONALI.
- - ciascuna pagina deve avere non più di 100 elementi, questa regola PUÒ aiutare a fornire l'insieme di risultati come contenuto statico.
- - Il claim **iat**  determina se l'insieme di risultati è stato aggiornato.
 
 
 

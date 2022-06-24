@@ -1,10 +1,10 @@
 .. include:: ./common_definitions.rst
 
 
-.. _differenze_con_oidc_federation_1.0:
+.. _differenze_con_oidc_federation:
 
-Differenze con OIDC Federation 1.0
-----------------------------------
+Differenze con OIDC Federation
+------------------------------
 
 In questa sezione sono elencate le differenze che intercorrono tra lo standard ufficiale e l’implementazione SPID.
 
