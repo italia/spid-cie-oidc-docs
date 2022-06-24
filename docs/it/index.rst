@@ -32,10 +32,12 @@ Indice dei contenuti
    termini_acronimi.rst
    la_federazione_delle_identita.rst
    configurazione_federazione.rst
-   entity_statement_entity_configuration.rst
+   entity_configuration.rst
+   entity_statement.rst
    trust_marks.rst
    trust_negotiation.rst
    metadata_oidc.rst
+   flusso_autenticazione.rst
    authorization_endpoint.rst
    authentication_response.rst
    token_endpoint.rst

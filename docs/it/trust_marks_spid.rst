@@ -35,7 +35,7 @@ Un Trust Mark può essere revocato in qualsiasi momento. In caso di esclusione d
 Pubblicazione dei Trust Marks
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-La TA definisce i TM e gli emittenti di questi abilitati nella Federazione mediante il attributo **trust_mark_issuers**, presente all’interno del proprio Entity Configuration. Il valore dell’attributo **trust_mark_issuers** è composto da un oggetto JSON, avente come chiavi gli id dei TM e come valori la lista degli emittenti abilitati.
+La TA definisce i TM e gli emittenti di questi abilitati nella Federazione mediante il claim **trust_mark_issuers**, presente all’interno del proprio Entity Configuration. Il valore dell’attributo **trust_mark_issuers** è composto da un oggetto JSON, avente come chiavi gli id dei TM e come valori la lista degli emittenti abilitati.
 
 Di seguito un esempio non normativo dell’oggetto **trust_mark_issuers** all’interno della Entity Configuration del TA.
 

@@ -98,7 +98,7 @@ personalizzato, se richiesto.
       - |uncheck-icon|
 
 
-Nella Federazione CIE il attributo id è un URL con la struttura seguente:
+Nella Federazione CIE il claim id è un URL con la struttura seguente:
 
 
     <TA_domain> / <entity_type> / <trustmark_profile> 
