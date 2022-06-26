@@ -20,7 +20,7 @@ Si veda la Sezione dedicata alle :ref:`Entity Configuration<Entity_Configuration
 Modalità di partecipazione
 --------------------------
 
-Per aderire alla Federazione SPID una entità di tipo Foglia deve pubblicare la propria configurazione (Entity Configuration) presso il proprio web endpoint :ref:`.well-known/openid-federation<Esempio_EN1>`.
+Per aderire alle Federazioni SPID e CIEid una entità di tipo Foglia deve pubblicare la propria configurazione (Entity Configuration) presso il proprio web endpoint :ref:`.well-known/openid-federation<Esempio_EN1>`.
 
 Gli incaricati tecnici ed amministrativi della Foglia completano la procedura amministrativa per la registrazione di una nuova entità o l’aggiornamento di un’entità preesistente definita dalla Autorità di Federazione o da un suo Intermediario (SA).
 
@@ -28,4 +28,4 @@ L’Autorità di Federazione o il suo Intermediario, dopo aver effettuato tutti 
 
 La Foglia DEVE includere il TM all’interno della propria configurazione di Federazione (Entity Configuration) come prova del buon esito del processo di onboarding. 
 
-L’Autorità di Federazione o suo Intermediario DEVE pubblicare la dichiarazione di riconoscimento della Foglia (Entity Statement) contenente le chiavi pubbliche di federazione della Foglia e i TM a questa rilasciati. L’Autorità di Federazione o suo Intermediario PUÒ pubblicare una politica dei `metadata <https://openid.net/specs/openid-connect-federation-1_0.html#rfc.section.5.1>`_ per forzare la modifica dei metadata OIDC della Foglia, nelle parti in cui questo fosse necessario.
+L’Autorità di Federazione o suo Intermediario DEVE pubblicare la dichiarazione di riconoscimento della Foglia (Entity Statement) contenente le chiavi pubbliche di federazione della Foglia e i TM a questa rilasciati. L’Autorità di Federazione o suo Intermediario PUÒ pubblicare una politica dei `metadata <https://openid.net/specs/openid-connect-federation-1_0.html#rfc.section.5.1>`_ per forzare la modifica dei metadata OIDC del discendente, nelle parti in cui questo fosse necessario.
