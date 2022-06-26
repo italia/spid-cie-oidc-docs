@@ -9,10 +9,19 @@ Seguono i termini utilizzati da `OIDC-FED#Section_1.2`_ e in questo documento.
     :widths: 15 85
     :header-rows: 0
 
-    * - **Autorità di Federazione (Federation Authority)**
-      - Un'entità legale che gestisce uno schema di identità digitale su un protocollo di federazione.
+    * - **Autorità di Federazione**
+      - Un'entità legale che gestisce la fiducia tra le parti coinvolte nella Federazione e norma il funzionamento e le modalità 
+        di registrazione e riconoscimento dei partecipanti. Si tratta di un **Trust Anchor** (la radice del *trust*). 
     * - **Trust Anchor**
-      - Una Autorità di Federazione che stabilisce la fiducia tra le parti della federazione. 
+      - Un'Autorità della Federazione, che rappresenta una terza parte fidata e può delegare altre Autorità della Federazione
+        (**Intermediari**) a portare avanti l'**onboarding** delle **Foglie**.
+    * - **Intermediario**
+      - Soggetto Aggregatore (SA), facilita l'ingresso nella Federazione e PUÒ gestire le funzionalità per conto di un 
+        suo discendente (Aggregato). Pubblica la propria configurazione all’interno della Federazione e le affermazioni di riconoscimento delle parti sue discendenti (Aggregati) secondo le regole definite dalla Federazione.
+    * - **Foglia**
+      - Entità definita dal protocollo OIDC come Relying Party e Provider OpenID.
+    * - **Entità**
+      - Partecipante alla Federazione. Trust Anchor, Intermediario o Foglia.
     * - **Entity configuration**
       - Dichiarazione di una entità emessa per proprio conto, nella forma di JWT auto firmato :rfc:`7515` e contenente la configurazione di se stessa. Contiene le chiavi pubbliche di Federazione, il metadata OIDC, gli URL delle autorità sue superiori e i Trust Mark emessi da autorità riconoscibili nella Federazione che attestano l’aderenza del soggetto a determinati profili.
     * - **Entity statement**
