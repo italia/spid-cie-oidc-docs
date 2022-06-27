@@ -10,7 +10,7 @@ Affinché i partecipanti, siano essi RP o OP, si riconoscano all’interno della
 
 I metadati sono certificati da un parte fidata che all’interno della Federazione SPID è AgID, mentre all'interno della Federazione CIE è il Ministero dell'Interno. Questi corrispondono alla Autorità di Federazione.
 
-SPID e CIE id implementano OpenID Connect Federation 1.0 e ne estendono alcune funzionalità, realizzano una implementazione concreta e producono le buone pratiche per la sua adozione. Per approfondimenti allo standard si rimanda alle specifiche ufficiali `OIDC-FED`_ e alla sezione :ref:`Differenze con OIDC Federation 1.0<differenze_con_oidc_federation_1.0>`. 
+SPID e CIE id implementano OpenID Connect Federation 1.0 e ne estendono alcune funzionalità, realizzano una implementazione concreta e producono le buone pratiche per la sua adozione. Per approfondimenti allo standard si rimanda alle specifiche ufficiali `OIDC-FED`_ e alla sezione :ref:`Differenze con OIDC Federation 1.0<differenze_con_oidc_federation>`. 
 
 
 Perché OIDC Federation
@@ -29,26 +29,3 @@ La Federazione OIDC è un modello gerarchico basato su un meccanismo di delega d
 
 *Schema ad albero che rappresenta la struttura della Federazione SPID OIDC. Alla Base le Autorità di Federazione SPID e CIE id e, salendo, gli OP che non hanno intermediari, gli RP e gli Intermediari che a loro volta Aggregano altri RP.*
 
-
-Entità della Federazione
-++++++++++++++++++++++++
-
-Le parti coinvolte all’interno di una Federazione OpenID Connect sono le seguenti:
-
-.. list-table:: 
-   :widths: 25 75
-   :header-rows: 0
-
-   * - **Autorità di Federazione**
-     - Un'entità che gestisce la fiducia tra le parti coinvolte nella Federazione e norma il funzionamento e le modalità 
-       di registrazione e riconoscimento dei partecipanti. Si tratta di un **Trust Anchor** (la radice del *trust*) o di un **Intermediario**. 
-   * - **Trust Anchor**
-     - Un'Autorità della Federazione, che rappresenta una terza parte fidata e può delegare altre Autorità della Federazione
-       (**Intermediari**) a portare avanti l'**onboarding** delle **Foglie**.
-   * - **Intermediario**
-     - Soggetto Aggregatore (SA), facilita l'ingresso nella Federazione e PUÒ gestire le funzionalità per conto di un 
-       suo discendente (Aggregato). Pubblica la propria configurazione all’interno della Federazione e le affermazioni di riconoscimento delle parti sue discendenti (Aggregati) secondo le regole definite dalla Federazione.
-   * - **Foglia**
-     - Entità definita dal protocollo OIDC come Relying Party e Provider OpenID.
-   * - **Entità**
-     - Partecipante alla Federazione. Trust Anchor, Intermediario o Foglia.

@@ -9,6 +9,19 @@ Seguono i termini utilizzati da `OIDC-FED#Section_1.2`_ e in questo documento.
     :widths: 15 85
     :header-rows: 0
 
+    * - **Autorità di Federazione**
+      - Un'entità legale che gestisce la fiducia tra le parti coinvolte nella Federazione e norma il funzionamento e le modalità 
+        di registrazione e riconoscimento dei partecipanti. Si tratta di un **Trust Anchor** (la radice del *trust*). 
+    * - **Trust Anchor**
+      - Un'Autorità della Federazione, che rappresenta una terza parte fidata e può delegare altre Autorità della Federazione
+        (**Intermediari**) a portare avanti l'**onboarding** delle **Foglie**.
+    * - **Intermediario**
+      - Soggetto Aggregatore (SA), facilita l'ingresso nella Federazione e PUÒ gestire le funzionalità per conto di un 
+        suo discendente (Aggregato). Pubblica la propria configurazione all’interno della Federazione e le affermazioni di riconoscimento delle parti sue discendenti (Aggregati) secondo le regole definite dalla Federazione.
+    * - **Foglia**
+      - Entità definita dal protocollo OIDC come Relying Party e Provider OpenID.
+    * - **Entità**
+      - Partecipante alla Federazione. Trust Anchor, Intermediario o Foglia.
     * - **Entity configuration**
       - Dichiarazione di una entità emessa per proprio conto, nella forma di JWT auto firmato :rfc:`7515` e contenente la configurazione di se stessa. Contiene le chiavi pubbliche di Federazione, il metadata OIDC, gli URL delle autorità sue superiori e i Trust Mark emessi da autorità riconoscibili nella Federazione che attestano l’aderenza del soggetto a determinati profili.
     * - **Entity statement**
@@ -26,7 +39,7 @@ Seguono i termini utilizzati da `OIDC-FED#Section_1.2`_ e in questo documento.
     * - **Trust Chain**
       - Procedura di validazione della sequenza di Entity Configuration e Statement raccolta mediante Metadata Discovery, il cui esito positivo è un metadata finale relativo ad una entità e la data di scadenza entro la quale questo deve essere aggiornato.
     * - **Onboarding**
-      - Procedura di registrazione di una nuova entità all’interno della Federazione SPID
+      - Procedura di registrazione di una nuova entità all’interno della Federazione SPID e CIE
     * - **Federation Endpoint**
       - Endpoint usati per prendere e risolvere gli statement delle entità, interrogare una lista di tutte le entità subordinate e verificare lo stato dei trust mark.
 
@@ -39,29 +52,32 @@ In questa sezione sono definiti tutti gli acronimi utilizzati all’interno del 
     :widths: 15 85
     :header-rows: 0
 
-    * - **AdF**
-      - Autorità di Federazione, che è AgID.
+    * - **SPID**
+      - Sistema Pubblico di Identità Digitale
+    * - **CIEid**
+      - Il sistema di identità digitale italiano basato sulla Carta d'Identità Elettronica (CIE), di cui il Ministero dell'Interno è il titolare. La gestione tecnica e operativa è affidata all'Istituto Poligrafico e Zecca dello Stato (IPZS).
     * - **OIDC**
       - OpenID Connect
     * - **OIDC-FED**
-      - OIDC Federation 1.0
+      - `OIDC Federation 1.0 <https://openid.net/specs/openid-connect-federation-1_0.html>`_.
     * - **IOF**
       - Italian OIDC Federation 1.0.
-    * - **SPID**
-      - Sistema Pubblico di Identità Digitale
-    * - **AgID**
-      - Agenzia per l’Italia Digitale
-    * - **SA**
-      - Soggetti Aggregatori. Sono entità intermediarie che possono gestire tutti gli aspetti della federazione di uno o più 
-        RP (entità foglia).
+    * - **FA**
+      - Autorità di Federazione (Federation Authority).
     * - **TA**
       - OIDC Federation Trust Anchor
+    * - **AgID**
+      - Agenzia per l’Italia Digitale, FA/TA di SPID
+    * - **MinInterno**
+      - Ministero dell'Interno, FA/TA di CIEid.
     * - **OP**
-      - OpenID Provider
+      - OpenID Provider (entità foglia)
     * - **RP**
-      - Relying Party   
+      - Relying Party (entità foglia) 
+    * - **SA**
+      - Soggetti Aggregatori. Sono entità intermediarie che possono gestire tutti gli aspetti della federazione di uno o più RP.
     * - **AA**
-      - Attribute Authority, OAuth Resource Server, Gestore degli Attributi qualificati
+      - Attribute Authority, Gestore degli Attributi qualificati (entità foglia)
     * - **TM**
       - Trust Mark
     * - **EC**
@@ -72,18 +88,6 @@ In questa sezione sono definiti tutti gli acronimi utilizzati all’interno del 
       - Uniform Resource Locator, corrispondente ad un indirizzo web
     * - **JWT**
       - Vedi :rfc:`7519` Jones, M., Bradley, J. and N. Sakimura, "JSON Web Token (JWT)", RFC 7519, DOI 10.17487/RFC7519, May 2015. 
-    * - **FA**
-      - Autorità di Federazione (Federation Authority). Un'entità legale che gestisce uno schema di identità nazionale basato su 
-        un protocollo di federazione.
-    * - **OIDC-FED**
-      - `OIDC Federation <1.0 https://openid.net/specs/openid-connect-federation-1_0.html>`_.
-    * - **IOF**
-      - Italian OIDC Federation 1.0.
-    * - **CIE id**
-      - Il sistema di identità digitale italiano basato sulla Carta d'Identità Elettronica (CIE), il cui proprietario è il Ministero 
-        dell'Interno d'Italia ed è gestito dall'Istituto Poligrafico e Zecca dello Stato (IPZS).
-    * - **MinInterno**
-      - Ministero dell'Interno d'Italia, Federation Authority del sistema CIE id.
     * - **RS**
       - OAuth Resource Server
     * - **$JWT**
