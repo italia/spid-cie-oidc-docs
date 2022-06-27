@@ -4,3 +4,6 @@ Flusso di autenticazione
 ------------------------
 
 TODO
+
+.. image:: ../../images/flusso.svg
+    :width: 100%
