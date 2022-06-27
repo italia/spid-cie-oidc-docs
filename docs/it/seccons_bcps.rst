@@ -31,7 +31,7 @@ Allo stesso tempo la specifica OIDC Federation 1.0 non definisce un limite per i
 Resolve Entity Statement
 ++++++++++++++++++++++++
 
-Questo endpoint DEVE rilasciare i metadata, i Trust Marks e la Trust Chain già precedentemente elaborata e NON DEVE innescare una procedura di Metadata Discovery ad ogni richiesta pervenuta, a meno che questo endpoint non venga protetto con un meccanismo di autenticazione dei client, come ad esempio private_key_jwt [SPID-OIDC-CORE].
+Questo endpoint DEVE rilasciare i metadata, i Trust Mark e la Trust Chain già precedentemente elaborata e NON DEVE innescare una procedura di Metadata Discovery ad ogni richiesta pervenuta, a meno che questo endpoint non venga protetto con un meccanismo di autenticazione dei client, come ad esempio private_key_jwt [SPID-OIDC-CORE].
 
 
 
