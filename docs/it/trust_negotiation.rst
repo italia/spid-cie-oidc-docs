@@ -31,7 +31,7 @@ OpenID Provider
 
 Quando un Provider (OP) riceve una richiesta di autorizzazione da parte di un RP non precedentemente riconosciuto avviene la procedura di **automatic client registration**. Sono di seguito descritte le operazioni compiute dal OP per registrare un RP dinamicamente.
 
-.. image:: ../../images/automatic_client_registration.png
+.. image:: ../../images/automatic_client_registration.svg
     :width: 100%
 
 
