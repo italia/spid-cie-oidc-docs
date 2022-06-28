@@ -98,7 +98,7 @@ In questa sezione sono definiti tutti gli acronimi utilizzati all’interno del 
 Convenzioni e Terminologia
 --------------------------
 
-Le parole chiave “DEVE” e “DEVONO”, "NON DEVE” e “NON DEVONO”, “RICHIEDE” e “RICHIESTO”, “NON DEVE”, “DOVREBBE”, “NON DOVREBBE”, “RACCOMANDATO”, “PUÒ” e “OPZIONALE” nel presente documento devono essere interpretate come descritte nel BCP 14 :rfc:`2119` :rfc:`8174` quando e solo quando appaiono in maiuscolo.
+Le parole chiave “DEVE” e “DEVONO”, “NON DEVE” e “NON DEVONO”, “RICHIEDE” e “RICHIESTO”, “NON DEVE”, “DOVREBBE”, “NON DOVREBBE”, “RACCOMANDATO”, “PUÒ” e “OPZIONALE” nel presente documento devono essere interpretate come descritte nel BCP 14 :rfc:`2119` :rfc:`8174` quando e solo quando appaiono in maiuscolo.
 
 Le notazioni [...] e ... indicano che il testo è stato troncato per esigenze editoriali.
 

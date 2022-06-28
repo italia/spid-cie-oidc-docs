@@ -27,47 +27,40 @@ Entity Configuration comuni
 +++++++++++++++++++++++++++
 
 .. list-table::
-   :widths: 20 20 40 20
+   :widths: 20 60 20
    :header-rows: 1
 
    * - **Claim**
-     - **Tipo**
      - **Descrizione**
      - **Obbligatorio**
    * - **iss**
-     - String
-     - Identificativo dell'entità che lo emette. 
+     - String. Identificativo dell'entità che lo emette. 
      - |check-icon|
    * - **sub**
-     - String
-     - Identificativo del soggetto a cui è riferito. 
+     - String. Identificativo del soggetto a cui è riferito. 
      - |check-icon|
    * - **iat**
-     - UNIX Timestamp
-     - Data di emissione. 
+     - UNIX Timestamp. Sata di emissione. 
      - |check-icon|
    * - **exp**
-     - UNIX Timestamp
-     - Data di scadenza.
+     - UNIX Timestamp. Data di scadenza.
      - |check-icon|
    * - **jwks**
-     - JWKS
      - Un JSON Web Key Set (JWKS) :rfc:`7517` che rappresenta la parte pubblica delle chiavi di firma dell'entità interessata. Ogni JWK nel set JWK DEVE avere un ID chiave (claim kid).
      - |check-icon|
    * - **metadata**
-     - JSON Object
-     - Ogni chiave dell'oggetto JSON rappresenta un identificatore del tipo di metadati e ogni
+     - JSON Object. Ogni chiave dell'oggetto JSON rappresenta un identificatore del tipo di metadati e ogni
        valore DEVE essere un oggetto JSON che rappresenta i metadati secondo lo schema di metadati di quel tipo. 
 
        Una configurazione di entità PUÒ contenere più dichiarazioni di metadati, ma solo una per ogni tipo di metadati (<**entity_type**>). 
 
        I tipi consentiti sono i seguenti:
 
-       - openid_relying_party
-       - openid_provider
-       - federation_entity
-       - oauth_resource
-       - trust_mark_issuer
+       - **openid_relying_party**
+       - **openid_provider**
+       - **federation_entity**
+       - **oauth_resource**
+       - **trust_mark_issuer**
      - |check-icon|
 
 .. warning::
@@ -80,21 +73,20 @@ Entity Configuration Foglia e Intermediari
 Gli EC delle entità Foglia e Intermediari, in aggiunta ai claim precedentemente definiti, contengono anche i seguenti claim:
 
 .. list-table::
-   :widths: 20 20 40 20
+   :widths: 20 60 20
    :header-rows: 1
 
    * - **Claim**
-     - **Tipo**
      - **Descrizione**
      - **Obbligatorio**
    * - **authority_hints**
-     - Array di URLs
-     - Contiene una lista di URL delle entità superiori, quali TA o SA che POSSONO emettere un ES relativo a questo soggetto. 
+     - Array di URLs. Contiene una lista di URL delle entità superiori, quali TA o SA che POSSONO emettere un ES relativo a questo soggetto. 
      - |check-icon|
    * - **trust_marks**
-     - JSON array
      - Un array JSON contenente i Trust Mark. Vedere la Sezione :ref:`Trust Mark <Trust_Mark>`.
      - |check-icon| per tutti i partecipanti fatta esclusione del Trust Anchor. 
+
+
 
 .. _entity_configuration_ta:
 
@@ -104,18 +96,15 @@ Entity Configuration Trust Anchor
 Gli EC di un TA, in aggiunta ai claim comuni a tutti i partecipanti, contengono anche i seguenti:
 
 .. list-table::
-   :widths: 20 20 40 20
+   :widths: 20 60 20
    :header-rows: 1
 
    * - **Claim**
-     - **Tipo**
      - **Descrizione**
      - **Obbligatorio**
    * - **constraints**
-     - JSON Object
-     - Oggetto JSON che descrive un insieme di vincoli della Trust Chain e che DEVE contenere l'attributo **max_path_length**. Rappresenta il numero massimo di ES fra questo ES e l'ultimo ES nella trust chain.
+     - JSON Object che descrive un insieme di vincoli della Trust Chain e che DEVE contenere l'attributo **max_path_length**. Rappresenta il numero massimo di ES fra questo ES e l'ultimo ES nella trust chain.
      - |check-icon|
    * - **trust_marks_issuers**
-     - JSON array
-     - Indica quali autorità sono considerate attendibili nella federazione per l’emissione di specifici TM, questi assegnati mediante il proprio identificativo univoco.
+     - JSON array che indica quali autorità sono considerate attendibili nella federazione per l’emissione di specifici TM, questi assegnati mediante il proprio identificativo univoco.
      - |check-icon|

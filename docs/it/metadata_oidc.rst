@@ -9,7 +9,7 @@ In OIDC-FED il metadato OIDC relativo a RP e OP viene definito all’interno del
 
 
 .. toctree:: 
-   :maxdepth: 2
+   :maxdepth: 1
 
    metadata_oidc_op.rst
    metadata_oidc_rp.rst

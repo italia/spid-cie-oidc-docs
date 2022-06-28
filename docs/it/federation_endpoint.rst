@@ -70,24 +70,20 @@ Fetch Entity Statements Request
 La richiesta DEVE essere una richiesta HTTP che usa il metodo GET ed ha i seguenti parametri di query:
 
 .. list-table:: 
-   :widths: 20 20 40 20
+   :widths: 20 60 20
    :header-rows: 1
 
    * - **Claim**
-     - **Tipo**
      - **Descrizione**
      - **Obbligatorio**
    * - **iss**
-     - String
-     - L’identificatore di entità dell’emettitore dal quale si vuole l’emissione dell’ES. A causa della normalizzazione dell’URL, più emettitori POSSONO puntare ad un Fetch Endpoint condiviso. Questo parametro esplicita esattamente da quale emettitore si vuole l’ES. Senza questo parametro l’emettitore coincide con l’entità alla quale è stata fatta la richiesta.
+     - String. L’identificatore di entità dell’emettitore dal quale si vuole l’emissione dell’ES. A causa della normalizzazione dell’URL, più emettitori POSSONO puntare ad un Fetch Endpoint condiviso. Questo parametro esplicita esattamente da quale emettitore si vuole l’ES. Senza questo parametro l’emettitore coincide con l’entità alla quale è stata fatta la richiesta.
      - |uncheck-icon|
    * - **sub**
-     - String
-     - L’identificatore di entità del soggetto per il quale si vuole l’emissione dell’ES. Senza questo parametro, la richiesta di statement si considera inviata a se stesso.
+     - String. L’identificatore di entità del soggetto per il quale si vuole l’emissione dell’ES. Senza questo parametro, la richiesta di statement si considera inviata a se stesso.
      - |uncheck-icon|
    * - **aud**
-     - String
-     - L’identificatore di entità del richiedente. Se **aud** è presente nella richiesta, il parametro **aud** DOVREBBE essere presente nella risposta dell’ES e prendere lo stesso valore. 
+     - String. L’identificatore di entità del richiedente. Se **aud** è presente nella richiesta, il parametro **aud** DOVREBBE essere presente nella risposta dell’ES e prendere lo stesso valore. 
      - |uncheck-icon|
 
 Il seguente è un esempio non normativo di una richiesta API per un ES:
@@ -142,28 +138,23 @@ Resolve Endpoint Request
 La richiesta DEVE essere una richiesta HTTP che usa un metodo GET e lo schema https ad resolve endpoint con i seguenti parametri della stringa di query:
 
 .. list-table:: 
-   :widths: 20 20 40 20
+   :widths: 20 60 20
    :header-rows: 1
 
    * - **Claim**
-     - **Tipo**
      - **Descrizione**
      - **Obbligatorio**
    * - **sub**
-     - String
-     - L’identificatore di entità dell’entità di cui sono richiuesti i dati risolti
+     - String. L’identificatore di entità dell’entità di cui sono richiuesti i dati risolti
      - |check-icon|
    * - **anchor**
-     - String
-     - Il TA che il peer remoto DEVE usare nella risoluzione dei metadata. Il valore è un identificatrore di entità.
+     - String. Il TA che il peer remoto DEVE usare nella risoluzione dei metadata. Il valore è un identificatrore di entità.
      - |check-icon|
    * - **type**
-     - 
      - Un tipo specifico di metadata da risolvere. Se assente, allora ci si aspetta che tutti i tipi di metadata vengano ritornati.
      - |uncheck-icon|
    * - **iss**
-     - String
-     - L’identificatore dell’entità che sta richiedendo le informazioni. Se questo parametro è presente nella richiesta, allora DEVE essere presente nella risposta nel parametro aud/jose del JWT firmato.
+     - String. L’identificatore dell’entità che sta richiedendo le informazioni. Se questo parametro è presente nella richiesta, allora DEVE essere presente nella risposta nel parametro aud/jose del JWT firmato.
      - |uncheck-icon|
 
 
@@ -237,24 +228,20 @@ DEVE essere una richiesta HTTP che usa il metodo GET e lo schema https verso uno
 
 
 .. list-table:: 
-   :widths: 20 20 40 20
+   :widths: 20 60 20
    :header-rows: 1
 
    * - **Claim**
-     - **Tipo**
      - **Descrizione**
      - **Obbligatorio**
    * - **sub**
-     - String
-     - L’entity_id per l’enbtità alla quale è stato inviato il TM.
+     - String. L’entity_id per l’enbtità alla quale è stato inviato il TM.
      - |uncheck-icon|
    * - **id**
-     - String
-     - Identifica il TM
+     - String. Identifica il TM
      - |uncheck-icon|
    * - **iat**
-     - UNIX Timestamp
-     - Identifica quanto il TM è stato emesso. Se non viene specificato **iat** e l’emettitore del TM ha emesso diversi TM con l’**id** specificato nella richiesta all’entità specificata da **sub**, allora si assume che sia l’ultimo.
+     - UNIX Timestamp. Identifica quanto il TM è stato emesso. Se non viene specificato **iat** e l’emettitore del TM ha emesso diversi TM con l’**id** specificato nella richiesta all’entità specificata da **sub**, allora si assume che sia l’ultimo.
      - |uncheck-icon|
 
 
@@ -280,16 +267,14 @@ essere impostato a **application/json**:
 
 
 .. list-table:: 
-   :widths: 20 20 40 20
+   :widths: 20 60 20
    :header-rows: 1
 
    * - **Claim**
-     - **Tipo**
      - **Descrizione**
      - **Obbligatorio**
    * - **active**
-     - Boolean
-     - Se il TM è attivo o no.
+     - Boolean. Inndica ae il TM è attivo o no.
      - |check-icon|
 
 
@@ -330,16 +315,14 @@ DEVE essere una richiesta HTTP che usa il metodo GET e lo schema https verso un 
 
 
 .. list-table:: 
-   :widths: 20 20 40 20
+   :widths: 20 60 20
    :header-rows: 1
 
    * - **Claim**
-     - **Tipo**
      - **Descrizione**
      - **Obbligatorio**
    * - **entity_type**
-     - Set (federation_entity, openid_relying_party, openid_provider)
-     - Filtra il tipo di entità. 
+     - Set (**federation_entity**, **openid_relying_party**, **openid_provider**).  Filtra il tipo di entità. 
      - |uncheck-icon|
 
 
@@ -436,23 +419,19 @@ La risposta HTTP DEVE essere qualcosa nell'intervallo 400/500, che dia un’indi
 
 
 .. list-table:: 
-   :widths: 20 20 40 20
+   :widths: 20 60 20
    :header-rows: 1
 
    * - **Claim**
-     - **Tipo**
      - **Descrizione**
      - **Obbligatorio**
    * - **operation**
-     - 
      - L’operazione della richiesta
      - |check-icon|
    * - **error**
-     - 
      - Il codice di errore
      - |check-icon|
    * - **error_description**
-     - 
      - Un breve testo leggibile che descrive l’errore
      - |check-icon|
 

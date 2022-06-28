@@ -48,29 +48,24 @@ Lo UserInfo Endpoint restituisce i claim autorizzati nella Authentication Reques
 Il payload del JWT è un JSON contenente i seguenti parametri:
 
 .. list-table:: 
-   :widths: 20 20 40 20
+   :widths: 20 60 20
    :header-rows: 1
 
    * - **Claim**
-     - **Tipo**
      - **Descrizione**
      - **Obbligatorio**
    * - **sub**
-     - String
-     - Identificatore del soggetto, coincidente con quello già rilasciato nell’ID Token
+     - String. Identificatore del soggetto, coincidente con quello già rilasciato nell’ID Token
        Il RP deve verificare che il valore coincida con quello contenuto nell’ID Token.
      - 
    * - **aud**
-     - String
-     - Identificatore del soggetto destinatario della response (RP)
+     - String. Identificatore del soggetto destinatario della response (RP)
        Il RP deve verificare che il valore coincida con il proprio client_id.
      - 
    * - **iss**
-     - String
-     - URI che identifica univocamente l’OP.
+     - String. URI che identifica univocamente l’OP.
      - 
    * - **<attributo>**
-     - 
      - I claim richiesti al momento dell’autenticazione
      - 
 

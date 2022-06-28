@@ -27,20 +27,17 @@ Entity Statement
 Gli ES emessi dal TA o da un suo Intermediario per i propri diretti discendenti, contengono anche i seguenti attributi:
 
 .. list-table::
-   :widths: 20 20 40 20
+   :widths: 20 60 20
    :header-rows: 1
 
    * - **Claim**
-     - **Tipo**
      - **Descrizione**
      - **Obbligatorio**
    * - **metadata_policy**
-     - JSON Object
-     - Oggetto JSON che descrive un criterio di metadati. Ogni chiave dell'oggetto JSON rappresenta un identificatore del tipo di metadati e ogni valore DEVE essere un oggetto JSON che rappresenta la politica dei metadati in base allo schema di quel tipo di metadati. Si rimanda alla specifica `OIDC-FED#Section.5.1`_ per i dettagli implementativi.
+     - JSON Object che descrive un criterio di metadati. Ogni chiave dell'oggetto JSON rappresenta un identificatore del tipo di metadati e ogni valore DEVE essere un oggetto JSON che rappresenta la politica dei metadati in base allo schema di quel tipo di metadati. Si rimanda alla specifica `OIDC-FED#Section.5.1`_ per i dettagli implementativi.
      - |check-icon|
    * - **trust_marks**
-     - JSON Array
-     - Un array JSON contenente i Trust Mark emessi da se stesso per il soggetto discendente.
+     - JSON Array contenente i Trust Mark emessi da se stesso per il soggetto discendente.
      - |check-icon|
 
 

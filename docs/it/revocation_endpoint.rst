@@ -41,29 +41,24 @@ La richiesta al Revocation Endpoint consiste nell’invio del token che si vuole
 
 
 .. list-table:: 
-   :widths: 20 20 40 20
+   :widths: 20 60 20
    :header-rows: 1
 
    * - **Claim**
-     - **Tipo**
      - **Descrizione**
      - **Obbligatorio**
    * - **client_assertion**
-     - JWT
      - JWT firmato con la chiave privata del Relying Party contenente gli stessi parametri documentati per le richieste al 
        Token Endpoint. L’OP deve verificare la validità di tutti i campi presenti nel JWT, nonché la validità della sua firma in relazione al parametro **client_id**.
      - 
    * - **client_assertion_type**
-     - String
-     - **urn:ietf:params:oauth:clientassertion-type:jwt-bearer**
+     - String. **urn:ietf:params:oauth:clientassertion-type:jwt-bearer**
      - 
    * - **client_id**
-     - String
      - URI che identifica univocamente il RP come da Registro SPID. 
        L’OP deve verificare che il client_id sia noto.
      - 
    * - **token**
-     - 
      - Il token su cui il RP vuole ottenere informazioni.
      - 
 	 

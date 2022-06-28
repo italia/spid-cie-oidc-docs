@@ -19,43 +19,90 @@ OpenID Connect Relying Party Metadata (RP)
 Dove un RP non disponesse all’interno dei propri metadati dei claim **client_registration_types** i valori da intendersi come impliciti sono i seguenti.
 
 .. list-table:: 
-   :widths: 20 20 40 20
+   :widths: 20 60 20
    :header-rows: 1
 
    * - **Claim**
-     - **Tipo**
      - **Descrizione**
      - **Obbligatorio** 
    * - **client_registration_types**
-     - String
-     - Array che specifica i tipi supportati dalla federazione (solo *automatic*)
+     - Array di stringhe che specifica i tipi supportati dalla federazione (solo *automatic*)
      - |check-icon| 
-
-
-
-Ogni RP DEVE esporre all’interno dei propri Metadata i seguenti claim come obbligatori
-
-.. list-table:: 
-   :widths: 20 20 40 20
-   :header-rows: 1
-
-   * - **Claim**
-     - **Tipo**
-     - **Descrizione**
-     - **Obbligatorio**
    * - **organization_name**
-     - String
      - Un nome leggibile che rappresenta l'organizzazione proprietaria dell'RP. 
      - |check-icon| 
    * - **jwks**
-     - JSON
      - JSON Web Key Set :rfc:`7517#appendix-A.1`
+       È composto dai seguenti claim:
+        
+        - **kty**: famiglia dell’algoritmo crittografico utilizzato
+        - **alg**: algoritmo utilizzato
+        - **use**: utilizzo della chiave pubblica per firma (sig) o encryption (enc)
+        - **kid**: identificatore univoco della chiave, valorizzato come RFC7638
+        - **n**: modulo (solo per chiavi RSA)
+        - **e**: esponente (solo per chiavi RSA)
+        - **x**: parametro coordinata x (solo per chiavi EC)
+        - **y**: parametro coordinata y (solo per chiavi EC)
+        - **crv**: parametro curva (solo per chiavi EC)
+
      - |check-icon| in assenza del claim **signed_jwks_uri**. 
-   * - **signed_jwks_uri**
-     - String
-     - URL del JWT auto firmato e verificabile con la chiave pubblica di Federazione (JWK). 
+   * - **jwks_uri**
+     - Url del registry dove è localizzato il jwks contenente la chiave pubblica in formato 
+       JSON Web Key (JWK) e quindi composto dai seguenti parametri:
+        
+        - **kty**: famiglia dell’algoritmo crittografico utilizzato
+        - **alg**: algoritmo utilizzato
+        - **use**: utilizzo della chiave pubblica per firma (sig) o encryption (enc)
+        - **kid**: identificatore univoco della chiave, valorizzato come RFC7638
+        - **n**: modulo (solo per chiavi RSA)
+        - **e**: esponente (solo per chiavi RSA)
      - |check-icon| in assenza del claim **jwks**. 
+   * - **client_id**
+     - URI che identifica univocamente il RP come da Registro SPID/CIE
+     - |check-icon|
+   * - **redirect_uris**
+     - Array di URI di redirezione utilizzati dal client (RP). Deve esserci un match esatto tra uno degli URI
+       nell’array e quello utilizzato nell’Authentication request. Non è ammesso l’uso dello schema http (è
+       obbligatorio HTTPS); tuttavia gli URI possono seguire eventuali schemi custom (ad es. myapp://) al 
+       fine di supportare applicazioni mobili.
+       *Alla luce della normativa vigente in tema di protezione dei dati personali, è opportuno che
+       l’URL non contenga informazioni utili ad individuare lo specifico servizio a cui l’utente
+       intende accedere. Si raccomanda dunque di reindirizzare verso un sistema di access
+       management che a sua volta rimanderà l’utente allo specifico servizio*.
+     - |check-icon|
+   * - **client_name**
+     - Nome del RP da visualizzare nelle schermate di autenticazione e richiesta di consenso. 
+       Può essere specificato in più lingue apponendo al nome dell’elemento il suffisso "#" seguito 
+       dal codice :rfc:`5646`. Un nome di default senza indicazione della lingua è sempre presente.
+     - |check-icon|
+   * - **response_types**
+     - Array dei valori di response_type previsti da OAuth 2.0 che il client userà nelle richieste di autenticazione.
+       Deve contenere il solo valore **code**.
+     - |check-icon|
+   * - **grant_types**
+     - Array dei valori di **grant_type** previsti da OAuth 2.0 che il client userà nelle richieste al
+       **Token Endpoint**. Deve contenere i soli valori **authorization_code** e **refresh_token**.
+     - |check-icon|
+   * - **federation_resolve_endpoint**
+     - String. Url presso il quale è possibile ottenere i trust mark validati, il metadata finale e la Trust Chain, 
+       relativamente ad un soggetto.
+     - |check-icon| 
+
+
+
+Claim Opzionali nel Metadata RP
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. list-table:: 
+   :widths: 20 60 20
+   :header-rows: 1
+
+   * - **Claim**
+     - **Descrizione**
+     - **Obbligatorio** 
+   * - **tls_client_certificate_bound_access_tokens**
+     -  Valore booleano usato per indicare l’intenzione di RP di usare i token **mTLS bound**
+     - |uncheck-icon| 
+
+
 
 Vedere `OIDC-FED#RP_metadata`_
-
-

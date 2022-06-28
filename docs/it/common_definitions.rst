@@ -12,7 +12,7 @@
 .. |warning-message| replace:: Tutti gli esempi contenuti in questa documentazione sono da intendersi come non normativi
 
 .. _OIDC-FED: https://openid.net/specs/openid-connect-federation-1_0.html
-.. _OIDC-FED#OP_metadata: https://openid.net/specs/openid-connect-federation-1_0.html#rfc.section.4.2
+.. _OIDC-FED#OP_metadata: https://openid.net/specs/openid-connect-discovery-1_0.html#ProviderMetadata
 .. _OIDC-FED#RP_metadata: https://openid.net/specs/openid-connect-federation-1_0.html#rfc.section.4.1
 .. _OIDC-FED#Federation_Entity: https://openid.net/specs/openid-connect-federation-1_0.html#rfc.section.4.6
 .. _LG-AA: https://docs.italia.it/AgID/documenti-in-consultazione/lg-spid-attribute-authority-docs/it/master/index.html
@@ -45,4 +45,10 @@
 .. _SPID-OIDC-CORE: https://www.agid.gov.it/sites/default/files/repository_files/linee_guida_openid_connect_in_spid.pdf
 .. _SPID-OIDC: https://www.agid.gov.it/sites/default/files/repository_files/linee_guida_openid_connect_in_spid.pdf
 .. _PAR: https://tools.ietf.org/id/draft-ietf-oauth-par-04.html
+.. _iGov.OIDC: https://openid.net/specs/openid-igov-openid-connect-1_0-03.html
+.. _OpenID.IDA: https://openid.net/specs/openid-connect-4-identity-assurance-1_0-ID3.html
+.. _OIDC-CORE#section-5.7: https://openid.net/specs/openid-connect-core-1_0-27.html#ClaimStability
+.. _E164: http://www.itu.int/rec/T-REC-E.164-201011-I/en
+.. _ISO8601-2004: https://www.iso.org/standard/40874.html
+.. _ICAO-Doc9303: https://www.icao.int/publications/Documents/9303_p3_cons_en.pdf
 

@@ -49,6 +49,18 @@ Standard di riferimento
       - Regulation (Eu) No 910/2014 of the European Parliament and of the Council 23 July 2014 “on electronic identification and trust services for electronic transactions in the internal market and repealing Directive 1999/93/EC.”
     * - `SPID-OIDC`_
       - AgID Guidelines: “Linee Guida OpenID Connect in SPID”
+    * - `iGov.OIDC`_
+      - Varley, M., Grassi, P. “iGov Profile for OpenID Connect”, October 2018.
+    * - `OpenID.IDA`_
+      - Lodderstedt, T., Fett, D., Haine, M., Pulido, A., “OpenID Connect for Identity Assurance 1.0”, September, 2021.
+    * - E164
+      - International Telecommunication Union, “E.164: The international public telecommunication numbering plan,” 2010.
+    * - `ISO8601-2004`_
+      - International Organization for Standardization, “ISO 8601:2004. Data elements and interchange formats 
+        - Information interchange - Representation of dates and times,” 2004.
+    * - `ICAO-Doc9303`_
+      - INTERNATIONAL CIVIL AVIATION ORGANIZATION, "Machine Readable Travel Documents, Seventh Edition, 2015, 
+        Part 3: Specifications Common to all MRTDs", 2015
     * - CIE-OIDC-FED
       - CIE OIDC Federation – at the writing stage
     * - CIE-OIDC-CORE: 

@@ -26,13 +26,13 @@ L’oggetto **federation_entity** è composto dai seguenti claim
      - **Descrizione**
      - **Obbligatorio**
    * - **federation_fetch_endpoint**
-     - **String**. Url presso il quale sono pubblicati gli Entity Statements in formato JWT dei soggetti discendenti. Vedere `OIDC-FED#Section.7.1.1`_
+     - String. Url presso il quale sono pubblicati gli Entity Statements in formato JWT dei soggetti discendenti. Vedere `OIDC-FED#Section.7.1.1`_
      - |check-icon| 
    * - **federation_list_endpoint**
      - String. Url presso il quale è possibile ottenere la lista dei discendenti in formato JSON.
      - |check-icon| 
    * - **federation_resolve_endpoint**
-     - String. Url presso il quale è possibile ottenere i trust mark validati,il metadata finale e la Trust Chain, 
+     - String. Url presso il quale è possibile ottenere i trust mark validati, il metadata finale e la Trust Chain, 
        relativamente ad un soggetto.
      - |check-icon| 
    * - **federation_status_endpoint**
