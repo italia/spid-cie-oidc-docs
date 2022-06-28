@@ -124,6 +124,11 @@ L’oggetto request DEVE essere un token JWT firmato, secondo le modalità defin
    * - **ui_locales**
      - Lista di codici RFC5646 separati da spazi. Lingue preferibili per visualizzare le pagine dell’OP. L’OP può ignorare questo parametro se non dispone di nessuna delle lingue indicate.
      - |uncheck-icon|	 
+   * - **iss**
+     - Stringa. Identificatore dell’emittente dell’OP che ha creato l’Authentication Response. 
+       L’RP DEVE validare questo parametro con precisione e NON DEVE permettere che diversi OP 
+       usino lo stesso identificatore di emittente
+     - |check-icon|
 
 .. seealso::
 
