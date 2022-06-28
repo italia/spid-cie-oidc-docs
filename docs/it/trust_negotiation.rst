@@ -38,7 +38,7 @@ Quando un Provider (OP) riceve una richiesta di autorizzazione da parte di un RP
 *La registrazione di un RP dalla prospettiva di un OP che per la prima volta riceve una richiesta di autorizzazione dal RP e avvia il processo di Metadata Discovery e salvataggio della Trust Chain.*
 
 
-L’OP estrae l’identificativo univoco (**client_id**) dall’oggetto *request* contenuto all’interno della *Authorization Request* ed effettua una richiesta di Entity Configuration presso il :ref:`RP<Esempio_EN1.1>`. Ottiene la configurazione *self-signed* del RP e convalida la firma dei Trust Marks riconoscibili all’interno della Federazione [1]_. 
+L’OP estrae l’identificativo univoco (**client_id**) dall’oggetto *request* contenuto all’interno della *Authorization Request* ed effettua una richiesta di Entity Configuration presso il :ref:`RP<Esempio_EN1.1>`. Ottiene la configurazione *self-signed* del RP e convalida la firma dei Trust Mark riconoscibili all’interno della Federazione [1]_. 
 
 Se il RP non espone all’interno della sua configurazione nessun Trust Mark riconoscibile per il profilo di RP (vedi Sezione :ref:`Trust Mark<Trust_Mark>`) il Provider DEVE rifiutare l’autorizzazione con un messaggio di errore di tipo *unauthorized_client* conforme alla Linee Guida OpenID Connect SPID. 
 

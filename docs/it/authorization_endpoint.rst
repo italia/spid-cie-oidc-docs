@@ -7,7 +7,7 @@ Per avviare il processo di autenticazione, il RP reindirizza l’utente all’Au
 
 Se viene utilizzato il metodo POST i parametri devono essere trasmessi utilizzando la Form Serialization (OIDC Connect Core 1.0 par. 13.2).
 
-I parametri **client_id**, **response_type** e **scope** DOVREBBERO essere trasmessi sia come parametri sulla chiamata HTTP sia all’interno dell’oggetto request e i loro valori devono corrispondere, in ogni caso i parametri all’interno dell’oggetto request prevalgono su quelli indicati sulla chiamata HTTP.
+I parametri **client_id**, **response_type** e **scope** DEVONO essere trasmessi sia come parametri sulla chiamata HTTP sia all’interno dell’oggetto request e i loro valori devono corrispondere, in ogni caso i parametri all’interno dell’oggetto request prevalgono su quelli indicati sulla chiamata HTTP.
 
 L’oggetto request DEVE essere un token JWT firmato, secondo le modalità definite dall’Agenzia per l’Italia Digitale. 
 

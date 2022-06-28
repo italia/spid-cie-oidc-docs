@@ -5,8 +5,8 @@ Flusso di autenticazione
 
 L’immagine qui sotto riportata riproduce il flusso **OpenID Connect Authorization Code Flow**.
 Questo flusso restituisce un **Authorization Code** che può essere utilizzato per ottenere un **ID Token**
-e/o un **Access Token**. 
-Questo flusso è anche la soluzione ideale per sessioni lunghe o aggiornabili attraverso l’uso del **Refresh Token**. L’Authorization Code Flow ottiene l’**Authorization Code** dall’**Authorization Endpoint** dell’OpenID Provider e tutti i token sono restituiti dal **Token Endpoint**.
+e/o un **Access Token** e se possibile anche un **Refresh Token**. 
+L’Authorization Code Flow ottiene l’**Authorization Code** dall’**Authorization Endpoint** dell’OpenID Provider e tutti i token sono restituiti dal **Token Endpoint**.
 
 .. image:: ../../images/flusso.svg
     :width: 100%
