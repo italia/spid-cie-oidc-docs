@@ -10,7 +10,7 @@ I **Trust Mark (TM)**, letteralmente tradotti come *Marchi di Fiducia*, sono JWT
 
 Lo scopo principale dei TM è quello di esporre alcune informazioni non richieste dal protocollo OpenID Connect Core ma che risultano utili in contesto Federativo.
 
-Esempi tipici includono il codice di identificazione nazionale o internazionale dell’entità (Codice Fiscale, IPA Code, Partita IVA, VAT Number), i contatti istituzionali e altro. Ulteriori dati possono essere aggiunti dall’emettitore, se resi comprensibili all’interno della Federazione.
+Esempi tipici includono il codice di identificazione nazionale o internazionale dell’entità (Codice Fiscale, IPA Code, Partita IVA, VAT Number), i contatti istituzionali e altro, come definito in `OIDC-FED`_. Ulteriori dati possono essere aggiunti dall’emettitore, se resi comprensibili all’interno della Federazione.
 
 I TM sono emessi e firmati, durante il processo di registrazione di una nuova entità di tipo **Foglia** (Onboarding), dal (TA) o suoi Intermediari (SA) o da Gestori Qualificati di Attributi (AA), se definiti all’interno dell’attributo **trust_mark_issuers**, pubblicato all’interno dell’Entity Configuration del TA. 
 
