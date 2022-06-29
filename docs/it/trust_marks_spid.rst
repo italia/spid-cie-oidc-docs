@@ -4,16 +4,16 @@
 Trust Mark per SPID
 +++++++++++++++++++
 
-I Trust Mark riconoscibili all’interno della Federazione SPID sono emessi e firmati dalla AgID (TA) o suoi intermediari (SA) o Gestori Qualificati di Attributi (AA-Attribute Authority), se definiti all’interno dell’attributo **trust_mark_issuers** pubblicato all’interno dell’Entity Configuration del TA. Ogni partecipante DEVE esporre nella propria configurazione (EC) i TM rilasciati dalle autorità emittenti. 
+I Trust Mark riconoscibili all’interno della Federazione SPID sono emessi e firmati dalla AgID (TA) o suoi intermediari (SA) o Gestori Qualificati di Attributi (AA-Attribute Authority), se definiti all’interno dell’attributo **trust_marks_issuers** pubblicato all’interno dell’Entity Configuration del TA. Ogni partecipante DEVE esporre nella propria configurazione (EC) i TM rilasciati dalle autorità emittenti. 
 
 
 
 Pubblicatori dei Trust Mark SPID
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-La TA definisce i TM e gli emettitori abilitati dalla Federazione, mediante il claim **trust_mark_issuers**, presente all’interno del proprio Entity Configuration. Il valore dell’attributo **trust_mark_issuers** è composto da un oggetto JSON, avente come chiavi gli id dei TM e come valori la lista degli emittenti abilitati.
+La TA definisce i TM e gli emettitori abilitati dalla Federazione, mediante il claim **trust_marks_issuers**, presente all’interno del proprio Entity Configuration. Il valore dell’attributo **trust_marks_issuers** è composto da un oggetto JSON, avente come chiavi gli id dei TM e come valori la lista degli emittenti abilitati.
 
-Di seguito un esempio non normativo dell’oggetto **trust_mark_issuers** all’interno della Entity Configuration del TA.
+Di seguito un esempio non normativo dell’oggetto **trust_marks_issuers** all’interno della Entity Configuration del TA.
 
 .. code-block::
 
