@@ -3,6 +3,10 @@
    ’
    “”
 
+.. |br| raw:: html
+
+   <br/>
+
 .. |check-icon| image:: ../../images/Eo_circle_green_checkmark.svg
    :width: 25
    

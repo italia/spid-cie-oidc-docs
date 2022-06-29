@@ -92,11 +92,15 @@ Un sottoinsieme di essi è personalizzato ed è stato introdotto per lo scenario
    * - **address**
      - Indirizzo postale preferito dell’utente. È un Oggetto JSON :rfc:`4627` contenente gli attributi seguenti:
        
-       - **street_address**: indirizzo completo contenente numero civico, via, casella postale.
-       - **locality**: città o località
-       - **region**: stato, provincia, prefettura o regione.
-       - **postal_code**: codice postale o zip code
-       - **country**: stringa che denota il codice del paese come in ISO 3166-1 alpha-2, es., “IT”.
+       **street_address**: indirizzo completo contenente numero civico, via, casella postale.
+
+       **locality**: città o località
+
+       **region**: stato, provincia, prefettura o regione.
+
+       **postal_code**: codice postale o zip code
+
+       **country**: stringa che denota il codice del paese come in ISO 3166-1 alpha-2, es., “IT”.
      - |uncheck-icon|
 
 
@@ -112,25 +116,31 @@ Un sottoinsieme di essi è personalizzato ed è stato introdotto per lo scenario
      - Luogo di nascita dell’utente. È un Oggetto JSON :rfc:`4627` contenente alcuni o tutti 
        gli attributi seguenti:
        
-       - **country**: stringa che denota il codice del paese come in ISO 3166-1 alpha-2, es., “DE”.
-       - **region**: stato, provincia, prefettura o regione. Questo campo può essere obbligatorio in alcune giurisdizioni.
-       - **locality**: città o località
+       **country**: stringa che denota il codice del paese come in ISO 3166-1 alpha-2, es., “DE”.
+
+       **region**: stato, provincia, prefettura o regione. Questo campo può essere obbligatorio in alcune giurisdizioni.
+
+       **locality**: città o località
      - |uncheck-icon|
    * - **document_details**
      - Oggetto JSON che rappresenta il documento. L’unico documento supportato alla data è la CIE.
        Contiene i seguenti claim:
        
-       - **type**: Stringa che denota il tipo di documento. L’unico valore supportato è “cie”
-       - **document_number**: Stringa che rappresenta un identificativo che definisce univocamente la CIE dell’utente.
-       - **date_of_issuance**: data del documento in formato AAAA-MM-GG (ISO `ISO8601-2004`_ )
-       - **date_of_expiry**: data di scadenza in formato AAAA-MM-GG (ISO `ISO8601-2004`_ )
-       - **issuer**: Oggetto JSON contenente le informazioni dell’emittente della CIE. 
-         Questo oggetto ha le seguenti proprietà:
+       **type**: Stringa che denota il tipo di documento. L’unico valore supportato è “cie”
+
+       **document_number**: Stringa che rappresenta un identificativo che definisce univocamente la CIE dell’utente.
+
+       **date_of_issuance**: data del documento in formato AAAA-MM-GG (ISO `ISO8601-2004`_ )
+
+       **date_of_expiry**: data di scadenza in formato AAAA-MM-GG (ISO `ISO8601-2004`_ )
+
+       **issuer**: Oggetto JSON contenente le informazioni dell’emittente della CIE. Questo oggetto ha le seguenti proprietà:
        
-         - **name**: nome dell’emittente della CIE. Questo campo è sempre valorizzato con la stringa 
-           “mint” (Ministero dell’Interno)
-         - **country_code**: st Stringa che denota il Paese o l’organizzazione sovranazionale che ha emesso il documento,
-           come da codici di 3 lettere ISO 3166/ICAO `ICAO-Doc9303`_, es. "ITA".
+         **name**: nome dell’emittente della CIE. Questo campo è sempre valorizzato con la stringa 
+         “mint” (Ministero dell’Interno)
+
+         **country_code**: st Stringa che denota il Paese o l’organizzazione sovranazionale che ha emesso il documento,
+         come da codici di 3 lettere ISO 3166/ICAO `ICAO-Doc9303`_, es. "ITA".
      - |uncheck-icon|
 
 

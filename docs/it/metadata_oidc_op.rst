@@ -91,15 +91,15 @@ Se un OP nei propri metadata non ha i claim **client_registration_types_supporte
      - Array contenente i livelli SPID supportati dall’OP, rappresentati come URI. 
        Deve contenere per SPID uno o più valori tra i seguenti:
        
-       - ``https://www.spid.gov.it/SpidL1``
-       - ``https://www.spid.gov.it/SpidL2``
-       - ``https://www.spid.gov.it/SpidL3``
+       ``https://www.spid.gov.it/SpidL1``
+       ``https://www.spid.gov.it/SpidL2``
+       ``https://www.spid.gov.it/SpidL3``
 
        Deve contenere per CIE uno o più valori tra i seguenti:
        
-       - CIE_L1
-       - CIE_L2
-       - CIE_L3
+       ``CIE_L1`` |br|
+       ``CIE_L2`` |br|
+       ``CIE_L3`` 
 
      - |check-icon| 
    * - **request_object_signing_alg_values_supported**

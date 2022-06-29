@@ -12,7 +12,9 @@ I parametri **client_id**, **response_type** e **scope** DEVONO essere trasmessi
 L’oggetto request DEVE essere un token JWT firmato, secondo le modalità definite dall’Agenzia per l’Italia Digitale. 
 
 
-**Esempio (chiamata HTTP):**::
+**Esempio (chiamata HTTP):**
+
+.. code-block::
 
  GET /auth?client_id=https://rp.spid.agid.gov.it&
  response_type=code&scope=openid& code_challenge=qWJlMe0xdbXrKxTm72EpH659bUxAxw80&
@@ -27,7 +29,9 @@ L’oggetto request DEVE essere un token JWT firmato, secondo le modalità defin
  Host: https://op.spid.agid.gov.it
  HTTP/1.1
  
-**Esempio (contenuto del JWT):**:: 
+**Esempio (contenuto del JWT):**
+
+.. code-block::
 
  {
      "client_id":"https://rp.spid.agid.gov.it",
@@ -82,14 +86,16 @@ L’oggetto request DEVE essere un token JWT firmato, secondo le modalità defin
    * - **prompt**
      - Definisce se l’OP deve occuparsi di eseguire una richiesta di autenticazione all’utente o meno.
        
-       - **consent**: l’OP chiederà le credenziali di autenticazione all’utente (se non è già attiva una sessione 
-         di Single Sign-On) e successivamente chiederà il consenso al trasferimento degli attributi (valore consigliato). Se è già attiva una sessione di Single Sign-On, chiederà il consenso al trasferimento degli attributi.
-       - **consent login**: l’OP chiederà sempre le credenziali di autenticazione all’utente e successivamente
-         chiederà il consenso al trasferimento degli attributi (valore da utilizzarsi limitatamente ai casi in cui si vuole forzare la riautenticazione).
+       **consent**: l’OP chiederà le credenziali di autenticazione all’utente (se non è già attiva una sessione 
+       di Single Sign-On) e successivamente chiederà il consenso al trasferimento degli attributi (valore consigliato). Se è già attiva una sessione di Single Sign-On, chiederà il consenso al trasferimento degli attributi.
+
+       **consent login**: l’OP chiederà sempre le credenziali di autenticazione all’utente e successivamente
+       chiederà il consenso al trasferimento degli attributi (valore da utilizzarsi limitatamente ai casi in cui si vuole forzare la riautenticazione).
+
      - |check-icon|
    * - **redirect_uri**
      - URL dove l’OP reindirizzerà l’utente al termine del processo di autenticazione. 
-        Deve essere uno degli URL indicati nel client metadata (v. paragrafo 3.2). 
+       Deve essere uno degli URL indicati nel client metadata (v. paragrafo 3.2). 
      - |check-icon|
    * - **response_type**
      - Il tipo di credenziali che deve restituire l’OP.
@@ -97,25 +103,28 @@ L’oggetto request DEVE essere un token JWT firmato, secondo le modalità defin
      - |check-icon|
    * - **scope**
      - Lista degli scope richiesti.
+       
+       **openid**: (obbligatorio).
+       
+       **offline_access**: se specificato, l’OP rilascerà oltre all’access token anche un refresh token necessario
+       per instaurare sessioni lunghe revocabili. L’uso di questo valore è consentito solo se se si intende offrire all’utente una `sessione lunga revocabile <https://www.agid.gov.it/sites/default/files/repository_files/spid-avviso-n41-integrazione_ll.gg_._openid_connect_in_spid.pdf#page=6>`_.
 
-       - **openid** (obbligatorio).
-       - **offline_access**: se specificato, l’OP rilascerà oltre all’access token anche un refresh token necessario
-         per instaurare sessioni lunghe revocabili. L’uso di questo valore è consentito solo se se si intende offrire all’utente una `sessione lunga revocabile <https://www.agid.gov.it/sites/default/files/repository_files/spid-avviso-n41-integrazione_ll.gg_._openid_connect_in_spid.pdf#page=6>`_.
      - |check-icon|
    * - **acr_values**
      - Valori di riferimento della classe di contesto dell’autenticazion e richiesta. 
        Stringa separata da uno spazio, che specifica i valori “acr” richiesti al server di autorizzazione per l’elaborazione della richiesta di autenticazione, con i valori visualizzati in ordine di preferenza. L’OP ha facoltà di utilizzare un’autenticazione ad un livello più alto di quanto richiesto. Tale scelta non deve comportare un esito negativo della richiesta.
        Deve contenere per SPID uno o più valori tra i seguenti:
        
-       - ``https://www.spid.gov.it/SpidL1``
-       - ``https://www.spid.gov.it/SpidL2``
-       - ``https://www.spid.gov.it/SpidL3``
+       ``https://www.spid.gov.it/SpidL1``
+       ``https://www.spid.gov.it/SpidL2``
+       ``https://www.spid.gov.it/SpidL3``
 
        Deve contenere per CIE uno o più valori tra i seguenti:
        
-       - CIE_L1
-       - CIE_L2
-       - CIE_L3
+       ``CIE_L1`` |br|
+       ``CIE_L2`` |br|
+       ``CIE_L3`` 
+
      - |check-icon|
    * - **claims**
      - Lista dei claims (attributi) che un RP intende richiedere. Vedi paragrafo *Claims*
@@ -155,8 +164,8 @@ L’oggetto request DEVE essere un token JWT firmato, secondo le modalità defin
  - https://openid.net/specs/openid-igov-openid-connect-1_0-03.html#rfc.section.2.4
  - https://openid.net/specs/openid-connect-core-1_0.html#JWTRequests
 	 
-Claims
-++++++
+Claim
++++++
 
 Il parametro claims definisce gli attributi richiesti dal **RP**. Gli attributi SPID sono richiesti all’interno dell’elemento "userinfo", elencando gli attributi da richiedere come chiavi di oggetti JSON, i cui valori devono essere indicati come {"essential": true} o secondo le modalità definite dall’Agenzia per l’Italia Digitale. Non è possibile richiedere attributi SPID nell’id_token. Gli
 attributi elencati sotto "userinfo" sono disponibili al momento della chiamata allo UserInfo Endpoint.

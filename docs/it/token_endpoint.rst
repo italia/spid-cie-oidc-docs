@@ -86,7 +86,8 @@ L’unico metodo di autenticazione all’endpoint token previsto è il private_k
 	 **jti**: Identificatore univoco per questa richiesta di autenticazione, generato dal client casualmente con almeno 128bit di entropia.
      - |check-icon|
    * - **client_assertion_type**
-     - Deve assumere il seguente valore: **urn:ietf:params:oauth:client-assertion-type:jwtbearer**
+     - Deve assumere il seguente valore: |br|
+       **urn:ietf:params:oauth:client-assertion-type:jwtbearer**
      - |check-icon|
    * - **code**
      - Codice di autorizzazione restituito nell’Authentication response.
@@ -98,8 +99,8 @@ L’unico metodo di autenticazione all’endpoint token previsto è il private_k
      - Tipo di credenziale presentata dal Client per la richiesta corrente.
        Può assumere uno dei seguenti valori: 
 	 
-	   - **authorization_code** 
-	   - **refresh_token**
+	   **authorization_code** |br|
+	   **refresh_token**
      - |check-icon|
    * - **refresh_token**
      - 

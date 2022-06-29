@@ -35,27 +35,39 @@ Dove un RP non disponesse all’interno dei propri metadati dei claim **client_r
      - JSON Web Key Set :rfc:`7517#appendix-A.1`
        È composto dai seguenti claim:
         
-        - **kty**: famiglia dell’algoritmo crittografico utilizzato
-        - **alg**: algoritmo utilizzato
-        - **use**: utilizzo della chiave pubblica per firma (sig) o encryption (enc)
-        - **kid**: identificatore univoco della chiave, valorizzato come RFC7638
-        - **n**: modulo (solo per chiavi RSA)
-        - **e**: esponente (solo per chiavi RSA)
-        - **x**: parametro coordinata x (solo per chiavi EC)
-        - **y**: parametro coordinata y (solo per chiavi EC)
-        - **crv**: parametro curva (solo per chiavi EC)
+        **kty**: famiglia dell’algoritmo crittografico utilizzato
 
+        **alg**: algoritmo utilizzato
+
+        **use**: utilizzo della chiave pubblica per firma (sig) o encryption (enc)
+
+        **kid**: identificatore univoco della chiave, valorizzato come RFC7638
+
+        **n**: modulo (solo per chiavi RSA)
+
+        **e**: esponente (solo per chiavi RSA)
+
+        **x**: parametro coordinata x (solo per chiavi EC)
+
+        **y**: parametro coordinata y (solo per chiavi EC)
+
+        **crv**: parametro curva (solo per chiavi EC)
      - |check-icon| in assenza del claim **signed_jwks_uri**. 
    * - **jwks_uri**
      - Url del registry dove è localizzato il jwks contenente la chiave pubblica in formato 
        JSON Web Key (JWK) e quindi composto dai seguenti parametri:
         
-        - **kty**: famiglia dell’algoritmo crittografico utilizzato
-        - **alg**: algoritmo utilizzato
-        - **use**: utilizzo della chiave pubblica per firma (sig) o encryption (enc)
-        - **kid**: identificatore univoco della chiave, valorizzato come RFC7638
-        - **n**: modulo (solo per chiavi RSA)
-        - **e**: esponente (solo per chiavi RSA)
+        **kty**: famiglia dell’algoritmo crittografico utilizzato
+
+        **alg**: algoritmo utilizzato
+
+        **use**: utilizzo della chiave pubblica per firma (sig) o encryption (enc)
+
+        **kid**: identificatore univoco della chiave, valorizzato come :rfc:`7638`
+
+        **n**: modulo (solo per chiavi RSA)
+
+        **e**: esponente (solo per chiavi RSA)
      - |check-icon| in assenza del claim **jwks**. 
    * - **client_id**
      - URI che identifica univocamente il RP come da Registro SPID/CIE

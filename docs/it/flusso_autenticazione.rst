@@ -25,8 +25,9 @@ Segue la descrizione dei passaggi, come da numerazione indicata in figura.
    * - **1: UT->RP**
      - L’Utente, nella pagina di accesso del Relying Party (RP):
 
-       - Seleziona, sul pulsante SPID, l’OpenID Provider (OP) con cui autenticarsi
-       - Invia la richiesta di autenticazione con CIE all'RP
+       Seleziona, sul pulsante SPID, l’OpenID Provider (OP) con cui autenticarsi
+
+       Invia la richiesta di autenticazione con CIE all'RP
    * - **2: RP->OP/AE**
      - Il Relying Party (RP) prepara una Richiesta di Autorizzazione per l’Authorization Endpoint dell’OP (OP/AE).
        Per la CIE, RP genera un PKCE e la invia con la Richiesta di Autorizzazione 

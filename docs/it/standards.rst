@@ -53,7 +53,7 @@ Standard di riferimento
       - Varley, M., Grassi, P. “iGov Profile for OpenID Connect”, October 2018.
     * - `OpenID.IDA`_
       - Lodderstedt, T., Fett, D., Haine, M., Pulido, A., “OpenID Connect for Identity Assurance 1.0”, September, 2021.
-    * - E164
+    * - `E164`_
       - International Telecommunication Union, “E.164: The international public telecommunication numbering plan,” 2010.
     * - `ISO8601-2004`_
       - International Organization for Standardization, “ISO 8601:2004. Data elements and interchange formats 
