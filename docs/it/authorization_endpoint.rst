@@ -80,10 +80,12 @@ L’oggetto request DEVE essere un token JWT firmato, secondo le modalità defin
      - Stringa di almeno 32 caratteri alfanumerici. Valore che serve ad evitare attacchi Reply, generato casualmente e non prevedibile da terzi. Questo valore sarà restituito nell’ID Token fornito dal Token Endpoint, in modo da consentire al client di verificare che sia uguale a quello inviato nella richiesta di autenticazione.
      - |check-icon|
    * - **prompt**
-     - Definisce se l’OP deve occuparsi di eseguire una richiesta di autenticazione all’utente o meno
+     - Definisce se l’OP deve occuparsi di eseguire una richiesta di autenticazione all’utente o meno.
        
-       - **consent**: l’OP chiederà le credenziali di autenticazione all’utente (se non è già attiva una sessione di Single Sign-On) e successivamente chiederà il consenso al trasferimento degli attributi (valore consigliato). Se è già attiva una sessione di Single Sign-On, chiederà il consenso al trasferimento degli attributi.
-	   - **consent login**: l’OP chiederà sempre le credenziali di autenticazione all’utente e successivamente chiederà il consenso al trasferimento degli attributi (valore da utilizzarsi limitatamente ai casi in cui si vuole forzare la riautenticazione).
+       - **consent**: l’OP chiederà le credenziali di autenticazione all’utente (se non è già attiva una sessione 
+         di Single Sign-On) e successivamente chiederà il consenso al trasferimento degli attributi (valore consigliato). Se è già attiva una sessione di Single Sign-On, chiederà il consenso al trasferimento degli attributi.
+       - **consent login**: l’OP chiederà sempre le credenziali di autenticazione all’utente e successivamente
+         chiederà il consenso al trasferimento degli attributi (valore da utilizzarsi limitatamente ai casi in cui si vuole forzare la riautenticazione).
      - |check-icon|
    * - **redirect_uri**
      - URL dove l’OP reindirizzerà l’utente al termine del processo di autenticazione. 
