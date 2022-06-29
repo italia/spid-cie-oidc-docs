@@ -20,7 +20,7 @@ Ottenuti i metadati finali di tutti i Provider SPID, il RP genera lo SPID Button
 La procedura di Metadata Discovery risulta semplificata per i RP SPID perché non è consentita all’interno della Federazione l’esistenza di Intermediari tra gli OP ed il loro Trust Anchor
 
 
-.. image:: ../../images/metadata_discovery.png
+.. image:: ../../images/metadata_discovery.svg
     :width: 100%
 
 *La procedura di Metadata Discovery a partire dalla Foglia fino al Trust Anchor. Si noti come dall’Entity Statement rilasciato da un superiore si ottiene la chiave pubblica per la validazione dell’Entity Configuration dell’entità discendente.*
@@ -80,7 +80,7 @@ Se l’URL che identifica il soggetto non presenta il simbolo di slash finale (�
 Una volta che un RP viene riconosciuto come parte della Federazione CIE, ottiene il permesso di mandare una Richiesta di Autenticazione come definito in [CIE-OIDC-CORE]. L'OP CIE che non riconosce l'RP che fa la richiesta, è in grado, usando CIE OIDC-FED, di risolvere correttamente la il Trust. L'OP CIE inizia richiedendo la configurazione di entità dell'RP al .well-known endpoint dell'RP e, seguendo il percorso dato dall “authority_hint”, raggiunge la radice del Trust, cioè la TA. In ogni passo della catena, l'OP CIE può eseguire tutti i controlli di sicurezza richiedendo le dichiarazioni di entità da ciascuna entità e convalidando i Trust Mark e le firme. La figura che segue dà un esempio rappresentativo di come funziona la catena del Trust.
 
 
-.. image:: ../../images/cie_esempio_trust_chain.png
+.. image:: ../../images/cie_esempio_trust_chain.svg
     :width: 100%
 
 
@@ -90,9 +90,9 @@ Una volta che un RP viene riconosciuto come parte della Federazione CIE, ottiene
 Pertanto, come mostrato nella figura successiva, l'Onboarding è una procedura dalla Radice (TA) alle entità Foglie, mentre il processo di ottenimento di una catena di Trust, parte dalle entità Foglie e, seguendo il percorso dato dall'“authority_hint”, raggiunge la Radice del Trust.
 
 
-.. image:: ../../images/cie_onboarding_e_direzioni_trust_chain.png
+.. image:: ../../images/cie_onboarding_e_direzioni_trust_chain.svg
     :width: 50%
 
-*CIE: Onboarding e direzioni Trust Chain*
+*Onboarding e direzioni Trust Chain*
 
 

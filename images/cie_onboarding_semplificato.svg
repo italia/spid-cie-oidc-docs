@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generato da Microsoft Visio, esportazione SVG cie_onboarding_semplificato.svg cie_onboarding_semplificato -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events"
+		xmlns:v="http://schemas.microsoft.com/visio/2003/SVGExtensions/" width="11.6929in" height="8.26772in"
+		viewBox="0 0 841.89 595.276" xml:space="preserve" color-interpolation-filters="sRGB" class="st14">
+	<v:documentProperties v:langID="1040" v:metric="true" v:viewMarkup="false">
+		<v:userDefs>
+			<v:ud v:nameU="msvNoAutoConnect" v:val="VT0(1):26"/>
+			<v:ud v:nameU="visV14CFF" v:prompt="" v:val="VT0(1):26"/>
+			<v:ud v:nameU="visFlowchartType" v:prompt="" v:val="VT4(CrossFunctional)"/>
+		</v:userDefs>
+	</v:documentProperties>
+
+	<style type="text/css">
+	<![CDATA[
+		.st1 {fill:#ffffff;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
+		.st2 {fill:#33ccff;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
+		.st3 {fill:#ffffff;font-family:Calibri;font-size:1.00001em}
+		.st4 {fill:#92d050;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
+		.st5 {fill:#ffffff;stroke:#a5a5a5;stroke-linecap:round;stroke-linejoin:round;stroke-width:2}
+		.st6 {fill:#a5a5a5;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
+		.st7 {fill:#ffffff;stroke:#a5a5a5;stroke-linecap:round;stroke-linejoin:round;stroke-width:1}
+		.st8 {fill:#000000;font-family:Calibri;font-size:0.666664em}
+		.st9 {font-size:1em}
+		.st10 {fill:#a5a5a5;stroke:#a5a5a5;stroke-linecap:round;stroke-linejoin:round;stroke-width:1}
+		.st11 {marker-end:url(#mrkr2-57);stroke:#a5a5a5;stroke-linecap:round;stroke-linejoin:round;stroke-width:1}
+		.st12 {fill:#a5a5a5;fill-opacity:1;stroke:#a5a5a5;stroke-opacity:1;stroke-width:0.35714285714286}
+		.st13 {marker-end:url(#mrkr2-57);stroke:#a5a5a5;stroke-dasharray:0,3;stroke-linecap:round;stroke-linejoin:round;stroke-width:1}
+		.st14 {fill:none;fill-rule:evenodd;font-size:12px;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
+	]]>
+	</style>
+
+	<defs id="Markers">
+		<g id="lend2">
+			<path d="M 1 1 L 0 0 L 1 -1 L 1 1 " style="stroke:none"/>
+		</g>
+		<marker id="mrkr2-57" class="st12" v:arrowType="2" v:arrowSize="1" v:setback="2.8" refX="-2.8" orient="auto"
+				markerUnits="strokeWidth" overflow="visible">
+			<use xlink:href="#lend2" transform="scale(-2.8,-2.8) "/>
+		</marker>
+	</defs>
+	<g v:mID="7" v:index="3" v:groupContext="foregroundPage">
+		<title>cie_onboarding_semplificato</title>
+		<v:pageProperties v:drawingScale="0.0393701" v:pageScale="0.0393701" v:drawingUnits="24" v:shadowOffsetX="8.50394"
+				v:shadowOffsetY="-8.50394"/>
+		<v:layer v:name="Diagramma di flusso" v:index="0"/>
+		<v:layer v:name="Connettore" v:index="1"/>
+		<g id="group128-1" transform="translate(22.0549,-365.522)" v:mID="128" v:groupContext="group">
+			<title>Foglio.128</title>
+			<g id="shape129-2" v:mID="129" v:groupContext="shape" transform="translate(23.6693,0)">
+				<title>Rettangolo</title>
+				<v:userDefs>
+					<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				</v:userDefs>
+				<rect x="0" y="496.538" width="663.006" height="98.7375" class="st1"/>
+			</g>
+			<g id="shape130-4" v:mID="130" v:groupContext="shape" transform="translate(-571.23,595.276) rotate(-90)">
+				<title>Rettangolo.126</title>
+				<desc>TA Operator</desc>
+				<v:userDefs>
+					<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				</v:userDefs>
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="49.3688" cy="583.253" width="98.74" height="24.0457"/>
+				<rect x="0" y="571.23" width="98.7375" height="24.0457" class="st2"/>
+				<text x="19.27" y="586.85" class="st3" v:langID="1040"><v:paragraph v:horizAlign="1"/><v:tabList/>TA Operator</text>			</g>
+		</g>
+		<g id="group127-7" transform="translate(21.9858,-463.94)" v:mID="127" v:groupContext="group">
+			<title>Foglio.127</title>
+			<g id="shape121-8" v:mID="121" v:groupContext="shape" transform="translate(23.6693,0)">
+				<title>Rettangolo</title>
+				<v:userDefs>
+					<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				</v:userDefs>
+				<rect x="0" y="496.538" width="663.006" height="98.7375" class="st1"/>
+			</g>
+			<g id="shape126-10" v:mID="126" v:groupContext="shape" transform="translate(-571.23,595.276) rotate(-90)">
+				<title>Rettangolo.126</title>
+				<desc>RP Operator</desc>
+				<v:userDefs>
+					<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				</v:userDefs>
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="49.3688" cy="583.253" width="98.74" height="24.0457"/>
+				<rect x="0" y="571.23" width="98.7375" height="24.0457" class="st4"/>
+				<text x="19.31" y="586.85" class="st3" v:langID="1040"><v:paragraph v:horizAlign="1"/><v:tabList/>RP Operator</text>			</g>
+		</g>
+		<g id="group124-13" transform="translate(71.4771,-392.677)" v:mID="124" v:groupContext="group">
+			<title>Foglio.124</title>
+			<g id="group95-14" transform="translate(273.358,-103.842)" v:mID="95" v:groupContext="group">
+				<title>Foglio.95</title>
+				<g id="shape87-15" v:mID="87" v:groupContext="shape">
+					<title>Cerchio</title>
+					<v:userDefs>
+						<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+					</v:userDefs>
+					<path d="M0 581.1 A14.1732 14.1732 0 0 1 28.35 581.1 A14.1732 14.1732 0 1 1 0 581.1 Z" class="st5"/>
+				</g>
+				<g id="shape88-17" v:mID="88" v:groupContext="shape" transform="translate(13.252,-23.6693)">
+					<title>Parallelogramma</title>
+					<v:userDefs>
+						<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+					</v:userDefs>
+					<rect x="0" y="593.433" width="1.84252" height="1.84249" class="st6"/>
+				</g>
+				<g id="shape89-19" v:mID="89" v:groupContext="shape" transform="translate(13.252,-2.83467)">
+					<title>Parallelogramma.89</title>
+					<v:userDefs>
+						<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+					</v:userDefs>
+					<rect x="0" y="593.433" width="1.84252" height="1.84249" class="st6"/>
+				</g>
+				<g id="shape90-21" v:mID="90" v:groupContext="shape" transform="translate(2.40948,-13.252)">
+					<title>Parallelogramma.90</title>
+					<v:userDefs>
+						<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+					</v:userDefs>
+					<rect x="0" y="593.433" width="1.84252" height="1.84249" class="st6"/>
+				</g>
+				<g id="shape91-23" v:mID="91" v:groupContext="shape" transform="translate(24.0945,-13.252)">
+					<title>Parallelogramma.91</title>
+					<v:userDefs>
+						<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+					</v:userDefs>
+					<rect x="0" y="593.433" width="1.84252" height="1.84249" class="st6"/>
+				</g>
+				<g id="shape92-25" v:mID="92" v:groupContext="shape" transform="translate(13.252,-13.252)">
+					<title>Parallelogramma.92</title>
+					<v:userDefs>
+						<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+					</v:userDefs>
+					<rect x="0" y="585.85" width="1.84252" height="9.42521" class="st6"/>
+				</g>
+				<g id="shape94-27" v:mID="94" v:groupContext="shape" transform="translate(529.697,877.819) rotate(120)">
+					<title>Parallelogramma.94</title>
+					<v:userDefs>
+						<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+					</v:userDefs>
+					<rect x="0" y="585.85" width="1.84252" height="9.42521" class="st6"/>
+				</g>
+			</g>
+			<g id="shape96-29" v:mID="96" v:groupContext="shape" transform="translate(0,-103.842)">
+				<title>Cerchio</title>
+				<v:userDefs>
+					<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				</v:userDefs>
+				<path d="M0 581.1 A14.1732 14.1732 0 0 1 28.35 581.1 A14.1732 14.1732 0 1 1 0 581.1 Z" class="st7"/>
+			</g>
+			<g id="shape98-31" v:mID="98" v:groupContext="shape" transform="translate(45.2927,-97.1056)">
+				<title>Rettangolo arrotondato</title>
+				<desc>Pubblica la configurazione dell’entità su .well-known/openid-...</desc>
+				<v:userDefs>
+					<v:ud v:nameU="CTypeTopLeftSnip" v:prompt="" v:val="VT0(0):5"/>
+					<v:ud v:nameU="CTypeTopRightSnip" v:prompt="" v:val="VT0(0):5"/>
+					<v:ud v:nameU="CTypeBotLeftSnip" v:prompt="" v:val="VT0(0):5"/>
+					<v:ud v:nameU="CTypeBotRightSnip" v:prompt="" v:val="VT0(0):5"/>
+					<v:ud v:nameU="CornerLockHoriz" v:prompt="" v:val="VT0(1):5"/>
+					<v:ud v:nameU="CornerLockVert" v:prompt="" v:val="VT0(1):5"/>
+					<v:ud v:nameU="CornerLockDiag" v:prompt="" v:val="VT0(0):5"/>
+					<v:ud v:nameU="TopLeftOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+					<v:ud v:nameU="TopRightOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+					<v:ud v:nameU="BotLeftOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+					<v:ud v:nameU="BotRightOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+					<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				</v:userDefs>
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="56.6929" cy="574.366" width="113.39" height="41.8191"/>
+				<path d="M11.34 595.28 L102.05 595.28 A11.3384 11.3384 -180 0 0 113.39 583.94 L113.39 564.8 A11.3384 11.3384 -180
+							 0 0 102.05 553.46 L11.34 553.46 A11.3384 11.3384 -180 0 0 0 564.8 L0 583.94 A11.3384 11.3384 -180 0
+							 0 11.34 595.28 Z" class="st7"/>
+				<text x="14.2" y="565.97" class="st8" v:langID="1040"><v:paragraph v:horizAlign="1"/><v:tabList/>Pubblica la configurazione <tspan
+							x="35.59" dy="1.2em" class="st9">dell</tspan>’entità su<v:newlineChar/><tspan x="5.61" dy="1.425em"
+							class="st9">.well</tspan>-known/openid-federation</text>			</g>
+			<g id="shape100-36" v:mID="100" v:groupContext="shape" transform="translate(175.625,-103.842)">
+				<title>Rettangolo arrotondato.100</title>
+				<desc>Condividi informazioni tecniche</desc>
+				<v:userDefs>
+					<v:ud v:nameU="CTypeTopLeftSnip" v:prompt="" v:val="VT0(0):5"/>
+					<v:ud v:nameU="CTypeTopRightSnip" v:prompt="" v:val="VT0(0):5"/>
+					<v:ud v:nameU="CTypeBotLeftSnip" v:prompt="" v:val="VT0(0):5"/>
+					<v:ud v:nameU="CTypeBotRightSnip" v:prompt="" v:val="VT0(0):5"/>
+					<v:ud v:nameU="CornerLockHoriz" v:prompt="" v:val="VT0(1):5"/>
+					<v:ud v:nameU="CornerLockVert" v:prompt="" v:val="VT0(1):5"/>
+					<v:ud v:nameU="CornerLockDiag" v:prompt="" v:val="VT0(0):5"/>
+					<v:ud v:nameU="TopLeftOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+					<v:ud v:nameU="TopRightOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+					<v:ud v:nameU="BotLeftOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+					<v:ud v:nameU="BotRightOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+					<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+					<v:ud v:nameU="TopLeftOffset" v:prompt="" v:val="VT0(0.11220471273168):1"/>
+					<v:ud v:nameU="TopRightOffset" v:prompt="" v:val="VT0(0.11220471273168):1"/>
+					<v:ud v:nameU="BotLeftOffset" v:prompt="" v:val="VT0(0.11220471273168):1"/>
+					<v:ud v:nameU="BotRightOffset" v:prompt="" v:val="VT0(0.11220471273168):1"/>
+				</v:userDefs>
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="40.3937" cy="581.102" width="80.79" height="28.3465"/>
+				<path d="M8.08 595.28 L72.71 595.28 A8.07861 8.07861 -180 0 0 80.79 587.2 L80.79 575.01 A8.07861 8.07861 -180 0 0
+							 72.71 566.93 L8.08 566.93 A8.07861 8.07861 -180 0 0 0 575.01 L0 587.2 A8.07861 8.07861 -180 0 0 8.08
+							 595.28 Z" class="st7"/>
+				<text x="25.29" y="577.5" class="st8" v:langID="1040"><v:paragraph v:horizAlign="1"/><v:tabList/>Condividi <tspan
+							x="5.18" dy="1.425em" class="st9">informazioni tecniche</tspan></text>			</g>
+			<g id="shape102-40" v:mID="102" v:groupContext="shape" transform="translate(321.363,-97.1056)">
+				<title>Rettangolo arrotondato.102</title>
+				<desc>Ottieni i Trust Mark e i metadata risolti dal Resolve Entity ...</desc>
+				<v:userDefs>
+					<v:ud v:nameU="CTypeTopLeftSnip" v:prompt="" v:val="VT0(0):5"/>
+					<v:ud v:nameU="CTypeTopRightSnip" v:prompt="" v:val="VT0(0):5"/>
+					<v:ud v:nameU="CTypeBotLeftSnip" v:prompt="" v:val="VT0(0):5"/>
+					<v:ud v:nameU="CTypeBotRightSnip" v:prompt="" v:val="VT0(0):5"/>
+					<v:ud v:nameU="CornerLockHoriz" v:prompt="" v:val="VT0(1):5"/>
+					<v:ud v:nameU="CornerLockVert" v:prompt="" v:val="VT0(1):5"/>
+					<v:ud v:nameU="CornerLockDiag" v:prompt="" v:val="VT0(0):5"/>
+					<v:ud v:nameU="TopLeftOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+					<v:ud v:nameU="TopRightOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+					<v:ud v:nameU="BotLeftOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+					<v:ud v:nameU="BotRightOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+					<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				</v:userDefs>
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="56.6929" cy="574.366" width="113.39" height="41.8191"/>
+				<path d="M11.34 595.28 L102.05 595.28 A11.3384 11.3384 -180 0 0 113.39 583.94 L113.39 564.8 A11.3384 11.3384 -180
+							 0 0 102.05 553.46 L11.34 553.46 A11.3384 11.3384 -180 0 0 0 564.8 L0 583.94 A11.3384 11.3384 -180 0
+							 0 11.34 595.28 Z" class="st7"/>
+				<text x="22.01" y="567.17" class="st8" v:langID="1040"><v:paragraph v:horizAlign="1"/><v:tabList/>Ottieni i Trust Mark e<v:newlineChar/><tspan
+							x="29.09" dy="1.2em" class="st9">i metadata risolti<v:newlineChar/></tspan><tspan x="12.3" dy="1.2em"
+							class="st9">dal Resolve Entity Endpoint</tspan></text>			</g>
+			<g id="shape103-45" v:mID="103" v:groupContext="shape" transform="translate(450.77,-97.1056)">
+				<title>Rettangolo arrotondato.103</title>
+				<desc>Pubblica la nuova entità su .well-known/openid-federation</desc>
+				<v:userDefs>
+					<v:ud v:nameU="CTypeTopLeftSnip" v:prompt="" v:val="VT0(0):5"/>
+					<v:ud v:nameU="CTypeTopRightSnip" v:prompt="" v:val="VT0(0):5"/>
+					<v:ud v:nameU="CTypeBotLeftSnip" v:prompt="" v:val="VT0(0):5"/>
+					<v:ud v:nameU="CTypeBotRightSnip" v:prompt="" v:val="VT0(0):5"/>
+					<v:ud v:nameU="CornerLockHoriz" v:prompt="" v:val="VT0(1):5"/>
+					<v:ud v:nameU="CornerLockVert" v:prompt="" v:val="VT0(1):5"/>
+					<v:ud v:nameU="CornerLockDiag" v:prompt="" v:val="VT0(0):5"/>
+					<v:ud v:nameU="TopLeftOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+					<v:ud v:nameU="TopRightOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+					<v:ud v:nameU="BotLeftOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+					<v:ud v:nameU="BotRightOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+					<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				</v:userDefs>
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="56.6929" cy="574.366" width="113.39" height="41.8191"/>
+				<path d="M11.34 595.28 L102.05 595.28 A11.3384 11.3384 -180 0 0 113.39 583.94 L113.39 564.8 A11.3384 11.3384 -180
+							 0 0 102.05 553.46 L11.34 553.46 A11.3384 11.3384 -180 0 0 0 564.8 L0 583.94 A11.3384 11.3384 -180 0
+							 0 11.34 595.28 Z" class="st7"/>
+				<text x="28.2" y="567.17" class="st8" v:langID="1040"><v:paragraph v:horizAlign="1"/><v:tabList/>Pubblica la nuova<v:newlineChar/><tspan
+							x="42.52" dy="1.2em" class="st9">entità su<v:newlineChar/></tspan><tspan x="5.61" dy="1.2em"
+							class="st9">.well</tspan>-known/openid-federation</text>			</g>
+			<g id="shape104-50" v:mID="104" v:groupContext="shape" transform="translate(580.178,-103.842)">
+				<title>Cerchio.104</title>
+				<v:userDefs>
+					<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				</v:userDefs>
+				<path d="M0 581.1 A14.1732 14.1732 0 0 1 28.35 581.1 A14.1732 14.1732 0 1 1 0 581.1 Z" class="st10"/>
+			</g>
+			<g id="shape105-52" v:mID="105" v:groupContext="shape" v:layerMember="1" transform="translate(564.156,-110.928)">
+				<title>Connettore dinamico</title>
+				<path d="M0 588.19 L13.22 588.19" class="st11"/>
+			</g>
+			<g id="shape106-58" v:mID="106" v:groupContext="shape" transform="translate(20.8901,-3.44077)">
+				<title>Rettangolo arrotondato.106</title>
+				<desc>Controlla le informazioni tecniche</desc>
+				<v:userDefs>
+					<v:ud v:nameU="CTypeTopLeftSnip" v:prompt="" v:val="VT0(0):5"/>
+					<v:ud v:nameU="CTypeTopRightSnip" v:prompt="" v:val="VT0(0):5"/>
+					<v:ud v:nameU="CTypeBotLeftSnip" v:prompt="" v:val="VT0(0):5"/>
+					<v:ud v:nameU="CTypeBotRightSnip" v:prompt="" v:val="VT0(0):5"/>
+					<v:ud v:nameU="CornerLockHoriz" v:prompt="" v:val="VT0(1):5"/>
+					<v:ud v:nameU="CornerLockVert" v:prompt="" v:val="VT0(1):5"/>
+					<v:ud v:nameU="CornerLockDiag" v:prompt="" v:val="VT0(0):5"/>
+					<v:ud v:nameU="TopLeftOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+					<v:ud v:nameU="TopRightOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+					<v:ud v:nameU="BotLeftOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+					<v:ud v:nameU="BotRightOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+					<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+					<v:ud v:nameU="TopLeftOffset" v:prompt="" v:val="VT0(0.11220471273168):1"/>
+					<v:ud v:nameU="TopRightOffset" v:prompt="" v:val="VT0(0.11220471273168):1"/>
+					<v:ud v:nameU="BotLeftOffset" v:prompt="" v:val="VT0(0.11220471273168):1"/>
+					<v:ud v:nameU="BotRightOffset" v:prompt="" v:val="VT0(0.11220471273168):1"/>
+				</v:userDefs>
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="40.3937" cy="581.102" width="80.79" height="28.3465"/>
+				<path d="M8.08 595.28 L72.71 595.28 A8.07861 8.07861 -180 0 0 80.79 587.2 L80.79 575.01 A8.07861 8.07861 -180 0 0
+							 72.71 566.93 L8.08 566.93 A8.07861 8.07861 -180 0 0 0 575.01 L0 587.2 A8.07861 8.07861 -180 0 0 8.08
+							 595.28 Z" class="st7"/>
+				<text x="21.64" y="577.5" class="st8" v:langID="1040"><v:paragraph v:horizAlign="1"/><v:tabList/>Controlla le <tspan
+							x="5.18" dy="1.425em" class="st9">informazioni tecniche</tspan></text>			</g>
+			<g id="shape107-62" v:mID="107" v:groupContext="shape" transform="translate(122.937,0)">
+				<title>Rettangolo arrotondato.107</title>
+				<desc>Genera i Trust Mark e applica le politiche dei metadata</desc>
+				<v:userDefs>
+					<v:ud v:nameU="CTypeTopLeftSnip" v:prompt="" v:val="VT0(0):5"/>
+					<v:ud v:nameU="CTypeTopRightSnip" v:prompt="" v:val="VT0(0):5"/>
+					<v:ud v:nameU="CTypeBotLeftSnip" v:prompt="" v:val="VT0(0):5"/>
+					<v:ud v:nameU="CTypeBotRightSnip" v:prompt="" v:val="VT0(0):5"/>
+					<v:ud v:nameU="CornerLockHoriz" v:prompt="" v:val="VT0(1):5"/>
+					<v:ud v:nameU="CornerLockVert" v:prompt="" v:val="VT0(1):5"/>
+					<v:ud v:nameU="CornerLockDiag" v:prompt="" v:val="VT0(0):5"/>
+					<v:ud v:nameU="TopLeftOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+					<v:ud v:nameU="TopRightOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+					<v:ud v:nameU="BotLeftOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+					<v:ud v:nameU="BotRightOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+					<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+					<v:ud v:nameU="TopLeftOffset" v:prompt="" v:val="VT0(0.13266004450714):1"/>
+					<v:ud v:nameU="TopRightOffset" v:prompt="" v:val="VT0(0.13266004450714):1"/>
+					<v:ud v:nameU="BotLeftOffset" v:prompt="" v:val="VT0(0.13266004450714):1"/>
+					<v:ud v:nameU="BotRightOffset" v:prompt="" v:val="VT0(0.13266004450714):1"/>
+				</v:userDefs>
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="47.7576" cy="577.662" width="95.52" height="35.228"/>
+				<path d="M9.55 595.28 L85.96 595.28 A9.55137 9.55137 -180 0 0 95.52 585.72 L95.52 569.6 A9.55137 9.55137 -180 0 0
+							 85.96 560.05 L9.55 560.05 A9.55137 9.55137 -180 0 0 -0 569.6 L0 585.72 A9.55137 9.55137 -180 0 0 9.55
+							 595.28 Z" class="st7"/>
+				<text x="15.31" y="570.46" class="st8" v:langID="1040"><v:paragraph v:horizAlign="1"/><v:tabList/>Genera i Trust Mark<v:newlineChar/><tspan
+							x="14.5" dy="1.2em" class="st9">e applica le politiche <v:newlineChar/></tspan><tspan x="26.13"
+							dy="1.2em" class="st9">dei metadata</tspan></text>			</g>
+			<g id="shape108-67" v:mID="108" v:groupContext="shape" transform="translate(239.712,0)">
+				<title>Rettangolo arrotondato.108</title>
+				<desc>Pubblica i Trust Mark e i metadata risolti nel Resolve Entity...</desc>
+				<v:userDefs>
+					<v:ud v:nameU="CTypeTopLeftSnip" v:prompt="" v:val="VT0(0):5"/>
+					<v:ud v:nameU="CTypeTopRightSnip" v:prompt="" v:val="VT0(0):5"/>
+					<v:ud v:nameU="CTypeBotLeftSnip" v:prompt="" v:val="VT0(0):5"/>
+					<v:ud v:nameU="CTypeBotRightSnip" v:prompt="" v:val="VT0(0):5"/>
+					<v:ud v:nameU="CornerLockHoriz" v:prompt="" v:val="VT0(1):5"/>
+					<v:ud v:nameU="CornerLockVert" v:prompt="" v:val="VT0(1):5"/>
+					<v:ud v:nameU="CornerLockDiag" v:prompt="" v:val="VT0(0):5"/>
+					<v:ud v:nameU="TopLeftOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+					<v:ud v:nameU="TopRightOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+					<v:ud v:nameU="BotLeftOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+					<v:ud v:nameU="BotRightOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+					<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+					<v:ud v:nameU="TopLeftOffset" v:prompt="" v:val="VT0(0.13266004450714):1"/>
+					<v:ud v:nameU="TopRightOffset" v:prompt="" v:val="VT0(0.13266004450714):1"/>
+					<v:ud v:nameU="BotLeftOffset" v:prompt="" v:val="VT0(0.13266004450714):1"/>
+					<v:ud v:nameU="BotRightOffset" v:prompt="" v:val="VT0(0.13266004450714):1"/>
+				</v:userDefs>
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="47.7576" cy="577.662" width="95.52" height="35.228"/>
+				<path d="M9.55 595.28 L85.96 595.28 A9.55137 9.55137 -180 0 0 95.52 585.72 L95.52 569.6 A9.55137 9.55137 -180 0 0
+							 85.96 560.05 L9.55 560.05 A9.55137 9.55137 -180 0 0 -0 569.6 L0 585.72 A9.55137 9.55137 -180 0 0 9.55
+							 595.28 Z" class="st7"/>
+				<text x="13.41" y="570.46" class="st8" v:langID="1040"><v:paragraph v:horizAlign="1"/><v:tabList/>Pubblica i Trust Mark<v:newlineChar/><tspan
+							x="11.35" dy="1.2em" class="st9">e i metadata risolti nel<v:newlineChar/></tspan><tspan x="9.21"
+							dy="1.2em" class="st9">Resolve Entity Endpoint</tspan></text>			</g>
+			<g id="shape111-72" v:mID="111" v:groupContext="shape" v:layerMember="1" transform="translate(28.3465,-110.928)">
+				<title>Connettore dinamico.111</title>
+				<path d="M0 588.19 L14.15 588.19" class="st11"/>
+			</g>
+			<g id="shape112-77" v:mID="112" v:groupContext="shape" v:layerMember="1" transform="translate(158.679,-110.928)">
+				<title>Connettore dinamico.112</title>
+				<path d="M0 588.19 L14.15 588.19" class="st11"/>
+			</g>
+			<g id="shape113-82" v:mID="113" v:groupContext="shape" v:layerMember="1" transform="translate(216.018,-103.842)">
+				<title>Connettore dinamico.113</title>
+				<path d="M0 595.28 L0 621.86 L-154.73 621.86 L-154.73 664.53" class="st13"/>
+			</g>
+			<g id="shape114-87" v:mID="114" v:groupContext="shape" v:layerMember="1" transform="translate(101.678,-10.5274)">
+				<title>Connettore dinamico.114</title>
+				<path d="M0 588.19 L18.46 588.19" class="st11"/>
+			</g>
+			<g id="shape115-92" v:mID="115" v:groupContext="shape" v:layerMember="1" transform="translate(218.453,-10.5274)">
+				<title>Connettore dinamico.115</title>
+				<path d="M0 588.19 L18.46 588.19" class="st11"/>
+			</g>
+			<g id="shape116-97" v:mID="116" v:groupContext="shape" v:layerMember="1" transform="translate(280.414,-35.228)">
+				<title>Connettore dinamico.116</title>
+				<path d="M7.06 595.28 L7.06 584.65 L7.12 584.65 L7.12 529.46" class="st13"/>
+			</g>
+			<g id="shape117-102" v:mID="117" v:groupContext="shape" v:layerMember="1" transform="translate(301.705,-110.928)">
+				<title>Connettore dinamico.117</title>
+				<path d="M0 588.19 L16.86 588.19" class="st11"/>
+			</g>
+			<g id="shape118-107" v:mID="118" v:groupContext="shape" v:layerMember="1" transform="translate(434.748,-110.928)">
+				<title>Connettore dinamico.118</title>
+				<path d="M0 588.19 L13.22 588.19" class="st11"/>
+			</g>
+		</g>
+	</g>
+</svg>

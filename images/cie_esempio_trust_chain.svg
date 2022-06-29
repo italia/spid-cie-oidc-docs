@@ -1,0 +1,597 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generato da Microsoft Visio, esportazione SVG cie_esempio_trust_chain.svg cie_esempio_trust_chain -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events"
+		xmlns:v="http://schemas.microsoft.com/visio/2003/SVGExtensions/" width="14.9694in" height="4.61615in"
+		viewBox="0 0 1077.8 332.363" xml:space="preserve" color-interpolation-filters="sRGB" class="st14">
+	<v:documentProperties v:langID="1040" v:metric="true" v:viewMarkup="false">
+		<v:userDefs>
+			<v:ud v:nameU="msvNoAutoConnect" v:val="VT0(1):26"/>
+			<v:ud v:nameU="visV14CFF" v:prompt="" v:val="VT0(1):26"/>
+			<v:ud v:nameU="visFlowchartType" v:prompt="" v:val="VT4(CrossFunctional)"/>
+		</v:userDefs>
+	</v:documentProperties>
+
+	<style type="text/css">
+	<![CDATA[
+		.st1 {fill:#ffffff;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
+		.st2 {fill:#c00000;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
+		.st3 {fill:#ffffff;font-family:Calibri;font-size:1.00001em}
+		.st4 {fill:#33ccff;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
+		.st5 {fill:#92d050;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
+		.st6 {fill:#ffffff;stroke:#a5a5a5;stroke-linecap:round;stroke-linejoin:round;stroke-width:1}
+		.st7 {fill:#000000;font-family:Calibri;font-size:0.833336em}
+		.st8 {font-size:1em}
+		.st9 {fill:#a5a5a5;stroke:#a5a5a5;stroke-linecap:round;stroke-linejoin:round;stroke-width:1}
+		.st10 {marker-end:url(#mrkr2-59);stroke:#a5a5a5;stroke-linecap:round;stroke-linejoin:round;stroke-width:1}
+		.st11 {fill:#a5a5a5;fill-opacity:1;stroke:#a5a5a5;stroke-opacity:1;stroke-width:0.35714285714286}
+		.st12 {marker-end:url(#mrkr2-59);stroke:#a5a5a5;stroke-dasharray:0,3;stroke-linecap:round;stroke-linejoin:round;stroke-width:1}
+		.st13 {fill:#ffffff;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:1}
+		.st14 {fill:none;fill-rule:evenodd;font-size:12px;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
+	]]>
+	</style>
+
+	<defs id="Markers">
+		<g id="lend2">
+			<path d="M 1 1 L 0 0 L 1 -1 L 1 1 " style="stroke:none"/>
+		</g>
+		<marker id="mrkr2-59" class="st11" v:arrowType="2" v:arrowSize="1" v:setback="2.8" refX="-2.8" orient="auto"
+				markerUnits="strokeWidth" overflow="visible">
+			<use xlink:href="#lend2" transform="scale(-2.8,-2.8) "/>
+		</marker>
+	</defs>
+	<g v:mID="10" v:index="4" v:groupContext="foregroundPage">
+		<title>cie_esempio_trust_chain</title>
+		<v:pageProperties v:drawingScale="0.0393701" v:pageScale="0.0393701" v:drawingUnits="24" v:shadowOffsetX="8.50394"
+				v:shadowOffsetY="-8.50394"/>
+		<v:layer v:name="Diagramma di flusso" v:index="0"/>
+		<v:layer v:name="Connettore" v:index="1"/>
+		<g id="group194-1" transform="translate(18.12,-18.12)" v:mID="194" v:groupContext="group">
+			<title>Foglio.194</title>
+			<g id="shape132-2" v:mID="132" v:groupContext="shape" transform="translate(23.6693,-98.6152)">
+				<title>Rettangolo.132</title>
+				<v:userDefs>
+					<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				</v:userDefs>
+				<rect x="0" y="233.625" width="1017.39" height="98.7375" class="st1"/>
+			</g>
+			<g id="shape133-4" v:mID="133" v:groupContext="shape" transform="translate(-308.317,233.747) rotate(-90)">
+				<title>Rettangolo.133</title>
+				<desc>OP</desc>
+				<v:userDefs>
+					<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				</v:userDefs>
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="49.3688" cy="320.34" width="98.74" height="24.0457"/>
+				<rect x="0" y="308.317" width="98.7375" height="24.0457" class="st2"/>
+				<text x="42.3" y="323.94" class="st3" v:langID="1040"><v:paragraph v:horizAlign="1"/><v:tabList/>OP</text>			</g>
+			<g id="shape129-7" v:mID="129" v:groupContext="shape" transform="translate(24.1711,0)">
+				<title>Rettangolo</title>
+				<v:userDefs>
+					<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				</v:userDefs>
+				<rect x="0" y="233.625" width="1017.39" height="98.7375" class="st1"/>
+			</g>
+			<g id="shape130-9" v:mID="130" v:groupContext="shape" transform="translate(-307.815,332.363) rotate(-90)">
+				<title>Rettangolo.126</title>
+				<desc>TA</desc>
+				<v:userDefs>
+					<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				</v:userDefs>
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="49.3688" cy="320.34" width="98.74" height="24.0457"/>
+				<rect x="0" y="308.317" width="98.7375" height="24.0457" class="st4"/>
+				<text x="42.97" y="323.94" class="st3" v:langID="1040"><v:paragraph v:horizAlign="1"/><v:tabList/>TA</text>			</g>
+			<g id="shape121-12" v:mID="121" v:groupContext="shape" transform="translate(23.6693,-197.385)">
+				<title>Rettangolo.121</title>
+				<v:userDefs>
+					<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				</v:userDefs>
+				<rect x="0" y="233.625" width="1017.39" height="98.7375" class="st1"/>
+			</g>
+			<g id="shape126-14" v:mID="126" v:groupContext="shape" transform="translate(-308.317,134.978) rotate(-90)">
+				<title>Rettangolo.126</title>
+				<desc>RP</desc>
+				<v:userDefs>
+					<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				</v:userDefs>
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="49.3688" cy="320.34" width="98.74" height="24.0457"/>
+				<rect x="0" y="308.317" width="98.7375" height="24.0457" class="st5"/>
+				<text x="43.01" y="323.94" class="st3" v:langID="1040"><v:paragraph v:horizAlign="1"/><v:tabList/>RP</text>			</g>
+			<g id="group193-17" transform="translate(44.7502,-27.8806)" v:mID="193" v:groupContext="group">
+				<title>Foglio.193</title>
+				<g id="shape96-18" v:mID="96" v:groupContext="shape" transform="translate(0,-210.622)">
+					<title>Cerchio</title>
+					<v:userDefs>
+						<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+					</v:userDefs>
+					<path d="M0 318.19 A14.1732 14.1732 0 0 1 28.35 318.19 A14.1732 14.1732 0 1 1 0 318.19 Z" class="st6"/>
+				</g>
+				<g id="shape98-20" v:mID="98" v:groupContext="shape" transform="translate(45.2927,-207.056)">
+					<title>Rettangolo arrotondato</title>
+					<desc>OIDC authentication request</desc>
+					<v:userDefs>
+						<v:ud v:nameU="CTypeTopLeftSnip" v:prompt="" v:val="VT0(0):5"/>
+						<v:ud v:nameU="CTypeTopRightSnip" v:prompt="" v:val="VT0(0):5"/>
+						<v:ud v:nameU="CTypeBotLeftSnip" v:prompt="" v:val="VT0(0):5"/>
+						<v:ud v:nameU="CTypeBotRightSnip" v:prompt="" v:val="VT0(0):5"/>
+						<v:ud v:nameU="CornerLockHoriz" v:prompt="" v:val="VT0(1):5"/>
+						<v:ud v:nameU="CornerLockVert" v:prompt="" v:val="VT0(1):5"/>
+						<v:ud v:nameU="CornerLockDiag" v:prompt="" v:val="VT0(0):5"/>
+						<v:ud v:nameU="TopLeftOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+						<v:ud v:nameU="TopRightOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+						<v:ud v:nameU="BotLeftOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+						<v:ud v:nameU="BotRightOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+						<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+						<v:ud v:nameU="TopLeftOffset" v:prompt="" v:val="VT0(0.13266004450714):1"/>
+						<v:ud v:nameU="TopRightOffset" v:prompt="" v:val="VT0(0.13266004450714):1"/>
+						<v:ud v:nameU="BotLeftOffset" v:prompt="" v:val="VT0(0.13266004450714):1"/>
+						<v:ud v:nameU="BotRightOffset" v:prompt="" v:val="VT0(0.13266004450714):1"/>
+					</v:userDefs>
+					<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+					<v:textRect cx="47.7576" cy="314.749" width="95.52" height="35.228"/>
+					<path d="M9.55 332.36 L85.96 332.36 A9.55137 9.55137 -180 0 0 95.52 322.81 L95.52 306.69 A9.55137 9.55137 -180
+								 0 0 85.96 297.13 L9.55 297.13 A9.55137 9.55137 -180 0 0 -0 306.69 L0 322.81 A9.55137 9.55137 -180
+								 0 0 9.55 332.36 Z" class="st6"/>
+					<text x="37.45" y="305.75" class="st7" v:langID="1040"><v:paragraph v:horizAlign="1"/><v:tabList/>OIDC<v:newlineChar/><tspan
+								x="17.9" dy="1.2em" class="st8">authentication<v:newlineChar/></tspan><tspan x="32.15" dy="1.2em"
+								class="st8">request</tspan></text>				</g>
+				<g id="shape100-25" v:mID="100" v:groupContext="shape" transform="translate(183.744,-207.201)">
+					<title>Rettangolo arrotondato.100</title>
+					<desc>send EC</desc>
+					<v:userDefs>
+						<v:ud v:nameU="CTypeTopLeftSnip" v:prompt="" v:val="VT0(0):5"/>
+						<v:ud v:nameU="CTypeTopRightSnip" v:prompt="" v:val="VT0(0):5"/>
+						<v:ud v:nameU="CTypeBotLeftSnip" v:prompt="" v:val="VT0(0):5"/>
+						<v:ud v:nameU="CTypeBotRightSnip" v:prompt="" v:val="VT0(0):5"/>
+						<v:ud v:nameU="CornerLockHoriz" v:prompt="" v:val="VT0(1):5"/>
+						<v:ud v:nameU="CornerLockVert" v:prompt="" v:val="VT0(1):5"/>
+						<v:ud v:nameU="CornerLockDiag" v:prompt="" v:val="VT0(0):5"/>
+						<v:ud v:nameU="TopLeftOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+						<v:ud v:nameU="TopRightOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+						<v:ud v:nameU="BotLeftOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+						<v:ud v:nameU="BotRightOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+						<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+						<v:ud v:nameU="TopLeftOffset" v:prompt="" v:val="VT0(0.076108186866534):1"/>
+						<v:ud v:nameU="TopRightOffset" v:prompt="" v:val="VT0(0.076108186866534):1"/>
+						<v:ud v:nameU="BotLeftOffset" v:prompt="" v:val="VT0(0.076108186866534):1"/>
+						<v:ud v:nameU="BotRightOffset" v:prompt="" v:val="VT0(0.076108186866534):1"/>
+					</v:userDefs>
+					<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+					<v:textRect cx="27.3989" cy="318.189" width="54.8" height="28.3465"/>
+					<path d="M5.48 332.36 L49.32 332.36 A5.4797 5.4797 -180 0 0 54.8 326.88 L54.8 309.5 A5.4797 5.4797 -180 0 0 49.32
+								 304.02 L5.48 304.02 A5.4797 5.4797 -180 0 0 -0 309.5 L0 326.88 A5.4797 5.4797 -180 0 0 5.48 332.36
+								 Z" class="st6"/>
+					<text x="11.46" y="321.19" class="st7" v:langID="1040"><v:paragraph v:horizAlign="1"/><v:tabList/>send EC</text>				</g>
+				<g id="shape102-28" v:mID="102" v:groupContext="shape" transform="translate(378.767,-91.3923)">
+					<title>Rettangolo arrotondato.102</title>
+					<desc>Validate EC and acquire the fed_api_endpoint</desc>
+					<v:userDefs>
+						<v:ud v:nameU="CTypeTopLeftSnip" v:prompt="" v:val="VT0(0):5"/>
+						<v:ud v:nameU="CTypeTopRightSnip" v:prompt="" v:val="VT0(0):5"/>
+						<v:ud v:nameU="CTypeBotLeftSnip" v:prompt="" v:val="VT0(0):5"/>
+						<v:ud v:nameU="CTypeBotRightSnip" v:prompt="" v:val="VT0(0):5"/>
+						<v:ud v:nameU="CornerLockHoriz" v:prompt="" v:val="VT0(1):5"/>
+						<v:ud v:nameU="CornerLockVert" v:prompt="" v:val="VT0(1):5"/>
+						<v:ud v:nameU="CornerLockDiag" v:prompt="" v:val="VT0(0):5"/>
+						<v:ud v:nameU="TopLeftOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+						<v:ud v:nameU="TopRightOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+						<v:ud v:nameU="BotLeftOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+						<v:ud v:nameU="BotRightOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+						<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+					</v:userDefs>
+					<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+					<v:textRect cx="56.6929" cy="311.453" width="113.39" height="41.8191"/>
+					<path d="M11.34 332.36 L102.05 332.36 A11.3384 11.3384 -180 0 0 113.39 321.02 L113.39 301.88 A11.3384 11.3384
+								 -180 0 0 102.05 290.54 L11.34 290.54 A11.3384 11.3384 -180 0 0 0 301.88 L0 321.02 A11.3384 11.3384
+								 -180 0 0 11.34 332.36 Z" class="st6"/>
+					<text x="24.96" y="302.45" class="st7" v:langID="1040"><v:paragraph v:horizAlign="1"/><v:tabList/>Validate EC and<v:newlineChar/><tspan
+								x="33.63" dy="1.2em" class="st8">acquire the<v:newlineChar/></tspan><tspan x="20.45" dy="1.2em"
+								class="st8">fed_api_endpoint</tspan></text>				</g>
+				<g id="shape103-33" v:mID="103" v:groupContext="shape" transform="translate(522.862,-91.3923)">
+					<title>Rettangolo arrotondato.103</title>
+					<desc>ES request querying the fed_api_endpoint</desc>
+					<v:userDefs>
+						<v:ud v:nameU="CTypeTopLeftSnip" v:prompt="" v:val="VT0(0):5"/>
+						<v:ud v:nameU="CTypeTopRightSnip" v:prompt="" v:val="VT0(0):5"/>
+						<v:ud v:nameU="CTypeBotLeftSnip" v:prompt="" v:val="VT0(0):5"/>
+						<v:ud v:nameU="CTypeBotRightSnip" v:prompt="" v:val="VT0(0):5"/>
+						<v:ud v:nameU="CornerLockHoriz" v:prompt="" v:val="VT0(1):5"/>
+						<v:ud v:nameU="CornerLockVert" v:prompt="" v:val="VT0(1):5"/>
+						<v:ud v:nameU="CornerLockDiag" v:prompt="" v:val="VT0(0):5"/>
+						<v:ud v:nameU="TopLeftOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+						<v:ud v:nameU="TopRightOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+						<v:ud v:nameU="BotLeftOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+						<v:ud v:nameU="BotRightOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+						<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+					</v:userDefs>
+					<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+					<v:textRect cx="56.6929" cy="311.453" width="113.39" height="41.8191"/>
+					<path d="M11.34 332.36 L102.05 332.36 A11.3384 11.3384 -180 0 0 113.39 321.02 L113.39 301.88 A11.3384 11.3384
+								 -180 0 0 102.05 290.54 L11.34 290.54 A11.3384 11.3384 -180 0 0 0 301.88 L0 321.02 A11.3384 11.3384
+								 -180 0 0 11.34 332.36 Z" class="st6"/>
+					<text x="35.22" y="302.45" class="st7" v:langID="1040"><v:paragraph v:horizAlign="1"/><v:tabList/>ES request<v:newlineChar/><tspan
+								x="30.9" dy="1.2em" class="st8">querying the<v:newlineChar/></tspan><tspan x="20.45" dy="1.2em"
+								class="st8">fed_api_endpoint</tspan></text>				</g>
+				<g id="shape104-38" v:mID="104" v:groupContext="shape" transform="translate(946.5,-98.1286)">
+					<title>Cerchio.104</title>
+					<v:userDefs>
+						<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+					</v:userDefs>
+					<path d="M0 318.19 A14.1732 14.1732 0 0 1 28.35 318.19 A14.1732 14.1732 0 1 1 0 318.19 Z" class="st9"/>
+				</g>
+				<g id="shape106-40" v:mID="106" v:groupContext="shape" transform="translate(20.8901,-106.8)">
+					<title>Rettangolo arrotondato.106</title>
+					<desc>RP EC request</desc>
+					<v:userDefs>
+						<v:ud v:nameU="CTypeTopLeftSnip" v:prompt="" v:val="VT0(0):5"/>
+						<v:ud v:nameU="CTypeTopRightSnip" v:prompt="" v:val="VT0(0):5"/>
+						<v:ud v:nameU="CTypeBotLeftSnip" v:prompt="" v:val="VT0(0):5"/>
+						<v:ud v:nameU="CTypeBotRightSnip" v:prompt="" v:val="VT0(0):5"/>
+						<v:ud v:nameU="CornerLockHoriz" v:prompt="" v:val="VT0(1):5"/>
+						<v:ud v:nameU="CornerLockVert" v:prompt="" v:val="VT0(1):5"/>
+						<v:ud v:nameU="CornerLockDiag" v:prompt="" v:val="VT0(0):5"/>
+						<v:ud v:nameU="TopLeftOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+						<v:ud v:nameU="TopRightOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+						<v:ud v:nameU="BotLeftOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+						<v:ud v:nameU="BotRightOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+						<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+						<v:ud v:nameU="TopLeftOffset" v:prompt="" v:val="VT0(0.06398079855362):1"/>
+						<v:ud v:nameU="TopRightOffset" v:prompt="" v:val="VT0(0.06398079855362):1"/>
+						<v:ud v:nameU="BotLeftOffset" v:prompt="" v:val="VT0(0.06398079855362):1"/>
+						<v:ud v:nameU="BotRightOffset" v:prompt="" v:val="VT0(0.06398079855362):1"/>
+					</v:userDefs>
+					<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+					<v:textRect cx="23.0331" cy="318.189" width="46.07" height="28.3465"/>
+					<path d="M4.61 332.36 L41.46 332.36 A4.60654 4.60654 -180 0 0 46.07 327.76 L46.07 308.62 A4.60654 4.60654 -180
+								 0 0 41.46 304.02 L4.61 304.02 A4.60654 4.60654 -180 0 0 0 308.62 L0 327.76 A4.60654 4.60654 -180
+								 0 0 4.61 332.36 Z" class="st6"/>
+					<text x="11.5" y="315.19" class="st7" v:langID="1040"><v:paragraph v:horizAlign="1"/><v:tabList/>RP EC<v:newlineChar/><tspan
+								x="7.43" dy="1.2em" class="st8">request</tspan></text>				</g>
+				<g id="shape107-44" v:mID="107" v:groupContext="shape" transform="translate(93.0503,-92.3364)">
+					<title>Rettangolo arrotondato.107</title>
+					<desc>Validate EC, trust marks and acquire the authority_hint</desc>
+					<v:userDefs>
+						<v:ud v:nameU="CTypeTopLeftSnip" v:prompt="" v:val="VT0(0):5"/>
+						<v:ud v:nameU="CTypeTopRightSnip" v:prompt="" v:val="VT0(0):5"/>
+						<v:ud v:nameU="CTypeBotLeftSnip" v:prompt="" v:val="VT0(0):5"/>
+						<v:ud v:nameU="CTypeBotRightSnip" v:prompt="" v:val="VT0(0):5"/>
+						<v:ud v:nameU="CornerLockHoriz" v:prompt="" v:val="VT0(1):5"/>
+						<v:ud v:nameU="CornerLockVert" v:prompt="" v:val="VT0(1):5"/>
+						<v:ud v:nameU="CornerLockDiag" v:prompt="" v:val="VT0(0):5"/>
+						<v:ud v:nameU="TopLeftOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+						<v:ud v:nameU="TopRightOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+						<v:ud v:nameU="BotLeftOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+						<v:ud v:nameU="BotRightOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+						<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+						<v:ud v:nameU="TopLeftOffset" v:prompt="" v:val="VT0(0.17416979960746):1"/>
+						<v:ud v:nameU="TopRightOffset" v:prompt="" v:val="VT0(0.17416979960746):1"/>
+						<v:ud v:nameU="BotLeftOffset" v:prompt="" v:val="VT0(0.17416979960746):1"/>
+						<v:ud v:nameU="BotRightOffset" v:prompt="" v:val="VT0(0.17416979960746):1"/>
+					</v:userDefs>
+					<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+					<v:textRect cx="62.7011" cy="309.237" width="125.41" height="46.251"/>
+					<path d="M12.54 332.36 L112.86 332.36 A12.54 12.54 -180 0 0 125.4 319.82 L125.4 298.65 A12.54 12.54 -180 0 0
+								 112.86 286.11 L12.54 286.11 A12.54 12.54 -180 0 0 -0 298.65 L0 319.82 A12.54 12.54 -180 0 0 12.54
+								 332.36 Z" class="st6"/>
+					<text x="27.7" y="300.24" class="st7" v:langID="1040"><v:paragraph v:horizAlign="1"/><v:tabList/>Validate EC, trust<v:newlineChar/><tspan
+								x="25.29" dy="1.2em" class="st8">marks and acquire<v:newlineChar/></tspan><tspan x="25.43"
+								dy="1.2em" class="st8">the authority_hint</tspan></text>				</g>
+				<g id="shape108-49" v:mID="108" v:groupContext="shape" transform="translate(247.043,-97.9833)">
+					<title>Rettangolo arrotondato.108</title>
+					<desc>TA EC request following authority_hint</desc>
+					<v:userDefs>
+						<v:ud v:nameU="CTypeTopLeftSnip" v:prompt="" v:val="VT0(0):5"/>
+						<v:ud v:nameU="CTypeTopRightSnip" v:prompt="" v:val="VT0(0):5"/>
+						<v:ud v:nameU="CTypeBotLeftSnip" v:prompt="" v:val="VT0(0):5"/>
+						<v:ud v:nameU="CTypeBotRightSnip" v:prompt="" v:val="VT0(0):5"/>
+						<v:ud v:nameU="CornerLockHoriz" v:prompt="" v:val="VT0(1):5"/>
+						<v:ud v:nameU="CornerLockVert" v:prompt="" v:val="VT0(1):5"/>
+						<v:ud v:nameU="CornerLockDiag" v:prompt="" v:val="VT0(0):5"/>
+						<v:ud v:nameU="TopLeftOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+						<v:ud v:nameU="TopRightOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+						<v:ud v:nameU="BotLeftOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+						<v:ud v:nameU="BotRightOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+						<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+						<v:ud v:nameU="TopLeftOffset" v:prompt="" v:val="VT0(0.13266004450714):1"/>
+						<v:ud v:nameU="TopRightOffset" v:prompt="" v:val="VT0(0.13266004450714):1"/>
+						<v:ud v:nameU="BotLeftOffset" v:prompt="" v:val="VT0(0.13266004450714):1"/>
+						<v:ud v:nameU="BotRightOffset" v:prompt="" v:val="VT0(0.13266004450714):1"/>
+					</v:userDefs>
+					<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+					<v:textRect cx="47.7576" cy="314.749" width="95.52" height="35.228"/>
+					<path d="M9.55 332.36 L85.96 332.36 A9.55137 9.55137 -180 0 0 95.52 322.81 L95.52 306.69 A9.55137 9.55137 -180
+								 0 0 85.96 297.13 L9.55 297.13 A9.55137 9.55137 -180 0 0 -0 306.69 L0 322.81 A9.55137 9.55137 -180
+								 0 0 9.55 332.36 Z" class="st6"/>
+					<text x="19.46" y="305.75" class="st7" v:langID="1040"><v:paragraph v:horizAlign="1"/><v:tabList/>TA EC request<v:newlineChar/><tspan
+								x="28.96" dy="1.2em" class="st8">following<v:newlineChar/></tspan><tspan x="18.4" dy="1.2em"
+								class="st8">authority_hint</tspan></text>				</g>
+				<g id="shape111-54" v:mID="111" v:groupContext="shape" v:layerMember="1" transform="translate(28.3465,-231.819)">
+					<title>Connettore dinamico.111</title>
+					<path d="M0 339.39 L5.31 339.39 L5.31 339.51 L14.15 339.51" class="st10"/>
+				</g>
+				<g id="shape113-60" v:mID="113" v:groupContext="shape" v:layerMember="1" transform="translate(93.0503,-207.056)">
+					<title>Connettore dinamico.113</title>
+					<path d="M0 332.36 L0 345.32 L-82.79 345.32 L-82.79 418.45 L-74.96 418.45" class="st12"/>
+				</g>
+				<g id="shape115-65" v:mID="115" v:groupContext="shape" v:layerMember="1" transform="translate(218.453,-108.443)">
+					<title>Connettore dinamico.115</title>
+					<path d="M0 325.34 L10.63 325.34 L10.63 325.21 L25.79 325.21" class="st10"/>
+				</g>
+				<g id="shape116-70" v:mID="116" v:groupContext="shape" v:layerMember="1" transform="translate(301.821,-97.9833)">
+					<title>Connettore dinamico.116</title>
+					<path d="M-7.02 332.36 L-7.02 342.99 L-7.15 342.99 L-7.15 384.96" class="st12"/>
+				</g>
+				<g id="shape118-75" v:mID="118" v:groupContext="shape" v:layerMember="1" transform="translate(492.153,-105.215)">
+					<title>Connettore dinamico.118</title>
+					<path d="M0 325.28 L27.91 325.28" class="st10"/>
+				</g>
+				<g id="shape134-80" v:mID="134" v:groupContext="shape" v:layerMember="1" transform="translate(43.9232,-135.147)">
+					<title>Connettore dinamico.134</title>
+					<path d="M0 332.36 L0 285.35 L167.22 285.35 L167.22 263.11" class="st12"/>
+				</g>
+				<g id="shape136-85" v:mID="136" v:groupContext="shape" v:layerMember="1" transform="translate(238.542,-221.374)">
+					<title>Connettore dinamico.136</title>
+					<path d="M0 332.36 L10.63 332.36 L10.63 399.92 L-82.79 399.92 L-82.79 412.35" class="st12"/>
+				</g>
+				<g id="shape137-90" v:mID="137" v:groupContext="shape" transform="translate(267.269,-14.244)">
+					<title>Rettangolo arrotondato.137</title>
+					<desc>send EC</desc>
+					<v:userDefs>
+						<v:ud v:nameU="CTypeTopLeftSnip" v:prompt="" v:val="VT0(0):5"/>
+						<v:ud v:nameU="CTypeTopRightSnip" v:prompt="" v:val="VT0(0):5"/>
+						<v:ud v:nameU="CTypeBotLeftSnip" v:prompt="" v:val="VT0(0):5"/>
+						<v:ud v:nameU="CTypeBotRightSnip" v:prompt="" v:val="VT0(0):5"/>
+						<v:ud v:nameU="CornerLockHoriz" v:prompt="" v:val="VT0(1):5"/>
+						<v:ud v:nameU="CornerLockVert" v:prompt="" v:val="VT0(1):5"/>
+						<v:ud v:nameU="CornerLockDiag" v:prompt="" v:val="VT0(0):5"/>
+						<v:ud v:nameU="TopLeftOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+						<v:ud v:nameU="TopRightOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+						<v:ud v:nameU="BotLeftOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+						<v:ud v:nameU="BotRightOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+						<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+						<v:ud v:nameU="TopLeftOffset" v:prompt="" v:val="VT0(0.076108186866534):1"/>
+						<v:ud v:nameU="TopRightOffset" v:prompt="" v:val="VT0(0.076108186866534):1"/>
+						<v:ud v:nameU="BotLeftOffset" v:prompt="" v:val="VT0(0.076108186866534):1"/>
+						<v:ud v:nameU="BotRightOffset" v:prompt="" v:val="VT0(0.076108186866534):1"/>
+					</v:userDefs>
+					<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+					<v:textRect cx="27.3989" cy="318.189" width="54.8" height="28.3465"/>
+					<path d="M5.48 332.36 L49.32 332.36 A5.4797 5.4797 -180 0 0 54.8 326.88 L54.8 309.5 A5.4797 5.4797 -180 0 0 49.32
+								 304.02 L5.48 304.02 A5.4797 5.4797 -180 0 0 -0 309.5 L0 326.88 A5.4797 5.4797 -180 0 0 5.48 332.36
+								 Z" class="st6"/>
+					<text x="11.46" y="321.19" class="st7" v:langID="1040"><v:paragraph v:horizAlign="1"/><v:tabList/>send EC</text>				</g>
+				<g id="group161-93" transform="translate(227.833,-194.903)" v:mID="161" v:groupContext="group">
+					<title>Foglio.161</title>
+					<g id="shape162-94" v:mID="162" v:groupContext="shape" transform="translate(-1.4988E-14,-4.87157E-07)">
+						<title>Rettangolo</title>
+						<v:userDefs>
+							<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+						</v:userDefs>
+						<rect x="0" y="311.208" width="16.9237" height="21.1547" class="st13"/>
+					</g>
+					<g id="shape163-96" v:mID="163" v:groupContext="shape" transform="translate(12.0582,-16.4301)">
+						<title>Triangolo rettangolo</title>
+						<v:userDefs>
+							<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+						</v:userDefs>
+						<path d="M0 332.36 L4.87 332.36 L0 327.64 L0 332.36 Z" class="st6"/>
+					</g>
+					<g id="shape164-98" v:mID="164" v:groupContext="shape" transform="translate(-1.59013E-14,-4.87157E-07)">
+						<title>Rettangolo.155</title>
+						<v:userDefs>
+							<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+						</v:userDefs>
+						<rect x="0" y="311.208" width="0.070515" height="21.1547" class="st6"/>
+					</g>
+					<g id="shape165-100" v:mID="165" v:groupContext="shape" transform="translate(16.9374,0)">
+						<title>Rettangolo.156</title>
+						<v:userDefs>
+							<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+						</v:userDefs>
+						<rect x="0" y="315.953" width="0.070515" height="16.4096" class="st6"/>
+					</g>
+					<g id="shape166-102" v:mID="166" v:groupContext="shape" transform="translate(-315.355,332.363) rotate(-90)">
+						<title>Rettangolo.158</title>
+						<v:userDefs>
+							<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+						</v:userDefs>
+						<path d="M0 332.36 L0 315.4 L0 332.36 Z" class="st6"/>
+					</g>
+					<g id="shape167-104" v:mID="167" v:groupContext="shape" transform="translate(-320.375,311.208) rotate(-90)">
+						<title>Rettangolo.159</title>
+						<v:userDefs>
+							<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+						</v:userDefs>
+						<path d="M0 332.36 L0 320.47 L0 332.36 Z" class="st6"/>
+					</g>
+				</g>
+				<g id="group168-106" transform="translate(306.906,-2.3622)" v:mID="168" v:groupContext="group">
+					<title>Foglio.168</title>
+					<g id="shape169-107" v:mID="169" v:groupContext="shape" transform="translate(-1.4988E-14,-4.87157E-07)">
+						<title>Rettangolo</title>
+						<v:userDefs>
+							<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+						</v:userDefs>
+						<rect x="0" y="311.208" width="16.9237" height="21.1547" class="st13"/>
+					</g>
+					<g id="shape170-109" v:mID="170" v:groupContext="shape" transform="translate(12.0582,-16.4301)">
+						<title>Triangolo rettangolo</title>
+						<v:userDefs>
+							<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+						</v:userDefs>
+						<path d="M0 332.36 L4.87 332.36 L0 327.64 L0 332.36 Z" class="st6"/>
+					</g>
+					<g id="shape171-111" v:mID="171" v:groupContext="shape" transform="translate(-1.59013E-14,-4.87157E-07)">
+						<title>Rettangolo.155</title>
+						<v:userDefs>
+							<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+						</v:userDefs>
+						<rect x="0" y="311.208" width="0.070515" height="21.1547" class="st6"/>
+					</g>
+					<g id="shape172-113" v:mID="172" v:groupContext="shape" transform="translate(16.9374,0)">
+						<title>Rettangolo.156</title>
+						<v:userDefs>
+							<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+						</v:userDefs>
+						<rect x="0" y="315.953" width="0.070515" height="16.4096" class="st6"/>
+					</g>
+					<g id="shape173-115" v:mID="173" v:groupContext="shape" transform="translate(-315.355,332.363) rotate(-90)">
+						<title>Rettangolo.158</title>
+						<v:userDefs>
+							<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+						</v:userDefs>
+						<path d="M0 332.36 L0 315.4 L0 332.36 Z" class="st6"/>
+					</g>
+					<g id="shape174-117" v:mID="174" v:groupContext="shape" transform="translate(-320.375,311.208) rotate(-90)">
+						<title>Rettangolo.159</title>
+						<v:userDefs>
+							<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+						</v:userDefs>
+						<path d="M0 332.36 L0 320.47 L0 332.36 Z" class="st6"/>
+					</g>
+				</g>
+				<g id="shape175-119" v:mID="175" v:groupContext="shape" v:layerMember="1" transform="translate(322.067,-28.4172)">
+					<title>Connettore dinamico.175</title>
+					<path d="M0 332.36 L113.39 332.36 L113.39 272.19" class="st12"/>
+				</g>
+				<g id="shape176-124" v:mID="176" v:groupContext="shape" transform="translate(664.074,-91.3923)">
+					<title>Rettangolo arrotondato.176</title>
+					<desc>Validate ES of RP and apply metadata policy</desc>
+					<v:userDefs>
+						<v:ud v:nameU="CTypeTopLeftSnip" v:prompt="" v:val="VT0(0):5"/>
+						<v:ud v:nameU="CTypeTopRightSnip" v:prompt="" v:val="VT0(0):5"/>
+						<v:ud v:nameU="CTypeBotLeftSnip" v:prompt="" v:val="VT0(0):5"/>
+						<v:ud v:nameU="CTypeBotRightSnip" v:prompt="" v:val="VT0(0):5"/>
+						<v:ud v:nameU="CornerLockHoriz" v:prompt="" v:val="VT0(1):5"/>
+						<v:ud v:nameU="CornerLockVert" v:prompt="" v:val="VT0(1):5"/>
+						<v:ud v:nameU="CornerLockDiag" v:prompt="" v:val="VT0(0):5"/>
+						<v:ud v:nameU="TopLeftOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+						<v:ud v:nameU="TopRightOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+						<v:ud v:nameU="BotLeftOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+						<v:ud v:nameU="BotRightOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+						<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+					</v:userDefs>
+					<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+					<v:textRect cx="56.6929" cy="311.453" width="113.39" height="41.8191"/>
+					<path d="M11.34 332.36 L102.05 332.36 A11.3384 11.3384 -180 0 0 113.39 321.02 L113.39 301.88 A11.3384 11.3384
+								 -180 0 0 102.05 290.54 L11.34 290.54 A11.3384 11.3384 -180 0 0 0 301.88 L0 321.02 A11.3384 11.3384
+								 -180 0 0 11.34 332.36 Z" class="st6"/>
+					<text x="22.39" y="302.45" class="st7" v:langID="1040"><v:paragraph v:horizAlign="1"/><v:tabList/>Validate ES of RP<v:newlineChar/><tspan
+								x="36.85" dy="1.2em" class="st8">and apply <v:newlineChar/></tspan><tspan x="23.98" dy="1.2em"
+								class="st8">metadata policy</tspan></text>				</g>
+				<g id="shape177-129" v:mID="177" v:groupContext="shape" transform="translate(543.575,-9.81607)">
+					<title>Rettangolo arrotondato.177</title>
+					<desc>send ES of RP</desc>
+					<v:userDefs>
+						<v:ud v:nameU="CTypeTopLeftSnip" v:prompt="" v:val="VT0(0):5"/>
+						<v:ud v:nameU="CTypeTopRightSnip" v:prompt="" v:val="VT0(0):5"/>
+						<v:ud v:nameU="CTypeBotLeftSnip" v:prompt="" v:val="VT0(0):5"/>
+						<v:ud v:nameU="CTypeBotRightSnip" v:prompt="" v:val="VT0(0):5"/>
+						<v:ud v:nameU="CornerLockHoriz" v:prompt="" v:val="VT0(1):5"/>
+						<v:ud v:nameU="CornerLockVert" v:prompt="" v:val="VT0(1):5"/>
+						<v:ud v:nameU="CornerLockDiag" v:prompt="" v:val="VT0(0):5"/>
+						<v:ud v:nameU="TopLeftOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+						<v:ud v:nameU="TopRightOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+						<v:ud v:nameU="BotLeftOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+						<v:ud v:nameU="BotRightOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+						<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+						<v:ud v:nameU="TopLeftOffset" v:prompt="" v:val="VT0(0):1"/>
+						<v:ud v:nameU="TopRightOffset" v:prompt="" v:val="VT0(0):1"/>
+						<v:ud v:nameU="BotLeftOffset" v:prompt="" v:val="VT0(0):1"/>
+						<v:ud v:nameU="BotRightOffset" v:prompt="" v:val="VT0(0):1"/>
+					</v:userDefs>
+					<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+					<v:textRect cx="36.3294" cy="318.189" width="72.66" height="28.3465"/>
+					<path d="M0 332.36 L72.66 332.36 L72.66 304.02 L0 304.02 L0 332.36 Z" class="st6"/>
+					<text x="9.04" y="321.19" class="st7" v:langID="1040"><v:paragraph v:horizAlign="1"/><v:tabList/>send ES of RP</text>				</g>
+				<g id="shape180-132" v:mID="180" v:groupContext="shape" v:layerMember="1" transform="translate(572.643,-91.3923)">
+					<title>Connettore dinamico.180</title>
+					<path d="M6.91 332.36 L6.91 342.99 L7.26 342.99 L7.26 382.79" class="st12"/>
+				</g>
+				<g id="group181-137" transform="translate(604.938,0)" v:mID="181" v:groupContext="group">
+					<title>Foglio.181</title>
+					<g id="shape182-138" v:mID="182" v:groupContext="shape" transform="translate(-1.4988E-14,-4.87157E-07)">
+						<title>Rettangolo</title>
+						<v:userDefs>
+							<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+						</v:userDefs>
+						<rect x="0" y="311.208" width="16.9237" height="21.1547" class="st13"/>
+					</g>
+					<g id="shape183-140" v:mID="183" v:groupContext="shape" transform="translate(12.0582,-16.4301)">
+						<title>Triangolo rettangolo</title>
+						<v:userDefs>
+							<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+						</v:userDefs>
+						<path d="M0 332.36 L4.87 332.36 L0 327.64 L0 332.36 Z" class="st6"/>
+					</g>
+					<g id="shape184-142" v:mID="184" v:groupContext="shape" transform="translate(-1.59013E-14,-4.87157E-07)">
+						<title>Rettangolo.155</title>
+						<v:userDefs>
+							<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+						</v:userDefs>
+						<rect x="0" y="311.208" width="0.070515" height="21.1547" class="st6"/>
+					</g>
+					<g id="shape185-144" v:mID="185" v:groupContext="shape" transform="translate(16.9374,0)">
+						<title>Rettangolo.156</title>
+						<v:userDefs>
+							<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+						</v:userDefs>
+						<rect x="0" y="315.953" width="0.070515" height="16.4096" class="st6"/>
+					</g>
+					<g id="shape186-146" v:mID="186" v:groupContext="shape" transform="translate(-315.355,332.363) rotate(-90)">
+						<title>Rettangolo.158</title>
+						<v:userDefs>
+							<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+						</v:userDefs>
+						<path d="M0 332.36 L0 315.4 L0 332.36 Z" class="st6"/>
+					</g>
+					<g id="shape187-148" v:mID="187" v:groupContext="shape" transform="translate(-320.375,311.208) rotate(-90)">
+						<title>Rettangolo.159</title>
+						<v:userDefs>
+							<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+						</v:userDefs>
+						<path d="M0 332.36 L0 320.47 L0 332.36 Z" class="st6"/>
+					</g>
+				</g>
+				<g id="shape188-150" v:mID="188" v:groupContext="shape" v:layerMember="1" transform="translate(616.233,-23.9893)">
+					<title>Connettore dinamico.188</title>
+					<path d="M0 332.36 L104.53 332.36 L104.53 267.76" class="st12"/>
+				</g>
+				<g id="shape189-155" v:mID="189" v:groupContext="shape" transform="translate(805.287,-91.3923)">
+					<title>Rettangolo arrotondato.189</title>
+					<desc>Store the RP trust chain</desc>
+					<v:userDefs>
+						<v:ud v:nameU="CTypeTopLeftSnip" v:prompt="" v:val="VT0(0):5"/>
+						<v:ud v:nameU="CTypeTopRightSnip" v:prompt="" v:val="VT0(0):5"/>
+						<v:ud v:nameU="CTypeBotLeftSnip" v:prompt="" v:val="VT0(0):5"/>
+						<v:ud v:nameU="CTypeBotRightSnip" v:prompt="" v:val="VT0(0):5"/>
+						<v:ud v:nameU="CornerLockHoriz" v:prompt="" v:val="VT0(1):5"/>
+						<v:ud v:nameU="CornerLockVert" v:prompt="" v:val="VT0(1):5"/>
+						<v:ud v:nameU="CornerLockDiag" v:prompt="" v:val="VT0(0):5"/>
+						<v:ud v:nameU="TopLeftOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+						<v:ud v:nameU="TopRightOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+						<v:ud v:nameU="BotLeftOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+						<v:ud v:nameU="BotRightOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+						<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+					</v:userDefs>
+					<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+					<v:textRect cx="56.6929" cy="311.453" width="113.39" height="41.8191"/>
+					<path d="M11.34 332.36 L102.05 332.36 A11.3384 11.3384 -180 0 0 113.39 321.02 L113.39 301.88 A11.3384 11.3384
+								 -180 0 0 102.05 290.54 L11.34 290.54 A11.3384 11.3384 -180 0 0 0 301.88 L0 321.02 A11.3384 11.3384
+								 -180 0 0 11.34 332.36 Z" class="st6"/>
+					<text x="31.5" y="308.45" class="st7" v:langID="1040"><v:paragraph v:horizAlign="1"/><v:tabList/>Store the RP<v:newlineChar/><tspan
+								x="34.98" dy="1.2em" class="st8">trust chain</tspan></text>				</g>
+				<g id="shape190-159" v:mID="190" v:groupContext="shape" v:layerMember="1" transform="translate(777.46,-105.215)">
+					<title>Connettore dinamico.190</title>
+					<path d="M0 325.28 L25.03 325.28" class="st10"/>
+				</g>
+				<g id="shape191-164" v:mID="191" v:groupContext="shape" v:layerMember="1" transform="translate(918.673,-105.215)">
+					<title>Connettore dinamico.191</title>
+					<path d="M0 325.28 L25.03 325.28" class="st10"/>
+				</g>
+			</g>
+		</g>
+	</g>
+</svg>
