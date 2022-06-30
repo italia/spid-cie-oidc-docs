@@ -17,7 +17,7 @@ per i Fornitori di Servizio pubblici e privati (RP), Identity Providers (OP) e
 Soggetti Aggregatori (SA). 
 
 In questa documentazione trovi le risorse necessarie per aderire ai sistemi di identità
-nazionali, gli esempi pratici dei metadati, come effettuare  
+nazionali, gli esempi pratici dei metadata, come effettuare  
 la registrazione automatica dei Relying Party presso gli 
 OpenID Provider, l’utilizzo degli endpoint della API della Federazione e tutto quello che 
 uno sviluppatore deve sapere per effettuare un login con SPID e CIE OpenID.

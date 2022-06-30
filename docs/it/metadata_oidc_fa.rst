@@ -3,7 +3,7 @@
 OpenID Connect Federation Entity Metadata (FA)
 ++++++++++++++++++++++++++++++++++++++++++++++
 
-È il metadato che il Trust Anchor, o suo Intermediario, pubblica con l’identificativo **federation_entity**, come segue.
+È il metadata che il Trust Anchor, o suo Intermediario, pubblica con l’identificativo **federation_entity**, come segue.
 
 .. code-block:: 
 

@@ -3,7 +3,7 @@
 OpenID Connect Provider Metadata (OP)
 +++++++++++++++++++++++++++++++++++++
 
-È il metadato che gli OP pubblicano con l’identificativo **openid_provider**, come segue.
+È il metadata che gli OP pubblicano con l’identificativo **openid_provider**, come segue.
 
 .. code-block:: 
 

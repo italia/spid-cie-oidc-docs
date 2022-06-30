@@ -49,10 +49,10 @@ Entity Configuration comuni
      - Un JSON Web Key Set (JWKS) :rfc:`7517` che rappresenta la parte pubblica delle chiavi di firma dell’entità interessata. Ogni JWK nel set JWK DEVE avere un ID chiave (claim kid).
      - |check-icon|
    * - **metadata**
-     - JSON Object. Ogni chiave dell’oggetto JSON rappresenta un identificatore del tipo di metadati e ogni
-       valore DEVE essere un oggetto JSON che rappresenta i metadati secondo lo schema di metadati di quel tipo. 
+     - JSON Object. Ogni chiave dell’oggetto JSON rappresenta un identificatore del tipo di metadata e ogni
+       valore DEVE essere un oggetto JSON che rappresenta i metadata secondo lo schema di metadata di quel tipo. 
 
-       Una configurazione di entità PUÒ contenere più dichiarazioni di metadati, ma solo una per ogni tipo di metadati (<**entity_type**>). 
+       Una configurazione di entità PUÒ contenere più dichiarazioni di metadata, ma solo una per ogni tipo di metadata (<**entity_type**>). 
 
        I tipi consentiti sono i seguenti:
 
