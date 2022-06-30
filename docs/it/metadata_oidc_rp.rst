@@ -29,7 +29,7 @@ Dove un RP non disponesse all’interno dei propri metadati dei claim **client_r
      - Array di stringhe che specifica i tipi supportati dalla federazione (solo *automatic*)
      - |check-icon| 
    * - **organization_name**
-     - Un nome leggibile che rappresenta l'organizzazione proprietaria dell'RP. 
+     - Un nome leggibile che rappresenta l’organizzazione proprietaria dell’RP. 
      - |check-icon| 
    * - **jwks**
      - JSON Web Key Set :rfc:`7517#appendix-A.1`

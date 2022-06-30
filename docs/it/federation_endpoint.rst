@@ -414,8 +414,8 @@ Advanced Entity Listings Response
 Generic Error Response
 ++++++++++++++++++++++
 
-Se la richiesta è malformata o avvengo errori durante l'elaborazione della richiesta, DOVREBBE essere utilizzato il seguente formato di errore indipendentemente dall'operazione specificata.
-La risposta HTTP DEVE essere qualcosa nell'intervallo 400/500, che dia un’indicazione del tipo di errori. Il corpo della risposta DEVE essere un oggetto JSON contenente i claim qui sotto riportati e il tipo di contenuto DEVE essere impostato a **application/json**.
+Se la richiesta è malformata o avvengo errori durante l’elaborazione della richiesta, DOVREBBE essere utilizzato il seguente formato di errore indipendentemente dall’operazione specificata.
+La risposta HTTP DEVE essere qualcosa nell’intervallo 400/500, che dia un’indicazione del tipo di errori. Il corpo della risposta DEVE essere un oggetto JSON contenente i claim qui sotto riportati e il tipo di contenuto DEVE essere impostato a **application/json**.
 
 
 .. list-table:: 

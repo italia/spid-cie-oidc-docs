@@ -6,7 +6,7 @@
 Entity Statement
 ----------------
 
-Il componente basilare per costruire una Catena di Fiducia (Trust Chain) è l'**Entity Statement (ES)**, un JWT crittografico che contiene le chiavi di firma delle entità e ulteriori dati usati per controllare il processo di risoluzione della Trust Chain (come l'*authority_hints* che specifica chi è il superiore di un'entità). Quando uno statement è autofirmato da un’entità, viene chiamato *Entity Configuration (EC)*.
+Il componente basilare per costruire una Catena di Fiducia (Trust Chain) è l’**Entity Statement (ES)**, un JWT crittografico che contiene le chiavi di firma delle entità e ulteriori dati usati per controllare il processo di risoluzione della Trust Chain (come l’*authority_hints* che specifica chi è il superiore di un’entità). Quando uno statement è autofirmato da un’entità, viene chiamato *Entity Configuration (EC)*.
 
 Firma di Entity Statement
 +++++++++++++++++++++++++
@@ -34,7 +34,7 @@ Gli ES emessi dal TA o da un suo Intermediario per i propri diretti discendenti,
      - **Descrizione**
      - **Obbligatorio**
    * - **metadata_policy**
-     - JSON Object che descrive un criterio di metadati. Ogni chiave dell'oggetto JSON rappresenta un identificatore del tipo di metadati e ogni valore DEVE essere un oggetto JSON che rappresenta la politica dei metadati in base allo schema di quel tipo di metadati. Si rimanda alla specifica `OIDC-FED#Section.5.1`_ per i dettagli implementativi.
+     - JSON Object che descrive un criterio di metadati. Ogni chiave dell’oggetto JSON rappresenta un identificatore del tipo di metadati e ogni valore DEVE essere un oggetto JSON che rappresenta la politica dei metadati in base allo schema di quel tipo di metadati. Si rimanda alla specifica `OIDC-FED#Section.5.1`_ per i dettagli implementativi.
      - |check-icon|
    * - **trust_marks**
      - JSON Array contenente i Trust Mark emessi da se stesso per il soggetto discendente.
