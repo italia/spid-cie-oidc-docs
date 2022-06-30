@@ -30,7 +30,7 @@ Segue la tabella dei claim specifici  per la Federazione CIE.
      - Valore booleano che specifica se l’OP fornisce il parametro **iss** nell’Authorization Response. Deve valere *true*
      - |check-icon|
    * - **claims_supported**
-     - JSON Array che contiene una lista di claim che l’OP supporta. Vedere allo scopo i :ref:`**Claim Utente CIE** al prossimo paragrafo <claim_utente_CIE>`
+     - JSON Array che contiene una lista di claim che l’OP supporta. Vedere allo scopo i :ref:`Claim Utente CIE <claim_utente_CIE>` al prossimo paragrafo `
      - |check-icon|
 
 
@@ -45,7 +45,7 @@ Per identificare con successo l’utente, CIE OIDC ha identificato un unsieme di
 parte sono presi dai claim utente definiti in `iGov.OIDC`_ (vedi Tabella 1) e in `OpenID.IDA`_ (vedi Tabella 2). 
 Un sottoinsieme di essi è personalizzato ed è stato introdotto per lo scenario CIE (vedi Tabella 3).
 
-.. list-table:: Tabella 1: Claim Utente da OpenID Connect Core
+.. list-table:: Claim Utente da OpenID Connect Core
    :widths: 20 60 20
    :header-rows: 1
 
@@ -105,7 +105,10 @@ Un sottoinsieme di essi è personalizzato ed è stato introdotto per lo scenario
 
 
 
-.. list-table:: Tabella 2: Claim Utente da OpenID Connect Identity Assurance
+Claim Utente da OpenID Connect Identity Assurance
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. list-table:: Claim Utente da OpenID Connect Identity Assurance
    :widths: 20 60 20
    :header-rows: 1
 
@@ -140,12 +143,14 @@ Un sottoinsieme di essi è personalizzato ed è stato introdotto per lo scenario
          “mint” (Ministero dell’Interno)
 
          **country_code**: st Stringa che denota il Paese o l’organizzazione sovranazionale che ha emesso il documento,
-         come da codici di 3 lettere ISO 3166/ICAO `ICAO-Doc9303`_, es. "ITA".
+         come da codici di 3 lettere ISO 3166/ICAO `ICAO-Doc9303`_, es. “ITA”.
      - |uncheck-icon|
 
 
+Claim Utente specifici per CIEid
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. list-table:: Tabella 3: Claim Utente specifici per CIEid
+.. list-table:: Claim Utente specifici per CIEid
    :widths: 20 60 20
    :header-rows: 1
 
@@ -238,7 +243,7 @@ Il parametro OIDC **claims** definisce un meccanismo per richiedere esplicxitame
 dall’t **UserInfo Endpoint** e/o nell’**ID Token**.
 Il valore è un Oggetto JSON che fa una lista dei claim richiesti da queste due posizioni.
 Nel caso di un Oggetto JSON vuoto, l’OP restituisce i Claimn Utente richiesti dal parametro scope. 
-CIE OIDC permette l’uso di questo parametro sia per gli elementi “userinfo” che per quelli “id_token” del parametro claims. Perciò gli attributi CIE possono essere richiesti sia dentro gli elementi “userinfo” che in quelli “id_token”, facendo una lista degli attributi richiesti come chiave dell’oggetto JSON e indicando i loro valori come {“essential”: true}, {“value”: “string”}, {“values”:[string1, string2]}, null per indicare che il claim è essenziale, da ritornare con un valore specifico, da ritornare con un insieme di valori e da ritornare in modalità default (un claim volontario), rispettivamente.
+CIE OIDC permette l’uso di questo parametro sia per gli elementi “userinfo” che per quelli “id_token” del parametro claims. Perciò gli attributi CIE possono essere richiesti sia dentro gli elementi “userinfo” che in quelli “id_token”, facendo una lista degli attributi richiesti come chiave dell’oggetto JSON e indicando i loro valori come ``{“essential”:true}``, ``{“value”:“string”}``, ``{“values”:[string1,string2]}``, ``null`` per indicare che il claim è essenziale, da ritornare con un valore specifico, da ritornare con un insieme di valori e da ritornare in modalità default (un claim volontario), rispettivamente.
 
 .. code-block::
 

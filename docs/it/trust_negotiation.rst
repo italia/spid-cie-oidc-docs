@@ -53,7 +53,7 @@ Nei casi in cui un RP avesse come entità superiore un SA e non direttamente la 
 
 .. [1] I Trust Mark di Federazione sono configurati nel claim **trust_marks_issuers** e contenuti nell’Entity Configuration del Trust Anchor.
 
-.. [2] Un RP può esporre più di una entità superiore all’interno del proprio claim di **authority_hints**. Si pensi ad un RP che partecipa sia alla Federazione SPID che a quella CIE. Inoltre un RP può risultare come aggregato di molteplici intermediari, se questi SPID o CIE.
+.. [2] Un RP può esporre più di una entità superiore all’interno del proprio claim di **authority_hints**. Si pensi ad un RP che partecipa sia alla Federazione SPID che a quella CIE. Inoltre un RP può risultare come aggregato di molteplici intermediari, sia questi SPID o CIE.
 
 
 .. image:: ../../images/trust_anchor.svg
@@ -67,14 +67,17 @@ Accesso alla Entity Configuration
 
 In questa sezione viene descritto come individuare per un determinato soggetto  l’URL :rfc:`3986` per il download della Entity Configuration. 
 
-La risorsa attraverso la quale un partecipante pubblica la sua configurazione (Entity Configuration) corrisponde al webpath **.well-known/openid-federation** e DEVE essere appesa all’URL che identifica il soggetto.
+La risorsa attraverso la quale un partecipante pubblica la sua configurazione (Entity Configuration) corrisponde al webpath ``.well-known/openid-federation`` e DEVE essere appesa all’URL che identifica il soggetto.
 
 Esempi:
 
- - con identificativo del soggetto pari a **https://rp.example.it** il risultante URL di Entity Configuration è  **https://rp.example.it/.well-known/oidc-federation**.
- - con identificativo del soggetto pari **https://rp.servizi-spid.it/oidc/** il risultante URL di Entity Configuration è **https://rp.servizi-spid.it/oidc/.well-known/oidc-federation**.
+ - con identificativo del soggetto pari a ``https://rp.example.it`` il risultante URL di Entity Configuration è |br|
+   ``https://rp.example.it/.well-known/oidc-federation``.
 
-Se l’URL che identifica il soggetto non presenta il simbolo di slash finale (“/”) è necessario aggiungerlo prima di appendere il web path della risorsa **well-known**.
+ - con identificativo del soggetto pari ``https://rp.servizi-spid.it/oidc/`` il risultante URL di Entity Configuration è |br|
+   ``https://rp.servizi-spid.it/oidc/.well-known/oidc-federation``.
+
+Se l’URL che identifica il soggetto non presenta il simbolo di slash finale (“/”) è necessario aggiungerlo prima di appendere il web path della risorsa .well-known.
 
 
 Una volta che un RP viene riconosciuto come parte della Federazione CIE, ottiene il permesso di mandare una Richiesta di Autenticazione come definito in [CIE-OIDC-CORE]. L’OP CIE che non riconosce l’RP che fa la richiesta, è in grado, usando CIE OIDC-FED, di risolvere correttamente la il Trust. L’OP CIE inizia richiedendo la configurazione di entità dell’RP al .well-known endpoint dell’RP e, seguendo il percorso dato dall “authority_hint”, raggiunge la radice del Trust, cioè la TA. In ogni passo della catena, l’OP CIE può eseguire tutti i controlli di sicurezza richiedendo le dichiarazioni di entità da ciascuna entità e convalidando i Trust Mark e le firme. La figura che segue dà un esempio rappresentativo di come funziona la catena del Trust.

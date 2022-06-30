@@ -32,7 +32,8 @@ Dove un RP non disponesse all’interno dei propri metadata dei claim **client_r
      - Un nome leggibile che rappresenta l’organizzazione proprietaria dell’RP. 
      - |check-icon| 
    * - **jwks**
-     - JSON Web Key Set :rfc:`7517#appendix-A.1`
+     - JSON Web Key Set |br|
+       :rfc:`7517#appendix-A.1` |br|
        È composto dai seguenti claim:
         
         **kty**: famiglia dell’algoritmo crittografico utilizzato
@@ -41,7 +42,8 @@ Dove un RP non disponesse all’interno dei propri metadata dei claim **client_r
 
         **use**: utilizzo della chiave pubblica per firma (sig) o encryption (enc)
 
-        **kid**: identificatore univoco della chiave, valorizzato come RFC7638
+        **kid**: identificatore univoco della chiave, valorizzato come |br|
+        :rfc:`7638`
 
         **n**: modulo (solo per chiavi RSA)
 
@@ -63,7 +65,8 @@ Dove un RP non disponesse all’interno dei propri metadata dei claim **client_r
 
         **use**: utilizzo della chiave pubblica per firma (sig) o encryption (enc)
 
-        **kid**: identificatore univoco della chiave, valorizzato come :rfc:`7638`
+        **kid**: identificatore univoco della chiave, valorizzato come |br|
+        :rfc:`7638`
 
         **n**: modulo (solo per chiavi RSA)
 
@@ -84,7 +87,7 @@ Dove un RP non disponesse all’interno dei propri metadata dei claim **client_r
      - |check-icon|
    * - **client_name**
      - Nome del RP da visualizzare nelle schermate di autenticazione e richiesta di consenso. 
-       Può essere specificato in più lingue apponendo al nome dell’elemento il suffisso "#" seguito 
+       Può essere specificato in più lingue apponendo al nome dell’elemento il suffisso “#” seguito 
        dal codice :rfc:`5646`. Un nome di default senza indicazione della lingua è sempre presente.
      - |check-icon|
    * - **response_types**
