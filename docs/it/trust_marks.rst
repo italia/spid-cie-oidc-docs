@@ -60,7 +60,7 @@ Gli attributi definiti all’interno dei TM aderiscono a quanto definito all’i
     * - **id**
       - String. Identificativo univoco del Trust Mark. È un URL con la seguente struttura:
         **<TA domain> / <entity_type> / <trustmark_profile> /**
-        es non normativo: https://registry.servizicie.interno.gov.it/openid_relying_party/public/
+        es non normativo: ``https://registry.servizicie.interno.gov.it/openid_relying_party/public/``
       - |check-icon|
     * - **iat**
       - UNIX Timestamp. Quando è stato emesso questo marchio di fiducia. Espresso come “Seconds Since the Epoch” :rfc:`7519`.
@@ -97,7 +97,7 @@ Gli attributi definiti all’interno dei TM aderiscono a quanto definito all’i
 
 .. _Trust_mark_status_endpoint:
 
-Trust mark status endpoint
+Trust Mark Status Endpoint
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 L’assegnazione di un Trust Mark ad un soggetto viene effettuato presso questo endpoint secondo le modalità definite all’interno di `OIDC-FED#Section.7.4`_.

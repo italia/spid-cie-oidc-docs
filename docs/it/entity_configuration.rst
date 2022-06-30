@@ -19,8 +19,8 @@ La firma dei JWT :rfc:`7515` avviene mediante l’algoritmo RSA SHA-256 (RS256).
 Metadata di Federazione
 +++++++++++++++++++++++
 
-OIDC Federation definisce i metadata di federazione contenenti le informazioni di seguito definite, e i metadata OIDC per 
-ogni tipo di entità.
+OIDC Federation definisce i metadata di federazione contenenti le informazioni di seguito indicate 
+e i metadata OIDC per ogni tipo di entità.
 
 
 Entity Configuration comuni
