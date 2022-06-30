@@ -58,9 +58,9 @@ Gli attributi definiti all’interno dei TM aderiscono a quanto definito all’i
       - String. URL che identifica univocamente il soggetto per il quale il Trust Mark è stato emesso.
       - |check-icon|
     * - **id**
-      - String. Identificativo univoco del Trust Mark. È un URL con la seguente struttura:
-        **<TA domain> / <entity_type> / <trustmark_profile> /**
-        es non normativo: ``https://registry.servizicie.interno.gov.it/openid_relying_party/public/``
+      - String. Identificativo univoco del Trust Mark. È un URL con la seguente struttura: |br|
+        **<TA domain> / <entity_type> / <trustmark_profile> /** |br|
+        es. non normativo: ``https://registry.servizicie.interno.gov.it/openid_relying_party/public/``
       - |check-icon|
     * - **iat**
       - UNIX Timestamp. Quando è stato emesso questo marchio di fiducia. Espresso come “Seconds Since the Epoch” :rfc:`7519`.
