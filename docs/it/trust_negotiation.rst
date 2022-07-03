@@ -13,7 +13,7 @@ Il RP ottiene la lista degli OP in formato JSON interrogando l’:ref:`endpoint 
 
 Per ogni EC degli OP, il RP verifica la firma del contenuto adoperando la chiave pubblica ottenuta dall’Entity Statement rilasciato dalla Trust Anchor. Verificata la firma dell’Entity Configuration con la chiave pubblica pubblicata dalla Trust Anchor, la fiducia è stabilita nei confronti del OP da parte del RP. 
 
-Il RP applica infine le politiche pubblicate dal Trust Anchor sui metadata del OP e salva il metadata finale associandolo ad una data di scadenza (claim **exp**). La data di scadenza corrisponde al valore di **exp** più basso ottenuto da tutti gli statement che compongono la **Trust Chain**. Periodicamente il RP aggiorna i metadata di tutti gli OP rinnovando la Trust Chain relativa a questi.
+Il RP applica infine le politiche pubblicate dal Trust Anchor sui metadata del OP e salva il metadata finale associandolo ad una data di scadenza (claim **exp**). La data di scadenza corrisponde al valore di **exp** più basso ottenuto da tutti gli elementi che compongono la **Trust Chain**. Periodicamente il RP aggiorna i metadata di tutti gli OP rinnovando la Trust Chain relativa a questi.
 
 Ottenuti i metadata finali di tutti i Provider SPID, il RP genera lo SPID Button e lo pubblica all’interno della pagina di autenticazione destinata agli utenti.
 
