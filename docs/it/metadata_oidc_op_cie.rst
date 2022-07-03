@@ -70,7 +70,7 @@ Un sottoinsieme di essi è personalizzato ed è stato introdotto per lo scenario
        della fiducia o dell’accordo contrattuale con il quale le parti operano.
      - |check-icon|
    * - **gender**
-     - Stringa per il genere dell’utente. Si possono usare i valori *maschio*, *femmina* o anche altri.
+     - String per il genere dell’utente. Si possono usare i valori *maschio*, *femmina* o anche altri.
      - |uncheck-icon|
    * - **birthdate**
      - Campo data che indica la data di nascita dell’utente necondo il formato AAAA-MM-GG. 
@@ -79,7 +79,7 @@ Un sottoinsieme di essi è personalizzato ed è stato introdotto per lo scenario
        elaborano le date.
      - |uncheck-icon|
    * - **phone_number**
-     - Stringa che indica il numero di telefono preferito dell’utente. Si RACCOMANDA di usare il formato dato
+     - String che indica il numero di telefono preferito dell’utente. Si RACCOMANDA di usare il formato dato
        in `E164`_ ad esempio +1 (425) 555-1212 o +56 (2) 687 2400. Se il numero di telefono contiene un’estensione,
        si RACCOMANDA di usare il formato come al :rfc:`3966`, ad esempio +1 (604) 555-1234;ext=5678.
      - |uncheck-icon|
@@ -100,7 +100,7 @@ Un sottoinsieme di essi è personalizzato ed è stato introdotto per lo scenario
 
        **postal_code**: codice postale o zip code
 
-       **country**: stringa che denota il codice del paese come in ISO 3166-1 alpha-2, es., “IT”.
+       **country**: String che denota il codice del paese come in ISO 3166-1 alpha-2, es., “IT”.
      - |uncheck-icon|
 
 
@@ -119,7 +119,7 @@ Claim Utente da OpenID Connect Identity Assurance
      - Luogo di nascita dell’utente. È un Oggetto JSON :rfc:`4627` contenente alcuni o tutti 
        gli attributi seguenti:
        
-       **country**: stringa che denota il codice del paese come in ISO 3166-1 alpha-2, es., “DE”.
+       **country**: String che denota il codice del paese come in ISO 3166-1 alpha-2, es., “DE”.
 
        **region**: stato, provincia, prefettura o regione. Questo campo può essere obbligatorio in alcune giurisdizioni.
 
@@ -129,9 +129,9 @@ Claim Utente da OpenID Connect Identity Assurance
      - Oggetto JSON che rappresenta il documento. L’unico documento supportato alla data è la CIE.
        Contiene i seguenti claim:
        
-       **type**: Stringa che denota il tipo di documento. L’unico valore supportato è “cie”
+       **type**: String che denota il tipo di documento. L’unico valore supportato è “cie”
 
-       **document_number**: Stringa che rappresenta un identificativo che definisce univocamente la CIE dell’utente.
+       **document_number**: String che rappresenta un identificativo che definisce univocamente la CIE dell’utente.
 
        **date_of_issuance**: data del documento in formato AAAA-MM-GG (ISO `ISO8601-2004`_ )
 
@@ -139,10 +139,10 @@ Claim Utente da OpenID Connect Identity Assurance
 
        **issuer**: Oggetto JSON contenente le informazioni dell’emittente della CIE. Questo oggetto ha le seguenti proprietà:
        
-         **name**: nome dell’emittente della CIE. Questo campo è sempre valorizzato con la stringa 
+         **name**: nome dell’emittente della CIE. Questo campo è sempre valorizzato con la String 
          “mint” (Ministero dell’Interno)
 
-         **country_code**: st Stringa che denota il Paese o l’organizzazione sovranazionale che ha emesso il documento,
+         **country_code**: st String che denota il Paese o l’organizzazione sovranazionale che ha emesso il documento,
          come da codici di 3 lettere ISO 3166/ICAO `ICAO-Doc9303`_, es. “ITA”.
      - |uncheck-icon|
 
@@ -158,11 +158,11 @@ Claim Utente specifici per CIEid
      - **Descrizione**
      - **Obbligatorio**
    * - **e_delivery_service**
-     - Stringa che indica il servizio di consegna elettronica preferito dall’utente,
+     - String che indica il servizio di consegna elettronica preferito dall’utente,
        come presentato in EIDAS e CAD.
      - |uncheck-icon|
    * - **fiscal_number**
-     - Codice fiscale dell’utente. Stringa di 16 caratteri. 
+     - Codice fiscale dell’utente. String di 16 caratteri. 
      - |uncheck-icon|
    * - **idANPR**
      - Non ancora supportato.

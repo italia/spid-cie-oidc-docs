@@ -81,7 +81,7 @@ L’oggetto request DEVE essere un token JWT firmato, secondo le modalità defin
      - Metodo di costruzione del challenge PKCE. È obbligatorio specificare il valore **S256**
      - |check-icon|
    * - **nonce**
-     - Stringa di almeno 32 caratteri alfanumerici, generata casualmente dal Client e finalizzata a mitigare attacchi replay.
+     - String di almeno 32 caratteri alfanumerici, generata casualmente dal Client e finalizzata a mitigare attacchi replay.
        Questo valore sarà restituito nell’ID Token fornito dal Token Endpoint, in modo da consentire al client di verificare
        che sia uguale a quello inviato nella richiesta di autenticazione.
      - |check-icon|
@@ -115,7 +115,7 @@ L’oggetto request DEVE essere un token JWT firmato, secondo le modalità defin
      - |check-icon|
    * - **acr_values**
      - Valori di riferimento della classe di contesto dell’Authentication Request. 
-       Stringa separata da uno spazio, che specifica i valori “acr” richiesti al server di autorizzazione per l’elaborazione della richiesta di autenticazione con i valori indicati in ordine di preferenza. L’OP può utilizzare un’autenticazione ad un livello più alto di quanto richiesto. Tale scelta non deve comportare un esito negativo della richiesta.
+       String separata da uno spazio, che specifica i valori “acr” richiesti al server di autorizzazione per l’elaborazione della richiesta di autenticazione con i valori indicati in ordine di preferenza. L’OP può utilizzare un’autenticazione ad un livello più alto di quanto richiesto. Tale scelta non deve comportare un esito negativo della richiesta.
        Deve contenere per SPID uno o più valori tra i seguenti:
        
        ``https://www.spid.gov.it/SpidL1``
@@ -133,7 +133,7 @@ L’oggetto request DEVE essere un token JWT firmato, secondo le modalità defin
      - Lista dei claims (attributi) che un RP intende richiedere. Vedi paragrafo *Claims*
      - |check-icon|
    * - **state**
-     - Stringa di almeno 32 caratteri alfanumerici. Valore univoco utilizzato per mantenere lo stato tra la request e il callback. Questo valore verrà restituito al client nella risposta al termine dell’autenticazione. Il valore deve essere significativo esclusivamente per il RP e non deve essere intellegibile ad altri.
+     - String di almeno 32 caratteri alfanumerici. Valore univoco utilizzato per mantenere lo stato tra la request e il callback. Questo valore verrà restituito al client nella risposta al termine dell’autenticazione. Il valore deve essere significativo esclusivamente per il RP e non deve essere intellegibile ad altri.
      - |check-icon|
    * - **ui_locales**
      - Lista di codici RFC5646 separati da spazi. Lingue preferibili per visualizzare le pagine dell’OP. L’OP può ignorare questo parametro se non dispone di nessuna delle lingue indicate.
@@ -145,12 +145,12 @@ L’oggetto request DEVE essere un token JWT firmato, secondo le modalità defin
      - UNIX Timestamp con l’istante di generazione del JWT, codificato come NumericDate come indicato in :rfc:`7519`
      - |check-icon| 
    * - **iss**
-     - Stringa. Identificatore dell’emittente dell’OP che ha creato l’Authentication Response. 
+     - String. Identificatore dell’emittente dell’OP che ha creato l’Authentication Response. 
        L’RP DEVE validare questo parametro con precisione e NON DEVE permettere che diversi OP 
        usino lo stesso identificatore di emittente
      - |check-icon|
    * - **aud**
-     - Stringa. Deve corrispondere all’Identificatore del soggetto destinatario.
+     - String. Deve corrispondere all’Identificatore del soggetto destinatario.
      - |check-icon|
    * - **typ**
      - Ove fosse assente, viene considerato *JWT* come definito da :rfc:`7519#section-5.1`

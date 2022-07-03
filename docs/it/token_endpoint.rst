@@ -216,10 +216,10 @@ L’ID Token è un JSON Web Token (JWT) che contiene informazioni sull’utente 
      - UNIX Timestamp con l’istante di scadenza del JWT, codificato come NumericDate come indicato in :rfc:`7519`
      - |check-icon|
    * - **jti** 
-     - String. Identificatore unico dell’ID Token che il client più utilizzare per prevenirne il riuso, rifiutando l’ID Token se già processato. Deve essere di difficile individuazione da parte di un attaccante e composto da una stringa casuale.
+     - String. Identificatore unico dell’ID Token che il client più utilizzare per prevenirne il riuso, rifiutando l’ID Token se già processato. Deve essere di difficile individuazione da parte di un attaccante e composto da una String casuale.
      - 
    * - **nonce** 
-     - String. Stringa casuale generata dal Client per ciascuna sessione utente ed inviata nell’Authentication Request (parametro nonce), finalizzata a mitigare attacchi replay. Il client è tenuto a verificare che coincida con quella inviata  nell’Authentication Request.
+     - String. String casuale generata dal Client per ciascuna sessione utente ed inviata nell’Authentication Request (parametro nonce), finalizzata a mitigare attacchi replay. Il client è tenuto a verificare che coincida con quella inviata  nell’Authentication Request.
      - 
 
 
