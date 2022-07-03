@@ -112,7 +112,7 @@ Response
 
 Dopo avere ricevuto e validato la Token request dal client, il Token endpoint dell’OpenID Provider (OP) restituisce una response che include ID Token e Access Token e un eventuale Refresh Token, in formato JWT e firmati secondo le modalità definite dall’Agenzia per l’Italia Digitale.
 
-L’Access Token deve essere formatosecondo le indicazioni dello standard “International Government Assurance Profile (iGov) for OAuth 2.0 - Draft 03”, paragrafo 3.2.1, “JWT Bearer Tokens”.
+L’Access Token deve essere formatosecondo le indicazioni dello standard "International Government Assurance Profile (iGov) for OAuth 2.0 - Draft 03", paragrafo 3.2.1, "JWT Bearer Tokens".
 
 L’ID Token deve essere formato secondo le indicazioni del paragrafo successivo.
 
@@ -184,7 +184,7 @@ L’ID Token è un JSON Web Token (JWT) che contiene informazioni sull’utente 
      - Identificatore dell’OP che lo contraddistingue univocamente nella federazione nel formato Uniform Resource Locator (URL). Il client è tenuto a verificare che questo valore corrisponda all’OP chiamato.
      - 
    * - **sub** 
-     - Per il valore di questo parametro fare riferimento allo standard “OpenID Connect Core 1.0”, “Pairwise Identifier Algorithm”. 
+     - Per il valore di questo parametro fare riferimento allo standard "OpenID Connect Core 1.0", "Pairwise Identifier Algorithm". 
      - 
    * - **aud** 
      - Contiene il client ID. Il client è tenuto a verificare che questo valore corrisponda al proprio client ID.

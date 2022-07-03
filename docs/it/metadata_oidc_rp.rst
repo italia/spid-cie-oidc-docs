@@ -87,7 +87,7 @@ Dove un RP non disponesse all’interno dei propri metadata dei claim **client_r
      - |check-icon|
    * - **client_name**
      - Nome del RP da visualizzare nelle schermate di autenticazione e richiesta di consenso. 
-       Può essere specificato in più lingue apponendo al nome dell’elemento il suffisso “#” seguito 
+       Può essere specificato in più lingue apponendo al nome dell’elemento il suffisso "#" seguito 
        dal codice :rfc:`5646`. Un nome di default senza indicazione della lingua è sempre presente.
      - |check-icon|
    * - **response_types**

@@ -115,7 +115,7 @@ L’oggetto request DEVE essere un token JWT firmato, secondo le modalità defin
      - |check-icon|
    * - **acr_values**
      - Valori di riferimento della classe di contesto dell’Authentication Request. 
-       String separata da uno spazio, che specifica i valori “acr” richiesti al server di autorizzazione per l’elaborazione della richiesta di autenticazione con i valori indicati in ordine di preferenza. L’OP può utilizzare un’autenticazione ad un livello più alto di quanto richiesto. Tale scelta non deve comportare un esito negativo della richiesta.
+       String separata da uno spazio, che specifica i valori "acr" richiesti al server di autorizzazione per l’elaborazione della richiesta di autenticazione con i valori indicati in ordine di preferenza. L’OP può utilizzare un’autenticazione ad un livello più alto di quanto richiesto. Tale scelta non deve comportare un esito negativo della richiesta.
        Deve contenere per SPID uno o più valori tra i seguenti:
        
        ``https://www.spid.gov.it/SpidL1``

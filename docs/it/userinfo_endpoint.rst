@@ -22,7 +22,7 @@ Lo UserInfo Endpoint deve supportare l’uso del solo metodo HTTP GET :rfc:`2616
 Response
 ++++++++
 
-La response dello UserInfo Endpoint deve specificare nel “Content-Type” il valore “application/jwt”.
+La response dello UserInfo Endpoint deve specificare nel "Content-Type" il valore "application/jwt".
 
 Il contenuto trasmesso nel body della Response deve essere un JWT firmato e cifrato secondo le modalità definite dall’Agenzia per l’Italia Digitale.
 
@@ -70,7 +70,7 @@ Il payload del JWT è un JSON contenente i seguenti parametri:
      - 
 
 
-In caso di errore di autenticazione, lo UserInfo Endpoint restituisce un errore HTTP in accordo con quanto indicato nel par. 5.3.3., “UserInfo Error Response” di “OpenID Connect Core 1.0”.
+In caso di errore di autenticazione, lo UserInfo Endpoint restituisce un errore HTTP in accordo con quanto indicato nel par. 5.3.3., "UserInfo Error Response" di "OpenID Connect Core 1.0".
 
 .. seealso::
 

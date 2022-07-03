@@ -100,7 +100,7 @@ Un sottoinsieme di essi è personalizzato ed è stato introdotto per lo scenario
 
        **postal_code**: codice postale o zip code
 
-       **country**: String che denota il codice del paese come in ISO 3166-1 alpha-2, es., “IT”.
+       **country**: String che denota il codice del paese come in ISO 3166-1 alpha-2, es., "IT".
      - |uncheck-icon|
 
 
@@ -119,7 +119,7 @@ Claim Utente da OpenID Connect Identity Assurance
      - Luogo di nascita dell’utente. È un Oggetto JSON :rfc:`4627` contenente alcuni o tutti 
        gli attributi seguenti:
        
-       **country**: String che denota il codice del paese come in ISO 3166-1 alpha-2, es., “DE”.
+       **country**: String che denota il codice del paese come in ISO 3166-1 alpha-2, es., "DE".
 
        **region**: stato, provincia, prefettura o regione. Questo campo può essere obbligatorio in alcune giurisdizioni.
 
@@ -129,7 +129,7 @@ Claim Utente da OpenID Connect Identity Assurance
      - Oggetto JSON che rappresenta il documento. L’unico documento supportato alla data è la CIE.
        Contiene i seguenti claim:
        
-       **type**: String che denota il tipo di documento. L’unico valore supportato è “cie”
+       **type**: String che denota il tipo di documento. L’unico valore supportato è "cie"
 
        **document_number**: String che rappresenta un identificativo che definisce univocamente la CIE dell’utente.
 
@@ -140,10 +140,10 @@ Claim Utente da OpenID Connect Identity Assurance
        **issuer**: Oggetto JSON contenente le informazioni dell’emittente della CIE. Questo oggetto ha le seguenti proprietà:
        
          **name**: nome dell’emittente della CIE. Questo campo è sempre valorizzato con la String 
-         “mint” (Ministero dell’Interno)
+         "mint" (Ministero dell’Interno)
 
          **country_code**: st String che denota il Paese o l’organizzazione sovranazionale che ha emesso il documento,
-         come da codici di 3 lettere ISO 3166/ICAO `ICAO-Doc9303`_, es. “ITA”.
+         come da codici di 3 lettere ISO 3166/ICAO `ICAO-Doc9303`_, es. "ITA".
      - |uncheck-icon|
 
 
@@ -199,7 +199,7 @@ seguenti valori dello **scope** da usare per richiedere i Claim:
 .. note::
    
    Usando lo scope **openid** non si ottengono Claim Utente. Solo il valore **sub** viene incluso.
-   Si POSSONO usare valori multipli dello scope, creando una lista “case sensitive” di valori ASCII delimitati da spazi. 
+   Si POSSONO usare valori multipli dello scope, creando una lista "case sensitive" di valori ASCII delimitati da spazi. 
    Claim Utente individuali possono essere richiesti usando il parametro di richiesta **claims** (vedere :ref:`Parametro Claims <claims_parameter>`). 
    Usare il parametro **claims** è l’unico modo per richiedere specifiche combinazioni di Claim Utente che non possono
    essere specificati usando valori di scope. 
@@ -243,7 +243,7 @@ Il parametro OIDC **claims** definisce un meccanismo per richiedere esplicxitame
 dall’t **UserInfo Endpoint** e/o nell’**ID Token**.
 Il valore è un Oggetto JSON che fa una lista dei claim richiesti da queste due posizioni.
 Nel caso di un Oggetto JSON vuoto, l’OP restituisce i Claimn Utente richiesti dal parametro scope. 
-CIE OIDC permette l’uso di questo parametro sia per gli elementi “userinfo” che per quelli “id_token” del parametro claims. Perciò gli attributi CIE possono essere richiesti sia dentro gli elementi “userinfo” che in quelli “id_token”, facendo una lista degli attributi richiesti come chiave dell’oggetto JSON e indicando i loro valori come ``{“essential”:true}``, ``{“value”:“string”}``, ``{“values”:[string1,string2]}``, ``null`` per indicare che il claim è essenziale, da ritornare con un valore specifico, da ritornare con un insieme di valori e da ritornare in modalità default (un claim volontario), rispettivamente.
+CIE OIDC permette l’uso di questo parametro sia per gli elementi "userinfo" che per quelli "id_token" del parametro claims. Perciò gli attributi CIE possono essere richiesti sia dentro gli elementi "userinfo" che in quelli "id_token", facendo una lista degli attributi richiesti come chiave dell’oggetto JSON e indicando i loro valori come ``{"essential":true}``, ``{"value":"string"}``, ``{"values":[string1,string2]}``, ``null`` per indicare che il claim è essenziale, da ritornare con un valore specifico, da ritornare con un insieme di valori e da ritornare in modalità default (un claim volontario), rispettivamente.
 
 .. code-block::
 
