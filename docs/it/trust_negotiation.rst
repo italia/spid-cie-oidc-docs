@@ -40,13 +40,13 @@ Quando un Provider (OP) riceve una richiesta di autorizzazione da parte di un RP
 
 L’OP estrae l’identificativo univoco (**client_id**) dall’oggetto *request* contenuto all’interno della *Authorization Request* ed effettua una richiesta di Entity Configuration presso il :ref:`RP<Esempio_EN1.1>`. Ottiene la configurazione *self-signed* del RP e convalida la firma dei Trust Mark riconoscibili all’interno della Federazione [1]_. 
 
-Se il RP non espone all’interno della sua configurazione nessun Trust Mark riconoscibile per il profilo di RP (vedi Sezione :ref:`Trust Mark<Trust_Mark>`) il Provider DEVE rifiutare l’autorizzazione con un messaggio di errore di tipo *unauthorized_client* conforme alla Linee Guida OpenID Connect SPID. 
+Se il RP non espone all’interno della sua configurazione nessun Trust Mark riconoscibile per il profilo di RP (vedi Sezione :ref:`Trust Mark<Trust_Mark>`) il Provider DEVE rifiutare l’autorizzazione con un messaggio di errore di tipo *unauthorized_client*.
 
 Se il Provider convalida con successo almeno un Trust Mark per il profilo RP contenuto all’interno della configurazione del RP richiedente, estrae le entità superiori contenute nel claim **authority_hints** ed avvia la fase di Metadata Discovery. Ne consegue il calcolo della **Trust Chain** e l’ottenimento del metadata finale.
 
 Durante il Metadata Discovery, il Provider richiede ad una o più di una entità superiore [2]_ l’Entity Statement relativo al RP e ottiene la chiave pubblica con la quale valida la configurazione del RP, fino a giungere al Trust Anchor. Infine applica la politica dei metadata pubblicata dal Trust Anchor e salva il risultante metadata finale del RP associandolo ad una data di scadenza, oltre la quale rinnoverà il metadata secondo le modalità di rinnovo della Trust Chain.
 
-Ottenuto il metadata finale, il Provider valida la richiesta del RP secondo le modalità definite all’interno delle Linee Guida OpenID Connect SPID. 
+Ottenuto il metadata finale, il Provider valida la richiesta del RP secondo le modalità definite all’interno delle linee guida della Federazione. 
 
 Nei casi in cui un RP avesse come entità superiore un SA e non direttamente la TA, la procedura di acquisizione e validazione dell’Entity Configuration del RP avviene mediante l’Entity Statement pubblicato dal SA nei confronti del RP e mediante la convalida dell’Entity Configuration del SA con l’Entity Statement emesso dalla TA in relazione al SA. Se la soglia del massimo numero di intermediari verticali, definita dal valore di **max_path_length**, venisse superata, l’OP blocca il processo di Metadata Discovery e rigetta la richiesta del RP.
 
