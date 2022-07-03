@@ -81,16 +81,19 @@ L’oggetto request DEVE essere un token JWT firmato, secondo le modalità defin
      - Metodo di costruzione del challenge PKCE. È obbligatorio specificare il valore **S256**
      - |check-icon|
    * - **nonce**
-     - Stringa di almeno 32 caratteri alfanumerici. Valore che serve ad evitare attacchi Reply, generato casualmente e non prevedibile da terzi. Questo valore sarà restituito nell’ID Token fornito dal Token Endpoint, in modo da consentire al client di verificare che sia uguale a quello inviato nella richiesta di autenticazione.
+     - Stringa di almeno 32 caratteri alfanumerici, generata casualmente dal Client e finalizzata a mitigare attacchi replay.
+       Questo valore sarà restituito nell’ID Token fornito dal Token Endpoint, in modo da consentire al client di verificare
+       che sia uguale a quello inviato nella richiesta di autenticazione.
      - |check-icon|
    * - **prompt**
-     - Definisce se l’OP deve occuparsi di eseguire una richiesta di autenticazione all’utente o meno.
+     - Definisce come l’OP deve richiedere l’autenticazione all’utente.
        
-       **consent**: l’OP chiederà le credenziali di autenticazione all’utente (se non è già attiva una sessione 
-       di Single Sign-On) e successivamente chiederà il consenso al trasferimento degli attributi (valore consigliato). Se è già attiva una sessione di Single Sign-On, chiederà il consenso al trasferimento degli attributi.
+       **consent** (valore consigliato): Se non è già attiva una sessione di Single Sign-On, 
+       l’OP fa una richiesta di autenticazione all’utente.
+       Quindi chiede il consenso al trasferimento degli attributi. 
 
-       **consent login**: l’OP chiederà sempre le credenziali di autenticazione all’utente e successivamente
-       chiederà il consenso al trasferimento degli attributi (valore da utilizzarsi limitatamente ai casi in cui si vuole forzare la riautenticazione).
+       **consent login**: l’OP forza una richiesta di autenticazione all’utente.
+       Quindi chiede il consenso al trasferimento degli attributi. 
 
      - |check-icon|
    * - **redirect_uri**
