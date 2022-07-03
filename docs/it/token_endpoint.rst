@@ -79,9 +79,9 @@ L’unico metodo di autenticazione all’endpoint token previsto è il private_k
 	 
 	 **aud**: URL del Token Endpoint dell’OP
 	 
-	 **iat**: data/ora in cui è stato rilasciato il JWT in formato NumericDate, come indicato in RFC 7519 JSON Web Token (JWT). 
+	 **iat**: UNIX Timestamp con l’istante di generazione del JWT, codificato come NumericDate come indicato in :rfc:`7519`. 
 	 
-	 **exp**: data/ora di scadenza della request in formato NumericDate, come indicato in RFC 7519 – JSON Web Token (JWT). 
+	 **exp**: UNIX Timestamp con l’istante di scadenza del JWT, codificato come NumericDate come indicato in :rfc:`7519`
 	 
 	 **jti**: Identificatore univoco per questa richiesta di autenticazione, generato dal client casualmente con almeno 128bit di entropia.
      - |check-icon|
@@ -213,8 +213,8 @@ L’ID Token è un JSON Web Token (JWT) che contiene informazioni sull’utente 
 	    } 
      - 
    * - **exp**
-     - UNIX Timestamp. Data/ora di scadenza del token in formato NumericDate, come indicato in RFC 7519 – JSON Web Token (JWT), secondo le modalità definite dall’Agenzia per l’Italia Digitale.
-     - 
+     - UNIX Timestamp con l’istante di scadenza del JWT, codificato come NumericDate come indicato in :rfc:`7519`
+     - |check-icon|
    * - **jti** 
      - String. Identificatore unico dell’ID Token che il client più utilizzare per prevenirne il riuso, rifiutando l’ID Token se già processato. Deve essere di difficile individuazione da parte di un attaccante e composto da una stringa casuale.
      - 

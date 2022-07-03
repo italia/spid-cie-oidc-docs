@@ -241,8 +241,8 @@ DEVE essere una richiesta HTTP che usa il metodo GET e lo schema https verso uno
      - String. Identifica il TM
      - |uncheck-icon|
    * - **iat**
-     - UNIX Timestamp. Identifica quanto il TM è stato emesso. Se non viene specificato **iat** e l’emettitore del TM ha emesso diversi TM con l’**id** specificato nella richiesta all’entità specificata da **sub**, allora si assume che sia l’ultimo.
-     - |uncheck-icon|
+     - UNIX Timestamp con l’istante di generazione del JWT, codificato come NumericDate come indicato in :rfc:`7519`
+     - |check-icon| 
 
 
 Segue un esempio non normativo di richiesta che usa **sub** e **id**:

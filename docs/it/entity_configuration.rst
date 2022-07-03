@@ -40,10 +40,10 @@ Entity Configuration comuni
      - String. Identificativo del soggetto a cui è riferito. 
      - |check-icon|
    * - **iat**
-     - UNIX Timestamp. Sata di emissione. 
-     - |check-icon|
+     - UNIX Timestamp con l’istante di generazione del JWT, codificato come NumericDate come indicato in :rfc:`7519`
+     - |check-icon| 
    * - **exp**
-     - UNIX Timestamp. Data di scadenza.
+     - UNIX Timestamp con l’istante di scadenza del JWT, codificato come NumericDate come indicato in :rfc:`7519`.
      - |check-icon|
    * - **jwks**
      - Un JSON Web Key Set (JWKS) :rfc:`7517` che rappresenta la parte pubblica delle chiavi di firma dell’entità interessata. Ogni JWK nel set JWK DEVE avere un ID chiave (claim kid).

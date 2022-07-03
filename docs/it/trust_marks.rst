@@ -63,13 +63,13 @@ Gli attributi definiti all’interno dei TM aderiscono a quanto definito all’i
         es. non normativo: ``https://registry.servizicie.interno.gov.it/openid_relying_party/public/``
       - |check-icon|
     * - **iat**
-      - UNIX Timestamp. Quando è stato emesso questo marchio di fiducia. Espresso come “Seconds Since the Epoch” :rfc:`7519`.
+      - UNIX Timestamp con l’istante di geerazione del JWT, codificato come NumericDate come indicato in :rfc:`7519`
       - |check-icon|
     * - **logo_uri**
       - String. Un URL che punta al logo rappresentante il Trust Mark.
       - |check-icon|
     * - **exp**
-      - UNIX Timestamp. Momento oltre il quale non sarà più valido. Espresso come “Seconds Since the Epoch” :rfc:`7519` e corrispondente o inferiore alla durata della validità della convenzione amministrativa di adesione alla Federazione.
+      - UNIX Timestamp con l’istante di scadenza del JWT, codificato come NumericDate come indicato in :rfc:`7519`
       - |check-icon|
     * - **ref**
       - String. URL che punta a informazioni presenti sul web relative a questo marchio di fiducia

@@ -136,12 +136,10 @@ L’oggetto request DEVE essere un token JWT firmato, secondo le modalità defin
      - Lista di codici RFC5646 separati da spazi. Lingue preferibili per visualizzare le pagine dell’OP. L’OP può ignorare questo parametro se non dispone di nessuna delle lingue indicate.
      - |uncheck-icon|	
    * - **exp**
-     - UNIX Timestamp con l’istante di scadenza del JWT, codificato come NumericDate come indicato in
-       `RFC7519 - JSON Web Token (JWT) <https://www.rfc-editor.org/rfc/rfc7519.html>`_
+     - UNIX Timestamp con l’istante di scadenza del JWT, codificato come NumericDate come indicato in :rfc:`7519`
      - |check-icon| 
    * - **iat**
-     - UNIX Timestamp con l’istante di geerazione del JWT, codificato come NumericDate come indicato in
-       `RFC7519 - JSON Web Token (JWT) <https://www.rfc-editor.org/rfc/rfc7519.html>`_
+     - UNIX Timestamp con l’istante di generazione del JWT, codificato come NumericDate come indicato in :rfc:`7519`
      - |check-icon| 
    * - **iss**
      - Stringa. Identificatore dell’emittente dell’OP che ha creato l’Authentication Response. 
@@ -149,7 +147,7 @@ L’oggetto request DEVE essere un token JWT firmato, secondo le modalità defin
        usino lo stesso identificatore di emittente
      - |check-icon|
    * - **aud**
-     - Strinnga. Deve corrispondere all’Identificatore del soggetto destinatario.
+     - Stringa. Deve corrispondere all’Identificatore del soggetto destinatario.
      - |check-icon|
    * - **typ**
      - Ove fosse assente, viene considerato *JWT* come definito da :rfc:`7519#section-5.1`

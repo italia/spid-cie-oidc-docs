@@ -93,8 +93,8 @@ L’Introspection Endpoint risponde con un oggetto JSON definito come segue.
      - Lista degli scope richiesti al momento dell’Authorization Request
      - 
    * - **exp**
-     - UNIX Timestamp. Scadenza del token.
-     - 
+     - UNIX Timestamp con l’istante di scadenza del JWT, codificato come NumericDate come indicato in :rfc:`7519`
+     - |check-icon|
    * - **sub**
      - String. Identificatore del soggetto, coincidente con quello già rilasciato nell’ID Token. 
        Il RP deve verificare che il valore coincida con quello contenuto nell’ID Token.
