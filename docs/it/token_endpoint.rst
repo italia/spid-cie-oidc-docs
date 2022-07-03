@@ -196,10 +196,10 @@ L’ID Token è un JSON Web Token (JWT) che contiene informazioni sull’utente 
      - Hash dell’Access Token. Il suo valore è la codifica base64url della prima metà dell’hash del valore access_token, usando l’algoritmo di hashing indicato in **alg** nell’header dell’ID Token. Il client è tenuto a verificare che questo valore corrisponda all’*access token* restituito insieme all’ID Token.
      - 
    * - **iat** 
-     - UNIX Timestamp. Data/ora di emissione del token in formato NumericDate, come indicato in :rfc:`7519#JWT`.
+     - UNIX Timestamp con l’istante di generazione del JWT, codificato come NumericDate come indicato in :rfc:`7519`
      - 
    * - **nbf** 
-     - UNIX Timestamp. Data/ora di inizio validità del token in formato NumericDate, come indicato in RFC 7519–JSON Web Token (JWT). Deve corrispondere con il valore di **iat**.
+     - UNIX Timestamp. Data/ora di inizio validità del JWT in formato NumericDate, come indicato in :rfc:`7519`. Deve corrispondere con il valore di **iat**.
 
        .. code-block:: 
 	   
