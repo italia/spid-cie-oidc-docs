@@ -44,20 +44,13 @@ Se un OP nei propri metadata non ha i claim **client_registration_types_supporte
      - |uncheck-icon|
    * - **request_authentication_methods_supported**
      - Un oggetto JSON con membri che rappresentano metodi di richiesta autenticazione e come valori liste di metodi di
-       richieste di autenticazione che sono supportati dall’authorization endpoint.
+       richieste di autenticazione che sono supportati dall’Authorization Endpoint.
      - |uncheck-icon|
    * - **organization_name**
      - Un nome leggibile che rappresenta l’organizzazione proprietaria dell’OP. 
      - |check-icon|
-   * - **jwks**
-     - JSON Web Key Set :rfc:`7517#appendix-A.1`
-     - |check-icon| in assenza del claim **signed_jwks_uri**. 
-   * - **signed_jwks_uri**
-     - Un URI che punta a un JWT firmato che come payload il JWK Set dell’entità (vedere esempio sotto). 
-       Il JWT è firmato con una chiave inclusa nel JWK che l’entità ha pubblicato nel suo Entity Statement autofirmato.
-     - |uncheck-icon|
    * - **issuer**
-     - Un URL HTTPS URL che l’OP dichiara come l’identificatore del proprio emettitore e corrisponde all’URL base.
+     - URL HTTPS che identifica univocamente l’OP all'interno della Federazione.
      - |check-icon|
    * - **authorization_endpoint**
      - URL HTTPS dell’Authorization Endpoint dell’OP, al quale gli RP sono rediretti per iniziare il flusso 
@@ -78,9 +71,16 @@ Se un OP nei propri metadata non ha i claim **client_registration_types_supporte
    * - **revocation_endpoint**
      - URL HTTPS del Revocation Endpoint dell’OP, che gli RP possono usare per revocare gli Access Token e/o i Refresh Token già rilasciati.
      - |check-icon|
+   * - **jwks**
+     - JSON Web Key Set :rfc:`7517#appendix-A.1`
+     - |check-icon| in assenza del claim **signed_jwks_uri**. 
    * - **jwks_uri**
-     - URL del JSON Web Key Set (JWKS) dell’OP, che contiene la/le chiavi di cifratura/decifratura che l’RP deve usare.
+     - URL del JSON Web Key Set (JWKS) dell’OP, che contiene la/le chiavi pubbliche di cifratura/decifratura che l’RP deve usare.
      - |check-icon|
+   * - **signed_jwks_uri**
+     - Un URI che punta a un JWT firmato che come payload il JWK Set dell’entità (vedere esempio sotto). 
+       Il JWT è firmato con una chiave inclusa nel JWK che l’entità ha pubblicato nel suo Entity Statement autofirmato.
+     - |uncheck-icon|
    * - **response_types_supported**
      - JSON Array che contiene una lista di *response_type* supportati dall’OP.
      - |check-icon|
@@ -152,7 +152,7 @@ Se un OP nei propri metadata non ha i claim **client_registration_types_supporte
      - Valore booleano chje indica se l’OP supporta l’utilizzo del parametro *claims*. Deve valere *true*
      - |check-icon|
    * - **federation_resolve_endpoint**
-     - String. Url presso il quale è possibile ottenere i trust mark validati, il metadata finale e la Trust Chain, 
+     - String. Url presso il quale è possibile ottenere i Trust Mark validati, il metadata finale e la Trust Chain, 
        relativamente ad un soggetto.
      - |check-icon| 
 

@@ -14,7 +14,7 @@ Seguono i termini utilizzati da `OIDC-FED#Section_1.2`_ e in questo documento.
         di registrazione e riconoscimento dei partecipanti. Si tratta di un **Trust Anchor** (la radice del *trust*). 
     * - **Trust Anchor**
       - Un’Autorità della Federazione, che rappresenta una terza parte fidata e può delegare altre Autorità della Federazione
-        (**intermediari**) a portare avanti l’**onboarding** delle **foglie**.
+        (**intermediari**) a eseguire l’**onboarding** delle **foglie**.
     * - **intermediario**
       - Soggetto Aggregatore (SA), facilita l’ingresso nella Federazione e PUÒ gestire le funzionalità per conto di un 
         suo discendente (Aggregato). Pubblica la propria configurazione all’interno della Federazione e le affermazioni di riconoscimento delle parti sue discendenti (Aggregati) secondo le regole definite dalla Federazione.
@@ -41,7 +41,7 @@ Seguono i termini utilizzati da `OIDC-FED#Section_1.2`_ e in questo documento.
     * - **Onboarding**
       - Procedura di registrazione di una nuova entità all’interno della Federazione SPID e CIE
     * - **Federation Endpoint**
-      - Endpoint usati per prendere e risolvere gli statement delle entità, interrogare una lista di tutte le entità subordinate e verificare lo stato dei trust mark.
+      - Endpoint usati per prendere e risolvere gli statement delle entità, interrogare una lista di tutte le entità subordinate e verificare lo stato dei Trust Mark.
 
 Acronimi 
 --------

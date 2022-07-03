@@ -55,8 +55,7 @@ La richiesta al Revocation Endpoint consiste nell’invio del token che si vuole
      - String. **urn:ietf:params:oauth:clientassertion-type:jwt-bearer**
      - 
    * - **client_id**
-     - URI che identifica univocamente il RP come da Registro SPID. 
-       L’OP deve verificare che il client_id sia noto.
+     - URL HTTPS che identifica univocamente il RP come da Registro SPID. 
      - 
    * - **token**
      - Il token su cui il RP vuole ottenere informazioni.

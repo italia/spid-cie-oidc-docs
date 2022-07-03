@@ -32,7 +32,7 @@ L’oggetto **federation_entity** è composto dai seguenti claim
      - String. Url presso il quale è possibile ottenere la lista dei discendenti in formato JSON.
      - |check-icon| 
    * - **federation_resolve_endpoint**
-     - String. Url presso il quale è possibile ottenere i trust mark validati, il metadata finale e la Trust Chain, 
+     - String. Url presso il quale è possibile ottenere i Trust Mark validati, il metadata finale e la Trust Chain, 
        relativamente ad un soggetto.
      - |check-icon| 
    * - **federation_status_endpoint**

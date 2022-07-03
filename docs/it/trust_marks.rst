@@ -26,7 +26,7 @@ Esistono due modi per validare un Trust Mark:
 
  2. Validazione **dinamica**. I partecipanti della federazione possono interrogare l’endpoint :ref:`trust mark status<Trust_mark_status_endpoint>` erogato dal suo emittente (attributo iss) per la verifica in tempo reale dei TM da lui emessi. 
 
-Tutti gli emittenti di Trust Mark DEVONO esporre un endpoint di trust mark status per consentire la validazione **dinamica**.
+Tutti gli emittenti di Trust Mark DEVONO esporre un endpoint di Trust Mark status per consentire la validazione **dinamica**.
 
 .. seealso:: 
 

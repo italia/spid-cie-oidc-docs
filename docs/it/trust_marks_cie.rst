@@ -4,7 +4,7 @@
 Trust Mark per CIE
 ++++++++++++++++++
 
-Nello scenario CIE, un TM viene firmato dalla TA **MinInterno** o suoi intermediari (SA) o Gestori Qualificati di Attributi (AA) che giocano il ruolo di entità Risorse Protette OAuth - un’entità che agisce come AA all’interno del sistema della Federazione CIE, può essere visto come un tipo di entità Risorsa Protetta OAuth, in accordo a `OIDC-FED#Section.4.5`_) e DEVONO essere incluse nella richiesta (attributo) dei TM della configurazione di entità delle foglie (RP e OP) e di intermediari (SA). La presenza di un TM è necessaria prima di iniziare una scoperta di metadata (vedere sezione), altrimenti la federazione può essere soddisfatta da aggressori che cercano di propagare attacchi. 
+Nello scenario CIE, un TM viene firmato dalla TA **MinInterno** o suoi intermediari (SA) o Gestori Qualificati di Attributi (AA) che giocano il ruolo di entità Risorse Protette OAuth - un’entità che agisce come AA all’interno del sistema della Federazione CIE, può essere visto come un tipo di entità Risorsa Protetta OAuth, in accordo a `OIDC-FED#Section.4.5`_) e DEVONO essere incluse nella richiesta (attributo) dei TM della configurazione di entità delle foglie (RP e OP) e di intermediari (SA). La presenza di un TM è necessaria prima di iniziare una procedura di Metadata Discovery (vedere sezione), altrimenti la Federazione può essere soddisfatta da aggressori che cercano di propagare attacchi. 
 
 
 
@@ -48,7 +48,7 @@ Profili dei Trust Mark
 Si possono definire svariati profili in accordo agli specifici bisogni delle FA e della TA. Nella CIE FED, durante la fase
 di Onboarding, DEVONO essere emessi almeno i seguenti *trustmark_profile*:
 
- - **public**: l’entità nel claim *sub* appartiene alla pubblica amministrazione italiana
+ - **public**: l’entità nel claim *sub* appartiene alla pubblica amministrazione italiana.
  - **private**: l’entità nel claim *sub* appartiene al settore privato.
 
 La tabella seguente riassume tutti i profili disponibili supportati per tutte le entità coinvolte nella CIE FED

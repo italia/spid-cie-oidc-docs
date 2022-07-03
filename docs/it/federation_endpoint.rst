@@ -11,7 +11,7 @@ Un **FA** (**SA** o **TA**) DEVE, in aggiunta, offrire i seguenti endpoint:
 
  - il *fetch entity statement endpoint* per andare a prendere un FA riguardo ad una subordinata, ottenendo così un entity statement (vedi sezione :ref:`Prelevare Entity Statement<fetching_entity_statements>`)  
  - il *resolve entity statement endpoint* per ottenere una vista di un’altra entità (il risulutore) (vedi sezione :ref:`Risolvere Entity Statements<resolve_entity_statements>`), e
- - il *trust mark introspection endpoint* per ottenere, da parte dell’emittente del trust mark, una vista dello stato del trust mark (vedere sezione :ref:`Stato del Trust Mark<trust_mark_status>`)
+ - il *trust mark introspection endpoint* per ottenere, da parte dell’emittente del Trust Mark, una vista dello stato del Trust Mark (vedere sezione :ref:`Stato del Trust Mark<trust_mark_status>`)
  - l’*entity listing endpoint* per ottenere una lista di tutte le subordinate di un’entità (vedere sezione :ref:`Elenchi di Entità<entity_listings>`)
 
 
@@ -80,11 +80,9 @@ La richiesta DEVE essere una richiesta HTTP che usa il metodo GET ed ha i seguen
      - String. L’identificatore di entità dell’emettitore dal quale si vuole l’emissione dell’ES. A causa della normalizzazione dell’URL, più emettitori POSSONO puntare ad un Fetch Endpoint condiviso. Questo claim esplicita esattamente da quale emettitore si vuole l’ES. Senza questo claim l’emettitore coincide con l’entità alla quale è stata fatta la richiesta.
      - |uncheck-icon|
    * - **sub**
-     - String. L’identificatore di entità del soggetto per il quale si vuole l’emissione dell’ES. Senza questo claim, la richiesta di statement si considera inviata a se stesso.
+     - String. L’identificatore di entità del soggetto per il quale si vuole l’emissione dell’ES.
      - |uncheck-icon|
-   * - **aud**
-     - String. L’identificatore di entità del richiedente. Se **aud** è presente nella richiesta, il claim **aud** DOVREBBE essere presente nella risposta dell’ES e prendere lo stesso valore. 
-     - |uncheck-icon|
+
 
 Il seguente è un esempio non normativo di una richiesta API per un ES:
 
@@ -145,7 +143,7 @@ La richiesta DEVE essere una richiesta HTTP che usa un metodo GET e lo schema ht
      - **Descrizione**
      - **Obbligatorio**
    * - **sub**
-     - String. L’identificatore di entità dell’entità di cui sono richiuesti i dati risolti
+     - String. L’identificatore di entità dell’entità di cui sono richiesti i dati risolti
      - |check-icon|
    * - **anchor**
      - String. Il TA che il peer remoto DEVE usare nella risoluzione dei metadata. Il valore è un identificatrore di entità.
@@ -414,8 +412,8 @@ Advanced Entity Listings Response
 Generic Error Response
 ++++++++++++++++++++++
 
-Se la richiesta è malformata o avvengo errori durante l’elaborazione della richiesta, DOVREBBE essere utilizzato il seguente formato di errore indipendentemente dall’operazione specificata.
-La risposta HTTP DEVE essere qualcosa nell’intervallo 400/500, che dia un’indicazione del tipo di errori. Il corpo della risposta DEVE essere un oggetto JSON contenente i claim qui sotto riportati e il tipo di contenuto DEVE essere impostato a **application/json**.
+Se la richiesta è malformata o avvengono errori durante l’elaborazione della richiesta, DOVREBBE essere utilizzato il seguente formato di errore indipendentemente dall’operazione specificata.
+La risposta HTTP DEVE essere avere un codice nell’intervallo 400/500, che dia un’indicazione del tipo di errori. Il corpo della risposta DEVE essere un oggetto JSON contenente i claim qui sotto riportati e il tipo di contenuto DEVE essere impostato a **application/json**.
 
 
 .. list-table:: 

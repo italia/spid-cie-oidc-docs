@@ -99,7 +99,7 @@ Dove un RP non disponesse all’interno dei propri metadata dei claim **client_r
        **Token Endpoint**. Deve contenere i soli valori **authorization_code** e **refresh_token**.
      - |check-icon|
    * - **federation_resolve_endpoint**
-     - String. Url presso il quale è possibile ottenere i trust mark validati, il metadata finale e la Trust Chain, 
+     - String. Url presso il quale è possibile ottenere i Trust Mark validati, il metadata finale e la Trust Chain, 
        relativamente ad un soggetto.
      - |check-icon| 
 
