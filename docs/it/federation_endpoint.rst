@@ -77,13 +77,13 @@ La richiesta DEVE essere una richiesta HTTP che usa il metodo GET ed ha i seguen
      - **Descrizione**
      - **Obbligatorio**
    * - **iss**
-     - String. L’identificatore di entità dell’emettitore dal quale si vuole l’emissione dell’ES. A causa della normalizzazione dell’URL, più emettitori POSSONO puntare ad un Fetch Endpoint condiviso. Questo parametro esplicita esattamente da quale emettitore si vuole l’ES. Senza questo parametro l’emettitore coincide con l’entità alla quale è stata fatta la richiesta.
+     - String. L’identificatore di entità dell’emettitore dal quale si vuole l’emissione dell’ES. A causa della normalizzazione dell’URL, più emettitori POSSONO puntare ad un Fetch Endpoint condiviso. Questo claim esplicita esattamente da quale emettitore si vuole l’ES. Senza questo claim l’emettitore coincide con l’entità alla quale è stata fatta la richiesta.
      - |uncheck-icon|
    * - **sub**
-     - String. L’identificatore di entità del soggetto per il quale si vuole l’emissione dell’ES. Senza questo parametro, la richiesta di statement si considera inviata a se stesso.
+     - String. L’identificatore di entità del soggetto per il quale si vuole l’emissione dell’ES. Senza questo claim, la richiesta di statement si considera inviata a se stesso.
      - |uncheck-icon|
    * - **aud**
-     - String. L’identificatore di entità del richiedente. Se **aud** è presente nella richiesta, il parametro **aud** DOVREBBE essere presente nella risposta dell’ES e prendere lo stesso valore. 
+     - String. L’identificatore di entità del richiedente. Se **aud** è presente nella richiesta, il claim **aud** DOVREBBE essere presente nella risposta dell’ES e prendere lo stesso valore. 
      - |uncheck-icon|
 
 Il seguente è un esempio non normativo di una richiesta API per un ES:
@@ -154,7 +154,7 @@ La richiesta DEVE essere una richiesta HTTP che usa un metodo GET e lo schema ht
      - Un tipo specifico di metadata da risolvere. Se assente, allora ci si aspetta che tutti i tipi di metadata vengano ritornati.
      - |uncheck-icon|
    * - **iss**
-     - String. L’identificatore dell’entità che sta richiedendo le informazioni. Se questo parametro è presente nella richiesta, allora DEVE essere presente nella risposta nel parametro aud/jose del JWT firmato.
+     - String. L’identificatore dell’entità che sta richiedendo le informazioni. Se questo claim è presente nella richiesta, allora DEVE essere presente nella risposta nel claim aud del JWT firmato.
      - |uncheck-icon|
 
 

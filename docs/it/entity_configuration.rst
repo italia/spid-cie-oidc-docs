@@ -67,10 +67,10 @@ Entity Configuration comuni
   All’interno dell’EC i valori degli attributi **iss** e **sub** contengono il medesimo valore (URL).
 
 
-Entity Configuration Foglia e Intermediari
+Entity Configuration Foglia e intermediari
 ++++++++++++++++++++++++++++++++++++++++++
 
-Gli EC delle entità Foglia e Intermediari, in aggiunta ai claim precedentemente definiti, contengono anche i seguenti claim:
+Gli EC delle entità Foglia e intermediari, in aggiunta ai claim precedentemente definiti, contengono anche i seguenti claim:
 
 .. list-table::
    :widths: 20 60 20

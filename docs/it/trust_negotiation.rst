@@ -17,7 +17,7 @@ Il RP applica infine le politiche pubblicate dal Trust Anchor sui metadata del O
 
 Ottenuti i metadata finali di tutti i Provider SPID, il RP genera lo SPID Button e lo pubblica all’interno della pagina di autenticazione destinata agli utenti.
 
-La procedura di Metadata Discovery risulta semplificata per i RP SPID perché non è consentita all’interno della Federazione l’esistenza di Intermediari tra gli OP ed il loro Trust Anchor
+La procedura di Metadata Discovery risulta semplificata per i RP SPID perché non è consentita all’interno della Federazione l’esistenza di intermediari tra gli OP ed il loro Trust Anchor
 
 
 .. image:: ../../images/metadata_discovery.svg
@@ -59,7 +59,7 @@ Nei casi in cui un RP avesse come entità superiore un SA e non direttamente la 
 .. image:: ../../images/trust_anchor.svg
     :width: 100%
 
-*Ogni partecipante espone la propria configurazione e i propri Trust Mark. Il collegamento tra una Foglia e il Trust Anchor avviene in maniera diretta oppure mediante un Intermediario (Soggetto Aggregatore) come in Figura.*
+*Ogni partecipante espone la propria configurazione e i propri Trust Mark. Il collegamento tra una Foglia e il Trust Anchor avviene in maniera diretta oppure mediante un intermediario (Soggetto Aggregatore) come in Figura.*
 
 
 Accesso alla Entity Configuration

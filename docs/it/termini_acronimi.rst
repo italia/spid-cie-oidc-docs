@@ -14,8 +14,8 @@ Seguono i termini utilizzati da `OIDC-FED#Section_1.2`_ e in questo documento.
         di registrazione e riconoscimento dei partecipanti. Si tratta di un **Trust Anchor** (la radice del *trust*). 
     * - **Trust Anchor**
       - Un’Autorità della Federazione, che rappresenta una terza parte fidata e può delegare altre Autorità della Federazione
-        (**Intermediari**) a portare avanti l’**onboarding** delle **Foglie**.
-    * - **Intermediario**
+        (**intermediari**) a portare avanti l’**onboarding** delle **Foglie**.
+    * - **intermediario**
       - Soggetto Aggregatore (SA), facilita l’ingresso nella Federazione e PUÒ gestire le funzionalità per conto di un 
         suo discendente (Aggregato). Pubblica la propria configurazione all’interno della Federazione e le affermazioni di riconoscimento delle parti sue discendenti (Aggregati) secondo le regole definite dalla Federazione.
     * - **Foglia**
@@ -25,7 +25,7 @@ Seguono i termini utilizzati da `OIDC-FED#Section_1.2`_ e in questo documento.
     * - **Entity configuration**
       - Dichiarazione di un’entità, emessa per proprio conto, nella forma di JWT auto firmato :rfc:`7515` e contenente la sua configurazione. Contiene le chiavi pubbliche di Federazione, i metadata OIDC, gli URL delle autorità sue superiori e i Trust Mark emessi da autorità riconoscibili nella Federazione che attestano l’aderenza del soggetto a determinati profili.
     * - **Entity statement**
-      - Dichiarazione di riconoscimento emessa da un’entità superiore (Trust Anchor o Intermediario) riguardante un’entità discendente (RP, OP o Intermediario) in formato JWT firmato :rfc:`7515`, contenente la chiave pubblica del soggetto discendente, i Trust Mark emessi per i quali è emittente e la politica dei metadata da applicare ai metadata del soggetto.
+      - Dichiarazione di riconoscimento emessa da un’entità superiore (Trust Anchor o intermediario) riguardante un’entità discendente (RP, OP o intermediario) in formato JWT firmato :rfc:`7515`, contenente la chiave pubblica del soggetto discendente, i Trust Mark emessi per i quali è emittente e la politica dei metadata da applicare ai metadata del soggetto.
     * - **Trust Mark**
       - JWT firmato :rfc:`7515` dall’ente emittente e relativo ad un partecipante. Attesta la conformità di questo ai profili riconoscibili all’interno Federazione (RP pubblico o privato, Soggetto Aggregatore Pubblico o Privato, etc.). La foglia che acquisisce il marchio di fiducia durante la fase di onboarding DEVE includere questo nella sua Entity Configuration a mo’ di Badge di riconoscimento.
     * - **Metadata**
@@ -33,7 +33,7 @@ Seguono i termini utilizzati da `OIDC-FED#Section_1.2`_ e in questo documento.
     * - **Metadata policy**
       - Il Trust Anchor pubblica le regole e le politiche da applicare sui metadata dei discendenti, specificando quali valori o sottoinsiemi di valori sono consentiti per un dato parametro di metadata.
     * - **Authority hint**
-      - Un array di valori url corrispondenti agli identificativi delle entità superiori, Trust Anchor o Intermediario, che DEVONO emettere un Entity Statement per i propri discendenti.
+      - Un array di valori url corrispondenti agli identificativi delle entità superiori, Trust Anchor o intermediario, che DEVONO emettere un Entity Statement per i propri discendenti.
     * - **Metadata Discovery**
       - Raccolta di Entity Configuration e Statement. Inizia da un’entità foglia fino al raggiungimento del Trust Anchor.
     * - **Trust Chain**

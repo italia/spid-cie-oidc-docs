@@ -21,7 +21,7 @@ Numero Massimo di authority_hints
 
 All’interno di una Federazione il Trust Anchor decide quante intermediazioni consentire tra di lui e le Foglie, mediante la constraint denominata **max_path_lenght**. Questo tipo di relazione è di tipo verticale, dalla foglia alla radice. Questo attributo se valorizzato ad esempio con un valore numerico intero pari a 1 indica che soltanto un SA è consentito tra una Foglia e il TA.
 
-Ogni Foglia DEVE pubblicare i suoi superiori all’interno della lista contenuta nel claim **authority_hints**. Una Foglia all’interno della Federazione PUÒ avere superiori afferenti a diverse Federazioni, si pensi a CIE id per esempio. L’analisi dei superiori disponibili introduce un modello di navigazione orizzontale, ad esempio un OP tenta di trovare il percorso più breve verso il Trust Anchor attraverso tutti gli URL contenuti all’interno dell’array **authority_hints** prima di fare un ulteriore movimento verticale, a salire, verso uno degli Intermediari presenti in questo array.
+Ogni Foglia DEVE pubblicare i suoi superiori all’interno della lista contenuta nel claim **authority_hints**. Una Foglia all’interno della Federazione PUÒ avere superiori afferenti a diverse Federazioni, si pensi a CIE id per esempio. L’analisi dei superiori disponibili introduce un modello di navigazione orizzontale, ad esempio un OP tenta di trovare il percorso più breve verso il Trust Anchor attraverso tutti gli URL contenuti all’interno dell’array **authority_hints** prima di fare un ulteriore movimento verticale, a salire, verso uno degli intermediari presenti in questo array.
 
 La soglia **max_path_lenght** si applica per la navigazione verticale e superata questa soglia senza aver trovato il TA la procedura di Metadata Discovery DEVE essere interrotta. Si faccia l’esempio di un RP discendente di un 1 SA che quest’ultimo a sua volta è discendente di  un altro SA, essendo il valore di **max_path_lenght** pari a uno e superata questa soglia senza aver trovato il Trust Anchor, la procedura DEVE essere interrotta.
 
@@ -57,4 +57,4 @@ In questa maniera dopo il limite massimo di durata delle Trust Chain, definito c
 Periodo di grazia per le Trust Chain scadute
 ++++++++++++++++++++++++++++++++++++++++++++
 
-L’Autorità di Federazione o il suo Intermediario PUÒ pubblicare una politica dei metadata (vedi `OIDC-FED#Section.5.1`_) per forzare la modifica dei metadata OIDC della Foglia, nelle parti in cui questo fosse necessario.
+L’Autorità di Federazione o il suo intermediario PUÒ pubblicare una politica dei metadata (vedi `OIDC-FED#Section.5.1`_) per forzare la modifica dei metadata OIDC della Foglia, nelle parti in cui questo fosse necessario.

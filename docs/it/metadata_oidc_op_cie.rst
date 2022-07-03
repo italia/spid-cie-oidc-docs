@@ -41,7 +41,7 @@ Segue la tabella dei claim specifici  per la Federazione CIE.
 Claim Utente per CIE
 ^^^^^^^^^^^^^^^^^^^^
 
-Per identificare con successo l’utente, CIE OIDC ha identificato un unsieme di **claim utente**. La maggio
+Per identificare con successo l’utente, CIE OIDC ha identificato un unsieme di **claim utente**. La maggior
 parte sono presi dai claim utente definiti in `iGov.OIDC`_ (vedi Tabella 1) e in `OpenID.IDA`_ (vedi Tabella 2). 
 Un sottoinsieme di essi è personalizzato ed è stato introdotto per lo scenario CIE (vedi Tabella 3).
 
