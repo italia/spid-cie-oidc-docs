@@ -38,10 +38,10 @@ reindirizza l’utente con i seguenti parametri:
      - **Descrizione**
      - **Obbligatorio**
    * - **code**
-     - Codice univoco di autorizzazione (*authorization code*) che il client poi passerà al Token Endpoint, secondo le modalità definite dall’Agenzia per l’Italia Digitale.
+     - codice univoco di autorizzazione (*Authorization Code*) che il client può passare al Token Endpoint per ottenere un ID Token e un Access Token. Questo ha il vantaggio di non esporre alcun token allo User Agent ed eventualmente a malware con accesso allo User Agent. 
      - 
    * - **state**
-     - Valore state incluso nell’Authentication request. Il client è tenuto a verificarne la corrispondenza. Deve essere lo stesso valore indicato dal client nella Authorization Request.
+     - Valore state incluso nell’*Authentication Request*. Il client è tenuto a verificarne la corrispondenza. Deve essere lo stesso valore indicato dal client nella Authorization Request.
      - 
 
 
