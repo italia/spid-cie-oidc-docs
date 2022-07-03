@@ -14,7 +14,7 @@ Seguono i termini utilizzati da `OIDC-FED#Section_1.2`_ e in questo documento.
         di registrazione e riconoscimento dei partecipanti. Si tratta di un **Trust Anchor** (la radice del *trust*). 
     * - **Trust Anchor**
       - Un’Autorità della Federazione, che rappresenta una terza parte fidata e può delegare altre Autorità della Federazione
-        (**intermediari**) a portare avanti l’**onboarding** delle **Foglie**.
+        (**intermediari**) a portare avanti l’**onboarding** delle **foglie**.
     * - **intermediario**
       - Soggetto Aggregatore (SA), facilita l’ingresso nella Federazione e PUÒ gestire le funzionalità per conto di un 
         suo discendente (Aggregato). Pubblica la propria configurazione all’interno della Federazione e le affermazioni di riconoscimento delle parti sue discendenti (Aggregati) secondo le regole definite dalla Federazione.

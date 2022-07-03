@@ -19,7 +19,7 @@ L’OP DEVE validare staticamente il TM oppure DEVE escludere a priori la richie
 Numero Massimo di authority_hints
 +++++++++++++++++++++++++++++++++
 
-All’interno di una Federazione il Trust Anchor decide quante intermediazioni consentire tra di lui e le Foglie, mediante la constraint denominata **max_path_lenght**. Questo tipo di relazione è di tipo verticale, dalla foglia alla radice. Questo attributo se valorizzato ad esempio con un valore numerico intero pari a 1 indica che soltanto un SA è consentito tra una Foglia e il TA.
+All’interno di una Federazione il Trust Anchor decide quante intermediazioni consentire tra di lui e le foglie, mediante la constraint denominata **max_path_lenght**. Questo tipo di relazione è di tipo verticale, dalla foglia alla radice. Questo attributo se valorizzato ad esempio con un valore numerico intero pari a 1 indica che soltanto un SA è consentito tra una Foglia e il TA.
 
 Ogni Foglia DEVE pubblicare i suoi superiori all’interno della lista contenuta nel claim **authority_hints**. Una Foglia all’interno della Federazione PUÒ avere superiori afferenti a diverse Federazioni, si pensi a CIE id per esempio. L’analisi dei superiori disponibili introduce un modello di navigazione orizzontale, ad esempio un OP tenta di trovare il percorso più breve verso il Trust Anchor attraverso tutti gli URL contenuti all’interno dell’array **authority_hints** prima di fare un ulteriore movimento verticale, a salire, verso uno degli intermediari presenti in questo array.
 

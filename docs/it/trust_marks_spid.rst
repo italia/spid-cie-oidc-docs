@@ -35,7 +35,7 @@ Di seguito un esempio non normativo dell’oggetto **trust_marks_issuers** all�
 Esempi di Trust Mark SPID
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-I TM emessi per le Foglie DEVONO essere pubblicati dalle Foglie stesse nelle proprie **Entity Configuration**, all’interno dell’attributo **trust_marks**. Questo è composto da liste di oggetti JSON, ognuno dei quali DEVE contenere almeno gli attributi **id** e **trust_mark**, il primo identifica il TM, il secondo contiene il JWT firmato del TM.
+I TM emessi per le foglie DEVONO essere pubblicati dalle foglie stesse nelle proprie **Entity Configuration**, all’interno dell’attributo **trust_marks**. Questo è composto da liste di oggetti JSON, ognuno dei quali DEVE contenere almeno gli attributi **id** e **trust_mark**, il primo identifica il TM, il secondo contiene il JWT firmato del TM.
 
 Di seguito un esempio non normativo dell’oggetto **trust_marks** all’interno della Entity Configuration di una Foglia di tipo RP.
 
