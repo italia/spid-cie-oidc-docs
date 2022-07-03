@@ -143,7 +143,7 @@ L’ID Token deve essere formato secondo le indicazioni del paragrafo successivo
      - Il *refresh token*, in formato JWT firmato, consente di chiamare nuovamente il Token Endpoint per ottenere un nuovo *access token* e quindi recuperare una `sessione lunga revocabile`_.
      - 
    * - **expires_in**
-     - UNIX Timestamp. Scadenza dell’*access token*, in secondi, secondo le modalità definite dall’Agenzia per l’Italia Digitale.
+     - Scadenza dell’*access token* in secondi.
      - 
    * - **id_token**
      - ID Token in formato JWT (v. paragrafo successivo)
