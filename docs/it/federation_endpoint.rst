@@ -272,7 +272,7 @@ essere impostato a **application/json**:
      - **Descrizione**
      - **Obbligatorio**
    * - **active**
-     - Boolean. Inndica ae il TM è attivo o no.
+     - Boolean. Indica ae il TM è attivo o no.
      - |check-icon|
 
 
