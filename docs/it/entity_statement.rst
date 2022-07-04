@@ -17,7 +17,7 @@ Vedere :ref:`Firma di Entity Configuration<firma_EC>`
 Metadata di Federazione
 +++++++++++++++++++++++
 
-OIDC Federation definisce i metadata di federazione contenenti le informazioni di seguito definite, e i metadata OIDC per 
+OIDC Federation definisce i Metadata di federazione contenenti le informazioni di seguito definite, e i Metadata OIDC per 
 ogni tipo di entità.
 
 
@@ -34,7 +34,7 @@ Gli ES emessi dal TA o da un suo Intermediario per i propri diretti discendenti,
      - **Descrizione**
      - **Obbligatorio**
    * - **metadata_policy**
-     - JSON Object che descrive un criterio di metadata. Ogni chiave dell'oggetto JSON rappresenta un identificatore del tipo di metadata e ogni valore DEVE essere un oggetto JSON che rappresenta la politica dei metadata in base allo schema di quel tipo di metadata. Si rimanda alla specifica `OIDC-FED#Section.5.1`_ per i dettagli implementativi.
+     - JSON Object che descrive un criterio di Metadata. Ogni chiave dell'oggetto JSON rappresenta un identificatore del tipo di Metadata e ogni valore DEVE essere un oggetto JSON che rappresenta la politica dei Metadata in base allo schema di quel tipo di Metadata. Si rimanda alla specifica `OIDC-FED#Section.5.1`_ per i dettagli implementativi.
      - |check-icon|
    * - **trust_marks**
      - JSON Array contenente i Trust Mark emessi da se stesso per il soggetto discendente.

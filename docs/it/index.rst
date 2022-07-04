@@ -16,7 +16,7 @@ pubblici e privati (RP), Identity Providers (OP) e Soggetti Aggregatori (SA).
 
 Contiene inoltre le risorse necessarie per aderire ai sistemi di identità nazionali:
 
- - gli esempi pratici dei metadata, delle richieste e delle risposte HTTP,
+ - gli esempi pratici dei Metadata, delle richieste e delle risposte HTTP,
  - come effettuare la registrazione automatica dei RP presso gli OpenID Provider, 
  - come un OpenID Provider riconosce e registra dinamicamente un RP,
  - come utilizzare gli endpoint della API della Federazione.

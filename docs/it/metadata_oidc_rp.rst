@@ -3,7 +3,7 @@
 OpenID Connect Relying Party Metadata (RP)
 ++++++++++++++++++++++++++++++++++++++++++
 
-È il metadata che i RP pubblicano con l'identificativo **openid_relying_party**, come segue.
+È il Metadata che i RP pubblicano con l'identificativo **openid_relying_party**, come segue.
 
 .. code-block:: 
 
@@ -16,7 +16,7 @@ OpenID Connect Relying Party Metadata (RP)
  }
 
 
-Dove un RP non disponesse all'interno dei propri metadata dei claim **client_registration_types** i valori da intendersi come impliciti sono i seguenti.
+Dove un RP non disponesse all'interno dei propri Metadata dei claim **client_registration_types** i valori da intendersi come impliciti sono i seguenti.
 
 .. list-table:: 
    :widths: 20 60 20
@@ -99,7 +99,7 @@ Dove un RP non disponesse all'interno dei propri metadata dei claim **client_reg
        **Token Endpoint**. Deve contenere i soli valori **authorization_code** e **refresh_token**.
      - |check-icon|
    * - **federation_resolve_endpoint**
-     - String. Url presso il quale è possibile ottenere i Trust Mark validati, il metadata finale e la Trust Chain, 
+     - String. Url presso il quale è possibile ottenere i Trust Mark validati, il Metadata finale e la Trust Chain, 
        relativamente ad un soggetto.
      - |check-icon| 
 

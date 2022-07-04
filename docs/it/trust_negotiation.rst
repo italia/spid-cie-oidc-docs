@@ -3,7 +3,7 @@
 Trust negotiation
 -----------------
 
-In questa sezione vi sono illustrate le modalità di mutuo riconoscimento tra RP e OP, le modalità con le quali le foglie della Federazione SPID si riconoscono all'interno della medesima Federazione e ottengono gli uni i metadata degli altri.
+In questa sezione vi sono illustrate le modalità di mutuo riconoscimento tra RP e OP, le modalità con le quali le foglie della Federazione SPID si riconoscono all'interno della medesima Federazione e ottengono gli uni i Metadata degli altri.
 
 
 Relying Party
@@ -13,14 +13,14 @@ Il RP ottiene la lista degli OP in formato JSON interrogando l':ref:`endpoint li
 
 Per ogni EC degli OP, il RP verifica la firma del contenuto adoperando la chiave pubblica ottenuta dall'Entity Statement rilasciato dalla Trust Anchor. Verificata la firma dell'Entity Configuration con la chiave pubblica pubblicata dalla Trust Anchor, la fiducia è stabilita nei confronti del OP da parte del RP. 
 
-Il RP applica infine le politiche pubblicate dal Trust Anchor sui metadata del OP e salva il metadata finale associandolo ad una data di scadenza (claim **exp**). La data di scadenza corrisponde al valore di **exp** più basso ottenuto da tutti gli elementi che compongono la **Trust Chain**. Periodicamente il RP aggiorna i metadata di tutti gli OP rinnovando la Trust Chain relativa a questi.
+Il RP applica infine le politiche pubblicate dal Trust Anchor sui Metadata del OP e salva il Metadata finale associandolo ad una data di scadenza (claim **exp**). La data di scadenza corrisponde al valore di **exp** più basso ottenuto da tutti gli elementi che compongono la **Trust Chain**. Periodicamente il RP aggiorna i Metadata di tutti gli OP rinnovando la Trust Chain relativa a questi.
 
-Ottenuti i metadata finali di tutti i OpenID Connect Provider, il RP genera lo SPID Button e lo pubblica all'interno della pagina di autenticazione destinata agli utenti.
+Ottenuti i Metadata finali di tutti i OpenID Connect Provider, il RP genera lo SPID Button e lo pubblica all'interno della pagina di autenticazione destinata agli utenti.
 
 La procedura di Metadata Discovery risulta semplificata per i RP SPID perché non è consentita all'interno della Federazione l'esistenza di Intermediari tra gli OP ed il loro Trust Anchor
 
 
-.. image:: ../../images/metadata_discovery.svg
+.. image:: ../../images/Metadata_discovery.svg
     :width: 100%
 
 *La procedura di Metadata Discovery a partire dalla Foglia fino al Trust Anchor. Si noti come dall'Entity Statement rilasciato da un superiore si ottiene la chiave pubblica per la validazione dell'Entity Configuration dell'entità discendente.*
@@ -42,11 +42,11 @@ L'OP estrae l'identificativo univoco (**client_id**) dall'oggetto *request* cont
 
 Se il RP non espone all'interno della sua configurazione nessun Trust Mark riconoscibile per il profilo di RP (vedi Sezione :ref:`Trust Mark<Trust_Mark>`) il Provider DEVE rifiutare l'autorizzazione con un messaggio di errore di tipo *unauthorized_client*.
 
-Se il Provider convalida con successo almeno un Trust Mark per il profilo RP contenuto all'interno della configurazione del RP richiedente, estrae le entità superiori contenute nel claim **authority_hints** ed avvia la fase di Metadata Discovery. Ne consegue il calcolo della **Trust Chain** e l'ottenimento del metadata finale.
+Se il Provider convalida con successo almeno un Trust Mark per il profilo RP contenuto all'interno della configurazione del RP richiedente, estrae le entità superiori contenute nel claim **authority_hints** ed avvia la fase di Metadata Discovery. Ne consegue il calcolo della **Trust Chain** e l'ottenimento del Metadata finale.
 
-Durante il Metadata Discovery, il Provider richiede ad una o più di una entità superiore [2]_ l'Entity Statement relativo al RP e ottiene la chiave pubblica con la quale valida la configurazione del RP, fino a giungere al Trust Anchor. Infine applica la politica dei metadata pubblicata dal Trust Anchor e salva il risultante metadata finale del RP associandolo ad una data di scadenza, oltre la quale rinnoverà il metadata secondo le modalità di rinnovo della Trust Chain.
+Durante il Metadata Discovery, il Provider richiede ad una o più di una entità superiore [2]_ l'Entity Statement relativo al RP e ottiene la chiave pubblica con la quale valida la configurazione del RP, fino a giungere al Trust Anchor. Infine applica la politica dei Metadata pubblicata dal Trust Anchor e salva il risultante Metadata finale del RP associandolo ad una data di scadenza, oltre la quale rinnoverà il Metadata secondo le modalità di rinnovo della Trust Chain.
 
-Ottenuto il metadata finale, il Provider valida la richiesta del RP secondo le modalità definite all'interno delle linee guida della Federazione. 
+Ottenuto il Metadata finale, il Provider valida la richiesta del RP secondo le modalità definite all'interno delle linee guida della Federazione. 
 
 Nei casi in cui un RP avesse come entità superiore un SA e non direttamente la TA, la procedura di acquisizione e validazione dell'Entity Configuration del RP avviene mediante l'Entity Statement pubblicato dal SA nei confronti del RP e mediante la convalida dell'Entity Configuration del SA con l'Entity Statement emesso dalla TA in relazione al SA. Se la soglia del massimo numero di Intermediari verticali, definita dal valore di **max_path_length**, venisse superata, l'OP blocca il processo di Metadata Discovery e rigetta la richiesta del RP.
 

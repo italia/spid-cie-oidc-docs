@@ -3,12 +3,12 @@
 OpenID Connect Provider Metadata (OP)
 +++++++++++++++++++++++++++++++++++++
 
-È il metadata che gli OP pubblicano con l'identificativo **openid_provider**, come segue.
+È il Metadata che gli OP pubblicano con l'identificativo **openid_provider**, come segue.
 
 .. code-block:: 
 
  {
-     "metadata":{
+     "Metadata":{
          "openid_provider":{
              ...
          }
@@ -16,7 +16,7 @@ OpenID Connect Provider Metadata (OP)
  }
 
 
-Se un OP nei propri metadata non ha i claim **client_registration_types_supported** e/o **request_authentication_methods_supported** i valori da intendersi come impliciti sono i seguenti. 
+Se un OP nei propri Metadata non ha i claim **client_registration_types_supported** e/o **request_authentication_methods_supported** i valori da intendersi come impliciti sono i seguenti. 
 
 .. list-table:: 
    :widths: 20 60 20
@@ -152,14 +152,14 @@ Se un OP nei propri metadata non ha i claim **client_registration_types_supporte
      - Valore booleano chje indica se l'OP supporta l'utilizzo del parametro *claims*. Deve valere *true*
      - |check-icon|
    * - **federation_resolve_endpoint**
-     - String. Url presso il quale è possibile ottenere i Trust Mark validati, il metadata finale e la Trust Chain, 
+     - String. Url presso il quale è possibile ottenere i Trust Mark validati, il Metadata finale e la Trust Chain, 
        relativamente ad un soggetto.
      - |check-icon| 
 
 
 
 .. seealso:: 
-   - `OpenID.Discovery#OP_metadata`_
+   - `OpenID.Discovery#OP_Metadata`_
 
 
 

@@ -3,7 +3,7 @@
 OpenID Connect Federation Entity Metadata (FA)
 ++++++++++++++++++++++++++++++++++++++++++++++
 
-È il metadata che il Trust Anchor, o suo Intermediario, pubblica con l'identificativo **federation_entity**, come segue.
+È il Metadata che il Trust Anchor, o suo Intermediario, pubblica con l'identificativo **federation_entity**, come segue.
 
 .. code-block:: 
 
@@ -32,7 +32,7 @@ L'oggetto **federation_entity** è composto dai seguenti claim
      - String. Url presso il quale è possibile ottenere la lista dei discendenti in formato JSON.
      - |check-icon| 
    * - **federation_resolve_endpoint**
-     - String. Url presso il quale è possibile ottenere i Trust Mark validati, il metadata finale e la Trust Chain, 
+     - String. Url presso il quale è possibile ottenere i Trust Mark validati, il Metadata finale e la Trust Chain, 
        relativamente ad un soggetto.
      - |check-icon| 
    * - **federation_status_endpoint**

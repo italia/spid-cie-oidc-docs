@@ -6,21 +6,21 @@
 Entity Configuration
 --------------------
 
-Un **Entity Configuration (EC)** è un metadata di federazione in formato Jose e firmato dal soggetto che lo emette e riguardante se stesso.
+Un **Entity Configuration (EC)** è un Metadata di federazione in formato Jose e firmato dal soggetto che lo emette e riguardante se stesso.
 
 .. _firma_EC:
 
 Firma di Configuration
 ++++++++++++++++++++++
 
-La firma dei JWT :rfc:`7515` avviene mediante l'algoritmo RSA SHA-256 (RS256). Tutti i partecipanti della Federazione DEVONO supportare questo algoritmo di firma. Tutte le operazioni di firma relative agli ES, EC e TM sono eseguite con le chiavi pubbliche di Federazione (distinguiamo le chiavi di Federazione da quelle di OIDC Core. Questi ultimi risiedono nei metadata OIDC. Un ES o EC contiene sia le chiavi pubbliche di Federazione che i metadata OIDC).
+La firma dei JWT :rfc:`7515` avviene mediante l'algoritmo RSA SHA-256 (RS256). Tutti i partecipanti della Federazione DEVONO supportare questo algoritmo di firma. Tutte le operazioni di firma relative agli ES, EC e TM sono eseguite con le chiavi pubbliche di Federazione (distinguiamo le chiavi di Federazione da quelle di OIDC Core. Questi ultimi risiedono nei Metadata OIDC. Un ES o EC contiene sia le chiavi pubbliche di Federazione che i Metadata OIDC).
 
 
 Metadata di Federazione
 +++++++++++++++++++++++
 
-OIDC Federation definisce i metadata di federazione contenenti le informazioni di seguito indicate 
-e i metadata OIDC per ogni tipo di entità.
+OIDC Federation definisce i Metadata di federazione contenenti le informazioni di seguito indicate 
+e i Metadata OIDC per ogni tipo di entità.
 
 
 Entity Configuration comuni
@@ -49,10 +49,10 @@ Entity Configuration comuni
      - Un JSON Web Key Set (JWKS) :rfc:`7517` che rappresenta la parte pubblica delle chiavi di firma dell'entità interessata. Ogni JWK nel set JWK DEVE avere un ID chiave (claim kid).
      - |check-icon|
    * - **metadata**
-     - JSON Object. Ogni chiave dell'oggetto JSON rappresenta un identificatore del tipo di metadata e ogni
-       valore DEVE essere un oggetto JSON che rappresenta i metadata secondo lo schema di metadata di quel tipo. 
+     - JSON Object. Ogni chiave dell'oggetto JSON rappresenta un identificatore del tipo di Metadata e ogni
+       valore DEVE essere un oggetto JSON che rappresenta i Metadata secondo lo schema di Metadata di quel tipo. 
 
-       Una configurazione di entità PUÒ contenere più dichiarazioni di metadata, ma solo una per ogni tipo di metadata (<**entity_type**>). 
+       Una configurazione di entità PUÒ contenere più dichiarazioni di Metadata, ma solo una per ogni tipo di Metadata (<**entity_type**>). 
 
        I tipi consentiti sono i seguenti:
 

@@ -31,7 +31,7 @@ Allo stesso tempo la specifica OIDC Federation 1.0 non definisce un limite per i
 Resolve Entity Statement
 ++++++++++++++++++++++++
 
-Questo endpoint DEVE rilasciare i metadata, i Trust Mark e la Trust Chain già precedentemente elaborata e NON DEVE innescare una procedura di Metadata Discovery ad ogni richiesta pervenuta.
+Questo endpoint DEVE rilasciare i Metadata, i Trust Mark e la Trust Chain già precedentemente elaborata e NON DEVE innescare una procedura di Metadata Discovery ad ogni richiesta pervenuta.
 
 
 Buone Pratiche
@@ -45,10 +45,10 @@ Specializzare le chiavi pubbliche OpenID Core e Federation
 
 È buona pratica usare chiavi pubbliche specializzate per i due tipi di operazioni, Core e Federation.
 
-Modalità di aggiornamento dei metadata OpenID Core
+Modalità di aggiornamento dei Metadata OpenID Core
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
-L'interoperabilità tra i partecipanti funziona mediante i metadata ottenuti dal calcolo e dalla conservazione delle Trust Chain. Questo significa che se un OP al tempo T calcola la Trust Chain per un RP e questo al tempo T+n modifica i propri metadata, l'OP di conseguenza potrebbe incorrere in problematiche di validazione delle richieste di autorizzazione del RP, fino a quando non avrà aggiornato la Trust Chain relativa a questo.
+L'interoperabilità tra i partecipanti funziona mediante i Metadata ottenuti dal calcolo e dalla conservazione delle Trust Chain. Questo significa che se un OP al tempo T calcola la Trust Chain per un RP e questo al tempo T+n modifica i propri Metadata, l'OP di conseguenza potrebbe incorrere in problematiche di validazione delle richieste di autorizzazione del RP, fino a quando non avrà aggiornato la Trust Chain relativa a questo.
 
 La buona pratica per evitare le interruzioni di servizio relative alle operazioni di OIDC Core è quella di aggiungere le nuove chiavi pubbliche all'interno degli oggetti *jwks* senza rimuovere i valori preesistenti. Oppure, ad esempio, i nuovi *redirect_uri*.
 
@@ -57,4 +57,4 @@ In questa maniera dopo il limite massimo di durata delle Trust Chain, definito c
 Periodo di grazia per le Trust Chain scadute
 ++++++++++++++++++++++++++++++++++++++++++++
 
-L'Autorità di Federazione o il suo Intermediario PUÒ pubblicare una politica dei metadata (vedi `OIDC-FED#Section.5.1`_) per forzare la modifica dei metadata OIDC della Foglia, nelle parti in cui questo fosse necessario.
+L'Autorità di Federazione o il suo Intermediario PUÒ pubblicare una politica dei Metadata (vedi `OIDC-FED#Section.5.1`_) per forzare la modifica dei Metadata OIDC della Foglia, nelle parti in cui questo fosse necessario.

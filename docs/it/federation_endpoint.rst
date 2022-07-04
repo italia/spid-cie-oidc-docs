@@ -127,7 +127,7 @@ Per esempi di $ENTITY_STATEMENT vedere la sezione :ref:`Esempi di Entity Stateme
 Risolvere i Metadata di Federazione
 +++++++++++++++++++++++++++++++++++
 
-Un'entità PUÒ usare il resolve endpoint per prelevare metadata risolti e TM per un'entità vista/fidata da parte del risolutore (cioè la visione del risolutore di un'altra entità). Ci si aspetta che il risolutore prelevi l'ES autofirmato dei soggetti, prelevi una Trust Chain che inizia con l'ES dei soggetti e finisce con il TA specificato, verifichi la Trust Chain e quindi applichi tutte le politiche presenti nella Trust Chain ai metadata degli ES. Ciu si aspetta anche che il risolutore verifichi che i TM presenti siano attivi. Se trova TM non attivi, allora quelli dovrebbero essere lasciati fuori dall'insieme di risposta.
+Un'entità PUÒ usare il resolve endpoint per prelevare Metadata risolti e TM per un'entità vista/fidata da parte del risolutore (cioè la visione del risolutore di un'altra entità). Ci si aspetta che il risolutore prelevi l'ES autofirmato dei soggetti, prelevi una Trust Chain che inizia con l'ES dei soggetti e finisce con il TA specificato, verifichi la Trust Chain e quindi applichi tutte le politiche presenti nella Trust Chain ai Metadata degli ES. Ci si aspetta anche che il risolutore verifichi che i TM presenti siano attivi. Se trova TM non attivi, allora quelli dovrebbero essere lasciati fuori dall'insieme di risposta.
 
 
 Resolve Endpoint Request
@@ -146,10 +146,10 @@ La richiesta DEVE essere una richiesta HTTP che usa un metodo GET e lo schema ht
      - String. L'identificatore di entità dell'entità di cui sono richiesti i dati risolti
      - |check-icon|
    * - **anchor**
-     - String. Il TA che il peer remoto DEVE usare nella risoluzione dei metadata. Il valore è un identificatrore di entità.
+     - String. Il TA che il peer remoto DEVE usare nella risoluzione dei Metadata. Il valore è un identificatrore di entità.
      - |check-icon|
    * - **type**
-     - Un tipo specifico di metadata da risolvere. Se assente, allora ci si aspetta che tutti i tipi di metadata vengano ritornati.
+     - Un tipo specifico di Metadata da risolvere. Se assente, allora ci si aspetta che tutti i tipi di Metadata vengano ritornati.
      - |uncheck-icon|
    * - **iss**
      - String. L'identificatore dell'entità che sta richiedendo le informazioni. Se questo claim è presente nella richiesta, allora DEVE essere presente nella risposta nel claim aud del JWT firmato.
@@ -174,7 +174,7 @@ Segue un esempio non normativo di **Resolve request**:
 Resolve Endpoint Response
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Il response è un JWT firmato contenente metadata risolti e TM verificati. Le chiavi usate dal risolutore dovrebbero essere le stesse usate per costruire un ES autofirmato. Questo significa che l'emettitore della richiesta può facilmente trovare e verificare le chiavi di firma del risolutore raccogliendo e verificando l'appropriata Trust Chain.
+Il response è un JWT firmato contenente Metadata risolti e TM verificati. Le chiavi usate dal risolutore dovrebbero essere le stesse usate per costruire un ES autofirmato. Questo significa che l'emettitore della richiesta può facilmente trovare e verificare le chiavi di firma del risolutore raccogliendo e verificando l'appropriata Trust Chain.
 
 Segue un esempio non normativo di risposta, prima di serializzare e aggiungere una firma:
 
