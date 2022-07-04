@@ -16,16 +16,14 @@ SPID e CIE id implementano OpenID Connect Federation 1.0 e ne estendono alcune f
 Perché OIDC Federation
 ++++++++++++++++++++++
 
-La Federazione OIDC è un modello gerarchico basato su un meccanismo di delega dinamica. Il modello di fiducia dietro la Federazione OIDC è:
-
  - **Dinamico**. La fiducia può essere stabilita dinamicamente durante la prima richiesta di autenticazione. 
    Le Autorità della Federazione espongono un endpoint che fornisce "dichiarazioni" firmate riguardo alle entità discendenti, contenenti le loro chiavi pubbliche e la politica dei metadata. In più, le Autorità della Federazione possono disabilitare un’entità nella Federazione in qualsiasi momento, senza esplicite comunicazioni agli altri membri.
  - **Distribuito**. La fiducia viene distribuita fra molte parti. È il verificatore che decide quale percorso prendere per risolvere la fiducia (molte parti e due Autorità di Federazione).
- - **Scalabile**. Riduce significativamente i costi di onboarding, in accordo al principio di delega, con l’istituzione di entità intermediatrici (SA).
+ - **Scalabile**. Riduce significativamente i costi di onboarding, in accordo al principio di delega, con l’istituzione di entità intermediarie (SA).
  - **Trasparente**. Qualsiasi entità coinvolta nella Federazione può in ciascun momento costruire la fiducia autonomamente e in modo sicuro.
 
 .. image:: ../../images/spid_cie_oidc_federation_model.svg
     :width: 100%
 
-*Schema ad albero che rappresenta la struttura della Federazione SPID OIDC. Alla Base le Autorità di Federazione SPID e CIE id e, salendo, gli OP che non hanno intermediari, gli RP e gli intermediari che a loro volta Aggregano altri RP.*
+*Schema ad albero che rappresenta la struttura della Federazione SPID OIDC. Alla Base le Autorità di Federazione SPID e CIE id e, salendo, gli OP che non hanno Intermediari, gli RP e gli Intermediari che a loro volta Aggregano altri RP.*
 

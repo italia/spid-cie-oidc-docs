@@ -4,7 +4,7 @@
 Trust Mark per SPID
 +++++++++++++++++++
 
-I Trust Mark riconoscibili all’interno della Federazione SPID sono emessi e firmati dalla AgID (TA) o suoi intermediari (SA) o Gestori Qualificati di Attributi (AA), se definiti all’interno dell’attributo **trust_marks_issuers** pubblicato all’interno dell’Entity Configuration del TA. Ogni partecipante DEVE esporre nella propria configurazione (EC) i TM rilasciati dalle autorità emittenti. 
+I Trust Mark riconoscibili all’interno della Federazione SPID sono emessi e firmati dalla AgID (TA) o suoi Intermediari (SA) o Gestori Qualificati di Attributi (AA), se definiti all’interno dell’attributo **trust_marks_issuers** pubblicato all’interno dell’Entity Configuration del TA. Ogni partecipante DEVE esporre nella propria configurazione (EC) i TM rilasciati dalle autorità emittenti. 
 
 
 
@@ -53,7 +53,7 @@ Di seguito un esempio non normativo dell’oggetto **trust_marks** all’interno
 
 
 
-Quello che segue è un esempio non normativo di un marchio di fiducia emesso da AgID per un intermediario privato.
+Quello che segue è un esempio non normativo di un marchio di fiducia emesso da AgID per un Intermediario privato.
 
 .. code-block::
 
@@ -84,7 +84,7 @@ Dove il contenuto del JWT firmato all’interno dell’attributo **trust_mark** 
 
 
 
-Un’entità intermediaria o Soggetto Aggregatore (SA) è riconoscibile come emettitore di Trust Mark. Quello che segue è un esempio non normativo di un Trust Mark emesso da un SA a favore di un RP suo discendente.
+Un’entità Intermediaria o Soggetto Aggregatore (SA) è riconoscibile come emettitore di Trust Mark. Quello che segue è un esempio non normativo di un Trust Mark emesso da un SA a favore di un RP suo discendente.
 
 .. code-block::
 

@@ -24,7 +24,7 @@ ogni tipo di entità.
 Entity Statement
 ++++++++++++++++
 
-Gli ES emessi dal TA o da un suo intermediario per i propri diretti discendenti, contengono anche i seguenti attributi:
+Gli ES emessi dal TA o da un suo Intermediario per i propri diretti discendenti, contengono anche i seguenti attributi:
 
 .. list-table::
    :widths: 20 60 20
