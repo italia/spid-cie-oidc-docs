@@ -16,6 +16,8 @@ I TM sono emessi e firmati, durante il processo di registrazione di una nuova en
 
 Ogni entità partecipante DEVE esporre nella propria configurazione (EC) i TM rilasciati dalle autorità emittenti. 
 
+Nello scenario CIE / SPID, un TM viene firmato dalla TA **MinInterno** e **Agid** rispettivamente o loro Intermediari (SA) o Gestori Qualificati di Attributi (AA). La presenza di un TM è necessaria prima di iniziare una procedura di Metadata Discovery (vedere sezione), altrimenti la Federazione può essere soddisfatta da aggressori che cercano di propagare attacchi. 
+
 
 Validazione dei Trust Mark
 ++++++++++++++++++++++++++

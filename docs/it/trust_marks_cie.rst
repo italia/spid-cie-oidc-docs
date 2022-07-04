@@ -23,7 +23,7 @@ Il registro degli AA è gestito da `LG-AA`_ che è responsabile dell'esecuzione 
       - **Tipo**
       - **Descrizione**
       - **Obbligatorio**
-    * - **attributos**
+    * - **attributes**
       - 
       - attributi utente lookup richiesti dall'AA per fornire gli attributi richiesti.
       - |check-icon|

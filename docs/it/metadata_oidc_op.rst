@@ -32,7 +32,7 @@ Se un OP nei propri metadata non ha i claim **client_registration_types_supporte
      - Un nome leggibile che rappresenta l'organizzazione proprietaria dell'OP. È inteso per l'utilizzo nell'interfaccia
        utente, per essere riconosciuto dagli utenti finali che usano l'OP per autenticarsi. 
 
-       L'unico metodo di richiesta autenticazione supportato **request_object** per le Richieste di Autorizzazione (ar)
+       L'unico metodo di richiesta autenticazione supportato **request_object** per le Richieste di Autorizzazione.
 
        ..code-block::
 
@@ -78,7 +78,7 @@ Se un OP nei propri metadata non ha i claim **client_registration_types_supporte
      - URL del JSON Web Key Set (JWKS) dell'OP, che contiene la/le chiavi pubbliche di cifratura/decifratura che l'RP deve usare.
      - |check-icon|
    * - **signed_jwks_uri**
-     - Un URI che punta a un JWT firmato che come payload il JWK Set dell'entità (vedere esempio sotto). 
+     - Un URL HTTP che punta a un JWT firmato che ha come payload il JWK Set dell'entità (vedere esempio sotto). 
        Il JWT è firmato con una chiave inclusa nel JWK che l'entità ha pubblicato nel suo Entity Statement autofirmato.
      - |uncheck-icon|
    * - **response_types_supported**
@@ -159,7 +159,7 @@ Se un OP nei propri metadata non ha i claim **client_registration_types_supporte
 
 
 .. seealso:: 
-   - `OIDC-FED#OP_metadata`_
+   - `OpenID.Discovery#OP_metadata`_
 
 
 
