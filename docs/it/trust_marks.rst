@@ -16,7 +16,26 @@ I TM sono emessi e firmati, durante il processo di registrazione di una nuova en
 
 Ogni entità partecipante DEVE esporre nella propria configurazione (EC) i TM rilasciati dalle autorità emittenti. 
 
-Nello scenario CIE / SPID, un TM viene firmato dalla TA **MinInterno** e **Agid** rispettivamente o loro Intermediari (SA) o Gestori Qualificati di Attributi (AA). La presenza di un TM è necessaria prima di iniziare una procedura di Metadata Discovery (vedere sezione), altrimenti la Federazione può essere soddisfatta da aggressori che cercano di propagare attacchi. 
+Nello scenario CIE / SPID, un TM viene firmato dal TA **MinInterno** e **Agid** rispettivamente o loro Intermediari (SA) o Gestori Qualificati di Attributi (AA). La presenza di un TM è necessaria prima di iniziare una procedura di Metadata Discovery (vedere sezione), altrimenti la Federazione può essere soddisfatta da aggressori che cercano di propagare attacchi. 
+
+Il TA definisce i soggetti abilitati all'emissione dei TM riconoscibili all'interno della Federazione, mediante il claim **trust_marks_issuers**, presente all'interno del proprio Entity Configuration. Il valore dell'attributo **trust_marks_issuers** è composto da un oggetto JSON avente come chiavi gli id dei TM e come valori la lista degli emittenti abilitati.
+
+Di seguito un esempio non normativo dell'oggetto **trust_marks_issuers** all'interno della Entity Configuration del TA.
+
+.. code-block::
+
+ {
+     "trust_marks_issuers":{
+         "https://registry.agid.gov.it/openid_relying_party/public/":[
+             "https://registry.spid.agid.gov.it/",
+             "https://public.intermediary.spid.it/"
+         ],
+         "https://registry.agid.gov.it/openid_relying_party/private/":[
+             "https://registry.spid.agid.gov.it/",
+             "https://private.other.intermediary.it/"
+         ]
+     }
+ }
 
 
 Validazione dei Trust Mark

@@ -4,9 +4,7 @@
 Trust Mark per CIE
 ++++++++++++++++++
 
-Nello scenario CIE, un TM viene firmato dalla TA **MinInterno** o suoi Intermediari (SA) o Gestori Qualificati di Attributi (AA) che giocano il ruolo di entità Risorse Protette OAuth - un'entità che agisce come AA all'interno del sistema della Federazione CIE, può essere visto come un tipo di entità Risorsa Protetta OAuth, in accordo a `OIDC-FED#Section.4.5`_) e DEVONO essere incluse nella richiesta (attributo) dei TM della configurazione di entità delle Foglie (RP e OP) e di Intermediari (SA). La presenza di un TM è necessaria prima di iniziare una procedura di Metadata Discovery (vedere sezione), altrimenti la Federazione può essere soddisfatta da aggressori che cercano di propagare attacchi. 
-
-
+TBD esempi non normativi
 
 Trust Mark Attribute Authority CIE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

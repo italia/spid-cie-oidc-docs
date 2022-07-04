@@ -4,33 +4,7 @@
 Trust Mark per SPID
 +++++++++++++++++++
 
-I Trust Mark riconoscibili all'interno della Federazione SPID sono emessi e firmati dalla AgID (TA) o suoi Intermediari (SA) o Gestori Qualificati di Attributi (AA), se definiti all'interno dell'attributo **trust_marks_issuers** pubblicato all'interno dell'Entity Configuration del TA. Ogni partecipante DEVE esporre nella propria configurazione (EC) i TM rilasciati dalle autorità emittenti. 
-
-
-
-Pubblicatori dei Trust Mark SPID
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-La TA definisce i TM e gli emettitori abilitati dalla Federazione, mediante il claim **trust_marks_issuers**, presente all'interno del proprio Entity Configuration. Il valore dell'attributo **trust_marks_issuers** è composto da un oggetto JSON avente come chiavi gli id dei TM e come valori la lista degli emittenti abilitati.
-
-Di seguito un esempio non normativo dell'oggetto **trust_marks_issuers** all'interno della Entity Configuration del TA.
-
-.. code-block::
-
- {
-     "trust_marks_issuers":{
-         "https://registry.agid.gov.it/openid_relying_party/public/":[
-             "https://registry.spid.agid.gov.it/",
-             "https://public.intermediary.spid.it/"
-         ],
-         "https://registry.agid.gov.it/openid_relying_party/private/":[
-             "https://registry.spid.agid.gov.it/",
-             "https://private.other.intermediary.it/"
-         ]
-     }
- }
-
-
+TBD esempi non normativi
 
 Esempi di Trust Mark SPID
 ^^^^^^^^^^^^^^^^^^^^^^^^^
