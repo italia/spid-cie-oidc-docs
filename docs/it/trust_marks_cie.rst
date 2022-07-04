@@ -14,28 +14,23 @@ Il registro degli AA è gestito da `LG-AA`_ che è responsabile dell'esecuzione 
 
 
 .. list-table::
-    :widths: 20 20 40 20
+    :widths: 20 60 20
     :header-rows: 1
 
     * - **Claim**
-      - **Tipo**
       - **Descrizione**
       - **Obbligatorio**
     * - **attributes**
-      - 
-      - attributi utente lookup richiesti dall'AA per fornire gli attributi richiesti.
+      - attributi utente utilizzati dall'AA per le operazioni di lookup.
       - |check-icon|
     * - **service_documentation**
-      - String
-      - È un URL contenente la documentazione OAS riferita all' AA in the attributo *sub*, come definito in `LG-AA`_).
+      - String. È un URL contenente la documentazione OAS riferita all' AA in the attributo *sub*, come definito in `LG-AA`_).
       - |uncheck-icon|
     * - **policy_uri**
-      - String
-      - URL ad una politica di privacy di AA
+      - String. URL ad una politica di privacy di AA
       - |check-icon|
     * - **tos_uri**
-      - String
-      - URL ad una info policy di AA
+      - String. URL ad una info policy di AA
       - |uncheck-icon|
 
 
