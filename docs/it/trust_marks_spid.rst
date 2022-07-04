@@ -4,16 +4,16 @@
 Trust Mark per SPID
 +++++++++++++++++++
 
-I Trust Mark riconoscibili all’interno della Federazione SPID sono emessi e firmati dalla AgID (TA) o suoi Intermediari (SA) o Gestori Qualificati di Attributi (AA), se definiti all’interno dell’attributo **trust_marks_issuers** pubblicato all’interno dell’Entity Configuration del TA. Ogni partecipante DEVE esporre nella propria configurazione (EC) i TM rilasciati dalle autorità emittenti. 
+I Trust Mark riconoscibili all'interno della Federazione SPID sono emessi e firmati dalla AgID (TA) o suoi Intermediari (SA) o Gestori Qualificati di Attributi (AA), se definiti all'interno dell'attributo **trust_marks_issuers** pubblicato all'interno dell'Entity Configuration del TA. Ogni partecipante DEVE esporre nella propria configurazione (EC) i TM rilasciati dalle autorità emittenti. 
 
 
 
 Pubblicatori dei Trust Mark SPID
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-La TA definisce i TM e gli emettitori abilitati dalla Federazione, mediante il claim **trust_marks_issuers**, presente all’interno del proprio Entity Configuration. Il valore dell’attributo **trust_marks_issuers** è composto da un oggetto JSON avente come chiavi gli id dei TM e come valori la lista degli emittenti abilitati.
+La TA definisce i TM e gli emettitori abilitati dalla Federazione, mediante il claim **trust_marks_issuers**, presente all'interno del proprio Entity Configuration. Il valore dell'attributo **trust_marks_issuers** è composto da un oggetto JSON avente come chiavi gli id dei TM e come valori la lista degli emittenti abilitati.
 
-Di seguito un esempio non normativo dell’oggetto **trust_marks_issuers** all’interno della Entity Configuration del TA.
+Di seguito un esempio non normativo dell'oggetto **trust_marks_issuers** all'interno della Entity Configuration del TA.
 
 .. code-block::
 
@@ -35,9 +35,9 @@ Di seguito un esempio non normativo dell’oggetto **trust_marks_issuers** all�
 Esempi di Trust Mark SPID
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-I TM emessi per le foglie DEVONO essere pubblicati dalle foglie stesse nelle proprie **Entity Configuration**, all’interno dell’attributo **trust_marks**. Questo è composto da liste di oggetti JSON, ognuno dei quali DEVE contenere almeno gli attributi **id** e **trust_mark**, il primo identifica il TM, il secondo contiene il JWT firmato del TM.
+I TM emessi per le foglie DEVONO essere pubblicati dalle foglie stesse nelle proprie **Entity Configuration**, all'interno dell'attributo **trust_marks**. Questo è composto da liste di oggetti JSON, ognuno dei quali DEVE contenere almeno gli attributi **id** e **trust_mark**, il primo identifica il TM, il secondo contiene il JWT firmato del TM.
 
-Di seguito un esempio non normativo dell’oggetto **trust_marks** all’interno della Entity Configuration di una Foglia di tipo RP.
+Di seguito un esempio non normativo dell'oggetto **trust_marks** all'interno della Entity Configuration di una Foglia di tipo RP.
 
 
 .. code-block::
@@ -66,7 +66,7 @@ Quello che segue è un esempio non normativo di un marchio di fiducia emesso da 
      ]
  }
 
-Dove il contenuto del JWT firmato all’interno dell’attributo **trust_mark** corrisponde a:
+Dove il contenuto del JWT firmato all'interno dell'attributo **trust_mark** corrisponde a:
 
 .. code-block::
 
@@ -84,7 +84,7 @@ Dove il contenuto del JWT firmato all’interno dell’attributo **trust_mark** 
 
 
 
-Un’entità Intermediaria o Soggetto Aggregatore (SA) è riconoscibile come emettitore di Trust Mark. Quello che segue è un esempio non normativo di un Trust Mark emesso da un SA a favore di un RP suo discendente.
+Un'entità Intermediaria o Soggetto Aggregatore (SA) è riconoscibile come emettitore di Trust Mark. Quello che segue è un esempio non normativo di un Trust Mark emesso da un SA a favore di un RP suo discendente.
 
 .. code-block::
 
@@ -98,7 +98,7 @@ Un’entità Intermediaria o Soggetto Aggregatore (SA) è riconoscibile come eme
  }
 
 
-Dove il contenuto del JWT firmato all’interno dell’attributo **trust_mark** corrisponde al seguente esempio non normativo.
+Dove il contenuto del JWT firmato all'interno dell'attributo **trust_mark** corrisponde al seguente esempio non normativo.
 
 .. code-block::
 

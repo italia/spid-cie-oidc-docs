@@ -3,13 +3,13 @@
 Authorization Endpoint (Authentication Request)
 -----------------------------------------------
 
-Per avviare il processo di autenticazione, il RP reindirizza l’utente all’Authorization Endpoint dell’OP selezionato, passando in POST o in GET una richiesta avente nel parametro **request** un oggetto in formato JWT.
+Per avviare il processo di autenticazione, il RP reindirizza l'utente all'Authorization Endpoint dell'OP selezionato, passando in POST o in GET una richiesta avente nel parametro **request** un oggetto in formato JWT.
 
 Se viene utilizzato il metodo POST i parametri devono essere trasmessi utilizzando la Form Serialization (OIDC Connect Core 1.0 par. 13.2).
 
-I parametri **client_id**, **response_type** e **scope** DEVONO essere trasmessi sia come parametri sulla chiamata HTTP sia all’interno dell’oggetto request e i loro valori devono corrispondere, in ogni caso i parametri all’interno dell’oggetto request prevalgono su quelli indicati sulla chiamata HTTP.
+I parametri **client_id**, **response_type** e **scope** DEVONO essere trasmessi sia come parametri sulla chiamata HTTP sia all'interno dell'oggetto request e i loro valori devono corrispondere, in ogni caso i parametri all'interno dell'oggetto request prevalgono su quelli indicati sulla chiamata HTTP.
 
-L’oggetto request DEVE essere un token JWT firmato, secondo le modalità definite dall’Agenzia per l’Italia Digitale. 
+L'oggetto request DEVE essere un token JWT firmato, secondo le modalità definite dall'Agenzia per l'Italia Digitale. 
 
 
 **Esempio (chiamata HTTP):**
@@ -82,26 +82,26 @@ L’oggetto request DEVE essere un token JWT firmato, secondo le modalità defin
      - |check-icon|
    * - **nonce**
      - String di almeno 32 caratteri alfanumerici, generata casualmente dal Client e finalizzata a mitigare attacchi replay.
-       Questo valore sarà restituito nell’ID Token fornito dal Token Endpoint, in modo da consentire al client di verificare
+       Questo valore sarà restituito nell'ID Token fornito dal Token Endpoint, in modo da consentire al client di verificare
        che sia uguale a quello inviato nella richiesta di autenticazione.
      - |check-icon|
    * - **prompt**
-     - Definisce come l’OP deve richiedere l’autenticazione all’utente.
+     - Definisce come l'OP deve richiedere l'autenticazione all'utente.
        
        **consent** (valore consigliato): Se non è già attiva una sessione di Single Sign-On, 
-       l’OP fa una richiesta di autenticazione all’utente.
+       l'OP fa una richiesta di autenticazione all'utente.
        Quindi chiede il consenso al trasferimento degli attributi. 
 
-       **consent login**: l’OP forza una richiesta di autenticazione all’utente.
+       **consent login**: l'OP forza una richiesta di autenticazione all'utente.
        Quindi chiede il consenso al trasferimento degli attributi. 
 
      - |check-icon|
    * - **redirect_uri**
-     - URL dove l’OP reindirizzerà l’utente al termine del processo di autenticazione. 
+     - URL dove l'OP reindirizzerà l'utente al termine del processo di autenticazione. 
        Deve essere uno degli URL indicati nel client metadata (v. paragrafo 3.2). 
      - |check-icon|
    * - **response_type**
-     - Il tipo di credenziali che deve restituire l’OP.
+     - Il tipo di credenziali che deve restituire l'OP.
        **code**
      - |check-icon|
    * - **scope**
@@ -109,13 +109,13 @@ L’oggetto request DEVE essere un token JWT firmato, secondo le modalità defin
        
        **openid**: (obbligatorio).
        
-       **offline_access**: se specificato, l’OP rilascerà oltre all’access token anche un refresh token necessario
-       per instaurare sessioni lunghe revocabili. L’uso di questo valore è consentito solo se se si intende offrire all’utente una `sessione lunga revocabile <https://www.agid.gov.it/sites/default/files/repository_files/spid-avviso-n41-integrazione_ll.gg_._openid_connect_in_spid.pdf#page=6>`_.
+       **offline_access**: se specificato, l'OP rilascerà oltre all'access token anche un refresh token necessario
+       per instaurare sessioni lunghe revocabili. L'uso di questo valore è consentito solo se se si intende offrire all'utente una `sessione lunga revocabile <https://www.agid.gov.it/sites/default/files/repository_files/spid-avviso-n41-integrazione_ll.gg_._openid_connect_in_spid.pdf#page=6>`_.
 
      - |check-icon|
    * - **acr_values**
-     - Valori di riferimento della classe di contesto dell’Authentication Request. 
-       String separata da uno spazio, che specifica i valori "acr" richiesti al server di autorizzazione per l’elaborazione della richiesta di autenticazione con i valori indicati in ordine di preferenza. L’OP può utilizzare un’autenticazione ad un livello più alto di quanto richiesto. Tale scelta non deve comportare un esito negativo della richiesta.
+     - Valori di riferimento della classe di contesto dell'Authentication Request. 
+       String separata da uno spazio, che specifica i valori "acr" richiesti al server di autorizzazione per l'elaborazione della richiesta di autenticazione con i valori indicati in ordine di preferenza. L'OP può utilizzare un'autenticazione ad un livello più alto di quanto richiesto. Tale scelta non deve comportare un esito negativo della richiesta.
        Deve contenere per SPID uno o più valori tra i seguenti:
        
        ``https://www.spid.gov.it/SpidL1``
@@ -133,24 +133,24 @@ L’oggetto request DEVE essere un token JWT firmato, secondo le modalità defin
      - Lista dei claims (attributi) che un RP intende richiedere. Vedi paragrafo *Claims*
      - |check-icon|
    * - **state**
-     - String di almeno 32 caratteri alfanumerici. Valore univoco utilizzato per mantenere lo stato tra la request e il callback. Questo valore verrà restituito al client nella risposta al termine dell’autenticazione. Il valore deve essere significativo esclusivamente per il RP e non deve essere intellegibile ad altri.
+     - String di almeno 32 caratteri alfanumerici. Valore univoco utilizzato per mantenere lo stato tra la request e il callback. Questo valore verrà restituito al client nella risposta al termine dell'autenticazione. Il valore deve essere significativo esclusivamente per il RP e non deve essere intellegibile ad altri.
      - |check-icon|
    * - **ui_locales**
-     - Lista di codici RFC5646 separati da spazi. Lingue preferibili per visualizzare le pagine dell’OP. L’OP può ignorare questo parametro se non dispone di nessuna delle lingue indicate.
+     - Lista di codici RFC5646 separati da spazi. Lingue preferibili per visualizzare le pagine dell'OP. L'OP può ignorare questo parametro se non dispone di nessuna delle lingue indicate.
      - |uncheck-icon|	
    * - **exp**
-     - UNIX Timestamp con l’istante di scadenza del JWT, codificato come NumericDate come indicato in :rfc:`7519`
+     - UNIX Timestamp con l'istante di scadenza del JWT, codificato come NumericDate come indicato in :rfc:`7519`
      - |check-icon| 
    * - **iat**
-     - UNIX Timestamp con l’istante di generazione del JWT, codificato come NumericDate come indicato in :rfc:`7519`
+     - UNIX Timestamp con l'istante di generazione del JWT, codificato come NumericDate come indicato in :rfc:`7519`
      - |check-icon| 
    * - **iss**
-     - String. Identificatore dell’emittente dell’OP che ha creato l’Authentication Response. 
-       L’RP DEVE validare questo parametro con precisione e NON DEVE permettere che diversi OP 
+     - String. Identificatore dell'emittente dell'OP che ha creato l'Authentication Response. 
+       L'RP DEVE validare questo parametro con precisione e NON DEVE permettere che diversi OP 
        usino lo stesso identificatore di emittente
      - |check-icon|
    * - **aud**
-     - String. Deve corrispondere all’Identificatore del soggetto destinatario.
+     - String. Deve corrispondere all'Identificatore del soggetto destinatario.
      - |check-icon|
    * - **typ**
      - Ove fosse assente, viene considerato *JWT* come definito da :rfc:`7519#section-5.1`
@@ -168,7 +168,7 @@ L’oggetto request DEVE essere un token JWT firmato, secondo le modalità defin
 Claim
 +++++
 
-Il parametro claims definisce gli attributi richiesti dal **RP**. Gli attributi SPID sono richiesti all’interno dell’elemento "userinfo", elencando gli attributi da richiedere come chiavi di oggetti JSON, i cui valori devono essere indicati come {"essential": true} o secondo le modalità definite dall’Agenzia per l’Italia Digitale. Non è possibile richiedere attributi SPID nell’id_token. Gli
+Il parametro claims definisce gli attributi richiesti dal **RP**. Gli attributi SPID sono richiesti all'interno dell'elemento "userinfo", elencando gli attributi da richiedere come chiavi di oggetti JSON, i cui valori devono essere indicati come {"essential": true} o secondo le modalità definite dall'Agenzia per l'Italia Digitale. Non è possibile richiedere attributi SPID nell'id_token. Gli
 attributi elencati sotto "userinfo" sono disponibili al momento della chiamata allo UserInfo Endpoint.
 
 .. code-block:: 
@@ -192,12 +192,12 @@ attributi elencati sotto "userinfo" sono disponibili al momento della chiamata a
 Generazione del code challenge per PKCE
 +++++++++++++++++++++++++++++++++++++++
 
-PKCE (Proof Key for Code Exchange, `RFC7636 <https://tools.ietf.org/html/rfc7636>`_) è un’estensione del protocollo OAuth 2.0 finalizzata ad evitare un potenziale attacco attuato con l’intercettazione dell’authorization code, soprattutto nel caso di applicazioni per dispositivi mobili. Consiste nella generazione di un codice (*code verifier*) e del suo hash (*code challenge*). Il *code challenge* viene inviato all’OP nella richiesta di autenticazione.
+PKCE (Proof Key for Code Exchange, `RFC7636 <https://tools.ietf.org/html/rfc7636>`_) è un'estensione del protocollo OAuth 2.0 finalizzata ad evitare un potenziale attacco attuato con l'intercettazione dell'authorization code, soprattutto nel caso di applicazioni per dispositivi mobili. Consiste nella generazione di un codice (*code verifier*) e del suo hash (*code challenge*). Il *code challenge* viene inviato all'OP nella richiesta di autenticazione.
 
-Quando il client contatta il Token Endpoint al termine del flusso di autenticazione, invia il *code verifier* originariamente creato, in modo che l’OP possa confrontare che il suo hash corrisponda con quello acquisito nella richiesta di autenticazione.
+Quando il client contatta il Token Endpoint al termine del flusso di autenticazione, invia il *code verifier* originariamente creato, in modo che l'OP possa confrontare che il suo hash corrisponda con quello acquisito nella richiesta di autenticazione.
 
 Il *code verifier* e il *code challenge* devono essere generati secondo le modalità definite
-dall’Agenzia per l’Italia Digitale
+dall'Agenzia per l'Italia Digitale
 
 
 Esempio

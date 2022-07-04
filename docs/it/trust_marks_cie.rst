@@ -4,14 +4,14 @@
 Trust Mark per CIE
 ++++++++++++++++++
 
-Nello scenario CIE, un TM viene firmato dalla TA **MinInterno** o suoi Intermediari (SA) o Gestori Qualificati di Attributi (AA) che giocano il ruolo di entità Risorse Protette OAuth - un’entità che agisce come AA all’interno del sistema della Federazione CIE, può essere visto come un tipo di entità Risorsa Protetta OAuth, in accordo a `OIDC-FED#Section.4.5`_) e DEVONO essere incluse nella richiesta (attributo) dei TM della configurazione di entità delle Foglie (RP e OP) e di Intermediari (SA). La presenza di un TM è necessaria prima di iniziare una procedura di Metadata Discovery (vedere sezione), altrimenti la Federazione può essere soddisfatta da aggressori che cercano di propagare attacchi. 
+Nello scenario CIE, un TM viene firmato dalla TA **MinInterno** o suoi Intermediari (SA) o Gestori Qualificati di Attributi (AA) che giocano il ruolo di entità Risorse Protette OAuth - un'entità che agisce come AA all'interno del sistema della Federazione CIE, può essere visto come un tipo di entità Risorsa Protetta OAuth, in accordo a `OIDC-FED#Section.4.5`_) e DEVONO essere incluse nella richiesta (attributo) dei TM della configurazione di entità delle Foglie (RP e OP) e di Intermediari (SA). La presenza di un TM è necessaria prima di iniziare una procedura di Metadata Discovery (vedere sezione), altrimenti la Federazione può essere soddisfatta da aggressori che cercano di propagare attacchi. 
 
 
 
 Trust Mark Attribute Authority CIE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Il registro degli AA è gestito da `LG-AA`_ che è responsabile dell’esecuzione del processo di Onboarding per gli AA che forniscono attributi qualificati **protected** e **private**. Come risultato, l’OP e la TA CIE DEVONO riconoscere l’AgID come emettitore di Trust Mark per gli AA. Oltre agli attributi dei TM descritti sopra, vengono aggiunti i seguenti.
+Il registro degli AA è gestito da `LG-AA`_ che è responsabile dell'esecuzione del processo di Onboarding per gli AA che forniscono attributi qualificati **protected** e **private**. Come risultato, l'OP e la TA CIE DEVONO riconoscere l'AgID come emettitore di Trust Mark per gli AA. Oltre agli attributi dei TM descritti sopra, vengono aggiunti i seguenti.
 
 
 
@@ -25,11 +25,11 @@ Il registro degli AA è gestito da `LG-AA`_ che è responsabile dell’esecuzion
       - **Obbligatorio**
     * - **attributos**
       - 
-      - attributi utente lookup richiesti dall’AA per fornire gli attributi richiesti.
+      - attributi utente lookup richiesti dall'AA per fornire gli attributi richiesti.
       - |check-icon|
     * - **service_documentation**
       - String
-      - È un URL contenente la documentazione OAS riferita all’ AA in the attributo *sub*, come definito in `LG-AA`_).
+      - È un URL contenente la documentazione OAS riferita all' AA in the attributo *sub*, come definito in `LG-AA`_).
       - |uncheck-icon|
     * - **policy_uri**
       - String
@@ -48,8 +48,8 @@ Profili dei Trust Mark
 Si possono definire svariati profili in accordo agli specifici bisogni delle FA e della TA. Nella CIE FED, durante la fase
 di Onboarding, DEVONO essere emessi almeno i seguenti *trustmark_profile*:
 
- - **public**: l’entità nel claim *sub* appartiene alla pubblica amministrazione italiana.
- - **private**: l’entità nel claim *sub* appartiene al settore privato.
+ - **public**: l'entità nel claim *sub* appartiene alla pubblica amministrazione italiana.
+ - **private**: l'entità nel claim *sub* appartiene al settore privato.
 
 La tabella seguente riassume tutti i profili disponibili supportati per tutte le entità coinvolte nella CIE FED
 
@@ -62,22 +62,22 @@ La tabella seguente riassume tutti i profili disponibili supportati per tutte le
       - **Descrizione**
       - **Tipi di entità sub**
     * - **public**
-      - l’entità nel claim *sub* appartiene alla pubblica amministrazione italiana
+      - l'entità nel claim *sub* appartiene alla pubblica amministrazione italiana
       - Tutte
     * - **private**
-      - l’entità nel claim *sub* appartiene al settore privato.
+      - l'entità nel claim *sub* appartiene al settore privato.
       - Tutte
     * - **web**
-      - l’entità nell attributo *sub* è compatibile con CIE-OIDC-CORE
+      - l'entità nell attributo *sub* è compatibile con CIE-OIDC-CORE
       - RP
     * - **native**
-      - l’entità nell attributo *sub* è compatibile con CIE-OIDC-MOBILE – non ancora supportato
+      - l'entità nell attributo *sub* è compatibile con CIE-OIDC-MOBILE – non ancora supportato
       - RP
     * - **underage**
-      - l’entità nel claim *sub* fornisce servizi online per underage (non ancora supportato)
+      - l'entità nel claim *sub* fornisce servizi online per underage (non ancora supportato)
       - RP
     * - **aggregator**
-      - l’entità nel claim *sub* è un soggetto aggregatore
+      - l'entità nel claim *sub* è un soggetto aggregatore
       - SA
 
 
@@ -86,7 +86,7 @@ La tabella seguente riassume tutti i profili disponibili supportati per tutte le
 Esempi di Trust Mark CIE
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-Il seguente è un esempio non normativo di un Trust Mark emesso da *MinInterno* per un’entità privata intermediaria.
+Il seguente è un esempio non normativo di un Trust Mark emesso da *MinInterno* per un'entità privata intermediaria.
 
 .. code-block::
 
@@ -119,7 +119,7 @@ Dove il payload JWT è il seguente:
 
 
 
-Il seguente è un esempio non normativo di un TM emesso da un’entità Intermediaria verso un’entità Foglia RP.
+Il seguente è un esempio non normativo di un TM emesso da un'entità Intermediaria verso un'entità Foglia RP.
 
 .. code-block::
 

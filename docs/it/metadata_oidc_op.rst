@@ -3,7 +3,7 @@
 OpenID Connect Provider Metadata (OP)
 +++++++++++++++++++++++++++++++++++++
 
-È il metadata che gli OP pubblicano con l’identificativo **openid_provider**, come segue.
+È il metadata che gli OP pubblicano con l'identificativo **openid_provider**, come segue.
 
 .. code-block:: 
 
@@ -29,10 +29,10 @@ Se un OP nei propri metadata non ha i claim **client_registration_types_supporte
      - Array di stringhe che specifica i tipi supportati dalla federazione (solo *automatic*)
      - |check-icon|
    * - **organization_name**
-     - Un nome leggibile che rappresenta l’organizzazione proprietaria dell’OP. È inteso per l’utilizzo nell’interfaccia
-       utente, per essere riconosciuto dagli utenti finali che usano l’OP per autenticarsi. 
+     - Un nome leggibile che rappresenta l'organizzazione proprietaria dell'OP. È inteso per l'utilizzo nell'interfaccia
+       utente, per essere riconosciuto dagli utenti finali che usano l'OP per autenticarsi. 
 
-       L’unico metodo di richiesta autenticazione supportato **request_object** per le Richieste di Autorizzazione (ar)
+       L'unico metodo di richiesta autenticazione supportato **request_object** per le Richieste di Autorizzazione (ar)
 
        ..code-block::
 
@@ -44,51 +44,51 @@ Se un OP nei propri metadata non ha i claim **client_registration_types_supporte
      - |uncheck-icon|
    * - **request_authentication_methods_supported**
      - Un oggetto JSON con membri che rappresentano metodi di richiesta autenticazione e come valori liste di metodi di
-       richieste di autenticazione che sono supportati dall’Authorization Endpoint.
+       richieste di autenticazione che sono supportati dall'Authorization Endpoint.
      - |uncheck-icon|
    * - **organization_name**
-     - Un nome leggibile che rappresenta l’organizzazione proprietaria dell’OP. 
+     - Un nome leggibile che rappresenta l'organizzazione proprietaria dell'OP. 
      - |check-icon|
    * - **issuer**
-     - URL HTTPS che identifica univocamente l’OP all'interno della Federazione.
+     - URL HTTPS che identifica univocamente l'OP all'interno della Federazione.
      - |check-icon|
    * - **authorization_endpoint**
-     - URL HTTPS dell’Authorization Endpoint dell’OP, al quale gli RP sono rediretti per iniziare il flusso 
+     - URL HTTPS dell'Authorization Endpoint dell'OP, al quale gli RP sono rediretti per iniziare il flusso 
        di autenticazione.
      - |check-icon|
    * - **token_endpoint**
-     - URL HTTPS del Token Endpoint dell’OP, che gli RP devono chiamare per scambiare il codice di autorizzazione 
+     - URL HTTPS del Token Endpoint dell'OP, che gli RP devono chiamare per scambiare il codice di autorizzazione 
        per un ID Token, un Access Token ed eventualmente un Refresh Token.
      - |check-icon|
    * - **userinfo_endpoint**
-     - URL HTTPS dello UserInfo Endpoint dell’OP, che gli RP possono usare per ottenere informazioni consentite 
-       sull’utente autenticato.
+     - URL HTTPS dello UserInfo Endpoint dell'OP, che gli RP possono usare per ottenere informazioni consentite 
+       sull'utente autenticato.
      - |check-icon|
    * - **introspection_endpoint**
-     - URL HTTPS dell’Introspection Endpoint dell’OP, che può essere usato dagli RP per verificare la validità di 
+     - URL HTTPS dell'Introspection Endpoint dell'OP, che può essere usato dagli RP per verificare la validità di 
        un Access Token.
      - |check-icon|
    * - **revocation_endpoint**
-     - URL HTTPS del Revocation Endpoint dell’OP, che gli RP possono usare per revocare gli Access Token e/o i Refresh Token già rilasciati.
+     - URL HTTPS del Revocation Endpoint dell'OP, che gli RP possono usare per revocare gli Access Token e/o i Refresh Token già rilasciati.
      - |check-icon|
    * - **jwks**
      - JSON Web Key Set :rfc:`7517#appendix-A.1`
      - |check-icon| in assenza del claim **signed_jwks_uri**. 
    * - **jwks_uri**
-     - URL del JSON Web Key Set (JWKS) dell’OP, che contiene la/le chiavi pubbliche di cifratura/decifratura che l’RP deve usare.
+     - URL del JSON Web Key Set (JWKS) dell'OP, che contiene la/le chiavi pubbliche di cifratura/decifratura che l'RP deve usare.
      - |check-icon|
    * - **signed_jwks_uri**
-     - Un URI che punta a un JWT firmato che come payload il JWK Set dell’entità (vedere esempio sotto). 
-       Il JWT è firmato con una chiave inclusa nel JWK che l’entità ha pubblicato nel suo Entity Statement autofirmato.
+     - Un URI che punta a un JWT firmato che come payload il JWK Set dell'entità (vedere esempio sotto). 
+       Il JWT è firmato con una chiave inclusa nel JWK che l'entità ha pubblicato nel suo Entity Statement autofirmato.
      - |uncheck-icon|
    * - **response_types_supported**
-     - JSON Array che contiene una lista di *response_type* supportati dall’OP.
+     - JSON Array che contiene una lista di *response_type* supportati dall'OP.
      - |check-icon|
    * - **response_modes_supported**
-     - JSON Array che contiene una lista dei valori dei *response_modes* supportati dall’OP.
+     - JSON Array che contiene una lista dei valori dei *response_modes* supportati dall'OP.
      - |check-icon|
    * - **acr_values_supported**
-     - Array contenente i livelli SPID supportati dall’OP, rappresentati come URI. 
+     - Array contenente i livelli SPID supportati dall'OP, rappresentati come URI. 
        Deve contenere per SPID uno o più valori tra i seguenti:
        
        ``https://www.spid.gov.it/SpidL1``
@@ -104,7 +104,7 @@ Se un OP nei propri metadata non ha i claim **client_registration_types_supporte
      - |check-icon| 
    * - **request_object_signing_alg_values_supported**
      - JSON Array contenente gli algoritmi di firma supportati per il JWS dei Request Object. 
-       L’OP deve supportare RS256 e può supportare anche altri algoritmi definiti in :rfc:`7518#section3.1`
+       L'OP deve supportare RS256 e può supportare anche altri algoritmi definiti in :rfc:`7518#section3.1`
      - |check-icon|
    * - **request_object_encryption_alg_values_supported**
      - Array contenente gli algoritmi di cifratura (alg) supportati per il JWS dei Request Object, 
@@ -115,27 +115,27 @@ Se un OP nei propri metadata non ha i claim **client_registration_types_supporte
        come definito in :rfc:`7518#section-5.1`
      - |check-icon|
    * - **id_token_signing_alg_values_supported**
-     - Array contenente gli algoritmi di firma supportati per il JWS dell’ID Token.
-       L’OP deve supportare RS256 e può supportare anche altri algoritmi definiti in :rfc:`7518#section-3.1`
+     - Array contenente gli algoritmi di firma supportati per il JWS dell'ID Token.
+       L'OP deve supportare RS256 e può supportare anche altri algoritmi definiti in :rfc:`7518#section-3.1`
      - |check-icon|
    * - **id_token_encryption_alg_values_supported**
-     - Array contenente gli algoritmi di cifratura (alg) supportati per il JWS dell’ID Token, come definito
+     - Array contenente gli algoritmi di cifratura (alg) supportati per il JWS dell'ID Token, come definito
        in :rfc:`7518#section-4.1`
      - |check-icon|
    * - **id_token_encryption_enc_values_supported**
-     - Array contenente gli algoritmi di cifratura (enc) supportati per il JWS dell’ID Token, come definito
+     - Array contenente gli algoritmi di cifratura (enc) supportati per il JWS dell'ID Token, come definito
        in :rfc:`7518#section-5.1`
      - |check-icon|
    * - **userinfo_signing_alg_values_supported**
-     - Array contenente gli algoritmi di firma supportati per il JWS dell’UserInfo Endpoint. 
-       L’OP deve supportare RS256 e può supportare anche altri algoritmi definiti in :rfc:`7518#section-3.1`
+     - Array contenente gli algoritmi di firma supportati per il JWS dell'UserInfo Endpoint. 
+       L'OP deve supportare RS256 e può supportare anche altri algoritmi definiti in :rfc:`7518#section-3.1`
      - |check-icon|
    * - **userinfo_encryption_alg_values_supported**
-     - Array contenente gli algoritmi di cifratura (alg) supportati per il JWE dell’UserInfo Endpoint, 
+     - Array contenente gli algoritmi di cifratura (alg) supportati per il JWE dell'UserInfo Endpoint, 
        come definito in :rfc:`7518#section-4.1`
      - |check-icon|
    * - **userinfo_encryption_enc_values_supported**
-     - Array contenente gli algoritmi di cifratura (enc) supportati per il JWE dell’UserInfo Endpoint, 
+     - Array contenente gli algoritmi di cifratura (enc) supportati per il JWE dell'UserInfo Endpoint, 
        come definito in :rfc:`7518#section-5.1`
      - |check-icon|
    * - **token_endpoint_auth_methods_supported**
@@ -143,13 +143,13 @@ Se un OP nei propri metadata non ha i claim **client_registration_types_supporte
        Deve essere presente solo il valore **private_key_jwt**
      - |check-icon|
    * - **request_parameter_supported**
-     - Valore booleano che indica se il parametro *request* è supportato dall’OP. Deve essere obbligatoriamente *true*.
+     - Valore booleano che indica se il parametro *request* è supportato dall'OP. Deve essere obbligatoriamente *true*.
      - |check-icon|
    * - **subject_types_supported**
-     - Array contenente i tipi di Subject Identifier supportati dall’OP. Deve contenere *pairwise*.
+     - Array contenente i tipi di Subject Identifier supportati dall'OP. Deve contenere *pairwise*.
      - |check-icon|
    * - **claims_parameter_supported**
-     - Valore booleano chje indica se l’OP supporta l’utilizzo del parametro *claims*. Deve valere *true*
+     - Valore booleano chje indica se l'OP supporta l'utilizzo del parametro *claims*. Deve valere *true*
      - |check-icon|
    * - **federation_resolve_endpoint**
      - String. Url presso il quale è possibile ottenere i Trust Mark validati, il metadata finale e la Trust Chain, 

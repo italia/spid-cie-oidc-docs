@@ -3,7 +3,7 @@
 OpenID Connect Relying Party Metadata (RP)
 ++++++++++++++++++++++++++++++++++++++++++
 
-È il metadata che i RP pubblicano con l’identificativo **openid_relying_party**, come segue.
+È il metadata che i RP pubblicano con l'identificativo **openid_relying_party**, come segue.
 
 .. code-block:: 
 
@@ -16,7 +16,7 @@ OpenID Connect Relying Party Metadata (RP)
  }
 
 
-Dove un RP non disponesse all’interno dei propri metadata dei claim **client_registration_types** i valori da intendersi come impliciti sono i seguenti.
+Dove un RP non disponesse all'interno dei propri metadata dei claim **client_registration_types** i valori da intendersi come impliciti sono i seguenti.
 
 .. list-table:: 
    :widths: 20 60 20
@@ -29,14 +29,14 @@ Dove un RP non disponesse all’interno dei propri metadata dei claim **client_r
      - Array di stringhe che specifica i tipi supportati dalla federazione (solo *automatic*)
      - |check-icon| 
    * - **organization_name**
-     - Un nome leggibile che rappresenta l’organizzazione proprietaria dell’RP. 
+     - Un nome leggibile che rappresenta l'organizzazione proprietaria dell'RP. 
      - |check-icon| 
    * - **jwks**
      - JSON Web Key Set |br|
        :rfc:`7517#appendix-A.1` |br|
        È composto dai seguenti claim:
         
-        **kty**: famiglia dell’algoritmo crittografico utilizzato
+        **kty**: famiglia dell'algoritmo crittografico utilizzato
 
         **alg**: algoritmo utilizzato
 
@@ -59,7 +59,7 @@ Dove un RP non disponesse all’interno dei propri metadata dei claim **client_r
      - Url del registry dove è localizzato il jwks contenente la chiave pubblica in formato 
        JSON Web Key (JWK) e quindi composto dai seguenti parametri:
         
-        **kty**: famiglia dell’algoritmo crittografico utilizzato
+        **kty**: famiglia dell'algoritmo crittografico utilizzato
 
         **alg**: algoritmo utilizzato
 
@@ -77,17 +77,17 @@ Dove un RP non disponesse all’interno dei propri metadata dei claim **client_r
      - |check-icon|
    * - **redirect_uris**
      - Array di URI di redirezione utilizzati dal client (RP). Deve esserci un match esatto tra uno degli URI
-       nell’array e quello utilizzato nell’Authentication request. Non è ammesso l’uso dello schema http (è
+       nell'array e quello utilizzato nell'Authentication request. Non è ammesso l'uso dello schema http (è
        obbligatorio HTTPS); tuttavia gli URI possono seguire eventuali schemi custom (ad es. myapp://) al 
        fine di supportare applicazioni mobili.
        *Alla luce della normativa vigente in tema di protezione dei dati personali, è opportuno che
-       l’URL non contenga informazioni utili ad individuare lo specifico servizio a cui l’utente
+       l'URL non contenga informazioni utili ad individuare lo specifico servizio a cui l'utente
        intende accedere. Si raccomanda dunque di reindirizzare verso un sistema di access
-       management che a sua volta rimanderà l’utente allo specifico servizio*.
+       management che a sua volta rimanderà l'utente allo specifico servizio*.
      - |check-icon|
    * - **client_name**
      - Nome del RP da visualizzare nelle schermate di autenticazione e richiesta di consenso. 
-       Può essere specificato in più lingue apponendo al nome dell’elemento il suffisso "#" seguito 
+       Può essere specificato in più lingue apponendo al nome dell'elemento il suffisso "#" seguito 
        dal codice :rfc:`5646`. Un nome di default senza indicazione della lingua è sempre presente.
      - |check-icon|
    * - **response_types**
@@ -115,7 +115,7 @@ Claim Opzionali nel Metadata RP
      - **Descrizione**
      - **Obbligatorio** 
    * - **tls_client_certificate_bound_access_tokens**
-     -  Valore booleano usato per indicare l’intenzione di RP di usare i token **mTLS bound**
+     -  Valore booleano usato per indicare l'intenzione di RP di usare i token **mTLS bound**
      - |uncheck-icon| 
 
 

@@ -3,7 +3,7 @@
 OpenID Connect Federation Entity Metadata (FA)
 ++++++++++++++++++++++++++++++++++++++++++++++
 
-È il metadata che il Trust Anchor, o suo Intermediario, pubblica con l’identificativo **federation_entity**, come segue.
+È il metadata che il Trust Anchor, o suo Intermediario, pubblica con l'identificativo **federation_entity**, come segue.
 
 .. code-block:: 
 
@@ -16,7 +16,7 @@ OpenID Connect Federation Entity Metadata (FA)
  }
 
 
-L’oggetto **federation_entity** è composto dai seguenti claim
+L'oggetto **federation_entity** è composto dai seguenti claim
 
 .. list-table:: 
    :widths: 20 60 20
@@ -36,7 +36,7 @@ L’oggetto **federation_entity** è composto dai seguenti claim
        relativamente ad un soggetto.
      - |check-icon| 
    * - **federation_status_endpoint**
-     - String. Url presso il quale è possibile validare l’assegnazione di un Trust Mark ad uno specifico soggetto.
+     - String. Url presso il quale è possibile validare l'assegnazione di un Trust Mark ad uno specifico soggetto.
      - |check-icon| 
    * - **homepage_uri**
      - String. Url della pagina web del Trust Anchor o SA.
