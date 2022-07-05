@@ -53,7 +53,7 @@ La richiesta all'Introspection Endpoint consiste nell'invio del token su cui si 
      - String. Valori ammessi: **urn:ietf:params:oauth:clientassertion-type:jwt-bearer**
      - 
    * - **client_id**
-     - URI che identifica univocamente il RP come da Registro SPID. L'OP deve verificare che il client_id sia noto.
+     - URI che identifica univocamente il RP. L'OP deve verificare che il client_id sia noto.
      - 
    * - **token**
      - Il token su cui il RP vuole ottenere informazioni.
@@ -100,7 +100,7 @@ L'Introspection Endpoint risponde con un oggetto JSON definito come segue.
        Il RP deve verificare che il valore coincida con quello contenuto nell'ID Token.
      - 
    * - **client_id**
-     - String. URI che identifica univocamente il RP come da Registro SPID. 
+     - String. URI che identifica univocamente il RP. 
        Il RP deve verificare che il valore coincida con il proprio client_id.
      - 
    * - **iss**

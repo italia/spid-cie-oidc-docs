@@ -230,9 +230,7 @@ seguenti valori dello **scope** da usare per richiedere i Claim:
 Nello scenario CIE OIDC l'RP può solo chiedere **given_name**, **family_name**, **birthdate** e
 **fiscal_number** nell'**id_token object** del parametro **claim**.
 Gli altri claim riportati DEVONO essere richiesti nell'oggetto **userinfo** del parametro **claim**.
-Se viene omessa la richiesta **claims** e lo scope è uguale a **openid**, l'OP DOVREBBE fornire un insieme
-di default di claim che ha disponibile per il soggetto (in CIE OIDC corrisponde al minimo dataset di eIDAS) nella 
-risposta **userinfo**, mentre l'**ID Token** conterrà solo il claim **sub** valorizzato a **pairwise**.
+
 
 
 .. _claims_parameter:
@@ -240,11 +238,15 @@ risposta **userinfo**, mentre l'**ID Token** conterrà solo il claim **sub** val
 Parametro claims
 ^^^^^^^^^^^^^^^^
 
-Il parametro OIDC **claims** definisce un meccanismo per richiedere esplicitamente i Claim Utente 
+Il parametro OIDC **claims** definisce un meccanismo per richiedere esplicitamente i claim utente 
 dall'**UserInfo Endpoint** e/o nell'**ID Token**.
 Il valore è un Oggetto JSON che fa una lista dei claim richiesti da queste due posizioni.
-Nel caso di un Oggetto JSON vuoto, l'OP restituisce i Claimn Utente richiesti dal parametro scope. 
-CIE OIDC permette l'uso di questo parametro sia per gli elementi "userinfo" che per quelli "id_token" del parametro claims. Perciò gli attributi CIE possono essere richiesti sia dentro gli elementi "userinfo" che in quelli "id_token", facendo una lista degli attributi richiesti come chiave dell'oggetto JSON e indicando i loro valori come ``{"essential":true}``, ``{"value":"string"}``, ``{"values":[string1,string2]}``, ``null`` per indicare che il claim è essenziale, da ritornare con un valore specifico, da ritornare con un insieme di valori e da ritornare in modalità default (un claim volontario), rispettivamente.
+
+Se viene omessa la richiesta **claims** e lo scope è uguale a **openid**, l'OP DOVREBBE fornire un insieme
+di default di claim che ha disponibile per il soggetto (in CIE OIDC corrisponde al minimo dataset di eIDAS) nella 
+risposta **userinfo**, mentre l'**id_token** conterrà solo il claim **sub** valorizzato a **pairwise**.
+
+CIE OIDC permette l'uso di questo parametro sia per gli elementi "userinfo" che per quelli "id_token" del parametro **claims**. Perciò gli attributi CIE possono essere richiesti sia dentro gli elementi "userinfo" che in quelli "id_token", facendo una lista degli attributi richiesti come chiave dell'oggetto JSON e indicando i loro valori come ``{"essential":true}``, ``{"value":"string"}``, ``{"values":[string1,string2]}``, ``null`` per indicare rispettivamente che il claim è essenziale, da ritornare con un valore specifico, da ritornare con un insieme di valori e da ritornare in modalità default (un claim volontario), rispettivamente.
 
 .. code-block::
 

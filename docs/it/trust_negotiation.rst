@@ -11,7 +11,7 @@ Relying Party
 
 Il RP ottiene la lista degli OP in formato JSON interrogando l':ref:`endpoint list<entity_listings>` disponibile presso il :ref:`Trust Anchor<Esempio_EN3>`. Per ogni soggetto contenuto nella :ref:`risposta<Esempio_EN3.1>` dell'endpoint list e corrispondente ad un OP, il RP :ref:`richiede<Esempio_EN2>` ed ottiene l'Entity Configuration self-signed presso l'OP. 
 
-Per ogni EC degli OP, il RP verifica la firma del contenuto adoperando la chiave pubblica ottenuta dall'Entity Statement rilasciato dalla Trust Anchor. Verificata la firma dell'Entity Configuration con la chiave pubblica pubblicata dalla Trust Anchor, la fiducia è stabilita nei confronti del OP da parte del RP. 
+Per ogni EC degli OP, il RP verifica la firma del contenuto adoperando la chiave pubblica ottenuta dall'Entity Statement rilasciato dalla Trust Anchor. Verificata la firma dell'Entity Configuration con la chiave pubblica pubblicata dal TA, RP riconosce la fiducia nei confronti dell'OP. 
 
 Il RP applica infine le politiche pubblicate dal Trust Anchor sui Metadata del OP e salva il Metadata finale associandolo ad una data di scadenza (claim **exp**). La data di scadenza corrisponde al valore di **exp** più basso ottenuto da tutti gli elementi che compongono la **Trust Chain**. Periodicamente il RP aggiorna i Metadata di tutti gli OP rinnovando la Trust Chain relativa a questi.
 
@@ -80,7 +80,7 @@ Esempi:
 Se l'URL che identifica il soggetto non presenta il simbolo di slash finale ("/") è necessario aggiungerlo prima di appendere il web path della risorsa .well-known.
 
 
-Una volta che un RP viene riconosciuto come parte della Federazione CIE, ottiene il permesso di mandare una Richiesta di Autenticazione come definito in [CIE-OIDC-CORE]. L'OP CIE che non riconosce l'RP che fa la richiesta, è in grado, usando CIE OIDC-FED, di risolvere correttamente la il Trust. L'OP CIE inizia richiedendo la configurazione di entità dell'RP al .well-known endpoint dell'RP e, seguendo il percorso dato dall "authority_hint", raggiunge la radice del Trust, cioè la TA. In ogni passo della catena, l'OP CIE può eseguire tutti i controlli di sicurezza richiedendo le dichiarazioni di entità da ciascuna entità e convalidando i Trust Mark e le firme. La figura che segue dà un esempio rappresentativo di come funziona la catena del Trust.
+Una volta che un RP viene riconosciuto come parte della Federazione, ottiene il permesso di mandare una Richiesta di Autenticazione. L'OP che non riconosce l'RP che fa la richiesta, è in grado di risolvere correttamente il Trust. L'OP inizia richiedendo la configurazione di entità dell'RP al .well-known endpoint dell'RP e, seguendo il percorso dato dall "authority_hint", raggiunge la radice del Trust, cioè il TA. In ogni passo della catena, l'OP può eseguire tutti i controlli di sicurezza richiedendo le dichiarazioni di entità da ciascuna entità e convalidando i Trust Mark e le firme. La figura che segue dà un esempio rappresentativo di come funziona la catena del Trust.
 
 
 .. image:: ../../images/cie_esempio_trust_chain.svg

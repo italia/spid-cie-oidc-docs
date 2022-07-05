@@ -73,7 +73,7 @@ Dove un RP non disponesse all'interno dei propri Metadata dei claim **client_reg
         **e**: esponente (solo per chiavi RSA)
      - |check-icon| in assenza del claim **jwks**. 
    * - **client_id**
-     - URI che identifica univocamente il RP come da Registro SPID/CIE
+     - URI che identifica univocamente il RP.
      - |check-icon|
    * - **redirect_uris**
      - Array di URI di redirezione utilizzati dal client (RP). Deve esserci un match esatto tra uno degli URI
@@ -98,10 +98,6 @@ Dove un RP non disponesse all'interno dei propri Metadata dei claim **client_reg
      - Array dei valori di **grant_type** previsti da OAuth 2.0 che il client userà nelle richieste al
        **Token Endpoint**. Deve contenere i soli valori **authorization_code** e **refresh_token**.
      - |check-icon|
-   * - **federation_resolve_endpoint**
-     - String. Url presso il quale è possibile ottenere i Trust Mark validati, il Metadata finale e la Trust Chain, 
-       relativamente ad un soggetto.
-     - |check-icon| 
 
 
 

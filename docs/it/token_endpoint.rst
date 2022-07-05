@@ -68,7 +68,7 @@ L'unico metodo di autenticazione all'endpoint token previsto è il private_key_j
      - **Descrizione**
      - **Obbligatorio**
    * - **client_id**
-     - URI che identifica univocamente il RP come da Registro SPID 
+     - URI che identifica univocamente il RP. 
      - |check-icon|
    * - **client_assertion**
      - JWT firmato con la chiave privata del Relying Party contenente i seguenti parametri: 

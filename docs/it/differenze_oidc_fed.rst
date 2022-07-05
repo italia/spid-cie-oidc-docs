@@ -6,7 +6,7 @@
 Differenze con OIDC Federation
 ------------------------------
 
-In questa sezione sono elencate le differenze che intercorrono tra lo standard ufficiale e l'implementazione SPID.
+In questa sezione sono elencate le differenze che intercorrono tra lo standard ufficiale e l'implementazione SPID / CIE.
 
 
 Client Registration
@@ -30,4 +30,4 @@ In `OIDC-FED`_ l'uso dei Trust Mark non è obbligatorio. In SPID piuttosto l'esp
 Claim non supportati negli Entity Statement
 +++++++++++++++++++++++++++++++++++++++++++
 
-Poiché SPID non necessita di alcun claim aggiuntivo in ambito federativo, non necessita dei claim crit. Inoltre non sono supportati i claim **aud**, **naming_constraints**, **policy_language_crit** e **trust_anchor_id**. L'eventuale presenza di questi claim non presenta alcuna implicazione, questi verranno semplicemente ignorati fino ad ulteriori avvisi che li normino.
+Poiché SPID e CIE non necessitano di alcun claim aggiuntivo in ambito federativo, non necessitano del claim **crit**. Inoltre non sono supportati i claim **aud**, **naming_constraints**, **policy_language_crit** e **trust_anchor_id**. L'eventuale presenza di questi claim non presenta alcuna implicazione, questi verranno semplicemente ignorati fino ad ulteriori avvisi che li normino.

@@ -77,7 +77,7 @@ La richiesta DEVE essere una richiesta HTTP che usa il metodo GET ed ha i seguen
      - **Descrizione**
      - **Obbligatorio**
    * - **iss**
-     - String. L'identificatore di entità dell'emettitore dal quale si vuole l'emissione dell'ES. A causa della normalizzazione dell'URL, più emettitori POSSONO puntare ad un Fetch Endpoint condiviso. Questo claim esplicita esattamente da quale emettitore si vuole l'ES. Senza questo claim l'emettitore coincide con l'entità alla quale è stata fatta la richiesta.
+     - String. L'identificatore dell'issuer dal quale si vuole l'emissione dell'ES. A causa della normalizzazione dell'URL, più emettitori POSSONO puntare ad un Fetch Endpoint condiviso. Questo claim esplicita esattamente da quale emettitore si vuole l'ES. Senza questo claim l'emettitore coincide con l'entità alla quale è stata fatta la richiesta.
      - |uncheck-icon|
    * - **sub**
      - String. L'identificatore di entità del soggetto per il quale si vuole l'emissione dell'ES.

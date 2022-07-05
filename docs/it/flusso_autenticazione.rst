@@ -30,7 +30,7 @@ Segue la descrizione dei passaggi, come da numerazione indicata in figura.
        Invia la richiesta di autenticazione con CIE all'RP
    * - **2: RP->OP/Authorization Endpoint**
      - Il Relying Party (RP) prepara una Richiesta di Autorizzazione per l'Authorization Endpoint dell'OP.
-       Per la CIE, RP genera un PKCE e la invia con la Richiesta di Autorizzazione 
+       RP genera un PKCE e la invia con la Richiesta di Autorizzazione 
    * - **3: OP/Authorization Endpoint<->UT**
      - L'OpendID Provider (OP) autentica l'utente mediante l'inserimento delle credenziali e ottiene
        il consenso per l'accesso alle risorse utente da parte dell'RP.

@@ -72,7 +72,7 @@ L'oggetto request DEVE essere un token JWT firmato, secondo le modalità definit
      - **Descrizione**
      - **Obbligatorio**
    * - **client_id**
-     - URI che identifica univocamente il RP come da Registro SPID. Deve corrispondere ad un valore nel Registro SPID.
+     - URI che identifica univocamente il RP.
      - |check-icon|
    * - **code_challenge**
      - Un challenge per PKCE da riportare anche nella successiva richiesta al Token endpoint. V. paragrafo :ref:`Generazione del code_challenge per PKCE<PKCE_code_challenge_generation>`
@@ -111,23 +111,15 @@ L'oggetto request DEVE essere un token JWT firmato, secondo le modalità definit
        
        **offline_access**: se specificato, l'OP rilascerà oltre all'access token anche un refresh token necessario
        per instaurare sessioni lunghe revocabili. L'uso di questo valore è consentito solo se se si intende offrire all'utente una `sessione lunga revocabile <https://www.agid.gov.it/sites/default/files/repository_files/spid-avviso-n41-integrazione_ll.gg_._openid_connect_in_spid.pdf#page=6>`_.
-
      - |check-icon|
    * - **acr_values**
      - Valori di riferimento della classe di contesto dell'Authentication Request. 
        String separata da uno spazio, che specifica i valori "acr" richiesti al server di autorizzazione per l'elaborazione della richiesta di autenticazione con i valori indicati in ordine di preferenza. L'OP può utilizzare un'autenticazione ad un livello più alto di quanto richiesto. Tale scelta non deve comportare un esito negativo della richiesta.
-       Deve contenere per SPID uno o più valori tra i seguenti:
+       Deve contenere per SPID e CIE uno o più valori tra i seguenti:
        
        ``https://www.spid.gov.it/SpidL1``
        ``https://www.spid.gov.it/SpidL2``
        ``https://www.spid.gov.it/SpidL3``
-
-       Deve contenere per CIE uno o più valori tra i seguenti:
-       
-       ``CIE_L1`` |br|
-       ``CIE_L2`` |br|
-       ``CIE_L3`` 
-
      - |check-icon|
    * - **claims**
      - Lista dei claims (attributi) che un RP intende richiedere. Vedi paragrafo *Claims*
