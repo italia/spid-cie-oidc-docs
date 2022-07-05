@@ -35,9 +35,6 @@ La tabella seguente riassume tutti i profili disponibili supportati per tutte le
     * - **native**
       - l'entità nell attributo *sub* è compatibile con CIE-OIDC-MOBILE – non ancora supportato
       - RP
-    * - **underage**
-      - l'entità nel claim *sub* fornisce servizi online per underage (non ancora supportato)
-      - RP
     * - **aggregator**
       - l'entità nel claim *sub* è un soggetto aggregatore
       - SA

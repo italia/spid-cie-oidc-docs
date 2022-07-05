@@ -101,19 +101,5 @@ Dove un RP non disponesse all'interno dei propri Metadata dei claim **client_reg
 
 
 
-Claim Opzionali nel Metadata RP
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. list-table:: 
-   :widths: 20 60 20
-   :header-rows: 1
-
-   * - **Claim**
-     - **Descrizione**
-     - **Obbligatorio** 
-   * - **tls_client_certificate_bound_access_tokens**
-     -  Valore booleano usato per indicare l'intenzione di RP di usare i token **mTLS bound**
-     - |uncheck-icon| 
-
-
 
 Vedere `OIDC-FED#RP_metadata`_

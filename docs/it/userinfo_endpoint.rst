@@ -24,7 +24,7 @@ Response
 
 La response dello UserInfo Endpoint deve specificare nel "Content-Type" il valore "application/jwt".
 
-Il contenuto trasmesso nel body della Response deve essere un JWT firmato e cifrato secondo le `modalità definite dall'Agenzia per l'Italia Digitale. <https://openid.net/specs/openid-connect-core-1_0.html#UserInfoResponse>`_
+Il contenuto del corpo della Response deve essere un JWT firmato e cifrato secondo le `modalità definite dall'Agenzia per l'Italia Digitale. <https://openid.net/specs/openid-connect-core-1_0.html#UserInfoResponse>`_
 
 Lo UserInfo Endpoint restituisce i claim autorizzati nella Authentication Request.
 
