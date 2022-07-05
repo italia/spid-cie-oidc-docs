@@ -14,9 +14,9 @@ Questa documentazione contiene le specifiche tecniche consolidate, conformi alle
 per migliorare l'esperienza di integrazione alle Federazioni OIDC SPID e CIE id per i Fornitori di Servizio
 pubblici e privati (RP), Identity Providers (OP) e Soggetti Aggregatori (SA). 
 
-Contiene inoltre le risorse necessarie per aderire ai sistemi di identità nazionali:
+In questa documentazione trovi:
 
- - gli esempi pratici dei Metadata, delle richieste e delle risposte HTTP,
+ - gli esempi pratici dei Metadata, delle richieste e delle risposte OpenID Connect,
  - come effettuare la registrazione automatica dei RP presso gli OpenID Provider, 
  - come un OpenID Provider riconosce e registra dinamicamente un RP,
  - come utilizzare gli endpoint della API della Federazione.
