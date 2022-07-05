@@ -1,7 +1,7 @@
 .. include:: ./common_definitions.rst
 
-OpenID Connect Federation Entity Metadata (FA)
-++++++++++++++++++++++++++++++++++++++++++++++
+OpenID Connect Federation Entity Metadata
++++++++++++++++++++++++++++++++++++++++++
 
 È il Metadata che il Trust Anchor, o suo Intermediario, pubblica con l'identificativo **federation_entity**, come segue.
 

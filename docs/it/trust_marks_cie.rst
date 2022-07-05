@@ -6,34 +6,6 @@ Trust Mark per CIE
 
 TBD esempi non normativi
 
-Trust Mark Attribute Authority CIE
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Il registro degli AA è gestito da `LG-AA`_ che è responsabile dell'esecuzione del processo di Onboarding per gli AA che forniscono attributi qualificati **protected** e **private**. Come risultato, l'OP e la TA CIE DEVONO riconoscere l'AgID come emettitore di Trust Mark per gli AA. Oltre agli attributi dei TM descritti sopra, vengono aggiunti i seguenti.
-
-
-
-.. list-table::
-    :widths: 20 60 20
-    :header-rows: 1
-
-    * - **Claim**
-      - **Descrizione**
-      - **Obbligatorio**
-    * - **attributes**
-      - attributi utente utilizzati dall'AA per le operazioni di lookup.
-      - |check-icon|
-    * - **service_documentation**
-      - String. È un URL contenente la documentazione OAS riferita all' AA in the attributo *sub*, come definito in `LG-AA`_).
-      - |uncheck-icon|
-    * - **policy_uri**
-      - String. URL ad una politica di privacy di AA
-      - |check-icon|
-    * - **tos_uri**
-      - String. URL ad una info policy di AA
-      - |uncheck-icon|
-
-
 
 Profili dei Trust Mark
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -60,9 +32,6 @@ La tabella seguente riassume tutti i profili disponibili supportati per tutte le
     * - **private**
       - l'entità nel claim *sub* appartiene al settore privato.
       - Tutte
-    * - **web**
-      - l'entità nell attributo *sub* è compatibile con CIE-OIDC-CORE
-      - RP
     * - **native**
       - l'entità nell attributo *sub* è compatibile con CIE-OIDC-MOBILE – non ancora supportato
       - RP
