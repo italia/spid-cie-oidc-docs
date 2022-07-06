@@ -56,11 +56,11 @@ Entity Configuration comuni
 
        I tipi consentiti sono i seguenti:
 
-       **openid_relying_party**
-       **openid_provider**
-       **federation_entity**
-       **oauth_resource**
-       **trust_mark_issuer**
+       - openid_relying_party
+       - openid_provider
+       - federation_entity
+       - oauth_resource
+       - trust_mark_issuer
      - |check-icon|
 
 .. warning::
