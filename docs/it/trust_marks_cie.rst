@@ -32,9 +32,6 @@ La tabella seguente riassume tutti i profili disponibili supportati per tutte le
     * - **private**
       - l'entità nel claim *sub* appartiene al settore privato.
       - Tutte
-    * - **native**
-      - l'entità nell attributo *sub* è compatibile con CIE-OIDC-MOBILE – non ancora supportato
-      - RP
     * - **aggregator**
       - l'entità nel claim *sub* è un soggetto aggregatore
       - SA
