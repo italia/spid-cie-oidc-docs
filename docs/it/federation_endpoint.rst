@@ -303,7 +303,7 @@ Segue un esempio non normativo di risposta:
 Lista delle Entità di Federazione
 +++++++++++++++++++++++++++++++++
 
-UN'entità PUÒ interrogare un'altra entità per ottenere una lista di tutte le entità a lei immediatamente subordinate e circa le quali quell'entità è pronta a emettere statement (in alcuni casi PUÒ essere una lista molto lunga).
+UN'entità PUÒ interrogare un'altra entità per ottenere una lista di tutte le entità a lei immediatamente subordinate e di cui uell'entità è pronta a emettere statement (in alcuni casi PUÒ essere una lista molto lunga).
 
 
 Entity Listings Request
