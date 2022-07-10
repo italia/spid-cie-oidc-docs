@@ -57,18 +57,18 @@ Il payload del JWT è un JSON contenente i seguenti parametri:
      - **Descrizione**
      - **Obbligatorio**
    * - **sub**
-     - String. Identificatore del soggetto, coincidente con quello già rilasciato nell'ID Token
+     - String. Identificatore del soggetto, coincidente con quello già rilasciato nell'ID Token.
        Il RP DEVE verificare che il valore coincida con quello contenuto nell'ID Token.
      - 
    * - **aud**
-     - String. Identificatore del soggetto destinatario della response (RP)
+     - String. Identificatore del soggetto destinatario della response (RP).
        Il RP DEVE verificare che il valore coincida con il proprio client_id.
      - 
    * - **iss**
      - String. URI che identifica univocamente l'OP.
      - 
    * - **<attributo>**
-     - I claim richiesti al momento dell'autenticazione
+     - I claim richiesti al momento dell'autenticazione.
      - 
 
 
