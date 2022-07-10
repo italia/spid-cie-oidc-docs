@@ -3,8 +3,9 @@
 Le Federazioni eID Italiane
 ---------------------------
 
-Una Federazione delle Identità Digitali è una infrastruttura che consente ad un individuo di autenticarsi presso un servizio web (RP), 
-utilizzando le proprie credenziali emesse da un provider di identità (OP). 
+Una Federazione delle Identità Digitali è una infrastruttura all'interno della quale tante organizzazioni, afferenti a domini differenti, aderiscono ad un medesimo quadro regolatorio per costruire un meccanismo di fiducia sia amministrativo, mediante la stipula di convenzioni e accreditamento presso una o più autorità super partes, che tecnologico, mediante l'adozione di standard di interoperabilità sicuri che consentono l'interscambio dei dati.
+
+Questa configurazione stabilisce i livelli di garanzia e di sicurezza adeguati affinchè un individuo possa autenticarsi presso un servizio web (Service Provider) mediante la propria identità digitale, rilasciata da un altro servizio web (Identity Provider).
 
 Affinché i partecipanti, siano essi RP o OP, si riconoscano all'interno della medesima Federazione delle identità è necessario che questi aderiscano ad un medesimo quadro regolatorio e ottengano i Metadata gli uni degli altri. I Metadata contengono le chiavi pubbliche per le operazioni di firma digitale e criptazione e le definizioni necessarie all'interscambio delle informazioni.
 
