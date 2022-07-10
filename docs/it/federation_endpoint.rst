@@ -127,7 +127,7 @@ Per esempi di $ENTITY_STATEMENT vedere la sezione :ref:`Esempi di Entity Stateme
 Risolvere i Metadata di Federazione
 +++++++++++++++++++++++++++++++++++
 
-Un'entità PUÒ usare il resolve endpoint per prelevare Metadata risolti e TM per un'entità vista/fidata da parte del risolutore (cioè la visione del risolutore di un'altra entità). Ci si aspetta che il risolutore prelevi l'ES autofirmato dei soggetti, prelevi una Trust Chain che inizia con l'ES dei soggetti e finisce con il TA specificato, verifichi la Trust Chain e quindi applichi tutte le politiche presenti nella Trust Chain ai Metadata degli ES. Ci si aspetta anche che il risolutore verifichi che i TM presenti siano attivi. Se trova TM non attivi, allora quelli dovrebbero essere lasciati fuori dall'insieme di risposta.
+Un'entità PUÒ usare il Resolve Endpoint per ottenere dal risolutore Metadata risolti e TM di un'entità vista/fidata. Ci si aspetta che il risolutore prelevi l'ES autofirmato dei soggetti, prelevi una Trust Chain che inizia con l'ES dei soggetti e finisca con il TA specificato, verifichi la Trust Chain e quindi applichi tutte le politiche presenti nella Trust Chain ai Metadata degli ES. Ci si aspetta anche che il risolutore verifichi che i TM presenti siano attivi. Se trova TM non attivi, allora quelli dovrebbero essere lasciati fuori dall'insieme di risposta.
 
 
 Resolve Endpoint Request
