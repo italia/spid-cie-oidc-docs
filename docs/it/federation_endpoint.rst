@@ -3,16 +3,16 @@
 Federation Endpoint
 -------------------
 
-Tutte le entità DEVONO offrire i seguenti endpoint:
+Tutte le entità DEVONO contenere i seguenti endpoint:
 
- - l'endpoint **/.well-known/openid-federation** per ottenere le informazioni sulla configurazione dell'entità (vedi sezione  :ref:`Ottenere informazioni di configurazione dell'entità di federazione<obtaining_federation_entity_configuration_information>`)
+ - **/.well-known/openid-federation** fornisce le informazioni sulla configurazione dell'entità (vedi sezione  :ref:`Ottenere informazioni di configurazione dell'entità di federazione<obtaining_federation_entity_configuration_information>`)
 
 Un **FA** (**SA** o **TA**) DEVE, in aggiunta, offrire i seguenti endpoint:
 
- - il *fetch entity statement endpoint* per andare a prendere un FA riguardo ad una subordinata, ottenendo così un entity statement (vedi sezione :ref:`Prelevare Entity Statement<fetching_entity_statements>`)  
- - il *resolve entity statement endpoint* per ottenere una vista di un'altra entità (il risulutore) (vedi sezione :ref:`Risolvere Entity Statements<resolve_entity_statements>`), e
- - il *trust mark introspection endpoint* per ottenere, da parte dell'emittente del Trust Mark, una vista dello stato del Trust Mark (vedere sezione :ref:`Stato del Trust Mark<trust_mark_status>`)
- - l'*entity listing endpoint* per ottenere una lista di tutte le subordinate di un'entità (vedere sezione :ref:`Elenchi di Entità<entity_listings>`)
+ - **fetch entity statement endpoint** fornisce un FA relativo ad una subordinata, ottenendo così un entity statement (vedi sezione :ref:`Prelevare Entity Statement<fetching_entity_statements>`)  
+ - **resolve entity statement endpoint** risolve i Metadata di Federazione (vedi sezione :ref:`Risolvere Entity Statements<resolve_entity_statements>`)
+ - **trust mark introspection endpoint** fornisce lo stato del Trust Mark (vedere sezione :ref:`Stato del Trust Mark<trust_mark_status>`)
+ - **entity listing endpoint** fornisce una lista di tutte le subordinate di un'entità (vedere sezione :ref:`Elenchi di Entità<entity_listings>`)
 
 
 
