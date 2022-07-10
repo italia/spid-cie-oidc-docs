@@ -236,7 +236,7 @@ DEVE essere una richiesta HTTP che usa il metodo GET e lo schema https verso uno
      - String. L'entity_id per l'entità alla quale è stato inviato il TM.
      - |uncheck-icon|
    * - **id**
-     - String. Identifica il TM
+     - String. Identifica il TM.
      - |uncheck-icon|
    * - **iat**
      - UNIX Timestamp con l'istante di generazione del JWT, codificato come NumericDate come indicato in :rfc:`7519`
