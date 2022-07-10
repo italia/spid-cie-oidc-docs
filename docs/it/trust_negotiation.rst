@@ -11,7 +11,7 @@ Relying Party
 
 Il RP ottiene la lista degli OP in formato JSON interrogando l':ref:`endpoint list<entity_listings>` disponibile presso il :ref:`Trust Anchor<Esempio_EN3>`. Per ogni soggetto contenuto nella :ref:`risposta<Esempio_EN3.1>` dell'endpoint list e corrispondente ad un OP, il RP :ref:`richiede<Esempio_EN2>` ed ottiene l'Entity Configuration self-signed presso l'OP. 
 
-Per ogni EC degli OP, il RP verifica la firma del contenuto adoperando la chiave pubblica ottenuta dall'Entity Statement rilasciato dalla Trust Anchor. Verificata la firma dell'Entity Configuration con la chiave pubblica pubblicata dal TA, RP riconosce la fiducia nei confronti dell'OP. 
+Per ogni EC degli OP, il RP verifica la firma del contenuto adoperando la chiave pubblica ottenuta dall'Entity Statement rilasciato dalla Trust Anchor. Verificata la firma dell'Entity Configuration con la chiave pubblica dal TA, RP riconosce la fiducia nei confronti dell'OP. 
 
 Il RP applica infine le politiche pubblicate dal Trust Anchor sui Metadata del OP e salva il Metadata finale associandolo ad una data di scadenza (claim **exp**). La data di scadenza corrisponde al valore di **exp** più basso ottenuto da tutti gli elementi che compongono la **Trust Chain**. Periodicamente il RP aggiorna i Metadata di tutti gli OP rinnovando la Trust Chain relativa a questi.
 
