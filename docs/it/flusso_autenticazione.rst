@@ -37,7 +37,7 @@ Segue la descrizione dei passaggi, come da numerazione indicata in figura.
      - L'OpendID Provider (OP) autentica l'utente mediante l'inserimento delle credenziali e ottiene
        il consenso per l'accesso alle risorse utente da parte dell'RP.
    * - **4: OP/Authorization Endpoint->RP**
-     - L'OP reindirizza l'utente verso il Redirect URI specificato dal RP, passando un Authorization 
+     - L'OP reindirizza l'utente verso il redirect_uri specificato dal RP, passando un Authorization 
        Code nell'Authorization Response
    * - **5: RP->OP/Token Endpoint**
      - Il RP invia l'Authorization Code ricevuto al Token Endpoint dell'OP.
