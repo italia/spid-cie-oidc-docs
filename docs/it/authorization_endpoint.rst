@@ -98,7 +98,7 @@ L'oggetto request DEVE essere un token JWT firmato, secondo le modalità definit
      - |check-icon|
    * - **redirect_uri**
      - URL dove l'OP reindirizzerà l'utente al termine del processo di autenticazione. 
-       Deve essere uno degli URL indicati nel client metadata (v. paragrafo 3.2). 
+       Deve essere uno degli URL indicati nel client metadata. 
      - |check-icon|
    * - **response_type**
      - Il tipo di credenziali che deve restituire l'OP.
@@ -125,7 +125,7 @@ L'oggetto request DEVE essere un token JWT firmato, secondo le modalità definit
      - Lista dei claims (attributi) che un RP intende richiedere. Vedi paragrafo *Claims*
      - |check-icon|
    * - **state**
-     - String di almeno 32 caratteri alfanumerici. Valore univoco utilizzato per mantenere lo stato tra la request e il callback. Questo valore verrà restituito al client nella risposta al termine dell'autenticazione. Il valore deve essere significativo esclusivamente per il RP e non deve essere intellegibile ad altri.
+     - String di almeno 32 caratteri alfanumerici. Valore univoco utilizzato per mantenere lo stato tra la request e il Callback (vedere :ref:`Flusso di autenticazione<flusso_autenticazione>` passo n.3). Questo valore verrà restituito al client nella risposta al termine dell'autenticazione. Il valore deve essere significativo esclusivamente per il RP e non deve essere intellegibile ad altri.
      - |check-icon|
    * - **ui_locales**
      - Lista di codici RFC5646 separati da spazi. Lingue preferibili per visualizzare le pagine dell'OP. L'OP può ignorare questo parametro se non dispone di nessuna delle lingue indicate.

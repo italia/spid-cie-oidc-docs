@@ -1,5 +1,7 @@
 .. include:: ./common_definitions.rst
 
+.. _flusso_autenticazione:
+
 Flusso di autenticazione
 ------------------------
 
