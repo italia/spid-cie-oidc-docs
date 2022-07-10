@@ -104,7 +104,7 @@ L'Introspection Endpoint risponde con un oggetto JSON definito come segue.
        Il RP deve verificare che il valore coincida con il proprio client_id.
      - 
    * - **iss**
-     - String. Identificatore dell'OP che lo contraddistingue univocamente nella federazione nel formato Uniform Resource Locator (URL).
+     - String. Identificatore dell'OP che lo contraddistingue univocamente nella Federazione nel formato Uniform Resource Locator (URL).
        Il client è tenuto a verificare che questo valore corrisponda all'OP chiamato.
      - 
    * - **aud**
