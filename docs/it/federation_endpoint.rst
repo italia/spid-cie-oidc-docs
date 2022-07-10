@@ -413,7 +413,7 @@ Generic Error Response
 ++++++++++++++++++++++
 
 Se la richiesta è malformata o avvengono errori durante l'elaborazione della richiesta, DOVREBBE essere utilizzato il seguente formato di errore indipendentemente dall'operazione specificata.
-La risposta HTTP DEVE essere avere un codice nell'intervallo 400/500, che dia un'indicazione del tipo di errori. Il corpo della risposta DEVE essere un oggetto JSON contenente i claim qui sotto riportati e il tipo di contenuto DEVE essere impostato a **application/json**.
+La risposta HTTP DEVE essere avere un codice nell'intervallo 400/500, che dia un'indicazione del tipo di errore. Il corpo della risposta DEVE essere un oggetto JSON contenente i claim qui sotto riportati e il tipo di contenuto DEVE essere di tipo **application/json**.
 
 
 .. list-table:: 
