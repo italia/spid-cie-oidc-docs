@@ -83,7 +83,7 @@ L'unico metodo di autenticazione all'endpoint token previsto è il private_key_j
 	 
 	 **exp**: UNIX Timestamp con l'istante di scadenza del JWT, codificato come NumericDate come indicato in :rfc:`7519`
 	 
-	 **jti**: Identificatore univoco uuid4 per questa richiesta di autenticazione, generato dal client casualmente con almeno 128bit di entropia.
+	 **jti**: Identificatore univoco uuid4 per questa richiesta di autenticazione, generato dal client.
      - |check-icon|
    * - **client_assertion_type**
      - Deve assumere il seguente valore: |br|
