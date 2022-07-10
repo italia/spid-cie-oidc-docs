@@ -16,7 +16,7 @@ autorizzazione, aggiungendo nella post i parametri in risposta.
 Response
 ++++++++
 
-Se l'autenticazione è avvenuta con successo, l'OpenID Provider (OP) Authorization server,
+Se l'autenticazione è avvenuta con successo, l'OpenID Provider (OP),
 reindirizza l'utente con i seguenti parametri:
 
 
