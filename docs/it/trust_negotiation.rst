@@ -90,7 +90,7 @@ Una volta che un RP viene riconosciuto come parte della Federazione, ottiene il 
 *Trust Chain*
 
 
-Pertanto, come mostrato nella figura successiva, l'Onboarding Chain è una procedura che parte dalla radice (TA) e va verso le entità foglie, mentre il processo di ottenimento di una Trust Chain parte dalle entità foglie e, seguendo il percorso dato dall'"authority_hint", raggiunge la radice (TA).
+Come mostrato nella figura successiva, la Trust Chain è una procedura che parte dalla radice (TA) e va verso le entità foglie, mentre il processo di ottenimento di una Trust Chain parte dalle entità foglie e, seguendo il percorso dato dall'"authority_hint", raggiunge la radice (TA).
 
 
 .. image:: ../../images/cie_onboarding_e_direzioni_trust_chain.svg
