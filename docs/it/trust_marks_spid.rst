@@ -27,7 +27,7 @@ Di seguito un esempio non normativo dell'oggetto **trust_marks** all'interno del
 
 
 
-Quello che segue è un esempio non normativo di un marchio di fiducia emesso da AgID per un Intermediario privato.
+Quello che segue è un esempio non normativo di un marchio di fiducia emesso dalla AgID per un Intermediario privato.
 
 .. code-block::
 
