@@ -80,7 +80,7 @@ Esempi:
 Se l'URL che identifica il soggetto non presenta il simbolo di slash finale ("/") è necessario aggiungerlo prima di appendere il web path della risorsa .well-known.
 
 
-Una volta che un RP viene riconosciuto come parte della Federazione, ottiene il permesso di mandare una Richiesta di Autenticazione. L'OP che non riconosce l'RP che fa la richiesta, è in grado di risolvere correttamente il Trust. L'OP inizia richiedendo la configurazione di entità dell'RP al .well-known endpoint dell'RP e, seguendo il percorso dato dall "authority_hint", raggiunge la radice del Trust, cioè il TA. In ogni passo della catena, l'OP può eseguire tutti i controlli di sicurezza richiedendo le dichiarazioni di entità da ciascuna entità e convalidando i Trust Mark e le firme. La figura che segue dà un esempio rappresentativo di come funziona la catena del Trust.
+Una volta che un RP viene riconosciuto come parte della Federazione, ottiene il permesso di effettuare una Richiesta di Autenticazione. L'OP che non riconosce il RP che fa la richiesta, è in grado di risolvere correttamente il Trust. L'OP inizia richiedendo la configurazione di entità del RP al .well-known endpoint del RP e, seguendo il percorso dato dall "authority_hint", raggiunge la radice del Trust, cioè il TA. In ogni passo della catena, l'OP può eseguire tutti i controlli di sicurezza richiedendo le dichiarazioni di entità da ciascuna entità e convalidando i Trust Mark e le firme. La figura che segue dà un esempio rappresentativo di come funziona la catena del Trust.
 
 
 .. image:: ../../images/cie_esempio_trust_chain.svg
