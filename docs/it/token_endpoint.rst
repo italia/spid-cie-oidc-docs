@@ -110,7 +110,7 @@ L'unico metodo di autenticazione all'endpoint token previsto è il private_key_j
 Response
 ++++++++
 
-Dopo avere ricevuto e validato la Token request dal client, il Token endpoint dell'OpenID Provider (OP) restituisce una response che include ID Token e Access Token e un eventuale Refresh Token, in formato JWT e firmati secondo le modalità definite dall'Agenzia per l'Italia Digitale.
+Dopo avere ricevuto e validato la Token request dal client, il Token endpoint dell'OpenID Provider (OP) restituisce una response che include ID Token e Access Token e un eventuale Refresh Token, in formato JWT e firmati.
 
 L'Access Token deve essere formatosecondo le indicazioni dello standard "International Government Assurance Profile (iGov) for OAuth 2.0 - Draft 03", paragrafo 3.2.1, "JWT Bearer Tokens".
 
