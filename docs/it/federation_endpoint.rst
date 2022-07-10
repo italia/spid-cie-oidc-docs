@@ -233,7 +233,7 @@ DEVE essere una richiesta HTTP che usa il metodo GET e lo schema https verso uno
      - **Descrizione**
      - **Obbligatorio**
    * - **sub**
-     - String. L'entity_id per l'enbtità alla quale è stato inviato il TM.
+     - String. L'entity_id per l'entità alla quale è stato inviato il TM.
      - |uncheck-icon|
    * - **id**
      - String. Identifica il TM
