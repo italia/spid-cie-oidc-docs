@@ -160,8 +160,6 @@ Di seguito i codici di errore:
    * - L'OP ha riscontrato un problema interno temporaneo.
      - **temporarily_unavailable**
 
-Eventuali ulteriori codici di errore possono essere definiti dall'Agenzia per l'Italia Digitale con
-proprio atto. 
 
 .. seealso:: 
 
