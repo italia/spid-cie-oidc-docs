@@ -1,5 +1,7 @@
 .. include:: ./common_definitions.rst
 
+.. _metadata_oidc:
+
 Metadata OIDC
 -------------
 
