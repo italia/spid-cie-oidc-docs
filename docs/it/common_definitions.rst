@@ -55,4 +55,9 @@
 .. _E164: http://www.itu.int/rec/T-REC-E.164-201011-I/en
 .. _ISO8601-2004: https://www.iso.org/standard/40874.html
 .. _ICAO-Doc9303: https://www.icao.int/publications/Documents/9303_p3_cons_en.pdf
+.. _JWA: https://datatracker.ietf.org/doc/html/draft-ietf-jose-json-web-algorithms
+.. _JWT: https://datatracker.ietf.org/doc/html/draft-ietf-oauth-json-web-token
+.. _JWE: https://datatracker.ietf.org/doc/html/draft-ietf-jose-json-web-encryption
+.. _JWK: https://datatracker.ietf.org/doc/html/draft-ietf-jose-json-web-key
+.. _JWS: https://datatracker.ietf.org/doc/html/draft-ietf-jose-json-web-signature
 

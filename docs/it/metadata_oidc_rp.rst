@@ -55,23 +55,6 @@ Dove un RP non disponesse all'interno dei propri Metadata dei claim **client_reg
 
         **crv**: parametro curva (solo per chiavi EC)
      - |check-icon| in assenza del claim **signed_jwks_uri**. 
-   * - **jwks_uri**
-     - Url del registry dove è localizzato il jwks contenente la chiave pubblica in formato 
-       JSON Web Key (JWK) e quindi composto dai seguenti parametri:
-        
-        **kty**: famiglia dell'algoritmo crittografico utilizzato
-
-        **alg**: algoritmo utilizzato
-
-        **use**: utilizzo della chiave pubblica per firma (sig) o encryption (enc)
-
-        **kid**: identificatore univoco della chiave, valorizzato come |br|
-        :rfc:`7638`
-
-        **n**: modulo (solo per chiavi RSA)
-
-        **e**: esponente (solo per chiavi RSA)
-     - |check-icon| in assenza del claim **jwks**. 
    * - **client_id**
      - URI che identifica univocamente il RP.
      - |check-icon|
@@ -98,8 +81,21 @@ Dove un RP non disponesse all'interno dei propri Metadata dei claim **client_reg
      - Array dei valori di **grant_type** previsti da OAuth 2.0 che il client userà nelle richieste al
        **Token Endpoint**. Deve contenere i soli valori **authorization_code** e **refresh_token**.
      - |check-icon|
-
-
-
+   * - **userinfo_signed_response_alg**
+     - `JWS`_ alg algorithm `JWA`_ OBBLIGATORIO per firmare le :ref:`UserInfo Response<userinfo_response>`. 
+       Se specificato, la UserInfo Response sarà `JWT`_ serialized, e firmata usando `JWS`_. 
+       Se viene omesso, UserInfo Response ritorna come default i claim come JSON object codificato UTF-8 usando il content-type application/json.
+     - |uncheck-icon|
+   * - **userinfo_encrypted_response_alg**
+     - `JWE`_ alg algorithm `JWA`_ OBBLIGATORIO per cifrare le :ref:`UserInfo Response<userinfo_response>`. 
+       Se vengono richieste sia la firma che la cifratura, la UserInfo Response sarà firmata e poi cifrata,
+       con il risultato come Nested JWT, come definito in `JWT`_. 
+       Il default, se omesso, è che non viene eseguita la cifratura.
+     - |uncheck-icon|
+   * - **userinfo_encrypted_response_enc**
+     - `JWE`_ enc algorithm `JWA`_ OBBLIGATORIO per cifrare le :ref:`UserInfo Response<userinfo_response>`.
+       Se **userinfo_encrypted_response_alg** viene specificato, il default per questo valore è ``A128CBC-HS256``. 
+       Quando **userinfo_encrypted_response_enc** viene incluso, anche **userinfo_encrypted_response_alg** DEVE essere presente.
+     - |uncheck-icon|
 
 Vedere `OIDC-FED#RP_metadata`_
