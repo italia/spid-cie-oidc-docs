@@ -89,28 +89,6 @@ L'Introspection Endpoint risponde con un oggetto JSON definito come segue.
    * - **active**
      - Valore booleano che indica la validità del token. Se il token è scaduto, è revocato o non è mai stato emesso per il client_id chiamante, l'Introspection Endpoint deve restituire false.
      - 
-   * - **scope**
-     - Lista degli scope richiesti al momento dell'Authorization Request
-     - 
-   * - **exp**
-     - UNIX Timestamp con l'istante di scadenza del JWT, codificato come NumericDate come indicato in :rfc:`7519`
-     - |check-icon|
-   * - **sub**
-     - String. Identificatore del soggetto, coincidente con quello già rilasciato nell'ID Token. 
-       Il RP deve verificare che il valore coincida con quello contenuto nell'ID Token.
-     - 
-   * - **client_id**
-     - String. URI che identifica univocamente il RP. 
-       Il RP deve verificare che il valore coincida con il proprio client_id.
-     - 
-   * - **iss**
-     - String. Identificatore dell'OP che lo contraddistingue univocamente nella Federazione nel formato Uniform Resource Locator (URL).
-       Il client è tenuto a verificare che questo valore corrisponda all'OP chiamato.
-     - 
-   * - **aud**
-     - String. Contiene il client ID.
-       Il client è tenuto a verificare che questo valore corrisponda al proprio client ID. 
-     - 
 
 	 
 Errori
