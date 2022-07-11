@@ -9,7 +9,7 @@ Se viene utilizzato il metodo POST i parametri devono essere trasmessi utilizzan
 
 I parametri **client_id**, **response_type** e **scope** DEVONO essere trasmessi sia come parametri sulla chiamata HTTP sia all'interno dell'oggetto request e i loro valori devono corrispondere, in ogni caso i parametri all'interno dell'oggetto request prevalgono su quelli indicati sulla chiamata HTTP.
 
-L'oggetto request DEVE essere un token JWT firmato, secondo le modalità definite dall'Agenzia per l'Italia Digitale. 
+L'oggetto request DEVE essere un token JWT firmato.
 
 
 **Esempio (chiamata HTTP):**
@@ -188,8 +188,7 @@ PKCE (Proof Key for Code Exchange, `RFC7636 <https://tools.ietf.org/html/rfc7636
 
 Quando il client contatta il Token Endpoint al termine del flusso di autenticazione, invia il *code verifier* originariamente creato, in modo che l'OP possa confrontare che il suo hash corrisponda con quello acquisito nella richiesta di autenticazione.
 
-Il *code verifier* e il *code challenge* devono essere generati secondo le modalità definite
-dall'Agenzia per l'Italia Digitale
+Il *code verifier* e il *code challenge* devono essere generati secondo le modalità definite da **Agid** o da **MinInterno**.
 
 
 Esempio
