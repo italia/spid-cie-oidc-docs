@@ -256,7 +256,7 @@ Segue un esempio non normativo di richiesta che usa **sub** e **id**:
 Status Response
 ^^^^^^^^^^^^^^^
 
-IL corpo della risposta HTTP DEVE essere un oggetto JSON contenente i claim qui sotto riportati e il tipo di contenuto deve
+IL corpo della risposta HTTP DEVE essere un oggetto JSON contenente i claim di seguito riportati e il tipo di contenuto deve
 essere impostato a **application/json**:
 
 
@@ -409,7 +409,7 @@ Generic Error Response
 ++++++++++++++++++++++
 
 Se la richiesta è malformata o avvengono errori durante l'elaborazione della richiesta, DOVREBBE essere utilizzato il seguente formato di errore indipendentemente dall'operazione specificata.
-La risposta HTTP DEVE essere avere un codice nell'intervallo 400/500, che dia un'indicazione del tipo di errore. Il corpo della risposta DEVE essere un oggetto JSON contenente i claim qui sotto riportati e il tipo di contenuto DEVE essere di tipo **application/json**.
+La risposta HTTP DEVE essere avere un codice nell'intervallo 400/500, che dia un'indicazione del tipo di errore. Il corpo della risposta DEVE essere un oggetto JSON contenente i claim di seguito riportati e il tipo di contenuto DEVE essere di tipo **application/json**.
 
 
 .. list-table:: 
