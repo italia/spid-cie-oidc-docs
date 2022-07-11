@@ -75,7 +75,7 @@ Se un OP nei propri Metadata non ha i claim **client_registration_types_supporte
      - JSON Web Key Set :rfc:`7517#appendix-A.1`
      - |check-icon| in assenza del claim **signed_jwks_uri**. 
    * - **jwks_uri**
-     - URL del JSON Web Key Set (JWKS) dell'OP, che contiene la/le chiavi pubbliche di cifratura/decifratura che l'RP deve usare.
+     - URL del JSON Web Key Set (JWKS) dell'OP, che contiene la/le chiavi pubbliche di cifratura/decifratura che il RP deve usare.
      - |check-icon|
    * - **signed_jwks_uri**
      - Un URL HTTP che punta a un JWT firmato che ha come payload il JWK Set dell'entità (vedere esempio sotto). 

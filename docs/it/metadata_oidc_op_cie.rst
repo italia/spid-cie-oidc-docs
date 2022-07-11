@@ -227,12 +227,12 @@ seguenti valori dello **scope** da usare per richiedere i Claim:
        Se non sono presenti, vengono richiesti i claim di default dell'ID Token.
      - |uncheck-icon|
 
-L'RP può solo chiedere **given_name**, **family_name**, **birthdate** e **fiscal_number** 
+Il RP può solo chiedere **given_name**, **family_name**, **birthdate** e **fiscal_number** 
 nell'**id_token object** del parametro **claim**. Gli altri claim riportati DEVONO essere richiesti nell'oggetto **userinfo** del parametro **claim**.
 
 Se viene omessa la richiesta **claims** e lo scope è uguale a **openid**, l'OP DOVREBBE fornire solo
 il claim **sub** valorizzato a **pairwise**.
-Pe motivi di privacy, i claim necessari DOVREBBERO essere richiesti esplicitamente dall'RP nell'Authorization Request.
+Pe motivi di privacy, i claim necessari DOVREBBERO essere richiesti esplicitamente dal RP nell'Authorization Request.
 
 I claim richiesti nei parametri di scope vengono ritornati sia nella risposta userinfo, che nell'ID Token. 
 

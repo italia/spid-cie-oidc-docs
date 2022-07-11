@@ -138,7 +138,7 @@ L'oggetto request DEVE essere un token JWT firmato, secondo le modalità definit
      - |check-icon| 
    * - **iss**
      - String. Identificatore dell'emittente dell'OP che ha creato l'Authentication Response. 
-       L'RP DEVE validare questo parametro con precisione e NON DEVE permettere che diversi OP 
+       Il RP DEVE validare questo parametro con precisione e NON DEVE permettere che diversi OP 
        usino lo stesso identificatore di emittente
      - |check-icon|
    * - **aud**

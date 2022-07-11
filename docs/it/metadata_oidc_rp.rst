@@ -29,7 +29,7 @@ Dove un RP non disponesse all'interno dei propri Metadata dei claim **client_reg
      - Array di stringhe che specifica i tipi supportati dalla federazione (solo *automatic*)
      - |check-icon| 
    * - **organization_name**
-     - Un nome leggibile che rappresenta l'organizzazione proprietaria dell'RP. 
+     - Un nome leggibile che rappresenta l'organizzazione proprietaria del RP. 
      - |check-icon| 
    * - **jwks**
      - JSON Web Key Set |br|
