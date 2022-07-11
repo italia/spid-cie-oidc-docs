@@ -16,8 +16,6 @@ OpenID Connect Provider Metadata (OP)
  }
 
 
-Se un OP nei propri Metadata non ha i claim **client_registration_types_supported** e/o **request_authentication_methods_supported** i valori da intendersi come impliciti sono i seguenti. 
-
 .. list-table:: 
    :widths: 20 60 20
    :header-rows: 1
@@ -26,7 +24,7 @@ Se un OP nei propri Metadata non ha i claim **client_registration_types_supporte
      - **Descrizione**
      - **Obbligatorio**
    * - **client_registration_types_supported**
-     - Array di stringhe che specifica i tipi supportati dalla federazione (solo *automatic*)
+     - Array di stringhe che specifica i tipi supportati dalla federazione (solo *automatic*). Claim implicito.
      - |check-icon|
    * - **organization_name**
      - Un nome leggibile che rappresenta l'organizzazione proprietaria dell'OP. È inteso per l'utilizzo nell'interfaccia
@@ -43,8 +41,7 @@ Se un OP nei propri Metadata non ha i claim **client_registration_types_supporte
         }
      - |uncheck-icon|
    * - **request_authentication_methods_supported**
-     - Un oggetto JSON con membri che rappresentano metodi di richiesta autenticazione e come valori liste di metodi di
-       richieste di autenticazione che sono supportati dall'Authorization Endpoint.
+     - Un oggetto JSON con membri che rappresentano metodi di richiesta autenticazione e come valori liste di metodi di richieste di autenticazione che sono supportati dall'Authorization Endpoint. Claim implicito.
      - |uncheck-icon|
    * - **organization_name**
      - Un nome leggibile che rappresenta l'organizzazione proprietaria dell'OP. 
