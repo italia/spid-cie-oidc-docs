@@ -1,5 +1,7 @@
 .. include:: ./common_definitions.rst
 
+.. _user_claims:
+
 Tabella attributi utente
 ------------------------
 
@@ -122,14 +124,14 @@ Tabella attributi identificativi
      - JSON object: formatted, street_address, locality, region, postal_code, country, country_code |br|
        Json composto da una stringa composta da una sequenza di parole intervallate da spazi singoli rappresentanti:
 
-       Tipologia( via, viale, piazza …) |br|
-       Indirizzo |br|
-       Nr.civico |br|
-       CAP |br|
-       Luogo |br|
-       Provincia |br|
+       - Tipologia( via, viale, piazza …) 
+       - Indirizzo 
+       - Nr.civico 
+       - CAP 
+       - Luogo 
+       - Provincia
 
-       inserita nel claim "formatted" del Json Object "address"
+       la stringa è inserita nel claim "formatted" del Json Object "address"
 
        Esempio:
 

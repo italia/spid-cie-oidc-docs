@@ -158,6 +158,7 @@ OpenID Connect Provider Metadata (OP)
 
 .. seealso:: 
    - `OpenID.Discovery#OP_Metadata`_
+   - :ref:`Attributi utente<user_claims>`
 
 
 
