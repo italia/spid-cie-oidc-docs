@@ -62,7 +62,7 @@ Per esempi di $ENTITY_CONFIGURATION vedere la sezione :ref:`Esempi di Entity Con
 Prelevare Entity Statements
 +++++++++++++++++++++++++++
 
-Tutte le entità che pubblicano ES riguardo altre entità (es. **SA** e **TA**) DEVONO esporre un **Fetch Endpoint**. Viene usato da un'entità per raccogliere gli ES per mettere insieme le Trust Chain.
+Tutte le entità che pubblicano ES riguardo altre entità (es. **SA** e **TA**) DEVONO esporre un **Fetch Endpoint**. Viene usato da un'entità per ottenere gli ES.
 
 
 
