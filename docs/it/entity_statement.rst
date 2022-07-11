@@ -6,7 +6,7 @@
 Entity Statement
 ----------------
 
-Il componente basilare per costruire una Catena di Fiducia (Trust Chain) è l'**Entity Statement (ES)**, un JWT firmato che contiene le chiavi di firma delle entità e ulteriori dati usati per controllare il processo di risoluzione della Trust Chain. Quando uno statement è autofirmato da un'entità, viene chiamato *Entity Configuration (EC)*.
+Il componente basilare per costruire una Catena di Fiducia (Trust Chain) è l'**Entity Statement (ES)**, un JWT firmato che contiene le chiavi di firma delle entità e ulteriori dati usati per controllare il processo di risoluzione della Trust Chain. Quando uno statement è firmato da un'entità, viene chiamato *Entity Configuration (EC)*.
 
 Firma di Entity Statement
 +++++++++++++++++++++++++
