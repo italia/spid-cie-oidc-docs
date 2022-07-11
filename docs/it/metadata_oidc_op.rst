@@ -142,10 +142,6 @@ OpenID Connect Provider Metadata (OP)
    * - **claims_parameter_supported**
      - Valore booleano chje indica se l'OP supporta l'utilizzo del parametro *claims*. Deve valere *true*
      - |check-icon|
-   * - **federation_resolve_endpoint**
-     - String. Url presso il quale è possibile ottenere i Trust Mark validati, il Metadata finale e la Trust Chain, 
-       relativamente ad un soggetto.
-     - |check-icon| 
 
 
 
