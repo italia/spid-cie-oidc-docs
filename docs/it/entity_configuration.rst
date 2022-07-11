@@ -32,22 +32,22 @@ Entity Configuration - claim comuni
 
    * - **Claim**
      - **Descrizione**
-     - **Obbligatorio**
+     - **Supportato da**
    * - **iss**
      - String. Identificativo dell'entità che lo emette. 
-     - |check-icon|
+     - |spid-icon| |cieid-icon|
    * - **sub**
      - String. Identificativo del soggetto a cui è riferito. 
-     - |check-icon|
+     - |spid-icon| |cieid-icon|
    * - **iat**
      - UNIX Timestamp con l'istante di generazione del JWT, codificato come NumericDate come indicato in :rfc:`7519`
-     - |check-icon| 
+     - |spid-icon| |cieid-icon| 
    * - **exp**
      - UNIX Timestamp con l'istante di scadenza del JWT, codificato come NumericDate come indicato in :rfc:`7519`.
-     - |check-icon|
+     - |spid-icon| |cieid-icon|
    * - **jwks**
      - Un JSON Web Key Set (JWKS) :rfc:`7517` che rappresenta la parte pubblica delle chiavi di firma dell'entità interessata. Ogni JWK nel set JWK DEVE avere un ID di chiave (claim kid).
-     - |check-icon|
+     - |spid-icon| |cieid-icon|
    * - **metadata**
      - JSON Object. Ogni chiave dell'oggetto JSON rappresenta un identificatore del tipo 
        di :ref:`Metadata<metadata_oidc>` e ogni valore DEVE essere un oggetto JSON 
@@ -63,7 +63,7 @@ Entity Configuration - claim comuni
        - oauth_authorization_server
        - oauth_resource
        - trust_mark_issuer
-     - |check-icon|
+     - |spid-icon| |cieid-icon|
 
 .. warning::
   All'interno dell'EC i valori degli attributi **iss** e **sub** contengono il medesimo valore (URL).
@@ -80,13 +80,14 @@ Gli EC delle entità Foglia e intermediari, in aggiunta ai claim precedentemente
 
    * - **Claim**
      - **Descrizione**
-     - **Obbligatorio**
+     - **Supportato da**
    * - **authority_hints**
      - Array di URLs. Contiene una lista di URL delle entità superiori, quali TA o SA che POSSONO emettere un ES relativo a questo soggetto. 
-     - |check-icon|
+     - |spid-icon| |cieid-icon|
    * - **trust_marks**
-     - Un array JSON contenente i Trust Mark. Vedere la Sezione :ref:`Trust Mark <Trust_Mark>`.
-     - |check-icon| per tutti i partecipanti fatta esclusione del Trust Anchor. 
+     - Un array JSON contenente i Trust Mark. Vedere la Sezione :ref:`Trust Mark <Trust_Mark>`. 
+       Obbligatorio per tutti i partecipanti fatta esclusione del Trust Anchor. 
+     - |spid-icon| |cieid-icon|
 
 
 
@@ -103,10 +104,10 @@ Gli EC di un TA, in aggiunta ai claim comuni a tutti i partecipanti, contengono 
 
    * - **Claim**
      - **Descrizione**
-     - **Obbligatorio**
+     - **Supportato da**
    * - **constraints**
      - JSON Object che descrive un insieme di vincoli della Trust Chain e che DEVE contenere l'attributo **max_path_length**. Rappresenta il numero massimo di SA tra una Foglia e il TA.
-     - |check-icon|
+     - |spid-icon| |cieid-icon|
    * - **trust_marks_issuers**
      - JSON array che indica quali autorità sono considerate attendibili nella federazione per l'emissione di specifici TM, questi assegnati mediante il proprio identificativo univoco.
-     - |check-icon|
+     - |spid-icon| |cieid-icon|

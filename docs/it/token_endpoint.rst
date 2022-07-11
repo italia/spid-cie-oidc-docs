@@ -66,10 +66,10 @@ L'unico metodo di autenticazione all'endpoint token previsto è il private_key_j
 
    * - **Claim**
      - **Descrizione**
-     - **Obbligatorio**
+     - **Supportato da**
    * - **client_id**
      - URI che identifica univocamente il RP. 
-     - |check-icon|
+     - |spid-icon| |cieid-icon|
    * - **client_assertion**
      - JWT firmato con la chiave privata del Relying Party contenente i seguenti parametri: 
 	 
@@ -84,27 +84,28 @@ L'unico metodo di autenticazione all'endpoint token previsto è il private_key_j
 	 **exp**: UNIX Timestamp con l'istante di scadenza del JWT, codificato come NumericDate come indicato in :rfc:`7519`
 	 
 	 **jti**: Identificatore univoco uuid4 per questa richiesta di autenticazione, generato dal client.
-     - |check-icon|
+     - |spid-icon| |cieid-icon|
    * - **client_assertion_type**
      - Deve assumere il seguente valore: |br|
        **urn:ietf:params:oauth:client-assertion-type:jwtbearer**
-     - |check-icon|
+     - |spid-icon| |cieid-icon|
    * - **code**
-     - Codice di autorizzazione restituito nell'Authentication response.
-     - Solo se **grant_type** è **authorization_code**
+     - Codice di autorizzazione restituito nell'Authentication response. Obbligatorio solo se **grant_type** è **authorization_code**
+     - |spid-icon| |cieid-icon|
    * - **code_verifier**
-     - Codice di verifica del code_challenge 
-     - Solo se **grant_type** è **authorization_code** 
+     - Codice di verifica del code_challenge. Obbligatorio solo se **grant_type** è **authorization_code** 
+     - |spid-icon| |cieid-icon|
    * - **grant_type**
      - Tipo di credenziale presentata dal Client per la richiesta corrente.
        Può assumere uno dei seguenti valori: 
 	 
-	   **authorization_code** |br|
-	   **refresh_token**
-     - |check-icon|
+	   - **authorization_code**
+	   - **refresh_token**
+
+     - |spid-icon| |cieid-icon|
    * - **refresh_token**
-     - 
-     - Solo se **grant_type** è **refresh_code**   
+     - Obbligatorio solo se **grant_type** è **refresh_code**   
+     - |spid-icon| |cieid-icon|
  
  
 Response
@@ -132,22 +133,22 @@ L'ID Token deve essere formato secondo le indicazioni del paragrafo successivo.
 
    * - **Claim**
      - **Descrizione**
-     - **Obbligatorio**
+     - **Supportato da**
    * - **access_token**
      - L'access token, in formato JWT firmato, consente l'accesso allo UserInfo endpoint per ottenere gli attributi.
-     - 
+     - |spid-icon| |cieid-icon|
    * - **token_type**
      - Tipo di *access token* restituito. Deve essere valorizzato sempre con **Bearer**
-     - 
+     - |spid-icon| |cieid-icon|
    * - **refresh_token**
      - Il *refresh token*, in formato JWT firmato, consente di chiamare nuovamente il Token Endpoint per ottenere un nuovo *access token* e quindi recuperare una `sessione lunga revocabile`_.
-     - 
+     - |spid-icon| |cieid-icon|
    * - **expires_in**
      - Scadenza dell'*access token* in secondi.
-     - 
+     - |spid-icon| |cieid-icon|
    * - **id_token**
      - ID Token in formato JWT (v. paragrafo successivo)
-     - 
+     - |spid-icon| |cieid-icon|
 
 
 ID Token
@@ -179,25 +180,25 @@ L'ID Token è un JSON Web Token (JWT) che contiene informazioni sull'utente che 
 
    * - **Claim**
      - **Descrizione**
-     - **Obbligatorio**
+     - **Supportato da**
    * - **iss** 
      - Identificatore dell'OP che lo contraddistingue univocamente nella federazione nel formato Uniform Resource Locator (URL). Il client è tenuto a verificare che questo valore corrisponda all'OP chiamato.
-     - 
+     - |spid-icon| |cieid-icon|
    * - **sub** 
      - Per il valore di questo parametro fare riferimento allo standard "OpenID Connect Core 1.0", "Pairwise Identifier Algorithm". 
-     - 
+     - |spid-icon| |cieid-icon|
    * - **aud** 
      - Contiene il client ID. Il client è tenuto a verificare che questo valore corrisponda al proprio client ID.
-     - 
+     - |spid-icon| |cieid-icon|
    * - **acr** 
      - Livello di autenticazione effettivo. Può essere uguale o superiore a quello richiesto dal client nella Authentication Request.
-     - 
+     - |spid-icon| |cieid-icon|
    * - **at_hash** 
      - Hash dell'Access Token. Il suo valore è la codifica base64url della prima metà dell'hash del valore access_token, usando l'algoritmo di hashing indicato in **alg** nell'header dell'ID Token. Il client è tenuto a verificare che questo valore corrisponda all'*access token* restituito insieme all'ID Token.
-     - 
+     - |spid-icon| |cieid-icon|
    * - **iat** 
      - UNIX Timestamp con l'istante di generazione del JWT, codificato come NumericDate come indicato in :rfc:`7519`
-     - 
+     - |spid-icon| |cieid-icon|
    * - **nbf** 
      - UNIX Timestamp. Data/ora di inizio validità del JWT in formato NumericDate, come indicato in :rfc:`7519`. Deve corrispondere con il valore di **iat**.
 
@@ -211,16 +212,16 @@ L'ID Token è un JSON Web Token (JWT) che contiene informazioni sull'utente che 
                 jti: { essential: true }
               }
 	    } 
-     - 
+     - |spid-icon| |cieid-icon|
    * - **exp**
      - UNIX Timestamp con l'istante di scadenza del JWT, codificato come NumericDate come indicato in :rfc:`7519`
-     - |check-icon|
+     - |spid-icon| |cieid-icon|
    * - **jti** 
      - String. Identificatore unico dell'ID Token che il client può utilizzare per prevenirne il riuso, rifiutando l'ID Token se già processato. Deve essere di difficile individuazione da parte di un attaccante e composto da una String casuale. Si consiglia l'utilizzo del generatore *uuid4*
-     - 
+     - |spid-icon| |cieid-icon|
    * - **nonce** 
      - String. String casuale generata dal Client per ciascuna sessione utente ed inviata nell'Authentication Request (parametro nonce), finalizzata a mitigare attacchi replay. Il client è tenuto a verificare che coincida con quella inviata nell'Authentication Request.
-     - 
+     - |spid-icon| |cieid-icon|
 
 
 .. seealso::
@@ -250,13 +251,13 @@ In caso di errore, l'OP restituisce una response con un JSON nel body costituito
 
    * - **Claim**
      - **Descrizione**
-     - **Obbligatorio**
+     - **Supportato da**
    * - **error** 
      - Codice dell'errore (v. tabella sotto)
-     - 
+     - |spid-icon| |cieid-icon|
    * - **error_description** 
      - Descrizione più dettagliata dell'errore, finalizzata ad aiutare lo sviluppatore per eventuale debugging. Questo messaggio non è destinato ad essere visualizzato all'utente (a tal fine si faccia riferimento alle `Linee Guida UX SPID`_).
-     -
+     - |spid-icon| |cieid-icon|
 	
 I codici di stato HTTP ed i valori dei parametri *error* e *error_description* sono descritti nelle tabelle relative ai messaggi di anomalia.
 

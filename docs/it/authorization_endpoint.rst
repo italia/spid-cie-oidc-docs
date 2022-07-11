@@ -70,21 +70,21 @@ L'oggetto request DEVE essere un token JWT firmato.
 
    * - **Claim**
      - **Descrizione**
-     - **Obbligatorio**
+     - **Supportato da**
    * - **client_id**
      - URI che identifica univocamente il RP.
-     - |check-icon|
+     - |spid-icon| |cieid-icon|
    * - **code_challenge**
      - Un challenge per PKCE da riportare anche nella successiva richiesta al Token endpoint. Vedi paragrafo :ref:`Generazione del code_challenge per PKCE<PKCE_code_challenge_generation>`
-     - |check-icon|
+     - |spid-icon| |cieid-icon|
    * - **code_challenge_method**
      - Metodo di costruzione del challenge PKCE. È obbligatorio specificare il valore **S256**
-     - |check-icon|
+     - |spid-icon| |cieid-icon|
    * - **nonce**
      - Stringa di almeno 32 caratteri alfanumerici, generata casualmente dal Client e finalizzata a mitigare attacchi replay.
        Questo valore sarà restituito nell'ID Token fornito dal Token Endpoint, in modo da consentire al client di verificare
        che sia uguale a quello inviato nella richiesta di autenticazione.
-     - |check-icon|
+     - |spid-icon| |cieid-icon|
    * - **prompt**
      - Definisce come l'OP deve richiedere l'autenticazione all'utente.
        
@@ -95,15 +95,15 @@ L'oggetto request DEVE essere un token JWT firmato.
        **consent login**: l'OP forza una richiesta di autenticazione all'utente.
        Quindi chiede il consenso al trasferimento degli attributi. 
 
-     - |check-icon|
+     - |spid-icon| |cieid-icon|
    * - **redirect_uri**
      - URL dove l'OP reindirizzerà l'utente al termine del processo di autenticazione. 
        Deve essere uno degli URL indicati nel client metadata. 
-     - |check-icon|
+     - |spid-icon| |cieid-icon|
    * - **response_type**
      - Il tipo di credenziali che deve restituire l'OP.
        **code**
-     - |check-icon|
+     - |spid-icon| |cieid-icon|
    * - **scope**
      - Lista degli scope richiesti.
        
@@ -111,7 +111,7 @@ L'oggetto request DEVE essere un token JWT firmato.
        
        **offline_access**: se specificato, l'OP rilascerà oltre all'access token anche un refresh token necessario
        per instaurare sessioni lunghe revocabili. L'uso di questo valore è consentito solo se se si intende offrire all'utente una `sessione lunga revocabile <https://www.agid.gov.it/sites/default/files/repository_files/spid-avviso-n41-integrazione_ll.gg_._openid_connect_in_spid.pdf#page=6>`_.
-     - |check-icon|
+     - |spid-icon| |cieid-icon|
    * - **acr_values**
      - Valori di riferimento della classe di contesto dell'Authentication Request. 
        Stringa separata da uno spazio, che specifica i valori "acr" richiesti al server di autorizzazione per l'elaborazione della richiesta di autenticazione con i valori indicati in ordine di preferenza. L'OP può utilizzare un'autenticazione ad un livello più alto di quanto richiesto. Tale scelta non deve comportare un esito negativo della richiesta.
@@ -120,33 +120,33 @@ L'oggetto request DEVE essere un token JWT firmato.
        ``https://www.spid.gov.it/SpidL1``
        ``https://www.spid.gov.it/SpidL2``
        ``https://www.spid.gov.it/SpidL3``
-     - |check-icon|
+     - |spid-icon| |cieid-icon|
    * - **claims**
      - Lista dei claims (attributi) che un RP intende richiedere. Vedi paragrafo *Claims*
-     - |check-icon|
+     - |spid-icon| |cieid-icon|
    * - **state**
      - Stringa di almeno 32 caratteri alfanumerici. Valore univoco utilizzato per mantenere lo stato tra la request e il Callback (vedere :ref:`Flusso di autenticazione<flusso_autenticazione>` passo n.3). Questo valore verrà restituito al client nella risposta al termine dell'autenticazione. Il valore deve essere significativo esclusivamente per il RP e non deve essere intellegibile ad altri.
-     - |check-icon|
+     - |spid-icon| |cieid-icon|
    * - **ui_locales**
      - Lista di codici RFC5646 separati da spazi. Lingue preferibili per visualizzare le pagine dell'OP. L'OP può ignorare questo parametro se non dispone di nessuna delle lingue indicate.
-     - |uncheck-icon|	
+     - |spid-icon| |cieid-icon|	
    * - **exp**
      - UNIX Timestamp con l'istante di scadenza del JWT, codificato come NumericDate come indicato in :rfc:`7519`
-     - |check-icon| 
+     - |spid-icon| |cieid-icon|
    * - **iat**
      - UNIX Timestamp con l'istante di generazione del JWT, codificato come NumericDate come indicato in :rfc:`7519`
-     - |check-icon| 
+     - |spid-icon| |cieid-icon|
    * - **iss**
      - String. Identificatore dell'emittente dell'OP che ha creato l'Authentication Response. 
        Il RP DEVE validare questo parametro con precisione e NON DEVE permettere che diversi OP 
        usino lo stesso identificatore.
-     - |check-icon|
+     - |spid-icon| |cieid-icon|
    * - **aud**
      - String. Deve corrispondere all'Identificatore del soggetto destinatario.
-     - |check-icon|
+     - |spid-icon| |cieid-icon|
    * - **typ**
      - Ove fosse assente, viene considerato *JWT* come definito da :rfc:`7519#section-5.1`
-     -  |uncheck-icon|
+     - |spid-icon| |cieid-icon|
 
 .. seealso::
 

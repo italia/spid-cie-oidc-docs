@@ -77,10 +77,10 @@ La richiesta DEVE essere una richiesta HTTP che usa il metodo GET ed ha i seguen
 
    * - **Claim**
      - **Descrizione**
-     - **Obbligatorio**
+     - **Supportato da**
    * - **sub**
      - String. L'identificatore di entità del soggetto per il quale si vuole l'emissione dell'ES.
-     - |uncheck-icon|
+     - |spid-icon| |cieid-icon|
 
 
 Il seguente è un esempio non normativo di una richiesta API per un ES:
@@ -140,16 +140,16 @@ La richiesta DEVE essere una richiesta HTTP che usa un metodo GET e lo schema ht
 
    * - **Claim**
      - **Descrizione**
-     - **Obbligatorio**
+     - **Supportato da**
    * - **sub**
      - String. L'identificatore di entità dell'entità di cui sono richiesti i dati risolti
-     - |check-icon|
+     - |spid-icon| |cieid-icon|
    * - **anchor**
      - String. Il TA che il peer remoto DEVE usare nella risoluzione dei Metadata. Il valore è un identificatrore di entità.
-     - |check-icon|
+     - |spid-icon| |cieid-icon|
    * - **type**
      - Un tipo specifico di Metadata da risolvere. Se assente, allora ci si aspetta che tutti i tipi di Metadata vengano ritornati.
-     - |uncheck-icon|
+     - |spid-icon| |cieid-icon|
 
 
 
@@ -227,16 +227,16 @@ DEVE essere una richiesta HTTP che usa il metodo GET e lo schema https verso uno
 
    * - **Claim**
      - **Descrizione**
-     - **Obbligatorio**
+     - **Supportato da**
    * - **sub**
      - String. L'identificativo univoco del soggetto per l'entità alla quale è stato inviato il TM.
-     - |uncheck-icon|
+     - |spid-icon| |cieid-icon|
    * - **id**
      - String. Identifica il TM.
-     - |uncheck-icon|
+     - |spid-icon| |cieid-icon|
    * - **iat**
      - UNIX Timestamp con l'istante di generazione del JWT, codificato come NumericDate come indicato in :rfc:`7519`
-     - |check-icon| 
+     - |spid-icon| |cieid-icon|
 
 
 Segue un esempio non normativo di richiesta che usa **sub** e **id**:
@@ -266,10 +266,10 @@ essere impostato a **application/json**:
 
    * - **Claim**
      - **Descrizione**
-     - **Obbligatorio**
+     - **Supportato da**
    * - **active**
      - Boolean. Indica ae il TM è attivo o no.
-     - |check-icon|
+     - |spid-icon| |cieid-icon|
 
 
 
@@ -314,10 +314,10 @@ DEVE essere una richiesta HTTP che usa il metodo GET e lo schema https verso un 
 
    * - **Claim**
      - **Descrizione**
-     - **Obbligatorio**
+     - **Supportato da**
    * - **entity_type**
      - Set (**federation_entity**, **openid_relying_party**, **openid_provider**).  Filtra il tipo di entità. 
-     - |uncheck-icon|
+     - |spid-icon| |cieid-icon|
 
 
 Segue un esempio non normativo:
@@ -418,16 +418,16 @@ La risposta HTTP DEVE essere avere un codice nell'intervallo 400/500, che dia un
 
    * - **Claim**
      - **Descrizione**
-     - **Obbligatorio**
+     - **Supportato da**
    * - **operation**
      - L'operazione della richiesta
-     - |check-icon|
+     - |spid-icon| |cieid-icon|
    * - **error**
      - Il codice di errore
-     - |check-icon|
+     - |spid-icon| |cieid-icon|
    * - **error_description**
      - Un breve testo leggibile che descrive l'errore
-     - |check-icon|
+     - |spid-icon| |cieid-icon|
 
 
 Segue un esempio non normativo di error response:

@@ -24,26 +24,25 @@ L'oggetto **federation_entity** è composto dai seguenti claim
 
    * - **Claim**
      - **Descrizione**
-     - **Obbligatorio**
+     - **Supportato da**
    * - **federation_fetch_endpoint**
      - String. Url presso il quale sono pubblicati gli Entity Statements in formato JWT dei soggetti discendenti. Vedere `OIDC-FED#Section.7.1.1`_
-     - |check-icon| 
+     - |spid-icon| |cieid-icon|
    * - **federation_list_endpoint**
      - String. Url presso il quale è possibile ottenere la lista dei discendenti in formato JSON.
-     - |check-icon| 
+     - |spid-icon| |cieid-icon|
    * - **federation_resolve_endpoint**
-     - String. Url presso il quale è possibile ottenere i Trust Mark validati, il Metadata finale e la Trust Chain, 
-       relativamente ad un soggetto.
-     - |check-icon| 
+     - String. Url presso il quale è possibile ottenere i Trust Mark validati, il Metadata finale e la Trust Chain, relativamente ad un soggetto.
+     - |spid-icon| |cieid-icon|
    * - **federation_status_endpoint**
      - String. Url presso il quale è possibile validare l'assegnazione di un Trust Mark ad uno specifico soggetto.
-     - |check-icon| 
+     - |spid-icon| |cieid-icon| 
    * - **homepage_uri**
      - String. Url della pagina web del Trust Anchor o SA.
-     -      
+     - |spid-icon| |cieid-icon|
    * - **organization_name**
      - String. Nome umanamente leggibile di questa entità. 
-     - |check-icon| 
+     - |spid-icon| |cieid-icon|
 
 Vedere `OIDC-FED#Federation_Entity`_
 

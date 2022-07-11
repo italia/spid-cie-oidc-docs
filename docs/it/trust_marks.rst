@@ -71,43 +71,43 @@ Gli attributi definiti all'interno dei TM aderiscono a quanto definito all'inter
 
     * - **Claim**
       - **Descrizione**
-      - **Obbligatorio**
+      - **Supportato da**
     * - **iss**
       - String. URL che identifica univocamente l'Autorità che lo ha emesso.
-      - |check-icon|
+      - |spid-icon| |cieid-icon|
     * - **sub**
       - String. URL che identifica univocamente il soggetto per il quale il Trust Mark è stato emesso.
-      - |check-icon|
+      - |spid-icon| |cieid-icon|
     * - **id**
       - String. Identificativo univoco del Trust Mark. È un URL con la seguente struttura: |br|
         **<TA domain>/<entity_type>/<trustmark_profile>/** |br|
         es. non normativo: ``https://registry.servizicie.interno.gov.it/openid_relying_party/public/``
-      - |check-icon|
+      - |spid-icon| |cieid-icon|
     * - **iat**
       - UNIX Timestamp con l'istante di geerazione del JWT, codificato come NumericDate come indicato in :rfc:`7519`
-      - |check-icon|
+      - |spid-icon| |cieid-icon|
     * - **logo_uri**
       - String. Un URL che punta al logo rappresentante il Trust Mark.
-      - |check-icon|
+      - |spid-icon| |cieid-icon|
     * - **exp**
       - UNIX Timestamp con l'istante di scadenza del JWT, codificato come NumericDate come indicato in :rfc:`7519`
-      - |check-icon|
+      - |spid-icon| |cieid-icon|
     * - **ref**
       - String. URL che punta a informazioni presenti sul web relative a questo marchio di fiducia
-      - |uncheck-icon|
+      - |spid-icon| |cieid-icon|
     * - **organization_type**
       - String. Specifica se l'ente appartiene alla pubblica amministrazione italiana o al settore privato (**public** o **private**)
-      - |check-icon|
+      - |spid-icon| |cieid-icon|
     * - **id_code**
       - String. Codice di identificazione dell'organizzazione. A seconda del valore del tipo di organizzazione, deve essere
         indicato il codice IPA (per il tipo di organizzazione pubblica) o il numero di partita IVA (per quello privato).
-      - |check-icon|
+      - |spid-icon| |cieid-icon|
     * - **email**
       - String. Email istituzionale o PEC dell'organizzazione.
-      - |check-icon|
+      - |spid-icon| |cieid-icon|
     * - **organization_name**
       - String. Il nome completo dell'entità che fornisce i servizi
-      - |check-icon|
+      - |spid-icon| |cieid-icon|
 
 
 .. seealso::
