@@ -108,7 +108,7 @@ Tabella attributi identificativi
    * - Ragione o denominazione sociale
      - anagrafica
      - ``https://attributes.eid.gov.it/company_name``
-     - String. Stringa composta da una sequenza di sottostringhe non vuote intervallate da uno (solo) spazio. 
+     - String. Stringa composta da una sequenza di parole intervallate da spazi singoli.
        In maiuscolo le sottostringhe corrispondenti a nomi (es. “Agenzia per l'Italia Digitale”)
 
        .. code-block::
@@ -118,8 +118,7 @@ Tabella attributi identificativi
      - extra anagrafica
      - ``https://attributes.eid.gov.it/registered_office``
      -  JSON object: formatted, street_address, locality, region, postal_code, country, country_code |br|
-        Json composto da una stringa composta da una sequenza di sottostringhe non vuote intervallate da
-        uno (solo) spazio rappresentanti:
+        Json composto da una stringa composta da una sequenza di parole intervallate da spazi singoli rappresentanti:
 
         Tipologia( via, viale, piazza …) |br|
         Indirizzo |br|
