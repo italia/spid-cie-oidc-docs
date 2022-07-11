@@ -41,7 +41,7 @@ OpenID Connect Provider Metadata (OP)
         }
      - |uncheck-icon|
    * - **request_authentication_methods_supported**
-     - Un oggetto JSON con membri che rappresentano metodi di richiesta autenticazione e come valori liste di metodi di richieste di autenticazione che sono supportati dall'Authorization Endpoint. Claim implicito.
+     - Un oggetto JSON con membri che rappresentano metodi di richiesta autenticazione e come valori liste di metodi di richieste di autenticazione che sono supportate dall'Authorization Endpoint. Claim implicito.
      - |uncheck-icon|
    * - **organization_name**
      - Un nome leggibile che rappresenta l'organizzazione proprietaria dell'OP. 
@@ -73,10 +73,10 @@ OpenID Connect Provider Metadata (OP)
      - |check-icon| in assenza del claim **signed_jwks_uri**. 
    * - **jwks_uri**
      - URL del JSON Web Key Set (JWKS) dell'OP, che contiene la/le chiavi pubbliche di cifratura/decifratura che il RP deve usare.
-     - |check-icon|
+     - |check-icon| solo in assenza di entrambi i **jwks** e **signed_jwks**
    * - **signed_jwks_uri**
      - Un URL HTTP che punta a un JWT firmato che ha come payload il JWK Set dell'entità.
-       Il JWT è firmato con una chiave inclusa nel JWK che l'entità ha pubblicato nel suo Entity Statement autofirmato.
+       Il JWT è firmato con una chiave inclusa nel JWK che l'entità ha pubblicato nella sua Entity Configuration.
      - |uncheck-icon|
    * - **response_types_supported**
      - JSON Array che contiene una lista di *response_type* supportati dall'OP.
@@ -86,17 +86,11 @@ OpenID Connect Provider Metadata (OP)
      - |check-icon|
    * - **acr_values_supported**
      - Array contenente i livelli SPID supportati dall'OP, rappresentati come URI. 
-       Deve contenere per SPID uno o più valori tra i seguenti:
+       Deve contenere uno o più valori tra i seguenti:
        
        ``https://www.spid.gov.it/SpidL1``
        ``https://www.spid.gov.it/SpidL2``
        ``https://www.spid.gov.it/SpidL3``
-
-       Deve contenere per CIE uno o più valori tra i seguenti:
-       
-       ``CIE_L1`` |br|
-       ``CIE_L2`` |br|
-       ``CIE_L3`` 
 
      - |check-icon| 
    * - **request_object_signing_alg_values_supported**
