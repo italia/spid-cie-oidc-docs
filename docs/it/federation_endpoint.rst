@@ -170,7 +170,7 @@ Segue un esempio non normativo di **Resolve request**:
 Resolve Endpoint Response
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Il response è un JWT firmato contenente Metadata risolti e TM verificati. Le chiavi usate dal risolutore DEVONO essere le stesse usate per costruire un ES autofirmato. Questo significa che l'emettitore della richiesta può facilmente trovare e verificare le chiavi di firma del risolutore raccogliendo e verificando l'appropriata Trust Chain.
+Il response è un JWT firmato contenente Metadata risolti, TM verificati e la prova della Trust Chain. Le chiavi usate dal risolutore DEVONO essere le stesse usate per costruire un ES autofirmato. Questo significa che l'emettitore della richiesta può facilmente trovare e verificare le chiavi di firma del risolutore raccogliendo e verificando l'appropriata Trust Chain.
 
 Segue un esempio non normativo di risposta, prima di serializzare e aggiungere una firma:
 
