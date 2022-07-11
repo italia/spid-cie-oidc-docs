@@ -52,8 +52,8 @@ Tabella attributi identificativi
    * - Cognome
      - anagrafica
      - family_name
-     - String. Stringa composta da una sequenza di una o più sottostringhe non vuote con carattere iniziale
-       in maiuscolo intervallate da uno (solo) spazio
+     - String. Stringa composta da una sequenza di parole con carattere iniziale maiuscolo,
+       intervallate spazi singoli.
 
        Esempio:
 
