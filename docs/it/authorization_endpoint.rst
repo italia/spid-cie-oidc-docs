@@ -81,7 +81,7 @@ L'oggetto request DEVE essere un token JWT firmato.
      - Metodo di costruzione del challenge PKCE. È obbligatorio specificare il valore **S256**
      - |check-icon|
    * - **nonce**
-     - String di almeno 32 caratteri alfanumerici, generata casualmente dal Client e finalizzata a mitigare attacchi replay.
+     - Stringa di almeno 32 caratteri alfanumerici, generata casualmente dal Client e finalizzata a mitigare attacchi replay.
        Questo valore sarà restituito nell'ID Token fornito dal Token Endpoint, in modo da consentire al client di verificare
        che sia uguale a quello inviato nella richiesta di autenticazione.
      - |check-icon|
@@ -114,7 +114,7 @@ L'oggetto request DEVE essere un token JWT firmato.
      - |check-icon|
    * - **acr_values**
      - Valori di riferimento della classe di contesto dell'Authentication Request. 
-       String separata da uno spazio, che specifica i valori "acr" richiesti al server di autorizzazione per l'elaborazione della richiesta di autenticazione con i valori indicati in ordine di preferenza. L'OP può utilizzare un'autenticazione ad un livello più alto di quanto richiesto. Tale scelta non deve comportare un esito negativo della richiesta.
+       Stringa separata da uno spazio, che specifica i valori "acr" richiesti al server di autorizzazione per l'elaborazione della richiesta di autenticazione con i valori indicati in ordine di preferenza. L'OP può utilizzare un'autenticazione ad un livello più alto di quanto richiesto. Tale scelta non deve comportare un esito negativo della richiesta.
        Deve contenere per SPID e CIE uno o più valori tra i seguenti:
        
        ``https://www.spid.gov.it/SpidL1``
@@ -125,7 +125,7 @@ L'oggetto request DEVE essere un token JWT firmato.
      - Lista dei claims (attributi) che un RP intende richiedere. Vedi paragrafo *Claims*
      - |check-icon|
    * - **state**
-     - String di almeno 32 caratteri alfanumerici. Valore univoco utilizzato per mantenere lo stato tra la request e il Callback (vedere :ref:`Flusso di autenticazione<flusso_autenticazione>` passo n.3). Questo valore verrà restituito al client nella risposta al termine dell'autenticazione. Il valore deve essere significativo esclusivamente per il RP e non deve essere intellegibile ad altri.
+     - Stringa di almeno 32 caratteri alfanumerici. Valore univoco utilizzato per mantenere lo stato tra la request e il Callback (vedere :ref:`Flusso di autenticazione<flusso_autenticazione>` passo n.3). Questo valore verrà restituito al client nella risposta al termine dell'autenticazione. Il valore deve essere significativo esclusivamente per il RP e non deve essere intellegibile ad altri.
      - |check-icon|
    * - **ui_locales**
      - Lista di codici RFC5646 separati da spazi. Lingue preferibili per visualizzare le pagine dell'OP. L'OP può ignorare questo parametro se non dispone di nessuna delle lingue indicate.
