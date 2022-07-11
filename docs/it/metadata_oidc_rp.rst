@@ -16,8 +16,6 @@ OpenID Connect Relying Party Metadata (RP)
  }
 
 
-Dove un RP non disponesse all'interno dei propri Metadata dei claim **client_registration_types** i valori da intendersi come impliciti sono i seguenti.
-
 .. list-table:: 
    :widths: 20 60 20
    :header-rows: 1
