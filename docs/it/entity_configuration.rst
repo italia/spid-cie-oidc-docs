@@ -46,7 +46,7 @@ Entity Configuration - claim comuni
      - UNIX Timestamp con l'istante di scadenza del JWT, codificato come NumericDate come indicato in :rfc:`7519`.
      - |check-icon|
    * - **jwks**
-     - Un JSON Web Key Set (JWKS) :rfc:`7517` che rappresenta la parte pubblica delle chiavi di firma dell'entità interessata. Ogni JWK nel set JWK DEVE avere un ID chiave (claim kid).
+     - Un JSON Web Key Set (JWKS) :rfc:`7517` che rappresenta la parte pubblica delle chiavi di firma dell'entità interessata. Ogni JWK nel set JWK DEVE avere un ID di chiave (claim kid).
      - |check-icon|
    * - **metadata**
      - JSON Object. Ogni chiave dell'oggetto JSON rappresenta un identificatore del tipo 
