@@ -182,29 +182,34 @@ Tabella attributi identificativi
      - JSON object (document):
 
        Json contenente le proprietà che rappresentano:
-       "**type**" : valori ammessi:
 
-       *cartaIdentita, passaporto, patenteGuida,*
-       *patenteNautica, librettoPensione,*
-       *patentinoImpTermici, portoArmi,*
-       *tesseraRiconoscimento;*
+        - "**type**" : valori ammessi:
 
-       "**document_number**" : Numero del documento;
-       "**issuer**" : <ente emettitore> JSON object:
+          - *cartaIdentita, passaporto, patenteGuida,*
 
-         "**name**" stringa ottenuta dalla
-         concatenazione dei termini costituenti la
-         denominazione dell'ente a meno di
-         congiunzioni, articoli e preposizioni.
+          - *patenteNautica, librettoPensione,*
 
-           Es. regioneLazio ( Regione Lazio);
-           provinciaCatania ( Provincia di Catania);
-           prefetturaRoma (Prefettura di Roma);
-           MinisteroEconomiaFinanze ( Ministero
-           dell'Economia e delle Finanze);
+          - *patentinoImpTermici, portoArmi,*
 
-       "**date_of_issuance**" : data di rilascio del documento;
-       "**date_of_expiry**" : data di scadenza del documento;
+          - *tesseraRiconoscimento;*
+
+        - "**document_number**" : Numero del documento;
+        - "**issuer**" : <ente emettitore> JSON object:
+
+          - "**name**" stringa ottenuta dalla
+            concatenazione dei termini costituenti la
+            denominazione dell'ente a meno di
+            congiunzioni, articoli e preposizioni.
+
+              Es. regioneLazio ( Regione Lazio);
+              provinciaCatania ( Provincia di Catania);
+              prefetturaRoma (Prefettura di Roma);
+              MinisteroEconomiaFinanze ( Ministero
+              dell'Economia e delle Finanze);
+
+        - "**date_of_issuance**" : data di rilascio del documento;
+
+        - "**date_of_expiry**" : data di scadenza del documento;
 
        Esempio:
 
@@ -224,13 +229,13 @@ Tabella attributi identificativi
      - phone_number
      - String. Stringa numerica senza spazi intermedi |br|
        Esempio: |br|
-       "phone_number": “VATIT-12345678901"
+       ``"phone_number": “VATIT-12345678901"``
    * - Indirizzo di posta elettronica
      - extra anagrafica
      - email
      - String. Formato standard indirizzo di posta elettronica |br|
        Esempio: |br|
-       "email": "name@domain.it"
+       ``"email": "name@domain.it"``
    * - Domicilio digitale
      - extra anagrafica
      - ``https://attributes.eid.gov.it/e_delivery_service``
@@ -257,22 +262,21 @@ Tabella attributi identificativi
      - address
      - JSON object (address):
        Formatted, **street_address**
-       (**obbigatorio**),locality,
-       region, postal_code,country, country_code
-       L'attributo contiene la tipologia (via, viale, piazza
-       …), l'indirizzo e il numero civico. Le tre
-       informazioni sono preferibilmente ordinate come
-       d'uso per lo specifico Stato. |br|
-       "**street_address**":L'attributo contiene la tipologia
-       (via, viale, piazza …), l'indirizzo e il numero civico.
-       Le tre informazioni sono preferibilmente ordinate
-       come d'uso per lo specifico Stato. |br|
-       "**postal_code**": CAP |br|
-       "**locality**":Comune |br|
-       "**region**": Provincia |br|
-       "**country_code**" : Nazione |br|
+       (**obbigatorio**),locality, region, postal_code,country, country_code
+       L'attributo contiene la tipologia (via, viale, piazza …), l'indirizzo e il numero civico. 
+       Le tre informazioni sono preferibilmente ordinate come d'uso per lo specifico Stato. 
 
-       Esempio: |br|
+        - "**street_address**":L'attributo contiene la tipologia (via, viale, piazza …), l'indirizzo e il numero civico. Le tre informazioni sono preferibilmente ordinate come d'uso per lo specifico Stato. 
+       
+        - "**postal_code**": CAP 
+
+        - "**locality**":Comune
+
+        - "**region**": Provincia 
+
+        - "**country_code**" : Nazione
+
+       Esempio: 
        
        .. code-block:: 
 
