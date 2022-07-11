@@ -23,7 +23,7 @@ Un **FA** (**SA** o **TA**) DEVE, in aggiunta, offrire i seguenti endpoint:
 Ottenere informazioni di configurazione dell'entità di Federazione
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-La configurazione di entità di ogni federazione DOVREBBE essere esposta ad un endpoint ben conosciuto con il seguente percorso: **/.well-known/openid-federation**.
+La configurazione di entità di ogni federazione DEVE essere esposta ad un endpoint ben conosciuto con il seguente percorso: **/.well-known/openid-federation**.
 
 
 Federation Entity Configuration Request
