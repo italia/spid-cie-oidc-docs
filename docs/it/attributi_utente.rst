@@ -76,10 +76,11 @@ Tabella attributi identificativi
 
        .. code-block::
 
-         "place_of_birth" : {
-             "region":"MI",
-             "locality":"F205"
-         }
+        "place_of_birth":{
+            "region":"MI",
+            "locality":"F205"
+        }
+
    * - Data di nascita
      - anagrafica
      - birthdate
@@ -114,6 +115,7 @@ Tabella attributi identificativi
        .. code-block::
 
          "company_name":"Agenzia per l'Italia Digitale"
+
    * - Sede legale
      - extra anagrafica
      - ``https://attributes.eid.gov.it/registered_office``
@@ -133,9 +135,9 @@ Tabella attributi identificativi
 
         .. code-block::
 
-          "https://attributes.eid.gov.it/registered_office":{
-              "formatted":"via Listz 21 00144 Roma”"
-          }
+         "https://attributes.eid.gov.it/registered_office":{
+             "formatted":"via Listz 21 00144 Roma"
+         }
 
    * - Codice fiscale della persona fisica
      - anagrafica
@@ -215,21 +217,22 @@ Tabella attributi identificativi
 
        .. code-block::
 
-         "document_details":{
-             "type":"cartaIdentita",
-             "document_number":"AS09452389",
-             "issuer":{
-                 "name":"ComuneRoma"},
-             "date_of_issuance":"2013-01-02",
-             "date_of_expiry":"2013-01-31"
-         }
+        "document_details":{
+            "type":"cartaIdentita",
+            "document_number":"AS09452389",
+            "issuer":{
+                "name":"ComuneRoma"
+            },
+            "date_of_issuance":"2013-01-02",
+            "date_of_expiry":"2013-01-31"
+        }
 
    * - Numero di telefono mobile
      - extra anagrafica
      - phone_number
      - String. Stringa numerica senza spazi intermedi |br|
        Esempio: |br|
-       ``"phone_number": “VATIT-12345678901"``
+       ``"phone_number": "VATIT-12345678901"``
    * - Indirizzo di posta elettronica
      - extra anagrafica
      - email
@@ -326,13 +329,14 @@ Si riportano a titolo di esempio due indirizzi italiani:
        Nazione domicilio fisico
      - .. code-block::
 
-         "address":{
-             "street_address":"Via Liszt 21",
-             "postal_code":"00144",
-             "locality":"Roma",
-             "region":"RM",
-             "country_code" : "IT"
-         }
+        "address":{
+            "street_address":"Via Liszt 21",
+            "postal_code":"00144",
+            "locality":"Roma",
+            "region":"RM",
+            "country_code":"IT"
+        }
+
    * - Indirizzo domicilio fisico
        CAP domicilio fisico
        Comune domicilio fisico
@@ -340,13 +344,13 @@ Si riportano a titolo di esempio due indirizzi italiani:
        Nazione domicilio fisico
      - .. code-block::
 
-         "address":{
-             "street_address":"S.S. Salaria Km 23,800",
-             "postal_code":"00015",
-             "locality":"Monterotondo",
-             "region":"RM",
-             "country_code" : "IT
-         }
+        "address":{
+            "street_address":"S.S. Salaria Km 23,800",
+            "postal_code":"00015",
+            "locality":"Monterotondo",
+            "region":"RM",
+            "country_code":"IT"
+        }
 
 Vi sono casi, come per gli Stati Uniti d'America, dove oltre alla nazione (US) esiste uno Stato. 
 In tali casi lo Stato è indicato nel campo Provincia.
@@ -365,11 +369,11 @@ Si riporta il seguente esempio:
        Nazione domicilio fisico
      - .. code-block::
 
-         "address":{
-             "street_address":"503,Washington Avenue",
-             "postal_code":"12401",
-             "locality":"Kingston",
-             "region":"New york",
-             "country_code" : "US"
-         }
+        "address":{
+            "street_address":"503,Washington Avenue",
+            "postal_code":"12401",
+            "locality":"Kingston",
+            "region":"New york",
+            "country_code":"US"
+        }
 
