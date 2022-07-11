@@ -44,7 +44,8 @@ reindirizza l'utente con i seguenti parametri:
      - |spid-icon| |cieid-icon|
    * - **iss**
      - Identificatore univoco dell'OP che ha creato l'Authentication Response. Il RP DEVE validare 
-       questo parametro e NON DEVE permettere a più OP di usare lo stesso identificatore.
+       questo parametro e NON DEVE permettere a più OP di usare lo stesso identificatore. OBBLIGATORIO solo per
+       CIE.
      - |cieid-icon|
 
 Errori
