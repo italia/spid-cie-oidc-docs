@@ -67,8 +67,8 @@ Tabella attributi identificativi
      - place_of_birth
      - JSON object: 
 
-       "**locality** : Stringa corrispondente al codice catastale (Codice Belfiore ) del Comune 
-       o della nazione estera di nascita (Es. "F205" per la città di Milano )
+       "**locality** : Stringa corrispondente al codice catastale (Codice Belfiore) del Comune 
+       o della nazione estera di nascita (Es. "F205" per la città di Milano)
 
        "**region**" : Stringa corrispondente alla sigla della provincia di nascita
 
