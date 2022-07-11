@@ -53,7 +53,7 @@ La richiesta all'Introspection Endpoint consiste nell'invio del token su cui si 
      - String. Valori ammessi: **urn:ietf:params:oauth:clientassertion-type:jwt-bearer**
      - 
    * - **client_id**
-     - URI che identifica univocamente il RP. L'OP deve verificare che il client_id sia noto.
+     - URI che identifica univocamente il RP. L'OP deve verificare che il client_id sia noto all'interno della Federazione.
      - 
    * - **token**
      - Il token su cui il RP vuole ottenere informazioni.
