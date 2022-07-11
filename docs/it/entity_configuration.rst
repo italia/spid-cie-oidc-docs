@@ -60,6 +60,7 @@ Entity Configuration - claim comuni
        - openid_relying_party
        - openid_provider
        - federation_entity
+       - oauth_authorization_server
        - oauth_resource
        - trust_mark_issuer
      - |check-icon|
