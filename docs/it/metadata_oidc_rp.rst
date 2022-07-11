@@ -29,6 +29,23 @@ OpenID Connect Relying Party Metadata (RP)
    * - **organization_name**
      - Un nome leggibile che rappresenta l'organizzazione proprietaria del RP. 
      - |check-icon| 
+   * - **signed_jwks_uri**
+     - Un URL HTTP che punta a un JWT firmato che ha come payload il JWK Set dell'entità (vedere esempio sotto).
+       Il JWT è firmato con una chiave inclusa nel JWK che l'entità ha pubblicato nel suo Entity Statement autofirmato.
+       Se un RP può usare **signed_jwks_uri**, NON DEVE usare **jwks** o **jwks_uri**. Un JWT firmato può
+       contenere i seguenti claim, escluse le chiavi definite in `:rfc:7519`:
+
+       **keys**: Lista dei JWK. |check-icon|
+
+       **iss**: "iss" (emettitore) identifica l'emettitore del JWT. |check-icon|
+ 
+       **sub**: Identifica il proprietario delle chiavi. DOVREBBE coincidere con l'emettitore. |check-icon|
+
+       **iat**: UNIX Timestamp con l'istante di emissione del JWT. |uncheck-icon|
+
+       **exp**: UNIX Timestamp con l'istante di scadenza del JWT. |uncheck-icon|
+
+     - |uncheck-icon| 
    * - **jwks**
      - JSON Web Key Set |br|
        :rfc:`7517#appendix-A.1` |br|
@@ -97,3 +114,35 @@ OpenID Connect Relying Party Metadata (RP)
      - |uncheck-icon|
 
 Vedere `OIDC-FED#RP_metadata`_
+
+
+.. _example_of_signed_jwks:
+
+Esempio non normativo di JWKS firmato
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Il seguente è un esempio non normativo di JWKS firmato, prima della serializzazione e della firma.
+
+.. code-block::
+
+  {
+      "keys":[
+          {
+              "kty":"RSA",
+              "kid":"SUdtUndEWVY2cUFDeDV5NVlBWDhvOXJodVl2am1mNGNtR0pmd",
+              "n":"y_Zc8rByfeRIC9fFZrDZ2MGH2ZnxLrc0ZNNwkNet5rwCPYeRF3Sv5nihZA9NHkDTEX97dN8hG6ACfeSo6JB2P7heJtmzM8oOBZbmQ90nEA_JCHszkejHaOtDDfxPH6bQLrMlItF4JSUKua301uLB7C8nzTxmtF3eAhGCKn8LotEseccxsmzApKRNWhfKDLpKPe9i9PZQhhJaurwDkMwbWTAeZbqCScU1o09piuK1JDf2PaDFevioHncZcQO74Obe4nN3oNPNAxrMClkZ9s9GMEd5vMqOD4huXlRpHwm9V3oJ3LRutOTxqQLVyPucu7eHA7her4FOFAiUk-5SieXL9Q",
+              "e":"AQAB"
+          },
+          {
+              "kty":"EC",
+              "kid":"MFYycG1raTI4SkZvVDBIMF9CNGw3VEZYUmxQLVN2T21nSWlkd3",
+              "crv":"P-256",
+              "x":"qAOdPQROkHfZY1daGofOmSNQWpYK8c9G2m2Rbkpbd4c",
+              "y":"G_7fF-T8n2vONKM15Mzj4KR_shvHBxKGjMosF6FdoPY"
+          } 
+      ],
+      "iss":"https://example.org/op",
+      "iat":1618410883
+  }
+
+

@@ -78,7 +78,7 @@ Se un OP nei propri Metadata non ha i claim **client_registration_types_supporte
      - URL del JSON Web Key Set (JWKS) dell'OP, che contiene la/le chiavi pubbliche di cifratura/decifratura che il RP deve usare.
      - |check-icon|
    * - **signed_jwks_uri**
-     - Un URL HTTP che punta a un JWT firmato che ha come payload il JWK Set dell'entità (vedere esempio sotto). 
+     - Un URL HTTP che punta a un JWT firmato che ha come payload il JWK Set dell'entità.
        Il JWT è firmato con una chiave inclusa nel JWK che l'entità ha pubblicato nel suo Entity Statement autofirmato.
      - |uncheck-icon|
    * - **response_types_supported**
