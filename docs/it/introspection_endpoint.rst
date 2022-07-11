@@ -13,7 +13,7 @@ L'Introspection Endpoint esposto dall'OP consente ai RP di ottenere informazioni
 Request
 +++++++
 
-La richiesta all'Introspection Endpoint consiste nell'invio del token su cui si vogliono ottenere informazioni unitamente a una Client Assertion che consente di identificare il RP che esegue la richiesta.
+La richiesta all'Introspection Endpoint consiste nell'invio del token su cui si vogliono ottenere informazioni unitamente a una Client Assertion che consente di autenticare il RP che esegue la richiesta.
 
 
 **Esempio:**
