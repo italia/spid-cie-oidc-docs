@@ -5,7 +5,7 @@ Federation Endpoint
 
 Tutte le entità DEVONO contenere i seguenti endpoint:
 
- - **/.well-known/openid-federation** fornisce le informazioni sulla configurazione dell'entità (vedi sezione  :ref:`Ottenere informazioni di configurazione dell'entità di federazione<obtaining_federation_entity_configuration_information>`)
+ - **/.well-known/openid-federation** fornisce la Entity Configuration (vedi sezione  :ref:`Ottenere informazioni di configurazione dell'entità di federazione<obtaining_federation_entity_configuration_information>`)
 
 Un **FA** (**SA** o **TA**) DEVE, in aggiunta, offrire i seguenti endpoint:
 
@@ -13,6 +13,8 @@ Un **FA** (**SA** o **TA**) DEVE, in aggiunta, offrire i seguenti endpoint:
  - **resolve entity statement endpoint** risolve i Metadata di Federazione (vedi sezione :ref:`Risolvere Entity Statements<resolve_entity_statements>`)
  - **trust mark introspection endpoint** fornisce lo stato del Trust Mark (vedere sezione :ref:`Stato del Trust Mark<trust_mark_status>`)
  - **entity listing endpoint** fornisce una lista di tutte le subordinate di un'entità (vedere sezione :ref:`Elenchi di Entità<entity_listings>`)
+ - **resolve endpoint** ottiene dal risolutore Metadata risolti e TM di un'entità vista/fidata (vedere sezione
+   :ref:`Risolvere i Metadata di Federazione <resolve_entity_statements>`)
 
 
 
@@ -133,7 +135,7 @@ Un'entità PUÒ usare il Resolve Endpoint per ottenere dal risolutore Metadata r
 Resolve Endpoint Request
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-La richiesta DEVE essere una richiesta HTTP che usa un metodo GET e lo schema https ad resolve endpoint con i seguenti parametri della stringa di query:
+La richiesta DEVE essere una richiesta HTTP che usa un metodo GET e lo schema https al resolve endpoint con i seguenti parametri della stringa di query:
 
 .. list-table:: 
    :widths: 20 60 20
