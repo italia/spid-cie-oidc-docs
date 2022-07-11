@@ -23,8 +23,8 @@ OIDC Federation definisce i Metadata di federazione contenenti le informazioni d
 e i Metadata OIDC per ogni tipo di entità.
 
 
-Entity Configuration comuni
-+++++++++++++++++++++++++++
+Entity Configuration - claim comuni
++++++++++++++++++++++++++++++++++++
 
 .. list-table::
    :widths: 20 60 20
