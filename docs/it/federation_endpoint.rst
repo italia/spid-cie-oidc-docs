@@ -150,9 +150,6 @@ La richiesta DEVE essere una richiesta HTTP che usa un metodo GET e lo schema ht
    * - **type**
      - Un tipo specifico di Metadata da risolvere. Se assente, allora ci si aspetta che tutti i tipi di Metadata vengano ritornati.
      - |uncheck-icon|
-   * - **iss**
-     - String. L'identificatore dell'entità che sta richiedendo le informazioni. Se questo claim è presente nella richiesta, allora DEVE essere presente nella risposta nel claim aud del JWT firmato.
-     - |uncheck-icon|
 
 
 
