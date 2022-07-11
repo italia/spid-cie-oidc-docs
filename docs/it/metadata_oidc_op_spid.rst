@@ -16,13 +16,13 @@ Segue la tabella dei claim specifici per la Federazione SPID.
 
    * - **Claim**
      - **Descrizione**
-     - **Obbligatorio**
+     - **Supportato da**
    * - **op_name**
      - Nome dell'OpenID Provider. Può essere specificato in più lingue apponendo al nome dell'elemento il suffisso 
        "#" seguito dal codice :rfc:`5646`. Un nome di default senza indicazione della lingua è sempre presente.
-     - |check-icon|
+     - |spid-icon|
    * - **op_uri**
      - URL dell'OpenID Provider. 
-     - |check-icon|
+     - |spid-icon|
 
 

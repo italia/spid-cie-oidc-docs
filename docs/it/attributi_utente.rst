@@ -119,21 +119,21 @@ Tabella attributi identificativi
    * - Sede legale
      - extra anagrafica
      - ``https://attributes.eid.gov.it/registered_office``
-     -  JSON object: formatted, street_address, locality, region, postal_code, country, country_code |br|
-        Json composto da una stringa composta da una sequenza di parole intervallate da spazi singoli rappresentanti:
+     - JSON object: formatted, street_address, locality, region, postal_code, country, country_code |br|
+       Json composto da una stringa composta da una sequenza di parole intervallate da spazi singoli rappresentanti:
 
-        Tipologia( via, viale, piazza …) |br|
-        Indirizzo |br|
-        Nr.civico |br|
-        CAP |br|
-        Luogo |br|
-        Provincia |br|
+       Tipologia( via, viale, piazza …) |br|
+       Indirizzo |br|
+       Nr.civico |br|
+       CAP |br|
+       Luogo |br|
+       Provincia |br|
 
-        inserita nel claim "formatted" del Json Object "address"
+       inserita nel claim "formatted" del Json Object "address"
 
-        Esempio:
+       Esempio:
 
-        .. code-block::
+       .. code-block::
 
          "https://attributes.eid.gov.it/registered_office":{
              "formatted":"via Listz 21 00144 Roma"
@@ -142,13 +142,13 @@ Tabella attributi identificativi
    * - Codice fiscale della persona fisica
      - anagrafica
      - ``https://attributes.eid.gov.it/fiscal_number``
-     -  String. Per il formato si faccia riferimento alla codifica dell'attributo CF per i certificati, 
-        proposta nell'ambito del Draft ETSI EN 319 412-1, che nel caso specifico prevede la seguente composizione:
-        TINIT-<CodiceFiscale>
+     - String. Per il formato si faccia riferimento alla codifica dell'attributo CF per i certificati, 
+       proposta nell'ambito del Draft ETSI EN 319 412-1, che nel caso specifico prevede la seguente composizione:
+       TINIT-<CodiceFiscale>
         
-        Esempio:
+       Esempio:
 
-        .. code-block::
+       .. code-block::
 
           "https://attributes.eid.gov.it/fiscal_number": “TINIT-ABCXYZ00W00Z000Z"
 
@@ -167,14 +167,14 @@ Tabella attributi identificativi
    * - Partita IVA
      - anagrafica
      - ``https://attributes.eid.gov.it/ivacode``
-     -  String. Per il formato si faccia riferimento alla codifica dell'attributo Partita IVA per i certificati,
-        proposta nell'ambito del Draft ETSI EN 319 412-1, che nel caso specifico prevede la seguente composizione:
+     - String. Per il formato si faccia riferimento alla codifica dell'attributo Partita IVA per i certificati,
+       proposta nell'ambito del Draft ETSI EN 319 412-1, che nel caso specifico prevede la seguente composizione:
 
-        VATIT-<PartitaIVA>
+       VATIT-<PartitaIVA>
 
-        Esempio:
+       Esempio:
 
-        .. code-block::
+       .. code-block::
 
           "https://attributes.eid.gov.it/vat_number": "VATIT-12345678901"
 
