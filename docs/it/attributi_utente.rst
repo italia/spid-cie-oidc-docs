@@ -17,8 +17,7 @@ Tabella attributi identificativi
    * - Codice identificativo 
      - anagrafica
      - ``https://attributes.eid.gov.it/spid_code``
-     - String. Il codice identificativo è assegnato dal gestore dell'identità digitale, 
-       deve essere univoco in ambito SPID. 
+     - String. Il codice identificativo è assegnato dal gestore dell'identità digitale e deve essere univoco.
 
        Il formato è il seguente:
 
