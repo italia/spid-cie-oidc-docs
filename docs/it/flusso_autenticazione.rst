@@ -40,7 +40,7 @@ Segue la descrizione dei passaggi, come da numerazione indicata in figura.
      - L'OP reindirizza l'utente all'url contenuto nel parametro redirect_uri specificato dal RP, passando un Authorization Code nell'Authorization Response.
    * - **5: RP->OP/Token Endpoint**
      - Il RP invia l'Authorization Code ricevuto al Token Endpoint dell'OP.
-       Per la CIE, l'OP esegue la verifica del PKCE.
+       L'OP esegue la verifica del PKCE.
    * - **6: OP/Token Endpoint->RP**
      - Il Token Endpoint dell'OP rilascia un ID Token, un Access Token e se richiesto un Refresh Token.
    * - **7: RP->OP/UserInfo Endpoint**
