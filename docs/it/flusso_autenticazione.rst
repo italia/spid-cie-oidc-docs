@@ -27,18 +27,18 @@ Segue la descrizione dei passaggi, come da numerazione indicata in figura.
    * - **1: UT->RP**
      - L'Utente, nella pagina di accesso del Relying Party (RP):
 
-       Seleziona, sul pulsante SPID, l'OpenID Provider (OP) con cui autenticarsi
+       Seleziona, sul pulsante "Accedi con SPID" o "Accedi con CIE id", l'OpenID Provider (OP) con cui autenticarsi.
 
-       Invia la richiesta di autenticazione con CIE al RP
+       Invia la richiesta di autenticazione con CIE al RP.
    * - **2: RP->OP/Authorization Endpoint**
      - Il Relying Party (RP) prepara una Richiesta di Autorizzazione per l'Authorization Endpoint dell'OP.
-       RP genera la Richiesta di Autorizzazione 
+       RP genera la Richiesta di Autorizzazione.
    * - **3: OP/Authorization Endpoint<->UT**
      - L'OpendID Provider (OP) autentica l'utente mediante l'inserimento delle credenziali e ottiene
        il consenso per l'accesso alle risorse utente da parte del RP.
    * - **4: OP/Authorization Endpoint->RP**
      - L'OP reindirizza l'utente verso il redirect_uri specificato dal RP, passando un Authorization 
-       Code nell'Authorization Response
+       Code nell'Authorization Response.
    * - **5: RP->OP/Token Endpoint**
      - Il RP invia l'Authorization Code ricevuto al Token Endpoint dell'OP.
        Per la CIE, l'OP esegue la verifica del PKCE.
@@ -48,7 +48,7 @@ Segue la descrizione dei passaggi, come da numerazione indicata in figura.
      - Il RP riceve e valida l'Access Token e l'ID Token. Per chiedere gli attributi che erano stati autorizzati
        dall'utente al punto 3, invia una richiesta all'UserInfo Endpoint dell'OP utilizzando l'Access Token per l'autenticazione.
    * - **8: OP/UserInfo Endpoint->RP**
-     - Lo UserInfo Endpoint dell'OP verifica la validità dell'Access Token e rilascia gli attributi richiesti al RP
+     - Lo UserInfo Endpoint dell'OP verifica la validità dell'Access Token e rilascia gli attributi richiesti al RP.
 
 
 
