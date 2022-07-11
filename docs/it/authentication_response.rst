@@ -35,14 +35,17 @@ reindirizza l'utente con i seguenti parametri:
 
    * - **Claim**
      - **Descrizione**
-     - **Obbligatorio**
+     - **Supportato da**
    * - **code**
      - codice univoco di autorizzazione (*Authorization Code*) che il client può passare al Token Endpoint per ottenere un ID Token e un Access Token. Questo ha il vantaggio di non esporre alcun token allo User Agent o a malware che controllano questo. 
-     - 
+     - |spid-icon| |cieid-icon|
    * - **state**
      - Valore state incluso nell'*Authentication Request*. Il client è tenuto a verificarne la corrispondenza. Deve essere lo stesso valore indicato dal client nella Authorization Request.
-     - 
-
+     - |spid-icon| |cieid-icon|
+   * - **iss**
+     - Identificatore univoco dell'OP che ha creato l'Authentication Response. Il RP DEVE validare 
+       questo parametro e NON DEVE permettere a più OP di usare lo stesso identificatore.
+     - |cieid-icon|
 
 Errori
 ++++++
@@ -72,17 +75,17 @@ i seguenti parametri.
 
    * - **Claim**
      - **Descrizione**
-     - **Obbligatorio**
+     - **Supportato da**
    * - **error**
      - Codice dell'errore
-     - 
+     - |spid-icon| |cieid-icon|
    * - **error_description**
      - Descrizione più dettagliata dell'errore, finalizzata ad aiutare lo sviluppatore per eventuale debugging. Questo messaggio non è 
        destinato ad essere visualizzato all'utente (a tal fine si faccia riferimento alle `Linee Guida UX SPID`_
-     - 
+     - |spid-icon| |cieid-icon|
    * - **state**
      - Valore *state* incluso nella Authentication Request.  Il client è tenuto a verificare che corrisponda a quello inviato nella Authentication Request.
-     - 
+     - |spid-icon| |cieid-icon|
 
 
 .. seealso::

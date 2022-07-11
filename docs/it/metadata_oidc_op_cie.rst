@@ -1,36 +1,6 @@
 .. include:: ./common_definitions.rst
 
 
-.. _claim_OP_CIE:
-
-
-OpenID Connect Provider Metadata (OP) per CIE
-+++++++++++++++++++++++++++++++++++++++++++++
-
-Segue la tabella dei claim specifici per la Federazione CIE.
-
-.. list-table:: 
-   :widths: 20 60 20
-   :header-rows: 1
-
-   * - **Claim**
-     - **Descrizione**
-     - **Obbligatorio**
-   * - **scopes_supported**
-     - JSON Array che contiene una lista di valori degli scope supportati dall'OP.
-     - |check-icon| 
-   * - **grant_types_supported**
-     - JSON Array che contiene una lista dei valori di *grant_types* supportati dall'OP. I valori ammessi sono
-       *refresh_token* e *authorization_code*
-     - |check-icon|
-   * - **authorization_response_iss_parameter_supported**
-     - Valore booleano che specifica se l'OP fornisce il parametro **iss** nell'Authorization Response. Deve valere *true*
-     - |uncheck-icon|
-   * - **claims_supported**
-     - JSON Array che contiene una lista di claim che l'OP supporta. Vedere allo scopo i :ref:`Claim Utente CIE <claim_utente_CIE>` al prossimo paragrafo `
-     - |check-icon|
-
-
 
 .. _claim_utente_CIE:
 

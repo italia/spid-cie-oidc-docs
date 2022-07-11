@@ -13,6 +13,12 @@
 .. |uncheck-icon| image:: ../../images/Eo_circle_red_letter-x.svg
    :width: 25
 
+.. |spid-icon| image:: ../../images/spid.svg
+   :width: 25
+
+.. |cieid-icon| image:: ../../images/cieid.svg
+   :width: 25
+
 .. |warning-message| replace:: Tutti gli esempi contenuti in questa documentazione sono da intendersi come non normativi
 
 .. _OIDC-FED: https://openid.net/specs/openid-connect-federation-1_0.html
