@@ -49,26 +49,6 @@ OpenID Connect Relying Party Metadata (RP)
    * - **jwks**
      - JSON Web Key Set |br|
        :rfc:`7517#appendix-A.1` |br|
-       È composto dai seguenti claim:
-        
-        **kty**: famiglia dell'algoritmo crittografico utilizzato
-
-        **alg**: algoritmo utilizzato
-
-        **use**: utilizzo della chiave pubblica per firma (sig) o encryption (enc)
-
-        **kid**: identificatore univoco della chiave, valorizzato come |br|
-        :rfc:`7638`
-
-        **n**: modulo (solo per chiavi RSA)
-
-        **e**: esponente (solo per chiavi RSA)
-
-        **x**: parametro coordinata x (solo per chiavi EC)
-
-        **y**: parametro coordinata y (solo per chiavi EC)
-
-        **crv**: parametro curva (solo per chiavi EC)
      - |check-icon| in assenza del claim **signed_jwks_uri**. 
    * - **client_id**
      - URI che identifica univocamente il RP.
