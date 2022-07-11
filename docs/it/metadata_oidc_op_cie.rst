@@ -23,12 +23,9 @@ Segue la tabella dei claim specifici  per la Federazione CIE.
      - JSON Array che contiene una lista dei valori di *grant_types* supportati dall'OP. I valori ammessi sono
        *refresh_token* e *authorization_code*
      - |check-icon|
-   * - **tls_client_certificate_bound_access_tokens**
-     - Valore booleano che specifica se l'OP supporta l'uso dei Token **mTLS bound**. Deve valere *true*
-     - |check-icon| 
    * - **authorization_response_iss_parameter_supported**
      - Valore booleano che specifica se l'OP fornisce il parametro **iss** nell'Authorization Response. Deve valere *true*
-     - |check-icon|
+     - |uncheck-icon|
    * - **claims_supported**
      - JSON Array che contiene una lista di claim che l'OP supporta. Vedere allo scopo i :ref:`Claim Utente CIE <claim_utente_CIE>` al prossimo paragrafo `
      - |check-icon|

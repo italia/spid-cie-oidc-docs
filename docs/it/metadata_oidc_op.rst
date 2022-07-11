@@ -43,9 +43,6 @@ OpenID Connect Provider Metadata (OP)
    * - **request_authentication_methods_supported**
      - Un oggetto JSON con membri che rappresentano metodi di richiesta autenticazione e come valori liste di metodi di richieste di autenticazione che sono supportate dall'Authorization Endpoint. Claim implicito.
      - |uncheck-icon|
-   * - **organization_name**
-     - Un nome leggibile che rappresenta l'organizzazione proprietaria dell'OP. 
-     - |check-icon|
    * - **issuer**
      - URL HTTPS che identifica univocamente l'OP all'interno della Federazione.
      - |check-icon|
