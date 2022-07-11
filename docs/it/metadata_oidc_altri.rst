@@ -11,17 +11,6 @@ Nel contesto OAuth context, `OIDC-FED`_ supporta:
  - OAuth Protected Resource con identificatore del tipo di Metadata *oauth_resource*. Non c'è uno standard che specifichi quali
    parametri possono occorrere nel Metadata per questo tipo di entità. Quindi per il momento questo può essere visto come un placeholder.
  - Emittente di Trust Mark con identificatore del tipo di Metadata *trust_mark_issuer*. Tutte le entità che partecipano in una
-   federazione possono essere di questo tipo. Le seguenti proprietà sono permesse:
+   federazione possono essere di questo tipo. 
 
-    - *status_endpoint*. OPZIONALE. L'endpoint per l'operazione di status è descritto nella Sezione `OIDC-FED#Section.7.4.1`_. 
-
-   **Esempio**
-
-    .. code-block:: 
-
-      {
-           "trust_mark_issuer":{
-               "status_endpoint":"https://trust_marks_are_us.example.com/status"
-           }
-      }
 
