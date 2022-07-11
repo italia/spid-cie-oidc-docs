@@ -7,7 +7,7 @@
 OpenID Connect Provider Metadata (OP) per CIE
 +++++++++++++++++++++++++++++++++++++++++++++
 
-Segue la tabella dei claim specifici  per la Federazione CIE.
+Segue la tabella dei claim specifici per la Federazione CIE.
 
 .. list-table:: 
    :widths: 20 60 20

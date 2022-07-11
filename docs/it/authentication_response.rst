@@ -5,8 +5,7 @@ Authentication response
 
 Un'Authentication response è un messaggio di risposta di autorizzazione OAuth 2.0
 restituito dall'authorization endpoint dell'OpenID Provider (OP) al termine del flusso di
-autenticazione. L'OP reindirizzerà l'utente al redirect_uri specificato nella richiesta di
-autorizzazione, aggiungendo i parametri della risposta.
+autenticazione. L'OP reindirizzerà l'utente all'url contenuto nel parametro redirect_uri specificato nella richiesta di autorizzazione, aggiungendo i parametri della risposta.
 
 .. seealso::
 
