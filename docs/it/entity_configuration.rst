@@ -82,7 +82,7 @@ Gli EC delle entità Foglia e intermediari, in aggiunta ai claim precedentemente
      - **Descrizione**
      - **Supportato da**
    * - **authority_hints**
-     - Array di URLs. Contiene una lista di URL delle entità superiori, quali TA o SA che POSSONO emettere un ES relativo a questo soggetto. 
+     - Array di URL. Contiene una lista di URL delle entità superiori, quali TA o SA che POSSONO emettere un ES relativo a questo soggetto. 
      - |spid-icon| |cieid-icon|
    * - **trust_marks**
      - Un array JSON contenente i Trust Mark. Vedere la Sezione :ref:`Trust Mark <Trust_Mark>`. 
