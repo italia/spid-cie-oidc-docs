@@ -20,7 +20,7 @@ Ottenuti i Metadata finali di tutti i OpenID Connect Provider, il RP genera lo S
 La procedura di Metadata Discovery risulta semplificata per i RP SPID perché non è consentita all'interno della Federazione l'esistenza di Intermediari tra gli OP ed il loro Trust Anchor
 
 
-.. image:: ../../images/Metadata_discovery.svg
+.. image:: ../../images/metadata_discovery.svg
     :width: 100%
 
 *La procedura di Metadata Discovery a partire dalla Foglia fino al Trust Anchor. Si noti come dall'Entity Statement rilasciato da un superiore si ottiene la chiave pubblica per la validazione dell'Entity Configuration dell'entità discendente.*
