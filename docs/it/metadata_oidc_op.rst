@@ -32,7 +32,7 @@ OpenID Connect Provider Metadata (OP)
 
        L'unico metodo di richiesta autenticazione supportato **request_object** per le Richieste di Autorizzazione.
 
-       ..code-block::
+       .. code-block::
 
         {
             "authorization_endpointer":[
