@@ -6,7 +6,7 @@ Token Endpoint (richiesta token)
 Il Token Endpoint rilascia *access token, ID Token e refresh token*. Vi sono due scenari distinti
 in cui il client chiama il Token Endpoint:
 
- 1. al termine del flusso di autenticazione descritto nel paragrafo precedente, il Client chiama il Token Endpoint inviando l'Authorization code ricevuto dall'OP (code=usDwMnEzJPpG5oaV8x3j) per ottenere un ID Token e un access token (necessario per poi chiedere gli attributi/claim allo UserInfo Endpoint) ed eventualmente un refresh token (se è stata avviata una `sessione lunga revocabile`_)
+ 1. al termine del flusso di autenticazione descritto nel paragrafo precedente, il Client chiama il Token Endpoint inviando l'authorization code ricevuto dall'OP (code=usDwMnEzJPpG5oaV8x3j) per ottenere un ID Token e un access token (necessario per poi chiedere gli attributi/claim allo UserInfo Endpoint) ed eventualmente un refresh token (se è stata avviata una `sessione lunga revocabile`_)
 
  2. in presenza di una `sessione lunga revocabile`_, il Client chiama il Token Endpoint inviando il refresh token in suo possesso per ottenere un nuovo access token.
 
