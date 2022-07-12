@@ -17,7 +17,7 @@ Il RP applica infine le politiche pubblicate dal Trust Anchor sui Metadata del O
 
 Ottenuti i Metadata finali di tutti i OpenID Connect Provider, il RP genera lo SPID Button e lo pubblica all'interno della pagina di autenticazione destinata agli utenti.
 
-La procedura di Metadata Discovery risulta semplificata per i RP SPID perché non è consentita all'interno della Federazione l'esistenza di Intermediari tra gli OP ed il loro Trust Anchor
+La procedura di Metadata Discovery risulta semplificata per i RP SPID, perché all'interno della Federazione non è consentita l'esistenza di Intermediari tra gli OP ed il loro Trust Anchor.
 
 
 .. image:: ../../images/metadata_discovery.svg
