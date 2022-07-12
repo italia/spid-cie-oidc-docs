@@ -14,11 +14,11 @@ Esempi tipici includono il codice di identificazione nazionale o internazionale 
 
 I TM sono emessi e firmati, durante il processo di registrazione di una nuova entità di tipo **Foglia** (Onboarding), dal (TA) o suoi Intermediari (SA) o da Gestori Qualificati di Attributi (AA), se definiti all'interno dell'attributo **trust_mark_issuers**, pubblicato all'interno dell'Entity Configuration del TA. 
 
-Ogni entità partecipante DEVE esporre nella propria configurazione (EC) i TM rilasciati dalle autorità emittenti. 
+Ogni entità partecipante DEVE esporre nella propria configurazione (EC) i TM rilasciati dalle autorità emettitori. 
 
 Nello scenario CIE / SPID, un TM viene firmato dal TA **MinInterno** / **Agid** o loro Intermediari (SA) o Gestori Qualificati di Attributi (AA). 
 
-Il TA definisce i soggetti abilitati all'emissione dei TM riconoscibili all'interno della Federazione, mediante il claim **trust_marks_issuers**, presente all'interno del proprio Entity Configuration. Il valore dell'attributo **trust_marks_issuers** è composto da un oggetto JSON avente come chiavi gli id dei TM e come valori la lista degli emittenti abilitati.
+Il TA definisce i soggetti abilitati all'emissione dei TM riconoscibili all'interno della Federazione, mediante il claim **trust_marks_issuers**, presente all'interno del proprio Entity Configuration. Il valore dell'attributo **trust_marks_issuers** è composto da un oggetto JSON avente come chiavi gli id dei TM e come valori la lista degli emettitori abilitati.
 
 Di seguito un esempio non normativo dell'oggetto **trust_marks_issuers** all'interno della Entity Configuration del TA.
 
@@ -47,7 +47,7 @@ Esistono due modi per validare un Trust Mark:
 
  2. Validazione **dinamica**. I partecipanti della Federazione possono interrogare l'endpoint :ref:`trust mark status<Trust_mark_status_endpoint>` erogato dal suo emettitore (attributo iss) per la verifica in tempo reale dei TM da lui emessi. 
 
-Tutti gli emittenti di Trust Mark DEVONO esporre un endpoint di Trust Mark status per consentire la validazione **dinamica**.
+Tutti gli emettitori di Trust Mark DEVONO esporre un endpoint di Trust Mark status per consentire la validazione **dinamica**.
 
 .. seealso:: 
 
