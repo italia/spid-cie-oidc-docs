@@ -126,7 +126,7 @@ Per esempi di $ENTITY_STATEMENT vedere la sezione :ref:`Esempi di Entity Stateme
 Risolvere i Metadata di Federazione
 +++++++++++++++++++++++++++++++++++
 
-Un'entità PUÒ usare il Resolve Endpoint per ottenere dal risolutore dei Metadata risolti e TM di un'entità vista/fidata. Il risolutore DEVE prelevare l'ES autofirmato dei soggetti, prelevare una Trust Chain che inizia con l'ES dei soggetti e finisce con il TA specificato, verificare la Trust Chain e quindi applicare tutte le politiche presenti nella Trust Chain ai Metadata degli ES. Il DEVE inoltre verificare che i TM presenti siano attivi. Se trova TM non attivi, allora dovrebbero essere lasciati fuori dall'insieme di risposta.
+Un'entità PUÒ usare il Resolve Endpoint per ottenere dal risolutore dei Metadata risolti e dei TM di un'entità vista/fidata. Il risolutore DEVE prelevare l'ES autofirmato dei soggetti, prelevare una Trust Chain che va dall'ES dei soggetti al TA specificato, verificare la Trust Chain e quindi applicare, ai Metadata degli ES, tutte le politiche presenti nella Trust Chain. DEVE inoltre verificare che i TM presenti siano attivi. Se trova TM non attivi, allora DOVREBBERO essere lasciati fuori dall'insieme di risposta.
 
 
 Resolve Endpoint Request
@@ -170,7 +170,7 @@ Segue un esempio non normativo di **Resolve request**:
 Resolve Endpoint Response
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Il response è un JWT firmato contenente Metadata risolti, TM verificati e la prova della Trust Chain. La response è un JWT firmato con la chiave utilizzata dal risolutore all'interno della propria Entity Configuration. Questo significa che l'emettitore della richiesta può facilmente trovare e verificare le chiavi di firma del risolutore raccogliendo e verificando l'appropriata Trust Chain.
+Il response è un JWT firmato contenente Metadata "risolti", TM verificati e la prova della Trust Chain. La response è un JWT firmato con la chiave utilizzata dal risolutore all'interno della propria Entity Configuration. Questo significa che l'emettitore della richiesta può facilmente trovare e verificare le chiavi di firma del risolutore raccogliendo e verificando l'appropriata Trust Chain.
 
 Segue un esempio non normativo di risposta, prima di serializzare e aggiungere una firma:
 
@@ -256,8 +256,7 @@ Segue un esempio non normativo di richiesta che usa **sub** e **id**:
 Status Response
 ^^^^^^^^^^^^^^^
 
-IL corpo della risposta HTTP DEVE essere un oggetto JSON contenente i claim di seguito riportati e il tipo di contenuto deve
-essere impostato a **application/json**:
+IL corpo della risposta HTTP DEVE essere un oggetto JSON contenente i claim di seguito riportati e il tipo di contenuto deve essere impostato a **application/json**:
 
 
 .. list-table:: 
