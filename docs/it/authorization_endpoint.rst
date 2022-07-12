@@ -137,7 +137,7 @@ L'oggetto request DEVE essere un token JWT firmato.
      - UNIX Timestamp con l'istante di generazione del JWT, codificato come NumericDate come indicato in :rfc:`7519`
      - |spid-icon| |cieid-icon|
    * - **iss**
-     - String. Identificatore dell'emittente dell'OP che ha creato l'Authentication Response. 
+     - String. Identificatore dell'emettitore dell'OP che ha creato l'Authentication Response. 
        Il RP DEVE validare questo parametro con precisione e NON DEVE permettere che diversi OP 
        usino lo stesso identificatore.
      - |spid-icon| |cieid-icon|
