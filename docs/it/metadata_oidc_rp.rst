@@ -24,7 +24,7 @@ OpenID Connect Relying Party Metadata (RP)
      - **Descrizione**
      - **Supportato da** 
    * - **client_registration_types**
-     - Array di stringhe che specifica i tipi supportati dalla federazione (solo *automatic*)
+     - Array di stringhe che specifica i tipi supportati dalla Federazione (solo *automatic*)
      - |spid-icon| |cieid-icon|
    * - **organization_name**
      - Un nome leggibile che rappresenta l'organizzazione proprietaria del RP. 

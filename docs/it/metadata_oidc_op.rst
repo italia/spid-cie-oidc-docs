@@ -24,7 +24,7 @@ OpenID Connect Provider Metadata (OP)
      - **Descrizione**
      - **Supportato da**
    * - **client_registration_types_supported**
-     - Array di stringhe che specifica i tipi supportati dalla federazione (solo *automatic*). Claim implicito.
+     - Array di stringhe che specifica i tipi supportati dalla Federazione (solo *automatic*). Claim implicito.
      - |spid-icon| |cieid-icon|
    * - **organization_name**
      - Un nome leggibile che rappresenta l'organizzazione proprietaria dell'OP. È inteso per l'utilizzo nell'interfaccia

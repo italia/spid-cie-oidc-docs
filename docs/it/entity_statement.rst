@@ -17,7 +17,7 @@ Vedere :ref:`Firma di Entity Configuration<firma_EC>`
 Metadata di Federazione
 +++++++++++++++++++++++
 
-OIDC Federation definisce i Metadata di federazione contenenti le informazioni di seguito definite, e i Metadata OIDC per 
+OIDC Federation definisce i Metadata di Federazione contenenti le informazioni di seguito definite, e i Metadata OIDC per 
 ogni tipo di entità.
 
 

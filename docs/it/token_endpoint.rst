@@ -73,7 +73,7 @@ L'unico metodo di autenticazione all'endpoint token previsto è il private_key_j
    * - **client_assertion**
      - JWT firmato con la chiave privata del Relying Party contenente i seguenti parametri: 
 	 
-	 **iss**: Identificatore del RP registrato presso gli OP e che contraddistingue univocamente l'entità nella federazione nel formato Uniform Resource Locator (URL). Corrisponde al client_id usato nella richiesta di autenticazione 
+	 **iss**: Identificatore del RP registrato presso gli OP e che contraddistingue univocamente l'entità nella Federazione nel formato Uniform Resource Locator (URL). Corrisponde al client_id usato nella richiesta di autenticazione 
 	 
 	 **sub**: uguale al parametro **iss** 
 	 
@@ -182,7 +182,7 @@ L'ID Token è un JSON Web Token (JWT) che contiene informazioni sull'utente che 
      - **Descrizione**
      - **Supportato da**
    * - **iss** 
-     - Identificatore dell'OP che lo contraddistingue univocamente nella federazione nel formato Uniform Resource Locator (URL). Il client è tenuto a verificare che questo valore corrisponda all'OP chiamato.
+     - Identificatore dell'OP che lo contraddistingue univocamente nella Federazione nel formato Uniform Resource Locator (URL). Il client è tenuto a verificare che questo valore corrisponda all'OP chiamato.
      - |spid-icon| |cieid-icon|
    * - **sub** 
      - Per il valore di questo parametro fare riferimento allo standard "OpenID Connect Core 1.0", "Pairwise Identifier Algorithm". 

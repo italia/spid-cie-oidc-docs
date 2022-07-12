@@ -6,7 +6,7 @@
 Entity Configuration
 --------------------
 
-Un'**Entity Configuration (EC)** è un Metadata di federazione in formato Jose e firmato dal soggetto che lo emette e riguardante se stesso.
+Un'**Entity Configuration (EC)** è un Metadata di Federazione in formato Jose e firmato dal soggetto che lo emette e riguardante se stesso.
 
 .. _firma_EC:
 
@@ -19,7 +19,7 @@ La firma dei JWT :rfc:`7515` avviene mediante l'algoritmo RSA SHA-256 (RS256). T
 Metadata di Federazione
 +++++++++++++++++++++++
 
-OIDC Federation definisce i Metadata di federazione contenenti le informazioni di seguito indicate 
+OIDC Federation definisce i Metadata di Federazione contenenti le informazioni di seguito indicate 
 e i Metadata OIDC per ogni tipo di entità.
 
 
@@ -109,5 +109,5 @@ Gli EC di un TA, in aggiunta ai claim comuni a tutti i partecipanti, contengono 
      - JSON Object che descrive un insieme di vincoli della Trust Chain e che DEVE contenere l'attributo **max_path_length**. Rappresenta il numero massimo di SA tra una Foglia e il TA.
      - |spid-icon| |cieid-icon|
    * - **trust_marks_issuers**
-     - JSON Array che indica quali autorità sono considerate attendibili nella federazione per l'emissione di specifici TM, questi assegnati mediante il proprio identificativo univoco.
+     - JSON Array che indica quali autorità sono considerate attendibili nella Federazione per l'emissione di specifici TM, questi assegnati mediante il proprio identificativo univoco.
      - |spid-icon| |cieid-icon|

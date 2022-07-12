@@ -74,7 +74,7 @@ In questa sezione sono definiti tutti gli acronimi utilizzati all'interno del te
     * - **RP**
       - Relying Party (entità Foglia) 
     * - **SA**
-      - Soggetti Aggregatori. Sono entità intermediarie che possono gestire tutti gli aspetti della federazione di uno o più RP.
+      - Soggetti Aggregatori. Sono entità intermediarie che possono gestire tutti gli aspetti della Federazione di uno o più RP.
     * - **AA**
       - Attribute Authority, Gestore degli Attributi qualificati (entità Foglia)
     * - **TM**

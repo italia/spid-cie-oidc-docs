@@ -5,7 +5,7 @@ Federation Endpoint
 
 Tutte le entità DEVONO contenere i seguenti endpoint:
 
- - **/.well-known/openid-federation** fornisce la Entity Configuration (vedi sezione  :ref:`Ottenere informazioni di configurazione dell'entità di federazione<obtaining_federation_entity_configuration_information>`)
+ - **/.well-known/openid-federation** fornisce la Entity Configuration (vedi sezione  :ref:`Ottenere informazioni di configurazione dell'entità di Federazione<obtaining_federation_entity_configuration_information>`)
 
 Un **FA** (**SA** o **TA**) DEVE, in aggiunta, offrire i seguenti endpoint:
 
@@ -23,7 +23,7 @@ Un **FA** (**SA** o **TA**) DEVE, in aggiunta, offrire i seguenti endpoint:
 Ottenere informazioni di configurazione dell'entità di Federazione
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-La configurazione di entità di ogni federazione DEVE essere esposta ad un endpoint ben conosciuto con il seguente percorso: **/.well-known/openid-federation**.
+La configurazione di entità di ogni Federazione DEVE essere esposta ad un endpoint ben conosciuto con il seguente percorso: **/.well-known/openid-federation**.
 
 
 Federation Entity Configuration Request
