@@ -48,7 +48,7 @@ Durante il Metadata Discovery, il Provider richiede ad una o più entità superi
 
 Ottenuto il Metadata finale, il Provider valida la richiesta del RP secondo le modalità definite all'interno delle linee guida della Federazione. 
 
-Nei casi in cui un RP avesse come entità superiore un SA e non direttamente la TA, la procedura di acquisizione e validazione dell'Entity Configuration del RP avviene mediante l'Entity Statement pubblicato dal SA nei confronti del RP e mediante la convalida dell'Entity Configuration del SA con l'Entity Statement emesso dalla TA in relazione al SA. Se la soglia del massimo numero di Intermediari verticali, definita dal valore di **max_path_length**, venisse superata, l'OP blocca il processo di Metadata Discovery e rigetta la richiesta del RP.
+Nei casi in cui un RP avesse come entità superiore un SA e non direttamente la TA, la procedura di acquisizione e validazione dell'Entity Configuration del RP avviene mediante l'Entity Statement pubblicato dal SA nei confronti del RP e mediante la convalida dell'Entity Configuration del SA con l'Entity Statement emesso dalla TA in relazione al SA. Se la soglia del massimo numero di Intermediari verticali, definita dal valore di **max_path_length**, viene superata, l'OP blocca il processo di Metadata Discovery e rigetta la richiesta del RP.
 
 
 .. [1] I Trust Mark di Federazione sono configurati nel claim **trust_marks_issuers** e contenuti nell'Entity Configuration del Trust Anchor.
