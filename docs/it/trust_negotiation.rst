@@ -29,7 +29,7 @@ La procedura di Metadata Discovery risulta semplificata per i RP SPID, perché a
 OpenID Provider
 +++++++++++++++
 
-Quando un Provider (OP) riceve una richiesta di autorizzazione da parte di un RP non precedentemente riconosciuto avviene la procedura di **automatic client registration**. Sono di seguito descritte le operazioni compiute dal OP per registrare un RP dinamicamente.
+Quando un Provider (OP) riceve una richiesta di autorizzazione da parte di un RP non precedentemente riconosciuto, avviene la procedura di **automatic client registration**. Sono di seguito descritte le operazioni compiute dal OP per registrare un RP dinamicamente.
 
 .. image:: ../../images/automatic_client_registration.svg
     :width: 100%
@@ -44,7 +44,7 @@ Se il RP non espone all'interno della sua configurazione nessun Trust Mark ricon
 
 Se il Provider convalida con successo almeno un Trust Mark per il profilo RP contenuto all'interno della configurazione del RP richiedente, estrae le entità superiori contenute nel claim **authority_hints** ed avvia la fase di Metadata Discovery. Ne consegue il calcolo della **Trust Chain** e l'ottenimento del Metadata finale.
 
-Durante il Metadata Discovery, il Provider richiede ad una o più di una entità superiore [2]_ l'Entity Statement relativo al RP e ottiene la chiave pubblica con la quale valida la configurazione del RP, fino a giungere al Trust Anchor. Infine applica la politica dei Metadata pubblicata dal Trust Anchor e salva il risultante Metadata finale del RP associandolo ad una data di scadenza, oltre la quale rinnoverà il Metadata secondo le modalità di rinnovo della Trust Chain.
+Durante il Metadata Discovery, il Provider richiede ad una o più entità superiori [2]_ l'Entity Statement relativo al RP e ottiene la chiave pubblica con la quale valida la configurazione del RP, fino a giungere al Trust Anchor. Infine applica la politica dei Metadata pubblicata dal Trust Anchor e salva il risultante Metadata finale del RP associandolo ad una data di scadenza, oltre la quale rinnoverà il Metadata secondo le modalità di rinnovo della Trust Chain.
 
 Ottenuto il Metadata finale, il Provider valida la richiesta del RP secondo le modalità definite all'interno delle linee guida della Federazione. 
 
