@@ -220,7 +220,7 @@ L'ID Token è un JSON Web Token (JWT) che contiene informazioni sull'utente che 
      - String. Identificatore unico dell'ID Token che il client può utilizzare per prevenirne il riuso, rifiutando l'ID Token se già processato. Deve essere di difficile individuazione da parte di un attaccante e composto da una stringa casuale. Si consiglia l'utilizzo del generatore *uuid4*
      - |spid-icon| |cieid-icon|
    * - **nonce** 
-     - String. String casuale generata dal Client per ciascuna sessione utente ed inviata nell'Authentication Request (parametro nonce), finalizzata a mitigare attacchi replay. Il client è tenuto a verificare che coincida con quella inviata nell'Authentication Request.
+     - String. Stringa casuale generata dal Client per ciascuna sessione utente ed inviata nell'Authentication Request (parametro nonce), finalizzata a mitigare attacchi replay. Il client è tenuto a verificare che coincida con quella inviata nell'Authentication Request.
      - |spid-icon| |cieid-icon|
 
 
