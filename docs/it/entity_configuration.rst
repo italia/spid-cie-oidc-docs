@@ -109,5 +109,5 @@ Gli EC di un TA, in aggiunta ai claim comuni a tutti i partecipanti, contengono 
      - JSON Object che descrive un insieme di vincoli della Trust Chain e che DEVE contenere l'attributo **max_path_length**. Rappresenta il numero massimo di SA tra una Foglia e il TA.
      - |spid-icon| |cieid-icon|
    * - **trust_marks_issuers**
-     - JSON array che indica quali autorità sono considerate attendibili nella federazione per l'emissione di specifici TM, questi assegnati mediante il proprio identificativo univoco.
+     - JSON Array che indica quali autorità sono considerate attendibili nella federazione per l'emissione di specifici TM, questi assegnati mediante il proprio identificativo univoco.
      - |spid-icon| |cieid-icon|
