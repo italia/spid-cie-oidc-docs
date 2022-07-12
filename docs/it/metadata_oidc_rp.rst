@@ -80,7 +80,7 @@ OpenID Connect Relying Party Metadata (RP)
    * - **userinfo_signed_response_alg**
      - `JWS`_ alg algorithm `JWA`_ OBBLIGATORIO per firmare le :ref:`UserInfo Response<userinfo_response>`. 
        Se specificato, la UserInfo Response sarà `JWT`_ serialized, e firmata usando `JWS`_. 
-       Se viene omesso, UserInfo Response ritorna come default i claim come JSON object codificato UTF-8 usando il content-type application/json.
+       Se viene omesso, UserInfo Response ritorna come default i claim come JSON Object codificato UTF-8 usando il content-type application/json.
      - |spid-icon| |cieid-icon|
    * - **userinfo_encrypted_response_alg**
      - `JWE`_ alg algorithm `JWA`_ OBBLIGATORIO per cifrare le :ref:`UserInfo Response<userinfo_response>`. 

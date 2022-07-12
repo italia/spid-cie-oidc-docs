@@ -67,7 +67,7 @@ Tabella attributi identificativi
        Provincia di nascita
      - anagrafica
      - place_of_birth
-     - JSON object: 
+     - JSON Object: 
 
        "**locality** : Stringa corrispondente al codice catastale (Codice Belfiore) del Comune 
        o della nazione estera di nascita (Es. "F205" per la città di Milano)
@@ -121,7 +121,7 @@ Tabella attributi identificativi
    * - Sede legale
      - extra anagrafica
      - ``https://attributes.eid.gov.it/registered_office``
-     - JSON object: formatted, street_address, locality, region, postal_code, country, country_code |br|
+     - JSON Object: formatted, street_address, locality, region, postal_code, country, country_code |br|
        Json composto da una stringa composta da una sequenza di parole intervallate da spazi singoli rappresentanti:
 
        - Tipologia( via, viale, piazza …) 
@@ -131,7 +131,7 @@ Tabella attributi identificativi
        - Luogo 
        - Provincia
 
-       la stringa è inserita nel claim "formatted" del Json Object "address"
+       la stringa è inserita nel claim "formatted" del JSON Object "address"
 
        Esempio:
 
@@ -183,7 +183,7 @@ Tabella attributi identificativi
    * - Documento d'identità
      - extra anagrafica
      - document_details
-     - JSON object (document):
+     - JSON Object (document):
 
        Json contenente le proprietà che rappresentano:
 
@@ -198,7 +198,7 @@ Tabella attributi identificativi
           - *tesseraRiconoscimento;*
 
         - "**document_number**" : Numero del documento;
-        - "**issuer**" : <ente emettitore> JSON object:
+        - "**issuer**" : <ente emettitore> JSON Object:
 
           - "**name**" stringa ottenuta dalla
             concatenazione dei termini costituenti la
@@ -265,7 +265,7 @@ Tabella attributi identificativi
      - extra
        anagrafica 
      - address
-     - JSON object (address):
+     - JSON Object (address):
        Formatted, **street_address**
        (**obbigatorio**),locality, region, postal_code,country, country_code
        L'attributo contiene la tipologia (via, viale, piazza …), l'indirizzo e il numero civico. 
@@ -313,7 +313,7 @@ Ai fini della caratterizzazione delle informazioni, in accordo all'allegato "Cor
 Esempi non normativi
 ++++++++++++++++++++
 
-Si riportano per comodità gli esempi che danno luogo alla composizione di un unico Json object da parte di più attributi ed in particolare i claim "place_of_birth", "address", "document_details", ``https://attributes.eid.gov.it/registered_office``.
+Si riportano per comodità gli esempi che danno luogo alla composizione di un unico JSON Object da parte di più attributi ed in particolare i claim "place_of_birth", "address", "document_details", ``https://attributes.eid.gov.it/registered_office``.
 
 Si riportano a titolo di esempio due indirizzi italiani:
 
