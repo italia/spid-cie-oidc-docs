@@ -11,7 +11,7 @@ Il componente basilare per costruire una Catena di Fiducia (Trust Chain) è l'**
 Firma di Entity Statement
 +++++++++++++++++++++++++
 
-Vedere :ref:`Firma di Entity Configuration<firma_EC>`
+Vedere :ref:`Firma della Entity Configuration<firma_EC>`
 
 
 Metadata di Federazione
