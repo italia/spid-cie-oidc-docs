@@ -6,19 +6,13 @@
 Entity Statement
 ----------------
 
-Il componente basilare per costruire una Catena di Fiducia (Trust Chain) è l'**Entity Statement (ES)**, un JWT firmato che contiene le chiavi di firma delle entità e ulteriori dati usati per controllare il processo di risoluzione della Trust Chain. Quando uno statement è firmato da un'entità, viene chiamato *Entity Configuration (EC)*.
+Il componente basilare per costruire una Catena di Fiducia (Trust Chain) è l'**Entity Statement (ES)**, un JWT firmato che contiene le chiavi di firma delle entità e ulteriori dati usati per controllare il processo di risoluzione della Trust Chain. **EC** e **ES** sono entrambi statement che riguardano un'entità, ma, mentre un **EC** è un oggetto *self-signed* esposto dall'entità stessa al proprio endpoint di *.well-known/openid-federation*, un **ES** è firmato dall'entità diretta superiore che lo pubblica al proprio :ref:`Fetch Endpoint<fetching_entity_statements>`. Inoltre, a differenza dell'**EC**, tramite l'**ES** l'entità superiore può definire e imporre le policy sui metadata dei soggetti discendenti.
 
 Firma di Entity Statement
 +++++++++++++++++++++++++
 
-Vedere :ref:`Firma della Entity Configuration<firma_EC>`
+Si applicano le medesime considerazioni fatte per gli **EC** e riportate nella sezione :ref:`Firma della Entity Configuration<firma_EC>`
 
-
-Metadata di Federazione
-+++++++++++++++++++++++
-
-OIDC Federation definisce i Metadata di Federazione contenenti le informazioni di seguito definite, e i Metadata OIDC per 
-ogni tipo di entità.
 
 
 Entity Statement
@@ -44,5 +38,5 @@ Gli ES emessi dal TA o da un suo Intermediario per i propri diretti discendenti,
 .. seealso:: 
 
    - `OIDC-FED#Section_3.1`_
-   - :ref:`Esempio non normativo <Esempio_EN1.4>`
+   - :ref:`Esempio non normativo <Esempio_EN2>`
 
