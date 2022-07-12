@@ -123,7 +123,7 @@ Un esempio non normativo è dato qui sotto:
      ]
  } 
 
-Dove il payload di JWT sarebbe come segue:
+Dove il payload di JWT è:
 
 .. code-block::
 
