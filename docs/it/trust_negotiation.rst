@@ -77,10 +77,10 @@ Esempi:
  - con identificativo del soggetto pari ``https://rp.servizi-spid.it/oidc/`` il risultante URL di Entity Configuration è |br|
    ``https://rp.servizi-spid.it/oidc/.well-known/oidc-federation``.
 
-Se l'URL che identifica il soggetto non presenta il simbolo di slash finale ("/") è necessario aggiungerlo prima di appendere il web path della risorsa .well-known.
+Se l'URL che identifica il soggetto non presenta il simbolo di slash finale ("/"), è necessario aggiungerlo prima di concatenare il web path della risorsa .well-known.
 
 
-Una volta che un RP viene riconosciuto come parte della Federazione, ottiene il permesso di effettuare una Richiesta di Autenticazione. L'OP che non riconosce il RP che fa la richiesta, è in grado di risolvere correttamente il Trust. L'OP inizia richiedendo la configurazione di entità del RP al .well-known endpoint del RP e, seguendo il percorso dato dall "authority_hint", raggiunge la radice del Trust, cioè il TA. In ogni passo della catena, l'OP può eseguire tutti i controlli di sicurezza richiedendo le dichiarazioni di entità da ciascuna entità e convalidando i Trust Mark e le firme. La figura che segue dà un esempio rappresentativo di come funziona la catena del Trust.
+Una volta che un RP viene riconosciuto come parte della Federazione, ottiene il permesso di effettuare una Richiesta di Autenticazione. L'OP che non riconosce il RP che fa la richiesta, è in grado di risolvere correttamente il Trust. L'OP inizia richiedendo la configurazione di entità del RP al .well-known endpoint del RP e, seguendo il percorso dato dall'*authority_hint*, raggiunge la radice del Trust, cioè il TA. In ogni passo della catena l'OP può eseguire tutti i controlli di sicurezza richiedendo le dichiarazioni di entità da ciascuna entità e convalidando i Trust Mark e le firme. La figura che segue dà un esempio rappresentativo di come funziona la catena del Trust.
 
 
 .. image:: ../../images/cie_esempio_trust_chain.svg
@@ -90,7 +90,7 @@ Una volta che un RP viene riconosciuto come parte della Federazione, ottiene il 
 *Trust Chain*
 
 
-Come mostrato nella figura successiva, la Trust Chain è una procedura che parte dalla radice (TA) e va verso le entità foglie, mentre il processo di ottenimento di una Trust Chain parte dalle entità foglie e, seguendo il percorso dato dall'"authority_hint", raggiunge la radice (TA).
+Come mostrato nella figura successiva, la Trust Chain è una procedura che parte dalla radice (TA) e va verso le entità foglie, mentre il processo di ottenimento di una Trust Chain parte dalle entità foglie e, seguendo il percorso dato dall'*authority_hint*, raggiunge la radice (TA).
 
 
 .. image:: ../../images/cie_onboarding_e_direzioni_trust_chain.svg
