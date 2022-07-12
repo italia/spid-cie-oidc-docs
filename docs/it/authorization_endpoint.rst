@@ -75,7 +75,7 @@ L'oggetto request DEVE essere un token JWT firmato.
      - URI che identifica univocamente il RP.
      - |spid-icon| |cieid-icon|
    * - **code_challenge**
-     - Un challenge per PKCE da riportare anche nella successiva richiesta al Token endpoint. Vedi paragrafo :ref:`Generazione del code_challenge per PKCE<PKCE_code_challenge_generation>`
+     - Un challenge per PKCE da riportare anche nella successiva richiesta al Token Endpoint. Vedi paragrafo :ref:`Generazione del code_challenge per PKCE<PKCE_code_challenge_generation>`
      - |spid-icon| |cieid-icon|
    * - **code_challenge_method**
      - Metodo di costruzione del challenge PKCE. È obbligatorio specificare il valore **S256**
