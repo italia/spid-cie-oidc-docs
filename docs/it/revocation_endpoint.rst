@@ -5,9 +5,9 @@ Revocation Endpoint (logout)
 
 Il Revocation Endpoint consente al RP di chiedere la revoca di un *access token* o di un *refresh token* in suo possesso.
 
-Quando l’utente esegue il logout o quando la sua sessione presso il RP scade (in base alle policy decise da quest’ultimo), il RP deve chiamare questo endpoint per revocare l’*access token* e l’eventuale *refresh token* in suo possesso.
+Quando l'utente esegue il logout o quando la sua sessione presso il RP scade (in base alle policy decise da quest'ultimo), il RP deve chiamare questo endpoint per revocare l'*access token* e l'eventuale *refresh token* in suo possesso.
 
-L’OP dovrà revocare il token specificato nella richiesta e dovrà terminare la sessione di Single Sign-On se ancora attiva. Eventuali altri token attivi per l’utente dovranno invece essere mantenuti validi.
+L'OP dovrà revocare il token specificato nella richiesta e dovrà terminare la sessione di Single Sign-On se ancora attiva. Eventuali altri token attivi per l'utente dovranno invece essere mantenuti validi.
 
 .. seealso::
 
@@ -16,7 +16,7 @@ L’OP dovrà revocare il token specificato nella richiesta e dovrà terminare l
 Request
 +++++++
 
-La richiesta al Revocation Endpoint consiste nell’invio del token che si vuole revocare unitamente a una Client Assertion che consente di identificare il RP che esegue la richiesta.
+La richiesta al Revocation Endpoint consiste nell'invio del token che si vuole revocare unitamente a una Client Assertion che consente di identificare il RP che esegue la richiesta.
 
 
 **Esempio:**
@@ -41,29 +41,23 @@ La richiesta al Revocation Endpoint consiste nell’invio del token che si vuole
 
 
 .. list-table:: 
-   :widths: 20 20 40 20
+   :widths: 20 60 20
    :header-rows: 1
 
    * - **Claim**
-     - **Tipo**
      - **Descrizione**
      - **Obbligatorio**
    * - **client_assertion**
-     - JWT
      - JWT firmato con la chiave privata del Relying Party contenente gli stessi parametri documentati per le richieste al 
-       Token Endpoint. L’OP deve verificare la validità di tutti i campi presenti nel JWT, nonché la validità della sua firma in relazione al parametro **client_id**.
+       Token Endpoint. L'OP deve verificare la validità di tutti i campi presenti nel JWT, nonché la validità della sua firma in relazione al parametro **client_id**.
      - 
    * - **client_assertion_type**
-     - String
-     - **urn:ietf:params:oauth:clientassertion-type:jwt-bearer**
+     - String. **urn:ietf:params:oauth:clientassertion-type:jwt-bearer**
      - 
    * - **client_id**
-     - String
-     - URI che identifica univocamente il RP come da Registro SPID. 
-       L’OP deve verificare che il client_id sia noto.
+     - URL HTTPS che identifica univocamente il RP. 
      - 
    * - **token**
-     - 
      - Il token su cui il RP vuole ottenere informazioni.
      - 
 	 

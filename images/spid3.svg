@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generato da Microsoft Visio, esportazione SVG spid3.svg Pagina 1 -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events"
+		xmlns:v="http://schemas.microsoft.com/visio/2003/SVGExtensions/" width="8.66667in" height="5.65625in"
+		viewBox="0 0 624 407.25" xml:space="preserve" color-interpolation-filters="sRGB" class="st6">
+	<v:documentProperties v:langID="1040" v:metric="true" v:viewMarkup="false"/>
+
+	<style type="text/css">
+	<![CDATA[
+		.st1 {fill:#0167cb;stroke:none;stroke-linecap:butt;stroke-width:0.75}
+		.st2 {fill:#fdffff;stroke:none;stroke-linecap:butt;stroke-width:0.75}
+		.st3 {fill:#518ac3;stroke:none;stroke-linecap:butt;stroke-width:0.75}
+		.st4 {fill:#ffffff;stroke:#ffffff;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.75}
+		.st5 {fill:#ffffff;stroke:#ffffff;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
+		.st6 {fill:none;fill-rule:evenodd;font-size:12px;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
+	]]>
+	</style>
+
+	<g v:mID="0" v:index="1" v:groupContext="foregroundPage">
+		<title>Pagina 1</title>
+		<v:pageProperties v:drawingScale="0.0393701" v:pageScale="0.0393701" v:drawingUnits="24" v:shadowOffsetX="9"
+				v:shadowOffsetY="-9"/>
+		<g id="group4311-1" transform="translate(0.75,-0.75)" v:mID="4311" v:groupContext="group">
+			<title>Foglio.4311</title>
+			<g id="shape3619-2" v:mID="3619" v:groupContext="shape">
+				<title>Foglio.3619</title>
+				<path d="M0 1.5 L0 407.25 L622.5 407.25 L622.5 1.5 L0 1.5 Z" class="st1"/>
+			</g>
+			<g id="shape3621-4" v:mID="3621" v:groupContext="shape" transform="translate(391.999,-146.218)">
+				<title>Foglio.3621</title>
+				<path d="M64.75 262.47 L64.75 302.97 C49.85 300.08 32.33 297.02 19 306.56 C0 320.16 1.01 349.88 3.9 370.47 C5.13
+							 379.16 7.86 388.94 14.53 395.08 C27.76 407.25 50.06 403.59 64.75 396.72 L64.75 400.47 L91 400.47 L91
+							 262.47 L64.75 262.47 Z" class="st2"/>
+			</g>
+			<g id="shape3625-6" v:mID="3625" v:groupContext="shape" transform="translate(112.901,-140.975)">
+				<title>Foglio.3625</title>
+				<path d="M5.6 371.23 L4.85 392.98 C26.61 397.19 71.62 407.25 80.57 377.98 C81.86 373.75 82.1 369.6 82.1 365.23 C82.1
+							 359.28 81.35 353.07 77.94 348 C71.05 337.78 56.33 336.71 45.35 334.47 C41 333.59 34.62 333.1 31.42 329.68
+							 C26.31 324.21 33.6 319.28 38.6 318.69 C52.16 317.07 65.54 320.94 79.1 320.98 C79.1 316.3 81.28 304.25
+							 78.33 300.53 C75.42 296.87 62.57 296.84 58.1 296.23 C36.89 293.31 7.83 294.37 3.68 320.98 C0 344.53
+							 15.9 353.6 36.35 357.16 C41.78 358.11 59.22 359.7 55.35 368.94 C53.32 373.78 46.82 374.2 42.35 374.22
+							 C30.02 374.28 17.81 372.77 5.6 371.23 Z" class="st2"/>
+			</g>
+			<g id="shape3631-8" v:mID="3631" v:groupContext="shape" transform="translate(214.5,-111.75)">
+				<title>Foglio.3631</title>
+				<path d="M25.5 273 L25.5 267.75 L0 267.75 L0 407.25 L25.5 407.25 L25.5 366.75 C41.34 369.7 63.97 370.76 76.36 358.36
+							 C81.88 352.84 84.21 344.95 85.65 337.5 C89.61 316.95 90.26 282.49 69.75 270.36 C54.35 261.24 40.41 267.57
+							 25.5 273 Z" class="st2"/>
+			</g>
+			<g id="shape3808-10" v:mID="3808" v:groupContext="shape" transform="translate(419.366,-171.613)">
+				<title>Foglio.3808</title>
+				<path d="M36.63 401.86 L36.63 350.11 C29.35 348.76 16.85 345.61 10.4 350.44 C0 358.21 1.64 376.32 2.92 387.61 C3.53
+							 392.95 4.82 399.37 9.67 402.5 C17.02 407.25 28.83 403.01 36.63 401.86 Z" class="st1"/>
+			</g>
+			<g id="shape3830-12" v:mID="3830" v:groupContext="shape" transform="translate(239.377,-170.953)">
+				<title>Foglio.3830</title>
+				<path d="M1.37 404.2 C9.82 404.23 20.03 407.25 27.61 402.06 C39 394.27 38.32 362.78 29.71 353.24 C24.67 347.65 7.18
+							 345.89 2.14 352.94 C0 355.94 1.37 363.15 1.37 366.7 L1.37 404.2 Z" class="st1"/>
+			</g>
+			<g id="shape3845-14" v:mID="3845" v:groupContext="shape" transform="translate(429,-177)">
+				<title>Foglio.3845</title>
+				<path d="M0 355.5 L0.75 356.25 L0 355.5 ZM27 355.5 L27 407.25 L27.75 407.25 L27.75 372 L27 355.5 Z" class="st3"/>
+			</g>
+			<g id="group4308-16" transform="translate(319.791,-153.492)" v:mID="4308" v:groupContext="group">
+				<v:userDefs>
+					<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(17):26"/>
+				</v:userDefs>
+				<title>Semicerchio</title>
+				<g id="shape4309-17" v:mID="4309" v:groupContext="shape">
+					<title>Foglio.4309</title>
+					<path d="M27.3 379.95 C12.22 379.95 0 392.18 0 407.25 L54.59 407.25 C54.59 392.18 42.37 379.95 27.3 379.95 Z"
+							class="st4"/>
+				</g>
+			</g>
+			<g id="shape4310-19" v:mID="4310" v:groupContext="shape" transform="translate(318.501,-194.839)">
+				<title>Cerchio</title>
+				<v:userDefs>
+					<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				</v:userDefs>
+				<path d="M0 378.8 A28.448 28.448 0 0 1 56.9 378.8 A28.448 28.448 0 1 1 0 378.8 Z" class="st5"/>
+			</g>
+		</g>
+	</g>
+</svg>

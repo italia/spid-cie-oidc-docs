@@ -3,25 +3,27 @@
 Federation Endpoint
 -------------------
 
-Tutte le entità DEVONO offrire i seguenti endpoint:
+Tutte le entità DEVONO contenere i seguenti endpoint:
 
- - l’endpoint **/.well-known/openid-federation** per ottenere le informazioni sulla configurazione dell’entità (vedi sezione  :ref:`Ottenere informazioni di configurazione dell’entità di federazione<obtaining_federation_entity_configuration_information>`)
+ - **/.well-known/openid-federation** fornisce la Entity Configuration (vedi sezione  :ref:`Ottenere informazioni di configurazione dell'entità di Federazione<obtaining_federation_entity_configuration_information>`)
 
 Un **FA** (**SA** o **TA**) DEVE, in aggiunta, offrire i seguenti endpoint:
 
- - il *fetch entity statement endpoint* per andare a prendere un FA riguardo ad una subordinata, ottenendo così un entity statement (vedi sezione :ref:`Prelevare Entity Statement<fetching_entity_statements>`)  
- - il *resolve entity statement endpoint* per ottenere una vista di un’altra entità (il risulutore) (vedi sezione :ref:`Risolvere Entity Statements<resolve_entity_statements>`), e
- - il *trust mark introspection endpoint* per ottenere, da parte dell’emittente del trust mark, una vista dello stato del trust mark (vedere sezione :ref:`Stato del Trust Mark<trust_mark_status>`)
- - l’*entity listing endpoint* per ottenere una lista di tutte le subordinate di un’entità (vedere sezione :ref:`Elenchi di Entità<entity_listings>`)
+ - **fetch entity statement endpoint** fornisce un FA relativo ad una subordinata, ottenendo così un entity statement (vedi sezione :ref:`Prelevare Entity Statement<fetching_entity_statements>`)  
+ - **resolve entity statement endpoint** risolve i Metadata di Federazione (vedi sezione :ref:`Risolvere Entity Statements<resolve_entity_statements>`)
+ - **trust mark introspection endpoint** fornisce lo stato del Trust Mark (vedere sezione :ref:`Stato del Trust Mark<trust_mark_status>`)
+ - **entity listing endpoint** fornisce una lista di tutte le subordinate di un'entità (vedere sezione :ref:`Elenchi di Entità<entity_listings>`)
+ - **resolve endpoint** ottiene dal risolutore dei Metadata risolti e TM di un'entità vista/fidata (vedere sezione
+   :ref:`Risolvere i Metadata di Federazione <resolve_entity_statements>`)
 
 
 
 .. _obtaining_federation_entity_configuration_information:
 
-Ottenere informazioni di configurazione dell’entità di federazione
+Ottenere informazioni di configurazione dell'entità di Federazione
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-La configurazione di entità di ogni federazione DOVREBBE essere esposta ad un endpoint ben conosciuto con il seguente percorso: **/.well-known/openid-federation**.
+La configurazione di entità di ogni Federazione DEVE essere esposta ad un endpoint ben conosciuto con il seguente percorso: **/.well-known/openid-federation**.
 
 
 Federation Entity Configuration Request
@@ -60,7 +62,7 @@ Per esempi di $ENTITY_CONFIGURATION vedere la sezione :ref:`Esempi di Entity Con
 Prelevare Entity Statements
 +++++++++++++++++++++++++++
 
-Tutte le entità che pubblicano ES riguardo altre entità (es. **SA** e **TA**) DEVONO esporre un **Fetch Endpoint**. Viene usato da un’entità per raccogliere gli ES, uno per uno, per mettere insieme le Trust Chain.
+Tutte le entità che pubblicano ES riguardo altre entità (es. **SA** e **TA**) DEVONO esporre un **Fetch Endpoint**. Viene usato da un'entità per ottenere gli ES.
 
 
 
@@ -70,25 +72,16 @@ Fetch Entity Statements Request
 La richiesta DEVE essere una richiesta HTTP che usa il metodo GET ed ha i seguenti parametri di query:
 
 .. list-table:: 
-   :widths: 20 20 40 20
+   :widths: 20 60 20
    :header-rows: 1
 
    * - **Claim**
-     - **Tipo**
      - **Descrizione**
-     - **Obbligatorio**
-   * - **iss**
-     - String
-     - L’identificatore di entità dell’emettitore dal quale si vuole l’emissione dell’ES. A causa della normalizzazione dell’URL, più emettitori POSSONO puntare ad un Fetch Endpoint condiviso. Questo parametro esplicita esattamente da quale emettitore si vuole l’ES. Senza questo parametro l’emettitore coincide con l’entità alla quale è stata fatta la richiesta.
-     - |uncheck-icon|
+     - **Supportato da**
    * - **sub**
-     - String
-     - L’identificatore di entità del soggetto per il quale si vuole l’emissione dell’ES. Senza questo parametro, la richiesta di statement si considera inviata a se stesso.
-     - |uncheck-icon|
-   * - **aud**
-     - String
-     - L’identificatore di entità del richiedente. Se **aud** è presente nella richiesta, il parametro **aud** DOVREBBE essere presente nella risposta dell’ES e prendere lo stesso valore. 
-     - |uncheck-icon|
+     - String. L'identificatore di entità del soggetto per il quale si vuole l'emissione dell'ES.
+     - |spid-icon| |cieid-icon|
+
 
 Il seguente è un esempio non normativo di una richiesta API per un ES:
 
@@ -107,7 +100,7 @@ Fetch Entity Statements Response
 
 Una risposta positiva è un ES firmato dove il tipo di contenuto DEVE essere impostato a **application/jose**. In caso di errore, vedere sezione :ref:`Generic Error Response<generic_error_response>`.
 
-Segue un esempio non normativo di risposta, prima della serializzazione e dell’aggiunta di una firma:
+Segue un esempio non normativo di risposta, prima della serializzazione e dell'aggiunta di una firma:
 
 
 .. code-block:: 
@@ -133,38 +126,30 @@ Per esempi di $ENTITY_STATEMENT vedere la sezione :ref:`Esempi di Entity Stateme
 Risolvere i Metadata di Federazione
 +++++++++++++++++++++++++++++++++++
 
-Un’entità PUÒ usare il resolve endpoint per prelevare metadata risolti e TM per un’entità vista/fidata da parte del risolutore (cioè la visione del risolutore di un’altra entità). Ci si aspetta che il risolutore prelevi l’ES autofirmato dei soggetti, prelevi una Trust Chain che inizia con l’ES dei soggetti e finisce con il TA specificato, verifichi la Trust Chain e quindi applichi tutte le politiche presenti nella Trust Chain ai metadata degli ES. Ciu si aspetta anche che il risolutore verifichi che i TM presenti siano attivi. Se trova TM non attivi, allora quelli dovrebbero essere lasciati fuori dall’insieme di risposta.
+Un'entità PUÒ usare il Resolve Endpoint per ottenere dal risolutore dei Metadata risolti e TM di un'entità vista/fidata. Il risolutore DEVE prelevare l'ES autofirmato dei soggetti, prelevare una Trust Chain che inizia con l'ES dei soggetti e finisce con il TA specificato, verificare la Trust Chain e quindi applicare tutte le politiche presenti nella Trust Chain ai Metadata degli ES. Il DEVE inoltre verificare che i TM presenti siano attivi. Se trova TM non attivi, allora dovrebbero essere lasciati fuori dall'insieme di risposta.
 
 
 Resolve Endpoint Request
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-La richiesta DEVE essere una richiesta HTTP che usa un metodo GET e lo schema https ad resolve endpoint con i seguenti parametri della stringa di query:
+La richiesta DEVE essere una richiesta HTTP che usa un metodo GET e lo schema https al resolve endpoint con i seguenti parametri della stringa di query:
 
 .. list-table:: 
-   :widths: 20 20 40 20
+   :widths: 20 60 20
    :header-rows: 1
 
    * - **Claim**
-     - **Tipo**
      - **Descrizione**
-     - **Obbligatorio**
+     - **Supportato da**
    * - **sub**
-     - String
-     - L’identificatore di entità dell’entità di cui sono richiuesti i dati risolti
-     - |check-icon|
+     - String. L'identificatore di entità dell'entità di cui sono richiesti i dati risolti
+     - |spid-icon| |cieid-icon|
    * - **anchor**
-     - String
-     - Il TA che il peer remoto DEVE usare nella risoluzione dei metadata. Il valore è un identificatrore di entità.
-     - |check-icon|
+     - String. Il TA che il peer remoto DEVE usare nella risoluzione dei Metadata. Il valore è un identificatrore di entità.
+     - |spid-icon| |cieid-icon|
    * - **type**
-     - 
-     - Un tipo specifico di metadata da risolvere. Se assente, allora ci si aspetta che tutti i tipi di metadata vengano ritornati.
-     - |uncheck-icon|
-   * - **iss**
-     - String
-     - L’identificatore dell’entità che sta richiedendo le informazioni. Se questo parametro è presente nella richiesta, allora DEVE essere presente nella risposta nel parametro aud/jose del JWT firmato.
-     - |uncheck-icon|
+     - Un tipo specifico di Metadata da risolvere. Se assente, allora ci si aspetta che tutti i tipi di Metadata vengano ritornati.
+     - |spid-icon| |cieid-icon|
 
 
 
@@ -185,7 +170,7 @@ Segue un esempio non normativo di **Resolve request**:
 Resolve Endpoint Response
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Il response è un JWT firmato contenente metadata risolti e TM verificati. Le chiavi usate dal risolutore dovrebbero essere le stesse usate per costruire un ES autofirmato. Questo significa che l’emettitore della richiesta può facilmente trovare e verificare le chiavi di firma del risolutore raccogliendo e verificando l’appropriata Trust Chain.
+Il response è un JWT firmato contenente Metadata risolti, TM verificati e la prova della Trust Chain. La response è un JWT firmato con la chiave utilizzata dal risolutore all'interno della propria Entity Configuration. Questo significa che l'emettitore della richiesta può facilmente trovare e verificare le chiavi di firma del risolutore raccogliendo e verificando l'appropriata Trust Chain.
 
 Segue un esempio non normativo di risposta, prima di serializzare e aggiungere una firma:
 
@@ -226,7 +211,7 @@ Segue un esempio non normativo di risposta, prima di serializzare e aggiungere u
 Stato del Trust Mark
 ++++++++++++++++++++
 
-Permette a un’entità di verificare se un TM è ancora attivo o no. La query DEVE essere mandata all’emettitore del TM.
+Permette a un'entità di verificare se un TM è ancora attivo o no. La query DEVE essere mandata all'emettitore del TM.
 
 
 Status Request
@@ -237,25 +222,21 @@ DEVE essere una richiesta HTTP che usa il metodo GET e lo schema https verso uno
 
 
 .. list-table:: 
-   :widths: 20 20 40 20
+   :widths: 20 60 20
    :header-rows: 1
 
    * - **Claim**
-     - **Tipo**
      - **Descrizione**
-     - **Obbligatorio**
+     - **Supportato da**
    * - **sub**
-     - String
-     - L’entity_id per l’enbtità alla quale è stato inviato il TM.
-     - |uncheck-icon|
+     - String. L'identificativo univoco del soggetto per l'entità alla quale è stato inviato il TM.
+     - |spid-icon| |cieid-icon|
    * - **id**
-     - String
-     - Identifica il TM
-     - |uncheck-icon|
+     - String. Identifica il TM.
+     - |spid-icon| |cieid-icon|
    * - **iat**
-     - UNIX Timestamp
-     - Identifica quanto il TM è stato emesso. Se non viene specificato **iat** e l’emettitore del TM ha emesso diversi TM con l’**id** specificato nella richiesta all’entità specificata da **sub**, allora si assume che sia l’ultimo.
-     - |uncheck-icon|
+     - UNIX Timestamp con l'istante di generazione del JWT, codificato come NumericDate come indicato in :rfc:`7519`
+     - |spid-icon| |cieid-icon|
 
 
 Segue un esempio non normativo di richiesta che usa **sub** e **id**:
@@ -275,22 +256,20 @@ Segue un esempio non normativo di richiesta che usa **sub** e **id**:
 Status Response
 ^^^^^^^^^^^^^^^
 
-IL corpo della risposta HTTP DEVE essere un oggetto JSON contenente i claim qui sotto riportati e il tipo di contenuto deve
+IL corpo della risposta HTTP DEVE essere un oggetto JSON contenente i claim di seguito riportati e il tipo di contenuto deve
 essere impostato a **application/json**:
 
 
 .. list-table:: 
-   :widths: 20 20 40 20
+   :widths: 20 60 20
    :header-rows: 1
 
    * - **Claim**
-     - **Tipo**
      - **Descrizione**
-     - **Obbligatorio**
+     - **Supportato da**
    * - **active**
-     - Boolean
-     - Se il TM è attivo o no.
-     - |check-icon|
+     - Boolean. Indica ae il TM è attivo o no.
+     - |spid-icon| |cieid-icon|
 
 
 
@@ -320,7 +299,7 @@ Segue un esempio non normativo di risposta:
 Lista delle Entità di Federazione
 +++++++++++++++++++++++++++++++++
 
-UN’entità PUÒ interrogare un’altra entità per ottenere una lista di tutte le entità a lei immediatamente subordinate e circa le quali quell’entità è pronta a emettere statement (in alcuni casi PUÒ essere una lista molto lunga).
+UN'entità PUÒ interrogare un'altra entità per ottenere una lista di tutte le entità a lei immediatamente subordinate e di cui è pronta a emettere statement (in alcuni casi PUÒ essere una lista molto lunga).
 
 
 Entity Listings Request
@@ -330,17 +309,15 @@ DEVE essere una richiesta HTTP che usa il metodo GET e lo schema https verso un 
 
 
 .. list-table:: 
-   :widths: 20 20 40 20
+   :widths: 20 60 20
    :header-rows: 1
 
    * - **Claim**
-     - **Tipo**
      - **Descrizione**
-     - **Obbligatorio**
+     - **Supportato da**
    * - **entity_type**
-     - Set (federation_entity, openid_relying_party, openid_provider)
-     - Filtra il tipo di entità. 
-     - |uncheck-icon|
+     - Set (**federation_entity**, **openid_relying_party**, **openid_provider**).  Filtra il tipo di entità. 
+     - |spid-icon| |cieid-icon|
 
 
 Segue un esempio non normativo:
@@ -431,30 +408,26 @@ Advanced Entity Listings Response
 Generic Error Response
 ++++++++++++++++++++++
 
-Se la richiesta è malformata o avvengo errori durante l'elaborazione della richiesta, DOVREBBE essere utilizzato il seguente formato di errore indipendentemente dall'operazione specificata.
-La risposta HTTP DEVE essere qualcosa nell'intervallo 400/500, che dia un’indicazione del tipo di errori. Il corpo della risposta DEVE essere un oggetto JSON contenente i claim qui sotto riportati e il tipo di contenuto DEVE essere impostato a **application/json**.
+Se la richiesta è malformata o avvengono errori durante l'elaborazione della richiesta, DOVREBBE essere utilizzato il seguente formato di errore indipendentemente dall'operazione specificata.
+La risposta HTTP DEVE essere avere un codice nell'intervallo 400/500, che dia un'indicazione del tipo di errore. Il corpo della risposta DEVE essere un oggetto JSON contenente i claim di seguito riportati e il tipo di contenuto DEVE essere di tipo **application/json**.
 
 
 .. list-table:: 
-   :widths: 20 20 40 20
+   :widths: 20 60 20
    :header-rows: 1
 
    * - **Claim**
-     - **Tipo**
      - **Descrizione**
-     - **Obbligatorio**
+     - **Supportato da**
    * - **operation**
-     - 
-     - L’operazione della richiesta
-     - |check-icon|
+     - L'operazione della richiesta
+     - |spid-icon| |cieid-icon|
    * - **error**
-     - 
      - Il codice di errore
-     - |check-icon|
+     - |spid-icon| |cieid-icon|
    * - **error_description**
-     - 
-     - Un breve testo leggibile che descrive l’errore
-     - |check-icon|
+     - Un breve testo leggibile che descrive l'errore
+     - |spid-icon| |cieid-icon|
 
 
 Segue un esempio non normativo di error response:

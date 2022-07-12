@@ -281,3 +281,5 @@ texinfo_documents = [
 
 numfig = True
 
+# to turn smartquotes off and be able to use ’ 
+smartquotes = False

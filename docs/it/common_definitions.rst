@@ -3,22 +3,32 @@
    ’
    “”
 
+.. |br| raw:: html
+
+   <br/>
+
 .. |check-icon| image:: ../../images/Eo_circle_green_checkmark.svg
    :width: 25
    
 .. |uncheck-icon| image:: ../../images/Eo_circle_red_letter-x.svg
    :width: 25
 
+.. |spid-icon| image:: ../../images/spid3.svg
+   :width: 45
+
+.. |cieid-icon| image:: ../../images/cieid3.svg
+   :width: 45
+
 .. |warning-message| replace:: Tutti gli esempi contenuti in questa documentazione sono da intendersi come non normativi
 
 .. _OIDC-FED: https://openid.net/specs/openid-connect-federation-1_0.html
-.. _OIDC-FED#OP_metadata: https://openid.net/specs/openid-connect-federation-1_0.html#rfc.section.4.2
 .. _OIDC-FED#RP_metadata: https://openid.net/specs/openid-connect-federation-1_0.html#rfc.section.4.1
 .. _OIDC-FED#Federation_Entity: https://openid.net/specs/openid-connect-federation-1_0.html#rfc.section.4.6
 .. _LG-AA: https://docs.italia.it/AgID/documenti-in-consultazione/lg-spid-attribute-authority-docs/it/master/index.html
 .. _OpenID.Core: https://openid.net/specs/openid-connect-core-1_0-27.html
 .. _OpenID.Registration: https://openid.net/specs/openid-connect-registration-1_0.html
 .. _OpenID.Discovery: https://openid.net/specs/openid-connect-discovery-1_0.html
+.. _OpenID.Discovery#OP_metadata: https://openid.net/specs/openid-connect-discovery-1_0.html#ProviderMetadata
 .. _OpenID Connect Core: https://openid.net/specs/openid-connect-core-1_0.html
 .. _OIDC-FED#Section_1.2: https://openid.net/specs/openid-connect-federation-1_0.html#rfc.section.1.2
 .. _OIDC-FED#Section_3.1: https://openid.net/specs/openid-connect-federation-1_0.html#rfc.section.3.1
@@ -45,4 +55,15 @@
 .. _SPID-OIDC-CORE: https://www.agid.gov.it/sites/default/files/repository_files/linee_guida_openid_connect_in_spid.pdf
 .. _SPID-OIDC: https://www.agid.gov.it/sites/default/files/repository_files/linee_guida_openid_connect_in_spid.pdf
 .. _PAR: https://tools.ietf.org/id/draft-ietf-oauth-par-04.html
+.. _iGov.OIDC: https://openid.net/specs/openid-igov-openid-connect-1_0-03.html
+.. _OpenID.IDA: https://openid.net/specs/openid-connect-4-identity-assurance-1_0-ID3.html
+.. _OIDC-CORE#section-5.7: https://openid.net/specs/openid-connect-core-1_0-27.html#ClaimStability
+.. _E164: http://www.itu.int/rec/T-REC-E.164-201011-I/en
+.. _ISO8601-2004: https://www.iso.org/standard/40874.html
+.. _ICAO-Doc9303: https://www.icao.int/publications/Documents/9303_p3_cons_en.pdf
+.. _JWA: https://datatracker.ietf.org/doc/html/draft-ietf-jose-json-web-algorithms
+.. _JWT: https://datatracker.ietf.org/doc/html/draft-ietf-oauth-json-web-token
+.. _JWE: https://datatracker.ietf.org/doc/html/draft-ietf-jose-json-web-encryption
+.. _JWK: https://datatracker.ietf.org/doc/html/draft-ietf-jose-json-web-key
+.. _JWS: https://datatracker.ietf.org/doc/html/draft-ietf-jose-json-web-signature
 

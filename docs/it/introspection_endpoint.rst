@@ -3,7 +3,7 @@
 Introspection Endpoint (verifica validità token) 
 ------------------------------------------------
 
-L’Introspection Endpoint esposto dall’OP consente ai RP di ottenere informazioni su un token in loro possesso, come ad esempio la sua validità.
+L'Introspection Endpoint esposto dall'OP consente ai RP di ottenere informazioni su un token in loro possesso, come ad esempio la sua validità.
 
 .. seealso::
 
@@ -13,7 +13,7 @@ L’Introspection Endpoint esposto dall’OP consente ai RP di ottenere informaz
 Request
 +++++++
 
-La richiesta all’Introspection Endpoint consiste nell’invio del token su cui si vogliono ottenere informazioni unitamente a una Client Assertion che consente di identificare il RP che esegue la richiesta.
+La richiesta all'Introspection Endpoint consiste nell'invio del token su cui si vogliono ottenere informazioni unitamente a una Client Assertion che consente di autenticare il RP che esegue la richiesta.
 
 
 **Esempio:**
@@ -39,28 +39,23 @@ La richiesta all’Introspection Endpoint consiste nell’invio del token su cui
  
 
 .. list-table:: 
-   :widths: 20 20 40 20
+   :widths: 20 60 20
    :header-rows: 1
 
    * - **Claim**
-     - **Tipo**
      - **Descrizione**
      - **Obbligatorio**
    * - **client_assertion**
-     - JWT
      - JWT firmato con la chiave privata del Relying Party contenente gli stessi parametri documentati per le richieste al 
-       Token Endpoint. L’OP deve verificare la validità di tutti i campi presenti nel JWT, nonché la validità della sua firma in relazione al parametro **client_id**.
+       Token Endpoint. L'OP deve verificare la validità di tutti i campi presenti nel JWT, nonché la validità della sua firma in relazione al parametro **client_id**.
      - 
    * - **client_assertion_type**
-     - String
-     - Valori ammessi: **urn:ietf:params:oauth:clientassertion-type:jwt-bearer**
+     - String. Valori ammessi: **urn:ietf:params:oauth:clientassertion-type:jwt-bearer**
      - 
    * - **client_id**
-     - String
-     - URI che identifica univocamente il RP come da Registro SPID. L’OP deve verificare che il client_id sia noto.
+     - URI che identifica univocamente il RP. L'OP deve verificare che il client_id sia noto all'interno della Federazione.
      - 
    * - **token**
-     - 
      - Il token su cui il RP vuole ottenere informazioni.
      - 
 
@@ -68,7 +63,7 @@ La richiesta all’Introspection Endpoint consiste nell’invio del token su cui
 Response
 ++++++++
 
-L’Introspection Endpoint risponde con un oggetto JSON definito come segue. 
+L'Introspection Endpoint risponde con un oggetto JSON definito come segue. 
 
 **Esempio:**
 
@@ -85,51 +80,21 @@ L’Introspection Endpoint risponde con un oggetto JSON definito come segue.
  }
 
 .. list-table:: 
-   :widths: 20 20 40 20
+   :widths: 20 60 20
    :header-rows: 1
 
    * - **Claim**
-     - **Tipo**
      - **Descrizione**
      - **Obbligatorio**
    * - **active**
-     - Boolean
-     - Valore booleano che indica la validità del token. Se il token è scaduto, è revocato o non è mai stato emesso per il client_id chiamante, l’Introspection Endpoint deve restituire false.
-     - 
-   * - **scope**
-     - 
-     - Lista degli scope richiesti al momento dell’Authorization Request
-     - 
-   * - **exp**
-     - UNIX Timestamp
-     - Scadenza del token.
-     - 
-   * - **sub**
-     - String
-     - Identificatore del soggetto, coincidente con quello già rilasciato nell’ID Token. 
-       Il RP deve verificare che il valore coincida con quello contenuto nell’ID Token.
-     - 
-   * - **client_id**
-     - String
-     - URI che identifica univocamente il RP come da Registro SPID. 
-       Il RP deve verificare che il valore coincida con il proprio client_id.
-     - 
-   * - **iss**
-     - String
-     - Identificatore dell’OP che lo contraddistingue univocamente nella federazione nel formato Uniform Resource Locator (URL).
-       Il client è tenuto a verificare che questo valore corrisponda all’OP chiamato.
-     - 
-   * - **aud**
-     - String
-     - Contiene il client ID.
-       Il client è tenuto a verificare che questo valore corrisponda al proprio client ID. 
+     - Valore booleano che indica la validità del token. Se il token è scaduto, è revocato o non è mai stato emesso per il client_id chiamante, l'Introspection Endpoint deve restituire false.
      - 
 
 	 
 Errori
 ++++++
 
-In caso di errore, l’OP restituisce un codice HTTP 401 con un JSON nel body avente gli elementi di seguito indicati
+In caso di errore, l'OP restituisce un codice HTTP 401 con un JSON nel body avente gli elementi di seguito indicati
 
 **Esempio:**
 
@@ -142,20 +107,17 @@ In caso di errore, l’OP restituisce un codice HTTP 401 con un JSON nel body av
 
 
 .. list-table:: 
-   :widths: 20 20 40 20
+   :widths: 20 60 20
    :header-rows: 1
 
    * - **Claim**
-     - **Tipo**
      - **Descrizione**
      - **Obbligatorio**
    * - **error**
-     - 
-     - Codice dell’errore (v. tabella sotto)
+     - Codice dell'errore (v. tabella sotto)
      - 
    * - **error_description**
-     - 
-     - Descrizione più dettagliata dell’errore, finalizzata ad aiutare lo sviluppatore per eventuale debugging. Questo messaggio non è destinato ad essere visualizzato all’utente (a tal fine si faccia riferimento alle `Linee Guida UX SPID`_).
+     - Descrizione più dettagliata dell'errore, finalizzata ad aiutare lo sviluppatore per eventuale debugging. Questo messaggio non è destinato ad essere visualizzato all'utente (a tal fine si faccia riferimento alle `Linee Guida UX SPID`_).
      - 
 
 
@@ -171,13 +133,11 @@ Di seguito i codici di errore:
      - **invalid_client**
    * - La richiesta non è valida a causa della mancanza o della non correttezza di uno o più parametri
      - **invalid_request**
-   * - L’OP ha riscontrato un problema interno.
+   * - L'OP ha riscontrato un problema interno.
      - **server_error**
-   * - L’OP ha riscontrato un problema interno temporaneo.
+   * - L'OP ha riscontrato un problema interno temporaneo.
      - **temporarily_unavailable**
 
-Eventuali ulteriori codici di errore possono essere definiti dall’Agenzia per l’Italia Digitale con
-proprio atto. 
 
 .. seealso:: 
 
