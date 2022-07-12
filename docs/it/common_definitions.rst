@@ -13,10 +13,10 @@
 .. |uncheck-icon| image:: ../../images/Eo_circle_red_letter-x.svg
    :width: 25
 
-.. |spid-icon| image:: ../../images/spid2.svg
+.. |spid-icon| image:: ../../images/spid3.svg
    :width: 45
 
-.. |cieid-icon| image:: ../../images/cieid2.svg
+.. |cieid-icon| image:: ../../images/cieid3.svg
    :width: 45
 
 .. |warning-message| replace:: Tutti gli esempi contenuti in questa documentazione sono da intendersi come non normativi
