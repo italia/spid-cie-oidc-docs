@@ -33,7 +33,7 @@ OpenID Connect Relying Party Metadata (RP)
      - Un URL HTTP che punta a un JWT firmato che ha come payload il JWK Set dell'entità (vedere esempio sotto).
        Il JWT è firmato con una chiave inclusa nel JWK che l'entità ha pubblicato nel suo Entity Statement autofirmato.
        Se un RP può usare **signed_jwks_uri**, NON DEVE usare **jwks** o **jwks_uri**. Un JWT firmato può
-       contenere i seguenti claim, escluse le chiavi definite in `:rfc:7519`:
+       contenere i seguenti claim, escluse le chiavi definite in :rfc:`7519`:
 
        **keys**: Lista dei JWK. OBBLIGATORIO.
 
@@ -99,10 +99,10 @@ Vedere `OIDC-FED#RP_metadata`_
 
 .. _example_of_signed_jwks:
 
-Esempio non normativo di JWKS firmato
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Esempio non normativo di JWKS
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Il seguente è un esempio non normativo di JWKS firmato, prima della serializzazione e della firma.
+Il seguente è un esempio non normativo di JWKS.
 
 .. code-block::
 

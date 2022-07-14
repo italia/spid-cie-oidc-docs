@@ -3,7 +3,7 @@
 UserInfo Endpoint (attributi)
 -----------------------------
 
-Lo UserInfo Endpoint è una risorsa protetta OAuth 2.0 che restituisce attributi dell'utente autenticato. Per ottenere gli attributi richiesti, il Relying Party inoltra una richiesta allo UserInfo endpoint utilizzando l'Access token.
+Lo UserInfo Endpoint è una risorsa protetta OAuth 2.0 che restituisce attributi dell'utente autenticato. Per ottenere gli attributi richiesti, il Relying Party inoltra una richiesta allo UserInfo Endpoint utilizzando l'Access token.
 
 Lo UserInfo Endpoint DEVE supportare l'uso del solo metodo HTTP GET :rfc:`2616`, DEVE accettare il token di accesso, inviato all'interno del campo Authorization dell'Header, come token bearer OAuth 2.0 :rfc:`6750`.
 
@@ -26,7 +26,7 @@ Response
 
 La response dello UserInfo Endpoint DEVE specificare nel "Content-Type" il valore "application/jwt".
 
-Il contenuto del corpo della Response DEVE essere un JWT firmato e cifrato. <https://openid.net/specs/openid-connect-core-1_0.html#UserInfoResponse>`_
+Il contenuto del corpo della Response DEVE essere un `JWT firmato e cifrato. <https://openid.net/specs/openid-connect-core-1_0.html#UserInfoResponse>`_
 
 Lo UserInfo Endpoint restituisce i claim autorizzati nella Authentication Request.
 

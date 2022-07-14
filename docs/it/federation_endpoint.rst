@@ -24,8 +24,6 @@ Le entità di tipo **TA** o **SA** DEVONO offrire i seguenti endpoint, in aggiun
 .. warning::
   Rispetto a quanto definito in OIDC-FED, all'**entity listing endpoint** si aggiunge il parametro opzionale **entity_type** come filtro sul tipo di entità dei discendenti.
 
-
-
 .. _generic_error_response:
 
 Risposta generica di errore

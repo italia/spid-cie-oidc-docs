@@ -75,7 +75,7 @@ L'oggetto request DEVE essere un token JWT firmato.
      - URI che identifica univocamente il RP.
      - |spid-icon| |cieid-icon|
    * - **code_challenge**
-     - Un challenge per PKCE da riportare anche nella successiva richiesta al Token endpoint. Vedi paragrafo :ref:`Generazione del code_challenge per PKCE<PKCE_code_challenge_generation>`
+     - Un challenge per PKCE da riportare anche nella successiva richiesta al Token Endpoint. Vedi paragrafo :ref:`Generazione del code_challenge per PKCE<PKCE_code_challenge_generation>`
      - |spid-icon| |cieid-icon|
    * - **code_challenge_method**
      - Metodo di costruzione del challenge PKCE. È obbligatorio specificare il valore **S256**
@@ -128,7 +128,7 @@ L'oggetto request DEVE essere un token JWT firmato.
      - Stringa di almeno 32 caratteri alfanumerici. Valore univoco utilizzato per mantenere lo stato tra la request e il Callback (vedere :ref:`Flusso di autenticazione<flusso_autenticazione>` passo n.3). Questo valore verrà restituito al client nella risposta al termine dell'autenticazione. Il valore deve essere significativo esclusivamente per il RP e non deve essere intellegibile ad altri.
      - |spid-icon| |cieid-icon|
    * - **ui_locales**
-     - Lista di codici RFC5646 separati da spazi. Lingue preferibili per visualizzare le pagine dell'OP. L'OP può ignorare questo parametro se non dispone di nessuna delle lingue indicate.
+     - Lista di codici :rfc:`5646` separati da spazi. Lingue preferibili per visualizzare le pagine dell'OP. L'OP può ignorare questo parametro se non dispone di nessuna delle lingue indicate.
      - |spid-icon| |cieid-icon|	
    * - **exp**
      - UNIX Timestamp con l'istante di scadenza del JWT, codificato come NumericDate come indicato in :rfc:`7519`
