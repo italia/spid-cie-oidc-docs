@@ -101,12 +101,6 @@ Il Metadata dell'OP da **"openid_provider"** DEVE contenere almeno i seguenti pa
   * - **id_token_signing_alg_values_supported**
     - Vedi `OpenID.Discovery#OP_Metadata`_. L'OP DEVE supportare RS256 e PUÒ supportare anche altri algoritmi definiti in :rfc:`7518#section-3.1`
     - |spid-icon| |cieid-icon|
-  * - **id_token_encryption_alg_values_supported**
-    - Vedi `OpenID.Discovery#OP_Metadata`_. Per la definizione degli algoritmi di cifratura (*alg*) vedi :rfc:`7518#section-4.1`
-    - |spid-icon| |cieid-icon|
-  * - **id_token_encryption_enc_values_supported**
-    - Vedi `OpenID.Discovery#OP_Metadata`_. Per la definizione degli algoritmi di cifratura (*enc*) vedi :rfc:`7518#section-5.1`
-    - |spid-icon| |cieid-icon|
   * - **userinfo_signing_alg_values_supported**
     - Vedi `OpenID.Discovery#OP_Metadata`_. L'OP DEVE supportare RS256 e PUÒ supportare anche altri algoritmi definiti in :rfc:`7518#section-3.1`.
     - |spid-icon| |cieid-icon|
@@ -144,7 +138,7 @@ Il Metadata dell'OP da **"openid_provider"** DEVE contenere almeno i seguenti pa
     - Vedi :rfc:`9207#section-3`. Deve valere *true*.
     - |cieid-icon|
   * - **jwks**
-    - Vedi `OIDC-FED#Section.4.2`_.
+    - Vedi `OIDC-FED#Section.4.2`_ e `JWK`_.
     - |spid-icon| |cieid-icon|
   * - **client_registration_types_supported**
     - Vedi `OIDC-FED#Section.4.2`_. Il valore supportato è **automatic**. 
