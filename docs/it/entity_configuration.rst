@@ -109,3 +109,4 @@ Gli EC di un TA, in aggiunta ai claim comuni a tutti i partecipanti, contengono 
 .. seealso:: 
 
    - :ref:`Esempio non normativo <Esempio_EN1.4>`
+   
