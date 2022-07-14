@@ -4,21 +4,21 @@
 .. _Trust_Mark:
 
 Trust Mark
-----------
+==========
 
 I **Trust Mark (TM)**, letteralmente tradotti come *Marchi di Fiducia*, sono JWT firmati :rfc:`7515` e rappresentano la dichiarazione di conformità a un insieme ben definito di requisiti di fiducia e/o di interoperabilità o un accordo tra le parti coinvolte all'interno della Federazione. 
 
 Lo scopo principale dei TM è quello di esporre alcune informazioni non richieste dal protocollo OpenID Connect Core ma che risultano utili in contesto Federativo.
 
-Esempi tipici includono il codice di identificazione nazionale o internazionale dell'entità (Codice Fiscale, IPA Code, Partita IVA, VAT Number), i contatti istituzionali e altro, come definito in `OIDC-FED`_. Ulteriori dati possono essere aggiunti dall'emettitore, se resi comprensibili all'interno della Federazione.
+Esempi tipici includono il codice di identificazione nazionale o internazionale dell'entità (Codice Fiscale, IPA Code, Partita IVA, VAT Number), i contatti istituzionali e altro, come definito in `OIDC-FED`_. Ulteriori dati possono essere aggiunti dal soggetto che li emette, se resi comprensibili all'interno della Federazione.
 
 I TM sono emessi e firmati, durante il processo di registrazione di una nuova entità di tipo Foglia (Onboarding), dal (TA) o suoi Intermediari (SA) o da Gestori Qualificati di Attributi (AA), se definiti all'interno dell'attributo **trust_mark_issuers**, pubblicato all'interno dell'Entity Configuration del TA. 
 
-Ogni entità partecipante DEVE esporre nella propria configurazione (EC) i TM rilasciati dalle autorità emettitori. 
+Ogni entità partecipante DEVE esporre nella propria configurazione (EC) i TM rilasciati dalle autorità che li emettono. 
 
 Nello scenario CIE / SPID, un TM viene firmato dal TA **MinInterno** / **Agid** o loro Intermediari (SA) o Gestori Qualificati di Attributi (AA). 
 
-Il TA definisce i soggetti abilitati all'emissione dei TM riconoscibili all'interno della Federazione, mediante il claim **trust_marks_issuers**, presente all'interno del proprio Entity Configuration. Il valore dell'attributo **trust_marks_issuers** è composto da un oggetto JSON avente come chiavi gli id dei TM e come valori la lista degli emettitori abilitati.
+Il TA definisce i soggetti abilitati all'emissione dei TM riconoscibili all'interno della Federazione, mediante il claim **trust_marks_issuers**, presente all'interno del proprio Entity Configuration. Il valore dell'attributo **trust_marks_issuers** è composto da un oggetto JSON avente come chiavi gli identificativi dei TM e come valori la lista degli identificativi (URL) delle entità abilitate ad emetterli.
 
 Di seguito un esempio non normativo dell'oggetto **trust_marks_issuers** all'interno della Entity Configuration del TA.
 
@@ -39,15 +39,15 @@ Di seguito un esempio non normativo dell'oggetto **trust_marks_issuers** all'int
 
 
 Validazione dei Trust Mark
-++++++++++++++++++++++++++
+--------------------------
 
 Esistono due modi per validare un Trust Mark:
 
  1. Validazione **statica**. Il Trust Mark viene validato mediante la chiave pubblica dell'autorità che lo ha emesso (attributo **iss**), sulla base della corrispondenza dell'attributo **sub** con il medesimo attributo della Entity Configuration in cui è contenuto e sulla base del valore di scadenza (attributo **exp**).
 
- 2. Validazione **dinamica**. I partecipanti della Federazione possono interrogare l'endpoint :ref:`trust mark status<Trust_mark_status_endpoint>` erogato dal suo emettitore (attributo iss) per la verifica in tempo reale dei TM da lui emessi. 
+ 2. Validazione **dinamica**. I partecipanti della Federazione possono interrogare l'endpoint :ref:`trust mark status<trust_mark_status>` erogato dal suo emettitore (attributo iss) per la verifica in tempo reale dei TM da lui emessi. 
 
-Tutti gli emettitori di Trust Mark DEVONO esporre un endpoint di Trust Mark status per consentire la validazione **dinamica**.
+Tutte le entità che rilasciano Trust Mark DEVONO esporre un endpoint di Trust Mark status per consentire la validazione **dinamica**.
 
 .. seealso:: 
 
@@ -55,13 +55,17 @@ Tutti gli emettitori di Trust Mark DEVONO esporre un endpoint di Trust Mark stat
 
 
 Revoca dei Trust Mark
-+++++++++++++++++++++
+---------------------
 
-Un Trust Mark può essere revocato in qualsiasi momento. In caso di esclusione di un Soggetto Aggregato da parte della Autorità di Federazione, questa comunica al Soggetto Aggregatore l'esclusione dell'Aggregato. Di conseguenza il SA revoca il TM per il suo discendente.
+Un Trust Mark può essere revocato in qualsiasi momento solo ed esclusivamente dal soggetto che lo ha emesso. Ad esempio, in caso di esclusione di un Soggetto Aggregato da parte della Autorità di Federazione, questa comunica al Soggetto Aggregatore l'esclusione dell'Aggregato. Di conseguenza il SA DEVE revocare il TM per il suo discendente. 
 
+.. note::
+  Nel caso di revoca di un TM, la validazione **dinamica** darà esito negativo, mentre la validazione **statica** continuerà a dare esito positivo, a meno di rotazioni delle chiavi crittografiche di firma del soggetto che ha rilasciato il TM. 
+
+.. _ComposizioneTM:
 
 Composizione dei Trust Mark 
-+++++++++++++++++++++++++++
+---------------------------
 
 Gli attributi definiti all'interno dei TM aderiscono a quanto definito all'interno dello standard OIDC Federation 1.0 (`OIDC-FED`_). Segue la lista.
 
@@ -81,7 +85,7 @@ Gli attributi definiti all'interno dei TM aderiscono a quanto definito all'inter
     * - **id**
       - String. Identificativo univoco del Trust Mark. È un URL con la seguente struttura: |br|
         **<TA domain>/<entity_type>/<trustmark_profile>/** |br|
-        es. non normativo: ``https://registry.servizicie.interno.gov.it/openid_relying_party/public/``
+        es. non normativo: ``https://registry.interno.gov.it/openid_relying_party/public/``
       - |spid-icon| |cieid-icon|
     * - **iat**
       - UNIX Timestamp con l'istante di geerazione del JWT, codificato come NumericDate come indicato in :rfc:`7519`
@@ -109,19 +113,13 @@ Gli attributi definiti all'interno dei TM aderiscono a quanto definito all'inter
       - String. Il nome completo dell'entità che fornisce i servizi
       - |spid-icon| |cieid-icon|
 
+.. warning::
+  Nel caso di CIEid, le organizzazioni pubbliche che oltre al **codice IPA** dispongono anche di un **codice univoco AOO** DEVONO riportare quest'ultimo all'interno del parametro **id_code** secondo il seguente formato *"<IPA_code>-<AOO_code>"*.  Inoltre, il valore contenuto nel parametro **exp** NON DEVE essere superiore alla durata delle specifiche convenzioni/accordi stipulati in fase di onboarding tra il MinInterno e le organizzazioni che ricevono il TM.  
 
 .. seealso::
 
  * `OIDC-FED#Section.5.3.1`_
 
-
-
-.. _Trust_mark_status_endpoint:
-
-Trust Mark Status Endpoint
-^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-L'assegnazione di un Trust Mark ad un soggetto viene effettuato presso questo endpoint secondo le modalità definite all'interno di `OIDC-FED#Section.7.4`_.
 
 
 .. toctree:: 

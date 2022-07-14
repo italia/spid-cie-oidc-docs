@@ -1,22 +1,10 @@
 .. include:: ./common_definitions.rst
 
 
-Trust Mark per CIE
-++++++++++++++++++
+Profili dei Trust Mark riconusciuti da CIEid
+--------------------------------------------
 
-TBD esempi non normativi
-
-
-Profili dei Trust Mark
-^^^^^^^^^^^^^^^^^^^^^^
-
-Si possono definire svariati profili in accordo agli specifici bisogni delle FA e della TA. Nella CIE FED, durante la fase
-di Onboarding, DEVONO essere emessi almeno i seguenti *trustmark_profile*:
-
- - **public**: l'entità nel claim *sub* appartiene alla pubblica amministrazione italiana.
- - **private**: l'entità nel claim *sub* appartiene al settore privato.
-
-La tabella seguente riassume tutti i profili disponibili supportati per tutte le entità coinvolte nella CIE FED
+La tabella seguente riassume tutti i profili disponibili per tutte le entità coinvolte e supportate dalla Federazione CIEid.
 
 
 .. list-table::
@@ -28,29 +16,65 @@ La tabella seguente riassume tutti i profili disponibili supportati per tutte le
       - **Tipi di entità sub**
     * - **public**
       - l'entità nel claim *sub* appartiene alla pubblica amministrazione italiana
-      - Tutte
+      - RP, OP
     * - **private**
       - l'entità nel claim *sub* appartiene al settore privato.
-      - Tutte
-    * - **aggregator**
-      - l'entità nel claim *sub* è un soggetto aggregatore
+      - RP
+    * - **intermediary**
+      - l'entità nel claim *sub* è un Soggetto Aggregatore
       - SA
+    * - **attribute-authority**
+      - l'entità nel claim *sub* è una Attribute Authority
+      - AA
+    * - **sgd**
+      - l'entità nel claim *sub* è un RP o un SA che ha aderito alla AA Sistema di Gestione Deleghe
+      - RP
 
+Profili **public** e **private**
+++++++++++++++++++++++++++++++++
 
+Si applicano i claim presenti nella tabella riportata nella Sezione :ref:`Composizione dei Trust Mark <ComposizioneTM>`
 
+Profilo **intermediary**
+++++++++++++++++++++++++
+
+In aggiunta ai claim dei profili **public** e **private**, il profilo **intermediary** aggiunge il seguente claim:
+
+.. list-table::
+    :widths: 20 60
+    :header-rows: 1
+
+    * - **Claim**
+      - **Descrizione**
+    * - **sa_type**
+      - DEVE essere valorizzata con **"full"** o **"light"** a seconda della modalità con cui operano rispetto ai Soggetti Aggregati
+
+.. seealso::
+
+    Si veda Sezione :ref:`Soggetti aggregatori nel contesto Federativo <Soggetti_aggregatori>`
+
+Profilo **attribute-authority**
++++++++++++++++++++++++++++++++
+
+Per i dettagli tecnici e gli esempi non normativo si veda [INSERIRE LINK ALLA DOCUMENTAZIONE]
+
+Profilo **sgd**
++++++++++++++++
+
+Per i dettagli tecnici e gli esempi non normativo si veda [INSERIRE LINK ALLA DOCUMENTAZIONE]
 
 Esempi di Trust Mark CIE
-^^^^^^^^^^^^^^^^^^^^^^^^
+++++++++++++++++++++++++
 
-Il seguente è un esempio non normativo di un Trust Mark emesso da *MinInterno* per un'entità privata intermediaria.
+Il seguente è un esempio non normativo di un Trust Mark emesso da *MinInterno* per SA di tipo **full** afferente all pubblica amministrazione.
 
 .. code-block::
 
  {
      "trust_marks":[
          {
-             "id":"https://registry.servizicie.interno.gov.it/federation_entity/private/",
-             "iss":"https://registry.servizicie.interno.gov.it",
+             "id":"https://registry.interno.gov.it/federation_entity/intermediary/",
+             "iss":"https://registry.interno.gov.it",
              "trust_mark":"$JWT"
          }
      ]
@@ -62,28 +86,29 @@ Dove il payload JWT è il seguente:
 .. code-block::
 
  {
-     "id":"https://registry.servizicie.interno.gov.it/federation_entity/private/",
-     "iss":"https://registry.servizicie.interno.gov.it",
-     "sub":"https://intermediate.example.it",
+     "id":"https://registry.interno.gov.it/federation_entity/intermediary/",
+     "iss":"https://registry.interno.gov.it/",
+     "sub":"https://sa.esempio.it/",
      "iat":1579621160,
-     "organization_type":"private",
-     "id_code":"12345678900",
+     "organization_type":"public",
+     "id_code":"123456",
      "email":"email_or_pec@intermediate.it",
-     "organization_name#it":"Full name of the SA",
-     "ref":"https://reference_to_some_documentation.it/"
+     "organization_name#it":"Denominazione del SA",
+     "sa_type":"full",
+     "ref":"https://documentazione_di_riferimento.it/"
  }
 
 
 
-Il seguente è un esempio non normativo di un TM emesso da un'entità Intermediaria verso un'entità Foglia RP.
+Il seguente è un esempio non normativo di un TM emesso da un SA a un'entità Foglia RP afferente alla Pubblica Amministrazione.
 
 .. code-block::
 
  {
      "trust_marks":[
          {
-             "id":"https://registry.servizicie.interno.gov.it/openid_relying_party/public/",
-             "iss":"https://intermediary.example.it",
+             "id":"https://registry.interno.gov.it/openid_relying_party/public/",
+             "iss":"https://sa.esempio.it",
              "trust_mark":"$JWT"
          }
      ]
@@ -95,55 +120,13 @@ Dove il payload $JWT potrebbe essere come nel seguente esempio non normativo:
 .. code-block::
 
  {
-     "id":"https://registry.servizicie.interno.gov.it/openid_relying_party/public/",
-     "iss":"https://intermediary.example.it",
-     "sub":"https://rp.example.it",
+     "id":"https://registry.interno.gov.it/openid_relying_party/public/",
+     "iss":"https://sa.esempio.it/",
+     "sub":"https://rp.esempio.it/",
      "iat":1579621160,
      "organization_type":"public",
      "id_code":"123456",
      "email":"email_or_pec@rp.it",
-     "organization_name#it":"Full name of the RP",
-     "ref":"https://reference_to_some_documentation.it/"
+     "organization_name#it":"Denominazione del RP",
+     "ref":"https://documentazione_di_riferimento.it/"
  }
-
-
-
-
-Un esempio non normativo è dato qui sotto:
-
-.. code-block::
-
- {
-     "trust_marks":[
-         {
-             "id":"https://registry.spid.gov.it/oauth_resource/aa/",
-             "iss":"https://registry.spid.gov.it",
-             "trust_mark":"$JWT"
-         }
-     ]
- } 
-
-Dove il payload di JWT è:
-
-.. code-block::
-
- {
-     "id":"https://registry.spid.gov.it/oauth_resource/aa/",
-     "iss":"https://registry.spid.gov.it",
-     "sub":"https://aa.example.it",
-     "iat":1579621160,
-     "organization_type":"public",
-     "id_code":"123456",
-     "email":"email_or_pec@aa.it",
-     "organization_name#it":"Full name of the AA",
-     "policy_uri#it":"url to AA privacy policy",
-     "tos_uri#it":"url to AA info policy",
-     "service_documentation":"url to AA OAS3 document",
-     "attributos":{
-         "https://attributes.eid.gov.it/fiscalNumber":{
-             "essential":true
-         }
-     },
-     "ref":"https://reference_to_some_documentation.it/"
- }
-
