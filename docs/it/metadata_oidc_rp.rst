@@ -99,10 +99,10 @@ Vedere `OIDC-FED#RP_metadata`_
 
 .. _example_of_signed_jwks:
 
-Esempio non normativo di JWKS firmato
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Esempio non normativo di JWKS
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Il seguente è un esempio non normativo di JWKS firmato, prima della serializzazione e della firma.
+Il seguente è un esempio non normativo di JWKS.
 
 .. code-block::
 
