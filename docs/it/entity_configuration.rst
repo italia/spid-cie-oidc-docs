@@ -16,12 +16,6 @@ Firma della Entity Configuration
 La firma dei JWT :rfc:`7515` avviene mediante l'algoritmo RSA SHA-256 (RS256). Tutti i partecipanti della Federazione DEVONO supportare questo algoritmo di firma. Tutte le operazioni di verifica della firma relative agli ES, EC e TM sono eseguite con le chiavi pubbliche di Federazione (distinguiamo le chiavi di Federazione da quelle di OIDC Core. Questi ultimi risiedono nei Metadata OIDC. Un ES o EC contiene sia le chiavi pubbliche di Federazione che i Metadata OIDC).
 
 
-Metadata di Federazione
-+++++++++++++++++++++++
-
-OIDC Federation definisce i Metadata di Federazione contenenti le informazioni di seguito indicate 
-e i Metadata OIDC per ogni tipo di entità.
-
 
 Entity Configuration - claim comuni
 +++++++++++++++++++++++++++++++++++
@@ -106,8 +100,13 @@ Gli EC di un TA, in aggiunta ai claim comuni a tutti i partecipanti, contengono 
      - **Descrizione**
      - **Supportato da**
    * - **constraints**
-     - JSON Object che descrive un insieme di vincoli della Trust Chain e che DEVE contenere l'attributo **max_path_length**. Rappresenta il numero massimo di SA tra una Foglia e il TA.
+     - JSON Object che descrive un insieme di vincoli della Trust Chain e che DEVE contenere l'attributo **max_path_length**. Rappresenta il numero massimo di SA tra una Foglia e il TA. 
      - |spid-icon| |cieid-icon|
    * - **trust_marks_issuers**
      - JSON Array che indica quali autorità sono considerate attendibili nella Federazione per l'emissione di specifici TM, questi assegnati mediante il proprio identificativo univoco.
      - |spid-icon| |cieid-icon|
+
+.. seealso:: 
+
+   - :ref:`Esempio non normativo <Esempio_EN1.4>`
+   
