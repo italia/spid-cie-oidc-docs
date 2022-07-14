@@ -1,32 +1,48 @@
 .. include:: ./common_definitions.rst
 
-Le Federazioni eID Italiane
+The Italian eID Federations
 ---------------------------
 
-Una Federazione delle Identità Digitali è una infrastruttura all'interno della quale tante organizzazioni, afferenti a domini differenti, aderiscono ad un medesimo quadro regolatorio per costruire un meccanismo di fiducia sia amministrativo, mediante la stipula di convenzioni e accreditamento presso una o più autorità super partes, che tecnologico, mediante l'adozione di standard di interoperabilità sicuri che consentono l'interscambio dei dati.
+A Digital Identity Federation is an infrastructure inside which many organizations, with different domains,
+participate in the same regulatory framework for building a mechanism of trust, both administrative, by 
+stipulating conventions and getting accreditation by one or more impartial authorities, and technological, by 
+adopting standards of interoperability that allow safe data interchange.
 
-Questa configurazione stabilisce i livelli di garanzia e di sicurezza adeguati affinchè un individuo possa autenticarsi presso un servizio web (Service Provider) mediante la propria identità digitale, rilasciata da un altro servizio web (Identity Provider).
+This configuration establishes what levels of guarantee and security are appropriate for an individual, in order to authenticate on a web service (Service Provider) using their own digital identity, released 
+by another web service (Identity Provider).
 
-I partecipanti (RP o OP), che si riconoscono all'interno della medesima Federazione, ottengono i Metadata gli uni degli altri. I Metadata contengono le chiavi pubbliche per le operazioni di firma digitale e criptazione e le definizioni necessarie all'interscambio delle informazioni.
+The participants (RP or OP) who are recognized inside the same Federation, obtain Metadata from each
+other. The Metadata contain the public keys for the operations of digital signature and encryption, 
+and the information needed for the data interchange.
 
-I Metadata sono certificati da un parte fidata che all'interno della Federazione SPID è AgID, mentre all'interno della Federazione CIE è il Ministero dell'Interno. Questi corrispondono alla Autorità di Federazione.
+The Metadata are certified by a trusted party who is AgID in the SPID Federation and the Ministry of Interior in the CIE Federation. They both correspond to the Federation Authorities.
 
-SPID e CIE id implementano OpenID Connect Federation 1.0 e ne estendono alcune funzionalità, realizzano una implementazione concreta e producono le buone pratiche per la sua adozione. Per approfondimenti allo standard si rimanda alle specifiche ufficiali `OIDC-FED`_ e alla sezione :ref:`Differenze con OIDC Federation 1.0<differenze_con_oidc_federation>`. 
+Both SPID and CIE id implement OpenID Connect Federation 1.0 and extend some functionalities, achieving
+a solid implementation and producing the good practices for its adoption. For more details about the 
+standard please refer to the official specifications `OIDC-FED`_ and the section :ref:`Differences with OIDC Federation 1.0<differenze_con_oidc_federation>`. 
 
 
-Perché OIDC Federation
-++++++++++++++++++++++
+Why OIDC Federation
++++++++++++++++++++
 
-La Federazione OIDC è un modello gerarchico:
+The OIDC Federation is a hierarchical model:
 
- - **Dinamico**. La fiducia può essere stabilita dinamicamente durante la prima richiesta di autenticazione. 
-   Le Autorità della Federazione espongono un endpoint che fornisce "dichiarazioni" firmate riguardanti le entità discendenti. Queste contengono le chiavi pubbliche dei discendenti e la politica dei Metadata. Le Autorità della Federazione possono disabilitare un'entità nella Federazione in qualsiasi momento, semplicemente smettendo di emettere le dichiarazioni inerenti a questa.
- - **Distribuito**. La fiducia viene distribuita fra molte parti. È il verificatore che decide quale percorso prendere per risolvere la fiducia (molte parti e due Autorità di Federazione).
- - **Scalabile**. Riduce significativamente i costi di onboarding, in accordo al principio di delega, con l'istituzione di entità intermediarie (SA).
- - **Trasparente**. Qualsiasi entità coinvolta nella Federazione può in ciascun momento costruire la fiducia autonomamente e in modo sicuro. Inoltre, la composizione della Federazione, in tutte le sue parti, diventa navigabile mediante la sua API, in tempo reale.
+ - **Dynamic**. The trust may be dynamically established during the first authentication request.
+   The Federation Authorities expose an endpoint that supplies signed statements about the subordinate
+   entities. These statements contain the public keys of the subordinat entities and the Metadata policy.
+   The Federation Authorities can disable an entity in the Federation at every moment, simply by 
+   stopping supplying statements about it.
+ - **Distributed**. The trust is distributed among several parties. It is up to the verifier to decide
+   what path to take for solving the trust (many parties and two Federation Authorities).
+ - **Scalable**. It reduces significantly the onboarding costs, according to the delegation principle, with
+   the institution of Intermediate Entities (SA).
+ - **Transparent**. Any entity involved in the Federation can always build the trust independently and
+   securely. Furthermore, the Federation composition, in all its parts, becomes navigable in real time 
+   through its API.
 
 .. image:: ../../images/spid_cie_oidc_federation_model.svg
     :width: 100%
 
-*Schema ad albero che rappresenta la struttura della Federazione SPID OIDC. Alla Base le Autorità di Federazione SPID e CIE id e, salendo, gli OP che non hanno Intermediari, gli RP e gli Intermediari che a loro volta Aggregano altri RP.*
+*Tree scheme representing the structure of the SPID and CIE id Federations. At the base there are the Federation Authorities of SPID and CIE id and, going up, the OPs that have no Intermediaries, the RPs and the 
+Intermediaries that, in turn, aggregate othe RPs.*
 
