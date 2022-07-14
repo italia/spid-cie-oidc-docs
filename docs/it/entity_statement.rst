@@ -6,13 +6,15 @@
 Entity Statement
 ----------------
 
-Il componente basilare per costruire una Catena di Fiducia (Trust Chain) è l'**Entity Statement (ES)**, un JWT firmato che contiene le chiavi di firma delle entità e ulteriori dati usati per controllare il processo di risoluzione della Trust Chain. **EC** e **ES** sono entrambi statement che riguardano un'entità, ma, mentre un **EC** è un oggetto *self-signed* esposto dall'entità stessa al proprio endpoint di *.well-known/openid-federation*, un **ES** è firmato dall'entità diretta superiore che lo pubblica al proprio :ref:`Fetch Endpoint<fetching_entity_statements>`. Inoltre, a differenza dell'**EC**, tramite l'**ES** l'entità superiore può definire e imporre le policy sui metadata dei soggetti discendenti.
+Il componente basilare per costruire una Catena di Fiducia (Trust Chain) è l'**Entity Statement (ES)**, un JWT firmato che contiene le chiavi di firma delle entità discendenti e ulteriori dati usati per controllare il processo di risoluzione della Trust Chain. 
+
+Una entità pubblica un **ES** relativo ad un suo discendente presso il proprio :ref:`Fetch Endpoint<fetching_entity_statements>`. L'entità superiore PUÒ definire le policy sui metadata dei soggetti discendenti e pubblicare i TM da lei emessa per questi.
+
 
 Firma di Entity Statement
 +++++++++++++++++++++++++
 
-Si applicano le medesime considerazioni fatte per gli **EC** e riportate nella sezione :ref:`Firma della Entity Configuration<firma_EC>`
-
+Si applicano le medesime considerazioni fatte per gli **EC** e riportate nella sezione :ref:`Firma della Entity Configuration<firma_EC>`.
 
 
 Entity Statement
