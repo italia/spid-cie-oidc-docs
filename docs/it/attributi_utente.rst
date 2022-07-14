@@ -16,6 +16,7 @@ Tabella attributi identificativi
      - **Info anagrafica**
      - **Claim**
      - **Formato**
+     - **Supportato da**
    * - Codice identificativo 
      - anagrafica
      - ``https://attributes.eid.gov.it/spid_code``
@@ -39,6 +40,7 @@ Tabella attributi identificativi
 
          "https://attributes.eid.gov.it/spid_cod":"ABCD123456789A"
 
+     - |spid-icon|
    * - Nome
      - anagrafica
      - given_name
@@ -51,6 +53,7 @@ Tabella attributi identificativi
       
          "given_name":"Giovanni Mario"
 
+     - |spid-icon| |cieid-icon|
    * - Cognome
      - anagrafica
      - family_name
@@ -63,6 +66,7 @@ Tabella attributi identificativi
        
          "Family_name":"Bianchi Verdi"
 
+     - |spid-icon| |cieid-icon|
    * - Luogo di nascita |br|
        Provincia di nascita
      - anagrafica
@@ -83,6 +87,7 @@ Tabella attributi identificativi
             "locality":"F205"
         }
 
+     - |spid-icon| |cieid-icon|
    * - Data di nascita
      - anagrafica
      - birthdate
@@ -96,6 +101,7 @@ Tabella attributi identificativi
 
          "birthdate":"2002-09-24"
 
+     - |spid-icon| |cieid-icon|
    * - Sesso
      - anagrafica
      - gender
@@ -108,6 +114,7 @@ Tabella attributi identificativi
 
          "gender":"F"
 
+     - |spid-icon| |cieid-icon|
    * - Ragione o denominazione sociale
      - anagrafica
      - ``https://attributes.eid.gov.it/company_name``
@@ -118,6 +125,7 @@ Tabella attributi identificativi
 
          "company_name":"Agenzia per l'Italia Digitale"
 
+     - |spid-icon|
    * - Sede legale
      - extra anagrafica
      - ``https://attributes.eid.gov.it/registered_office``
@@ -141,6 +149,7 @@ Tabella attributi identificativi
              "formatted":"via Listz 21 00144 Roma"
          }
 
+     - |spid-icon|
    * - Codice fiscale della persona fisica
      - anagrafica
      - ``https://attributes.eid.gov.it/fiscal_number``
@@ -154,6 +163,7 @@ Tabella attributi identificativi
 
           "https://attributes.eid.gov.it/fiscal_number": “TINIT-ABCXYZ00W00Z000Z"
 
+     - |spid-icon| |cieid-icon|
    * - Codice fiscale Persona Giuridica
      - anagrafica
      - ``https://attributes.eid.gov.it/``
@@ -166,9 +176,10 @@ Tabella attributi identificativi
 
           "https://attributes.eid.gov.it/company_fiscalNumber":"TINIT-ABCXYZ00W00Z000Z"
 
+     - |spid-icon|
    * - Partita IVA
      - anagrafica
-     - ``https://attributes.eid.gov.it/ivacode``
+     - ``https://attributes.eid.gov.it/vat_number``
      - String. Per il formato si faccia riferimento alla codifica dell'attributo Partita IVA per i certificati,
        proposta nell'ambito del Draft ETSI EN 319 412-1, che nel caso specifico prevede la seguente composizione:
 
@@ -180,6 +191,7 @@ Tabella attributi identificativi
 
           "https://attributes.eid.gov.it/vat_number": "VATIT-12345678901"
 
+     - |spid-icon|
    * - Documento d'identità
      - extra anagrafica
      - document_details
@@ -229,24 +241,28 @@ Tabella attributi identificativi
             "date_of_expiry":"2013-01-31"
         }
 
+     - |spid-icon| |cieid-icon|
    * - Numero di telefono mobile
      - extra anagrafica
      - phone_number
      - String. Stringa numerica senza spazi intermedi |br|
        Esempio: |br|
        ``"phone_number": "VATIT-12345678901"``
+     - |spid-icon| |cieid-icon|
    * - Indirizzo di posta elettronica
      - extra anagrafica
      - email
      - String. Formato standard indirizzo di posta elettronica |br|
        Esempio: |br|
        ``"email": "name@domain.it"``
+     - |spid-icon| |cieid-icon|
    * - Domicilio digitale
      - extra anagrafica
      - ``https://attributes.eid.gov.it/e_delivery_service``
      - Indirizzo casella PEC |br|
        Esempio: |br|
        ``"https://attributes.eid.gov.it/e_delivery_service":"nome@pecdomain.it"``
+     - |cieid-icon|
    * - Data di scadenza identità
      - extra anagrafica
      - ``https://attributes.eid.gov.it/eid_exp_date``
@@ -257,6 +273,7 @@ Tabella attributi identificativi
        DD indica il giorno in (due) cifre |br|
        Esempio: |br|
        ``"https://attributes.eid.gov.it/id_exp_date":"2002-09-24"``
+     - |spid-icon|
    * - Indirizzo domicilio fisico |br|
        CAP domicilio fisico |br|
        Comune domicilio fisico |br|
@@ -292,6 +309,8 @@ Tabella attributi identificativi
              "region":"RM",
              "country_code":"IT"
          }
+
+     - |spid-icon| |cieid-icon|
 
 
 Scope OIDC

@@ -40,5 +40,4 @@ Gli ES emessi dal TA o da un suo Intermediario per i propri diretti discendenti,
 .. seealso:: 
 
    - `OIDC-FED#Section_3.1`_
-   - :ref:`Esempio non normativo di Entity Statement<Esempio_EN2>`
-
+   - :ref:`Esempio non normativo di Entity Statement<Esempio_EN2.1>`

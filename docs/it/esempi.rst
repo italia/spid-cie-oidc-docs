@@ -414,6 +414,8 @@ EN 2. Entity Statement Request
  Host: registry.agid.gov.it
 
 
+.. _Esempio_EN2.1:
+
 
 EN 2.1 Entity Statement Response
 ++++++++++++++++++++++++++++++++
