@@ -1,5 +1,7 @@
 .. include:: ./common_definitions.rst
 
+.. _federation_endpoint:
+
 Endpoint di Federazione
 -----------------------
 

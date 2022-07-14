@@ -45,7 +45,7 @@ Esistono due modi per validare un Trust Mark:
 
  1. Validazione **statica**. Il Trust Mark viene validato mediante la chiave pubblica dell'autorità che lo ha emesso (attributo **iss**), sulla base della corrispondenza dell'attributo **sub** con il medesimo attributo della Entity Configuration in cui è contenuto e sulla base del valore di scadenza (attributo **exp**).
 
- 2. Validazione **dinamica**. I partecipanti della Federazione possono interrogare l'endpoint :ref:`trust mark status<trust_mark_status>` erogato dal suo emettitore (attributo iss) per la verifica in tempo reale dei TM da lui emessi. 
+ 2. Validazione **dinamica**. I partecipanti della Federazione possono interrogare l'endpoint :ref:`trust mark status<federation_endpoint>` erogato dal suo emettitore (attributo iss) per la verifica in tempo reale dei TM da lui emessi. 
 
 Tutte le entità che rilasciano Trust Mark DEVONO esporre un endpoint di Trust Mark status per consentire la validazione **dinamica**.
 
