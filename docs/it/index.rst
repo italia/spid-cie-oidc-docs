@@ -35,7 +35,10 @@ Indice dei contenuti
    entity_configuration.rst
    entity_statement.rst
    trust_marks.rst
+   trust_marks_cie.rst
+   soggetti_aggregatori.rst
    trust_negotiation.rst
+   federation_endpoint.rst
    metadata_oidc.rst
    flusso_autenticazione.rst
    authorization_endpoint.rst
@@ -44,7 +47,6 @@ Indice dei contenuti
    userinfo_endpoint.rst
    introspection_endpoint.rst
    revocation_endpoint.rst
-   federation_endpoint.rst
    differenze_oidc_fed.rst
    come_contribuire.rst
    diventa_fornitore.rst
