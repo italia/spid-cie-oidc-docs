@@ -5,7 +5,7 @@ Soggetti Aggregatori nel contesto Federativo
 
 Un SA può registrare RP preesistenti e già conformi allo standard OIDC-FED, afferenti a domini esterni al proprio oppure mascherare dietro di sé i propri discendenti. Nel primo caso il SA è di tipo *Trasparente* (**Aggregatore Light**) mentre nel secondo caso è di tipo *Proxy* (**Aggregatore Full**).
 
-I SA **Light** registrano RP preesistenti e conformi a OIDC-FED e pubblicano gli entity statement a questi riferiti.
+I SA **Light** registrano RP preesistenti e conformi a OIDC-FED e pubblicano gli ES a questi riferiti.
 
 I SA **Full** provvedono a costruire una interfaccia di autenticazione e federazione per conto dei propri aggregati, mediante risorse web solitamente esposte all’interno del proprio dominio. Questa tipologia di Aggregatore espone le seguenti risorse per ogni suo aggregato:
 
