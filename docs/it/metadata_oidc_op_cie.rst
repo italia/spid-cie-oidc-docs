@@ -20,8 +20,7 @@ Un sottoinsieme di essi è personalizzato ed è stato introdotto per lo scenario
      - **Supportato da**
    * - **email_verified**
      - Valore booleano che indica se l'indirizzo email  dell'utente è stato verificato. 
-       Quando vale *true*, significa che l'OP ha compiuto passi significativi per assicurarsi che l'utente
-       abbia già svolto la verifica, al momento in cui questo controllo è stato effettuato. 
+       Quando vale *true*, significa che l'OP ha compiuto passi significativi per assicurarsi che l'utente, al momento in cui questo controllo è stato effettuato, abbia già svolto la verifica.
        La misura in cui un indirizzo email è considerato verificato, dipende dal contesto e dalla struttura 
        della fiducia o dell'accordo contrattuale con il quale le parti operano.
      - |cieid-icon|
