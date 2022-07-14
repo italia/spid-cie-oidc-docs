@@ -32,7 +32,7 @@ Nella seguente tabella sono presenti alcuni esempi non normativi per evidenziare
     * - **authz endpoint**
       - \https://www.rp.it/authorization/
       - \https://www.rp.it/<id_code>/authorization/
-    * - **entity cogiguration**
+    * - **entity configuration**
       - \https://www.rp.it/.well-known/openid-federation
       - \https://www.rp.it/<id_code>/.well-known/openid-federation
 
