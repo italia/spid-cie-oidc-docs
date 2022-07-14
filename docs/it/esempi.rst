@@ -404,7 +404,7 @@ EN 1.4. Entity Configuration Response Trust Anchor
 
 .. _Esempio_EN2:
 
-EN 2. Entity Statement request
+EN 2. Entity Statement Request
 ++++++++++++++++++++++++++++++
 
 .. code-block:: 
