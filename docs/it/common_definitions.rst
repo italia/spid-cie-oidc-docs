@@ -32,7 +32,9 @@
 .. _OpenID Connect Core: https://openid.net/specs/openid-connect-core-1_0.html
 .. _OIDC-FED#Section_1.2: https://openid.net/specs/openid-connect-federation-1_0.html#rfc.section.1.2
 .. _OIDC-FED#Section_3.1: https://openid.net/specs/openid-connect-federation-1_0.html#rfc.section.3.1
+.. _OIDC-FED#Section.4.2: https://openid.net/specs/openid-connect-federation-1_0.html#rfc.section.4.2
 .. _OIDC-FED#Section.4.5: https://openid.net/specs/openid-connect-federation-1_0.html#rfc.section.4.5
+.. _OIDC-FED#Section.4.6: https://openid.net/specs/openid-connect-federation-1_0.html#rfc.section.4.6
 .. _OIDC-FED#Section.5.1: https://openid.net/specs/openid-connect-federation-1_0.html#rfc.section.5.1
 .. _OIDC-FED#Section.5.3.1: https://openid.net/specs/openid-connect-federation-1_0.html#rfc.section.5.3.1
 .. _OIDC-FED#Section.5.3.2: https://openid.net/specs/openid-connect-federation-1_0.html#rfc.section.5.3.2

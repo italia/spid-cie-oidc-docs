@@ -53,5 +53,6 @@ Indice dei contenuti
    standards.rst
    avvisi_spid.rst
    seccons_bcps.rst
-   esempi.rst
    attributi_utente.rst
+   esempi.rst
+   
