@@ -181,7 +181,7 @@ Il payload del **JWT** contiene i seguenti parametri obbligatori.
      - UNIX Timestamp con l'istante di generazione del JWT, codificato come NumericDate come indicato in :rfc:`7519`
      - |spid-icon| |cieid-icon|
    * - **iss**
-     - String. Identificatore dell'emettitore dell'OP che ha creato l'Authentication Response. 
+     - String. Uguale a client_id. 
      - |spid-icon| |cieid-icon|
    * - **aud**
      - String. Deve corrispondere all'identificatore del OP.
