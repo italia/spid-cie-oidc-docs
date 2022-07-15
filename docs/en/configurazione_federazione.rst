@@ -1,29 +1,38 @@
 .. include:: ./common_definitions.rst
 
 
-Configurazione della Federazione
---------------------------------
+Configuration of the Federation 
+-------------------------------
 
-La configurazione della Federazione è pubblicata dal Trust Anchor all'interno della sua :ref:`Entity Configuration<entity_configuration_ta>`, disponibile presso un web path ben noto e corrispondente a **.well-known/openid-federation**.
+The configuration of the Federation is published by the Trust Anchor inside its :ref:`Entity Configuration<entity_configuration_ta>`, available at a well known web path and corresponding to a 
+**.well-known/openid-federation**.
 
-Tutti i partecipanti DEVONO ottenere, prima della fase di esercizio, la configurazione della Federazione e mantenerla aggiornata su base giornaliera. All'interno della Configurazione della Federazione è presente la chiave pubblica del Trust Anchor usata per le operazioni di firma, il numero massimo di Intermediari consentiti tra una Foglia e il Trust Anchor (**max_path length**) e le autorità abilitate all'emissione dei Trust Mark (**trust_marks_issuers**).
+All the members MUST obtain the Federation configuration before the operational phase and they
+MUST keep it up-to-date on a daily basis. The Federation configuration contains the Trust Anchor
+public key for the signature operations, the maximum number if Intermediaries allowed between a Leaf and the Trust Anchor (**max_path length**) and the authorities who are enabled to issue the Trust Marks (**trust_marks_issuers**).
+
+Please find a non-normative example of :ref:`Entity Configuration response Trust Anchor<Esempio_EN1.4>` here.
+
+For further details, please read the Section about the :ref:`Entity Configuration<Entity_Configuration>`.
 
 
-Si veda qui un esempio non normativo di :ref:`Entity Configuration response Trust Anchor<Esempio_EN1.4>`
+How to participate
+------------------
 
+To take part in the SPID and CIEid Federations, a Leaf Entity must publish its own configuration
+(Entity Configuration) at its own web endpoint :ref:`.well-known/openid-federation<Esempio_EN1>`.
 
-Si veda la Sezione dedicata alle :ref:`Entity Configuration<Entity_Configuration>` per ulteriori dettagli.
+The technical and administrative representatives complete the administrative procedure,
+defined by the Federation Authority or by an Intermediary (SA),
+for registering a new entity or for updating a preexisting one. 
 
+The Federation Authority or an Intermediary, after doing all the required technical and administrative controls, registers the public keys of the Leaf and releases a proof of Federation membership, 
+in the form of Trust Mark (TM).
 
-Modalità di partecipazione
---------------------------
+The Leaf MUST include the TM inside its own Federation configuration (Entity Configuration) as proof of
+success in the Onboarding process.
 
-Per aderire alle Federazioni SPID e CIEid una entità di tipo Foglia deve pubblicare la propria configurazione (Entity Configuration) presso il proprio web endpoint :ref:`.well-known/openid-federation<Esempio_EN1>`.
-
-Gli incaricati tecnici ed amministrativi della Foglia completano la procedura amministrativa per la registrazione di una nuova entità o l'aggiornamento di un'entità preesistente definita dalla Autorità di Federazione o da un suo Intermediario (SA).
-
-L'Autorità di Federazione o il suo Intermediario, dopo aver effettuato tutti i controlli amministrativi e tecnici richiesti, registra le chiavi pubbliche della Foglia e rilascia una prova di adesione alla Federazione sotto forma di Trust Mark (TM).
-
-La Foglia DEVE includere il TM all'interno della propria configurazione di Federazione (Entity Configuration) come prova del buon esito del processo di onboarding. 
-
-L'Autorità di Federazione o suo Intermediario DEVE pubblicare la dichiarazione di riconoscimento della Foglia (Entity Statement) contenente le chiavi pubbliche di Federazione della Foglia e i TM a questa rilasciati. L'Autorità di Federazione o suo Intermediario PUÒ pubblicare una `politica dei metadata <https://openid.net/specs/openid-connect-federation-1_0.html#rfc.section.5.1>`_ per forzare la modifica dei metadata OIDC del discendente, nelle parti in cui questo fosse necessario.
+The Federation Authority or an Intermediary MUST publish the Leaf statement of recognition 
+(Entity Statement) containing the Federation public keys of the Leaf and the TMs released for it.
+The Federation Authority or an Intermediary CAN publish a `Metadata policy <https://openid.net/specs/openid-connect-federation-1_0.html#rfc.section.5.1>`_ to force the change
+if the OIDC Metadata of the subordinate entity, in the parts where it might be needed.
