@@ -70,4 +70,6 @@
 .. _JWE: https://datatracker.ietf.org/doc/html/draft-ietf-jose-json-web-encryption
 .. _JWK: https://datatracker.ietf.org/doc/html/draft-ietf-jose-json-web-key
 .. _JWS: https://datatracker.ietf.org/doc/html/draft-ietf-jose-json-web-signature
+.. _OAuth-DPoP: https://datatracker.ietf.org/doc/html/draft-ietf-oauth-dpop-10
+.. _OAuth-RS: https://datatracker.ietf.org/doc/html/draft-jones-oauth-resource-metadata
 

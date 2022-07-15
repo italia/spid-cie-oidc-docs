@@ -55,7 +55,7 @@ Il Metadata dell'OP da **"openid_provider"** DEVE contenere almeno i seguenti pa
     - **Descrizione**
     - **Supportato da**
   * - **issuer**
-    - Vedi `OpenID.Discovery#OP_Metadata`_.
+    - Vedi `OpenID.Discovery#OP_Metadata`_. DEVE essere valorizzato con un HTTPS URL che identifica univocamente l'OP.
     - |spid-icon| |cieid-icon|
   * - **authorization_endpoint**
     - Vedi `OpenID.Discovery#OP_Metadata`_.
@@ -159,4 +159,4 @@ Il Metadata dell'OP da **"openid_provider"** DEVE contenere almeno i seguenti pa
    :maxdepth: 1
 
    metadata_oidc_op_spid.rst
-   metadata_oidc_op_cie.rst
+   

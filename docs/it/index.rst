@@ -40,6 +40,7 @@ Indice dei contenuti
    trust_negotiation.rst
    federation_endpoint.rst
    metadata_oidc.rst
+   parametri_scope_claims.rst
    flusso_autenticazione.rst
    authorization_endpoint.rst
    authentication_response.rst
