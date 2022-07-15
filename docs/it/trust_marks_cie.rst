@@ -1,8 +1,8 @@
 .. include:: ./common_definitions.rst
 
 
-Profili dei Trust Mark riconusciuti da CIEid
---------------------------------------------
+Trust Mark CIEid
+----------------
 
 La tabella seguente riassume tutti i profili disponibili per tutte le entità coinvolte e supportate dalla Federazione CIEid.
 
@@ -15,19 +15,19 @@ La tabella seguente riassume tutti i profili disponibili per tutte le entità co
       - **Descrizione**
       - **Tipi di entità sub**
     * - **public**
-      - l'entità nel claim *sub* appartiene alla pubblica amministrazione italiana
+      - l'entità nel claim *sub* appartiene alla pubblica amministrazione italiana.
       - RP, OP
     * - **private**
       - l'entità nel claim *sub* appartiene al settore privato.
       - RP
     * - **intermediary**
-      - l'entità nel claim *sub* è un Soggetto Aggregatore
+      - l'entità nel claim *sub* è un Soggetto Aggregatore.
       - SA
     * - **attribute-authority**
-      - l'entità nel claim *sub* è una Attribute Authority
+      - l'entità nel claim *sub* è una Attribute Authority.
       - AA
     * - **sgd**
-      - l'entità nel claim *sub* è un RP o un SA che ha aderito alla AA Sistema di Gestione Deleghe
+      - l'entità nel claim *sub* è un RP o un SA che ha aderito alla AA Sistema di Gestione Deleghe.
       - RP
 
 Profili **public** e **private**
