@@ -56,7 +56,24 @@ In aggiunta ai claim dei profili **public** e **private**, il profilo **intermed
 Profilo **attribute-authority**
 +++++++++++++++++++++++++++++++
 
-Per i dettagli tecnici e gli esempi non normativo si veda [INSERIRE LINK ALLA DOCUMENTAZIONE]
+In aggiunta ai claim dei profili **public** e **private**, il profilo **attribute-authority** aggiunge il seguente claim obbligatori:
+
+.. list-table::
+    :widths: 20 60
+    :header-rows: 1
+
+    * - **Claim**
+      - **Descrizione**
+    * - **policy_uri**
+      - URL dove è disponibile la privacy policy dell'AA. 
+    * - **tos_uri**
+      - URL dove è disponibile la info policy dell'AA. 
+    * - **claims**
+      - Lista di JSON Object che definiscono gli attributi dell’utente richiesti dall'AA. Esempio: |br| ``{"https://attributes.eid.gov.it/fiscal_number":{"essential":true},`` |br| ``"email":{"essential":true},}``
+    * - **service_documentation**
+      - URL dove è disponibile il documento OAS3 che descrive il funzionamento dei servizi dell'AA.
+
+
 
 Profilo **sgd**
 +++++++++++++++
