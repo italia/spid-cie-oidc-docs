@@ -1,18 +1,18 @@
 .. include:: ./common_definitions.rst
 
-Standard di riferimento
------------------------
+Standards
+---------
 
 .. list-table::
     :widths: 25 75
     :header-rows: 0
 
     * - `SPID-OIDC-CORE`_
-      - Linee Guida per OpenID Connect in SPID 
+      - Guidelines of SPID OpenID Connect
     * - `OIDC-FED`_
       - OpenID Connect Federation 1.0 
     * - `LG-AA`_
-      - Attribute Authority Guidelines – "Linee Guida Attribute Authority SPID" 
+      - Attribute Authority Guidelines – "Attribute Authority SPID Guidelines" 
     * - `OpenID.Core`_
       - Sakimura, N., Bradley, J., Jones, M., de Medeiros, B. and C. Mortimore, "OpenID Connect Core 1.0", August 2015.
     * - `OpenID.Registration`_
