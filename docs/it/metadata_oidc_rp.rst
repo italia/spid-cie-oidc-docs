@@ -27,12 +27,6 @@ Il Metadata dell'OP da **"federation_entity"** DEVE contenere almeno i seguenti 
   * - **Claim**
     - **Descrizione**
     - **Supportato da**
-  * - **organization_name**
-    - Denominazione dell'organizzazione.
-    - |spid-icon| |cieid-icon|
-  * - **contacts**
-    - Array JSON che contiene uno o più indirizzi di posta elettronica (semplice e/o certificata) dell'organizzazione.
-    - |spid-icon| |cieid-icon|
   * - **federation_resolve_endpoint**
     - Vedi Sezione :ref:`Endpoint di Federazione <federation_endpoint>` e `OIDC-FED#Section.4.6`_
     - |spid-icon| |cieid-icon|
@@ -85,7 +79,4 @@ Il Metadata del RP da **"openid_relying_party"** DEVE contenere almeno i seguent
 
 .. note:: 
   Gli URI presenti nel parametro **redirect_uris** POSSONO anche seguire eventuali schemi custom (ad es. myapp://) al fine di supportare applicazioni mobili.
-
-.. warning::
-  La risposta allo userinfo endpoint è un oggetto firmato e cifrato con la chiave pubblica dell'RP. In questo caso si effettua prima la firma e poi la cifratura, ottenendo come risultato un *Nested JWT*, come definito in `JWT`_.
 
