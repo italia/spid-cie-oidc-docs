@@ -2,4 +2,6 @@ paths-ignore:
  - docs/it/userinfo_endpoint.rst
  - docs/it/introspection_endpoint.rst
  - docs/it/revocation_endpoint.rst
- - docs/it/userinfo_endpoint.rst
+ - docs/en/userinfo_endpoint.rst
+ - docs/en/introspection_endpoint.rst
+ - docs/en/revocation_endpoint.rst
