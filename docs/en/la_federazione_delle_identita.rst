@@ -11,7 +11,7 @@ adopting standards of interoperability that allow safe data interchange.
 This configuration establishes what levels of guarantee and security are appropriate for an individual, in order to authenticate on a web service (Service Provider) using their own digital identity, released 
 by another web service (Identity Provider).
 
-The participants (RP or OP) who are recognized inside the same Federation, obtain Metadata from each
+The members (RP or OP) who are recognized inside the same Federation, obtain Metadata from each
 other. The Metadata contain the public keys for the operations of digital signature and encryption, 
 and the information needed for the data interchange.
 

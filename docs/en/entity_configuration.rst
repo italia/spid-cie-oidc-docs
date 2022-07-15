@@ -6,56 +6,57 @@
 Entity Configuration
 --------------------
 
-Un'**Entity Configuration (EC)** è un Metadata di Federazione in formato Jose e firmato dal soggetto che lo emette e riguardante se stesso.
+An **Entity Configuration (EC)** is a Federation Metadata in Jose format, signed by an issuer
+and regarding the entity itsel.
+
 
 .. _firma_EC:
 
-Firma della Entity Configuration
-++++++++++++++++++++++++++++++++
+Entity Configuration Signature
+++++++++++++++++++++++++++++++
 
-La firma dei JWT :rfc:`7515` avviene mediante l'algoritmo RSA SHA-256 (RS256). Tutti i partecipanti della Federazione DEVONO supportare questo algoritmo di firma. Tutte le operazioni di verifica della firma relative agli ES, EC e TM sono eseguite con le chiavi pubbliche di Federazione (distinguiamo le chiavi di Federazione da quelle di OIDC Core. Questi ultimi risiedono nei Metadata OIDC. Un ES o EC contiene sia le chiavi pubbliche di Federazione che i Metadata OIDC).
-
-
-Metadata di Federazione
-+++++++++++++++++++++++
-
-OIDC Federation definisce i Metadata di Federazione contenenti le informazioni di seguito indicate 
-e i Metadata OIDC per ogni tipo di entità.
+The JWT :rfc:`7515` signature occurs through the RSA SHA-256 (RS256) algorithm. All the Federation
+members MUST support this signing algorithm. All the signature-check operations regarding the ESs, ECs and TMs,
+are carried out with the Federation public keys (we distinguish the Federation keys from those of the OIDC Core. The latter ones are contained in the OIDC Metadata. An ES or EC contains both the Federation public
+keys and the OIDC Metadata).
 
 
-Entity Configuration - claim comuni
-+++++++++++++++++++++++++++++++++++
+
+Entity Configuration - common claims
+++++++++++++++++++++++++++++++++++++
 
 .. list-table::
    :widths: 20 60 20
    :header-rows: 1
 
    * - **Claim**
-     - **Descrizione**
-     - **Supportato da**
+     - **Description**
+     - **Supported by**
    * - **iss**
-     - String. Identificativo dell'entità che lo emette. 
+     - String. Identifier of the issuing entity.
      - |spid-icon| |cieid-icon|
    * - **sub**
-     - String. Identificativo del soggetto a cui è riferito. 
+     - String. Identifier of the entity to which it is referred.
      - |spid-icon| |cieid-icon|
    * - **iat**
-     - UNIX Timestamp con l'istante di generazione del JWT, codificato come NumericDate come indicato in :rfc:`7519`
+     - UNIX Timestamp with the time of generation of the JWT, coded as NumericDate as indicated at :rfc:`7519`
      - |spid-icon| |cieid-icon| 
    * - **exp**
-     - UNIX Timestamp con l'istante di scadenza del JWT, codificato come NumericDate come indicato in :rfc:`7519`.
+     - UNIX Timestamp with the expiry time of the JWT, coded as NumericDate as indicated at :rfc:`7519`.
      - |spid-icon| |cieid-icon|
    * - **jwks**
-     - Un JSON Web Key Set (JWKS) :rfc:`7517` che rappresenta la parte pubblica delle chiavi di firma dell'entità interessata. Ogni JWK nel set JWK DEVE avere un ID di chiave (claim kid).
+     - A JSON Web Key Set (JWKS) :rfc:`7517` that represents the public part of the signing keys of the 
+       entity at issue. Each JWK in the JWK set MUST have a key ID (claim kid).
      - |spid-icon| |cieid-icon|
    * - **metadata**
-     - JSON Object. Ogni chiave dell'oggetto JSON rappresenta un identificatore del tipo 
-       di :ref:`Metadata<metadata_oidc>` e ogni valore DEVE essere un oggetto JSON 
-       che rappresenta i Metadata secondo lo schema di Metadata di quel tipo. 
+     - JSON Object. Each key of the JSON Object represents an identifier of the type of
+       :ref:`Metadata<metadata_oidc>` and each value MUST be a JSON Object that represents
+       the Metadata, according to the Metadata schema of that type.
 
-       Una configurazione di entità PUÒ contenere più dichiarazioni di Metadata, ma solo una per ogni tipo di Metadata (<**entity_type**>). 
+       An entity configuration CAN contain more Metadata statements, but only one for each type of
+       Metadata (<**entity_type**>). 
 
-       I tipi consentiti sono i seguenti:
+       The allowed types are the following:
 
        - openid_relying_party
        - openid_provider
@@ -66,27 +67,30 @@ Entity Configuration - claim comuni
      - |spid-icon| |cieid-icon|
 
 .. warning::
-  All'interno dell'EC i valori degli attributi **iss** e **sub** contengono il medesimo valore (URL).
+  Inside the EC the claims **iss** e **sub** contain the same value (URL).
 
 
-Entity Configuration Foglia e intermediari
-++++++++++++++++++++++++++++++++++++++++++
+Entity Configuration Leafs and Intermediaries
++++++++++++++++++++++++++++++++++++++++++++++
 
-Gli EC delle entità Foglia e intermediari, in aggiunta ai claim precedentemente definiti, contengono anche i seguenti claim:
+The EC of the Leaf and Intermediate Entities, other than the previously defines claims, contain the further
+claims:
+
 
 .. list-table::
    :widths: 20 60 20
    :header-rows: 1
 
    * - **Claim**
-     - **Descrizione**
-     - **Supportato da**
+     - **Description**
+     - **Supported by**
    * - **authority_hints**
-     - Array di URL. Contiene una lista di URL delle entità superiori, quali TA o SA che POSSONO emettere un ES relativo a questo soggetto. 
+     - Array if URLs. It contains a list of URLs of the superior entities, such as TA or SA, 
+       that CAN issue an ES related to this subject.
      - |spid-icon| |cieid-icon|
    * - **trust_marks**
-     - Un array JSON contenente i Trust Mark. Vedere la Sezione :ref:`Trust Mark <Trust_Mark>`. 
-       Obbligatorio per tutti i partecipanti fatta esclusione del Trust Anchor. 
+     - A JSON Array containing the Trust Marks. See the Section :ref:`Trust Mark <Trust_Mark>`. 
+       Required for all the members except the Trust Anchor.
      - |spid-icon| |cieid-icon|
 
 
@@ -96,18 +100,25 @@ Gli EC delle entità Foglia e intermediari, in aggiunta ai claim precedentemente
 Entity Configuration Trust Anchor
 +++++++++++++++++++++++++++++++++
 
-Gli EC di un TA, in aggiunta ai claim comuni a tutti i partecipanti, contengono anche i seguenti:
+The ECs of a TA, other than the common claims of all the other members, contain also the following ones:
 
 .. list-table::
    :widths: 20 60 20
    :header-rows: 1
 
    * - **Claim**
-     - **Descrizione**
-     - **Supportato da**
+     - **Description**
+     - **Supported by**
    * - **constraints**
-     - JSON Object che descrive un insieme di vincoli della Trust Chain e che DEVE contenere l'attributo **max_path_length**. Rappresenta il numero massimo di SA tra una Foglia e il TA.
+     - JSON Object that describes the Trust Chain bounds and MUST contain the attribute **max_path_length**.
+       It represents the maximum number of SAs between a Leaf and the TA.
      - |spid-icon| |cieid-icon|
    * - **trust_marks_issuers**
-     - JSON Array che indica quali autorità sono considerate attendibili nella Federazione per l'emissione di specifici TM, questi assegnati mediante il proprio identificativo univoco.
+     - JSON Array that indicates which Federation authorities are considered trustworthy
+       for issuing specific TMs, assigned with their unique identifiers.
      - |spid-icon| |cieid-icon|
+
+.. seealso:: 
+
+   - :ref:`Non-normative example <Esempio_EN1.4>`
+   
