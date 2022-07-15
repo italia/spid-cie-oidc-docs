@@ -3,7 +3,7 @@
 Authorization Request (Authentication Endpoint)
 -----------------------------------------------
 
-Per avviare il processo di autenticazione, l'RP reindirizza l'utente all'*Authorization Endpoint* dell'OP selezionato, inviando una richiesta *HTTP* avente nel parametro **request** un oggetto in formato **JWT** che contiene l'*Authorization Request* firmata dall'RP.
+Per avviare il processo di autenticazione, l'RP reindirizza l'utente all'*Authorization Endpoint* dell'OP selezionato, inviando una richiesta *HTTP* contenente il parametro **request** un oggetto in formato **JWT** che contiene l'*Authorization Request* firmata dall'RP.
 
 Per veicolare la richiesta, l'RP PUÒ utilizzare i metodi **POST** e **GET**. Se viene utilizzato il metodo **POST** i parametri DEVONO essere trasmessi utilizzando la *Form Serialization*. Nel caso di utilizzo del metodo **GET** i parametri DEVONO essere trasmessi utilizzando la *Query String Serialization*. Per maggiori dettagli vedi `OpenID.Core#Serializations`_.
 
@@ -158,7 +158,7 @@ Il payload del **JWT** contiene i seguenti parametri obbligatori.
      - |spid-icon| |cieid-icon|
    * - **acr_values**
      - Valori di riferimento della classe di contesto dell'Authentication Request. 
-       Stringa separata da uno spazio, che specifica i valori "acr" richiesti al server di autorizzazione per l'elaborazione della richiesta di autenticazione con i valori indicati in ordine di preferenza. L'OP può utilizzare un'autenticazione ad un livello più alto di quanto richiesto. Tale scelta non deve comportare un esito negativo della richiesta.
+       Stringa separata da uno spazio, che specifica i valori "acr" richiesti al server di autorizzazione per l'elaborazione della richiesta di autenticazione con i valori indicati in ordine di preferenza. L'OP può utilizzare un'autenticazione ad un livello più alto di quanto richiesto.
        Deve contenere per SPID e CIE uno o più valori tra i seguenti:
        
        ``https://www.spid.gov.it/SpidL1``
@@ -169,7 +169,7 @@ Il payload del **JWT** contiene i seguenti parametri obbligatori.
      - Lista dei claims (attributi) che un RP intende richiedere. Vedi paragrafo *Claims*
      - |spid-icon| |cieid-icon|
    * - **state**
-     - Stringa di almeno 32 caratteri alfanumerici. Valore univoco utilizzato per mantenere lo stato tra la request e il Callback (vedere :ref:`Flusso di autenticazione<flusso_autenticazione>` passo n.3). Questo valore verrà restituito al client nella risposta al termine dell'autenticazione. Il valore deve essere significativo esclusivamente per il RP e non deve essere intellegibile ad altri.
+     - Stringa di almeno 32 caratteri alfanumerici. Identificativo univoco della sessione lato RP. Questo valore verrà restituito al client nella risposta al termine dell'autenticazione. Il valore deve essere significativo esclusivamente per il RP e non deve essere intellegibile ad altri.
      - |spid-icon| |cieid-icon|
    * - **ui_locales**
      - Lista di codici :rfc:`5646` separati da spazi. Lingue preferibili per visualizzare le pagine dell'OP. L'OP può ignorare questo parametro se non dispone di nessuna delle lingue indicate.
@@ -182,11 +182,9 @@ Il payload del **JWT** contiene i seguenti parametri obbligatori.
      - |spid-icon| |cieid-icon|
    * - **iss**
      - String. Identificatore dell'emettitore dell'OP che ha creato l'Authentication Response. 
-       Il RP DEVE validare questo parametro con precisione e NON DEVE permettere che diversi OP 
-       usino lo stesso identificatore.
      - |spid-icon| |cieid-icon|
    * - **aud**
-     - String. Deve corrispondere all'Identificatore del soggetto destinatario.
+     - String. Deve corrispondere all'identificatore del OP.
      - |spid-icon| |cieid-icon|
    * - **typ**
      - Ove fosse assente, viene considerato *JWT* come definito da :rfc:`7519#section-5.1`
@@ -199,7 +197,7 @@ Il payload del **JWT** contiene i seguenti parametri obbligatori.
   Claim
   +++++
 
-  Il parametro claims definisce gli attributi richiesti dal **RP**. Gli attributi SPID sono richiesti all'interno dell'elemento "userinfo", elencando gli attributi da richiedere come chiavi di oggetti JSON, i cui valori devono essere indicati come {"essential": true}. Non è possibile richiedere attributi SPID nell'id_token, mentre è possibile richiedere attributi CIE. Gli attributi elencati sotto "userinfo" sono disponibili al momento della chiamata allo UserInfo Endpoint.
+  Il parametro claims definisce gli attributi richiesti dal **RP**. Gli attributi SPID sono richiesti all'interno dell'elemento "userinfo", elencando gli attributi da richiedere come chiavi di oggetti JSON, i cui valori devono essere indicati come {"essential": true}. Per SPID non è possibile richiedere attributi nell'id_token, mentre è possibile farlo per CIE. Gli attributi elencati sotto "userinfo" sono disponibili al momento della chiamata allo UserInfo Endpoint.
 
   .. code-block:: 
 
