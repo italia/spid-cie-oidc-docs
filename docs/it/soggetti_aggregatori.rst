@@ -1,7 +1,7 @@
 .. _Soggetti_aggregatori:
 
-Soggetti Aggregatori nel contesto Federativo
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Soggetti Aggregatori
+^^^^^^^^^^^^^^^^^^^^
 
 Un SA può registrare RP preesistenti e già conformi allo standard OIDC-FED, afferenti a domini esterni al proprio oppure mascherare dietro di sé i propri discendenti. Nel primo caso il SA è di tipo *Trasparente* (**Aggregatore Light**) mentre nel secondo caso è di tipo *Proxy* (**Aggregatore Full**).
 

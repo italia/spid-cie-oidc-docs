@@ -20,7 +20,7 @@ Un OP DEVE pubblicare all'interno del suo EC un Metadata da *federation_entity* 
     }
  }
 
-Il Metadata dell'OP da **"federation_entity"** DEVE contenere almeno i seguenti parametri obbligatori:
+L'EC di un OP DEVE configurare un metadata di tipo **"federation_entity"** e contenere almeno i seguenti parametri obbligatori:
 
 .. list-table:: 
   :widths: 20 60 20
@@ -29,25 +29,12 @@ Il Metadata dell'OP da **"federation_entity"** DEVE contenere almeno i seguenti 
   * - **Claim**
     - **Descrizione**
     - **Supportato da**
-  * - **organization_name**
-    - Denominazione dell'organizzazione.
-    - |spid-icon| |cieid-icon|
-  * - **federation_fetch_endpoint**
-    - Vedi Sezione :ref:`Endpoint di Federazione <federation_endpoint>` e `OIDC-FED#Section.4.6`_
-    - |spid-icon| |cieid-icon|
-  * - **federation_list_endpoint**
-    - Vedi Sezione :ref:`Endpoint di Federazione <federation_endpoint>` e `OIDC-FED#Section.4.6`_ 
-    - |spid-icon| |cieid-icon|
   * - **federation_resolve_endpoint**
     - Vedi Sezione :ref:`Endpoint di Federazione <federation_endpoint>` e `OIDC-FED#Section.4.6`_
     - |spid-icon| |cieid-icon|
-  * - **federation_status_endpoint**
-    - Vedi Sezione :ref:`Endpoint di Federazione <federation_endpoint>` e `OIDC-FED#Section.4.6`_
-    - |spid-icon| |cieid-icon|
 
 
-
-Il Metadata dell'OP da **"openid_provider"** DEVE contenere almeno i seguenti parametri obbligatori:
+Il Metadata dell'OP contenuto nell'<entity-type> **"openid_provider"** DEVE contenere almeno i seguenti parametri obbligatori:
 
 .. list-table:: 
   :widths: 20 60 20
