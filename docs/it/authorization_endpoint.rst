@@ -1,67 +1,116 @@
 .. include:: ./common_definitions.rst
 
-Authorization Endpoint (Authentication Request)
+Authorization Request (Authentication Endpoint)
 -----------------------------------------------
 
-Per avviare il processo di autenticazione, il RP reindirizza l'utente all'Authorization Endpoint dell'OP selezionato, passando in POST o in GET una richiesta avente nel parametro **request** un oggetto in formato JWT.
+Per avviare il processo di autenticazione, l'RP reindirizza l'utente all'*Authorization Endpoint* dell'OP selezionato, inviando una richiesta *HTTP* avente nel parametro **request** un oggetto in formato **JWT** che contiene l'*Authorization Request* firmata dall'RP.
 
-Se viene utilizzato il metodo POST i parametri devono essere trasmessi utilizzando la Form Serialization (OIDC Connect Core 1.0 par. 13.2).
+Per veicolare la richiesta, l'RP PUÒ utilizzare i metodi **POST** e **GET**. Se viene utilizzato il metodo **POST** i parametri DEVONO essere trasmessi utilizzando la *Form Serialization*. Nel caso di utilizzo del metodo **GET** i parametri DEVONO essere trasmessi utilizzando la *Query String Serialization*. Per maggiori dettagli vedi `OpenID.Core#Serializations`_.
 
-I parametri **client_id**, **response_type** e **scope** DEVONO essere trasmessi sia come parametri sulla chiamata HTTP sia all'interno dell'oggetto request e i loro valori devono corrispondere, in ogni caso i parametri all'interno dell'oggetto request prevalgono su quelli indicati sulla chiamata HTTP.
+.. warning::
+  Il parametro **scope** DEVE essere trasmesso sia come parametro nella chiamata HTTP sia all'interno dell'oggetto request e i loro valori DEVONO corrispondere.
 
-L'oggetto request DEVE essere un token JWT firmato.
+  I parametri **client_id** e **response_type** DOVREBBERO essere trasmessi sia come parametri sulla chiamata HTTP sia all'interno dell'oggetto request. In questo caso, i parametri all'interno dell'oggetto request prevalgono su quelli indicati nella chiamata HTTP.
+
+Di seguito i parametri obbligatori nella richiesta di autenticazione *HTTP*.
+
+.. _tabella_parametri_http_req:
+
+.. list-table:: 
+  :widths: 20 60 20
+  :header-rows: 1
+
+  * - **Parametro**
+    - **Descrizione**
+    - **Supportato da**
+  * - **scope**
+    - Riporta di valori di *scope* supportati dall'OP e definiti dal parametro **scopes_supported** nel :ref:`Metadata OP <MetadataOP>`. DEVE essere presente almeno il valore *openid*.
+    - |spid-icon| |cieid-icon|
+  * - **code_challenge**
+    - Vedi :rfc:`7636#section-4.2`.
+    - |spid-icon| |cieid-icon|
+  * - **code_challenge_method**
+    - Come definito dal parametro **code_challenge_methods_supported** nel :ref:`Metadata OP <MetadataOP>`.
+    - |spid-icon| |cieid-icon|
+  * - **request**
+    - Vedi `OpenID.Core#JWTRequests`_. DEVE essere un **JWT** firmato.
+    - |spid-icon| |cieid-icon|
+
+Di seguito una tabella che riporta la composizione dell'header del **JWT**.
+
+.. list-table:: 
+  :widths: 20 60 20
+  :header-rows: 1
+
+  * - **Jose Header**
+    - **Descrizione**
+    - **Supportato da**
+  * - **alg**
+    - Vedi :rfc:`7516#section-4.1.1`. DEVE essere valorizzato con uno dei valori presenti nel parametro **request_object_encryption_alg_values_supported** nel :ref:`Metadata OP <MetadataOP>`.
+    - |spid-icon| |cieid-icon|
+  * - **kid**
+    - Vedi :rfc:`7638#section_3`. 
+    - |spid-icon| |cieid-icon|
+
+.. note::
+  Il parametro **typ** PUÒ essere omesso nel caso di **JWT**.
 
 
-**Esempio (chiamata HTTP):**
+Il payload del **JWT** contiene i seguenti parametri obbligatori.
 
-.. code-block::
 
- GET /auth?client_id=https://rp.spid.agid.gov.it&
- response_type=code&scope=openid& code_challenge=qWJlMe0xdbXrKxTm72EpH659bUxAxw80&
- code_challenge_method=S256&request=eyJhbGciOiJSUzI1NiIsImtpZCI6ImsyYmRjIn0.ew0KIC
- Jpc3MiOiAiczZCaGRSa3F0MyIsDQogImF1ZCI6ICJodHRwczovL3NlcnZlci5leGFtcGxlLmNvbSIsDQo
- gInJlc3BvbnNlX3R5cGUiOiAiY29kZSBpZF90b2tlbiIsDQogImNsaWVudF9pZCI6ICJzNkJoZFJrcXQz
- IiwNCiAicmVkaXJlY3RfdXJpIjogImh0dHBzOi8vY2xpZW50LmV4YW1wbGUub3JnL2NiIiwNCiAic2Nvc
- GUiOiAib3BlbmlkIiwNCiAic3RhdGUiOiAiYWYwaWZqc2xka2oiLA0KICJub25jZSI6ICJuLTBTNl9Xek
- EyTWoiLA0KICJtYXhfYWdlIjogODY0MDAsDQogImNsYWltcyI6IA0KICB7DQogICAidXNlcmluZm8iOiA
- NCiAgICB7DQogICAgICJnaXZlbl9uYW1lIjogeyJlc3NlbnRpYWwiOiB0cnVlfSwNCiAgICAgI…
+.. 
+  FIXME: Da spostare nella sezione relativa agli esempi non normativi
+  **Esempio (chiamata HTTP):**
 
- Host: https://op.spid.agid.gov.it
- HTTP/1.1
- 
-**Esempio (contenuto del JWT):**
+  .. code-block::
 
-.. code-block::
+  GET /auth?client_id=https://rp.spid.agid.gov.it&
+  response_type=code&scope=openid& code_challenge=qWJlMe0xdbXrKxTm72EpH659bUxAxw80&
+  code_challenge_method=S256&request=eyJhbGciOiJSUzI1NiIsImtpZCI6ImsyYmRjIn0.ew0KIC
+  Jpc3MiOiAiczZCaGRSa3F0MyIsDQogImF1ZCI6ICJodHRwczovL3NlcnZlci5leGFtcGxlLmNvbSIsDQo
+  gInJlc3BvbnNlX3R5cGUiOiAiY29kZSBpZF90b2tlbiIsDQogImNsaWVudF9pZCI6ICJzNkJoZFJrcXQz
+  IiwNCiAicmVkaXJlY3RfdXJpIjogImh0dHBzOi8vY2xpZW50LmV4YW1wbGUub3JnL2NiIiwNCiAic2Nvc
+  GUiOiAib3BlbmlkIiwNCiAic3RhdGUiOiAiYWYwaWZqc2xka2oiLA0KICJub25jZSI6ICJuLTBTNl9Xek
+  EyTWoiLA0KICJtYXhfYWdlIjogODY0MDAsDQogImNsYWltcyI6IA0KICB7DQogICAidXNlcmluZm8iOiA
+  NCiAgICB7DQogICAgICJnaXZlbl9uYW1lIjogeyJlc3NlbnRpYWwiOiB0cnVlfSwNCiAgICAgI…
 
- {
-     "client_id":"https://rp.spid.agid.gov.it",
-     "response_type":"code",
-     "scope":"openid",
-     "code_challenge":"qWJlMe0xdbXrKxTm72EpH659bUxAxw80",
-     "code_challenge_method":"S256",
-     "nonce":"MBzGqyf9QytD28eupyWhSqMj78WNqpc2",
-     "prompt":"login",
-     "redirect_uri":"https://rp.spid.agid.gov.it/callback1",
-     "acr_values":{
-         "https://www.spid.gov.it/SpidL1":null,
-         "https://www.spid.gov.it/SpidL2":null
-     },
-     "claims":{
-         "id_token":{
-             "nbf":{
-                 "essential":true
-             },
-             "jti":{
-                 "essential":true
-             }
-         },
-         "userinfo":{
-             "https://attributes.spid.gov.it/name":null,
-             "https://attributes.spid.gov.it/familyName":null
-         }
-     },
-     "state":"fyZiOL9Lf2CeKuNT2JzxiLRDink0uPcd"
- }
+  Host: https://op.spid.agid.gov.it
+  HTTP/1.1
+  
+  **Esempio (contenuto del JWT):**
+
+  .. code-block::
+
+  {
+      "client_id":"https://rp.spid.agid.gov.it",
+      "response_type":"code",
+      "scope":"openid",
+      "code_challenge":"qWJlMe0xdbXrKxTm72EpH659bUxAxw80",
+      "code_challenge_method":"S256",
+      "nonce":"MBzGqyf9QytD28eupyWhSqMj78WNqpc2",
+      "prompt":"login",
+      "redirect_uri":"https://rp.spid.agid.gov.it/callback1",
+      "acr_values":{
+          "https://www.spid.gov.it/SpidL1":null,
+          "https://www.spid.gov.it/SpidL2":null
+      },
+      "claims":{
+          "id_token":{
+              "nbf":{
+                  "essential":true
+              },
+              "jti":{
+                  "essential":true
+              }
+          },
+          "userinfo":{
+              "https://attributes.spid.gov.it/name":null,
+              "https://attributes.spid.gov.it/familyName":null
+          }
+      },
+      "state":"fyZiOL9Lf2CeKuNT2JzxiLRDink0uPcd"
+  }
 
 
 .. list-table:: 
@@ -72,13 +121,13 @@ L'oggetto request DEVE essere un token JWT firmato.
      - **Descrizione**
      - **Supportato da**
    * - **client_id**
-     - URI che identifica univocamente il RP.
+     - Vedi `OpenID.Registration`_. DEVE essere valorizzato con un HTTPS URL che identifica univocamente il RP.
      - |spid-icon| |cieid-icon|
    * - **code_challenge**
-     - Un challenge per PKCE da riportare anche nella successiva richiesta al Token Endpoint. Vedi paragrafo :ref:`Generazione del code_challenge per PKCE<PKCE_code_challenge_generation>`
+     - Come definito nella  :ref:`Tabella dei parametri HTTP <tabella_parametri_http_req>`.
      - |spid-icon| |cieid-icon|
    * - **code_challenge_method**
-     - Metodo di costruzione del challenge PKCE. È obbligatorio specificare il valore **S256**
+     - Come definito nella  :ref:`Tabella dei parametri HTTP <tabella_parametri_http_req>`.
      - |spid-icon| |cieid-icon|
    * - **nonce**
      - Stringa di almeno 32 caratteri alfanumerici, generata casualmente dal Client e finalizzata a mitigare attacchi replay.
@@ -105,12 +154,7 @@ L'oggetto request DEVE essere un token JWT firmato.
        **code**
      - |spid-icon| |cieid-icon|
    * - **scope**
-     - Lista degli scope richiesti.
-       
-       **openid**: (obbligatorio).
-       
-       **offline_access**: se specificato, l'OP rilascerà oltre all'access token anche un refresh token necessario
-       per instaurare sessioni lunghe revocabili. L'uso di questo valore è consentito solo se se si intende offrire all'utente una `sessione lunga revocabile <https://www.agid.gov.it/sites/default/files/repository_files/spid-avviso-n41-integrazione_ll.gg_._openid_connect_in_spid.pdf#page=6>`_.
+     - Come definito nella  :ref:`Tabella dei parametri HTTP <tabella_parametri_http_req>`.
      - |spid-icon| |cieid-icon|
    * - **acr_values**
      - Valori di riferimento della classe di contesto dell'Authentication Request. 
@@ -148,54 +192,28 @@ L'oggetto request DEVE essere un token JWT firmato.
      - Ove fosse assente, viene considerato *JWT* come definito da :rfc:`7519#section-5.1`
      - |spid-icon| |cieid-icon|
 
-.. seealso::
-
- - https://openid.net/specs/openid-connect-core-1_0.html#FormSerialization
- - https://openid.net/specs/openid-connect-core-1_0.html#AuthRequest
- - https://openid.net/specs/openid-igov-oauth2-1_0-03.html#rfc.section.2.1.1
- - https://openid.net/specs/openid-igov-openid-connect-1_0-03.html#rfc.section.2.1
- - https://openid.net/specs/openid-igov-openid-connect-1_0-03.html#rfc.section.2.4
- - https://openid.net/specs/openid-connect-core-1_0.html#JWTRequests
-	 
-Claim
-+++++
-
-Il parametro claims definisce gli attributi richiesti dal **RP**. Gli attributi SPID sono richiesti all'interno dell'elemento "userinfo", elencando gli attributi da richiedere come chiavi di oggetti JSON, i cui valori devono essere indicati come {"essential": true}. Non è possibile richiedere attributi SPID nell'id_token, mentre è possibile richiedere attributi CIE. Gli attributi elencati sotto "userinfo" sono disponibili al momento della chiamata allo UserInfo Endpoint.
-
-.. code-block:: 
-
- {
-     "userinfo":{
-         "https://attributes.spid.gov.it/familyName":{
-             "essential":true
-         }
-     }
- }
 
 
-.. seealso::
+..
+  FIXME: Fatta sezione ad hoc per le modalità di utilizzo dei parametri claims e scope	 
+  Claim
+  +++++
 
- - https://openid.net/specs/openid-connect-core-1_0.html#IndividualClaimsRequests
+  Il parametro claims definisce gli attributi richiesti dal **RP**. Gli attributi SPID sono richiesti all'interno dell'elemento "userinfo", elencando gli attributi da richiedere come chiavi di oggetti JSON, i cui valori devono essere indicati come {"essential": true}. Non è possibile richiedere attributi SPID nell'id_token, mentre è possibile richiedere attributi CIE. Gli attributi elencati sotto "userinfo" sono disponibili al momento della chiamata allo UserInfo Endpoint.
+
+  .. code-block:: 
+
+  {
+      "userinfo":{
+          "https://attributes.spid.gov.it/familyName":{
+              "essential":true
+          }
+      }
+  }
 
 
-.. _PKCE_code_challenge_generation:
+  .. seealso::
 
-Generazione del code challenge per PKCE
-+++++++++++++++++++++++++++++++++++++++
-
-PKCE (Proof Key for Code Exchange, `RFC7636 <https://tools.ietf.org/html/rfc7636>`_) è un'estensione del protocollo OAuth 2.0 finalizzata ad evitare un potenziale attacco attuato con l'intercettazione dell'authorization code. Consiste nella generazione di un codice (*code verifier*) e del suo hash (*code challenge*). Il *code challenge* viene inviato all'OP nella richiesta di autenticazione.
-
-Quando il client contatta il Token Endpoint al termine del flusso di autenticazione, invia il *code verifier* originariamente creato, in modo che l'OP possa confrontare che il suo hash corrisponda con quello acquisito nella richiesta di autenticazione.
-
-Il *code verifier* e il *code challenge* devono essere generati secondo le modalità definite da **Agid** o da **MinInterno**.
+  - https://openid.net/specs/openid-connect-core-1_0.html#IndividualClaimsRequests
 
 
-Esempio
-*******
-.. literalinclude :: ../../static/pkce.py
-   :language: python
-
-.. seealso::
-
- - https://openid.net/specs/openid-igov-oauth2-1_0-03.html#rfc.section.3.1.7
- - https://tools.ietf.org/html/rfc7636

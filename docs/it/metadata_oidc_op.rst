@@ -1,5 +1,7 @@
 .. include:: ./common_definitions.rst
 
+.. _MetadataOP:
+
 OpenID Connect Provider Metadata (OP)
 +++++++++++++++++++++++++++++++++++++
 
@@ -75,6 +77,9 @@ Il Metadata dell'OP da **"openid_provider"** DEVE contenere almeno i seguenti pa
   * - **revocation_endpoint_auth_methods_supported**
     - Vedi :rfc:`8414#page-4`. Il valore supportato è **private_key_jwt**
     - |cieid-icon|
+  * - **code_challenge_methods_supported**
+    - Vedi Vedi :rfc:`8414#page-4`. L'OP DEVE supportare S256 (vedi :rfc:`7636#section-4.3`).
+    - |spid-icon| |cieid-icon|
   * - **scopes_supported**
     - Vedi `OpenID.Discovery#OP_Metadata`_. I valori supportati sono *openid*, *offline_access*, *profile*, *email*. Per maggiori dettagli vedi Sezione TBC.
     - |spid-icon| |cieid-icon|

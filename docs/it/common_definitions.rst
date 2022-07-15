@@ -27,6 +27,8 @@
 .. _LG-AA: https://docs.italia.it/AgID/documenti-in-consultazione/lg-spid-attribute-authority-docs/it/master/index.html
 .. _OpenID.Core: https://openid.net/specs/openid-connect-core-1_0-27.html
 .. _OpenID.Core#ClaimsParameter: https://openid.net/specs/openid-connect-core-1_0.html#ClaimsParameter
+.. _OpenID.Core#Serializations: https://openid.net/specs/openid-connect-core-1_0.html#Serializations
+.. _OpenID.Core#JWTRequests: https://openid.net/specs/openid-connect-core-1_0.html#JWTRequests
 .. _OpenID.Registration: https://openid.net/specs/openid-connect-registration-1_0.html
 .. _OpenID.Registration#ClientMetadata: https://openid.net/specs/openid-connect-registration-1_0.html#ClientMetadata
 .. _OpenID.Discovery: https://openid.net/specs/openid-connect-discovery-1_0.html
