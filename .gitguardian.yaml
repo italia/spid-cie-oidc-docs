@@ -1,3 +1,4 @@
 paths-ignore:
-    docs/it/*.rst
-    docs/en/*.rst
+    docs/en/introspection_endpoint.rst
+    docs/en/revocation_endpoint.rst
+    docs/en/userinfo_endpoint.rst
