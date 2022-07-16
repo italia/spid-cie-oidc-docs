@@ -3,7 +3,7 @@
 Utilizzo dei parametri **scope** e **claims**
 ---------------------------------------------
 
-Gli attributi dell'utente POSSONO essere richiesti dall'RP nell'Authorization Request usando i parametri **scope** o **claims**.
+Gli attributi dell'utente POSSONO essere richiesti dal RP nell'Authorization Request usando i parametri **scope** o **claims**.
 Nel caso di utilizzo del parametro **scope** i seguenti valori sono supportati:
 
 - **profile**: usando questo valore è possibile ottenere il profilo utente di default che corrisponde al Minimum Dataset eIDAS: 
