@@ -1,5 +1,7 @@
 .. include:: ./common_definitions.rst
 
+.. _MetadataRP:
+
 OpenID Connect Relying Party Metadata (RP)
 ++++++++++++++++++++++++++++++++++++++++++
 
