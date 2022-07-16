@@ -13,6 +13,10 @@ Mediante il metodo **GET** i parametri DEVONO essere trasmessi utilizzando la *Q
 
   I parametri **client_id** e **response_type** DOVREBBERO essere trasmessi sia come parametri sulla chiamata HTTP sia all'interno dell'oggetto request. In questo caso, i parametri all'interno dell'oggetto request prevalgono su quelli indicati nella chiamata HTTP.
 
+.. seealso:: 
+
+   - :ref:`Esempio di Authorization Request <Esempio_EN6>`
+
 Di seguito i parametri obbligatori nella richiesta di autenticazione *HTTP*.
 
 .. _tabella_parametri_http_req:
@@ -58,60 +62,6 @@ Di seguito una tabella che riporta la composizione dell'header del **JWT**.
 
 
 Il payload del **JWT** contiene i seguenti parametri obbligatori.
-
-
-.. 
-  FIXME: Da spostare nella sezione relativa agli esempi non normativi
-  **Esempio (chiamata HTTP):**
-
-  .. code-block::
-
-  GET /auth?client_id=https://rp.spid.agid.gov.it&
-  response_type=code&scope=openid& code_challenge=qWJlMe0xdbXrKxTm72EpH659bUxAxw80&
-  code_challenge_method=S256&request=eyJhbGciOiJSUzI1NiIsImtpZCI6ImsyYmRjIn0.ew0KIC
-  Jpc3MiOiAiczZCaGRSa3F0MyIsDQogImF1ZCI6ICJodHRwczovL3NlcnZlci5leGFtcGxlLmNvbSIsDQo
-  gInJlc3BvbnNlX3R5cGUiOiAiY29kZSBpZF90b2tlbiIsDQogImNsaWVudF9pZCI6ICJzNkJoZFJrcXQz
-  IiwNCiAicmVkaXJlY3RfdXJpIjogImh0dHBzOi8vY2xpZW50LmV4YW1wbGUub3JnL2NiIiwNCiAic2Nvc
-  GUiOiAib3BlbmlkIiwNCiAic3RhdGUiOiAiYWYwaWZqc2xka2oiLA0KICJub25jZSI6ICJuLTBTNl9Xek
-  EyTWoiLA0KICJtYXhfYWdlIjogODY0MDAsDQogImNsYWltcyI6IA0KICB7DQogICAidXNlcmluZm8iOiA
-  NCiAgICB7DQogICAgICJnaXZlbl9uYW1lIjogeyJlc3NlbnRpYWwiOiB0cnVlfSwNCiAgICAgI…
-
-  Host: https://op.spid.agid.gov.it
-  HTTP/1.1
-  
-  **Esempio (contenuto del JWT):**
-
-  .. code-block::
-
-  {
-      "client_id":"https://rp.spid.agid.gov.it",
-      "response_type":"code",
-      "scope":"openid",
-      "code_challenge":"qWJlMe0xdbXrKxTm72EpH659bUxAxw80",
-      "code_challenge_method":"S256",
-      "nonce":"MBzGqyf9QytD28eupyWhSqMj78WNqpc2",
-      "prompt":"login",
-      "redirect_uri":"https://rp.spid.agid.gov.it/callback1",
-      "acr_values":{
-          "https://www.spid.gov.it/SpidL1":null,
-          "https://www.spid.gov.it/SpidL2":null
-      },
-      "claims":{
-          "id_token":{
-              "nbf":{
-                  "essential":true
-              },
-              "jti":{
-                  "essential":true
-              }
-          },
-          "userinfo":{
-              "https://attributes.spid.gov.it/name":null,
-              "https://attributes.spid.gov.it/familyName":null
-          }
-      },
-      "state":"fyZiOL9Lf2CeKuNT2JzxiLRDink0uPcd"
-  }
 
 
 .. list-table:: 

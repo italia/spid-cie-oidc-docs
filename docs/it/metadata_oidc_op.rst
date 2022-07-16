@@ -146,9 +146,8 @@ Il Metadata dell'OP contenuto nell'<entity-type> **"openid_provider"** DEVE cont
 .. warning::
   Il Metadata OP da **"openid_provider"** espone il parametro **jwks** come normato da OID-FED invece del parametro **jwks_uri** come richiesto in `OpenID.Discovery#OP_Metadata`_.
 
+.. seealso:: 
 
-.. toctree:: 
-   :maxdepth: 1
+   - :ref:`Esempio di EC di un OP <Esempio_EN1.2>`
 
-   metadata_oidc_op_spid.rst
    

@@ -1,7 +1,10 @@
 .. include:: ./common_definitions.rst
 
-Termini utilizzati
+Termini e Acronimi
 ------------------
+
+Termini
++++++++
 
 Seguono i termini utilizzati da `OIDC-FED#Section_1.2`_ e in questo documento.
 
@@ -43,7 +46,7 @@ Seguono i termini utilizzati da `OIDC-FED#Section_1.2`_ e in questo documento.
       - Endpoint usati per prendere e risolvere gli statement delle entità, interrogare una lista di tutte le entità subordinate e verificare lo stato dei Trust Mark.
 
 Acronimi 
---------
+++++++++
 
 In questa sezione sono definiti tutti gli acronimi utilizzati all'interno del testo.
 
@@ -94,8 +97,8 @@ In questa sezione sono definiti tutti gli acronimi utilizzati all'interno del te
 
 
 
-Convenzioni e Terminologia
---------------------------
+Convenzioni e Termini normativi
++++++++++++++++++++++++++++++++
 
 Le parole chiave "DEVE" e "DEVONO", "NON DEVE" e "NON DEVONO", "RICHIEDE" e "RICHIESTO", "NON DEVE", "DOVREBBE", "NON DOVREBBE", "RACCOMANDATO", "PUÒ" e "OPZIONALE" nel presente documento devono essere interpretate come descritte nel BCP 14 :rfc:`2119` :rfc:`8174` quando e solo quando appaiono in maiuscolo.
 

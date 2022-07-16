@@ -1,6 +1,6 @@
 .. include:: ./common_definitions.rst
 
-Trust negotiation
+Trust Negotiation
 -----------------
 
 In questa sezione sono illustrate le modalità di mutuo riconoscimento tra RP e OP, le modalità con le quali le foglie della Federazione SPID si riconoscono all'interno della medesima Federazione e ottengono gli uni i Metadata degli altri.
@@ -88,14 +88,5 @@ Una volta che un RP viene riconosciuto come parte della Federazione, ottiene il 
 
 
 *Trust Chain*
-
-
-Come mostrato nella figura successiva, la Trust Chain è una procedura che parte dalla radice (TA) e va verso le entità foglie, mentre il processo di ottenimento di una Trust Chain parte dalle entità foglie e, seguendo il percorso dato dall'*authority_hint*, raggiunge la radice (TA).
-
-
-.. image:: ../../images/cie_onboarding_e_direzioni_trust_chain.svg
-    :width: 50%
-
-*Onboarding e direzioni Trust Chain*
 
 
