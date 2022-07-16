@@ -3,7 +3,7 @@
 UserInfo Endpoint (attributi)
 -----------------------------
 
-Lo UserInfo Endpoint è una risorsa protetta OAuth 2.0 che restituisce attributi dell'utente autenticato. Per ottenere gli attributi richiesti, il Relying Party inoltra una richiesta allo UserInfo Endpoint utilizzando l'Access token.
+Lo UserInfo Endpoint è una risorsa protetta OIDC che restituisce gli attributi dell'utente autenticato. Per ottenere gli attributi richiesti, il Relying Party inoltra una richiesta allo UserInfo Endpoint utilizzando l'Access token.
 
 Lo UserInfo Endpoint DEVE supportare l'uso del solo metodo HTTP GET :rfc:`2616`, DEVE accettare il token di accesso, inviato all'interno del campo Authorization dell'Header, come token bearer OAuth 2.0 :rfc:`6750`.
 
