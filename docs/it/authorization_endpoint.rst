@@ -5,7 +5,8 @@ Authorization Request (Authentication Endpoint)
 
 Per avviare il processo di autenticazione, l'RP reindirizza l'utente all'*Authorization Endpoint* dell'OP selezionato, inviando una richiesta *HTTP* contenente il parametro **request** un oggetto in formato **JWT** che contiene l'*Authorization Request* firmata dall'RP.
 
-Per veicolare la richiesta, l'RP PUÒ utilizzare i metodi **POST** e **GET**. Se viene utilizzato il metodo **POST** i parametri DEVONO essere trasmessi utilizzando la *Form Serialization*. Nel caso di utilizzo del metodo **GET** i parametri DEVONO essere trasmessi utilizzando la *Query String Serialization*. Per maggiori dettagli vedi `OpenID.Core#Serializations`_.
+Per veicolare la richiesta, l'RP PUÒ utilizzare i metodi **POST** e **GET**. Mediante il metodo **POST** i parametri DEVONO essere trasmessi utilizzando la *Form Serialization*. 
+Mediante il metodo **GET** i parametri DEVONO essere trasmessi utilizzando la *Query String Serialization*. Per maggiori dettagli vedi `OpenID.Core#Serializations`_.
 
 .. warning::
   Il parametro **scope** DEVE essere trasmesso sia come parametro nella chiamata HTTP sia all'interno dell'oggetto request e i loro valori DEVONO corrispondere.

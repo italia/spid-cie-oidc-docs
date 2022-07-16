@@ -24,7 +24,7 @@ Segue la descrizione dei passaggi, come da numerazione indicata in figura.
 
   #. L'RP prepara una Richiesta di Autorizzazione con i parametri necessari previsti da *PKCE* e la invia all'*Authorization Endpoint* dell'OP.
 
-  #. L'OP autentica l'utente mediante l'inserimento delle credenziali e ottiene il consenso per l'accesso agli attributidell'utente da parte del RP.
+  #. L'OP autentica l'utente mediante l'inserimento delle credenziali e ottiene il consenso per l'accesso agli attributi dell'utente da parte del RP.
 
   #. L'OP reindirizza l'utente all'URL contenuto nel parametro *redirect_uri* specificato dal RP, passando un *Authorization Code* nell'Authorization Response.
 
