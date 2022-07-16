@@ -1,5 +1,7 @@
 .. include:: ./common_definitions.rst
 
+.. _federation_endpoint:
+
 Endpoint di Federazione
 -----------------------
 
@@ -29,56 +31,4 @@ Le entità di tipo **TA** o **SA** DEVONO offrire i seguenti endpoint, in aggiun
 Risposta generica di errore
 +++++++++++++++++++++++++++
 
-Se la richiesta è malformata o avvengono errori durante l'elaborazione della richiesta, DOVREBBE essere utilizzato il seguente formato di errore.
-La risposta HTTP DEVE essere avere un codice nell'intervallo 400/500, che dia un'indicazione del tipo di errore. Il corpo della risposta DEVE essere un oggetto JSON contenente i claim di seguito riportati e il tipo di contenuto DEVE essere di tipo **application/json**.
-
-
-.. list-table:: 
-   :widths: 20 60 20
-   :header-rows: 1
-
-   * - **Claim**
-     - **Descrizione**
-     - **Supportato da**
-   * - **operation**
-     - L'operazione della richiesta
-     - |spid-icon| |cieid-icon|
-   * - **error**
-     - Il codice di errore
-     - |spid-icon| |cieid-icon|
-   * - **error_description**
-     - Un breve testo leggibile che descrive l'errore
-     - |spid-icon| |cieid-icon|
-
-
-Segue un esempio non normativo di error response:
-
-
-.. code-block:: 
-
- GET /resolve?
- type=relying_party&
- anchor=https%3A%2F%2Fregistry.interno.gov.it%2F HTTP/1.1
- Host: registry.interno.gov.it
-
-
-The following is a non-normative example of an error response:
-
-
-.. code-block:: 
-
- HTTP/1.1 400 Bad request
- Last-Modified: Wed, 22 Jul 2018 19:15:56 GMT
- Content-Type: application/json
-
- {
-     "operation":"resolve",
-     "error":"invalid_request",
-     "error_description":"Required request parameter [sub] was missing."
- }
-
-
-.. seealso::
-
- `OIDC-FED#Section.7.5`_
-
+Se la richiesta è malformata o avvengono errori durante l'elaborazione della richiesta, DOVREBBE essere utilizzato il formato definito in `OIDC-FED#Section.7.5`_.

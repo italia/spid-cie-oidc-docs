@@ -1,6 +1,6 @@
 .. include:: ./common_definitions.rst
 
-Trust negotiation
+Trust Negotiation
 -----------------
 
 In questa sezione sono illustrate le modalità di mutuo riconoscimento tra RP e OP, le modalità con le quali le foglie della Federazione SPID si riconoscono all'interno della medesima Federazione e ottengono gli uni i Metadata degli altri.
@@ -9,7 +9,7 @@ In questa sezione sono illustrate le modalità di mutuo riconoscimento tra RP e 
 Relying Party
 +++++++++++++
 
-Il RP ottiene la lista degli OP in formato JSON interrogando l':ref:`endpoint list<entity_listings>` disponibile presso il :ref:`Trust Anchor<Esempio_EN3>`. Per ogni soggetto contenuto nella :ref:`risposta<Esempio_EN3.1>` dell'endpoint list e corrispondente ad un OP, il RP :ref:`richiede<Esempio_EN2>` ed ottiene l'Entity Configuration self-signed presso l'OP. 
+Il RP ottiene la lista degli OP in formato JSON interrogando l':ref:`endpoint list<federation_endpoint>` disponibile presso il :ref:`Trust Anchor<Esempio_EN3>`. Per ogni soggetto contenuto nella :ref:`risposta<Esempio_EN3.1>` dell'endpoint list e corrispondente ad un OP, il RP :ref:`richiede<Esempio_EN2>` ed ottiene l'Entity Configuration self-signed presso l'OP. 
 
 Per ogni EC degli OP, il RP verifica la firma del contenuto adoperando la chiave pubblica ottenuta dall'Entity Statement rilasciato dalla Trust Anchor. Verificata la firma dell'Entity Configuration con la chiave pubblica dal TA, RP riconosce la fiducia nei confronti dell'OP. 
 
@@ -88,14 +88,5 @@ Una volta che un RP viene riconosciuto come parte della Federazione, ottiene il 
 
 
 *Trust Chain*
-
-
-Come mostrato nella figura successiva, la Trust Chain è una procedura che parte dalla radice (TA) e va verso le entità foglie, mentre il processo di ottenimento di una Trust Chain parte dalle entità foglie e, seguendo il percorso dato dall'*authority_hint*, raggiunge la radice (TA).
-
-
-.. image:: ../../images/cie_onboarding_e_direzioni_trust_chain.svg
-    :width: 50%
-
-*Onboarding e direzioni Trust Chain*
 
 

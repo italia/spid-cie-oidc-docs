@@ -101,7 +101,7 @@ EN 1.1. Entity Configuration Response Relying Party
  }
 
 
-
+.. _Esempio_EN1.2:
 
 EN 1.2. Entity Configuration Response Openid Provider
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -607,6 +607,53 @@ EN 5.1. Trust Mark Status Response
  
  {"active": true}
 
+.. _Esempio_EN6:
+
+EN 6. Authorization Request
+++++++++++++++++++++++++++++
+
+**Esempio (chiamata HTTP):**
+
+.. code-block::
+
+  GET /auth?client_id=https://rp.spid.agid.gov.it&
+  response_type=code&scope=openid& code_challenge=qWJlMe0xdbXrKxTm72EpH659bUxAxw80&
+  code_challenge_method=S256&request=eyJhbGciOiJSUzI1NiIsImtpZCI6ImsyYmRjIn0.ew0KIC
+  Jpc3MiOiAiczZCaGRSa3F0MyIsDQogImF1ZCI6ICJodHRwczovL3NlcnZlci5leGFtcGxlLmNvbSIsDQo
+  gInJlc3BvbnNlX3R5cGUiOiAiY29kZSBpZF90b2tlbiIsDQogImNsaWVudF9pZCI6ICJzNkJoZFJrcXQz
+  IiwNCiAicmVkaXJlY3RfdXJpIjogImh0dHBzOi8vY2xpZW50LmV4YW1wbGUub3JnL2NiIiwNCiAic2Nvc
+  GUiOiAib3BlbmlkIiwNCiAic3RhdGUiOiAiYWYwaWZqc2xka2oiLA0KICJub25jZSI6ICJuLTBTNl9Xek
+  EyTWoiLA0KICJtYXhfYWdlIjogODY0MDAsDQogImNsYWltcyI6IA0KICB7DQogICAidXNlcmluZm8iOiA
+  NCiAgICB7DQogICAgICJnaXZlbl9uYW1lIjogeyJlc3NlbnRpYWwiOiB0cnVlfSwNCiAgICAgI…
+
+  Host: https://op.spid.agid.gov.it
+  HTTP/1.1
+  
+**Esempio del payload del JWT:**
+
+.. code-block::
+
+  {
+      "client_id":"https://rp.spid.agid.gov.it",
+      "response_type":"code",
+      "scope":"openid",
+      "code_challenge":"qWJlMe0xdbXrKxTm72EpH659bUxAxw80",
+      "code_challenge_method":"S256",
+      "nonce":"MBzGqyf9QytD28eupyWhSqMj78WNqpc2",
+      "prompt":"login",
+      "redirect_uri":"https://rp.spid.agid.gov.it/callback1",
+      "acr_values":{
+        "https://www.spid.gov.it/SpidL1":null,
+        "https://www.spid.gov.it/SpidL2":null
+      },
+      "claims":{
+        "userinfo":{
+            "https://attributes.spid.gov.it/name":null,
+            "https://attributes.spid.gov.it/familyName":null
+        }
+      },
+      "state":"fyZiOL9Lf2CeKuNT2JzxiLRDink0uPcd"
+  }
 
 
 

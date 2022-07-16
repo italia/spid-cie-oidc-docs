@@ -3,12 +3,11 @@
 Token Endpoint (richiesta token)
 --------------------------------
 
-Il Token Endpoint rilascia *access token, ID Token e refresh token*. Vi sono due scenari distinti
-in cui il client chiama il Token Endpoint:
+Il Token Endpoint rilascia un *Access Token, un ID Token e un Refresh Token*. Il RP invia una richiesta al Token Endpoint:
 
- 1. al termine del flusso di autenticazione descritto nel paragrafo precedente, il Client chiama il Token Endpoint inviando l'authorization code ricevuto dall'OP (code=usDwMnEzJPpG5oaV8x3j) per ottenere un ID Token e un access token (necessario per poi chiedere gli attributi/claim allo UserInfo Endpoint) ed eventualmente un refresh token (se è stata avviata una `sessione lunga revocabile`_)
+ 1. al termine del flusso di autenticazione descritto nel paragrafo precedente, inviando l'authorization code ricevuto dall'OP (esempio, code=usDwMnEzJPpG5oaV8x3j) per ottenere un ID Token e un Access Token ed eventualmente un Refresh Token (se è stata avviata una `sessione lunga revocabile`_)
 
- 2. in presenza di una `sessione lunga revocabile`_, il Client chiama il Token Endpoint inviando il refresh token in suo possesso per ottenere un nuovo access token.
+ 2. in presenza di una `sessione lunga revocabile`_, il RP chiama il Token Endpoint inviando il Refresh Token in suo possesso per ottenere un nuovo Access Token.
 
 .. seealso:: 
 
@@ -20,7 +19,7 @@ in cui il client chiama il Token Endpoint:
 Request
 +++++++
 
-L'unico metodo di autenticazione all'endpoint token previsto è il private_key_jwt (OIDC Connect Core 1.0 par. 9)
+Il metodo di autenticazione del RP presso il token endpoint è il private_key_jwt (OIDC Connect Core 1.0 par. 9)
 
 
 **Esempio di richiesta con authorization code (caso 1)**
@@ -42,9 +41,9 @@ L'unico metodo di autenticazione all'endpoint token previsto è il private_key_j
 
 .. seealso::
 
- - https://openid.net/specs/openid-connect-core-1_0.html#ClientAuthentication
+ - https://openid.net/specs/openid-connect-core-1_0.html#RPAuthentication
 
-**Esempio di richiesta con refresh token (caso 2):**
+**Esempio di richiesta con Refresh Token (caso 2):**
 
 .. code-block:: 
 
@@ -96,7 +95,7 @@ L'unico metodo di autenticazione all'endpoint token previsto è il private_key_j
      - Codice di verifica del code_challenge. Obbligatorio solo se **grant_type** è **authorization_code** 
      - |spid-icon| |cieid-icon|
    * - **grant_type**
-     - Tipo di credenziale presentata dal Client per la richiesta corrente.
+     - Tipo di credenziale presentata dal RP per la richiesta corrente.
        Può assumere uno dei seguenti valori: 
 	 
 	   - **authorization_code**
@@ -111,9 +110,9 @@ L'unico metodo di autenticazione all'endpoint token previsto è il private_key_j
 Response
 ++++++++
 
-Dopo avere ricevuto e validato la Token request dal client, il Token endpoint dell'OpenID Provider (OP) restituisce una response che include ID Token e Access Token e un eventuale Refresh Token, in formato JWT e firmati.
+L'OpenID Provider (OP) restituisce un ID Token e Access Token e un eventuale Refresh Token, in formato JWT firmato.
 
-L'Access Token deve essere formatosecondo le indicazioni dello standard "International Government Assurance Profile (iGov) for OAuth 2.0 - Draft 03", paragrafo 3.2.1, "JWT Bearer Tokens".
+L'Access Token deve essere formato secondo le indicazioni dello standard "International Government Assurance Profile (iGov) for OAuth 2.0 - Draft 03", paragrafo 3.2.1, "JWT Bearer Tokens".
 
 L'ID Token deve essere formato secondo le indicazioni del paragrafo successivo.
 
@@ -135,16 +134,16 @@ L'ID Token deve essere formato secondo le indicazioni del paragrafo successivo.
      - **Descrizione**
      - **Supportato da**
    * - **access_token**
-     - L'access token, in formato JWT firmato, consente l'accesso allo UserInfo endpoint per ottenere gli attributi.
+     - L'Access Token, in formato JWT firmato, consente l'accesso allo UserInfo endpoint per ottenere gli attributi.
      - |spid-icon| |cieid-icon|
    * - **token_type**
-     - Tipo di *access token* restituito. Deve essere valorizzato sempre con **Bearer**
+     - Tipo di *Access Token* restituito. Deve essere valorizzato sempre con **Bearer**
      - |spid-icon| |cieid-icon|
    * - **refresh_token**
-     - Il *refresh token*, in formato JWT firmato, consente di chiamare nuovamente il Token Endpoint per ottenere un nuovo *access token* e quindi recuperare una `sessione lunga revocabile`_.
+     - Il *Refresh Token*, in formato JWT firmato, consente di chiamare nuovamente il Token Endpoint per ottenere un nuovo *Access Token* e quindi recuperare una `sessione lunga revocabile`_.
      - |spid-icon| |cieid-icon|
    * - **expires_in**
-     - Scadenza dell'*access token* in secondi.
+     - Scadenza dell'*Access Token* in secondi.
      - |spid-icon| |cieid-icon|
    * - **id_token**
      - ID Token in formato JWT (v. paragrafo successivo)
@@ -154,7 +153,7 @@ L'ID Token deve essere formato secondo le indicazioni del paragrafo successivo.
 ID Token
 ++++++++
 
-L'ID Token è un JSON Web Token (JWT) che contiene informazioni sull'utente che ha eseguito l'autenticazione. I Client devono eseguire la validazione dell'ID Token.
+L'ID Token è un JSON Web Token (JWT) che contiene informazioni sull'utente che ha eseguito l'autenticazione. I RP devono eseguire la validazione dell'ID Token.
 
 **Esempio di ID Token:**
 
@@ -194,7 +193,7 @@ L'ID Token è un JSON Web Token (JWT) che contiene informazioni sull'utente che 
      - Livello di autenticazione effettivo. Può essere uguale o superiore a quello richiesto dal client nella Authentication Request.
      - |spid-icon| |cieid-icon|
    * - **at_hash** 
-     - Hash dell'Access Token. Il suo valore è la codifica base64url della prima metà dell'hash del valore access_token, usando l'algoritmo di hashing indicato in **alg** nell'header dell'ID Token. Il client è tenuto a verificare che questo valore corrisponda all'*access token* restituito insieme all'ID Token.
+     - Hash dell'Access Token. Il suo valore è la codifica base64url della prima metà dell'hash del valore access_token, usando l'algoritmo di hashing indicato in **alg** nell'header dell'ID Token. Il client è tenuto a verificare che questo valore corrisponda all'*Access Token* restituito insieme all'ID Token.
      - |spid-icon| |cieid-icon|
    * - **iat** 
      - UNIX Timestamp con l'istante di generazione del JWT, codificato come NumericDate come indicato in :rfc:`7519`
@@ -220,7 +219,7 @@ L'ID Token è un JSON Web Token (JWT) che contiene informazioni sull'utente che 
      - String. Identificatore unico dell'ID Token che il client può utilizzare per prevenirne il riuso, rifiutando l'ID Token se già processato. Deve essere di difficile individuazione da parte di un attaccante e composto da una stringa casuale. Si consiglia l'utilizzo del generatore *uuid4*
      - |spid-icon| |cieid-icon|
    * - **nonce** 
-     - String. Stringa casuale generata dal Client per ciascuna sessione utente ed inviata nell'Authentication Request (parametro nonce), finalizzata a mitigare attacchi replay. Il client è tenuto a verificare che coincida con quella inviata nell'Authentication Request.
+     - String. Stringa casuale generata dal RP per ciascuna sessione utente ed inviata nell'Authentication Request (parametro nonce), finalizzata a mitigare attacchi replay. Il client è tenuto a verificare che coincida con quella inviata nell'Authentication Request.
      - |spid-icon| |cieid-icon|
 
 

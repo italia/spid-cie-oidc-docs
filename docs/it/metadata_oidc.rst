@@ -15,5 +15,5 @@ In OIDC-FED il Metadata OIDC relativo a RP e OP viene definito all'interno del c
 
    metadata_oidc_op.rst
    metadata_oidc_rp.rst
-   metadata_oidc_fa.rst
-   metadata_oidc_altri.rst
+   metadata_aa.rst
+
