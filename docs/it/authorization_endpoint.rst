@@ -86,7 +86,7 @@ Il payload del **JWT** contiene i seguenti parametri obbligatori.
    * - **prompt**
      - Vedi `OpenID.Core#AuthRequest`_. I valori consentiti sono:
        
-       **consent** (valore consigliato): Se non è già attiva una sessione di Single Sign-On, 
+       **consent**: Se non è già attiva una sessione di Single Sign-On, 
        l'OP fa una richiesta di autenticazione all'utente.
        Quindi chiede il consenso al trasferimento degli attributi. 
 
