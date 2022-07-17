@@ -81,14 +81,12 @@ Il payload del **JWT** contiene i seguenti parametri obbligatori.
      - Come definito nella  :ref:`Tabella dei parametri HTTP <tabella_parametri_http_req>`.
      - |spid-icon| |cieid-icon|
    * - **nonce**
-     - Stringa di almeno 32 caratteri alfanumerici, generata casualmente dal Client e finalizzata a mitigare attacchi replay.
-       Questo valore sarà restituito nell'ID Token fornito dal Token Endpoint, in modo da consentire al client di verificare
-       che sia uguale a quello inviato nella richiesta di autenticazione.
+     - Vedi `OpenID.Core#AuthRequest`_. DEVE essere una stringa casuale di almeno 32 caratteri alfanumerici. Questo valore sarà restituito nell'ID Token fornito dal Token Endpoint, in modo da consentire al client di verificare che sia uguale a quello inviato nella richiesta di autenticazione.
      - |spid-icon| |cieid-icon|
    * - **prompt**
-     - Definisce come l'OP deve richiedere l'autenticazione all'utente.
+     - Vedi `OpenID.Core#AuthRequest`_. I valori consentiti sono:
        
-       **consent** (valore consigliato): Se non è già attiva una sessione di Single Sign-On, 
+       **consent**: Se non è già attiva una sessione di Single Sign-On, 
        l'OP fa una richiesta di autenticazione all'utente.
        Quindi chiede il consenso al trasferimento degli attributi. 
 
@@ -97,34 +95,25 @@ Il payload del **JWT** contiene i seguenti parametri obbligatori.
 
      - |spid-icon| |cieid-icon|
    * - **redirect_uri**
-     - URL dove l'OP reindirizzerà l'utente al termine del processo di autenticazione. 
-       Deve essere uno degli URL indicati nel client metadata. 
+     - Vedi `OpenID.Core#AuthRequest`_. DEVE essere una URL indicata nel :ref:`Metadata RP <MetadataRP>`. 
      - |spid-icon| |cieid-icon|
    * - **response_type**
-     - Il tipo di credenziali che deve restituire l'OP.
-       **code**
+     - Vedi `OpenID.Core#AuthRequest`_. Come definito dal parametro **response_types_supported** nel :ref:`Metadata OP <MetadataOP>`.
      - |spid-icon| |cieid-icon|
    * - **scope**
      - Come definito nella  :ref:`Tabella dei parametri HTTP <tabella_parametri_http_req>`.
      - |spid-icon| |cieid-icon|
    * - **acr_values**
-     - Valori di riferimento della classe di contesto dell'Authentication Request. 
-       Stringa separata da uno spazio, che specifica i valori "acr" richiesti al server di autorizzazione per l'elaborazione della richiesta di autenticazione con i valori indicati in ordine di preferenza. L'OP può utilizzare un'autenticazione ad un livello più alto di quanto richiesto.
-       Deve contenere per SPID e CIE uno o più valori tra i seguenti:
-       
-       ``https://www.spid.gov.it/SpidL1``
-       ``https://www.spid.gov.it/SpidL2``
-       ``https://www.spid.gov.it/SpidL3``
+     - Vedi `OpenID.Core#AuthRequest`_. Come definito dal parametro **acr_values_supported** nel :ref:`Metadata OP <MetadataOP>`.
+       Valori di riferimento della classe di contesto dell'Authentication Request. 
+       DEVE essere una stringa separata da uno spazio, che specifica i valori "acr" richiesti in ordine di preferenza. L'OP PUÒ utilizzare un'autenticazione ad un livello più alto di quanto richiesto. Tale scelta non DEVE comportare un esito negativo della richiesta.
      - |spid-icon| |cieid-icon|
    * - **claims**
-     - Lista dei claims (attributi) che un RP intende richiedere. Vedi paragrafo *Claims*
+     - Vedi `OpenID.Core#AuthRequest`_. Vedi Sezione :ref:`Utilizzo dei parametri **scope** e **claims** <parametri_scope_claims>`
      - |spid-icon| |cieid-icon|
    * - **state**
-     - Stringa di almeno 32 caratteri alfanumerici. Identificativo univoco della sessione lato RP. Questo valore verrà restituito al client nella risposta al termine dell'autenticazione. Il valore deve essere significativo esclusivamente per il RP e non deve essere intellegibile ad altri.
+     - - Vedi `OpenID.Core#AuthRequest`_. DEVE essere una stringa casuale di almeno 32 caratteri alfanumerici. Identificativo univoco della sessione lato RP. Questo valore verrà restituito al client nella risposta al termine dell'autenticazione.
      - |spid-icon| |cieid-icon|
-   * - **ui_locales**
-     - Lista di codici :rfc:`5646` separati da spazi. Lingue preferibili per visualizzare le pagine dell'OP. L'OP può ignorare questo parametro se non dispone di nessuna delle lingue indicate.
-     - |spid-icon| |cieid-icon|	
    * - **exp**
      - UNIX Timestamp con l'istante di scadenza del JWT, codificato come NumericDate come indicato in :rfc:`7519`
      - |spid-icon| |cieid-icon|
@@ -132,14 +121,12 @@ Il payload del **JWT** contiene i seguenti parametri obbligatori.
      - UNIX Timestamp con l'istante di generazione del JWT, codificato come NumericDate come indicato in :rfc:`7519`
      - |spid-icon| |cieid-icon|
    * - **iss**
-     - String. Uguale a client_id. 
+     - DEVE corrispondere al *client_id*. 
      - |spid-icon| |cieid-icon|
    * - **aud**
-     - String. Deve corrispondere all'identificatore del OP.
+     - DEVE corrispondere all'identificativo del OP (parametro *issuer* presente nel :ref:`Metadata OP <MetadataOP>`.)
      - |spid-icon| |cieid-icon|
-   * - **typ**
-     - Ove fosse assente, viene considerato *JWT* come definito da :rfc:`7519#section-5.1`
-     - |spid-icon| |cieid-icon|
+
 
 
 

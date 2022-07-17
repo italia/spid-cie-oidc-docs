@@ -105,12 +105,6 @@ Il Metadata dell'OP contenuto nell'<entity-type> **"openid_provider"** DEVE cont
   * - **request_object_signing_alg_values_supported**
     - Vedi `OpenID.Discovery#OP_Metadata`_. L'OP DEVE supportare RS256 e PUÒ supportare anche altri algoritmi definiti in :rfc:`7518#section-3.1`.
     - |spid-icon| |cieid-icon|
-  * - **request_object_encryption_alg_values_supported**
-    - Vedi `OpenID.Discovery#OP_Metadata`_. Per la definizione degli algoritmi di cifratura (*alg*) vedi :rfc:`7518#section-4.1`
-    - |spid-icon| |cieid-icon|
-  * - **request_object_encryption_enc_values_supported**
-    - Vedi `OpenID.Discovery#OP_Metadata`_. Per la definizione degli algoritmi di cifratura (*enc*) vedi :rfc:`7518#section-5.1`
-    - |spid-icon| |cieid-icon|
   * - **token_endpoint_auth_methods_supported**
     - Vedi `OpenID.Discovery#OP_Metadata`_. Il valore supportato è **private_key_jwt**
     - |spid-icon| |cieid-icon|

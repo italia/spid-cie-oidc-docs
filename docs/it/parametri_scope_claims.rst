@@ -1,5 +1,7 @@
 .. include:: ./common_definitions.rst
 
+.. _parametri_scope_claims:
+
 Utilizzo dei parametri **scope** e **claims**
 ---------------------------------------------
 
