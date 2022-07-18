@@ -120,5 +120,5 @@ The ECs of a TA, other than the common claims of all the other members, contain 
 
 .. seealso:: 
 
-   - :ref:`Non-normative example <Esempio_EN1.4>`
+   - :ref:`Non-normative example of EC of a TA<Esempio_EN1.4>`
    

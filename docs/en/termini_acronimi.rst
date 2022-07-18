@@ -1,7 +1,10 @@
 .. include:: ./common_definitions.rst
 
-Terms and Definitions
----------------------
+Terms and Acronyms
+------------------
+
+Terms
++++++
 
 Following, the terms used by `OIDC-FED#Section_1.2`_ and this documentation.
 
@@ -52,7 +55,7 @@ Following, the terms used by `OIDC-FED#Section_1.2`_ and this documentation.
 
 
 Acronyms
---------
+++++++++
 
 In this section are defined all the acronyms that are used throughout the text.
 
@@ -105,8 +108,8 @@ In this section are defined all the acronyms that are used throughout the text.
 
 
 
-Conventions and Terminology
----------------------------
+Conventions and Normative Terms
++++++++++++++++++++++++++++++++
 
 The keywords "MUST" "MUST NOT" "REQUIRES" and "REQUIRE", "SHOULD", "SHOULD NOT", "RECOMMENDED", "CAN" and "OPTIONAL" in the present document must be interpreted as described at BCP 14 :rfc:`2119` :rfc:`8174` when and only when they appear in capital letters.
 

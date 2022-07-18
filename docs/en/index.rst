@@ -25,27 +25,30 @@ Indix of content
 .. toctree:: 
    :maxdepth: 2
 
+   standards.rst
    termini_acronimi.rst
    la_federazione_delle_identita.rst
-   configurazione_federazione.rst
    entity_configuration.rst
    entity_statement.rst
    trust_marks.rst
+   trust_marks_cie.rst
+   soggetti_aggregatori.rst
    trust_negotiation.rst
+   federation_endpoint.rst
    metadata_oidc.rst
+   parametri_scope_claims.rst
    flusso_autenticazione.rst
    authorization_endpoint.rst
    authentication_response.rst
    token_endpoint.rst
    userinfo_endpoint.rst
+   attributi_utente.rst
    introspection_endpoint.rst
    revocation_endpoint.rst
-   federation_endpoint.rst
    differenze_oidc_fed.rst
    come_contribuire.rst
-   diventa_fornitore.rst
-   standards.rst
-   avvisi_spid.rst
    seccons_bcps.rst
+   diventa_fornitore.rst
+   avvisi_spid.rst
    esempi.rst
-   attributi_utente.rst
+   

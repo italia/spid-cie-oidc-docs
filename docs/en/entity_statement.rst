@@ -18,14 +18,7 @@ and publish the TMs that it has issued for them.
 Entity Statement Signature
 ++++++++++++++++++++++++++
 
-Please see :ref:`Entity Configuration Signature<firma_EC>`
-
-
-Federation Metadata
-+++++++++++++++++++
-
-OIDC Federation defines the Federation Metadata containing the information defined below, 
-and the OIDC Metadata for each type of entity.
+The same considerations made for the **ECs** and reported in the section :ref:`Firma della Entity Configuration<firma_EC>`, apply.
 
 
 Entity Statement
