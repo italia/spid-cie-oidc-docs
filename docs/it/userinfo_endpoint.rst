@@ -3,15 +3,15 @@
 UserInfo Endpoint (attributi)
 -----------------------------
 
-Lo UserInfo Endpoint è una risorsa protetta OAuth 2.0 che restituisce attributi dell'utente autenticato. Per ottenere gli attributi richiesti, il Relying Party inoltra una richiesta allo UserInfo Endpoint utilizzando l'Access token.
+Lo UserInfo Endpoint è una risorsa protetta OIDC che restituisce gli attributi dell'utente autenticato. Per ottenere gli attributi richiesti, il RP inoltra una richiesta allo UserInfo Endpoint utilizzando l'Access Token.
 
-Lo UserInfo Endpoint DEVE supportare l'uso del solo metodo HTTP GET :rfc:`2616`, DEVE accettare il token di accesso, inviato all'interno del campo Authorization dell'Header, come token bearer OAuth 2.0 :rfc:`6750`.
+Lo UserInfo Endpoint DEVE supportare l'uso del solo metodo HTTP GET :rfc:`2616` e DEVE accettare e validare l'Access Token inviato all'interno del campo Authorization dell'Header, di tipo Bearer :rfc:`6750`.
 
 
 .. code-block:: 
 
  GET https://op.spid.agid.gov.it/userinfo
-  Authorization: Bearer dC34Pf6kdG
+  Authorization: Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRCNjdnTDdja ...
   
 .. seealso::
 

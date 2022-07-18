@@ -1,7 +1,10 @@
 .. include:: ./common_definitions.rst
 
-Termini utilizzati
+Termini e Acronimi
 ------------------
+
+Termini
++++++++
 
 Seguono i termini utilizzati da `OIDC-FED#Section_1.2`_ e in questo documento.
 
@@ -11,9 +14,9 @@ Seguono i termini utilizzati da `OIDC-FED#Section_1.2`_ e in questo documento.
 
     * - **Autorità di Federazione**
       - Un'entità legale che gestisce la fiducia tra le parti coinvolte nella Federazione e norma il funzionamento e le modalità 
-        di registrazione e riconoscimento dei partecipanti. Si tratta di un **Trust Anchor** (la radice del *trust*). 
+        di registrazione e riconoscimento dei partecipanti.
     * - **Trust Anchor**
-      - Sistema gestito dalla Autorità di Federazione, che rappresenta la Federazione, la sua configurazione e la radice della fiducia.
+      - Sistema gestito dalla Autorità di Federazione, che rappresenta la Federazione e la sua configurazione.
     * - **Intermediario**
       - Soggetto Aggregatore (SA), facilita l'ingresso nella Federazione e PUÒ gestire le funzionalità per conto di un 
         suo discendente (Aggregato). Pubblica la propria configurazione all'interno della Federazione e le affermazioni di riconoscimento delle parti sue discendenti (Aggregati) secondo le regole definite dalla Federazione.
@@ -43,7 +46,7 @@ Seguono i termini utilizzati da `OIDC-FED#Section_1.2`_ e in questo documento.
       - Endpoint usati per prendere e risolvere gli statement delle entità, interrogare una lista di tutte le entità subordinate e verificare lo stato dei Trust Mark.
 
 Acronimi 
---------
+++++++++
 
 In questa sezione sono definiti tutti gli acronimi utilizzati all'interno del testo.
 
@@ -94,8 +97,8 @@ In questa sezione sono definiti tutti gli acronimi utilizzati all'interno del te
 
 
 
-Convenzioni e Terminologia
---------------------------
+Convenzioni e Termini normativi
++++++++++++++++++++++++++++++++
 
 Le parole chiave "DEVE" e "DEVONO", "NON DEVE" e "NON DEVONO", "RICHIEDE" e "RICHIESTO", "NON DEVE", "DOVREBBE", "NON DOVREBBE", "RACCOMANDATO", "PUÒ" e "OPZIONALE" nel presente documento devono essere interpretate come descritte nel BCP 14 :rfc:`2119` :rfc:`8174` quando e solo quando appaiono in maiuscolo.
 
