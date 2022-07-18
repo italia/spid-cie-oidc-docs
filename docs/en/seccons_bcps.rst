@@ -3,7 +3,7 @@
 .. _Considerazioni_di_Sicurezza:
 
 Considerazioni di Sicurezza
----------------------------
+----------------------------
 
 In questa sezione descriviamo alcune considerazioni di sicurezza in ambito OIDC Federation.
 
