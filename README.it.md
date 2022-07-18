@@ -15,7 +15,7 @@
 - [Versioning](#versioning)
 - [Contributing](#come-contribuire)
 - [Autori](#autori)
-- [License](#license)
+- [License](#licenza)
 
 ## Descrizione
 
