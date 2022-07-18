@@ -8,7 +8,7 @@
 OpenID Connect Provider Metadata (OP) per SPID
 ++++++++++++++++++++++++++++++++++++++++++++++
 
-Segue la tabella dei claim specifici per la Federazione SPID.
+In aggiunta ai metadata di un OP, SPID richiede l'aggiunta dei seguenti paramentri.
 
 .. list-table:: 
    :widths: 20 60 20

@@ -4,9 +4,4 @@ paths-ignore:
  - docs/it/revocation_endpoint.rst
  - docs/en/userinfo_endpoint.rst
  - docs/en/introspection_endpoint.rst
-<<<<<<< HEAD
  - docs/en/revocation_endpoint.rst
-=======
- - docs/en/revocation_endpoint.rst
->>>>>>> 5c97027322cef32148ddab9c9e769bdde50d3874
-

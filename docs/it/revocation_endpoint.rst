@@ -3,11 +3,14 @@
 Revocation Endpoint (logout)
 ----------------------------
 
-Il Revocation Endpoint consente al RP di chiedere la revoca di un *access token* o di un *refresh token* in suo possesso.
+Un RP PUÒ chiedere la revoca di un Access Token o di un Refresh Token emesso da un OP.
 
-Quando l'utente esegue il logout o quando la sua sessione presso il RP scade (in base alle policy decise da quest'ultimo), il RP deve chiamare questo endpoint per revocare l'*access token* e l'eventuale *refresh token* in suo possesso.
+Quando l'utente esegue il logout il RP DEVE revocare l' Access Token in suo possesso.
 
-L'OP dovrà revocare il token specificato nella richiesta e dovrà terminare la sessione di Single Sign-On se ancora attiva. Eventuali altri token attivi per l'utente dovranno invece essere mantenuti validi.
+.. note::
+  La revoca di un Access Token comporta la revoca di tutti i Refresh Token a questo collegati.
+
+L'OP DOVRÀ revocare il token specificato nella richiesta e DOVRÀ terminare la sessione di Single Sign-On se ancora attiva.
 
 .. seealso::
 

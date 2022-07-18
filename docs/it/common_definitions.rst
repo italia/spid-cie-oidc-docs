@@ -26,13 +26,21 @@
 .. _OIDC-FED#Federation_Entity: https://openid.net/specs/openid-connect-federation-1_0.html#rfc.section.4.6
 .. _LG-AA: https://docs.italia.it/AgID/documenti-in-consultazione/lg-spid-attribute-authority-docs/it/master/index.html
 .. _OpenID.Core: https://openid.net/specs/openid-connect-core-1_0-27.html
+.. _OpenID.Core#ClaimsParameter: https://openid.net/specs/openid-connect-core-1_0.html#ClaimsParameter
+.. _OpenID.Core#Serializations: https://openid.net/specs/openid-connect-core-1_0.html#Serializations
+.. _OpenID.Core#JWTRequests: https://openid.net/specs/openid-connect-core-1_0.html#JWTRequests
+.. _OpenID.Core#AuthRequest: https://openid.net/specs/openid-connect-core-1_0.html#AuthRequest
 .. _OpenID.Registration: https://openid.net/specs/openid-connect-registration-1_0.html
+.. _OpenID.Registration#ClientMetadata: https://openid.net/specs/openid-connect-registration-1_0.html#ClientMetadata
 .. _OpenID.Discovery: https://openid.net/specs/openid-connect-discovery-1_0.html
 .. _OpenID.Discovery#OP_metadata: https://openid.net/specs/openid-connect-discovery-1_0.html#ProviderMetadata
 .. _OpenID Connect Core: https://openid.net/specs/openid-connect-core-1_0.html
 .. _OIDC-FED#Section_1.2: https://openid.net/specs/openid-connect-federation-1_0.html#rfc.section.1.2
 .. _OIDC-FED#Section_3.1: https://openid.net/specs/openid-connect-federation-1_0.html#rfc.section.3.1
+.. _OIDC-FED#Section.4.1: https://openid.net/specs/openid-connect-federation-1_0.html#rfc.section.4.1
+.. _OIDC-FED#Section.4.2: https://openid.net/specs/openid-connect-federation-1_0.html#rfc.section.4.2
 .. _OIDC-FED#Section.4.5: https://openid.net/specs/openid-connect-federation-1_0.html#rfc.section.4.5
+.. _OIDC-FED#Section.4.6: https://openid.net/specs/openid-connect-federation-1_0.html#rfc.section.4.6
 .. _OIDC-FED#Section.5.1: https://openid.net/specs/openid-connect-federation-1_0.html#rfc.section.5.1
 .. _OIDC-FED#Section.5.3.1: https://openid.net/specs/openid-connect-federation-1_0.html#rfc.section.5.3.1
 .. _OIDC-FED#Section.5.3.2: https://openid.net/specs/openid-connect-federation-1_0.html#rfc.section.5.3.2
@@ -66,4 +74,6 @@
 .. _JWE: https://datatracker.ietf.org/doc/html/draft-ietf-jose-json-web-encryption
 .. _JWK: https://datatracker.ietf.org/doc/html/draft-ietf-jose-json-web-key
 .. _JWS: https://datatracker.ietf.org/doc/html/draft-ietf-jose-json-web-signature
+.. _OAuth-DPoP: https://datatracker.ietf.org/doc/html/draft-ietf-oauth-dpop-10
+.. _OAuth-RS: https://datatracker.ietf.org/doc/html/draft-jones-oauth-resource-metadata
 

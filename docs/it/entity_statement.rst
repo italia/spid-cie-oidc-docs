@@ -6,9 +6,10 @@
 Entity Statement
 ----------------
 
-Il componente basilare per costruire una Catena di Fiducia (Trust Chain) è l'**Entity Statement (ES)**, un JWT firmato che contiene le chiavi di firma delle entità discendenti e ulteriori dati usati per controllare il processo di risoluzione della Trust Chain. 
+Il componente basilare per costruire una Catena di Fiducia (Trust Chain) è l'**Entity Statement (ES)**, un JWT firmato che contiene le chiavi pubbliche delle entità discendenti e ulteriori dati usati per controllare il processo di risoluzione della Trust Chain. 
 
-Una entità pubblica un **ES** relativo ad un suo discendente presso il proprio :ref:`Fetch Endpoint<Esempio_EN2>`. L'entità superiore PUÒ definire le policy sui metadata dei soggetti discendenti e pubblicare i TM da lei emessa per questi.
+Una entità pubblica un **ES** relativo ad un suo discendente presso il proprio :ref:`Fetch Endpoint<federation_endpoint>`. L'entità superiore PUÒ definire le policy sui metadata dei soggetti discendenti e pubblicare i TM da lei emessi per questi.
+
 
 
 Firma di Entity Statement
