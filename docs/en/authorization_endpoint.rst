@@ -1,67 +1,67 @@
 .. include:: ./common_definitions.rst
 
-Authorization Endpoint (Authentication Request)
+Authorization Request (Authentication Endpoint)
 -----------------------------------------------
 
-Per avviare il processo di autenticazione, il RP reindirizza l'utente all'Authorization Endpoint dell'OP selezionato, passando in POST o in GET una richiesta avente nel parametro **request** un oggetto in formato JWT.
+Per avviare il processo di autenticazione, il RP reindirizza l'utente all'*Authorization Endpoint* dell'OP selezionato, inviando una richiesta *HTTP* contenente il parametro **request** un oggetto in formato **JWT** che contiene l'*Authorization Request* firmata dall'RP.
 
-Se viene utilizzato il metodo POST i parametri devono essere trasmessi utilizzando la Form Serialization (OIDC Connect Core 1.0 par. 13.2).
+Per veicolare la richiesta, l'RP PUÒ utilizzare i metodi **POST** e **GET**. Mediante il metodo **POST** i parametri DEVONO essere trasmessi utilizzando la *Form Serialization*. 
+Mediante il metodo **GET** i parametri DEVONO essere trasmessi utilizzando la *Query String Serialization*. Per maggiori dettagli vedi `OpenID.Core#Serializations`_.
 
-I parametri **client_id**, **response_type** e **scope** DEVONO essere trasmessi sia come parametri sulla chiamata HTTP sia all'interno dell'oggetto request e i loro valori devono corrispondere, in ogni caso i parametri all'interno dell'oggetto request prevalgono su quelli indicati sulla chiamata HTTP.
+.. warning::
+  Il parametro **scope** DEVE essere trasmesso sia come parametro nella chiamata HTTP sia all'interno dell'oggetto request e i loro valori DEVONO corrispondere.
 
-L'oggetto request DEVE essere un token JWT firmato.
+  I parametri **client_id** e **response_type** DOVREBBERO essere trasmessi sia come parametri sulla chiamata HTTP sia all'interno dell'oggetto request. In questo caso, i parametri all'interno dell'oggetto request prevalgono su quelli indicati nella chiamata HTTP.
+
+.. seealso:: 
+
+   - :ref:`Esempio di Authorization Request <Esempio_EN6>`
+
+Di seguito i parametri obbligatori nella richiesta di autenticazione *HTTP*.
+
+.. _tabella_parametri_http_req:
+
+.. list-table:: 
+  :widths: 20 60 20
+  :header-rows: 1
+
+  * - **Parametro**
+    - **Descrizione**
+    - **Supportato da**
+  * - **scope**
+    - Riporta di valori di *scope* supportati dall'OP e definiti dal parametro **scopes_supported** nel :ref:`Metadata OP <MetadataOP>`. DEVE essere presente almeno il valore *openid*.
+    - |spid-icon| |cieid-icon|
+  * - **code_challenge**
+    - Vedi :rfc:`7636#section-4.2`.
+    - |spid-icon| |cieid-icon|
+  * - **code_challenge_method**
+    - Come definito dal parametro **code_challenge_methods_supported** nel :ref:`Metadata OP <MetadataOP>`.
+    - |spid-icon| |cieid-icon|
+  * - **request**
+    - Vedi `OpenID.Core#JWTRequests`_. DEVE essere un **JWT** firmato.
+    - |spid-icon| |cieid-icon|
+
+Di seguito una tabella che riporta la composizione dell'header del **JWT**.
+
+.. list-table:: 
+  :widths: 20 60 20
+  :header-rows: 1
+
+  * - **Jose Header**
+    - **Descrizione**
+    - **Supportato da**
+  * - **alg**
+    - Vedi :rfc:`7516#section-4.1.1`. DEVE essere valorizzato con uno dei valori presenti nel parametro **request_object_encryption_alg_values_supported** nel :ref:`Metadata OP <MetadataOP>`.
+    - |spid-icon| |cieid-icon|
+  * - **kid**
+    - Vedi :rfc:`7638#section_3`. 
+    - |spid-icon| |cieid-icon|
+
+.. note::
+  Il parametro **typ** PUÒ essere omesso nel caso di **JWT**.
 
 
-**Esempio (chiamata HTTP):**
-
-.. code-block::
-
- GET /auth?client_id=https://rp.spid.agid.gov.it&
- response_type=code&scope=openid& code_challenge=qWJlMe0xdbXrKxTm72EpH659bUxAxw80&
- code_challenge_method=S256&request=eyJhbGciOiJSUzI1NiIsImtpZCI6ImsyYmRjIn0.ew0KIC
- Jpc3MiOiAiczZCaGRSa3F0MyIsDQogImF1ZCI6ICJodHRwczovL3NlcnZlci5leGFtcGxlLmNvbSIsDQo
- gInJlc3BvbnNlX3R5cGUiOiAiY29kZSBpZF90b2tlbiIsDQogImNsaWVudF9pZCI6ICJzNkJoZFJrcXQz
- IiwNCiAicmVkaXJlY3RfdXJpIjogImh0dHBzOi8vY2xpZW50LmV4YW1wbGUub3JnL2NiIiwNCiAic2Nvc
- GUiOiAib3BlbmlkIiwNCiAic3RhdGUiOiAiYWYwaWZqc2xka2oiLA0KICJub25jZSI6ICJuLTBTNl9Xek
- EyTWoiLA0KICJtYXhfYWdlIjogODY0MDAsDQogImNsYWltcyI6IA0KICB7DQogICAidXNlcmluZm8iOiA
- NCiAgICB7DQogICAgICJnaXZlbl9uYW1lIjogeyJlc3NlbnRpYWwiOiB0cnVlfSwNCiAgICAgI…
-
- Host: https://op.spid.agid.gov.it
- HTTP/1.1
- 
-**Esempio (contenuto del JWT):**
-
-.. code-block::
-
- {
-     "client_id":"https://rp.spid.agid.gov.it",
-     "response_type":"code",
-     "scope":"openid",
-     "code_challenge":"qWJlMe0xdbXrKxTm72EpH659bUxAxw80",
-     "code_challenge_method":"S256",
-     "nonce":"MBzGqyf9QytD28eupyWhSqMj78WNqpc2",
-     "prompt":"login",
-     "redirect_uri":"https://rp.spid.agid.gov.it/callback1",
-     "acr_values":{
-         "https://www.spid.gov.it/SpidL1":null,
-         "https://www.spid.gov.it/SpidL2":null
-     },
-     "claims":{
-         "id_token":{
-             "nbf":{
-                 "essential":true
-             },
-             "jti":{
-                 "essential":true
-             }
-         },
-         "userinfo":{
-             "https://attributes.spid.gov.it/name":null,
-             "https://attributes.spid.gov.it/familyName":null
-         }
-     },
-     "state":"fyZiOL9Lf2CeKuNT2JzxiLRDink0uPcd"
- }
+Il payload del **JWT** contiene i seguenti parametri obbligatori.
 
 
 .. list-table:: 
@@ -72,23 +72,21 @@ L'oggetto request DEVE essere un token JWT firmato.
      - **Descrizione**
      - **Supportato da**
    * - **client_id**
-     - URI che identifica univocamente il RP.
+     - Vedi `OpenID.Registration`_. DEVE essere valorizzato con un HTTPS URL che identifica univocamente il RP.
      - |spid-icon| |cieid-icon|
    * - **code_challenge**
-     - Un challenge per PKCE da riportare anche nella successiva richiesta al Token Endpoint. Vedi paragrafo :ref:`Generazione del code_challenge per PKCE<PKCE_code_challenge_generation>`
+     - Come definito nella  :ref:`Tabella dei parametri HTTP <tabella_parametri_http_req>`.
      - |spid-icon| |cieid-icon|
    * - **code_challenge_method**
-     - Metodo di costruzione del challenge PKCE. È obbligatorio specificare il valore **S256**
+     - Come definito nella  :ref:`Tabella dei parametri HTTP <tabella_parametri_http_req>`.
      - |spid-icon| |cieid-icon|
    * - **nonce**
-     - Stringa di almeno 32 caratteri alfanumerici, generata casualmente dal Client e finalizzata a mitigare attacchi replay.
-       Questo valore sarà restituito nell'ID Token fornito dal Token Endpoint, in modo da consentire al client di verificare
-       che sia uguale a quello inviato nella richiesta di autenticazione.
+     - Vedi `OpenID.Core#AuthRequest`_. DEVE essere una stringa casuale di almeno 32 caratteri alfanumerici. Questo valore sarà restituito nell'ID Token fornito dal Token Endpoint, in modo da consentire al client di verificare che sia uguale a quello inviato nella richiesta di autenticazione.
      - |spid-icon| |cieid-icon|
    * - **prompt**
-     - Definisce come l'OP deve richiedere l'autenticazione all'utente.
+     - Vedi `OpenID.Core#AuthRequest`_. I valori consentiti sono:
        
-       **consent** (valore consigliato): Se non è già attiva una sessione di Single Sign-On, 
+       **consent**: Se non è già attiva una sessione di Single Sign-On, 
        l'OP fa una richiesta di autenticazione all'utente.
        Quindi chiede il consenso al trasferimento degli attributi. 
 
@@ -97,39 +95,25 @@ L'oggetto request DEVE essere un token JWT firmato.
 
      - |spid-icon| |cieid-icon|
    * - **redirect_uri**
-     - URL dove l'OP reindirizzerà l'utente al termine del processo di autenticazione. 
-       Deve essere uno degli URL indicati nel client metadata. 
+     - Vedi `OpenID.Core#AuthRequest`_. DEVE essere una URL indicata nel :ref:`Metadata RP <MetadataRP>`. 
      - |spid-icon| |cieid-icon|
    * - **response_type**
-     - Il tipo di credenziali che deve restituire l'OP.
-       **code**
+     - Vedi `OpenID.Core#AuthRequest`_. Come definito dal parametro **response_types_supported** nel :ref:`Metadata OP <MetadataOP>`.
      - |spid-icon| |cieid-icon|
    * - **scope**
-     - Lista degli scope richiesti.
-       
-       **openid**: (obbligatorio).
-       
-       **offline_access**: se specificato, l'OP rilascerà oltre all'access token anche un refresh token necessario
-       per instaurare sessioni lunghe revocabili. L'uso di questo valore è consentito solo se se si intende offrire all'utente una `sessione lunga revocabile <https://www.agid.gov.it/sites/default/files/repository_files/spid-avviso-n41-integrazione_ll.gg_._openid_connect_in_spid.pdf#page=6>`_.
+     - Come definito nella  :ref:`Tabella dei parametri HTTP <tabella_parametri_http_req>`.
      - |spid-icon| |cieid-icon|
    * - **acr_values**
-     - Valori di riferimento della classe di contesto dell'Authentication Request. 
-       Stringa separata da uno spazio, che specifica i valori "acr" richiesti al server di autorizzazione per l'elaborazione della richiesta di autenticazione con i valori indicati in ordine di preferenza. L'OP può utilizzare un'autenticazione ad un livello più alto di quanto richiesto. Tale scelta non deve comportare un esito negativo della richiesta.
-       Deve contenere per SPID e CIE uno o più valori tra i seguenti:
-       
-       ``https://www.spid.gov.it/SpidL1``
-       ``https://www.spid.gov.it/SpidL2``
-       ``https://www.spid.gov.it/SpidL3``
+     - Vedi `OpenID.Core#AuthRequest`_. Come definito dal parametro **acr_values_supported** nel :ref:`Metadata OP <MetadataOP>`.
+       Valori di riferimento della classe di contesto dell'Authentication Request. 
+       DEVE essere una stringa separata da uno spazio, che specifica i valori "acr" richiesti in ordine di preferenza. L'OP PUÒ utilizzare un'autenticazione ad un livello più alto di quanto richiesto. Tale scelta non DEVE comportare un esito negativo della richiesta.
      - |spid-icon| |cieid-icon|
    * - **claims**
-     - Lista dei claims (attributi) che un RP intende richiedere. Vedi paragrafo *Claims*
+     - Vedi `OpenID.Core#AuthRequest`_. Vedi Sezione :ref:`Utilizzo dei parametri **scope** e **claims** <parametri_scope_claims>`
      - |spid-icon| |cieid-icon|
    * - **state**
-     - Stringa di almeno 32 caratteri alfanumerici. Valore univoco utilizzato per mantenere lo stato tra la request e il Callback (vedere :ref:`Flusso di autenticazione<flusso_autenticazione>` passo n.3). Questo valore verrà restituito al client nella risposta al termine dell'autenticazione. Il valore deve essere significativo esclusivamente per il RP e non deve essere intellegibile ad altri.
+     - - Vedi `OpenID.Core#AuthRequest`_. DEVE essere una stringa casuale di almeno 32 caratteri alfanumerici. Identificativo univoco della sessione lato RP. Questo valore verrà restituito al client nella risposta al termine dell'autenticazione.
      - |spid-icon| |cieid-icon|
-   * - **ui_locales**
-     - Lista di codici :rfc:`5646` separati da spazi. Lingue preferibili per visualizzare le pagine dell'OP. L'OP può ignorare questo parametro se non dispone di nessuna delle lingue indicate.
-     - |spid-icon| |cieid-icon|	
    * - **exp**
      - UNIX Timestamp con l'istante di scadenza del JWT, codificato come NumericDate come indicato in :rfc:`7519`
      - |spid-icon| |cieid-icon|
@@ -137,65 +121,35 @@ L'oggetto request DEVE essere un token JWT firmato.
      - UNIX Timestamp con l'istante di generazione del JWT, codificato come NumericDate come indicato in :rfc:`7519`
      - |spid-icon| |cieid-icon|
    * - **iss**
-     - String. Identificatore dell'emettitore dell'OP che ha creato l'Authentication Response. 
-       Il RP DEVE validare questo parametro con precisione e NON DEVE permettere che diversi OP 
-       usino lo stesso identificatore.
+     - DEVE corrispondere al *client_id*. 
      - |spid-icon| |cieid-icon|
    * - **aud**
-     - String. Deve corrispondere all'Identificatore del soggetto destinatario.
-     - |spid-icon| |cieid-icon|
-   * - **typ**
-     - Ove fosse assente, viene considerato *JWT* come definito da :rfc:`7519#section-5.1`
+     - DEVE corrispondere all'identificativo del OP (parametro *issuer* presente nel :ref:`Metadata OP <MetadataOP>`.)
      - |spid-icon| |cieid-icon|
 
-.. seealso::
-
- - https://openid.net/specs/openid-connect-core-1_0.html#FormSerialization
- - https://openid.net/specs/openid-connect-core-1_0.html#AuthRequest
- - https://openid.net/specs/openid-igov-oauth2-1_0-03.html#rfc.section.2.1.1
- - https://openid.net/specs/openid-igov-openid-connect-1_0-03.html#rfc.section.2.1
- - https://openid.net/specs/openid-igov-openid-connect-1_0-03.html#rfc.section.2.4
- - https://openid.net/specs/openid-connect-core-1_0.html#JWTRequests
-	 
-Claim
-+++++
-
-Il parametro claims definisce gli attributi richiesti dal **RP**. Gli attributi SPID sono richiesti all'interno dell'elemento "userinfo", elencando gli attributi da richiedere come chiavi di oggetti JSON, i cui valori devono essere indicati come {"essential": true}. Non è possibile richiedere attributi SPID nell'id_token, mentre è possibile richiedere attributi CIE. Gli attributi elencati sotto "userinfo" sono disponibili al momento della chiamata allo UserInfo Endpoint.
-
-.. code-block:: 
-
- {
-     "userinfo":{
-         "https://attributes.spid.gov.it/familyName":{
-             "essential":true
-         }
-     }
- }
 
 
-.. seealso::
 
- - https://openid.net/specs/openid-connect-core-1_0.html#IndividualClaimsRequests
+..
+  FIXME: Fatta sezione ad hoc per le modalità di utilizzo dei parametri claims e scope	 
+  Claim
+  +++++
+
+  Il parametro claims definisce gli attributi richiesti dal **RP**. Gli attributi SPID sono richiesti all'interno dell'elemento "userinfo", elencando gli attributi da richiedere come chiavi di oggetti JSON, i cui valori devono essere indicati come {"essential": true}. Per SPID non è possibile richiedere attributi nell'id_token, mentre è possibile farlo per CIE. Gli attributi elencati sotto "userinfo" sono disponibili al momento della chiamata allo UserInfo Endpoint.
+
+  .. code-block:: 
+
+  {
+      "userinfo":{
+          "https://attributes.spid.gov.it/familyName":{
+              "essential":true
+          }
+      }
+  }
 
 
-.. _PKCE_code_challenge_generation:
+  .. seealso::
 
-Generazione del code challenge per PKCE
-+++++++++++++++++++++++++++++++++++++++
-
-PKCE (Proof Key for Code Exchange, `RFC7636 <https://tools.ietf.org/html/rfc7636>`_) è un'estensione del protocollo OAuth 2.0 finalizzata ad evitare un potenziale attacco attuato con l'intercettazione dell'authorization code. Consiste nella generazione di un codice (*code verifier*) e del suo hash (*code challenge*). Il *code challenge* viene inviato all'OP nella richiesta di autenticazione.
-
-Quando il client contatta il Token Endpoint al termine del flusso di autenticazione, invia il *code verifier* originariamente creato, in modo che l'OP possa confrontare che il suo hash corrisponda con quello acquisito nella richiesta di autenticazione.
-
-Il *code verifier* e il *code challenge* devono essere generati secondo le modalità definite da **Agid** o da **MinInterno**.
+  - https://openid.net/specs/openid-connect-core-1_0.html#IndividualClaimsRequests
 
 
-Esempio
-*******
-.. literalinclude :: ../../static/pkce.py
-   :language: python
-
-.. seealso::
-
- - https://openid.net/specs/openid-igov-oauth2-1_0-03.html#rfc.section.3.1.7
- - https://tools.ietf.org/html/rfc7636

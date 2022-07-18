@@ -20,7 +20,7 @@ Di seguito un esempio non normativo dell'oggetto **trust_marks** all'interno del
      "trust_marks":[
          {
              "id":"https://www.spid.gov.it/openid-federation/agreement/sp-public/",
-             "trust_mark":"…"
+             "trust_mark":"$JWT"
          }
      ]
  }
@@ -35,7 +35,7 @@ Quello che segue è un esempio non normativo di un marchio di fiducia emesso dal
      "trust_marks":[
          {
              "id":"https://registry.agid.gov.it/federation_entity/private/",
-             "trust_mark":"…"
+             "trust_mark":"$JWT"
          }
      ]
  }
@@ -66,7 +66,7 @@ Un'entità Intermediaria o Soggetto Aggregatore (SA) è riconoscibile come emett
      "trust_marks":[
          {
              "id":"https://registry.agid.gov.it/openid_relying_party/public/",
-             "trust_mark":"…"
+             "trust_mark":"$JWT"
          }
      ]
  }
