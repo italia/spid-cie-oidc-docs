@@ -37,6 +37,74 @@ Di seguito un esempio non normativo dell'oggetto **trust_marks_issuers** all'int
      }
  }
 
+La tabella seguente riassume tutti i profili disponibili per tutte le entità coinvolte e supportate dalla Federazione CIEid.
+
+
+.. list-table::
+    :widths: 20 60 20
+    :header-rows: 1
+
+    * - **Profilo TM**
+      - **Descrizione**
+      - **Tipi di entità sub**
+    * - **public**
+      - l'entità nel claim *sub* appartiene alla pubblica amministrazione italiana.
+      - RP, OP
+    * - **private**
+      - l'entità nel claim *sub* appartiene al settore privato.
+      - RP
+    * - **federation_entity**
+      - l'entità nel claim *sub* è un Soggetto Aggregatore.
+      - SA
+    * - **oauth_authorization_server*
+      - l'entità nel claim *sub* è una Attribute Authority.
+      - AA
+    * - **sgd**
+      - l'entità nel claim *sub* è un RP o un SA che ha aderito alla AA Sistema di Gestione Deleghe.
+      - RP
+
+Profili **public** e **private**
+--------------------------------
+
+Si applicano i claim presenti nella tabella riportata nella Sezione :ref:`Composizione dei Trust Mark <ComposizioneTM>`
+
+Profilo **federation_entity**
+-----------------------------
+
+In aggiunta ai claim dei profili **public** e **private**, il profilo **federation_entity** individua i SA e aggiunge il seguente claim:
+
+.. list-table::
+    :widths: 20 60
+    :header-rows: 1
+
+    * - **Claim**
+      - **Descrizione**
+    * - **sa_type**
+      - DEVE essere valorizzata con **"full"** o **"light"** a seconda della modalità con cui operano rispetto ai Soggetti Aggregati
+
+.. seealso::
+
+    Si veda Sezione :ref:`Soggetti aggregatori nel contesto Federativo <Soggetti_aggregatori>`
+
+Profilo **oauth_authorization_server**
+--------------------------------------
+
+In aggiunta ai claim dei profili **public** e **private**, il profilo **oauth_authorization_server** individua le AA e aggiunge i seguenti claim obbligatori:
+
+.. list-table::
+    :widths: 20 60
+    :header-rows: 1
+
+    * - **Claim**
+      - **Descrizione**
+    * - **policy_uri**
+      - URL dove è disponibile la privacy policy dell'AA. 
+    * - **tos_uri**
+      - URL dove è disponibile la info policy dell'AA. 
+    * - **claims**
+      - Lista di JSON Object che definiscono gli attributi dell’utente richiesti dall'AA. Esempio: |br| ``{"https://attributes.eid.gov.it/fiscal_number":{"essential":true},`` |br| ``"email":{"essential":true},}``
+    * - **service_documentation**
+      - URL dove è disponibile il documento OAS3 che descrive il funzionamento dei servizi dell'AA.
 
 Validazione dei Trust Mark
 --------------------------
