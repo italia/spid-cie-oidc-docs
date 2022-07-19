@@ -17,7 +17,7 @@ Nel caso di utilizzo del parametro **scope** i seguenti valori sono supportati:
 
 - **email**: questo valore permette di ottenere, se resi disponibili dall'utente, i seguenti attributi:
 
-    - *email*;
+    - *email*,
     - *email_verified*.
 
 Gli attributi richiesti tramite il parametro **scope** sono disponibili sia nell'ID Token e sia nella risposta allo userinfo endpoint.
