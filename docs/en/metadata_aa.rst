@@ -1,10 +1,11 @@
 .. include:: ./common_definitions.rst
 
 
-Metadata Attribute Authority
+Attribute Authority Metadata
 ++++++++++++++++++++++++++++
 
-Una AA DEVE pubblicare all'interno del suo EC un Metadata da *federation_entity*, uno da *oauth_authorization_server* e uno da *oauth_resource* come riportato nel seguente esempio:
+An AA MUST publish in its EC a Metadata from *federation_entity*, a Metadata from *oauth_authorization_server* 
+and a Metadata from *oauth_resource* as reported in the following example:
 
 .. code-block:: 
 
@@ -22,82 +23,79 @@ Una AA DEVE pubblicare all'interno del suo EC un Metadata da *federation_entity*
     }
  }
 
-Il Metadata dell'AA da **"federation_entity"** DEVE contenere almeno i seguenti parametri obbligatori:
+The AA Metadata from **"federation_entity"** MUST contain at least the following mandatory parameters:
 
 .. list-table:: 
   :widths: 20 60 20
   :header-rows: 1
 
   * - **Claim**
-    - **Descrizione**
-    - **Supportato da**
+    - **Description**
+    - **Supported by**
   * - **organization_name**
-    - Denominazione dell'organizzazione.
+    - Name of the organization.
     - |spid-icon| |cieid-icon|
   * - **federation_resolve_endpoint**
-    - Vedi Sezione :ref:`Endpoint di Federazione <federation_endpoint>` e `OIDC-FED#Section.4.6`_
+    - See Section :ref:`Federation Endpoint <federation_endpoint>` and `OIDC-FED#Section.4.6`_
     - |spid-icon| |cieid-icon|
   * - **federation_status_endpoint**
-    - Vedi Sezione :ref:`Endpoint di Federazione <federation_endpoint>` e `OIDC-FED#Section.4.6`_
+    - See Section :ref:`Federation Endpoint <federation_endpoint>` and `OIDC-FED#Section.4.6`_
     - |spid-icon| |cieid-icon|
 
-Il Metadata dell'AA da **"oauth_authorization_server"** DEVE contenere almeno i seguenti parametri obbligatori:
+The AA Metadata from **"oauth_authorization_server"** MUST contain at least the following mandatory parameters:
 
 .. list-table:: 
   :widths: 20 60 20
   :header-rows: 1
 
   * - **Claim**
-    - **Descrizione**
-    - **Supportato da**
+    - **Description**
+    - **Supported by**
   * - **issuer**
-    - Vedi :rfc:`8414#page-4`.  DEVE essere valorizzato con un HTTPS URL che identifica univocamente l'AA.
+    - See :rfc:`8414#page-4`. It MUST contain an HTTPS URL that uniquely identifies the AA.
     - |spid-icon| |cieid-icon|
   * - **token_endpoint**
-    - Vedi :rfc:`8414#page-4`.
+    - See :rfc:`8414#page-4`.
     - |spid-icon| |cieid-icon|
   * - **jwks**
-    - Vedi `JWK`_.
+    - See `JWK`_.
     - |spid-icon| |cieid-icon|
   * - **scopes_supported**
-    - Vedi :rfc:`8414#page-4`.
+    - See :rfc:`8414#page-4`.
     - |spid-icon| |cieid-icon|
   * - **response_types_supported**
-    - Vedi :rfc:`8414#page-4`,
+    - See :rfc:`8414#page-4`,
     - |spid-icon| |cieid-icon|
   * - **grant_types_supported**
-    - Vedi :rfc:`8414#page-4` e :rfc:`8623`.
+    - See :rfc:`8414#page-4` and :rfc:`8623`.
     - |spid-icon| |cieid-icon|
   * - **token_endpoint_auth_methods_supported**
-    - Vedi :rfc:`8414#page-4`. Il valore supportato è **private_key_jwt**.
+    - See :rfc:`8414#page-4`. The supported value is **private_key_jwt**.
     - |spid-icon| |cieid-icon|
   * - **token_endpoint_auth_signing_alg_values_supported**
-    - Vedi :rfc:`8414#page-4`.
+    - See :rfc:`8414#page-4`.
     - |spid-icon| |cieid-icon|
   * - **op_policy_uri**
-    - Vedi :rfc:`8414#page-4`.
+    - See :rfc:`8414#page-4`.
     - |spid-icon| |cieid-icon|
   * - **dpop_signing_alg_values_supported**
-    - Vedi `OAuth-DPoP`_.
+    - See `OAuth-DPoP`_.
     - |spid-icon| |cieid-icon|
 
 
 
-
-
-
-Il Metadata dell'AA da **"oauth_resource"** DEVE contenere almeno i seguenti parametri obbligatori:
+The AA Metadata from **"oauth_resource"** MUST contain at least the following mandatory parameters:
 
 .. list-table:: 
   :widths: 20 60 20
   :header-rows: 1
 
   * - **Claim**
-    - **Descrizione**
-    - **Supportato da**
+    - **Description**
+    - **Supported by**
   * - **logo_uri**
-    - Vedi :rfc:`7591`. L'immagine disponibile all'URL indicata DEVE essere in formato *SVG*.
+    - See :rfc:`7591`. he image available at the indicated URL MUST be of *SVG* format.
     - |spid-icon| |cieid-icon|
   * - **resource**
-    - Vedi `OAuth-RS`_. Una o più HTTPS URL che identificano gli endpoint delle risorse protette.
+    - See `OAuth-RS`_. One or more HTTPS URLs that identify the endpoints of the protected resources.
     - |spid-icon| |cieid-icon|

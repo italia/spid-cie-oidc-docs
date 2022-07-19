@@ -5,7 +5,7 @@
 OpenID Connect Relying Party Metadata (RP)
 ++++++++++++++++++++++++++++++++++++++++++
 
-Un RP DEVE pubblicare all'interno del suo EC un Metadata da *federation_entity* e uno da *openid_relying_party* come riportato nel seguente esempio:
+An RP MUST publish in its EC a Metadata from *federation_entity* and a Metadata from *openid_relying_party*, as reported in the following example:
 
 .. code-block:: 
 
@@ -20,65 +20,65 @@ Un RP DEVE pubblicare all'interno del suo EC un Metadata da *federation_entity* 
     }
  }
 
-Il Metadata dell'OP da **"federation_entity"** DEVE contenere almeno i seguenti parametri obbligatori:
+The OP Metadata from **"federation_entity"** MUST contain at least the following mandatory parameters:
 
 .. list-table:: 
   :widths: 20 60 20
   :header-rows: 1
 
   * - **Claim**
-    - **Descrizione**
-    - **Supportato da**
+    - **Description**
+    - **Supported by***
   * - **federation_resolve_endpoint**
-    - Vedi Sezione :ref:`Endpoint di Federazione <federation_endpoint>` e `OIDC-FED#Section.4.6`_
+    - See Section :ref:`Federation Endpoint <federation_endpoint>` and `OIDC-FED#Section.4.6`_
     - |spid-icon| |cieid-icon|
 
 
 
-
-Il Metadata del RP da **"openid_relying_party"** DEVE contenere almeno i seguenti parametri obbligatori:
+The RP Metadata from **"openid_relying_party"** MUST contain at least the following mandatory paramaters:
 
 .. list-table:: 
   :widths: 20 60 20
   :header-rows: 1
 
   * - **Claim**
-    - **Descrizione**
-    - **Supportato da** 
+    - **Description**
+    - **Supported by***
   * - **redirect_uris**
-    - Vedi `OpenID.Registration#ClientMetadata`_. È obbligatorio l'uso dello schema HTTPS nel caso di client web-based.
+    - See `OpenID.Registration#ClientMetadata`_. It is mandatory using an HTTPS schema in case of a web-based client.
     - |spid-icon| |cieid-icon|
   * - **grant_types**
-    - Vedi `OpenID.Registration#ClientMetadata`_. I valori ammissibili **authorization_code** e **refresh_token**.
+    - See `OpenID.Registration#ClientMetadata`_. The supported values are **authorization_code** and **refresh_token**.
     - |spid-icon| |cieid-icon|
   * - **logo_uri**
-    - Vedi `OpenID.Registration#ClientMetadata`_. L'immagine disponibile all'URL indicata DEVE essere in formato *SVG*.
+    - See `OpenID.Registration#ClientMetadata`_. The image available at the indicated URL MUST be of *SVG* format.
     - |spid-icon| |cieid-icon|
   * - **jwks**
-    - Vedi `OpenID.Registration#ClientMetadata`_ e `JWK`_.
+    - See `OpenID.Registration#ClientMetadata`_ and `JWK`_.
     - |spid-icon| |cieid-icon| 
   * - **id_token_signed_response_alg**
-    - Vedi `OpenID.Registration#ClientMetadata`_.
+    - See `OpenID.Registration#ClientMetadata`_.
     - |spid-icon| |cieid-icon| 
   * - **userinfo_signed_response_alg**
-    - Vedi `OpenID.Registration#ClientMetadata`_.
+    - See `OpenID.Registration#ClientMetadata`_.
     - |spid-icon| |cieid-icon| 
   * - **userinfo_encrypted_response_alg**
-    - Vedi `OpenID.Registration#ClientMetadata`_.
+    - See `OpenID.Registration#ClientMetadata`_.
     - |spid-icon| |cieid-icon|
   * - **userinfo_encrypted_response_enc**
-    - Vedi `OpenID.Registration#ClientMetadata`_.
+    - See `OpenID.Registration#ClientMetadata`_.
     - |spid-icon| |cieid-icon|
   * - **token_endpoint_auth_method**
-    - Vedi `OpenID.Registration#ClientMetadata`_. Il valore richiesto è **private_key_jwt**.
+    - See `OpenID.Registration#ClientMetadata`_. The required value is **private_key_jwt**.
     - |spid-icon| |cieid-icon|  
   * - **client_id**
-    - Vedi `OpenID.Registration`_. DEVE essere valorizzato con un HTTPS URL che identifica univocamente il RP.
+    - See `OpenID.Registration`_. It MUST contain an HTTPS URL that uniquely identifies the RP.
     - |spid-icon| |cieid-icon|
   * - **client_registration_types**
-    - Vedi `OIDC-FED#Section.4.1`_. Il valore richiesto è **automatic**. 
+    - See `OIDC-FED#Section.4.1`_. The required value is **automatic**. 
     - |spid-icon| |cieid-icon|
 
 .. note:: 
-  Gli URI presenti nel parametro **redirect_uris** POSSONO anche seguire eventuali schemi custom (ad es. myapp://) al fine di supportare applicazioni mobili.
+  The URIs contained in the claim **redirect_uris** CAN also follow possible custom schemas (e.g. myapp://) 
+  in order to support mobile applications.
 

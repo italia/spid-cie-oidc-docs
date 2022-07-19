@@ -2,12 +2,13 @@
 
 .. _metadata_oidc:
 
-Metadata OIDC
+OIDC Metadata
 -------------
 
-OIDC-FED utilizza ed estende i claim dei Metadata così come definiti all'interno delle specifiche di OpenID Connect Discovery 1.0 e OpenID Connect Dynamic Client Registration 1.0 `OpenID.Discovery`_, `OpenID.Registration`_ rispettivamente per OP e RP. 
+OIDC-FED uses and extends the Metadata claims as defined at the specifications OpenID Connect Discovery 1.0 and OpenID Connect Dynamic Client Registration 1.0 `OpenID.Discovery`_, `OpenID.Registration`_ respectively for OP and RP. 
 
-In OIDC-FED il Metadata OIDC relativo a RP e OP viene definito all'interno del claim **metadata** e del suo sotto claim **<entity_type>**, all'interno dell'Entity Configuration, come oggetto JSON.
+In OIDC-FED the OIDC Metadata regarding an RP or OP is defined inside the claim **metadata** and its sub-claim
+**<entity-type>**, inside the Entity Configuration, as a JSON Object.
 
 
 .. toctree:: 

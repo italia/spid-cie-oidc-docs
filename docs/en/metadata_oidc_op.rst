@@ -5,7 +5,8 @@
 OpenID Connect Provider Metadata (OP)
 +++++++++++++++++++++++++++++++++++++
 
-Un OP DEVE pubblicare all'interno del suo EC un Metadata da *federation_entity* e uno da *openid_provider* come riportato nel seguente esempio:
+An OP MUST publish inside its EC a Metadata from *federation_entity* and a Metadata from *openid_provider*, as 
+reported in the following example:
 
 .. code-block:: 
 
@@ -20,67 +21,69 @@ Un OP DEVE pubblicare all'interno del suo EC un Metadata da *federation_entity* 
     }
  }
 
-L'EC di un OP DEVE configurare un metadata di tipo **"federation_entity"** e contenere almeno i seguenti parametri obbligatori:
+The EC of an OP MUST configure a Metadata of type **"federation_entity"** and contain at least the following 
+mandatory parameters:
 
 .. list-table:: 
   :widths: 20 60 20
   :header-rows: 1
 
   * - **Claim**
-    - **Descrizione**
-    - **Supportato da**
+    - **Description**
+    - **Supported by**
   * - **federation_resolve_endpoint**
-    - Vedi Sezione :ref:`Endpoint di Federazione <federation_endpoint>` e `OIDC-FED#Section.4.6`_
+    - See Section :ref:`Federation Endpoint <federation_endpoint>` and `OIDC-FED#Section.4.6`_
     - |spid-icon| |cieid-icon|
 
 
-Il Metadata dell'OP contenuto nell'<entity-type> **"openid_provider"** DEVE contenere almeno i seguenti parametri obbligatori:
+The OP Metadata contained in the <entity-type> **"openid_provider"** MUST contain at least the following 
+mandatory parameters:
 
 .. list-table:: 
   :widths: 20 60 20
   :header-rows: 1
 
   * - **Claim**
-    - **Descrizione**
-    - **Supportato da**
+    - **Description**
+    - **Supported by**
   * - **issuer**
-    - Vedi `OpenID.Discovery#OP_Metadata`_. DEVE essere valorizzato con un HTTPS URL che identifica univocamente l'OP.
+    - See `OpenID.Discovery#OP_Metadata`_. It MUST contain an HTTPS URL that uniquely identifies the OP.
     - |spid-icon| |cieid-icon|
   * - **authorization_endpoint**
-    - Vedi `OpenID.Discovery#OP_Metadata`_.
+    - See `OpenID.Discovery#OP_Metadata`_.
     - |spid-icon| |cieid-icon|
   * - **token_endpoint**
-    - Vedi `OpenID.Discovery#OP_Metadata`_.
+    - See `OpenID.Discovery#OP_Metadata`_.
     - |spid-icon| |cieid-icon|
   * - **userinfo_endpoint**
-    - Vedi `OpenID.Discovery#OP_Metadata`_.
+    - See `OpenID.Discovery#OP_Metadata`_.
     - |spid-icon| |cieid-icon|
   * - **introspection_endpoint**
-    - Vedi :rfc:`8414#page-4`.
+    - See :rfc:`8414#page-4`.
     - |spid-icon| |cieid-icon|
   * - **revocation_endpoint** 
-    - Vedi :rfc:`8414#page-4`.
+    - See :rfc:`8414#page-4`.
     - |spid-icon| |cieid-icon|
   * - **revocation_endpoint_auth_methods_supported**
-    - Vedi :rfc:`8414#page-4`. Il valore supportato è **private_key_jwt**
+    - See :rfc:`8414#page-4`. The supported value is **private_key_jwt**
     - |cieid-icon|
   * - **code_challenge_methods_supported**
-    - Vedi Vedi :rfc:`8414#page-4`. L'OP DEVE supportare S256 (vedi :rfc:`7636#section-4.3`).
+    - See :rfc:`8414#page-4`. The OP MUST support S256 (see :rfc:`7636#section-4.3`).
     - |spid-icon| |cieid-icon|
   * - **scopes_supported**
-    - Vedi `OpenID.Discovery#OP_Metadata`_. I valori supportati sono *openid*, *offline_access*, *profile*, *email*. Per maggiori dettagli vedi Sezione TBC.
+    - See `OpenID.Discovery#OP_Metadata`_. The supported values are **openid**, **offline_access**, **profile**, **email**. For more details, see the section TBC.
     - |spid-icon| |cieid-icon|
   * - **response_types_supported**
-    - Vedi `OpenID.Discovery#OP_Metadata`_. Il valore supportato è **code**. 
+    - See `OpenID.Discovery#OP_Metadata`_. The supported value is **code**. 
     - |spid-icon| |cieid-icon|
   * - **response_modes_supported**
-    - Vedi `OpenID.Discovery#OP_Metadata`_. I valori supportati sono *form_post* e *query*.
+    - See `OpenID.Discovery#OP_Metadata`_. The supported values are **form_post** and **query**.
     - |spid-icon| |cieid-icon|
   * - **grant_types_supported**
-    - Vedi `OpenID.Discovery#OP_Metadata`_. I valori supportati sono *refresh_token* e *authorization_code*.
+    - See `OpenID.Discovery#OP_Metadata`_. The supported values are **refresh_token** and **authorization_code**.
     - |spid-icon| |cieid-icon|
   * - **acr_values_supported**
-    - Vedi `OpenID.Discovery#OP_Metadata`_. I valori supportati sono:
+    - See `OpenID.Discovery#OP_Metadata`_. The supported values are:
       
       ``https://www.spid.gov.it/SpidL1``
       ``https://www.spid.gov.it/SpidL2``
@@ -88,60 +91,66 @@ Il Metadata dell'OP contenuto nell'<entity-type> **"openid_provider"** DEVE cont
 
     - |spid-icon| |cieid-icon|
   * - **subject_types_supported**
-    - Vedi `OpenID.Discovery#OP_Metadata`_. Il valore supportato è **pairwise**. 
+    - See `OpenID.Discovery#OP_Metadata`_. The supported value is **pairwise**. 
     - |spid-icon| |cieid-icon|
   * - **id_token_signing_alg_values_supported**
-    - Vedi `OpenID.Discovery#OP_Metadata`_. L'OP DEVE supportare RS256 e PUÒ supportare anche altri algoritmi definiti in :rfc:`7518#section-3.1`
+    - See `OpenID.Discovery#OP_Metadata`_. The OP MUST support RS256 and CAN also support other 
+      algorithms defined at :rfc:`7518#section-3.1`
     - |spid-icon| |cieid-icon|
   * - **userinfo_signing_alg_values_supported**
-    - Vedi `OpenID.Discovery#OP_Metadata`_. L'OP DEVE supportare RS256 e PUÒ supportare anche altri algoritmi definiti in :rfc:`7518#section-3.1`.
+    - See `OpenID.Discovery#OP_Metadata`_. The OP MUST support RS256 and CAN also support other  
+      algorithms defined at :rfc:`7518#section-3.1`.
     - |spid-icon| |cieid-icon|
   * - **userinfo_encryption_alg_values_supported**
-    - Vedi `OpenID.Discovery#OP_Metadata`_. Per la definizione degli algoritmi di cifratura (*alg*) vedi :rfc:`7518#section-4.1`
+    - See `OpenID.Discovery#OP_Metadata`_. For the definition of the encryption algorithms (*alg*) see :rfc:`7518#section-4.1`
     - |spid-icon| |cieid-icon|
   * - **userinfo_encryption_enc_values_supported**
-    - Vedi `OpenID.Discovery#OP_Metadata`_. Per la definizione degli algoritmi di cifratura (*enc*) vedi :rfc:`7518#section-5.1`
+    - See `OpenID.Discovery#OP_Metadata`_. For the definition of the encryption algorithms (*enc*) see :rfc:`7518#section-5.1`
     - |spid-icon| |cieid-icon|
   * - **request_object_signing_alg_values_supported**
-    - Vedi `OpenID.Discovery#OP_Metadata`_. L'OP DEVE supportare RS256 e PUÒ supportare anche altri algoritmi definiti in :rfc:`7518#section-3.1`.
+    - See `OpenID.Discovery#OP_Metadata`_. The OP MUST support RS256 and CAN also support other 
+      algorithms defined at :rfc:`7518#section-3.1`.
     - |spid-icon| |cieid-icon|
   * - **token_endpoint_auth_methods_supported**
-    - Vedi `OpenID.Discovery#OP_Metadata`_. Il valore supportato è **private_key_jwt**
+    - See `OpenID.Discovery#OP_Metadata`_. The supported value is **private_key_jwt**
     - |spid-icon| |cieid-icon|
   * - **token_endpoint_auth_signing_alg_values_supported**
-    - Vedi `OpenID.Discovery#OP_Metadata`_. L'OP DEVE supportare RS256 e PUÒ supportare anche altri algoritmi definiti in :rfc:`7518#section-3.1`.
+    - See `OpenID.Discovery#OP_Metadata`_. The OP MUST support RS256 and CAN also support other
+      algorithms defined at :rfc:`7518#section-3.1`.
     - |spid-icon| |cieid-icon|
   * - **claims_supported**
-    - Vedi `OpenID.Discovery#OP_Metadata`_. Vedi :ref:`Attributi Utente <user_claims>` per maggiori dettagli.
+    - See `OpenID.Discovery#OP_Metadata`_. See :ref:`User Claims <user_claims>` for more details.
     - |spid-icon| |cieid-icon|
   * - **claims_parameter_supported**
-    - Vedi `OpenID.Discovery#OP_Metadata`_. Il valore supportato è *true*.
+    - See `OpenID.Discovery#OP_Metadata`_. The supported value is **true**.
     - |spid-icon| |cieid-icon|
   * - **request_parameter_supported**
-    - Vedi `OpenID.Discovery#OP_Metadata`_. Il valore supportato è *true*.
+    - See `OpenID.Discovery#OP_Metadata`_. The supported value is **true**.
     - |spid-icon| |cieid-icon|
   * - **authorization_response_iss_parameter_supported**
-    - Vedi :rfc:`9207#section-3`. Deve valere *true*.
+    - See :rfc:`9207#section-3`. It must contain *true*.
     - |cieid-icon|
   * - **jwks**
-    - Vedi `OIDC-FED#Section.4.2`_ e `JWK`_.
+    - See `OIDC-FED#Section.4.2`_ and `JWK`_.
     - |spid-icon| |cieid-icon|
   * - **client_registration_types_supported**
-    - Vedi `OIDC-FED#Section.4.2`_. Il valore supportato è **automatic**. 
+    - See `OIDC-FED#Section.4.2`_. The supported value is **automatic**. 
     - |spid-icon| |cieid-icon|
   * - **request_authentication_methods_supported**
-    - Vedi `OIDC-FED#Section.4.2`_. Il valore supportato è **request_object**.
+    - See `OIDC-FED#Section.4.2`_. The supported value is **request_object**.
     - |spid-icon| |cieid-icon|
   * - **request_authentication_signing_alg_values_supported**
-    - Vedi `OIDC-FED#Section.4.2`_. L'OP DEVE supportare RS256 e può supportare anche altri algoritmi definiti in :rfc:`7518#section-3.1`.
+    - See `OIDC-FED#Section.4.2`_. The OP MUST support RS256 and CAN also support other
+      algorithms defined at :rfc:`7518#section-3.1`.
     - |spid-icon| |cieid-icon|
 
 
 .. warning::
-  Il Metadata OP da **"openid_provider"** espone il parametro **jwks** come normato da OID-FED invece del parametro **jwks_uri** come richiesto in `OpenID.Discovery#OP_Metadata`_.
+  The OP Metadata from **"openid_provider"** exposes the claim **jwks** as regulated by OID-FED instead of
+  the claim **jwks_uri** as required at `OpenID.Discovery#OP_Metadata`_.
 
 .. seealso:: 
 
-   - :ref:`Esempio di EC di un OP <Esempio_EN1.2>`
+   - :ref:`Example of an EC of an OP <Esempio_EN1.2>`
 
    

@@ -65,7 +65,7 @@ Il Metadata dell'OP contenuto nell'<entity-type> **"openid_provider"** DEVE cont
     - Vedi :rfc:`8414#page-4`. Il valore supportato è **private_key_jwt**
     - |cieid-icon|
   * - **code_challenge_methods_supported**
-    - Vedi Vedi :rfc:`8414#page-4`. L'OP DEVE supportare S256 (vedi :rfc:`7636#section-4.3`).
+    - Vedi :rfc:`8414#page-4`. L'OP DEVE supportare S256 (vedi :rfc:`7636#section-4.3`).
     - |spid-icon| |cieid-icon|
   * - **scopes_supported**
     - Vedi `OpenID.Discovery#OP_Metadata`_. I valori supportati sono *openid*, *offline_access*, *profile*, *email*. Per maggiori dettagli vedi Sezione TBC.
