@@ -5,7 +5,7 @@
 OpenID Connect Relying Party Metadata (RP)
 ++++++++++++++++++++++++++++++++++++++++++
 
-Un RP DEVE pubblicare all'interno del suo EC un Metadata da *federation_entity* e uno da *openid_relying_party* come riportato nel seguente esempio:
+Un RP DEVE pubblicare all'interno del suo EC un Metadata di tipo *federation_entity* e uno di tipo *openid_relying_party* come riportato nel seguente esempio:
 
 .. code-block:: 
 
@@ -20,7 +20,7 @@ Un RP DEVE pubblicare all'interno del suo EC un Metadata da *federation_entity* 
     }
  }
 
-Il Metadata dell'OP da **"federation_entity"** DEVE contenere almeno i seguenti parametri obbligatori:
+Il Metadata di tipo **"federation_entity"** DEVE contenere almeno i seguenti parametri obbligatori:
 
 .. list-table:: 
   :widths: 20 60 20
@@ -36,7 +36,7 @@ Il Metadata dell'OP da **"federation_entity"** DEVE contenere almeno i seguenti 
 
 
 
-Il Metadata del RP da **"openid_relying_party"** DEVE contenere almeno i seguenti parametri obbligatori:
+Il Metadata di tipo **"openid_relying_party"** DEVE contenere almeno i seguenti parametri obbligatori:
 
 .. list-table:: 
   :widths: 20 60 20
