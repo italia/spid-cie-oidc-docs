@@ -20,6 +20,18 @@ Nello scenario CIE / SPID, un TM viene firmato dal TA **MinInterno** / **Agid** 
 
 Il TA definisce i soggetti abilitati all'emissione dei TM riconoscibili all'interno della Federazione, mediante il claim **trust_marks_issuers**, presente all'interno del proprio Entity Configuration. Il valore dell'attributo **trust_marks_issuers** è composto da un oggetto JSON avente come chiavi gli identificativi dei TM e come valori la lista degli identificativi (URL) delle entità abilitate ad emetterli.
 
+I Trust Mark rappresentano il primo filtro per l'instaurazione della fiducia tra le parti, sono elementi indispensabili per avviare la risoluzione dei metadati. In loro assenza una entità non è riconoscibile come partecipante all’interno della Federazione.
+
+All’interno della Federazione SPID i Trust Mark presentano degli identificativi univoci (claim id) in formato URL che adottano la seguente struttura: **<domain> / <entity_type> / <trustmark_profile> /**
+
+Alcuni esempi non normativi sono di seguito riportati:
+
+
+ * TM RP public: https://registry.agid.gov.it/openid_relying_party/public/
+ * TM SA private: https://registry.agid.gov.it/federation_entity/private/
+ * TM AA: https://registry.agid.gov.it/oauth_authorization_server/public/
+
+
 Di seguito un esempio non normativo dell'oggetto **trust_marks_issuers** all'interno della Entity Configuration del TA.
 
 .. code-block::
@@ -37,7 +49,27 @@ Di seguito un esempio non normativo dell'oggetto **trust_marks_issuers** all'int
      }
  }
 
-La tabella seguente riassume tutti i profili disponibili per tutte le entità coinvolte e supportate dalla Federazione CIEid.
+La tabella seguente definisce i <entity_type> riconoscibili all'interno delle Federazioni SPID e CIE id:
+
+
+.. list-table::
+    :widths: 20 60 20
+    :header-rows: 1
+
+    * - **openid_relying_party**
+      - l'entità nel claim *sub* è un RP.
+      - RP
+    * - **openid_provider**
+      - l'entità nel claim *sub* è un OP.
+      - OP
+    * - **federation_entity**
+      - l'entità nel claim *sub* è un Soggetto Aggregatore.
+      - SA
+    * - **oauth_authorization_server**
+      - l'entità nel claim *sub* è una Attribute Authority.
+      - AA
+
+La tabella seguente definisce i <trustmark_profile> riconoscibili all'interno delle Federazioni SPID e CIE id:
 
 
 .. list-table::
@@ -53,25 +85,12 @@ La tabella seguente riassume tutti i profili disponibili per tutte le entità co
     * - **private**
       - l'entità nel claim *sub* appartiene al settore privato.
       - RP
-    * - **federation_entity**
-      - l'entità nel claim *sub* è un Soggetto Aggregatore.
-      - SA
-    * - **oauth_authorization_server**
-      - l'entità nel claim *sub* è una Attribute Authority.
-      - AA
-    * - **sgd**
-      - l'entità nel claim *sub* è un RP o un SA che ha aderito alla AA Sistema di Gestione Deleghe.
-      - RP
 
-Profili **public** e **private**
---------------------------------
 
-Si applicano i claim presenti nella tabella riportata nella Sezione :ref:`Composizione dei Trust Mark <ComposizioneTM>`
+**federation_entity** Trust Mark
+----------------------
 
-Profilo **federation_entity**
------------------------------
-
-In aggiunta ai claim dei profili **public** e **private**, il profilo **federation_entity** individua i SA e aggiunge il seguente claim:
+In aggiunta ai claim dei profili **public** e **private**, il profilo **federation_entity** individua i SA e aggiunge la seguente estensione:
 
 .. list-table::
     :widths: 20 60
@@ -86,8 +105,8 @@ In aggiunta ai claim dei profili **public** e **private**, il profilo **federati
 
     Si veda Sezione :ref:`Soggetti aggregatori nel contesto Federativo <Soggetti_aggregatori>`
 
-Profilo **oauth_authorization_server**
---------------------------------------
+**oauth_authorization_server**  Trust Mark
+------------------------------------------
 
 In aggiunta ai claim dei profili **public** e **private**, il profilo **oauth_authorization_server** individua le AA e aggiunge i seguenti claim obbligatori:
 
