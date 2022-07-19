@@ -64,7 +64,7 @@ Tabella attributi identificativi
 
        .. code-block::
        
-         "Family_name":"Bianchi Verdi"
+         "family_name":"Bianchi Verdi"
 
      - |spid-icon| |cieid-icon|
    * - Luogo di nascita |br|
@@ -312,12 +312,13 @@ Tabella attributi identificativi
 
      - |spid-icon| |cieid-icon|
 
+.. _user_claims_scopes:
 
-Scope OIDC
-++++++++++
+Attributi collegati agli scope
+++++++++++++++++++++++++++++++
 
 Lo standard OIDC prevede l'utilizzo del claim **scope** per identificare gruppi di attributi.
-In SPID OIDC si definiscono i seguenti scope da poter usare nelle richieste:
+In SPID e CIE id si definiscono i seguenti **scope**:
 
  - **profile** corrispondente al "eIDAS Natural Person Minimum Attribute Set" quindi comprende:
 

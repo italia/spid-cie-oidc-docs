@@ -19,7 +19,7 @@ Di seguito un esempio non normativo dell'oggetto **trust_marks** all'interno del
  {
      "trust_marks":[
          {
-             "id":"https://www.spid.gov.it/openid-federation/agreement/sp-public/",
+             "id":"https://www.spid.gov.it/openid_relying_party/public/",
              "trust_mark":"$JWT"
          }
      ]

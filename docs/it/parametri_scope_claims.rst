@@ -25,7 +25,7 @@ Gli attributi richiesti tramite il parametro **scope** sono disponibili sia nell
 .. note::
     Il parametro **scope** PUÒ contenere uno o più valori separati da uno spazio.
 
-Nel caso di richiesta di singoli attributi dell'utente o specifiche combinazioni di essi, l'RP PUÒ usare il parametro **claims**. 
+Nel caso di richiesta di singoli attributi dell'utente o specifiche combinazioni di essi, Il RP PUÒ usare il parametro **claims**. 
 Per la definizione del parametro **claims** e la modalità di utilizzo per la richiesta degli attributi dell'utente si può fare riferimento a `OpenID.Core#ClaimsParameter`_. 
 
 .. warning::

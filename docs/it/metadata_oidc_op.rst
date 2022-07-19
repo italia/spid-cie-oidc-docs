@@ -34,7 +34,9 @@ L'EC di un OP DEVE configurare un metadata di tipo **"federation_entity"** e con
     - |spid-icon| |cieid-icon|
 
 
-Il Metadata dell'OP contenuto nell'<entity-type> **"openid_provider"** DEVE contenere almeno i seguenti parametri obbligatori:
+L'EC di un OP DEVE configurare un metadata di tipo **"openid_provider"** DEVE contenere almeno i seguenti parametri obbligatori:
+
+
 
 .. list-table:: 
   :widths: 20 60 20
@@ -68,7 +70,7 @@ Il Metadata dell'OP contenuto nell'<entity-type> **"openid_provider"** DEVE cont
     - Vedi :rfc:`8414#page-4`. L'OP DEVE supportare S256 (vedi :rfc:`7636#section-4.3`).
     - |spid-icon| |cieid-icon|
   * - **scopes_supported**
-    - Vedi `OpenID.Discovery#OP_Metadata`_. I valori supportati sono *openid*, *offline_access*, *profile*, *email*. Per maggiori dettagli vedi Sezione TBC.
+    - Vedi `OpenID.Discovery#OP_Metadata`_. I valori supportati sono *openid*, *offline_access*, *profile*, *email*. Per maggiori dettagli vedi :ref:`Sezione User Claims <user_claims_scopes>`.
     - |spid-icon| |cieid-icon|
   * - **response_types_supported**
     - Vedi `OpenID.Discovery#OP_Metadata`_. Il valore supportato è **code**. 
@@ -91,25 +93,25 @@ Il Metadata dell'OP contenuto nell'<entity-type> **"openid_provider"** DEVE cont
     - Vedi `OpenID.Discovery#OP_Metadata`_. Il valore supportato è **pairwise**. 
     - |spid-icon| |cieid-icon|
   * - **id_token_signing_alg_values_supported**
-    - Vedi `OpenID.Discovery#OP_Metadata`_. L'OP DEVE supportare RS256 e PUÒ supportare anche altri algoritmi definiti in :rfc:`7518#section-3.1`
+    - Vedi `OpenID.Discovery#OP_Metadata`_. L'OP DEVE supportare RS256 e PUÒ supportare anche altri algoritmi di tipo RS, ES e PS definiti in :rfc:`7518#section-3.1`
     - |spid-icon| |cieid-icon|
   * - **userinfo_signing_alg_values_supported**
-    - Vedi `OpenID.Discovery#OP_Metadata`_. L'OP DEVE supportare RS256 e PUÒ supportare anche altri algoritmi definiti in :rfc:`7518#section-3.1`.
+    - Vedi `OpenID.Discovery#OP_Metadata`_. L'OP DEVE supportare RS256 e PUÒ supportare anche altri algoritmi di tipo RS, ES e PS definiti in :rfc:`7518#section-3.1`.
     - |spid-icon| |cieid-icon|
   * - **userinfo_encryption_alg_values_supported**
-    - Vedi `OpenID.Discovery#OP_Metadata`_. Per la definizione degli algoritmi di cifratura (*alg*) vedi :rfc:`7518#section-4.1`
+    - Vedi `OpenID.Discovery#OP_Metadata`_. Per la definizione degli algoritmi di cifratura (*alg*) RSA-OAEP-256 e RSA-OAEP.
     - |spid-icon| |cieid-icon|
   * - **userinfo_encryption_enc_values_supported**
     - Vedi `OpenID.Discovery#OP_Metadata`_. Per la definizione degli algoritmi di cifratura (*enc*) vedi :rfc:`7518#section-5.1`
     - |spid-icon| |cieid-icon|
   * - **request_object_signing_alg_values_supported**
-    - Vedi `OpenID.Discovery#OP_Metadata`_. L'OP DEVE supportare RS256 e PUÒ supportare anche altri algoritmi definiti in :rfc:`7518#section-3.1`.
+    - Vedi `OpenID.Discovery#OP_Metadata`_. L'OP DEVE supportare RS256 e PUÒ supportare anche altri algoritmi di tipo RS, ES e PS definiti in :rfc:`7518#section-3.1`.
     - |spid-icon| |cieid-icon|
   * - **token_endpoint_auth_methods_supported**
     - Vedi `OpenID.Discovery#OP_Metadata`_. Il valore supportato è **private_key_jwt**
     - |spid-icon| |cieid-icon|
   * - **token_endpoint_auth_signing_alg_values_supported**
-    - Vedi `OpenID.Discovery#OP_Metadata`_. L'OP DEVE supportare RS256 e PUÒ supportare anche altri algoritmi definiti in :rfc:`7518#section-3.1`.
+    - Vedi `OpenID.Discovery#OP_Metadata`_. L'OP DEVE supportare RS256 e PUÒ supportare anche altri algoritmi di tipo RS, ES e PS definiti in :rfc:`7518#section-3.1`.
     - |spid-icon| |cieid-icon|
   * - **claims_supported**
     - Vedi `OpenID.Discovery#OP_Metadata`_. Vedi :ref:`Attributi Utente <user_claims>` per maggiori dettagli.
@@ -133,12 +135,12 @@ Il Metadata dell'OP contenuto nell'<entity-type> **"openid_provider"** DEVE cont
     - Vedi `OIDC-FED#Section.4.2`_. Il valore supportato è **request_object**.
     - |spid-icon| |cieid-icon|
   * - **request_authentication_signing_alg_values_supported**
-    - Vedi `OIDC-FED#Section.4.2`_. L'OP DEVE supportare RS256 e può supportare anche altri algoritmi definiti in :rfc:`7518#section-3.1`.
+    - Vedi `OIDC-FED#Section.4.2`_. L'OP DEVE supportare RS256 e PUÒ supportare anche altri algoritmi di tipo RS, ES e PS definiti in :rfc:`7518#section-3.1`.
     - |spid-icon| |cieid-icon|
 
 
 .. warning::
-  Il Metadata OP da **"openid_provider"** espone il parametro **jwks** come normato da OID-FED invece del parametro **jwks_uri** come richiesto in `OpenID.Discovery#OP_Metadata`_.
+  Il Metadata **"openid_provider"** espone il parametro **jwks** o **signed_jwks_uri** come normato da OID-FED invece del parametro **jwks_uri** come richiesto in `OpenID.Discovery#OP_Metadata`_.
 
 .. seealso:: 
 
