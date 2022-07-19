@@ -2,34 +2,43 @@
 
 .. _federation_endpoint:
 
-Endpoint di Federazione
------------------------
+Federation Endpoint
+-------------------
 
-Tutte le entità DEVONO contenere i seguenti endpoint:
+All the entities MUST contain the following endpoints:
 
- - **/.well-known/openid-federation**: fornisce l'`Entity Configuration <Entity_Configuration>`__ (per maggiori dettagli vedi `OIDC-FED#Section.6`_)
- - **resolve entity statement endpoint**: fornisce il metadata finale, la Trust Chain e i Trust Mark relativi ad un altro soggetto. Questo endpoint (per maggiori dettagli vedi `OIDC-FED#Section.7.2`_)
-
-.. warning::
-  Il **resolve entity statement endpoint** non DEVE restituire alcuna informazione relativa ad un soggetto del quale non ha precedentemente raccolto gli statement e calcolato la Trust Chain. Nel caso in cui i TM non siano più validi al momento della richiesta, questi non DEVONO essere inclusi nella risposta. 
-
-
-Le entità di tipo **TA** o **SA** DEVONO offrire i seguenti endpoint, in aggiunta agli endpoint di Federazioni sopra riportati:
-
- - **fetch entity statement endpoint**: fornisce gli ES relativi ad un soggetto discendente diretto. Per ottenere un ES è necessario indicare almeno l'identificativo dell'entità di cui si vuole ottenere lo statement. (per maggiori dettagli vedi `OIDC-FED#Section.7.1`_)  
- - **trust mark status endpoint**: permette a un'entità di verificare se un TM è ancora attivo o no. La query DEVE essere inviata al soggetto che ha rilasciato quel TM. (per maggiori dettagli vedi `OIDC-FED#Section.7.4`_)
- - **entity listing endpoint**: fornisce la lista delle entità discendenti registrate presso il TA o un SA (per maggiori dettagli vedi `OIDC-FED#Section.7.3`_)
-
- Un'entità di tipo **AA**, oltre agli endpoint di Federazione comuni a tutte le entità, DEVE riportare anche il **trust mark status endpoint** per consentire la validazione dinamica dei TM rilasciati dall'AA.
-
+ - **/.well-known/openid-federation**: gives the `Entity Configuration <Entity_Configuration>`__ (for 
+   more details, see `OIDC-FED#Section.6`_)
+ - **resolve entity statement endpoint**: gives the final Metadata, the Trust Chain and the Trust Marks
+   regarding another subject. For more details, see `OIDC-FED#Section.7.2`_)
 
 .. warning::
-  Rispetto a quanto definito in OIDC-FED, all'**entity listing endpoint** si aggiunge il parametro opzionale **entity_type** come filtro sul tipo di entità dei discendenti.
+  The **resolve entity statement endpoint** MUST NOT return any information regarding a subject
+  about which it hasn't previously collected the statements and calculated the Trust Chain. 
+  In case the TMs are no more valid at the moment of the request, they MUST NOT be included in the
+  response.
+
+In addition to the Federation endpoints reported before, the entities of type **TA** or **SA** MUST provide the following endpoints:
+
+
+ - **fetch entity statement endpoint**: returns the ESs regarding a direct subordinate subject. 
+   For obtaining the ES of an entity, at least its entity identifier is needed. (For more details, see `OIDC-FED#Section.7.1`_).
+ - **trust mark status endpoint**: allows an entity to test if a TM is still active or not. The query MUST
+   be sent to the subject that has released that TM. (For more details, see `OIDC-FED#Section.7.4`_).
+ - **entity listing endpoint**: returns the list of the subordinate entities registered by the TA or an SA.
+   (For more details, see `OIDC-FED#Section.7.3`_).
+
+An entity of type **AA**, in addition to the common Federation endpoints like all the entities, MUST also include the **trust mark status endpoint** for allowing the dynamic validation of the TMs, released by the AA.
+
+
+.. warning::
+  With respect to what defined in the OIDC-FED, to the **entity listing endpoint** is added the optional
+  claim **entity_type**, that is a filter of the entity type of the subordinates.
 
 .. _generic_error_response:
 
-Risposta generica di errore
-+++++++++++++++++++++++++++
+Generic error response
+++++++++++++++++++++++
 
-Se la richiesta è malformata o avvengono errori durante l'elaborazione della richiesta, DOVREBBE essere utilizzato il formato definito in `OIDC-FED#Section.7.5`_.
+If the request is malformed or errors occur during the request processing, the format defined at `OIDC-FED#Section.7.5`_ SHOULD be used.
 
