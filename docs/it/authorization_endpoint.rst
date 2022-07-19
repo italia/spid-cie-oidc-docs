@@ -58,7 +58,7 @@ Di seguito una tabella che riporta la composizione dell'header del **JWT**.
     - |spid-icon| |cieid-icon|
 
 .. note::
-  Il parametro **typ** PUÒ essere omesso nel caso di **JWT**.
+  Il parametro **typ** se omesso assume il valore implicito di **JWT**.
 
 
 Il payload del **JWT** contiene i seguenti parametri obbligatori.
@@ -109,10 +109,10 @@ Il payload del **JWT** contiene i seguenti parametri obbligatori.
        DEVE essere una stringa separata da uno spazio, che specifica i valori "acr" richiesti in ordine di preferenza. L'OP PUÒ utilizzare un'autenticazione ad un livello più alto di quanto richiesto. Tale scelta non DEVE comportare un esito negativo della richiesta.
      - |spid-icon| |cieid-icon|
    * - **claims**
-     - Vedi `OpenID.Core#AuthRequest`_. Vedi Sezione :ref:`Utilizzo dei parametri **scope** e **claims** <parametri_scope_claims>`
+     - Vedi `OpenID.Core#AuthRequest`_. Vedi Sezione :ref:`Utilizzo dei parametri scope e claims <parametri_scope_claims>`
      - |spid-icon| |cieid-icon|
    * - **state**
-     - - Vedi `OpenID.Core#AuthRequest`_. DEVE essere una stringa casuale di almeno 32 caratteri alfanumerici. Identificativo univoco della sessione lato RP. Questo valore verrà restituito al client nella risposta al termine dell'autenticazione.
+     - Vedi `OpenID.Core#AuthRequest`_. DEVE essere una stringa casuale di almeno 32 caratteri alfanumerici. Identificativo univoco della sessione lato RP. Questo valore verrà restituito al client nella risposta al termine dell'autenticazione.
      - |spid-icon| |cieid-icon|
    * - **exp**
      - UNIX Timestamp con l'istante di scadenza del JWT, codificato come NumericDate come indicato in :rfc:`7519`

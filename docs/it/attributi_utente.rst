@@ -64,7 +64,7 @@ Tabella attributi identificativi
 
        .. code-block::
        
-         "Family_name":"Bianchi Verdi"
+         "family_name":"Bianchi Verdi"
 
      - |spid-icon| |cieid-icon|
    * - Luogo di nascita |br|
