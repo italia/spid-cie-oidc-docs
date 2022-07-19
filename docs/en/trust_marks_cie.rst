@@ -1,89 +1,92 @@
 .. include:: ./common_definitions.rst
 
 
-Trust Mark CIEid
-----------------
+Trust Mark for CIEid
+---------------------
 
-La tabella seguente riassume tutti i profili disponibili per tutte le entità coinvolte e supportate dalla Federazione CIEid.
+The following table summarizes all the available profiles for all the entities involved and supported by the CIEid Federation.
 
 
 .. list-table::
     :widths: 20 60 20
     :header-rows: 1
 
-    * - **Profilo TM**
-      - **Descrizione**
-      - **Tipi di entità sub**
+    * - **TM Profile**
+      - **Description**
+      - **Type of sub entity**
     * - **public**
-      - l'entità nel claim *sub* appartiene alla pubblica amministrazione italiana.
+      - the entity in the claim *sub* belongs to the Italian Public Administration.
       - RP, OP
     * - **private**
-      - l'entità nel claim *sub* appartiene al settore privato.
+      - the entity in the claim *sub* belongs to the private sector.
       - RP
     * - **intermediary**
-      - l'entità nel claim *sub* è un Soggetto Aggregatore.
+      - the entity in the claim *sub* is an SA.
       - SA
     * - **attribute-authority**
-      - l'entità nel claim *sub* è una Attribute Authority.
+      - the entity in the claim *sub* is an Attribute Authority.
       - AA
     * - **sgd**
-      - l'entità nel claim *sub* è un RP o un SA che ha aderito alla AA Sistema di Gestione Deleghe.
+      - the entity in the claim *sub* is an RP or an SA that participates in the AA's System of Delegation Management.
       - RP
 
-Profili **public** e **private**
-++++++++++++++++++++++++++++++++
+Profiles **public** and **private**
++++++++++++++++++++++++++++++++++++
 
-Si applicano i claim presenti nella tabella riportata nella Sezione :ref:`Composizione dei Trust Mark <ComposizioneTM>`
+Here the claims of the Section :ref:`Composizione dei Trust Mark <ComposizioneTM>` apply.
 
-Profilo **intermediary**
+
+Profile **intermediary**
 ++++++++++++++++++++++++
 
-In aggiunta ai claim dei profili **public** e **private**, il profilo **intermediary** aggiunge il seguente claim:
+In addition to the claims of the profiles **public** and **private**, the profile **intermediary** adds the following claims:
 
 .. list-table::
     :widths: 20 60
     :header-rows: 1
 
     * - **Claim**
-      - **Descrizione**
+      - **Description**
     * - **sa_type**
-      - DEVE essere valorizzata con **"full"** o **"light"** a seconda della modalità con cui operano rispetto ai Soggetti Aggregati
+      - it MUST have the values **"full"** or **"light"** according to the way they operate with respect to the Aggregated Subjects.
 
 .. seealso::
 
-    Si veda Sezione :ref:`Soggetti aggregatori nel contesto Federativo <Soggetti_aggregatori>`
+    See Section :ref:`Intermediate Entities in the Federative context <Soggetti_aggregatori>`
 
-Profilo **attribute-authority**
+Profile **attribute-authority**
 +++++++++++++++++++++++++++++++
 
-In aggiunta ai claim dei profili **public** e **private**, il profilo **attribute-authority** aggiunge il seguente claim obbligatori:
+In addition to the claims of the profiles **public** and **private**, the profile **attribute-authority** adds the following claims:
+
 
 .. list-table::
     :widths: 20 60
     :header-rows: 1
 
     * - **Claim**
-      - **Descrizione**
+      - **Description**
     * - **policy_uri**
-      - URL dove è disponibile la privacy policy dell'AA. 
+      - URL at which the privacy policy of the AA is available.
     * - **tos_uri**
-      - URL dove è disponibile la info policy dell'AA. 
+      - URL at which the info policy of the AA is available. 
     * - **claims**
-      - Lista di JSON Object che definiscono gli attributi dell’utente richiesti dall'AA. Esempio: |br| ``{"https://attributes.eid.gov.it/fiscal_number":{"essential":true},`` |br| ``"email":{"essential":true},}``
+      - List of JSON Objects that define the user's attributes required by the AA. Example: |br| ``{"https://attributes.eid.gov.it/fiscal_number":{"essential":true},`` |br| ``"email":{"essential":true},}``
     * - **service_documentation**
-      - URL dove è disponibile il documento OAS3 che descrive il funzionamento dei servizi dell'AA.
+      - URL at which it is available the OAS3 document that describes how the AA services work.
 
 
 
-Profilo **sgd**
+Profile **sgd**
 +++++++++++++++
 
-Per i dettagli tecnici e gli esempi non normativo si veda [INSERIRE LINK ALLA DOCUMENTAZIONE]
+For technical details and non-normative examples, see [LINK TO BE INSERTED HERE]
 
-Esempi di Trust Mark CIE
-++++++++++++++++++++++++
 
-Il seguente è un esempio non normativo di un Trust Mark emesso da *MinInterno* per SA di tipo **full** afferente all pubblica amministrazione.
+Examples of Trust Marks for CIE
++++++++++++++++++++++++++++++++
+
+Following, a non-normative example of a Trust Mark, issued by *MinInterno* for SAs of type **full**, belonging to the Public Administration.
 
 .. code-block::
 
@@ -98,7 +101,7 @@ Il seguente è un esempio non normativo di un Trust Mark emesso da *MinInterno* 
  }
 
 
-Dove il payload JWT è il seguente:
+Where the JWT payload is the following:
 
 .. code-block::
 
@@ -116,8 +119,7 @@ Dove il payload JWT è il seguente:
  }
 
 
-
-Il seguente è un esempio non normativo di un TM emesso da un SA a un'entità Foglia RP afferente alla Pubblica Amministrazione.
+Following, a non-normative example of a TM, issued by an SA of type RP Leaf, belonging to the Public Administration.
 
 .. code-block::
 
@@ -132,7 +134,8 @@ Il seguente è un esempio non normativo di un TM emesso da un SA a un'entità Fo
  }
 
 
-Dove il payload $JWT potrebbe essere come nel seguente esempio non normativo:
+Where the payload $JWT could be as in the following non-normative example:
+
 
 .. code-block::
 

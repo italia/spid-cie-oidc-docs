@@ -88,7 +88,7 @@ Gli attributi definiti all'interno dei TM aderiscono a quanto definito all'inter
         es. non normativo: ``https://registry.interno.gov.it/openid_relying_party/public/``
       - |spid-icon| |cieid-icon|
     * - **iat**
-      - UNIX Timestamp con l'istante di geerazione del JWT, codificato come NumericDate come indicato in :rfc:`7519`
+      - UNIX Timestamp con l'istante di generazione del JWT, codificato come NumericDate come indicato in :rfc:`7519`
       - |spid-icon| |cieid-icon|
     * - **logo_uri**
       - String. Un URL che punta al logo rappresentante il Trust Mark.
@@ -97,7 +97,7 @@ Gli attributi definiti all'interno dei TM aderiscono a quanto definito all'inter
       - UNIX Timestamp con l'istante di scadenza del JWT, codificato come NumericDate come indicato in :rfc:`7519`
       - |spid-icon| |cieid-icon|
     * - **ref**
-      - String. URL che punta a informazioni presenti sul web relative a questo marchio di fiducia
+      - String. URL che punta a informazioni presenti sul web relative a questo Trust Mark.
       - |spid-icon| |cieid-icon|
     * - **organization_type**
       - String. Specifica se l'ente appartiene alla pubblica amministrazione italiana o al settore privato (**public** o **private**)
@@ -114,7 +114,7 @@ Gli attributi definiti all'interno dei TM aderiscono a quanto definito all'inter
       - |spid-icon| |cieid-icon|
 
 .. warning::
-  Nel caso di CIEid, le organizzazioni pubbliche che oltre al **codice IPA** dispongono anche di un **codice univoco AOO** DEVONO riportare quest'ultimo all'interno del parametro **id_code** secondo il seguente formato *"<IPA_code>-<AOO_code>"*.  Inoltre, il valore contenuto nel parametro **exp** NON DEVE essere superiore alla durata delle specifiche convenzioni/accordi stipulati in fase di onboarding tra il MinInterno e le organizzazioni che ricevono il TM.  
+  Nel caso di CIEid, le organizzazioni pubbliche che oltre al **codice IPA** dispongono anche di un **codice univoco AOO** DEVONO riportare quest'ultimo all'interno del parametro **id_code** secondo il seguente formato *<IPA_code>-<AOO_code>*.  Inoltre, il valore contenuto nel parametro **exp** NON DEVE essere superiore alla durata delle specifiche convenzioni/accordi stipulati in fase di onboarding tra il MinInterno e le organizzazioni che ricevono il TM.  
 
 .. seealso::
 

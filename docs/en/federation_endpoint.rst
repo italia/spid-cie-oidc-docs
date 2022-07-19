@@ -32,3 +32,4 @@ Risposta generica di errore
 +++++++++++++++++++++++++++
 
 Se la richiesta è malformata o avvengono errori durante l'elaborazione della richiesta, DOVREBBE essere utilizzato il formato definito in `OIDC-FED#Section.7.5`_.
+

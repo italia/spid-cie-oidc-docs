@@ -3,24 +3,30 @@
 
 .. _Trust_Mark:
 
-Trust Mark
-==========
+Trust Marks
+===========
 
-I **Trust Mark (TM)**, letteralmente tradotti come *Marchi di Fiducia*, sono JWT firmati :rfc:`7515` e rappresentano la dichiarazione di conformità a un insieme ben definito di requisiti di fiducia e/o di interoperabilità o un accordo tra le parti coinvolte all'interno della Federazione. 
+The **Trust Marks (TM)** are signed JWT :rfc:`7515` and represent the statement of compliance with a well defined set of requirements of trust and/or interoperability, or an agreement among the parties involved in the Federation. 
 
-Lo scopo principale dei TM è quello di esporre alcune informazioni non richieste dal protocollo OpenID Connect Core ma che risultano utili in contesto Federativo.
+The main aim of the TMs is exposing information that is not required by the OpenID Connect Core protocol,
+but turns out to be useful in the federative context.
 
-Esempi tipici includono il codice di identificazione nazionale o internazionale dell'entità (Codice Fiscale, IPA Code, Partita IVA, VAT Number), i contatti istituzionali e altro, come definito in `OIDC-FED`_. Ulteriori dati possono essere aggiunti dal soggetto che li emette.
+Typical examples include the entity's national or international identification code (fiscal code, IPA code, VAT number), institutional contacts and so forth, as defined at `OIDC-FED`_. Further data may be added
+by the issuing subject.
 
-I TM sono emessi e firmati, durante il processo di registrazione di una nuova entità di tipo Foglia (Onboarding), dal (TA) o suoi Intermediari (SA) o da Gestori Qualificati di Attributi (AA), se definiti all'interno dell'attributo **trust_mark_issuers**, pubblicato all'interno dell'Entity Configuration del TA. 
+During the registration process of a new Leaf Entity (onboarding), the TMs are issued and signed by the TA
+or its Intermediaries (SA) or by Attribute Authorities (AA), if they are defined inside the attribute **trust_mark_issuers**, published inside the TA's Entity Configuration.
 
-Ogni entità partecipante DEVE esporre nella propria configurazione (EC) i TM rilasciati dalle autorità che li emettono. 
+Each member entity MUST expose, in its own configuration (EC), the TMs released by the issuing authorities.
 
-Nello scenario CIE / SPID, un TM viene firmato dal TA **MinInterno** / **Agid** o loro Intermediari (SA) o Gestori Qualificati di Attributi (AA). 
+In the CIE / SPID scenario, a TM is signed by the TA **MinInterno** / **Agid** or their Intermediaries (SA) or by Attribute Authorities (AA).
 
-Il TA definisce i soggetti abilitati all'emissione dei TM riconoscibili all'interno della Federazione, mediante il claim **trust_marks_issuers**, presente all'interno del proprio Entity Configuration. Il valore dell'attributo **trust_marks_issuers** è composto da un oggetto JSON avente come chiavi gli identificativi dei TM e come valori la lista degli identificativi (URL) delle entità abilitate ad emetterli.
+The TA defines the subjects who are enabled to issue TMs that are recognizable inside the Federation,
+and this is done by the claim **trust_marks_issuers**, contained in its own Entity Configuration. 
+The value of the claim **trust_marks_issuers** is composed by a JSON Object having as keys the TM identifiers, and as values the list of identifiers (URLs) or the entities who are enabled to issue them.
 
-Di seguito un esempio non normativo dell'oggetto **trust_marks_issuers** all'interno della Entity Configuration del TA.
+Following, a non-normative example of the object **trust_marks_issuers** inside the TA's Entity Configuration.
+
 
 .. code-block::
 
@@ -38,83 +44,93 @@ Di seguito un esempio non normativo dell'oggetto **trust_marks_issuers** all'int
  }
 
 
-Validazione dei Trust Mark
---------------------------
+Trust Mark Validation
+---------------------
 
-Esistono due modi per validare un Trust Mark:
+There are two ways of validating a Trust Mark:
 
- 1. Validazione **statica**. Il Trust Mark viene validato mediante la chiave pubblica dell'autorità che lo ha emesso (attributo **iss**), sulla base della corrispondenza dell'attributo **sub** con il medesimo attributo della Entity Configuration in cui è contenuto e sulla base del valore di scadenza (attributo **exp**).
+ 1. **Static** Validation. The Trust Mark is validated through its issuing authority's public key (claim **iss**), on top of the correspondence of the claim **sub** to the same claim of the Entity Configuration in which it is contained, and on top of the expiry value (claim **exp**)
 
- 2. Validazione **dinamica**. I partecipanti della Federazione possono interrogare l'endpoint :ref:`trust mark status<federation_endpoint>` erogato dal suo emettitore (attributo iss) per la verifica in tempo reale dei TM da lui emessi. 
+ 2. **Dynamic** Validation. The Federation members can query the endpoint :ref:`trust mark status<federation_endpoint>` supplied by its issuer (claim **iss**), for a real-time checking of the TMs that it has issued.
 
-Tutte le entità che rilasciano Trust Mark DEVONO esporre un endpoint di Trust Mark status per consentire la validazione **dinamica**.
+All the entities that release Trust Marks, MUST expose a Trust Mark status endpoint for allowing the 
+**dynamic** validation.
 
 .. seealso:: 
 
   - `OIDC-FED#Section.5.3.2`_
 
 
-Revoca dei Trust Mark
+Trust Mark Revocation
 ---------------------
 
-Un Trust Mark può essere revocato in qualsiasi momento solo ed esclusivamente dal soggetto che lo ha emesso. Ad esempio, in caso di esclusione di un Soggetto Aggregato da parte della Autorità di Federazione, questa comunica al Soggetto Aggregatore l'esclusione dell'Aggregato. Di conseguenza il SA DEVE revocare il TM per il suo discendente. 
+A Trust Mark can be revoked at any moment only and exclusively by the issuing subject. 
+For example, in case of exclusion of an Aggregated Subject by the Federation Authority, it communicates the exclusion of the Aggregated Subject to the SA. Consequently, the SA MUST revoke the TM for its subordinate.
+
 
 .. note::
-  Nel caso di revoca di un TM, la validazione **dinamica** darà esito negativo, mentre la validazione **statica** continuerà a dare esito positivo, a meno di rotazioni delle chiavi crittografiche di firma del soggetto che ha rilasciato il TM. 
+   
+   In case of TM revocation, the **dynamic** validation gives a negative result, while the **static** 
+   validation keeps on giving a positive result, unless the signing encryption keys of the TM-releasing subject are rotated.
+
 
 .. _ComposizioneTM:
 
-Composizione dei Trust Mark 
----------------------------
+Trust Mark Composition
+----------------------
 
-Gli attributi definiti all'interno dei TM aderiscono a quanto definito all'interno dello standard OIDC Federation 1.0 (`OIDC-FED`_). Segue la lista.
+The claims defined inside the TMs, comply to what defined in the OIDC Federation 1.0 (`OIDC-FED`_) standard. Following, the list.
 
 .. list-table::
     :widths: 20 60 20
     :header-rows: 1
 
     * - **Claim**
-      - **Descrizione**
-      - **Supportato da**
+      - **Description**
+      - **Supported by**
     * - **iss**
-      - String. URL che identifica univocamente l'Autorità che lo ha emesso.
+      - String. URL that uniquely identifies its issuing Authority.
       - |spid-icon| |cieid-icon|
     * - **sub**
-      - String. URL che identifica univocamente il soggetto per il quale il Trust Mark è stato emesso.
+      - String. URL that uniquely identifies the subject for which the Trust Mark has been issued.
       - |spid-icon| |cieid-icon|
     * - **id**
-      - String. Identificativo univoco del Trust Mark. È un URL con la seguente struttura: |br|
+      - String. Unique identifier of the Trust Mark. It is an URL with the following structure: |br|
         **<TA domain>/<entity_type>/<trustmark_profile>/** |br|
-        es. non normativo: ``https://registry.interno.gov.it/openid_relying_party/public/``
+        non-normative example: ``https://registry.interno.gov.it/openid_relying_party/public/``
       - |spid-icon| |cieid-icon|
     * - **iat**
-      - UNIX Timestamp con l'istante di geerazione del JWT, codificato come NumericDate come indicato in :rfc:`7519`
+      - UNIX Timestamp with the JWT generation time, coded as NumericDate as indicated at :rfc:`7519`
       - |spid-icon| |cieid-icon|
     * - **logo_uri**
-      - String. Un URL che punta al logo rappresentante il Trust Mark.
+      - String. An URL that points to the logo that represents the Trust Mark.
       - |spid-icon| |cieid-icon|
     * - **exp**
-      - UNIX Timestamp con l'istante di scadenza del JWT, codificato come NumericDate come indicato in :rfc:`7519`
+      - UNIX Timestamp with the JWT expiry time, coded as NumericDate as indicated at :rfc:`7519`
       - |spid-icon| |cieid-icon|
     * - **ref**
-      - String. URL che punta a informazioni presenti sul web relative a questo marchio di fiducia
+      - String. URL that points to information present on the web, about this Trust Mark
       - |spid-icon| |cieid-icon|
     * - **organization_type**
-      - String. Specifica se l'ente appartiene alla pubblica amministrazione italiana o al settore privato (**public** o **private**)
+      - String. Specifies if the entity belongs to the Italian Public Administration or the private sector (**public** or **private**)
       - |spid-icon| |cieid-icon|
     * - **id_code**
-      - String. Codice di identificazione dell'organizzazione. A seconda del valore del tipo di organizzazione, deve essere
-        indicato il codice IPA (per il tipo di organizzazione pubblica) o il numero di partita IVA (per quello privato).
+      - String. Identification code of the Organization. Depending on the organization type, it must be
+        indicated an IPA code (for the public organization type) or the VAT number (for the private type).
       - |spid-icon| |cieid-icon|
     * - **email**
-      - String. Email istituzionale o PEC dell'organizzazione.
+      - String. Institutional e-mail or PEC of the organization.
       - |spid-icon| |cieid-icon|
     * - **organization_name**
-      - String. Il nome completo dell'entità che fornisce i servizi
+      - String. The complete name of the service-supplying entity.
       - |spid-icon| |cieid-icon|
 
 .. warning::
-  Nel caso di CIEid, le organizzazioni pubbliche che oltre al **codice IPA** dispongono anche di un **codice univoco AOO** DEVONO riportare quest'ultimo all'interno del parametro **id_code** secondo il seguente formato *"<IPA_code>-<AOO_code>"*.  Inoltre, il valore contenuto nel parametro **exp** NON DEVE essere superiore alla durata delle specifiche convenzioni/accordi stipulati in fase di onboarding tra il MinInterno e le organizzazioni che ricevono il TM.  
+  In case of CIEid, the public organizations that have not only the **IPA code**, but also a **unique AOO code**, MUST include this latter one in the claim **id_code**, in the format *<IPA_code>-<AOO_code>*.
+  Furthermore, the value in the claim **exp** MUST NOT be greater than the duration of the specific 
+  conventions/agreements concluded in the onboarding phase, between the MinInterno and the organizations 
+  that receive the TM.
+ 
 
 .. seealso::
 

@@ -70,8 +70,8 @@ Entity Configuration - common claims
   Inside the EC the claims **iss** e **sub** contain the same value (URL).
 
 
-Entity Configuration Leafs and Intermediaries
-+++++++++++++++++++++++++++++++++++++++++++++
+Entity Configuration Leaves and Intermediaries
+++++++++++++++++++++++++++++++++++++++++++++++
 
 The EC of the Leaf and Intermediate Entities, other than the previously defines claims, contain the further
 claims:

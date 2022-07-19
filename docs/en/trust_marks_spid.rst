@@ -1,17 +1,19 @@
 .. include:: ./common_definitions.rst
 
 
-Trust Mark per SPID
-+++++++++++++++++++
+Trust Marks for SPID
+++++++++++++++++++++
 
-TBD esempi non normativi
+TBD non normative examples
 
-Esempi di Trust Mark SPID
-^^^^^^^^^^^^^^^^^^^^^^^^^
+Examples of Trust Marks for SPID
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-I TM emessi per le foglie DEVONO essere pubblicati dalle foglie stesse nelle proprie **Entity Configuration**, all'interno dell'attributo **trust_marks**. Questo è composto da liste di oggetti JSON, ognuno dei quali DEVE contenere almeno gli attributi **id** e **trust_mark**, il primo identifica il TM, il secondo contiene il JWT firmato del TM.
+The TMs issued for the Leaves MUST be published by the Leaves themselves in their own **Entity Configuration**,
+inside the claim **trust_marks**. This is composed by lists of JSOB objects, each of them MUST contain at least
+the claims **id** and **trust_mark**, where the first identifies the TM, and the second contains the signed JWT of the TM.
 
-Di seguito un esempio non normativo dell'oggetto **trust_marks** all'interno della Entity Configuration di una Foglia di tipo RP.
+Following, a non-normative example of the object **trust_marks** inside the Entity Configuration of an RP-type Leaf.
 
 
 .. code-block::
@@ -27,7 +29,8 @@ Di seguito un esempio non normativo dell'oggetto **trust_marks** all'interno del
 
 
 
-Quello che segue è un esempio non normativo di un marchio di fiducia emesso dalla AgID per un Intermediario privato.
+Following, a non-normative example of a Trust Mark issued by AgID for a private Intermediary.
+
 
 .. code-block::
 
@@ -40,7 +43,7 @@ Quello che segue è un esempio non normativo di un marchio di fiducia emesso dal
      ]
  }
 
-Dove il contenuto del JWT firmato all'interno dell'attributo **trust_mark** corrisponde a:
+Where the content of the signed JWT inside the claim **trust_mark**, corresponds to:
 
 .. code-block::
 
@@ -58,7 +61,8 @@ Dove il contenuto del JWT firmato all'interno dell'attributo **trust_mark** corr
 
 
 
-Un'entità Intermediaria o Soggetto Aggregatore (SA) è riconoscibile come emettitore di Trust Mark. Quello che segue è un esempio non normativo di un Trust Mark emesso da un SA a favore di un RP suo discendente.
+An Intermediate Entity or Intermediary (SA) is recognizable as Trust Mark issuer. What follows, is a 
+non-normative example of a Trust Mark, issued by an SA in favor of its subordinate RP.
 
 .. code-block::
 
@@ -72,7 +76,8 @@ Un'entità Intermediaria o Soggetto Aggregatore (SA) è riconoscibile come emett
  }
 
 
-Dove il contenuto del JWT firmato all'interno dell'attributo **trust_mark** corrisponde al seguente esempio non normativo.
+Where the content of the signed JWT inside the claim **trust_mark**, corresponds to the following non-normative example:
+
 
 .. code-block::
 
