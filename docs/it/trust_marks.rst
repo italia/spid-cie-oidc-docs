@@ -56,7 +56,7 @@ La tabella seguente riassume tutti i profili disponibili per tutte le entità co
     * - **federation_entity**
       - l'entità nel claim *sub* è un Soggetto Aggregatore.
       - SA
-    * - **oauth_authorization_server*
+    * - **oauth_authorization_server**
       - l'entità nel claim *sub* è una Attribute Authority.
       - AA
     * - **sgd**
