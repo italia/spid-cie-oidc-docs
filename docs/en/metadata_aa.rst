@@ -4,8 +4,8 @@
 Attribute Authority Metadata
 ++++++++++++++++++++++++++++
 
-An AA MUST publish in its EC a Metadata from *federation_entity*, a Metadata from *oauth_authorization_server* 
-and a Metadata from *oauth_resource* as reported in the following example:
+An AA MUST publish in its EC a Metadata with *federation_entity*, a Metadata with *oauth_authorization_server* 
+and a Metadata with *oauth_resource* as reported in the following example:
 
 .. code-block:: 
 
