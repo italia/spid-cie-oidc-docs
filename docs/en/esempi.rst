@@ -1,11 +1,11 @@
 .. include:: ./common_definitions.rst
 
-Esempi
-======
+Examples
+========
 
-In questa sezione sono raccolti tutti gli esempi non normativi delle richieste e delle risposte agli endpoint di Federazione definiti all'interno di questo documento.
+This section gathers all the non-normative examples of the requests and responses to the Federation's endpoints, that are defined in this document.
 
-Tutte le response di tipo jose sono state decodificate e rappresentate insieme alle loro intestazioni per migliorare la lettura.
+All the responses of type jose have been decoded and represented with their headings, for the sake of reading.
 
 
 .. _Esempio_EN1:
@@ -285,8 +285,8 @@ EN 1.2. Entity Configuration Response Openid Provider
 
 
 
-EN 1.3. Entity Configuration Response Soggetto Aggregatore
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+EN 1.3. Entity Configuration Response Intermediary 
+++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. code-block:: 
 
@@ -612,7 +612,7 @@ EN 5.1. Trust Mark Status Response
 EN 6. Authorization Request
 ++++++++++++++++++++++++++++
 
-**Esempio (chiamata HTTP):**
+**Example (HTTP call):**
 
 .. code-block::
 
@@ -629,7 +629,7 @@ EN 6. Authorization Request
   Host: https://op.spid.agid.gov.it
   HTTP/1.1
   
-**Esempio del payload del JWT:**
+**Example of JWT payload:**
 
 .. code-block::
 
