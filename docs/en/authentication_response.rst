@@ -11,10 +11,11 @@ to the URL contained in the parameter redirect_uri specified in the authorizatio
  - https://tools.ietf.org/html/rfc6749#section-4.1.2
  - https://openid.net/specs/openid-connect-core-1_0.html#AuthRequestValidation
 
+
 Response
 ++++++++
 
-If the authentication has succeded, the OpenID Provider (OP), redirects the user wuth the following parameters:
+If the authentication is successful, the OpenID Provider (OP), redirects the user with the following parameters:
 
 
 .. code-block:: 
@@ -35,26 +36,26 @@ If the authentication has succeded, the OpenID Provider (OP), redirects the user
      - **Description**
      - **Supported by**
    * - **code**
-     - Unique *Authorization Code* that the client can pass to the Token Endpoint for obtaining an ID Token and an Access Token. This has the advantage of not exposing any token to the User Agent or to malware that coud be controlling it.
+     - Unique *Authorization Code* that the client can pass to the Token Endpoint for obtaining an ID Token and an Access Token. This has the advantage of not exposing any token to the User Agent or to malware that could be controlling it.
      - |spid-icon| |cieid-icon|
    * - **state**
-     - State value included in the *Authentication Request*. The client is supposed to check its correspondene. It must have the same value indicated by the client in the Authorization Request.
+     - State value included in the *Authentication Request*. The client is supposed to check its correspondence. It must have the same value indicated by the client in the Authorization Request.
      - |spid-icon| |cieid-icon|
    * - **iss**
      - Unique Identifier of the OP that has created the Authentication Response. The RP MUST validate
        this parameter and MUST NOT allow more OPs to use the same identifier. MANDATORY only for CIE.
      - |cieid-icon|
 
-Errori
+Errors
 ++++++
 
-In caso di errore, l'OP visualizza i messaggi di anomalia relativi agli scambi OpenID
-Connect descritti nelle relative tabelle definite dalle `Linee Guida UX SPID`_. Nei casi in cui tali linee
-guida prescrivono un redirect dell'utente verso il RP, l'OP effettua il redirect verso l'URL indicata
-nel parametro redirect_uri della richiesta (solo se valido, ovvero presente nel client metadata), con
-i seguenti parametri.
+In case of errors, the OP displays error messages about the OpenID Connect interchanges, 
+as described in the tables defined in the `SPID UX Guidelines`_. 
+In case the guidelines require a user's redirect to the RP, the OP performs a redirect to the URL indicated 
+in the parameter redirect_uri of the request (only if it is valid, i.e. it is present in the client Metadata), with the following parameters.
 
-**Esempio:**
+
+**Example:**
 
 .. code-block:: 
 
@@ -72,23 +73,23 @@ i seguenti parametri.
    :header-rows: 1
 
    * - **Claim**
-     - **Descrizione**
-     - **Supportato da**
+     - **Description**
+     - **Supported by**
    * - **error**
-     - Codice dell'errore
+     - Error code
      - |spid-icon| |cieid-icon|
    * - **error_description**
-     - Descrizione più dettagliata dell'errore, finalizzata ad aiutare lo sviluppatore per eventuale debugging. Questo messaggio non è 
-       destinato ad essere visualizzato all'utente (a tal fine si faccia riferimento alle `Linee Guida UX SPID`_
+     - More detailed error description, aimed at helping the developers to debug. This message is not supposed
+       to be displayed to the user (for this purpose, please see the `SPID UX Guidelines`_
      - |spid-icon| |cieid-icon|
    * - **state**
-     - Valore *state* incluso nella Authentication Request.  Il client è tenuto a verificare che corrisponda a quello inviato nella Authentication Request.
+     - *state* value included in the Authentication Request. It is up to the client to test its
+       correspondence to the one that has been sent in the Authentication Request.
      - |spid-icon| |cieid-icon|
 
 
 .. seealso::
 
  - https://tools.ietf.org/html/rfc6749#section-4.1.2.1
-
 
 
