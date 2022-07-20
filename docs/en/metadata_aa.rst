@@ -84,7 +84,7 @@ The AA Metadata with **"oauth_authorization_server"** MUST contain at least the 
 
 
 
-The AA Metadata from **"oauth_resource"** MUST contain at least the following mandatory parameters:
+The AA Metadata of type **"oauth_resource"** MUST contain at least the following mandatory parameters:
 
 .. list-table:: 
   :widths: 20 60 20
