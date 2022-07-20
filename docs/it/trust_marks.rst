@@ -14,24 +14,6 @@ Esempi tipici includono il codice di identificazione nazionale o internazionale 
 
 I TM sono emessi e firmati, durante il processo di registrazione di una nuova entità di tipo Foglia (Onboarding), dal (TA) o suoi Intermediari (SA) o da Gestori Qualificati di Attributi (AA), se definiti all'interno dell'attributo **trust_mark_issuers**, pubblicato all'interno dell'Entity Configuration del TA. 
 
-Ogni entità partecipante DEVE esporre nella propria configurazione (EC) i TM rilasciati dalle autorità che li emettono. 
-
-Nello scenario CIE / SPID, un TM viene firmato dal TA **MinInterno** / **Agid** o loro Intermediari (SA) o Gestori Qualificati di Attributi (AA). 
-
-Il TA definisce i soggetti abilitati all'emissione dei TM riconoscibili all'interno della Federazione, mediante il claim **trust_marks_issuers**, presente all'interno del proprio Entity Configuration. Il valore dell'attributo **trust_marks_issuers** è composto da un oggetto JSON avente come chiavi gli identificativi dei TM e come valori la lista degli identificativi (URL) delle entità abilitate ad emetterli.
-
-I Trust Mark rappresentano il primo filtro per l'instaurazione della fiducia tra le parti, sono elementi indispensabili per avviare la risoluzione dei metadati. In loro assenza una entità non è riconoscibile come partecipante all’interno della Federazione.
-
-All’interno della Federazione SPID i Trust Mark presentano degli identificativi univoci (claim id) in formato URL che adottano la seguente struttura: **<domain> / <entity_type> / <trustmark_profile> /**
-
-Alcuni esempi non normativi sono di seguito riportati:
-
-
- * TM RP public: https://registry.agid.gov.it/openid_relying_party/public/
- * TM SA private: https://registry.agid.gov.it/federation_entity/private/
- * TM AA: https://registry.agid.gov.it/oauth_authorization_server/public/
-
-
 Di seguito un esempio non normativo dell'oggetto **trust_marks_issuers** all'interno della Entity Configuration del TA.
 
 .. code-block::
@@ -49,16 +31,35 @@ Di seguito un esempio non normativo dell'oggetto **trust_marks_issuers** all'int
      }
  }
 
-La tabella seguente definisce i <entity_type> riconoscibili all'interno delle Federazioni SPID e CIE id:
+
+Ogni entità partecipante DEVE esporre nella propria configurazione (EC) i TM rilasciati dalle autorità che li emettono. 
+
+Nello scenario CIE / SPID, un TM viene firmato dal TA **MinInterno** / **Agid** o loro Intermediari (SA) o Gestori Qualificati di Attributi (AA). 
+
+Il TA definisce i soggetti abilitati all'emissione dei TM riconoscibili all'interno della Federazione, mediante il claim **trust_marks_issuers**, presente all'interno del proprio Entity Configuration. Il valore dell'attributo **trust_marks_issuers** è composto da un oggetto JSON avente come chiavi gli identificativi dei TM e come valori la lista degli identificativi (URL) delle entità abilitate ad emetterli.
+
+I Trust Mark rappresentano il primo filtro per l'instaurazione della fiducia tra le parti, sono elementi indispensabili per avviare la risoluzione dei metadati. In loro assenza una entità non è riconoscibile come partecipante all’interno della Federazione.
+
+All’interno della Federazione SPID i Trust Mark presentano degli identificativi univoci (claim id) in formato URL che adottano la seguente struttura: **https:// <domain> / <entity_type> / <trustmark_profile> / [estensione /]**
+
+Alcuni esempi non normativi sono di seguito riportati:
+
+
+ - TM RP public: **\https://registry.agid.gov.it/openid_relying_party/public/**
+ - TM SA private: **\https://registry.agid.gov.it/federation_entity/private/full/**
+ - TM AA: **\https://registry.agid.gov.it/oauth_authorization_server/public/**
+
+
+La tabella seguente definisce gli <entity_type> riconoscibili all'interno delle Federazioni SPID e CIE id:
 
 
 .. list-table::
     :widths: 20 60 20
     :header-rows: 1
 
-    * - **openid_relying_party**
-      - l'entità nel claim *sub* è un RP.
-      - RP
+    * - tipo
+      - descrizione
+      - entità
     * - **openid_provider**
       - l'entità nel claim *sub* è un OP.
       - OP
@@ -76,30 +77,22 @@ La tabella seguente definisce i <trustmark_profile> riconoscibili all'interno de
     :widths: 20 60 20
     :header-rows: 1
 
-    * - **Profilo TM**
-      - **Descrizione**
-      - **Tipi di entità sub**
+    * - **profilo**
+      - **descrizione**
+      - **Entità**
     * - **public**
       - l'entità nel claim *sub* appartiene alla pubblica amministrazione italiana.
-      - RP, OP
+      - RP, OP, SA, AA
     * - **private**
       - l'entità nel claim *sub* appartiene al settore privato.
-      - RP
+      - RP, OP, SA, AA
 
 
 **federation_entity** Trust Mark
-----------------------
+--------------------------------
 
-In aggiunta ai claim dei profili **public** e **private**, il profilo **federation_entity** individua i SA e aggiunge la seguente estensione:
-
-.. list-table::
-    :widths: 20 60
-    :header-rows: 1
-
-    * - **Claim**
-      - **Descrizione**
-    * - **sa_type**
-      - DEVE essere valorizzata con **"full"** o **"light"** a seconda della modalità con cui operano rispetto ai Soggetti Aggregati
+In aggiunta ai claim dei profili **public** e **private**, il profilo **federation_entity** individua i SA e aggiungendo le estensioni **full** e **light**, 
+a seconda della modalità con cui operano rispetto ai Soggetti Aggregati
 
 .. seealso::
 
