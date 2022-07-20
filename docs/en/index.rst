@@ -46,9 +46,10 @@ Indix of content
    introspection_endpoint.rst
    revocation_endpoint.rst
    differenze_oidc_fed.rst
-   come_contribuire.rst
    seccons_bcps.rst
-   diventa_fornitore.rst
-   avvisi_spid.rst
    esempi.rst
+   avvisi_spid.rst
+   diventa_fornitore.rst
+   come_contribuire.rst
+
    

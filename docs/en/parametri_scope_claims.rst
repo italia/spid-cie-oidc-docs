@@ -42,8 +42,8 @@ The following table shows some usage examples.
     :widths: 10 10 20 20
     :header-rows: 1
 
-    * - **claims**
-      - **scope**
+    * - **Claims**
+      - **Scope**
       - **Attributes in the Userinfo Response**
       - **Attributes in the ID Token**
     * - *userinfo*: \- |br| *id_token*: \-
