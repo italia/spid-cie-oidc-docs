@@ -145,7 +145,7 @@ The EC of an OP MUST configure a metadata of type **"openid_provider"**, that MU
 
 
 .. warning::
-  The OP Metadata from **"openid_provider"** exposes the claim **jwks** as regulated by OID-FED instead of
+  The OP Metadata of type **"openid_provider"** exposes the claim **jwks** as regulated by OID-FED instead of
   the claim **jwks_uri** as required at `OpenID.Discovery#OP_Metadata`_.
 
 .. seealso:: 
