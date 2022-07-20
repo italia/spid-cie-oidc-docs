@@ -1,11 +1,11 @@
 .. include:: ./common_definitions.rst
 
 
-Diventa fornitore di servizi 
-----------------------------
+Become a service provider
+-------------------------
 
-Qui di seguito riportiamo gli indirizzi di riferimento per le procedure di "onboarding" di SPID e CIE, cioè per diventare fornitori di servizi.
+Following, find the official links of the SPID and CIE onboarding procedures, that is for becoming a service supplier.
 
- - `Come diventare fornitori di servizi SPID <https://www.spid.gov.it/cos-e-spid/diventa-fornitore-di-servizi/>`_
+ - `How to become SPID service provider <https://www.spid.gov.it/cos-e-spid/diventa-fornitore-di-servizi/>`_
 
- - `Come diventare fornitori di servizi CIE <https://www.cartaidentita.interno.gov.it/esercenti/come-attivare-entra-con-cie/>`_
+ - `How to become CIE service provider <https://www.cartaidentita.interno.gov.it/esercenti/come-attivare-entra-con-cie/>`_
