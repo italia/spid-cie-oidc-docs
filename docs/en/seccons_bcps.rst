@@ -2,59 +2,70 @@
 
 .. _Considerazioni_di_Sicurezza:
 
-Considerazioni di Sicurezza
----------------------------
+Security Considerations
+-----------------------
 
-In questa sezione descriviamo alcune considerazioni di sicurezza in ambito OIDC Federation.
-
-
-Trust Mark come deterrente contro gli abusi
-+++++++++++++++++++++++++++++++++++++++++++
-
-L'implementazione dei Trust Mark e il filtro su questi in fase di Metadata Discovery risulta necessario contro gli attacchi destinati al consumo delle risorse. Un OP attaccato con un numero ingente di connessioni presso il suo endpoint di *authorization*, contenenti **client_id** e **authority_hints** fasulli, produrrebbe svariate connessioni verso sistemi di terze parti nel tentativo di trovare un percorso verso la TA e instaurare la fiducia con il richiedente.
-
-L'OP DEVE validare staticamente il TM oppure DEVE escludere a priori la richiesta ove il TM non risultasse presente, in caso di assenza o non validità di un TM la procedura di Metadata Discovery NON DEVE essere avviata e NON DEVE creare di conseguenza connessioni verso sistemi di terze parti.
+In this section we describe some security considerations in the OIDC Federation scope.
 
 
-Numero Massimo di authority_hints
+Trust Marks as deterrent against abuses
++++++++++++++++++++++++++++++++++++++++
+
+The TM implementation and the filter on the TMs in the phase of Metadata Discovery, turn out to be necessary
+against attacks aimed at the resource consumption. An OP that is attacked at its *authorization* endpoint, with an high number of connections containing fake **client_id** and **authority_hints**, would produce
+several connections to third party systems, while trying to find a path to the TA and establish the trust
+with the requester.
+
+The OP MUST statically validate the TM or MUST a priori exclude the request whenever the TM is not present.
+In case the TM is not present or not valid, the procedure of Metadata Discovery MUST NOT be started and consequently MUST NOT create connections to third party systems.
+
+
+Maximum Number of authority_hints
 +++++++++++++++++++++++++++++++++
 
-All'interno di una Federazione il Trust Anchor decide quante intermediazioni consentire tra di lui e le Foglie, mediante la constraint denominata **max_path_lenght**. Questo tipo di relazione è di tipo verticale, dalla Foglia alla radice. Questo attributo se valorizzato ad esempio con un valore numerico intero pari a 1 indica che soltanto un SA è consentito tra una Foglia e il TA.
+Inside a Federation, through the constraint named **max_path_lenght**, the Trust Anchor decides how many intermediations are allowed between it and the Leaves. This kind of relationship is vertical, from the Leaf to the root. As an example, if this attribute has the value equal to 1, it means that only one SA is allowed between a Leaf and the TA.
 
-Ogni Foglia DEVE pubblicare i suoi superiori all'interno della lista contenuta nel claim **authority_hints**. Una Foglia all'interno della Federazione PUÒ avere superiori afferenti a diverse Federazioni. L'analisi dei superiori disponibili introduce un modello di navigazione orizzontale, ad esempio un OP tenta di trovare il percorso più breve verso il Trust Anchor attraverso tutti gli URL contenuti all'interno dell'array **authority_hints** prima di fare un ulteriore movimento verticale, a salire, verso uno degli Intermediari presenti in questo array.
+Every Leaf MUST publish its superiors inside the list contained in the claim **authority_hints**. A Leaf in the Federation CAN have superiors belonging to different Federations. The analysis of the available superiors introduces an horizontal navigation model. As an example, an OP tries to find the shortest path to the Trust Anchor through all the URLs contained in the array **authority_hints**, before doing a further vertical move upwards, to one of the Intermediaries that are present in this array.
 
-La soglia **max_path_lenght** si applica per la navigazione verticale e superata questa soglia senza aver trovato il TA, la procedura di Metadata Discovery DEVE essere interrotta. Si faccia l'esempio di un RP discendente di un SA che a sua volta è discendente di un altro SA, essendo il valore di **max_path_lenght** pari a 1 e, superata questa soglia senza aver trovato il Trust Anchor, la procedura DEVE essere interrotta.
+The threshold **max_path_lenght** is applied to the vertical navigation and, after exceeding this threshold without finding a TA, the procedure of Metadata Discovery MUST be stopped. Consider the example of an RP that's a subordinate of an SA that's in turn a subordinate of another SA, while the **max_path_lenght** claim is equal to 1 and, after exceeding this threshold without finding the Trust Anchor, the procedure MUST be stopped.
 
-Allo stesso tempo la specifica OIDC Federation 1.0 non definisce un limite per il numero di **authority_hints**, questo perché nessun Trust Anchor può limitare il numero di Federazioni alle quali un partecipante può aderire. Per questa ragione è utile che gli implementatori adottino un limite massimo del numero di elementi consentiti all'interno dell'Array authority_hint. Questo per evitare che un numero esagerato di URL contenuti nella lista di **authority_hints**, dovuto ad una cattiva configurazione di una Foglia, produca un consumo di risorse eccessivo.
+At the same time, the specifications of OIDC Federation 1.0 don't define a limit of the number of **authority_hints**, and this is because no TA can limit the number of Federations in which a member can take part. For this reason, it is useful that implementers adopt a maximum limit to the number of elements allowed inside the array authority_hints. The reason is avoiding that an exaggerated number of URLs contained in the list **authority_hints**, due to a bad configuration of a Leaf, produce an excessive resource consumption.
+
 
 
 Resolve Entity Statement
 ++++++++++++++++++++++++
 
-Questo endpoint DEVE rilasciare i Metadata, i Trust Mark e la Trust Chain già precedentemente elaborata e NON DEVE innescare una procedura di Metadata Discovery ad ogni richiesta pervenuta.
+This endpoint MUST release the Metadata, the Trust Marks and the previously processed Trust Chain, and MUST
+NOT trigger a procedure of Metadata Discovery for each request arrival.
 
 
-Buone Pratiche
+
+Good Practices
 --------------
 
-In questa sezione descriviamo alcune buone pratiche per ottenere la massima resa dalle entità di Federazione.
+In this section we describe some good practices for obtaining the maximum result from the Federation entities. 
 
 
-Specializzare le chiavi pubbliche OpenID Core e Federation
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Specializing the OpenID Core and Federation public keys
++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-È buona pratica usare chiavi pubbliche specializzate per i due tipi di operazioni, Core e Federation.
+It is a good practice to use public keys that are specialized for the two kinds of operations, Core and Federation.
 
-Modalità di aggiornamento dei Metadata OpenID Core
-++++++++++++++++++++++++++++++++++++++++++++++++++
+Updating Mode of the OpenID Core Metadata
++++++++++++++++++++++++++++++++++++++++++
 
-L'interoperabilità tra i partecipanti funziona mediante i Metadata ottenuti dal calcolo e dalla conservazione delle Trust Chain. Questo significa che se un OP al tempo T calcola la Trust Chain per un RP e questo al tempo T+n modifica i propri Metadata, l'OP di conseguenza potrebbe incorrere in problematiche di validazione delle richieste di autorizzazione del RP, fino a quando non avrà aggiornato la Trust Chain relativa a questo.
+The interoperability among members works through the Metadata obtained from the Trust Chain calculation and preservation. This means that if an OP at the time T calculates the Trust Chain for an RP and this, at the time T+n, changes its own Metadata, the OP could consequently run into problems of validating the RP authorization requests, until the OP will have once again updated the RP-related Trust Chain.
 
-La buona pratica per evitare le interruzioni di servizio relative alle operazioni di OIDC Core è quella di aggiungere le nuove chiavi pubbliche all'interno degli oggetti *jwks* senza rimuovere i valori preesistenti. Oppure, ad esempio, i nuovi *redirect_uri*.
+A good practice to avoid service stops on the OIDC Core operations, is adding the new public keys inside the objects *jwks* without removing the previous values. Or, for example, the new *redirect_uri*.
 
-In questa maniera dopo il limite massimo di durata delle Trust Chain, definito con il claim **exp** e pubblicato nella Entity Configuration della TA, si ha la certezza che tutti i partecipanti abbiano rinnovato le loro Trust Chain, e sarà possibile agli amministratori della Foglia rimuovere le vecchie definizioni in cima alla lista.
+In this way, after exceeding the maximum duration limit of the Trust Chain, defined in the claim **exp** and published in the TA Entity Configuration, it is certain that all the members have renewed their Trust Chain and it is possible, for the Leaf administrators, to remove the old definitions from the top of the list.
 
-Periodo di grazia per le Trust Chain scadute
-++++++++++++++++++++++++++++++++++++++++++++
 
-L'Autorità di Federazione o il suo Intermediario PUÒ pubblicare una politica dei Metadata (vedi `OIDC-FED#Section.5.1`_) per forzare la modifica dei Metadata OIDC della Foglia, nelle parti in cui questo fosse necessario.
+
+Metadata Policy
++++++++++++++++
+
+The Federation Authority or its Intermediary CAN publish a Metadata policy (see `OIDC-FED#Section.5.1`_) 
+to force the change of the OIDC Metadata of the Leaf, in the parts where this might be needed.
+
