@@ -7,11 +7,7 @@ L'avvio del **Sistema SPID**, per sua natura e complessità, può richiedere di 
 
 Al fine di raccogliere organicamente tali interventi e attribuirvi un carattere cogente che ne comporti l'obbligo di applicazione da parte degli attori convolti nel Sistema SPID, siano essi pubblici che privati, è stata creata la presente sezione **“Avvisi SPID”** con l'obiettivo di assicurare un'uniforme interpretazione delle regole, degli aspetti tecnici e di quant'altro necessario per il corretto funzionamento del Sistema nel suo complesso.
 
-Avvisi acquisiti in questa Documentazione
-+++++++++++++++++++++++++++++++++++++++++
-
-.. warning::
-    Le presenti regole tecniche implementano gli avvisi SPID fino al n. 41
+Le presenti regole tecniche implementano i seguenti avvisi SPID:
     
 .. list-table::
     :widths: 60 20

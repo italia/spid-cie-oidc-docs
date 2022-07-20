@@ -6,9 +6,8 @@
 Entity Configuration
 --------------------
 
-An **Entity Configuration (EC)** is a Federation Metadata in Jose format, signed by an issuer
-and regarding the entity itsel.
-
+An **Entity Configuration (EC)** is a Federation Metadata in Jose format, signed by its issuing subject 
+and regarding itself, published at the web endpoint **.well-known/openid-federation**.
 
 .. _firma_EC:
 
@@ -17,9 +16,17 @@ Entity Configuration Signature
 
 The JWT :rfc:`7515` signature occurs through the RSA SHA-256 (RS256) algorithm. All the Federation
 members MUST support this signing algorithm. All the signature-check operations regarding the ESs, ECs and TMs,
-are carried out with the Federation public keys (we distinguish the Federation keys from those of the OIDC Core. The latter ones are contained in the OIDC Metadata. An ES or EC contains both the Federation public
-keys and the OIDC Metadata).
+are carried out with the Federation public keys.
 
+.. warning::
+  We distinguish the Federation keys from the OIDC Core ones. The latter ones are contained in the OIDC Metadata. An EC contains both the Federation public keys and the OIDC Metadata.
+
+
+Federation Metadata
++++++++++++++++++++
+
+OIDC Federation defines the Federation Metadata containing the information indicated below and the 
+OIDC Metadata for each type of entity.
 
 
 Entity Configuration - common claims
@@ -73,8 +80,8 @@ Entity Configuration - common claims
 Entity Configuration Leaves and Intermediaries
 ++++++++++++++++++++++++++++++++++++++++++++++
 
-The EC of the Leaf and Intermediate Entities, other than the previously defines claims, contain the further
-claims:
+In addition to the previously defines claims, the EC of the Leaf and Intermediate Entities, contain also
+the following claims:
 
 
 .. list-table::
