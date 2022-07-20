@@ -3,31 +3,31 @@
 
 .. _differenze_con_oidc_federation:
 
-Differenze con OIDC Federation
-------------------------------
+Differences with the OIDC Federation
+------------------------------------
 
-In questa sezione sono elencate le differenze che intercorrono tra lo standard ufficiale e l'implementazione SPID / CIE.
+This section lists the differences between the official standard and the SPID / CIE implementation.
 
 
 Client Registration
 +++++++++++++++++++
 
-SPID supporta esclusivamente **automatic_client_registration**. La modalità **implicit** è da intendersi come non supportata. 
+SPID supports only **automatic_client_registration**. The **implicit** mode is not supported.
 
 
 Listing endpoint
 ++++++++++++++++
 
-In SPID viene adottato il parametro aggiuntivo **entity_type** a quelli esistenti nello Standard `OIDC-FED`_ per questo endpoint, con lo scopo di ottenere un filtro sulla tipologia delle entità discendenti. Questa esigenza consente nello specifico di filtrare entità di tipo **federation_entity**, **openid_relying_party**, **openid_provider** e **oauth_resource**.
+In the SPID Federation, for this endpoint, the claim **entity_type** is added to all the `OIDC-FED`_ standard ones, in order to obtain a filter on the type of subordinate entities. This need apecifically allows filtering entities of type **federation_entity**, **openid_relying_party**, **openid_provider** and **oauth_resource**.
 
 
 Trust Mark
 ++++++++++
 
-In `OIDC-FED`_ l'uso dei Trust Mark non è obbligatorio. In SPID piuttosto l'esposizione dei Trust Mark è obbligatoria. Per approfondimenti sulla ragione dell'obbligo dei Trust Mark si rimanda alla sezione :ref:`Considerazioni di Sicurezza<Considerazioni_di_Sicurezza>`.
+In `OIDC-FED`_ it is not mandatory to use Trust Marks. Rather, in the SPID Federation it is mandatory to expose them. For more details about the reasons why the Trust Marks are required, please see the section :ref:`Security Considerations <Considerazioni_di_Sicurezza>`.
 
 
-Claim non supportati negli Entity Statement
+Unsupported Claims in the Entity Statements
 +++++++++++++++++++++++++++++++++++++++++++
 
-Poiché SPID e CIE non necessitano di alcun claim aggiuntivo in ambito federativo, non necessitano del claim **crit**. Inoltre non sono supportati i claim **aud**, **naming_constraints**, **policy_language_crit** e **trust_anchor_id**. L'eventuale presenza di questi claim non presenta alcuna implicazione, questi verranno semplicemente ignorati fino ad ulteriori avvisi che li normino.
+Since SPID and CIE don't need any additional claim of the Federation scope, they don't need the claim **crit**. Likewise, the claims **aud**, **naming_constraints**, **policy_language_crit** and **trust_anchor_id** are not supported. Any possible presence of these claims does not have implications, they are simply ignored until possible future communications about their regulation.
