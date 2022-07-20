@@ -47,7 +47,7 @@ Alcuni esempi non normativi sono di seguito riportati:
 
  - TM RP public: **\https://registry.agid.gov.it/openid_relying_party/public/**
  - TM SA private: **\https://registry.agid.gov.it/federation_entity/private/full/**
- - TM AA: **\https://registry.agid.gov.it/oauth_authorization_server/public/**
+ - TM AA: **\https://registry.agid.gov.it/oauth_resource/public/**
 
 
 La tabella seguente definisce gli <entity_type> riconoscibili all'interno delle Federazioni SPID e CIE id:
@@ -66,7 +66,7 @@ La tabella seguente definisce gli <entity_type> riconoscibili all'interno delle 
     * - **federation_entity**
       - l'entità nel claim *sub* è un Soggetto Aggregatore.
       - SA
-    * - **oauth_authorization_server**
+    * - **oauth_resource**
       - l'entità nel claim *sub* è una Attribute Authority.
       - AA
 
@@ -98,10 +98,10 @@ a seconda della modalità con cui operano rispetto ai Soggetti Aggregati
 
     Si veda Sezione :ref:`Soggetti aggregatori nel contesto Federativo <Soggetti_aggregatori>`
 
-**oauth_authorization_server**  Trust Mark
+**oauth_resource**  Trust Mark
 ------------------------------------------
 
-In aggiunta ai claim dei profili **public** e **private**, il profilo **oauth_authorization_server** individua le AA e aggiunge i seguenti claim obbligatori:
+In aggiunta ai claim dei profili **public** e **private**, il profilo **oauth_resource** individua le AA e aggiunge i seguenti claim obbligatori:
 
 .. list-table::
     :widths: 20 60

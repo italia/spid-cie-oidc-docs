@@ -29,10 +29,10 @@ Nella seguente tabella sono presenti alcuni esempi non normativi per evidenziare
     * - **redirect_uri**
       - \https://www.rp.it/callback/
       - \https://www.rp.it/<id_code>/callback/
-    * - **authz endpoint**
+    * - **authorization endpoint**
       - \https://www.rp.it/authorization/
       - \https://www.rp.it/<id_code>/authorization/
-    * - **entity configuration**
+    * - **Entity Configuration**
       - \https://www.rp.it/.well-known/openid-federation
       - \https://www.rp.it/<id_code>/.well-known/openid-federation
 

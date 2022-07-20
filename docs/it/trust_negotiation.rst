@@ -9,15 +9,15 @@ In questa sezione sono illustrate le modalità di mutuo riconoscimento tra RP e 
 Relying Party
 +++++++++++++
 
-Il RP ottiene la lista degli OP in formato JSON interrogando l':ref:`endpoint list<federation_endpoint>` disponibile presso il :ref:`Trust Anchor<Esempio_EN3>`. Per ogni soggetto contenuto nella :ref:`risposta<Esempio_EN3.1>` dell'endpoint list e corrispondente ad un OP, il RP :ref:`richiede<Esempio_EN2>` ed ottiene l'Entity Configuration self-signed presso l'OP. 
+Il RP ottiene la lista degli OP in formato JSON interrogando l':ref:`endpoint list<federation_endpoint>` disponibile presso il :ref:`Trust Anchor<Esempio_EN3>`. Per ogni soggetto contenuto nella :ref:`risposta<Esempio_EN3.1>` dell'endpoint list e corrispondente ad un OP, il RP :ref:`richiede<Esempio_EN2>` ed ottiene l'Entity Configuration presso l'OP. 
 
-Per ogni EC degli OP, il RP verifica la firma del contenuto adoperando la chiave pubblica ottenuta dall'Entity Statement rilasciato dalla Trust Anchor. Verificata la firma dell'Entity Configuration con la chiave pubblica dal TA, RP riconosce la fiducia nei confronti dell'OP. 
+Per ogni EC degli OP, il RP verifica la firma del contenuto adoperando la chiave pubblica ottenuta dall'Entity Statement rilasciato dalla Trust Anchor per gli OP. Verifica la firma dell'Entity Configuration degli OP usando la chiave pubblica ottenuta dall'Entity Statement rilasciato dal TA. 
 
-Il RP applica infine le politiche pubblicate dal Trust Anchor sui Metadata del OP e salva il Metadata finale associandolo ad una data di scadenza (claim **exp**). La data di scadenza corrisponde al valore di **exp** più basso ottenuto da tutti gli elementi che compongono la **Trust Chain**. Periodicamente il RP aggiorna i Metadata di tutti gli OP rinnovando la Trust Chain relativa a questi.
+Il RP applica infine le politiche pubblicate dal Trust Anchor sui Metadata dell'OP e salva il Metadata finale associandolo ad una data di scadenza (claim **exp**). La data di scadenza corrisponde al valore di **exp** più basso ottenuto da tutti gli elementi che compongono la **Trust Chain**. Periodicamente il RP aggiorna i Metadata di tutti gli OP rinnovando la Trust Chain relativa a questi.
 
-Ottenuti i Metadata finali di tutti i OpenID Connect Provider, il RP genera lo SPID Button e lo pubblica all'interno della pagina di autenticazione destinata agli utenti.
+Ottenuti i Metadata finali di tutti i OpenID Connect Provider, il RP genera lo **SPID Button** e il **CIE id Button** e lo pubblica all'interno della pagina di autenticazione destinata agli utenti.
 
-La procedura di Metadata Discovery risulta semplificata per i RP SPID, perché all'interno della Federazione non è consentita l'esistenza di Intermediari tra gli OP ed il loro Trust Anchor.
+La procedura di Metadata Discovery risulta semplificata per i RP, perché all'interno della Federazione non è consentita l'esistenza di Intermediari tra gli OP ed il loro Trust Anchor.
 
 
 .. image:: ../../images/metadata_discovery.svg
@@ -87,6 +87,6 @@ Una volta che un RP viene riconosciuto come parte della Federazione, ottiene il 
     :width: 100%
 
 
-*Trust Chain*
+*The Metadata Discovery process to build a Trust Chain and obtain the final Metadata.*
 
 
