@@ -4,7 +4,6 @@
 Trust Mark per SPID
 +++++++++++++++++++
 
-TBD esempi non normativi
 
 Esempi di Trust Mark SPID
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -34,7 +33,7 @@ Quello che segue è un esempio non normativo di un Trust Mark emesso dalla AgID 
  {
      "trust_marks":[
          {
-             "id":"https://registry.agid.gov.it/federation_entity/private/",
+             "id":"https://registry.agid.gov.it/federation_entity/private/light/",
              "trust_mark":"$JWT"
          }
      ]
@@ -45,7 +44,7 @@ Dove il contenuto del JWT firmato all'interno dell'attributo **trust_mark** corr
 .. code-block::
 
  {
-     "id":"https://registry.agid.gov.it/federation_entity/private/",
+     "id":"https://registry.agid.gov.it/federation_entity/private/light/",
      "iss":"https://registry.agid.gov.it",
      "sub":"https://intermediary.example.it",
      "iat":1579621160,
