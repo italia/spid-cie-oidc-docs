@@ -24,8 +24,8 @@ types Light and Full:
     :header-rows: 1
 
     * - 
-      - Modality **Light**
-      - Modality **Full**
+      - Mode **Light**
+      - Mode **Full**
     * - **client_id**
       - \https://www.rp.it/
       - \https://www.rp.it/<id_code>/
