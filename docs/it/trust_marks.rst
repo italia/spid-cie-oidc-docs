@@ -60,6 +60,9 @@ La tabella seguente definisce gli <entity_type> riconoscibili all'interno delle 
     * - tipo
       - descrizione
       - entità
+    * - **openid_relying_party**
+      - l'entità nel claim *sub* è un RP.
+      - OP
     * - **openid_provider**
       - l'entità nel claim *sub* è un OP.
       - OP
