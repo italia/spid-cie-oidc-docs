@@ -27,7 +27,7 @@ Quello che segue è un esempio non normativo di un marchio di fiducia emesso dal
  {
      "trust_marks":[
          {
-             "id":"https://registry.agid.gov.it/federation_entity/private/",
+             "id":"https://registry.agid.gov.it/federation_entity/private/light/",
              "trust_mark":"$JWT"
          }
      ]
@@ -38,7 +38,7 @@ Dove il contenuto del JWT firmato all'interno dell'attributo **trust_mark** corr
 .. code-block::
 
  {
-     "id":"https://registry.agid.gov.it/federation_entity/private/",
+     "id":"https://registry.agid.gov.it/federation_entity/private/full/",
      "iss":"https://registry.agid.gov.it",
      "sub":"https://intermediary.example.it",
      "iat":1579621160,
