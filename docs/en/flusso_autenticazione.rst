@@ -2,47 +2,47 @@
 
 .. _flusso_autenticazione:
 
-Flusso di autenticazione
-------------------------
+Authentication Flow
+-------------------
 
-Gli schemi di autenticazioni **"Entra con SPID"** e **"Entra con CIE"** implementano il flusso **OpenID Connect Authorization Code Flow** con l'estensione **PKCE** (Proof Key for Code Exchange, :rfc:`7636`).
-Questo flusso restituisce un **Authorization Code** che può essere utilizzato per ottenere un **ID Token**
-e un **Access Token** e se possibile anche un **Refresh Token**. 
-L'**Authorization Code Flow** ottiene l'**Authorization Code** dall'*Authorization Endpoint* dell'OpenID Provider e tutti i token sono restituiti dal **Token Endpoint**.
+The authentication schemas **"Enter with SPID"** and **"Enter with CIE"** implement the **OpenID Connect Authorization Code Flow** with the extension **PKCE** (Proof Key for Code Exchange, :rfc:`7636`).
+This flow returns an **Authorization Code** that can be used to get an **ID Token**, an **Access Token** 
+and possibly a **Refresh Token** too.
+The **Authorization Code Flow** gets the **Authorization Code** from the *Authorization Endpoint* of the OpenID Provider and all the tokens are returned by the **Token Endpoint**.
 
 .. image:: ../../images/flusso.svg
     :width: 100%
 
 
-Segue la descrizione dei passaggi, come da numerazione indicata in figura.
+Following, the descriptions of the flow steps, with the numbers indicated in the picture.
 
-  #. L'Utente, nella pagina di accesso del Relying Party (RP):
+  #. The User, in the access page of the Relying Party (RP):
 
-     * Seleziona il pulsante "Entra con SPID" o "Entra con CIE";
+     * Clicks on the button "Enter with SPID" or "Enter with CIE";
      
-     * Nel caso SPID, seleziona l'OP con cui autenticarsi.   
+     * In the SPID case, choses the authentication OP.
 
-  #. Il RP prepara una Richiesta di Autorizzazione con i parametri necessari previsti da *PKCE* e la invia all'*Authorization Endpoint* dell'OP.
+  #. The RP prepares an Authorization Request with the parameters needed by *PKCE* and sends it to the *Authorization Endpoint* of the OP.
 
-  #. L'OP autentica l'utente mediante l'inserimento delle credenziali e ottiene il consenso per l'accesso agli attributi dell'utente da parte del RP.
+  #. The OP authenticates the user by the credentials input and obtains, from the RP, the permission to access the user's attributes.
 
-  #. L'OP reindirizza l'utente all'URL contenuto nel parametro *redirect_uri* specificato dal RP, passando un *Authorization Code* nell'Authorization Response.
+  #. The OP redirects the user to the URL contained in the parameter *redirect_uri* specified by the RP, passing an *Authorization Code* in the Authorization Response.
 
-  #. Il RP invia l'*Authorization Code* ricevuto al *Token Endpoint* dell'OP.
+  #. The RP sends the *Authorization Code* received at the OP *Token Endpoint*.
 
-  #. Il *Token Endpoint* dell'OP rilascia un **ID Token**, un **Access Token** e se previsto un **Refresh Token**.
+  #. The OP *Token Endpoint* releases an **ID Token**, an **Access Token** and, if expected, a **Refresh Token**.
 
-  #. Il RP riceve e valida l'**Access Token** e l'**ID Token**. Per chiedere gli attributi che erano stati autorizzati dall'utente al punto 3, invia una richiesta all'*UserInfo Endpoint* dell'OP utilizzando l'**Access Token** per l'autenticazione all'interno della intestazione HTTP Authorization.
+  #. The RP receives and validates the **Access Token** and the **ID Token**. For asking the attributes that the user has authorized at the point 3, it sends a request to the OP *UserInfo Endpoint* ans uses, for the authentication, the **Access Token** contained in the HTTP Authorization header.
 
-  #. Lo *UserInfo Endpoint* dell'OP verifica la validità dell'**Access Token** e rilascia gli attributi richiesti al RP.
+  #. The OP *UserInfo Endpoint* checks the **Access Token** validity and releases the required attributes to the RP.
 
 
 .. note::
-  **PKCE** è un'estensione del protocollo *OAuth 2.0* prevista anche nel profilo *iGov* (`International Government Assurance Profile for OAuth 2.0 <https://openid.net/specs/openid-igov-oauth2-1_0-03.html#rfc.section.3.1.7>`_) e finalizzata ad evitare un potenziale attacco attuato con l'intercettazione dell'*authorization code*. Consiste nella generazione di un codice (**code verifier**) e del suo hash (**code challenge**). Il **code challenge** viene inviato all'OP nella richiesta di autenticazione. 
+  **PKCE** is an extension of the protocol *OAuth 2.0* also provided in the profile *iGov* (`International Government Assurance Profile for OAuth 2.0 <https://openid.net/specs/openid-igov-oauth2-1_0-03.html#rfc.section.3.1.7>`_) and aimed at avoiding possible attacks from intercepting the *authorization code*. It consists of the generation of a code (**code verifier**) and its hash (**code challenge**). The **code challenge** is sent to the OP in the authentication request.
   
-  Quando il RP contatta il *Token Endpoint* al termine del flusso di autenticazione, invia il **code verifier** originariamente creato, in modo che l'OP possa confrontare che il suo hash corrisponda con quello acquisito nella richiesta di autenticazione.
+  When the RP contacts the *Token Endpoint* at the end of the authentication flow, it sends the **code verifier** created initially, so that the OP can check if its hash is the same as in the authentication request.
 
-  Di seguito un script Python di esempio per generare i parametri richiesti.
+  Following, an example of a Python script for generating the requested parameters.
 
   .. literalinclude :: ../../static/pkce.py
    :language: python
