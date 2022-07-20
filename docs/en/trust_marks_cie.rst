@@ -1,87 +1,8 @@
 .. include:: ./common_definitions.rst
 
 
-Trust Mark for CIEid
----------------------
-
-The following table summarizes all the available profiles for all the entities involved and supported by the CIEid Federation.
-
-
-.. list-table::
-    :widths: 20 60 20
-    :header-rows: 1
-
-    * - **TM Profile**
-      - **Description**
-      - **Type of sub entity**
-    * - **public**
-      - the entity in the claim *sub* belongs to the Italian Public Administration.
-      - RP, OP
-    * - **private**
-      - the entity in the claim *sub* belongs to the private sector.
-      - RP
-    * - **intermediary**
-      - the entity in the claim *sub* is an SA.
-      - SA
-    * - **attribute-authority**
-      - the entity in the claim *sub* is an Attribute Authority.
-      - AA
-    * - **sgd**
-      - the entity in the claim *sub* is an RP or an SA that participates in the AA's System of Delegation Management.
-      - RP
-
-Profiles **public** and **private**
-+++++++++++++++++++++++++++++++++++
-
-Here the claims of the Section :ref:`Composizione dei Trust Mark <ComposizioneTM>` apply.
-
-
-Profile **intermediary**
-++++++++++++++++++++++++
-
-In addition to the claims of the profiles **public** and **private**, the profile **intermediary** adds the following claims:
-
-.. list-table::
-    :widths: 20 60
-    :header-rows: 1
-
-    * - **Claim**
-      - **Description**
-    * - **sa_type**
-      - it MUST have the values **"full"** or **"light"** according to the way they operate with respect to the Aggregated Subjects.
-
-.. seealso::
-
-    See Section :ref:`Intermediate Entities in the Federative context <Soggetti_aggregatori>`
-
-Profile **attribute-authority**
-+++++++++++++++++++++++++++++++
-
-In addition to the claims of the profiles **public** and **private**, the profile **attribute-authority** adds the following claims:
-
-
-.. list-table::
-    :widths: 20 60
-    :header-rows: 1
-
-    * - **Claim**
-      - **Description**
-    * - **policy_uri**
-      - URL at which the privacy policy of the AA is available.
-    * - **tos_uri**
-      - URL at which the info policy of the AA is available. 
-    * - **claims**
-      - List of JSON Objects that define the user's attributes required by the AA. Example: |br| ``{"https://attributes.eid.gov.it/fiscal_number":{"essential":true},`` |br| ``"email":{"essential":true},}``
-    * - **service_documentation**
-      - URL at which it is available the OAS3 document that describes how the AA services work.
-
-
-
-Profile **sgd**
-+++++++++++++++
-
-For technical details and non-normative examples, see [LINK TO BE INSERTED HERE]
-
+Trust Marks for CIEid
+----------------------
 
 Examples of Trust Marks for CIE
 +++++++++++++++++++++++++++++++
@@ -150,3 +71,9 @@ Where the payload $JWT could be as in the following non-normative example:
      "organization_name#it":"Denominazione del RP",
      "ref":"https://documentazione_di_riferimento.it/"
  }
+
+
+Profile **sgd**
++++++++++++++++
+
+For technical details and non-normative examples, see [LINK TO BE INSERTED HERE]
