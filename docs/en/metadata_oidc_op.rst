@@ -5,7 +5,7 @@
 OpenID Connect Provider Metadata (OP)
 +++++++++++++++++++++++++++++++++++++
 
-An OP MUST publish inside its EC a Metadata of type *federation_entity* and a Metadata of type *openid_provider*, as 
+An OP MUST publish in its EC a Metadata of type *federation_entity* and a Metadata of type *openid_provider*, as 
 reported in the following example:
 
 .. code-block:: 

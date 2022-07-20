@@ -1,7 +1,7 @@
 .. include:: ./common_definitions.rst
 
-UserInfo Endpoint (attributi)
------------------------------
+UserInfo Endpoint (attributes)
+------------------------------
 
 Lo UserInfo Endpoint è una risorsa protetta OIDC che restituisce gli attributi dell'utente autenticato. Per ottenere gli attributi richiesti, il RP inoltra una richiesta allo UserInfo Endpoint utilizzando l'Access Token.
 
