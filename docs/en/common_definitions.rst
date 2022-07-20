@@ -54,7 +54,7 @@
 .. _OIDC-FED#Section.7.5: https://openid.net/specs/openid-connect-federation-1_0.html#rfc.section.7.5
 .. _SPID UX Guidelines: https://www.agid.gov.it/sites/default/files/repository_files/regole_tecniche/spid-notetecnicheinterfacce.pdf
 .. _AgID: https://www.agid.gov.it/
-.. _sessione lunga revocabile: https://www.agid.gov.it/sites/default/files/repository_files/spid-avviso-n41-integrazione_ll.gg_._openid_connect_in_spid.pdf#page=6
+.. _long revocable session: https://www.agid.gov.it/sites/default/files/repository_files/spid-avviso-n41-integrazione_ll.gg_._openid_connect_in_spid.pdf#page=6
 .. _EN319-412-1: https://www.etsi.org/deliver/etsi_en/319400_319499/31941202/02.02.01_60/en_31941202v020201p.pdf
 .. _DM-CIE: https://www.gazzettaufficiale.it/eli/id/2015/12/30/15A09809/sg
 .. _CAD: https://www.gazzettaufficiale.it/eli/gu/2005/05/16/112/so/93/sg/pdf

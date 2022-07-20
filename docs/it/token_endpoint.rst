@@ -112,7 +112,7 @@ Response
 
 L'OpenID Provider (OP) restituisce un ID Token e Access Token e un eventuale Refresh Token, in formato JWT firmato.
 
-L'Access Token deve essere formato secondo le indicazioni dello standard "International Government Assurance Profile (iGov) for OAuth 2.0 - Draft 03", paragrafo 3.2.1, "JWT Bearer Tokens".
+L'Access Token deve essere formato secondo le indicazioni dello standard `"International Government Assurance Profile (iGov) for OAuth 2.0 - Draft 03", section 3.2.1, "JWT Bearer Tokens" <https://openid.net/specs/openid-igov-oauth2-1_0-03.html#rfc.section.3.2.1>`_.
 
 L'ID Token deve essere formato secondo le indicazioni del paragrafo successivo.
 
