@@ -3,14 +3,15 @@
 UserInfo Endpoint (attributes)
 ------------------------------
 
-Lo UserInfo Endpoint è una risorsa protetta OIDC che restituisce gli attributi dell'utente autenticato. Per ottenere gli attributi richiesti, il RP inoltra una richiesta allo UserInfo Endpoint utilizzando l'Access Token.
+The UserInfo Endpoint is an OIDC protected resource that returns the authenticated user's claims. To obtain 
+the requested claims, the RP forwards a request to the UserInfo Endpoint using the Access Token.
 
-Lo UserInfo Endpoint DEVE supportare l'uso del solo metodo HTTP GET :rfc:`2616` e DEVE accettare e validare l'Access Token inviato all'interno del campo Authorization dell'Header, di tipo Bearer :rfc:`6750`.
+The UserInfo Endpoint MUST only support the method HTTP GET :rfc:`2616` and MUST accept and validate the Access Token sent in the Authorization field of the Header, whose type is Bearer :rfc:`6750`.
 
 
 .. code-block:: 
 
- GET https://op.spid.agid.gov.it/userinfo
+  GET https://op.spid.agid.gov.it/userinfo
   Authorization: Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRCNjdnTDdja ...
   
 .. seealso::
@@ -24,13 +25,13 @@ Lo UserInfo Endpoint DEVE supportare l'uso del solo metodo HTTP GET :rfc:`2616` 
 Response
 ++++++++
 
-La response dello UserInfo Endpoint DEVE specificare nel "Content-Type" il valore "application/jwt".
+The response of the UserInfo Endpoint MUST specify the value "application/jwt" in the "Content-Type".
 
-Il contenuto del corpo della Response DEVE essere un `JWT firmato e cifrato. <https://openid.net/specs/openid-connect-core-1_0.html#UserInfoResponse>`_
+The content of the Response body MUST be a `signed and encrypted JWT. <https://openid.net/specs/openid-connect-core-1_0.html#UserInfoResponse>`_
 
-Lo UserInfo Endpoint restituisce i claim autorizzati nella Authentication Request.
+The UserInfo Endpoint returns the authorized claims in the Authentication Request.
 
-**Esempio:**
+**Example:**
 
 .. code-block:: 
 
@@ -47,32 +48,32 @@ Lo UserInfo Endpoint restituisce i claim autorizzati nella Authentication Reques
  }
 
 
-Il payload del JWT è un JSON contenente i seguenti parametri:
+The JWT payload is a JSON containing the following parameters:
 
 .. list-table:: 
    :widths: 20 60 20
    :header-rows: 1
 
    * - **Claim**
-     - **Descrizione**
-     - **Obbligatorio**
+     - **Description**
+     - **Required**
    * - **sub**
-     - String. Identificatore del soggetto, coincidente con quello già rilasciato nell'ID Token.
-       Il RP DEVE verificare che il valore coincida con quello contenuto nell'ID Token.
+     - String. Subject identifier, equal to the identifier already released in the ID Token.
+       The RP MUST check that the value is equal to the one, contained in the ID Token.
      - 
    * - **aud**
-     - String. Identificatore del soggetto destinatario della response (RP).
-       Il RP DEVE verificare che il valore coincida con il proprio client_id.
+     - String. Subject Identifier of the response recipient (RP).
+       The RP MUST check that the value is equal to its own client_id.
      - 
    * - **iss**
-     - String. URI che identifica univocamente l'OP.
+     - String. URI that uniquely identifies the OP.
      - 
-   * - **<attributo>**
-     - I claim richiesti al momento dell'autenticazione.
+   * - **<claim>**
+     - The requested claims at the authentication moment.
      - 
 
 
-In caso di errore di autenticazione, lo UserInfo Endpoint restituisce un errore HTTP in accordo con quanto indicato in `OpenID Connect Core 1.0 al paragrafo 5.3.3 <https://openid.net/specs/openid-connect-core-1_0.html#UserInfoError>`_
+In case of authentication errors, the UserInfo Endpoint returns an HTTP error, according to what indicated in the `OpenID Connect Core 1.0 at the section 5.3.3 <https://openid.net/specs/openid-connect-core-1_0.html#UserInfoError>`_
 
 .. seealso::
 
