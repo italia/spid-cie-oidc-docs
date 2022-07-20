@@ -43,6 +43,106 @@ Following, a non-normative example of the object **trust_marks_issuers** inside 
      }
  }
 
+Each member entity MUST expose in its configuration (EC), the TMs that have been released by the issuing authority.
+
+In the CIE / SPID scenario, a TM is signed by the TA **MinInterno** / **Agid** or their Intermediaries (SA) or
+Attribute Authorities (AA).
+
+The TA defines the subjects that are enabled to issue TMs that are recognizable inside the Federation,
+and it does it with the claim **trust_marks_issuers**, that is present in its Entity Configuration. 
+The value of the attribute **trust_marks_issuers** is composed by a JSON Object whose keys are the TM identifiers and whose values are the list of the identifiers (URLs) of the entities that are enabled 
+to issue them.
+
+The Trust Marks represent the first filter for establishing the trust among the parties. 
+They are essential elements for starting the Metadata resolution. 
+In their absence, an entity is not recognized as a member inside the Federation.
+
+Inside the SPID Federation, the Trust Marks have unique identifiers (claim id) in URL format, that adopt 
+the following structure: **https:// <domain> / <entity_type> / <trustmark_profile> / [estensione /]**
+
+Following, some non-normative examples:
+
+
+ - TM RP public: **\https://registry.agid.gov.it/openid_relying_party/public/**
+ - TM SA private: **\https://registry.agid.gov.it/federation_entity/private/full/**
+ - TM AA: **\https://registry.agid.gov.it/oauth_resource/public/**
+
+
+The following table defines the <entity_types> that are recognizable inside the SPID and CIE id Federations:
+
+
+.. list-table::
+    :widths: 20 60 20
+    :header-rows: 1
+
+    * - **Type**
+      - **Description**
+      - **Entity**
+    * - **openid_relying_party**
+      - the entity in the claim *sub* is an RP.
+      - RP
+    * - **openid_provider**
+      - the entity in the claim *sub* is an OP.
+      - OP
+    * - **federation_entity**
+      - the entity in the claim *sub* is an Intermediary.
+      - SA
+    * - **oauth_resource**
+      - the entity in the claim *sub* is an Attribute Authority.
+      - AA
+
+The following table defines the <trustmark_profiles> that are recognizable inside the SPID and CIE id Federations:
+
+
+.. list-table::
+    :widths: 20 60 20
+    :header-rows: 1
+
+    * - **Profile**
+      - **Description**
+      - **Entity**
+    * - **public**
+      - the entity in the claim *sub* belongs to the Italian Public Administration.
+      - RP, OP, SA, AA
+    * - **private**
+      - the entity in the claim *sub* belongs to the private sector.
+      - RP, OP, SA, AA
+
+
+**federation_entity** Trust Mark
+--------------------------------
+
+In addition to the claims of the **public** and **private** profiles, the profile **federation_entity**
+identifies the SA and adds the extensions **full** and **light**, according to the ways of operation 
+towards the subordinate entities.
+
+.. seealso::
+
+   See Section :ref:`Intermediate Entities in the Federative context <Soggetti_aggregatori>`
+
+
+**oauth_resource**  Trust Mark
+------------------------------
+
+In addition to the claims of the **public** and **private** profiles, the profile **oauth_resource** 
+identifies the AA and adds the following mandatory claims:
+
+.. list-table::
+    :widths: 20 60
+    :header-rows: 1
+
+    * - **Claim**
+      - **Description**
+    * - **policy_uri**
+      - URL where the AA privacy policy is available.
+    * - **tos_uri**
+      - URL where the AA info policy is available.
+    * - **claims**
+      - List of JSON Objects that define the user's attributes, required by the AA. 
+        Example: |br| ``{"https://attributes.eid.gov.it/fiscal_number":{"essential":true},`` |br| ``"email":{"essential":true},}``
+    * - **service_documentation**
+      - URL where the OAS3 document, that describes how the AA services works, is available.
+
 
 Trust Mark Validation
 ---------------------
