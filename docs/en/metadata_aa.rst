@@ -42,7 +42,7 @@ The AA Metadata from **"federation_entity"** MUST contain at least the following
     - See Section :ref:`Federation Endpoint <federation_endpoint>` and `OIDC-FED#Section.4.6`_
     - |spid-icon| |cieid-icon|
 
-The AA Metadata from **"oauth_authorization_server"** MUST contain at least the following mandatory parameters:
+The AA Metadata with **"oauth_authorization_server"** MUST contain at least the following mandatory parameters:
 
 .. list-table:: 
   :widths: 20 60 20
