@@ -23,7 +23,7 @@ and a Metadata with *oauth_resource* as reported in the following example:
     }
  }
 
-The AA Metadata from **"federation_entity"** MUST contain at least the following mandatory parameters:
+The AA Metadata of type **"federation_entity"** MUST contain at least the following mandatory parameters:
 
 .. list-table:: 
   :widths: 20 60 20
