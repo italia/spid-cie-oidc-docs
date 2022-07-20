@@ -3,7 +3,7 @@
 How to contribute
 -----------------
 
-For contributing, click the GitHib icon on the upper right corner by the label "Source", and access the public repository.
+For contributing, click the GitHub icon on the upper right corner by the label "Source", and access the public repository.
 
 If you find some mistake or wish to solve a doubt or simply notify something for improving this documentation, 
 open a new Issue.
