@@ -2,37 +2,39 @@
 
 .. _user_claims:
 
-Tabella attributi utente
-------------------------
+Table of the user's attributes
+------------------------------
 
-Tabella attributi identificativi
-++++++++++++++++++++++++++++++++
+Table of the identification attributes
+++++++++++++++++++++++++++++++++++++++
 
 .. list-table:: 
    :widths: auto
    :header-rows: 1
 
    * - **Claim**
-     - **Categoria**
-     - **Descrizione**
-     - **Supportato da**
+     - **Category**
+     - **Description**
+     - **Supported by**
    * - **https://attributes.eid.gov.it/spid_code**
-     - anagrafica
-     - Codice identificativo. String. Il codice identificativo è assegnato dal gestore dell'identità digitale e deve essere univoco.
+     - registry
+     - Identification code. String. The identification code is assigned by the digital identity provider 
+       and must be unique.
 
-       Il formato è il seguente:
+       The format is the following:
 
        .. code-block::
 
-         <codice Identificativo> = <cod_IdP><nr. univoco>
+         <Identification code> = <cod_IdP><unique number>
 
-       Dove:
+       Where:
 
-         **<cod_IdP>**: è un codice composto da 4 lettere univocamente assegnato al gestore delle identità;
+         **<cod_IdP>**: is a code made by 4 letters, uniquely assigned to the identity provider.
 
-         **<nr.univoco>**: è una stringa alfanumerica composta da 10 caratteri che il gestore delle identità genera in maniera univoca nell'ambito del proprio dominio.
+         **<unique number>**: is an alphanumeric string composed by 10 characters that the identity provider 
+         uniquely generates in its own domain.
 
-       Esempio: 
+       Example: 
 
        .. code-block::
 
@@ -40,11 +42,11 @@ Tabella attributi identificativi
 
      - |spid-icon|
    * - **given_name**
-     - anagrafica
-     - Nome. String. Stringa composta da una sequenza di parole con carattere iniziale maiuscolo,
-       intervallate da spazi singoli.
+     - registry
+     - Name. String. String composed by a sequence of words, separated by single spaces, each starting with a capital letter.
        
-       Esempio:
+       
+       Example:
 
        .. code-block::
       
@@ -52,11 +54,10 @@ Tabella attributi identificativi
 
      - |spid-icon| |cieid-icon|
    * - **family_name**
-     - anagrafica
-     - Cognome. String. Stringa composta da una sequenza di parole con carattere iniziale maiuscolo,
-       intervallate da spazi singoli.
+     - registry
+     - Last name. String. String composed by a sequence of words, separated by single spaces, each starting with a capital letter.
 
-       Esempio:
+       Example:
 
        .. code-block::
        
@@ -64,15 +65,14 @@ Tabella attributi identificativi
 
      - |spid-icon| |cieid-icon|
    * - **place_of_birth**
-     - anagrafica
-     - Luogo di nascita, Provincia di nascita. JSON Object: 
+     - registry
+     - Place of birth, province of birth. JSON Object: 
 
-       "**locality** : Stringa corrispondente al codice catastale (Codice Belfiore) del Comune 
-       o della nazione estera di nascita (Es. "F205" per la città di Milano)
+       "**locality** : String corresponding to the real estate registry code (Belfiore Code) of the city or foreign country of birth (e.g. "F205" for the city of Milano)
 
-       "**region**" : Stringa corrispondente alla sigla della provincia di nascita
+       "**region**" : String corresponding to the code of the province of birth.
 
-       Esempio:
+       Example:
 
        .. code-block::
 
@@ -83,12 +83,12 @@ Tabella attributi identificativi
 
      - |spid-icon| |cieid-icon|
    * - **birthdate**
-     - anagrafica
-     - Data di nascita. String. Secondo specifica ISO8601-2004 nel formato
-       YYYY indica l'anno utilizzando 4 cifre |br|
-       MM indica il mese in (due) cifre |br|
-       DD indica il giorno in (due) cifre |br|
-       Esempio: |br|
+     - registry
+     - Date of birth. String. Following the specifications ISO8601-2004 in the format
+       YYYY indicates the year using 4 (four) digits |br|
+       MM indicates the month with 2 (two) digits |br|
+       DD indicates the day with 2 (two) digits |br|
+       Example: |br|
 
        .. code-block::
 
@@ -96,11 +96,11 @@ Tabella attributi identificativi
 
      - |spid-icon| |cieid-icon|
    * - **gender**
-     - anagrafica
-     - Sesso. String. Valori ammessi: |br|
-       "F" per sesso femminile |br|
-       "M" per sesso maschile |br|
-       Esempio: |br|
+     - registry
+     - Gender. String. Values accepted: |br|
+       "F" for female |br|
+       "M" for male |br|
+       Example: |br|
 
        .. code-block::
 
@@ -108,10 +108,9 @@ Tabella attributi identificativi
 
      - |spid-icon| |cieid-icon|
    * - **https://attributes.eid.gov.it/company_name**
-     - anagrafica
-     - Ragione o denominazione sociale. String. Stringa composta da una sequenza di parole intervallate 
-       da spazi singoli.
-       In maiuscolo le sottostringhe corrispondenti a nomi (es. “Agenzia per l'Italia Digitale”)
+     - registry
+     - Company name. String. String composed by a sequence of words, separated by single spaces.
+       In capital letters the substrings corresponding to names (e.g. "Agenzia per l'Italia Digitale")
 
        .. code-block::
 
@@ -119,21 +118,21 @@ Tabella attributi identificativi
 
      - |spid-icon|
    * - **https://attributes.eid.gov.it/registered_office**
-     - extra anagrafica
-     - Sede legale. JSON Object: formatted, street_address, locality, region, postal_code, country, 
+     - extra registry
+     - Registered Office. JSON Object: formatted, street_address, locality, region, postal_code, country, 
        country_code.
-       Json composto da una stringa composta da una sequenza di parole intervallate da spazi singoli rappresentanti:
+       Json made of a string composed by a sequence of words, separated by single spaces, representing:
 
-       - Tipologia( via, viale, piazza …) 
-       - Indirizzo 
-       - Nr.civico 
-       - CAP 
-       - Luogo 
-       - Provincia
+       - Type of address (via, viale, piazza …) 
+       - Address
+       - Hiuse number 
+       - ZIP
+       - City 
+       - Province
 
-       la stringa è inserita nel claim "formatted" del JSON Object "address"
+       the string is included in the claim "formatted" of the JSON Object "address"
 
-       Esempio:
+       Example:
 
        .. code-block::
 
@@ -143,25 +142,24 @@ Tabella attributi identificativi
 
      - |spid-icon|
    * - **https://attributes.eid.gov.it/fiscal_number**
-     - anagrafica
-     - Codice fiscale della persona fisica. String. Per il formato si faccia riferimento alla codifica 
-       dell'attributo CF per i certificati, proposta nell'ambito del Draft ETSI EN 319 412-1, 
-       che nel caso specifico prevede la seguente composizione:
-       TINIT-<CodiceFiscale>
+     - registry
+     - Fiscal number of the natural person. String. For the format, please refer to the coding of the attribute
+       CF for the certificates, proposed in the Draft ETSI EN 319 412-1, that implies, in the specific case, the following format:
+       TINIT-<FiscalNumber>
         
-       Esempio:
+       Example:
 
        .. code-block::
 
-          "https://attributes.eid.gov.it/fiscal_number": “TINIT-ABCXYZ00W00Z000Z"
+          "https://attributes.eid.gov.it/fiscal_number": "TINIT-ABCXYZ00W00Z000Z"
 
      - |spid-icon| |cieid-icon|
    * - **https://attributes.eid.gov.it/**
-     - anagrafica
-     - Codice fiscale Persona Giuridica. String. Per il formato si faccia riferimento alla codifica dell'attributo CF per i certificati, proposta
-       nell'ambito del Draft ETSI EN 319 412-1, che nel caso specifico prevede la seguente composizione:
+     - registry
+     - Fiscal number of the legal person. String. For the format, please refer to the coding of the attribute
+       CF for the certificates, proposed in the Draft ETSI EN 319 412-1, that implies, in the specific case, the following format:
 
-       TINIT-segue il codice fiscale
+       TINIT-<FiscalNumber>
 
         .. code-block::
 
@@ -169,13 +167,13 @@ Tabella attributi identificativi
 
      - |spid-icon|
    * - **https://attributes.eid.gov.it/vat_number**
-     - anagrafica
-     - Partita IVA. String. Per il formato si faccia riferimento alla codifica dell'attributo Partita IVA per i certificati,
-       proposta nell'ambito del Draft ETSI EN 319 412-1, che nel caso specifico prevede la seguente composizione:
+     - registry
+     - VAT number. String. For the format, please refer to the coding of the attribute VAT number for 
+       the certificates, proposed in the Draft ETSI EN 319 412-1, that implies, in the specific case, the following format:
 
-       VATIT-<PartitaIVA>
+       VATIT-<VATnumber>
 
-       Esempio:
+       Example:
 
        .. code-block::
 
@@ -183,12 +181,12 @@ Tabella attributi identificativi
 
      - |spid-icon|
    * - **document_details**
-     - extra anagrafica
-     - Documento d'identità. JSON Object (document):
+     - extra registry
+     - Identity document. JSON Object (document):
 
-       Json contenente le proprietà che rappresentano:
+       Json contains the proprieties that represent:
 
-        - "**type**" : valori ammessi:
+        - "**type**" : accepted values:
 
           - *cartaIdentita, passaporto, patenteGuida,*
 
@@ -198,25 +196,24 @@ Tabella attributi identificativi
 
           - *tesseraRiconoscimento;*
 
-        - "**document_number**" : Numero del documento;
-        - "**issuer**" : <ente emettitore> JSON Object:
+        - "**document_number**" : Document number;
+        - "**issuer**" : <issuing entity> JSON Object:
 
-          - "**name**" stringa ottenuta dalla
-            concatenazione dei termini costituenti la
-            denominazione dell'ente a meno di
-            congiunzioni, articoli e preposizioni.
+          - "**name**" string obtained from the concatenation
+            of the terms that build the entity name
+            unless conjunctions, articles and prepositions.
 
-              Es. regioneLazio ( Regione Lazio);
-              provinciaCatania ( Provincia di Catania);
-              prefetturaRoma (Prefettura di Roma);
-              MinisteroEconomiaFinanze ( Ministero
-              dell'Economia e delle Finanze);
+              E.g. regioneLazio ( Region Lazio);
+              provinciaCatania ( Province of Catania);
+              prefetturaRoma ( Prefecture of Roma );
+              MinisteroEconomiaFinanze ( Ministry 
+              of Economy and Finance );
 
-        - "**date_of_issuance**" : data di rilascio del documento;
+        - "**date_of_issuance**" : date of issuance of the document;
 
-        - "**date_of_expiry**" : data di scadenza del documento;
+        - "**date_of_expiry**" : expiry date of the document.
 
-       Esempio:
+       Example:
 
        .. code-block::
 
@@ -232,57 +229,57 @@ Tabella attributi identificativi
 
      - |spid-icon| |cieid-icon|
    * - **phone_number**
-     - extra anagrafica
-     - Numero di telefono mobile. String. Stringa numerica senza spazi intermedi |br|
-       Esempio: |br|
+     - extra registry
+     - Mobile phone name. String. Numeric string without internal spaces |br|
+       Example: |br|
        ``"phone_number": "VATIT-12345678901"``
      - |spid-icon| |cieid-icon|
    * - **email**
-     - extra anagrafica
-     - Indirizzo di posta elettronica. String. Formato standard indirizzo di posta elettronica |br|
-       Esempio: |br|
+     - extra registry
+     - E-mail address. String. Standard e-mail address |br|
+       Example: |br|
        ``"email": "name@domain.it"``
      - |spid-icon| |cieid-icon|
    * - **https://attributes.eid.gov.it/e_delivery_service**
-     - extra anagrafica
-     - Domicilio digitale. Indirizzo casella PEC |br|
-       Esempio: |br|
-       ``"https://attributes.eid.gov.it/e_delivery_service":"nome@pecdomain.it"``
+     - extra registry
+     - Digital domicile. PEC e-mail address |br|
+       Example: |br|
+       ``"https://attributes.eid.gov.it/e_delivery_service":"name@pecdomain.it"``
      - |cieid-icon|
    * - **https://attributes.eid.gov.it/eid_exp_date**
-     - extra anagrafica
-     - Data di scadenza identità. Secondo specifica ISO8601-2004 nel formato
-       "YYYY-MM-DD" dove |br|
-       YYYY indica l'anno utilizzando 4 cifre |br|
-       MM indica il mese in (due) cifre |br|
-       DD indica il giorno in (due) cifre |br|
-       Esempio: |br|
+     - extra registry
+     - Identity expiry date. According to the specifications ISO8601-2004 in the format
+       "YYYY-MM-DD" where |br|
+       YYYY indicates the year using 4 (four) digits |br|
+       MM indicates the month with 2 (two) digits |br|
+       DD indicates the day with 2 (two) digits |br|
+       Example: |br|
        ``"https://attributes.eid.gov.it/id_exp_date":"2002-09-24"``
      - |spid-icon|
    * - **address**
-     - extra anagrafica 
-     - Indirizzo domicilio fisico |br|
-       CAP domicilio fisico |br|
-       Comune domicilio fisico |br|
-       Provincia domicilio fisico |br|
-       Nazione domicilio fisico |br|.
+     - extra registry 
+     - Physical domicile address |br|
+       ZIP code of the physical domicile |br|
+       City of the physical domicile |br|
+       Province of the physical domicile |br|
+       Country of the physical domicile |br|.
        JSON Object (address):
        Formatted, **street_address**
-       (**obbigatorio**),locality, region, postal_code,country, country_code
-       L'attributo contiene la tipologia (via, viale, piazza …), l'indirizzo e il numero civico. 
-       Le tre informazioni sono preferibilmente ordinate come d'uso per lo specifico Stato. 
+       (**mandatory**), locality, region, postal_code, country, country_code
+       The attribute contains the address type (via, viale, piazza …), the address and the house number.
+       The three informations are preferably sorted as in the specific countries.
 
-        - "**street_address**":L'attributo contiene la tipologia (via, viale, piazza …), l'indirizzo e il numero civico. Le tre informazioni sono preferibilmente ordinate come d'uso per lo specifico Stato. 
+        - "**street_address**": The attribute contains the address type (via, viale, piazza …), the address and the house number. The three informations are preferably sorted as in the specific countries.
        
-        - "**postal_code**": CAP 
+        - "**postal_code**": ZIP 
 
-        - "**locality**":Comune
+        - "**locality**": City
 
-        - "**region**": Provincia 
+        - "**region**": Province 
 
-        - "**country_code**" : Nazione
+        - "**country_code**" : Country
 
-       Esempio: 
+       Example: 
        
        .. code-block:: 
 
@@ -298,41 +295,42 @@ Tabella attributi identificativi
 
 .. _user_claims_scopes:
 
-Attributi collegati agli scope
-++++++++++++++++++++++++++++++
+Attributes linked to the scopes
++++++++++++++++++++++++++++++++
 
-Lo standard OIDC prevede l'utilizzo del claim **scope** per identificare gruppi di attributi.
-In SPID e CIE id si definiscono i seguenti **scope**:
+The OIDC standard requires using the claim **scope** for identifying groups of attributes.
+In SPID and CIE id, the following **scope** are defined:
 
- - **profile** corrispondente al "eIDAS Natural Person Minimum Attribute Set" quindi comprende:
+ - **profile**. It corresponds to "eIDAS Natural Person Minimum Attribute Set", so it includes:
 
    - family_name, given_name, birthdate, ``https://attributes.eid.gov.it/spid_fiscal_number``
 
 
- - **email** Questo può rivelarsi utile combinato con lo scope profile
+ - **email**. This can result as useful, if combined with the profile scope.
 
-Ai fini della caratterizzazione delle informazioni, in accordo all'allegato "Corrispettivi" delle convenzioni, lo scope "profile" fornisce claim relativi alle informazioni "anagrafiche", mentre lo scope "email" fornisce claim relativi alle informazioni "extra-anagrafiche"
+To help characterizing the information, according to the annex "Corrispettivi" of the conventions, the scope "profile" supplies claims related to "registry" information, while the "email" scope supplies claims related to "extra registry" information.
 
 
-Esempi non normativi
-++++++++++++++++++++
+Non-normative examples
+++++++++++++++++++++++
 
-Si riportano per comodità gli esempi che danno luogo alla composizione di un unico JSON Object da parte di più attributi ed in particolare i claim "place_of_birth", "address", "document_details", ``https://attributes.eid.gov.it/registered_office``.
+For convenience, we report examples that produce the composition of a unique JSON Object, from
+several attributes and in particular the claims "place_of_birth", "address", "document_details", ``https://attributes.eid.gov.it/registered_office``.
 
-Si riportano a titolo di esempio due indirizzi italiani:
+As an example, two Italian addresses are reported:
 
 
 .. list-table:: 
    :widths: 20 80
    :header-rows: 1
 
-   * - **Attributo**
-     - **Esempio codifica OIDC**
-   * - Indirizzo domicilio fisico
-       CAP domicilio fisico
-       Comune domicilio fisico
-       Provincia domicilio fisico
-       Nazione domicilio fisico
+   * - **Attribute**
+     - **Example of OIDC coding**
+   * - Physical domicile address
+       ZIP of the physical domicile
+       City of the of the physical domicile
+       Province of the physical domicile
+       Country of the physical domicile
      - .. code-block::
 
         "address":{
@@ -343,11 +341,11 @@ Si riportano a titolo di esempio due indirizzi italiani:
             "country_code":"IT"
         }
 
-   * - Indirizzo domicilio fisico
-       CAP domicilio fisico
-       Comune domicilio fisico
-       Provincia domicilio fisico
-       Nazione domicilio fisico
+   * - Physical domicile address
+       ZIP of the physical domicile
+       City of the of the physical domicile
+       Province of the physical domicile
+       Country of the physical domicile
      - .. code-block::
 
         "address":{
@@ -358,21 +356,21 @@ Si riportano a titolo di esempio due indirizzi italiani:
             "country_code":"IT"
         }
 
-Vi sono casi, come per gli Stati Uniti d'America, dove oltre alla nazione (US) esiste uno Stato. 
-In tali casi lo Stato è indicato nel campo Provincia.
-Si riporta il seguente esempio:
+There are cases, as for the United States of America, where not only the country (US), but also a State, must be indicated.
+In such cases the State is indicated in the field Province.
+Following, an example:
 
 .. list-table:: 
    :widths: 20 80
    :header-rows: 1
 
-   * - **Attributo**
-     - **Esempio codifica OIDC**
-   * - Indirizzo domicilio fisico
-       CAP domicilio fisico
-       Comune domicilio fisico
-       Provincia domicilio fisico
-       Nazione domicilio fisico
+   * - **Attribute**
+     - **Example of OIDC coding**
+   * - Physical domicile address
+       ZIP of the physical domicile
+       City of the of the physical domicile
+       Province of the physical domicile
+       Country of the physical domicile
      - .. code-block::
 
         "address":{
