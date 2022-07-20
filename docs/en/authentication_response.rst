@@ -3,9 +3,8 @@
 Authentication response
 -----------------------
 
-Un'Authentication response è un messaggio di risposta di autorizzazione OAuth 2.0
-restituito dall'authorization endpoint dell'OpenID Provider (OP) al termine del flusso di
-autenticazione. L'OP reindirizzerà l'utente all'url contenuto nel parametro redirect_uri specificato nella richiesta di autorizzazione, aggiungendo i parametri della risposta.
+An Authentication response is an OAuth 2.0 authorization response message, returned by the authorization endpoint of the OpenID Provider (OP) at the end of the authentication flow. The OP redirects the user
+to the URL contained in the parameter redirect_uri specified in the authorization request, adding the response parameters.
 
 .. seealso::
 
@@ -15,8 +14,7 @@ autenticazione. L'OP reindirizzerà l'utente all'url contenuto nel parametro red
 Response
 ++++++++
 
-Se l'autenticazione è avvenuta con successo, l'OpenID Provider (OP),
-reindirizza l'utente con i seguenti parametri:
+If the authentication has succeded, the OpenID Provider (OP), redirects the user wuth the following parameters:
 
 
 .. code-block:: 
@@ -34,18 +32,17 @@ reindirizza l'utente con i seguenti parametri:
    :header-rows: 1
 
    * - **Claim**
-     - **Descrizione**
-     - **Supportato da**
+     - **Description**
+     - **Supported by**
    * - **code**
-     - Codice univoco di autorizzazione (*Authorization Code*) che il client può passare al Token Endpoint per ottenere un ID Token e un Access Token. Questo ha il vantaggio di non esporre alcun token allo User Agent o a malware che controllano questo. 
+     - Unique *Authorization Code* that the client can pass to the Token Endpoint for obtaining an ID Token and an Access Token. This has the advantage of not exposing any token to the User Agent or to malware that coud be controlling it.
      - |spid-icon| |cieid-icon|
    * - **state**
-     - Valore state incluso nell'*Authentication Request*. Il client è tenuto a verificarne la corrispondenza. Deve essere lo stesso valore indicato dal client nella Authorization Request.
+     - State value included in the *Authentication Request*. The client is supposed to check its correspondene. It must have the same value indicated by the client in the Authorization Request.
      - |spid-icon| |cieid-icon|
    * - **iss**
-     - Identificatore univoco dell'OP che ha creato l'Authentication Response. Il RP DEVE validare 
-       questo parametro e NON DEVE permettere a più OP di usare lo stesso identificatore. OBBLIGATORIO solo per
-       CIE.
+     - Unique Identifier of the OP that has created the Authentication Response. The RP MUST validate
+       this parameter and MUST NOT allow more OPs to use the same identifier. MANDATORY only for CIE.
      - |cieid-icon|
 
 Errori

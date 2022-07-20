@@ -152,4 +152,3 @@ The EC of an OP MUST configure a metadata of type **"openid_provider"**, that MU
 
    - :ref:`Example of an EC of an OP <Esempio_EN1.2>`
 
-   
