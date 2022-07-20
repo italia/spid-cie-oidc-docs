@@ -1,9 +1,10 @@
 .. include:: ./common_definitions.rst
 
-Introspection Endpoint (verifica validità token) 
-------------------------------------------------
+Introspection Endpoint (token velidity verification) 
+----------------------------------------------------
 
-L'Introspection Endpoint esposto dall'OP consente ai RP di ottenere informazioni su un token in loro possesso, come ad esempio la sua validità.
+The Introspection Endpoint exposed by the OP, allows the RPs to obtain information 
+about a token in their possession, as for example its validity.
 
 .. seealso::
 
@@ -13,10 +14,11 @@ L'Introspection Endpoint esposto dall'OP consente ai RP di ottenere informazioni
 Request
 +++++++
 
-La richiesta all'Introspection Endpoint consiste nell'invio del token su cui si vogliono ottenere informazioni unitamente a una Client Assertion che consente di autenticare il RP che esegue la richiesta.
+The request to the Introspection Endpoint consists of sending the token about which to obtain information,
+together with a Client Assertion that allows authenticating the RP that makes the request.
 
 
-**Esempio:**
+**Example:**
 
 .. code-block:: 
 
@@ -43,29 +45,32 @@ La richiesta all'Introspection Endpoint consiste nell'invio del token su cui si 
    :header-rows: 1
 
    * - **Claim**
-     - **Descrizione**
-     - **Obbligatorio**
+     - **Description**
+     - **Required**
    * - **client_assertion**
-     - JWT firmato con la chiave privata del Relying Party contenente gli stessi parametri documentati per le richieste al 
-       Token Endpoint. L'OP deve verificare la validità di tutti i campi presenti nel JWT, nonché la validità della sua firma in relazione al parametro **client_id**.
+     - JWT signed with the Relying Party's private key, containing the same parameters as documented 
+       for the requests to the Token Endpoint. The OP must test the validity of all the fields that
+       are present in the JWT, plus the validity of its signature, 
+       with respect to the parameter **client_id**.
      - 
    * - **client_assertion_type**
-     - String. Valori ammessi: **urn:ietf:params:oauth:clientassertion-type:jwt-bearer**
+     - String. Allowed values: **urn:ietf:params:oauth:clientassertion-type:jwt-bearer**
      - 
    * - **client_id**
-     - URI che identifica univocamente il RP. L'OP deve verificare che il client_id sia noto all'interno della Federazione.
+     - URI that unquely identifies the RP. The OP must check that the client_id is known inside the 
+       Federation.
      - 
    * - **token**
-     - Il token su cui il RP vuole ottenere informazioni.
+     - The token about which the RP wants to obtain information.
      - 
 
 
 Response
 ++++++++
 
-L'Introspection Endpoint risponde con un oggetto JSON definito come segue. 
+The Introspection Endpoint responds with a JSON Object defined as follows.
 
-**Esempio:**
+**Example:**
 
 .. code-block:: 
 
@@ -78,25 +83,26 @@ L'Introspection Endpoint risponde con un oggetto JSON definito come segue.
    :header-rows: 1
 
    * - **Claim**
-     - **Descrizione**
-     - **Obbligatorio**
+     - **Description**
+     - **Required**
    * - **active**
-     - Valore booleano che indica la validità del token. Se il token è scaduto, è revocato o non è mai stato emesso per il client_id chiamante, l'Introspection Endpoint deve restituire false.
+     - Boolean value that indicates the token validity. If the token is expired, it has been revoked or it
+       has never been issued for the calling client_id, the Introspection Endpoint must return false.
      - 
 
 	 
-Errori
+Errors
 ++++++
 
-In caso di errore, l'OP restituisce un codice HTTP 401 con un JSON nel body avente gli elementi di seguito indicati
+In case of errors, the OP returns an HTTP 401 code with a JSON in the body, having the elements indicated below.
 
-**Esempio:**
+**Example:**
 
 .. code-block:: 
 
  {
      "error":"invalid_client",
-     "error_description":"client_id non riconosciuto."
+     "error_description":"client_id not recognized."
  }
 
 
@@ -105,31 +111,32 @@ In caso di errore, l'OP restituisce un codice HTTP 401 con un JSON nel body aven
    :header-rows: 1
 
    * - **Claim**
-     - **Descrizione**
-     - **Obbligatorio**
+     - **Description**
+     - **Required**
    * - **error**
-     - Codice dell'errore (vedere tabella sotto)
+     - Error code (see table below)
      - 
    * - **error_description**
-     - Descrizione più dettagliata dell'errore, finalizzata ad aiutare lo sviluppatore per eventuale debugging. Questo messaggio non è destinato ad essere visualizzato all'utente (a tal fine si faccia riferimento alle `SPID UX Guidelines`_).
+     - More detailed error description, aimed at helping the developers to debug. This message is not intended
+       to be displayed to the users (for this purpose, please refer to the `SPID UX Guidelines`_).
      - 
 
 
-Di seguito i codici di errore:
+Following, the error codes:
 
 .. list-table:: 
    :widths: 70 30
    :header-rows: 1
 
    * - Scenario
-     - Codice errore
-   * - Il client_id indicato nella richiesta non è riconosciuto.
+     - Error code
+   * - The client_id indicated in the request is not recognized.
      - **invalid_client**
-   * - La richiesta non è valida a causa della mancanza o della non correttezza di uno o più parametri
+   * - The request is not valid because of lack or incorrectness of one or more parameters.
      - **invalid_request**
-   * - L'OP ha riscontrato un problema interno.
+   * - The OP has encountered an internal problem.
      - **server_error**
-   * - L'OP ha riscontrato un problema interno temporaneo.
+   * - The OP has encountered a temporary internal problem. 
      - **temporarily_unavailable**
 
 

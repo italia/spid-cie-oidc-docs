@@ -11,7 +11,7 @@ The **Light** SAs register pre-existing RPs that are OIDC-FED-compliant and publ
 
 The **Full** SAs arrange building an authentication and federation interface, on behalf of their own subordinates, by using web resources that are usually exposed inside their own domain. This kind of SAs expose for each of their subordinates, the following resources:
 
-    - **.well-known/openid-federation**, containint a *subject identifier* or the unique RP;
+    - **.well-known/openid-federation**, containing a *subject identifier* or the unique RP;
     - Authorization callback endpoint for obtaining the auth code by the OP (**redirect_uri**).
 
 The **Full** type SAs MUST add the **id_code** (as defined in the Section :ref:`Trust Mark Composition <ComposizioneTM>`) in the web path inside the client_id that identifies the subordinate entity ``<SA_dominio>/<id_code>/``.
