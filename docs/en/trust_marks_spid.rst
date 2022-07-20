@@ -4,7 +4,6 @@
 Trust Marks for SPID
 ++++++++++++++++++++
 
-TBD non normative examples
 
 Examples of Trust Marks for SPID
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
