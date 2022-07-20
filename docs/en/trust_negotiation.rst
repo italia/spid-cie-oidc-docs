@@ -6,7 +6,6 @@ Trust Negotiation
 This section explains the ways of mutual recognition between RP and OP, the ways for the Leaves to recognize each other inside the same Federation and to obtain each other's Metadata.
 
 
-
 Relying Party
 +++++++++++++
 
@@ -27,6 +26,7 @@ publishes it inside the users' authentication page.
 
 The procedure of Metadata Discovery for the SPID RPs gets simplified because, inside the Federation, the existence of Intermediaries between the OPs and their Trust Anchor, is not allowed.
 
+
 .. image:: ../../images/metadata_discovery.svg
     :width: 100%
 
@@ -43,8 +43,10 @@ dynamically register an RP, are described.
 .. image:: ../../images/automatic_client_registration.svg
     :width: 100%
 
+
 *The registration of an RP from the perspective of an OP that, for the first time, receives an authorization
 request from the RP and starts the Metadata Discovery process and the Trust Chain saving*.
+
 
 The OP extracts the unique identifier (**client_id**) from the object *request* contained in the 
 *Authorization Request* and carries out an Entity Configuration request by the :ref:`RP<Esempio_EN1.1>`.
@@ -114,6 +116,6 @@ provided by the *authority_hint*, reaches the Trust root, that's the TA. At each
     :width: 100%
 
 
-*Trust Chain*
+*The Metadata Discovery process to build a Trust Chain and obtain the final Metadata.*
 
 
