@@ -3,14 +3,14 @@
 Revocation Endpoint (logout)
 ----------------------------
 
-Un RP PUÒ chiedere la revoca di un Access Token o di un Refresh Token emesso da un OP.
+An RP CAN request the revocation of an Access Token or a Refresh Token issued by an OP.
 
-Quando l'utente esegue il logout il RP DEVE revocare l' Access Token in suo possesso.
+When the user logs out, the RP MUST revoke the Access Token in its possession.
 
 .. note::
-  La revoca di un Access Token comporta la revoca di tutti i Refresh Token a questo collegati.
+  The Access Token revocation implies revoking all the Refresh Tokens linked to it.
 
-L'OP DOVRÀ revocare il token specificato nella richiesta e DOVRÀ terminare la sessione di Single Sign-On se ancora attiva.
+The OP WILL HAVE TO revoke the token specified in the request and WILL HAVE TO end the Single Sign-On session, if it is still active.
 
 .. seealso::
 
@@ -19,10 +19,10 @@ L'OP DOVRÀ revocare il token specificato nella richiesta e DOVRÀ terminare la 
 Request
 +++++++
 
-La richiesta al Revocation Endpoint consiste nell'invio del token che si vuole revocare unitamente a una Client Assertion che consente di identificare il RP che esegue la richiesta.
+The request to the Revocation Endpoint consists of sending the token to be revoked, together with a Client Assertion that allows the identification of the RP that makes the request.
 
 
-**Esempio:**
+**Example:**
 
 .. code-block::
 
@@ -48,26 +48,25 @@ La richiesta al Revocation Endpoint consiste nell'invio del token che si vuole r
    :header-rows: 1
 
    * - **Claim**
-     - **Descrizione**
-     - **Obbligatorio**
+     - **Description**
+     - **Required**
    * - **client_assertion**
-     - JWT firmato con la chiave privata del Relying Party contenente gli stessi parametri documentati per le richieste al 
-       Token Endpoint. L'OP deve verificare la validità di tutti i campi presenti nel JWT, nonché la validità della sua firma in relazione al parametro **client_id**.
+     - JWT signed with the Relying Party's private key, containing the same parameters as from the documentation of the Token Endpoint requests. The OP must test the validity of all the fields in the JWT, plus the validity of its signature, according to the parameter **client_id**.
      - 
    * - **client_assertion_type**
      - String. **urn:ietf:params:oauth:clientassertion-type:jwt-bearer**
      - 
    * - **client_id**
-     - URL HTTPS che identifica univocamente il RP. 
+     - URL HTTPS that uniquely identifies the RP. 
      - 
    * - **token**
-     - Il token su cui il RP vuole ottenere informazioni.
+     - The token about which the RP requests information.
      - 
 	 
 
 Response
 ++++++++
 
-Il Revocation Endpoint risponde con un codice HTTP 200, anche nel caso in cui il token indicato non esista o sia già stato revocato (in modo da non rilasciare informazioni).
+The Revocation Endpoint answers with a code HTTP 200, also though the indicated token does not exist or has already been revoked (so that non information is going to be released).
 
 
