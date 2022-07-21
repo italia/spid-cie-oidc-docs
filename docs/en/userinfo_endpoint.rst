@@ -4,7 +4,7 @@ UserInfo Endpoint (attributes)
 ------------------------------
 
 The UserInfo Endpoint is an OIDC protected resource that returns the authenticated user's claims. To obtain 
-the requested claims, the RP forwards a request to the UserInfo Endpoint using the Access Token.
+the requested claims, the RP sends a request to the UserInfo Endpoint using the Access Token.
 
 The UserInfo Endpoint MUST only support the method HTTP GET :rfc:`2616` and MUST accept and validate the Access Token sent in the Authorization field of the Header, whose type is Bearer :rfc:`6750`.
 
