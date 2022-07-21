@@ -42,7 +42,7 @@ NOT trigger a procedure of Metadata Discovery for each request arrival.
 Good Practices
 --------------
 
-In this section we describe some good practices for obtaining the maximum result from the Federation entities. 
+In this section we describe some good practices. 
 
 
 Specializing the OpenID Core and Federation public keys
