@@ -107,7 +107,7 @@ concatenating the web path to the .well-known resource.
 Once the RP is recognized as part in the Federation, it gets the permission to make an Authentication Request.
 An OP that doesn't recognize the RP that makes the request, can correctly resolve the Trust. The OP starts
 requesting the Entity Configuration of the RP at the .well-known endpoint of the RP and, following the path
-provided by the *authority_hint*, reaches the Trust root, that's the TA. At each chain step, the OP can perform all the security controls by requesting the Entity Statements to each entity and validating the Trust Marks and the signatures. The following picture is a representative example of how the Trust Chain works.
+provided by the *authority_hint*, reaches the TA. At each chain step, the OP can perform all the security controls by requesting the Entity Statements to each entity and validating the Trust Marks and the signatures. The following picture is a representative example of how the Trust Chain works.
 
 
 .. image:: ../../images/cie_esempio_trust_chain.svg
