@@ -45,12 +45,10 @@ Indix of content
    attributi_utente.rst
    introspection_endpoint.rst
    revocation_endpoint.rst
+   confronto_oidc_cie_e_oidc_igov.rst
    differenze_oidc_fed.rst
    seccons_bcps.rst
    esempi.rst
    avvisi_spid.rst
    diventa_fornitore.rst
    come_contribuire.rst
-   confronto_oidc_cie_e_oidc_igov.rst
-
-   

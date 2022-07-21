@@ -81,4 +81,5 @@
 .. _JWS: https://datatracker.ietf.org/doc/html/draft-ietf-jose-json-web-signature
 .. _OAuth-DPoP: https://datatracker.ietf.org/doc/html/draft-ietf-oauth-dpop-10
 .. _OAuth-RS: https://datatracker.ietf.org/doc/html/draft-jones-oauth-resource-metadata
+.. _I-D.ietf-OAuth-Security-BCP: https://www.ietf.org/archive/id/draft-ietf-oauth-security-topics-19.html
 

@@ -1,13 +1,13 @@
 .. include:: ../common/common_definitions.rst
 
-Confronto fra OIDC CIE e OIDC iGov
-----------------------------------
+Confronto fra OIDC CIE / SPID e OIDC iGov
+-----------------------------------------
 
-CIE OpenID Connect è basato sul profilo iGov (openid-gov-profile) di OpenID connect, `International Government Assurance Profile (iGov) for OpenID Connect 1.0 <https://openid.net/specs/openid-igov-openid-connect-1_0-03.html>`_  con le seguenti differenze:
+CIE OpenID Connect e SPID OpenID Connect sono basati sul profilo iGov (openid-gov-profile) di OpenID connect, `International Government Assurance Profile (iGov) for OpenID Connect 1.0 <https://openid.net/specs/openid-igov-openid-connect-1_0-03.html>`_  con le seguenti differenze:
 
  - La sezione 2.1 di iGOV riporta **vtr**, **acr_values** e **PKCE** come OPZIONALI, sia in SPID che in CIE id **PKCE** e **acr_values** sono OBBLIGATORI. In entrambe le implementazioni di SPID e CIE, si è adottato **acr_values** al posto di **vtr**.
 
- - L'Authentication Response nel flusso di autenticazione di CIE impone l'uso del claim **iss** per evitare l'attacco mix-up I-D.ietf-OAuth-Security-BCP. L'uso di questo claim è OPZIONALE in SPID.
+ - L'Authentication Response nel flusso di autenticazione di CIE impone l'uso del claim **iss** per evitare l'attacco mix-up `I-D.ietf-OAuth-Security-BCP`_. L'uso di questo claim è OPZIONALE in SPID.
 
  - La sezione 2.4 di iGov stabilisce "Gli RP POSSONO opzionalmente mandare richieste all'Authorization Endpoint usando il parametro request." Sia in SPID che in CIE id, l'uso del parametro request è OBBLIGATORIO.
 
