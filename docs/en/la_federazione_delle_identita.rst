@@ -8,7 +8,7 @@ participate in the same regulatory framework for building a mechanism of trust, 
 stipulating conventions and getting accreditation by one or more impartial authorities, and technological, by 
 adopting standards of interoperability that allow safe data interchange.
 
-This configuration establishes what levels of guarantee and security are appropriate for an individual, in order to authenticate on a web service (Service Provider) using their own digital identity, released 
+This configuration establishes the levels of guarantee and security that are appropriate for an individual, in order to authenticate on a web service (Service Provider) using their own digital identity, released 
 by another web service (Identity Provider).
 
 The members (RP or OP) who are recognized inside the same Federation, obtain Metadata from each
