@@ -215,20 +215,20 @@ The claims defined inside the TMs, comply to what defined in the OIDC Federation
       - String. Specifies if the Entity belongs to the Italian Public Administration or the private sector (**public** or **private**)
       - |spid-icon| |cieid-icon|
     * - **id_code**
-      - String. Identification code of the Organization. Depending on the organization type, it must be
-        indicated an IPA code (for the public organization type) or the VAT number (for the private type).
+      - String. Identification code of the Organization. Depending on the Organization type, it must be
+        indicated an IPA code (for the public Organization type) or the VAT number (for the private type).
       - |spid-icon| |cieid-icon|
     * - **email**
-      - String. Institutional e-mail or PEC of the organization.
+      - String. Institutional e-mail or PEC of the Organization.
       - |spid-icon| |cieid-icon|
     * - **organization_name**
       - String. The complete name of the service-supplying Entity.
       - |spid-icon| |cieid-icon|
 
 .. warning::
-  In case of CIEid, the public organizations that have not only the **IPA code**, but also a **unique AOO code**, MUST include this latter one in the claim **id_code**, in the format *<IPA_code>-<AOO_code>*.
+  In case of CIEid, the public Organizations that have not only the **IPA code**, but also a **unique AOO code**, MUST include this latter one in the claim **id_code**, in the format *<IPA_code>-<AOO_code>*.
   Furthermore, the value in the claim **exp** MUST NOT be greater than the duration of the specific 
-  conventions/agreements concluded in the onboarding process, between the MinInterno and the organizations 
+  conventions/agreements concluded in the onboarding process, between the MinInterno and the Organizations 
   that receive the TM.
  
 
