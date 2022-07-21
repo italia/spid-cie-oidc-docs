@@ -12,7 +12,7 @@ This section lists the differences between the official standard and the SPID / 
 Client Registration
 +++++++++++++++++++
 
-SPID supports only **automatic_client_registration**. The **implicit** mode is not supported.
+SPID supports only **automatic_client_registration**. The **implicit** flow is not supported.
 
 
 Listing endpoint
