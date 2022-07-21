@@ -12,7 +12,7 @@ Relying Party
 The RP gets the list of the OPs in JSON format by querying the :ref:`endpoint list<federation_endpoint>`, 
 available by the :ref:`Trust Anchor<Esempio_EN3>`. For each subject contained in the :ref:`answer<Esempio_EN3.1>` and corresponding to an OP, the RP :ref:`requires<Esempio_EN2>` and obtains the self-signed Entity Configuration by the OP.
 
-For each EC of the OPs, the RP tests the content signature by using the public key obtained by the Entity
+For each EC of the OPs, the RP validates the signature by using the public key obtained by the Entity
 Statement released by the Trust Anchor. After validating the Entity Configuration signature with the TA's public key, RP recognizes the trust towards the OP.
 
 Finally, the RP applies the policies published by the Trust Anchor on the OP's Metadata and saves the final
