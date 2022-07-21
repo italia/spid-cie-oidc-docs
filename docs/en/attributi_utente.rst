@@ -5,8 +5,8 @@
 Table of the user's attributes
 ------------------------------
 
-Table of the identification attributes
-++++++++++++++++++++++++++++++++++++++
+Table of the user's attributes
+++++++++++++++++++++++++++++++
 
 .. list-table:: 
    :widths: auto
