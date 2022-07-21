@@ -10,7 +10,7 @@ When the user logs out, the RP MUST revoke the Access Token in its possession.
 .. note::
   The Access Token revocation implies revoking all the Refresh Tokens linked to it.
 
-The OP WILL HAVE TO revoke the token specified in the request and WILL HAVE TO end the Single Sign-On session, if it is still active.
+The OP will have to revoke the token specified in the request and will have to end the Single Sign-On session, if it is still active.
 
 .. seealso::
 

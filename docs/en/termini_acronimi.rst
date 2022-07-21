@@ -111,7 +111,7 @@ In this section are defined all the acronyms that are used throughout the text.
 Conventions and Normative Terms
 +++++++++++++++++++++++++++++++
 
-The keywords "MUST", "MUST NOT", "WILL HAVE TO", "REQUIRES", "REQUIRE", "SHOULD", "SHOULD NOT", "RECOMMENDED", "CAN" and "OPTIONAL" in the present document must be interpreted as described at BCP 14 :rfc:`2119` :rfc:`8174` when and only when they appear in capital letters.
+The keywords "MUST", "MUST NOT", "REQUIRES", "REQUIRE", "SHOULD", "SHOULD NOT", "RECOMMENDED", "CAN" and "OPTIONAL" in the present document must be interpreted as described at BCP 14 :rfc:`2119` :rfc:`8174` when and only when they appear in capital letters.
 
 Le notations [...] and ... mean that the text has been cut off for editor's requirements.
 
