@@ -16,7 +16,7 @@ against attacks aimed at the resource consumption. An OP that is attacked at its
 several connections to third party systems, while trying to find a path to the TA and establish the trust
 with the requester.
 
-The OP MUST statically validate the TM or MUST a priori exclude the request whenever the TM is not present.
+The OP MUST statically validate the TM or a-priori exclude the request whenever the TM is not present.
 In case the TM is not present or not valid, the procedure of Metadata Discovery MUST NOT be started and consequently MUST NOT create connections to third party systems.
 
 
