@@ -14,7 +14,7 @@ The **Full** SAs arrange building an authentication and federation interface, on
     - **.well-known/openid-federation**, containing a *subject identifier* or the unique RP;
     - Authorization callback endpoint for obtaining the auth code by the OP (**redirect_uri**).
 
-The **Full** type SAs MUST add the **id_code** (as defined in the Section :ref:`Trust Mark Composition <ComposizioneTM>`) in the web path inside the client_id that identifies the subordinate entity ``<SA_dominio>/<id_code>/``.
+The **Full** type SAs MUST add the **id_code** (as defined in the Section :ref:`Trust Mark Composition <ComposizioneTM>`) inside the web path, which in turn is inside the client_id that identifies the subordinate entity ``<SA_dominio>/<id_code>/``.
 
 The following table contains some non-normative examples for outlining the differences between the SAs of
 types Light and Full:
