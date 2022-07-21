@@ -1,5 +1,4 @@
-.. include:: ./common_definitions.rst
-
+.. include:: ../common/common_definitions.rst
 Avvisi SPID
 -----------
 

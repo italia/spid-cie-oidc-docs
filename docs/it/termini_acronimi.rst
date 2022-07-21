@@ -1,4 +1,4 @@
-.. include:: ./common_definitions.rst
+.. include:: ../common/common_definitions.rst
 
 Termini e Acronimi
 ------------------
@@ -107,4 +107,4 @@ Le notazioni [...] e ... indicano che il testo è stato troncato per esigenze ed
 *base64url* denota la codifica URL-safe base64 senza padding definita in :rfc:`7515#section-2`.
 
 .. warning::
-    |warning-message|
+    |warning-message-it|

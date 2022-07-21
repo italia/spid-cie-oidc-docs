@@ -1,4 +1,5 @@
-.. include:: ./common_definitions.rst
+.. include:: ../common/common_definitions.rst
+
 
 Token Endpoint (token request)
 --------------------------------

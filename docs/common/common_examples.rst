@@ -1,5 +1,4 @@
 
-
 .. _Esempio_EN1:
 
 EN 1. Entity Configuration Request

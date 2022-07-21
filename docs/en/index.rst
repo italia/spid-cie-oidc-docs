@@ -1,4 +1,4 @@
-.. include:: ./common_definitions.rst
+.. include:: ../common/common_definitions.rst
 
 =======================
 SPID/CIE OpenID Connect
@@ -51,5 +51,6 @@ Indix of content
    avvisi_spid.rst
    diventa_fornitore.rst
    come_contribuire.rst
+   confronto_oidc_cie_e_oidc_igov.rst
 
    

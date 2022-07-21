@@ -1,4 +1,4 @@
-.. include:: ./common_definitions.rst
+.. include:: ../common/common_definitions.rst
 
 Terms and Acronyms
 ------------------
@@ -118,4 +118,4 @@ Le notations [...] and ... mean that the text has been cut off for editor's requ
 *base64url* denotes the URL-safe base64 coding without padding, defined at :rfc:`7515#section-2`.
 
 .. warning::
-    |warning-message|
+    |warning-message-en|
