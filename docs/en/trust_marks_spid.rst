@@ -9,7 +9,7 @@ Examples of Trust Marks for SPID
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The TMs issued for the Leaves MUST be published by the Leaves themselves in their own **Entity Configuration**,
-inside the claim **trust_marks**. This is composed by lists of JSOB objects, each of them MUST contain at least
+inside the claim **trust_marks**. This is composed by lists of JSON objects, each of them MUST contain at least
 the claims **id** and **trust_mark**, where the first identifies the TM, and the second contains the signed JWT of the TM.
 
 Following, a non-normative example of the object **trust_marks** inside the Entity Configuration of an RP-type Leaf.
