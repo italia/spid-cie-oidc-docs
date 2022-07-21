@@ -18,7 +18,7 @@ SPID supports only **automatic_client_registration**. The **implicit** flow is n
 Listing endpoint
 ++++++++++++++++
 
-In the SPID Federation, for this endpoint, the claim **entity_type** is added to all the other `OIDC-FED`_ standard claims, in order to obtain a filter on the type of subordinate entities. This need apecifically allows filtering entities of type **federation_entity**, **openid_relying_party**, **openid_provider** and **oauth_resource**.
+In the SPID / CIE Federations, for this endpoint, the claim **entity_type** is added to all the other `OIDC-FED`_ standard claims, in order to obtain a filter on the type of subordinate entities. This need apecifically allows filtering entities of type **federation_entity**, **openid_relying_party**, **openid_provider** and **oauth_resource**.
 
 
 Trust Mark

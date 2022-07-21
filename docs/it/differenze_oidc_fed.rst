@@ -18,7 +18,7 @@ SPID supporta esclusivamente **automatic_client_registration**. La modalità **i
 Listing endpoint
 ++++++++++++++++
 
-In SPID viene adottato il parametro aggiuntivo **entity_type** a quelli esistenti nello Standard `OIDC-FED`_ per questo endpoint, con lo scopo di ottenere un filtro sulla tipologia delle entità discendenti. Questa esigenza consente nello specifico di filtrare entità di tipo **federation_entity**, **openid_relying_party**, **openid_provider** e **oauth_resource**.
+In SPID e CIE viene adottato il parametro aggiuntivo **entity_type** a quelli esistenti nello Standard `OIDC-FED`_ per questo endpoint, con lo scopo di ottenere un filtro sulla tipologia delle entità discendenti. Questa esigenza consente nello specifico di filtrare entità di tipo **federation_entity**, **openid_relying_party**, **openid_provider** e **oauth_resource**.
 
 
 Trust Mark
