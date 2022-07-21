@@ -20,7 +20,7 @@ The Token Endpoint returns an *Access Token*, an *ID Token* and a *Refresh Token
 Request
 +++++++
 
-The authentication method of the RP by the Token Endpoint is the private_key_jwt (OIDC Connect Core 1.0 par. 9)
+The authentication method of the RP by the Token Endpoint is the private_key_jwt (OIDC Connect Core 1.0 par. 9).
 
 
 **Request example with authorization code (case 1)**
