@@ -15,7 +15,7 @@ Per ogni EC degli OP, il RP verifica la firma del contenuto adoperando la chiave
 
 Il RP applica infine le politiche pubblicate dal Trust Anchor sui Metadata dell'OP e salva il Metadata finale associandolo ad una data di scadenza (claim **exp**). La data di scadenza corrisponde al valore di **exp** più basso ottenuto da tutti gli elementi che compongono la **Trust Chain**. Periodicamente il RP aggiorna i Metadata di tutti gli OP rinnovando la Trust Chain relativa a questi.
 
-Ottenuti i Metadata finali di tutti i OpenID Connect Provider, il RP genera lo **SPID Button** e il **CIE id Button** e lo pubblica all'interno della pagina di autenticazione destinata agli utenti.
+Ottenuti i Metadata finali di tutti i OpenID Connect Provider, il RP genera lo **SPID Button** o il **CIE id Button** e lo pubblica all'interno della pagina di autenticazione destinata agli utenti.
 
 La procedura di Metadata Discovery risulta semplificata per i RP, perché all'interno della Federazione non è consentita l'esistenza di Intermediari tra gli OP ed il loro Trust Anchor.
 

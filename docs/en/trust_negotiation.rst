@@ -20,8 +20,7 @@ Metadata by associating it to an expiry date (claim **exp**). The expiry date co
 value of **exp**, obtained from all the elements that compose the **Trust Chain**. Periodically, the RP updates
 the Metadata of all the OPs, renewing their related Trust Chain.
 
-After obtaining the final Metadata of all the OpenID Connect Providers, the RP generates the SPID Button and
-publishes it inside the users' authentication page.
+After obtaining the final Metadata of all the OpenID Connect Providers, the RP generates the **SPID button** or **CIE button** and publishes it inside the users' authentication page.
 
 The procedure of Metadata Discovery for the SPID RPs gets simplified because, inside the Federation, the existence of Intermediaries between the OPs and their Trust Anchor, is not allowed.
 
