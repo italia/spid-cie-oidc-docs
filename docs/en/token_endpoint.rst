@@ -111,7 +111,7 @@ The authentication method of the RP by the Token Endpoint is the private_key_jwt
 Response
 ++++++++
 
-The OpenID Provider (OP) returns an ID Token, an Access Token and possibly a Refresh Token, in signed JWT format.
+The OpenID Provider (OP) returns an ID Token, an Access Token and possibly a Refresh Token, in signed JWT.
 
 The Access Token must be formed according to the standard indications of the `"International Government Assurance Profile (iGov) for OAuth 2.0 - Draft 03", section 3.2.1, "JWT Bearer Tokens" <https://openid.net/specs/openid-igov-oauth2-1_0-03.html#rfc.section.3.2.1>`_.
 
