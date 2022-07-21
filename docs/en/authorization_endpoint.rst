@@ -5,7 +5,7 @@ Authorization Request (Authentication Endpoint)
 
 For starting the authentication process, the RP redirects the user to the *Authorization Endpoint* of the selected OP, and sends an *HTTP* request with the parameter **request**, an object in **JWT** format that contains the *Authorization Request* signed by the RP.
 
-for conveying the request, the RP CAN use the methods **POST** and **GET**. With the method **POST** the parameters MUST be sent using the *Form Serialization*. 
+For conveying the request, the RP CAN use the methods **POST** and **GET**. With the method **POST** the parameters MUST be sent using the *Form Serialization*. 
 With the method **GET** the parameters MUST be sent using the *Query String Serialization*. For more details see `OpenID.Core#Serializations`_.
 
 .. warning::
