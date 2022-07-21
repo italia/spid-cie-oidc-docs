@@ -29,14 +29,14 @@ The OIDC Federation is a hierarchical model:
 
  - **Dynamic**. The trust may be dynamically established during the first authentication request.
    The Federation Authorities expose an endpoint that supplies signed statements about the subordinate
-   entities. These statements contain the public keys of the subordinat entities and the Metadata policy.
-   The Federation Authorities can disable an entity in the Federation at every moment, simply by 
+   Entities. These statements contain the public keys of the subordinat Entities and the Metadata policy.
+   The Federation Authorities can disable an Entity in the Federation at every moment, simply by 
    stopping supplying statements about it.
  - **Distributed**. The trust is distributed among several parties. It is up to the verifier to decide
    what path to take for solving the trust (many parties and two Federation Authorities).
  - **Scalable**. It reduces significantly the onboarding costs, according to the delegation principle, with
    the institution of Intermediate Entities (SA).
- - **Transparent**. Any entity involved in the Federation can always build the trust independently and
+ - **Transparent**. Any Entity involved in the Federation can always build the trust independently and
    securely. Furthermore, the Federation composition, in all its parts, becomes navigable in real time 
    through its API.
 
@@ -68,7 +68,7 @@ To take part in the SPID and CIEid Federations, a Leaf Entity must publish its o
 
 The technical and administrative representatives complete the administrative procedure,
 defined by the Federation Authority or by an Intermediary (SA),
-for registering a new entity or for updating a preexisting one. 
+for registering a new Entity or for updating a preexisting one. 
 
 The Federation Authority or an Intermediary, after doing all the required technical and administrative controls, registers the public keys of the Leaf and releases a proof of Federation membership, 
 in the form of Trust Mark (TM).
@@ -78,7 +78,7 @@ success in the Onboarding process.
 
 The Federation Authority or an Intermediary MUST publish the Leaf Entity Statement containing the Federation public keys of the Leaf and the TMs released for it.
 The Federation Authority or an Intermediary CAN publish a `Metadata policy <https://openid.net/specs/openid-connect-federation-1_0.html#rfc.section.5.1>`_ to force the change
-to the OIDC Metadata of the subordinate entity, in the parts where it might be needed.
+to the OIDC Metadata of the subordinate Entity, in the parts where it might be needed.
 
 
 

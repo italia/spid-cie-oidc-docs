@@ -197,10 +197,10 @@ Table of the user's attributes
           - *tesseraRiconoscimento;*
 
         - "**document_number**" : Document number;
-        - "**issuer**" : <issuing entity> JSON Object:
+        - "**issuer**" : <issuing Entity> JSON Object:
 
           - "**name**" string obtained from the concatenation
-            of the terms that build the entity name
+            of the terms that build the Entity name
             unless conjunctions, articles and prepositions.
 
               E.g. regioneLazio ( Region Lazio);

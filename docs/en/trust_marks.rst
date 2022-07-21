@@ -11,19 +11,19 @@ The **Trust Marks (TM)** are signed JWT :rfc:`7515` and represent the statement 
 The main aim of the TMs is exposing information that is not required by the OpenID Connect Core protocol,
 but turns out to be useful in the federative context.
 
-Typical examples include the entity's national or international identification code (fiscal code, IPA code, VAT number), institutional contacts and so forth, as defined at `OIDC-FED`_. Further data may be added
+Typical examples include the Entity's national or international identification code (fiscal code, IPA code, VAT number), institutional contacts and so forth, as defined at `OIDC-FED`_. Further data may be added
 by the issuing subject.
 
 During the registration process of a new Leaf Entity (onboarding), the TMs are issued and signed by the TA
 or its Intermediaries (SA) or by Attribute Authorities (AA), if they are defined inside the attribute **trust_mark_issuers**, published inside the TA's Entity Configuration.
 
-Each member entity MUST expose, in its own configuration (EC), the TMs released by the issuing authorities.
+Each member Entity MUST expose, in its own configuration (EC), the TMs released by the issuing authorities.
 
 In the CIE / SPID scenario, a TM is signed by the TA **MinInterno** / **Agid** or their Intermediaries (SA) or by Attribute Authorities (AA).
 
 The TA defines the subjects who are enabled to issue TMs that are recognizable inside the Federation,
 and this is done by the claim **trust_marks_issuers**, contained in its own Entity Configuration. 
-The value of the claim **trust_marks_issuers** is composed by a JSON Object having as keys the TM identifiers, and as values the list of identifiers (URLs) or the entities who are enabled to issue them.
+The value of the claim **trust_marks_issuers** is composed by a JSON Object having as keys the TM identifiers, and as values the list of identifiers (URLs) or the Entities who are enabled to issue them.
 
 Following, a non-normative example of the object **trust_marks_issuers** inside the TA's Entity Configuration.
 
@@ -43,19 +43,19 @@ Following, a non-normative example of the object **trust_marks_issuers** inside 
      }
  }
 
-Each member entity MUST expose in its configuration (EC), the TMs that have been released by the issuing authority.
+Each member Entity MUST expose in its configuration (EC), the TMs that have been released by the issuing authority.
 
 In the CIE / SPID scenario, a TM is signed by the TA **MinInterno** / **Agid** or their Intermediaries (SA) or
 Attribute Authorities (AA).
 
 The TA defines the subjects that are enabled to issue TMs that are recognizable inside the Federation,
 and it does it with the claim **trust_marks_issuers**, that is present in its Entity Configuration. 
-The value of the attribute **trust_marks_issuers** is composed by a JSON Object whose keys are the TM identifiers and whose values are the list of the identifiers (URLs) of the entities that are enabled 
+The value of the attribute **trust_marks_issuers** is composed by a JSON Object whose keys are the TM identifiers and whose values are the list of the identifiers (URLs) of the Entities that are enabled 
 to issue them.
 
 The Trust Marks represent the first filter for establishing the trust among the parties. 
 They are essential elements for starting the Metadata resolution. 
-In their absence, an entity is not recognized as a member inside the Federation.
+In their absence, an Entity is not recognized as a member inside the Federation.
 
 Inside the SPID Federation, the Trust Marks have unique identifiers (claim id) in URL format, that adopt 
 the following structure: **https:// <domain> / <entity_type> / <trustmark_profile> / [estensione /]**
@@ -79,16 +79,16 @@ The following table defines the <entity_types> that are recognizable inside the 
       - **Description**
       - **Entity**
     * - **openid_relying_party**
-      - the entity in the claim *sub* is an RP.
+      - the Entity in the claim *sub* is an RP.
       - RP
     * - **openid_provider**
-      - the entity in the claim *sub* is an OP.
+      - the Entity in the claim *sub* is an OP.
       - OP
     * - **federation_entity**
-      - the entity in the claim *sub* is an Intermediary.
+      - the Entity in the claim *sub* is an Intermediary.
       - SA
     * - **oauth_resource**
-      - the entity in the claim *sub* is an Attribute Authority.
+      - the Entity in the claim *sub* is an Attribute Authority.
       - AA
 
 The following table defines the <trustmark_profiles> that are recognizable inside the SPID and CIE id Federations:
@@ -102,10 +102,10 @@ The following table defines the <trustmark_profiles> that are recognizable insid
       - **Description**
       - **Entity**
     * - **public**
-      - the entity in the claim *sub* belongs to the Italian Public Administration.
+      - the Entity in the claim *sub* belongs to the Italian Public Administration.
       - RP, OP, SA, AA
     * - **private**
-      - the entity in the claim *sub* belongs to the private sector.
+      - the Entity in the claim *sub* belongs to the private sector.
       - RP, OP, SA, AA
 
 
@@ -114,7 +114,7 @@ The following table defines the <trustmark_profiles> that are recognizable insid
 
 In addition to the claims of the **public** and **private** profiles, the profile **federation_entity**
 identifies the SA and adds the extensions **full** and **light**, according to the ways of operation 
-towards the subordinate entities.
+towards the subordinate Entities.
 
 .. seealso::
 
@@ -153,7 +153,7 @@ There are two ways of validating a Trust Mark:
 
  2. **Dynamic** Validation. The Federation members can query the endpoint :ref:`trust mark status<federation_endpoint>` supplied by its issuer (claim **iss**), for a real-time checking of the TMs that it has issued.
 
-All the entities that release Trust Marks, MUST expose a Trust Mark status endpoint for allowing the 
+All the Entities that release Trust Marks, MUST expose a Trust Mark status endpoint for allowing the 
 **dynamic** validation.
 
 .. seealso:: 
@@ -212,7 +212,7 @@ The claims defined inside the TMs, comply to what defined in the OIDC Federation
       - String. URL that points to information present on the web, about this Trust Mark
       - |spid-icon| |cieid-icon|
     * - **organization_type**
-      - String. Specifies if the entity belongs to the Italian Public Administration or the private sector (**public** or **private**)
+      - String. Specifies if the Entity belongs to the Italian Public Administration or the private sector (**public** or **private**)
       - |spid-icon| |cieid-icon|
     * - **id_code**
       - String. Identification code of the Organization. Depending on the organization type, it must be
@@ -222,7 +222,7 @@ The claims defined inside the TMs, comply to what defined in the OIDC Federation
       - String. Institutional e-mail or PEC of the organization.
       - |spid-icon| |cieid-icon|
     * - **organization_name**
-      - String. The complete name of the service-supplying entity.
+      - String. The complete name of the service-supplying Entity.
       - |spid-icon| |cieid-icon|
 
 .. warning::

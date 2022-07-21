@@ -54,11 +54,11 @@ recognized inside the Federation [1]_.
 If the RP configuration does not expose any Trust Mark that is recognizable by the RP profile (see Section :ref:`Trust Mark<Trust_Mark>`), the Provider MUST refuse the authorization with an error message of type *unauthorized_client*.
 
 If the Provider successfully validates at least a Trust Mark for the RP profile contained inside the
-configuration of the requesting RP, it extracts the superior entities from the claim **authority_hints** and
+configuration of the requesting RP, it extracts the superior Entities from the claim **authority_hints** and
 starts the Metadata Discovery process. Following, the **Trust Chain** calculation and the achievement of 
 the final Metadata.
 
-During the Metadata Discovery, the Provider requests one ore more superior entities [2]_ for the Entity
+During the Metadata Discovery, the Provider requests one ore more superior Entities [2]_ for the Entity
 Statement regarding the RP, obtains the public key for validating the RP configuration and finally reaches
 the Trust Anchor. Then it applies the Metadata policy published by the Trust Anchor and saves the 
 resulting final RP Metadata, associating them to an expiry date. After that date, it will

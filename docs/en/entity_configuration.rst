@@ -26,7 +26,7 @@ Federation Metadata
 +++++++++++++++++++
 
 OIDC Federation defines the Federation Metadata containing the information indicated below and the 
-OIDC Metadata for each type of entity.
+OIDC Metadata for each type of Entity.
 
 
 Entity Configuration - common claims
@@ -40,10 +40,10 @@ Entity Configuration - common claims
      - **Description**
      - **Supported by**
    * - **iss**
-     - String. Identifier of the issuing entity.
+     - String. Identifier of the issuing Entity.
      - |spid-icon| |cieid-icon|
    * - **sub**
-     - String. Identifier of the entity to which it is referred.
+     - String. Identifier of the Entity to which it is referred.
      - |spid-icon| |cieid-icon|
    * - **iat**
      - UNIX Timestamp with the time of generation of the JWT, coded as NumericDate as indicated at :rfc:`7519`
@@ -53,14 +53,14 @@ Entity Configuration - common claims
      - |spid-icon| |cieid-icon|
    * - **jwks**
      - A JSON Web Key Set (JWKS) :rfc:`7517` that represents the public part of the signing keys of the 
-       entity at issue. Each JWK in the JWK set MUST have a key ID (claim kid).
+       Entity at issue. Each JWK in the JWK set MUST have a key ID (claim kid).
      - |spid-icon| |cieid-icon|
    * - **metadata**
      - JSON Object. Each key of the JSON Object represents an identifier of the type of
        :ref:`Metadata<metadata_oidc>` and each value MUST be a JSON Object that represents
        the Metadata, according to the Metadata schema of that type.
 
-       An entity configuration CAN contain more Metadata statements, but only one for each type of
+       An Entity configuration CAN contain more Metadata statements, but only one for each type of
        Metadata (<**entity_type**>). 
 
        The allowed types are the following:
@@ -92,7 +92,7 @@ the following claims:
      - **Description**
      - **Supported by**
    * - **authority_hints**
-     - Array if URLs. It contains a list of URLs of the superior entities, such as TA or SA, 
+     - Array if URLs. It contains a list of URLs of the superior Entities, such as TA or SA, 
        that CAN issue an ES related to this subject.
      - |spid-icon| |cieid-icon|
    * - **trust_marks**

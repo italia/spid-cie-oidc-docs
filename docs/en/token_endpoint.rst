@@ -73,7 +73,7 @@ The authentication method of the RP by the Token Endpoint is the private_key_jwt
    * - **client_assertion**
      - JWT signed with the Relying Party's private key containing the following parameters:
 	 
-	 **iss**: RP identifier registered by the OP, that uniquely identifies the Federation's entity in the Uniform Resource Locator (URL) format. Corresponds to the client_id, used in the authentication request.
+	 **iss**: RP identifier registered by the OP, that uniquely identifies the Federation's Entity in the Uniform Resource Locator (URL) format. Corresponds to the client_id, used in the authentication request.
 	 
 	 **sub**: equal to the parameter **iss** 
 	 

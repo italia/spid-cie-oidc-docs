@@ -18,7 +18,7 @@ Following, the terms used by `OIDC-FED#Section_1.2`_ and this documentation.
     * - **Trust Anchor**
       - Entity handled by the Federation Authority that represents the Federation, its configuration and the trust root.
     * - **Intermediate Entity** or **Intermediary**
-      - An Intermediate Entity (SA), facilitates entering the Federation and CAN handle the functionalities on behalf of its subordinate (Aggregated) entities. Inside the Federation, an SA publishes its own configuration and the Entity statements of its subordinates, according to the rules defined by the Federation.
+      - An Intermediate Entity (SA), facilitates entering the Federation and CAN handle the functionalities on behalf of its subordinate (Aggregated) Entities. Inside the Federation, an SA publishes its own configuration and the Entity statements of its subordinates, according to the rules defined by the Federation.
     * - **Leaf Entity** or **Leaf**
       - Entity defined by the OIDC protocol as Relying Party and OpenID Provider.
     * - **Entity**
@@ -35,12 +35,12 @@ Following, the terms used by `OIDC-FED#Section_1.2`_ and this documentation.
         Entity complies with profiles that are recognizable inside the Federation (public of private RP, public or private Intermediate Entity, etc.). A Leaf that aquires a Trust Mark during an Onboarding process, MUST include it in its Entity Configuration, such as an identification badge.
     * - **Metadata**
       - A Metadata document describes the implementation of an OpenID Connect Entity. The implementations 
-        of all the entities share the Metadata to establish a base of trust and interoperability. 
+        of all the Entities share the Metadata to establish a common ground of trust and interoperability. 
     * - **Metadata policy**
       - The Trust Anchor publishes rules and policies to be applied to the subordinates' Metadata, 
         specifying what values and values subsets are allowed for a given Metadata claim.
     * - **Authority hint**
-      - An array of URLs regarding the identifiers of the higher-level entities, Trust Anchor or 
+      - An array of URLs regarding the identifiers of the higher-level Entities, Trust Anchor or 
         Intermediary, that MUST issue an Entity Statement for their own subordinates. 
     * - **Metadata Discovery**
       - Collection of Entity Configuration / Statements. It foes from a Leaf Entity up to the Trust Anchor
@@ -51,7 +51,7 @@ Following, the terms used by `OIDC-FED#Section_1.2`_ and this documentation.
     * - **Onboarding**
       - Registration Procedure of a new Entity inside the SPID and CIE Federations.
     * - **Federation Endpoint**
-      - Endpoints used to fetch and resolve Entity statements, query a list of all the subordinate entities and check the trust mark status.
+      - Endpoints used to fetch and resolve Entity statements, query a list of all the subordinate Entities and check the trust mark status.
 
 
 Acronyms
