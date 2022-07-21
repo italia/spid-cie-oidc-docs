@@ -209,7 +209,7 @@ The claims defined inside the TMs, comply to what defined in the OIDC Federation
       - UNIX Timestamp with the JWT expiry time, coded as NumericDate as indicated at :rfc:`7519`
       - |spid-icon| |cieid-icon|
     * - **ref**
-      - String. URL that points to information present on the web, about this Trust Mark
+      - String. URL that points to public web information, about this Trust Mark
       - |spid-icon| |cieid-icon|
     * - **organization_type**
       - String. Specifies if the Entity belongs to the Italian Public Administration or the private sector (**public** or **private**)
