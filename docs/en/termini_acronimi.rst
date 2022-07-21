@@ -43,7 +43,7 @@ Following, the terms used by `OIDC-FED#Section_1.2`_ and this documentation.
       - An array of URLs regarding the identifiers of the higher-level Entities, Trust Anchor or 
         Intermediary, that MUST issue an Entity Statement for their own subordinates. 
     * - **Metadata Discovery**
-      - Collection of Entity Configuration / Statements. It foes from a Leaf Entity up to the Trust Anchor
+      - Collection of Entity Configuration / Statements. It goes from a Leaf Entity up to the Trust Anchor
     * - **Trust Chain**
       - Validation Procedure of the sequence of Entity Configuration / Statements that have
         been collected through the Metadata Discovery, whose positive result is a final Metadata regarding 
