@@ -12,7 +12,7 @@ This configuration establishes the levels of guarantee and security that are app
 by another web service (Identity Provider).
 
 The members (RP or OP) who are recognized inside the same Federation, obtain Metadata from each
-other. The Metadata contain the public keys for the operations of digital signature and encryption, 
+other. The Metadata contains the public keys for the operations of digital signature and encryption, 
 and the information needed for the data interchange.
 
 The Metadata are certified by a trusted party who is AgID in the SPID Federation and the Ministry of Interior in the CIE Federation. They both correspond to the Federation Authorities.
