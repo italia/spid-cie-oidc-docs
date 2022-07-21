@@ -24,7 +24,7 @@ In the SPID / CIE Federations, for this endpoint, the claim **entity_type** is a
 Trust Mark
 ++++++++++
 
-In `OIDC-FED`_ it is not mandatory to use Trust Marks. Rather, in the SPID Federation it is mandatory to expose them. For more details about the reasons why the Trust Marks are required, please see the section :ref:`Security Considerations <Considerazioni_di_Sicurezza>`.
+In the SPID and CIE id Federations, using Trust Marks is not mandatory. Rather, in the SPID Federation it is mandatory to expose them. For more details about the reasons why the Trust Marks are required, please see the section :ref:`Security Considerations <Considerazioni_di_Sicurezza>`.
 
 
 Unsupported Claims in the Entity Statements
