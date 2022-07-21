@@ -40,13 +40,13 @@ Il TA definisce i soggetti abilitati all'emissione dei TM riconoscibili all'inte
 
 I Trust Mark rappresentano il primo filtro per l'instaurazione della fiducia tra le parti, sono elementi indispensabili per avviare la risoluzione dei metadati. In loro assenza una entità non è riconoscibile come partecipante all’interno della Federazione.
 
-All’interno della Federazione SPID i Trust Mark presentano degli identificativi univoci (claim id) in formato URL che adottano la seguente struttura: **https:// <domain> / <entity_type> / <trustmark_profile> / [estensione /]**
+All’interno della Federazione SPID i Trust Mark presentano degli identificativi univoci (claim id) in formato URL che adottano la seguente struttura: **https:// <domain> / <entity_type> / [<trustmark_profile> /] [estensione /]**
 
 Alcuni esempi non normativi sono di seguito riportati:
 
 
  - TM RP public: **\https://registry.agid.gov.it/openid_relying_party/public/**
- - TM SA private: **\https://registry.agid.gov.it/federation_entity/private/full/**
+ - TM SA private: **\https://registry.agid.gov.it/federation_entity/private/**
  - TM AA: **\https://registry.agid.gov.it/oauth_resource/public/**
 
 
@@ -91,17 +91,17 @@ La tabella seguente definisce i <trustmark_profile> riconoscibili all'interno de
       - RP, OP, SA, AA
 
 
-**federation_entity** Trust Mark
+federation_entity Trust Mark
 --------------------------------
 
-In aggiunta ai claim dei profili **public** e **private**, il profilo **federation_entity** individua i SA e aggiungendo le estensioni **full** e **light**, 
+In aggiunta ai claim dei profili **public** e **private**, il profilo **federation_entity** individua i SA e aggiunge le estensioni **full** e **light** all'interno del claim **sa_profile**, 
 a seconda della modalità con cui operano rispetto ai Soggetti Aggregati
 
 .. seealso::
 
     Si veda Sezione :ref:`Soggetti aggregatori nel contesto Federativo <Soggetti_aggregatori>`
 
-**oauth_resource**  Trust Mark
+oauth_resource  Trust Mark
 ------------------------------------------
 
 In aggiunta ai claim dei profili **public** e **private**, il profilo **oauth_resource** individua le AA e aggiunge i seguenti claim obbligatori:
@@ -194,6 +194,9 @@ Gli attributi definiti all'interno dei TM aderiscono a quanto definito all'inter
       - |spid-icon| |cieid-icon|
     * - **organization_name**
       - String. Il nome completo dell'entità che fornisce i servizi
+      - |spid-icon| |cieid-icon|
+    * - **sa_profile**
+      - String. RICHIESTO per SA. Specifica il profilo dell’Aggregatore, **full** o **light**.
       - |spid-icon| |cieid-icon|
 
 .. warning::
