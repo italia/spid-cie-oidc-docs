@@ -11,7 +11,7 @@ In this section we describe some security considerations in the OIDC Federation 
 Trust Marks as deterrent against abuses
 +++++++++++++++++++++++++++++++++++++++
 
-The TM implementation and the filter on the TMs in the phase of Metadata Discovery, turn out to be necessary
+The TM implementation and the filter on the TMs in the process of Metadata Discovery, turn out to be necessary
 against attacks aimed at the resource consumption. An OP that is attacked at its *authorization* endpoint, with an high number of connections containing fake **client_id** and **authority_hints**, would produce
 several connections to third party systems, while trying to find a path to the TA and establish the trust
 with the requester.

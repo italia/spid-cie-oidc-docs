@@ -32,7 +32,7 @@ Following, the terms used by `OIDC-FED#Section_1.2`_ and this documentation.
         to be applied to the Entity's Metadata.
     * - **Trust Mark**
       - JWT :rfc:`7515` signed by an issuing Entity about a participating Entity. It certifies that this
-        Entity complies with profiles that are recognizable inside the Federation (public of private RP, public or private Intermediate Entity, etc.). A Leaf that aquires a Trust Mark during an Onboarding phase, MUST include it in its Entity Configuration, such as an identification badge.
+        Entity complies with profiles that are recognizable inside the Federation (public of private RP, public or private Intermediate Entity, etc.). A Leaf that aquires a Trust Mark during an Onboarding process, MUST include it in its Entity Configuration, such as an identification badge.
     * - **Metadata**
       - A Metadata document describes the implementation of an OpenID Connect Entity. The implementations 
         of all the entities share the Metadata to establish a base of trust and interoperability. 

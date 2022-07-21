@@ -55,7 +55,7 @@ If the RP configuration does not expose any Trust Mark that is recognizable by t
 
 If the Provider successfully validates at least a Trust Mark for the RP profile contained inside the
 configuration of the requesting RP, it extracts the superior entities from the claim **authority_hints** and
-starts the phase of the Metadata Discovery. Following, the **Trust Chain** calculation and the achievement of 
+starts the Metadata Discovery process. Following, the **Trust Chain** calculation and the achievement of 
 the final Metadata.
 
 During the Metadata Discovery, the Provider requests one ore more superior entities [2]_ for the Entity
