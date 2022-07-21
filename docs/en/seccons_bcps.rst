@@ -23,7 +23,7 @@ In case the TM is not present or not valid, the procedure of Metadata Discovery 
 Maximum Number of authority_hints
 +++++++++++++++++++++++++++++++++
 
-Inside a Federation, through the constraint named **max_path_lenght**, the Trust Anchor decides how many intermediations are allowed between it and the Leaves. This kind of relationship is vertical, from the Leaf to the root. As an example, if this attribute has the value equal to 1, it means that only one SA is allowed between a Leaf and the TA.
+Inside a Federation, through the constraint named **max_path_lenght**, the Trust Anchor decides how many intermediaries are allowed between it and the Leaves. This kind of relationship is vertical, from the Leaf to the root. As an example, if this attribute has the value equal to 1, it means that only one SA is allowed between a Leaf and the TA.
 
 Every Leaf MUST publish its superiors inside the list contained in the claim **authority_hints**. A Leaf in the Federation CAN have superiors belonging to different Federations. The analysis of the available superiors introduces an horizontal navigation model. As an example, an OP tries to find the shortest path to the Trust Anchor through all the URLs contained in the array **authority_hints**, before doing a further vertical move upwards, to one of the Intermediaries that are present in this array.
 
