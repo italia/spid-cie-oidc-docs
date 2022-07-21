@@ -5,7 +5,7 @@
 Authentication Flow
 -------------------
 
-The authentication schemas **"Enter with SPID"** and **"Enter with CIE"** implement the **OpenID Connect Authorization Code Flow** with the extension **PKCE** (Proof Key for Code Exchange, :rfc:`7636`).
+The authentication schemas **"Entra con SPID"** and **"Entra con CIE"** implement the **OpenID Connect Authorization Code Flow** with the extension **PKCE** (Proof Key for Code Exchange, :rfc:`7636`).
 This flow returns an **Authorization Code** that can be used to get an **ID Token**, an **Access Token** 
 and possibly a **Refresh Token** too.
 The **Authorization Code Flow** gets the **Authorization Code** from the *Authorization Endpoint* of the OpenID Provider and all the tokens are returned by the **Token Endpoint**.
