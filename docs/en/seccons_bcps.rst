@@ -12,9 +12,7 @@ Trust Marks as deterrent against abuses
 +++++++++++++++++++++++++++++++++++++++
 
 The TM implementation and the filter on the TMs in the process of Metadata Discovery, turn out to be necessary
-against attacks aimed at the resource consumption. An OP that is attacked at its *authorization* endpoint, with an high number of connections containing fake **client_id** and **authority_hints**, would produce
-several connections to third party systems, while trying to find a path to the TA and establish the trust
-with the requester.
+against attacks aimed at the resource consumption. If an OP suffers an attack at the *authorization* endpoint and the attack consists of an high number of connections with fake **client_id** and **authority_hints**, then the OP, trying to find a path to the TA for establishing the trust with the requester, would produce several connections to third-party systems.
 
 The OP MUST statically validate the TM or a-priori exclude the request whenever the TM is not present.
 In case the TM is not present or not valid, the procedure of Metadata Discovery MUST NOT be started and consequently MUST NOT create connections to third party systems.
