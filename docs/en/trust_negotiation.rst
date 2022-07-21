@@ -28,7 +28,7 @@ The procedure of Metadata Discovery for the SPID RPs gets simplified because, in
 .. image:: ../../images/metadata_discovery.svg
     :width: 100%
 
-*The Metadata Discovery procedure from the Leaf, up to the Trust Anchor. Please note how the public key for validating the Entity Configuration of the  subordinate entity, is obtained from the Entity Statement released by a superior*.
+*The Metadata Discovery procedure from the Leaf, up to the Trust Anchor. Please note how the public key for validating the Entity Configuration of the  subordinate Entity, is obtained from the Entity Statement released by a superior*.
 
 
 OpenID Provider
@@ -67,14 +67,14 @@ renew the RP Metadata, according to the Trust Chain renewal procedure.
 After obtaining the final Metadata, the Provider validates the RP request, according to the procedures 
 defined in the Federation's guidelines.
 
-In case an RP has an SA as a superior entity and not directly the TA, the procedure of achieving and validating the Entity Configuration of the RP occurs through the Entity Statement published
+In case an RP has an SA as a superior Entity and not directly the TA, the procedure of achieving and validating the Entity Configuration of the RP occurs through the Entity Statement published
 by the SA towards the RP and through validating the Entity Configuration of the SA with the Entity Statement issued by the TA towards the SA. If the threshold of the maximum number of vertical Intermediaries, 
 defined by the value **max_path_length**, is exceeded, the OP stops the process of Metadata Discovery and rejects the RP request.
 
 
 .. [1] The Federation Trust Marks are configured in the claim **trust_marks_issuers** and contained in the Entity Configuration of the Trust Anchor.
 
-.. [2] An RP can expose more than one superior entity inside its own claim **authority_hints**. An example is an RP that takes part both in the SPID and in the CIE Federation. Besides, an RP can result as a subordinate of more than one Intermediaries, either of SPID or CIE.
+.. [2] An RP can expose more than one superior Entity inside its own claim **authority_hints**. An example is an RP that takes part both in the SPID and in the CIE Federation. Besides, an RP can result as a subordinate of more than one Intermediaries, either of SPID or CIE.
 
 
 .. image:: ../../images/trust_anchor.svg
@@ -107,7 +107,7 @@ concatenating the web path to the .well-known resource.
 Once the RP is recognized as part in the Federation, it gets the permission to make an Authentication Request.
 An OP that doesn't recognize the RP that makes the request, can correctly resolve the Trust. The OP starts
 requesting the Entity Configuration of the RP at the .well-known endpoint of the RP and, following the path
-provided by the *authority_hint*, reaches the TA. At each chain step, the OP can perform all the security controls by requesting the Entity Statements to each entity and validating the Trust Marks and the signatures. The following picture is a representative example of how the Trust Chain works.
+provided by the *authority_hint*, reaches the TA. At each chain step, the OP can perform all the security controls by requesting the Entity Statements to each Entity and validating the Trust Marks and the signatures. The following picture is a representative example of how the Trust Chain works.
 
 
 .. image:: ../../images/cie_esempio_trust_chain.svg
