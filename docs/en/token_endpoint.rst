@@ -75,9 +75,9 @@ The authentication method of the RP by the Token Endpoint is the private_key_jwt
 	 
 	 **iss**: RP identifier registered by the OP, that uniquely identifies the Federation's Entity in the Uniform Resource Locator (URL) format. Corresponds to the client_id, used in the authentication request.
 	 
-	 **sub**: equal to the parameter **iss** 
+	 **sub**: equal to the parameter **iss**.
 	 
-	 **aud**: URL of the OP Token Endpoint
+	 **aud**: URL of the OP Token Endpoint.
 	 
 	 **iat**: UNIX Timestamp with the time of the JWT generation, coded as NumericDate as indicated in :rfc:`7519`. 
 	 
@@ -87,13 +87,13 @@ The authentication method of the RP by the Token Endpoint is the private_key_jwt
      - |spid-icon| |cieid-icon|
    * - **client_assertion_type**
      - It must get the following value: |br|
-       **urn:ietf:params:oauth:client-assertion-type:jwtbearer**
+       **urn:ietf:params:oauth:client-assertion-type:jwtbearer**.
      - |spid-icon| |cieid-icon|
    * - **code**
-     - Authorization code returned in the Authentication Response. Required only if **grant_type** is **authorization_code**
+     - Authorization code returned in the Authentication Response. Required only if **grant_type** is **authorization_code**.
      - |spid-icon| |cieid-icon|
    * - **code_verifier**
-     - Verification code of the code_challenge. Required only if **grant_type** is **authorization_code**
+     - Verification code of the code_challenge. Required only if **grant_type** is **authorization_code**.
      - |spid-icon| |cieid-icon|
    * - **grant_type**
      - Type of credentials, presented by the RP, for the current request.
@@ -104,7 +104,7 @@ The authentication method of the RP by the Token Endpoint is the private_key_jwt
 
      - |spid-icon| |cieid-icon|
    * - **refresh_token**
-     - Required only if **grant_type** is **refresh_code**   
+     - Required only if **grant_type** is **refresh_code**.
      - |spid-icon| |cieid-icon|
  
  
@@ -138,7 +138,7 @@ The ID Token must be formed according to the indications contained in the next s
      - The Access Token, in signed JWT format, allows accessing the UserInfo Endpoint for obtaining the attributes.
      - |spid-icon| |cieid-icon|
    * - **token_type**
-     - Type of *Access Token* returned. It must always be equal to **Bearer**
+     - Type of *Access Token* returned. It must always be equal to **Bearer**.
      - |spid-icon| |cieid-icon|
    * - **refresh_token**
      - The *Refresh Token*, in signed JWT format, allows calling again the Token Endpoint for obtaining 
@@ -148,7 +148,7 @@ The ID Token must be formed according to the indications contained in the next s
      - Expity time of the *Access Token* in seconds.
      - |spid-icon| |cieid-icon|
    * - **id_token**
-     - ID Token in JWT format (see next section)
+     - ID Token in JWT format (see next section).
      - |spid-icon| |cieid-icon|
 
 
@@ -198,7 +198,7 @@ The ID Token is a JSON Web Token (JWT) that contains information on the user tha
      - Access Token hash. Its value is the base64url coding of the first half of the hash of the value of access_token, using the hashing algorithm indicated in **alg** in the ID Token header. The client must check that this value corresponds to the *Access Token* returned with the ID Token.
      - |spid-icon| |cieid-icon|
    * - **iat** 
-     - UNIX Timestamp with the time of JWT generation, coded as NumericDate as indicated in :rfc:`7519`
+     - UNIX Timestamp with the time of JWT generation, coded as NumericDate as indicated in :rfc:`7519`.
      - |spid-icon| |cieid-icon|
    * - **nbf** 
      - UNIX Timestamp. Date/time of the validity beginning of the JWT in NumericDate format, as indicated in :rfc:`7519`. It must correspond to the value of **iat**.
@@ -215,7 +215,7 @@ The ID Token is a JSON Web Token (JWT) that contains information on the user tha
 	    } 
      - |spid-icon| |cieid-icon|
    * - **exp**
-     - UNIX Timestamp with the expiry time of the JWT, coded as NumericDate as indicated in :rfc:`7519`
+     - UNIX Timestamp with the expiry time of the JWT, coded as NumericDate as indicated in :rfc:`7519`.
      - |spid-icon| |cieid-icon|
    * - **jti** 
      - String. Unique identifier of the ID Token that the client can use for preventing a reuse, refusing the
@@ -256,11 +256,11 @@ In case of errors, the OP returns a response with a JSON in its body, made of th
      - **Description**
      - **Supported by**
    * - **error** 
-     - Error code (see table below)
+     - Error code (see table below).
      - |spid-icon| |cieid-icon|
    * - **error_description** 
      - More detailed error description, aimed at helping the developers to debug. This message is not supposed
-       to be displayed to the user (for this purpose, please see the `SPID UX Guidelines`_
+       to be displayed to the user (for this purpose, please see the `SPID UX Guidelines`_.
      - |spid-icon| |cieid-icon|
 	
 The codes of HTTP status and the values of the claims *error* and *error_description* are described in the error message tables.
