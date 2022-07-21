@@ -228,7 +228,7 @@ The claims defined inside the TMs, comply to what defined in the OIDC Federation
 .. warning::
   In case of CIEid, the public Organizations that have not only the **IPA code**, but also a **unique AOO code**, MUST include this latter one in the claim **id_code**, in the format *<IPA_code>-<AOO_code>*.
   Furthermore, the value in the claim **exp** MUST NOT be greater than the duration of the specific 
-  conventions/agreements concluded in the onboarding process, between the MinInterno and the Organizations 
+  conventions/agreements concluded in the onboarding process, between the Trust Mark issuer and the Organizations 
   that receive the TM.
  
 

@@ -197,7 +197,7 @@ Gli attributi definiti all'interno dei TM aderiscono a quanto definito all'inter
       - |spid-icon| |cieid-icon|
 
 .. warning::
-  Nel caso di CIEid, le organizzazioni pubbliche che oltre al **codice IPA** dispongono anche di un **codice univoco AOO** DEVONO riportare quest'ultimo all'interno del parametro **id_code** secondo il seguente formato *<IPA_code>-<AOO_code>*.  Inoltre, il valore contenuto nel parametro **exp** NON DEVE essere superiore alla durata delle specifiche convenzioni/accordi stipulati in fase di onboarding tra il MinInterno e le organizzazioni che ricevono il TM.  
+  Nel caso di CIE id, le organizzazioni pubbliche che oltre al **codice IPA** dispongono anche di un **codice univoco AOO** DEVONO riportare quest'ultimo all'interno del parametro **id_code** secondo il seguente formato *<IPA_code>-<AOO_code>*.  Inoltre, il valore contenuto nel parametro **exp** NON DEVE essere superiore alla durata delle specifiche convenzioni/accordi stipulati in fase di onboarding tra l'emettitore dei Trust Mark e le organizzazioni che ricevono il TM.  
 
 .. seealso::
 
