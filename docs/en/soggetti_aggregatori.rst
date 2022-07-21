@@ -5,7 +5,7 @@
 Intermediate Entities
 ^^^^^^^^^^^^^^^^^^^^^
 
-An Intermediate Entity (SA) can register pre-existing RPs that are compliant to the OIDC-FED standard and lead to domains that are external to theirs, or that mask their subordinates behind them. In the first case, the SA is of type *Transparent* (**Light Aggregator**), and in the second case it is of type *Proxy* (**Full Aggregator**)
+An Intermediate Entity (SA) can register pre-existing RPs that are compliant to the OIDC-FED standard and lead to domains that are external to their own domains, or that mask their subordinates behind them. In the first case, the SA is of type *Transparent* (**Light Aggregator**), and in the second case it is of type *Proxy* (**Full Aggregator**)
 
 The **Light** SAs register pre-existing RPs that are OIDC-FED-compliant and publish the ESs referred to them.
 
