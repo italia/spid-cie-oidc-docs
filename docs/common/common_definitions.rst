@@ -19,7 +19,9 @@
 .. |cieid-icon| image:: ../../images/cieid3.svg
    :width: 45
 
-.. |warning-message| replace:: Tutti gli esempi contenuti in questa documentazione sono da intendersi come non normativi
+.. |warning-message-it| replace:: Tutti gli esempi contenuti in questa documentazione sono da intendersi come non normativi
+.. |warning-message-en| replace:: All the examples contained in this documentation are meant to be non-normative
+
 
 .. _OIDC-FED: https://openid.net/specs/openid-connect-federation-1_0.html
 .. _OIDC-FED#RP_metadata: https://openid.net/specs/openid-connect-federation-1_0.html#rfc.section.4.1
@@ -52,8 +54,10 @@
 .. _OIDC-FED#Section.7.4: https://openid.net/specs/openid-connect-federation-1_0.html#rfc.section.7.4
 .. _OIDC-FED#Section.7.4.1: https://openid.net/specs/openid-connect-federation-1_0.html#rfc.section.7.4.1
 .. _OIDC-FED#Section.7.5: https://openid.net/specs/openid-connect-federation-1_0.html#rfc.section.7.5
+.. _SPID UX Guidelines: https://www.agid.gov.it/sites/default/files/repository_files/regole_tecniche/spid-notetecnicheinterfacce.pdf
 .. _Linee Guida UX SPID: https://www.agid.gov.it/sites/default/files/repository_files/regole_tecniche/spid-notetecnicheinterfacce.pdf
 .. _AgID: https://www.agid.gov.it/
+.. _long revocable session: https://www.agid.gov.it/sites/default/files/repository_files/spid-avviso-n41-integrazione_ll.gg_._openid_connect_in_spid.pdf#page=6
 .. _sessione lunga revocabile: https://www.agid.gov.it/sites/default/files/repository_files/spid-avviso-n41-integrazione_ll.gg_._openid_connect_in_spid.pdf#page=6
 .. _EN319-412-1: https://www.etsi.org/deliver/etsi_en/319400_319499/31941202/02.02.01_60/en_31941202v020201p.pdf
 .. _DM-CIE: https://www.gazzettaufficiale.it/eli/id/2015/12/30/15A09809/sg
@@ -64,6 +68,7 @@
 .. _SPID-OIDC: https://www.agid.gov.it/sites/default/files/repository_files/linee_guida_openid_connect_in_spid.pdf
 .. _PAR: https://tools.ietf.org/id/draft-ietf-oauth-par-04.html
 .. _iGov.OIDC: https://openid.net/specs/openid-igov-openid-connect-1_0-03.html
+.. _iGov: https://openid.net/specs/openid-igov-openid-connect-1_0-03.html
 .. _OpenID.IDA: https://openid.net/specs/openid-connect-4-identity-assurance-1_0-ID3.html
 .. _OIDC-CORE#section-5.7: https://openid.net/specs/openid-connect-core-1_0-27.html#ClaimStability
 .. _E164: http://www.itu.int/rec/T-REC-E.164-201011-I/en
@@ -76,4 +81,5 @@
 .. _JWS: https://datatracker.ietf.org/doc/html/draft-ietf-jose-json-web-signature
 .. _OAuth-DPoP: https://datatracker.ietf.org/doc/html/draft-ietf-oauth-dpop-10
 .. _OAuth-RS: https://datatracker.ietf.org/doc/html/draft-jones-oauth-resource-metadata
+.. _I-D.ietf-OAuth-Security-BCP: https://www.ietf.org/archive/id/draft-ietf-oauth-security-topics-19.html
 

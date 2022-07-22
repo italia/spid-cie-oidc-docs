@@ -1,395 +1,202 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<!-- Generato da Microsoft Visio, esportazione SVG trust_anchor.svg trust_anchor -->
+<!-- Generato da Microsoft Visio, esportazione SVG trust_anchor.svg trust_anchor eng -->
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events"
 		xmlns:v="http://schemas.microsoft.com/visio/2003/SVGExtensions/" width="6.80563in" height="4.87935in"
-		viewBox="0 0 490.005 351.313" xml:space="preserve" color-interpolation-filters="sRGB" class="st2">
+		viewBox="0 0 490.005 351.313" xml:space="preserve" color-interpolation-filters="sRGB" class="st7">
 	<v:documentProperties v:langID="1040" v:metric="true" v:viewMarkup="false">
 		<v:userDefs>
 			<v:ud v:nameU="msvNoAutoConnect" v:val="VT0(1):26"/>
+			<v:ud v:nameU="visV14CFF" v:prompt="" v:val="VT0(1):26"/>
+			<v:ud v:nameU="visFlowchartType" v:prompt="" v:val="VT4(CrossFunctional)"/>
 		</v:userDefs>
 	</v:documentProperties>
 
 	<style type="text/css">
 	<![CDATA[
-		.st1 {fill:none;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.75}
-		.st2 {fill:none;fill-rule:evenodd;font-size:12px;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
+		.st1 {stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.75}
+		.st2 {fill:#000000;font-family:Arial;font-size:0.843887em}
+		.st3 {fill:#eeeeee;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.75}
+		.st4 {fill:none;stroke:#595959;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.76254}
+		.st5 {fill:#000000;font-family:Arial;font-size:1.18959em}
+		.st6 {stroke:#595959;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.76254}
+		.st7 {fill:none;fill-rule:evenodd;font-size:12px;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
 	]]>
 	</style>
 
-	<g v:mID="0" v:index="1" v:groupContext="foregroundPage">
-		<title>trust_anchor</title>
+	<g v:mID="22" v:index="2" v:groupContext="foregroundPage">
+		<title>trust_anchor eng</title>
 		<v:pageProperties v:drawingScale="0.0393701" v:pageScale="0.0393701" v:drawingUnits="24" v:shadowOffsetX="8.50394"
 				v:shadowOffsetY="-8.50394"/>
-		<g id="shape1-1" v:mID="1" v:groupContext="shape" transform="translate(18.375,-18.375)">
-			<title>Foglio.1</title>
-			<rect v:rectContext="foreign" x="0" y="36.75" width="453.255" height="314.563" class="st1"/>
-			<switch>
-				<foreignObject x="0" y="36.75" width="453.255" height="314.563"
-						requiredExtensions="http://schemas.microsoft.com/visio/2003/SVGExtensions/">
-					<v:foreignData v:orgSize="25192" clip="rect(0 0 0 0)" v:data="data:metafile;base64,eNrtXQ1QVNcVvvt2F3YxFboII
-								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
-								fcf1/EQ/p8CjgcjwhAYR/63wAg9j+X/AyOq0vo="/>
-				</foreignObject>
-				<!-- Unsupported Record: EmfPlusRecordTypeSetPixelOffsetMode  -->
-				<svg viewBox="-0.70871 -0.70869 3715.1 2578.2" clip="rect(0 0 0 0)" height="314.563" overflow="hidden"
-						preserveAspectRatio="none" width="453.255" x="0" y="36.75">
-					<mask id="mfid1">
-						<rect width="3715" height="2578" fill="white" stroke="none"/>
-					</mask>
-					<mask id="mfid2" fill="white" stroke="none">
-						<g>
-							<g mask="url(#mfid1)">
-								<rect x="-0.70871" y="-0.70869" width="3715.1" height="2578.2" id="mfid3"/>
-							</g>
-						</g>
-					</mask>
-					<!-- GetDC -->
-					<mask id="mfid4" fill-rule="evenodd" fill="white" stroke="none">
-						<rect x="0" y="0" width="3715" height="2578"/>
-					</mask>
-					<g mask="url(#mfid4)">
-						<g transform="matrix(1, 0, 0, 1, 870.07, 468.51)">
-							<g stroke="#000000" stroke-miterlimit="10" fill="none">
-								<g font-family="&#39;Arial&#39;,swiss,sans-serif" font-style="normal" font-weight="400"
-										font-size="83">
-									<text stroke="none" fill="#000000"
-											x="0,55,97,143,189,235,281,303,321,339,364,406,452,498,520,575,621,644,662,685,724,750,810,856,902,926,944,990,1036,1064,1110,1133,1151,1197,1243"
-											y="0" transform="translate(0,0)" xml:space="preserve">Espone il suo Entity Configuration</text>
-								</g>
-							</g>
-						</g>
-					</g>
-					<!-- Released DC -->
-					<!-- GetDC -->
-					<g mask="url(#mfid4)">
-						<g transform="matrix(1, 0, 0, 1, 870.07, 568.51)">
-							<g stroke="#000000" stroke-miterlimit="10" fill="none">
-								<g font-family="&#39;Arial&#39;,swiss,sans-serif" font-style="normal" font-weight="400"
-										font-size="83">
-									<text stroke="none" fill="#000000"
-											x="0,55,97,143,189,235,281,303,321,339,364,415,470,522,582,642,665,711,757,803,849,895,913,959,982,1004,1050,1073,1101,1119,1137,1183,1225,1267,1285,1331,1355,1410,1456,1479,1497,1520,1559,1585,1640,1663,1709,1732,1778,1849,1895,1941,1964,2006,2027"
-											y="0" transform="translate(0,0)" xml:space="preserve">Espone il FETCH endpoint e rilascia Entity Statements </text>
-								</g>
-							</g>
-						</g>
-					</g>
-					<!-- Released DC -->
-					<!-- GetDC -->
-					<g mask="url(#mfid4)">
-						<g transform="matrix(1, 0, 0, 1, 870.07, 668.51)">
-							<g stroke="#000000" stroke-miterlimit="10" fill="none">
-								<g font-family="&#39;Arial&#39;,swiss,sans-serif" font-style="normal" font-weight="400"
-										font-size="83">
-									<text stroke="none" fill="#000000"
-											x="0,28,74,92,138,161,179,220,238,264,310,328,351,393,439,485,503,526,572,590,632,674,720,766,812,858,904,927,945"
-											y="0" transform="translate(0,0)" xml:space="preserve">relativi ai suoi discendenti</text>
-								</g>
-							</g>
-						</g>
-					</g>
-					<!-- Released DC -->
-					<defs>
-						<path id="mfid5"
-								d="M0,79757 C-0.00000000015825,35709 35709,0 79757,0 L1909100,0 C1953100,-0.00000000015825 1988800,35709 1988800,79757 L1988800,398780 C1988800,442830 1953100,478540 1909100,478540 L79757,478540 C35709,478540 0,442830 0,398780 Z"/>
-					</defs>
-					<g mask="url(#mfid2)">
-						<g transform="matrix(0.00065617, 0, 0, 0.00065617, 854, 2015)">
-							<g fill="#eeeeee">
-								<use xlink:href="#mfid5" fill-rule="evenodd" stroke="none"/>
-							</g>
-							<g fill="#eeeeee" stroke-width="9525" stroke="#595959" stroke-linejoin="round">
-								<use xlink:href="#mfid5" fill="none"/>
-							</g>
-						</g>
-					</g>
-					<!-- GetDC -->
-					<g mask="url(#mfid4)">
-						<g transform="matrix(1, 0, 0, 1, 928.85, 2215)">
-							<g stroke="#000000" stroke-miterlimit="10" fill="none">
-								<g font-family="&#39;Arial&#39;,swiss,sans-serif" font-style="normal" font-weight="400"
-										font-size="117">
-									<text stroke="none" fill="#000000"
-											x="0,91,156,221,286,319,403,433,517,582,608,665,691,756,821,854,932,997,1036,1069,1126"
-											y="0" transform="translate(0,0)" xml:space="preserve">OpenID Relying Party</text>
-								</g>
-							</g>
-						</g>
-					</g>
-					<!-- Released DC -->
-					<defs>
-						<path id="mfid6"
-								d="M0,79758 C-0.00000000010659,35709 35709,-0.00000000021319 79758,-0.00000000021319 L1259800,0 C1303900,-0.00000000021319 1339600,35709 1339600,79758 L1339600,398780 C1339600,442830 1303900,478540 1259800,478540 L79758,478540 C35709,478540 -0.00000000010659,442830 0,398780 Z"/>
-					</defs>
-					<g mask="url(#mfid2)">
-						<g transform="matrix(0.00065617, 0, 0, 0.00065617, 810, 1023)">
-							<g fill="#eeeeee" stroke-width="9525" stroke="#595959" stroke-linejoin="round">
-								<use xlink:href="#mfid6" fill-rule="evenodd" stroke="none"/>
-								<use xlink:href="#mfid6" fill="none"/>
-							</g>
-						</g>
-					</g>
-					<!-- GetDC -->
-					<g mask="url(#mfid4)">
-						<g transform="matrix(1, 0, 0, 1, 885.3, 1173)">
-							<g stroke="#000000" stroke-miterlimit="10" fill="none">
-								<g font-family="&#39;Arial&#39;,swiss,sans-serif" font-style="normal" font-weight="400"
-										font-size="117">
-									<text stroke="none" fill="#000000" x="0,33,98,131,196,235,332,397,461,487,552,590,647,678"
-											y="0" transform="translate(0,0)" xml:space="preserve">Intermediary </text>
-								</g>
-							</g>
-						</g>
-					</g>
-					<!-- Released DC -->
-					<!-- GetDC -->
-					<g mask="url(#mfid4)">
-						<g transform="matrix(1, 0, 0, 1, 885.3, 1281)">
-							<g stroke="#000000" stroke-miterlimit="10" fill="none">
-								<g font-family="&#39;Arial&#39;,swiss,sans-serif" font-style="normal" font-weight="400"
-										font-size="83">
-									<text stroke="none" fill="#000000"
-											x="0,28,52,98,144,190,218,264,287,305,351,397,419,465,511,534,552,575,614,642" y="0"
-											transform="translate(0,0)" xml:space="preserve">(federation entity)</text>
-								</g>
-							</g>
-						</g>
-					</g>
-					<!-- Released DC -->
-					<!-- GetDC -->
-					<g mask="url(#mfid4)">
-						<g transform="matrix(1, 0, 0, 1, 869.99, 1470.9)">
-							<g stroke="#000000" stroke-miterlimit="10" fill="none">
-								<g font-family="&#39;Arial&#39;,swiss,sans-serif" font-style="normal" font-weight="400"
-										font-size="83">
-									<text stroke="none" fill="#000000"
-											x="0,55,97,143,189,235,281,303,321,339,364,406,452,498,520,575,621,644,662,685,724,750,810,856,902,926,944,990,1036,1064,1110,1133,1151,1197,1243,1266,1308,1354,1400,1423,1469,1515,1561,1607,1630,1676,1697,1715,1739,1791,1819,1865,1907,1930,1951,2020,2066,2094,2137,2179"
-											y="0" transform="translate(0,0)" xml:space="preserve">Espone il suo Entity Configuration contenente i Trust Marks</text>
-								</g>
-							</g>
-						</g>
-					</g>
-					<!-- Released DC -->
-					<!-- GetDC -->
-					<g mask="url(#mfid4)">
-						<g transform="matrix(1, 0, 0, 1, 869.99, 1570.9)">
-							<g stroke="#000000" stroke-miterlimit="10" fill="none">
-								<g font-family="&#39;Arial&#39;,swiss,sans-serif" font-style="normal" font-weight="400"
-										font-size="83">
-									<text stroke="none" fill="#000000"
-											x="0,55,97,143,189,235,281,303,321,339,364,415,470,522,582,642,665,711,757,803,849,895,913,959,982,1004,1050,1073,1101,1119,1137,1183,1225,1267,1285,1331,1355,1410,1456,1479,1497,1520,1559,1585,1640,1663,1709,1732,1778,1849,1895,1941,1964,2006,2027,2055,2101,2119,2165,2188,2206,2247,2265,2291"
-											y="0" transform="translate(0,0)" xml:space="preserve">Espone il FETCH endpoint e rilascia Entity Statements relativi </text>
-								</g>
-							</g>
-						</g>
-					</g>
-					<!-- Released DC -->
-					<!-- GetDC -->
-					<g mask="url(#mfid4)">
-						<g transform="matrix(1, 0, 0, 1, 869.99, 1670.9)">
-							<g stroke="#000000" stroke-miterlimit="10" fill="none">
-								<g font-family="&#39;Arial&#39;,swiss,sans-serif" font-style="normal" font-weight="400"
-										font-size="83">
-									<text stroke="none" fill="#000000"
-											x="0,46,64,87,129,175,221,239,262,308,326,368,410,456,502,548,594,640,663,681" y="0"
-											transform="translate(0,0)" xml:space="preserve">ai suoi discendenti</text>
-								</g>
-							</g>
-						</g>
-					</g>
-					<!-- Released DC -->
-					<!-- GetDC -->
-					<g mask="url(#mfid4)">
-						<g transform="matrix(1, 0, 0, 1, 869.99, 2496.9)">
-							<g stroke="#000000" stroke-miterlimit="10" fill="none">
-								<g font-family="&#39;Arial&#39;,swiss,sans-serif" font-style="normal" font-weight="400"
-										font-size="83">
-									<text stroke="none" fill="#000000"
-											x="0,55,97,143,189,235,281,303,321,339,364,406,452,498,520,575,621,644,662,685,724,750,810,856,902,926,944,990,1036,1064,1110,1133,1151,1197,1243,1266,1308,1354,1400,1423,1469,1515,1561,1607,1630,1676,1697,1715,1739,1791,1819,1865,1907,1930,1951,2020,2066,2094,2137,2179"
-											y="0" transform="translate(0,0)" xml:space="preserve">Espone il suo Entity Configuration contenente i Trust Marks</text>
-								</g>
-							</g>
-						</g>
-					</g>
-					<!-- Released DC -->
-					<defs>
-						<path id="mfid7"
-								d="M847950,0 C1316300,-0.0000000010796 1695900,343780 1695900,767850 C1695900,1161800 1366600,1491900 933730,1531800"/>
-					</defs>
-					<g mask="url(#mfid2)">
-						<g transform="matrix(-0.00065617, -0.0000011605, 0.00000011605, -0.00065617, 1420.2, 2187.7)">
-							<g fill="#eeeeee" stroke-width="9525" stroke="#595959" stroke-linejoin="round">
-								<use xlink:href="#mfid7" fill="none"/>
-								<defs>
-									<path id="mfid8"
-											d="M847950,0 C1316300,-0.0000000010796 1695900,343780 1695900,767850 C1695900,1161800 1366600,1491900 933730,1531800"/>
-								</defs>
-							</g>
-						</g>
-						<g transform="matrix(-0.00065617, -0.0000011605, 0.00000011605, -0.00065617, 1367, 1169.1)">
-							<g fill="#eeeeee" stroke-width="9525" stroke="#595959" stroke-linejoin="round">
-								<use xlink:href="#mfid8" fill="none"/>
-								<defs>
-									<path id="mfid9"
-											d="M0,114300 C-0.00000000016638,51174 51174,-0.00000000016638 114300,-0.00000000033275 L931160,0 C994290,-0.00000000016638 1045500,51174 1045500,114300 L1045500,114300 C1045500,177430 994290,228600 931160,228600 L114300,228600 C51174,228600 0,177430 0,114300 Z"/>
-								</defs>
-							</g>
-						</g>
-						<g transform="matrix(0.00065617, 0, 0, 0.00065617, 48, 1697)">
-							<g fill="#eeeeee" stroke-width="9525" stroke="#595959" stroke-linejoin="round">
-								<use xlink:href="#mfid9" fill-rule="evenodd" stroke="none"/>
-								<use xlink:href="#mfid9" fill="none"/>
-							</g>
-						</g>
-					</g>
-					<!-- GetDC -->
-					<g mask="url(#mfid4)">
-						<g transform="matrix(1, 0, 0, 1, 129.56, 1803.1)">
-							<g stroke="#000000" stroke-miterlimit="10" fill="none">
-								<g font-family="&#39;Arial&#39;,swiss,sans-serif" font-style="normal" font-weight="400"
-										font-size="83">
-									<text stroke="none" fill="#000000" x="0,46,92,115,161,207,235,253,276,315,341" y="0"
-											transform="translate(0,0)" xml:space="preserve">authority </text>
-								</g>
-							</g>
-						</g>
-					</g>
-					<!-- Released DC -->
-					<!-- GetDC -->
-					<g mask="url(#mfid4)">
-						<g transform="matrix(1, 0, 0, 1, 470.56, 1803.1)">
-							<g stroke="#000000" stroke-miterlimit="10" fill="none">
-								<g font-family="&#39;Arial&#39;,swiss,sans-serif" font-style="normal" font-weight="400"
-										font-size="83">
-									<text stroke="none" fill="#000000" x="0,46,64,110,133" y="0" transform="translate(0,0)"
-											xml:space="preserve">hint</text>
-								</g>
-							</g>
-						</g>
-					</g>
-					<!-- Released DC -->
-					<defs>
-						<path id="mfid10"
-								d="M0,114300 C-0.00000000016662,51174 51174,-0.00000000016662 114300,-0.00000000033324 L932690,0 C995810,-0.00000000016662 1047000,51174 1047000,114300 L1047000,114300 C1047000,177430 995810,228600 932690,228600 L114300,228600 C51174,228600 0,177430 0,114300 Z"/>
-					</defs>
-					<g mask="url(#mfid2)">
-						<g transform="matrix(0.00065617, 0, 0, 0.00065617, 3, 699)">
-							<g fill="#eeeeee" stroke-width="9525" stroke="#595959" stroke-linejoin="round">
-								<use xlink:href="#mfid10" fill-rule="evenodd" stroke="none"/>
-								<use xlink:href="#mfid10" fill="none"/>
-							</g>
-						</g>
-					</g>
-					<!-- GetDC -->
-					<g mask="url(#mfid4)">
-						<g transform="matrix(1, 0, 0, 1, 85.379, 805.17)">
-							<g stroke="#000000" stroke-miterlimit="10" fill="none">
-								<g font-family="&#39;Arial&#39;,swiss,sans-serif" font-style="normal" font-weight="400"
-										font-size="83">
-									<text stroke="none" fill="#000000" x="0,46,92,115,161,207,235,253,276,315,341" y="0"
-											transform="translate(0,0)" xml:space="preserve">authority </text>
-								</g>
-							</g>
-						</g>
-					</g>
-					<!-- Released DC -->
-					<!-- GetDC -->
-					<g mask="url(#mfid4)">
-						<g transform="matrix(1, 0, 0, 1, 426.38, 805.17)">
-							<g stroke="#000000" stroke-miterlimit="10" fill="none">
-								<g font-family="&#39;Arial&#39;,swiss,sans-serif" font-style="normal" font-weight="400"
-										font-size="83">
-									<text stroke="none" fill="#000000" x="0,46,64,110,133" y="0" transform="translate(0,0)"
-											xml:space="preserve">hint</text>
-								</g>
-							</g>
-						</g>
-					</g>
-					<!-- Released DC -->
-					<defs>
-						<path id="mfid11"
-								d="M0,79758 C-0.00000000010659,35709 35709,-0.00000000021319 79758,-0.00000000021319 L1259800,0 C1303900,-0.00000000021319 1339600,35709 1339600,79758 L1339600,398780 C1339600,442830 1303900,478540 1259800,478540 L79758,478540 C35709,478540 -0.00000000010659,442830 0,398780 Z"/>
-					</defs>
-					<g mask="url(#mfid2)">
-						<g transform="matrix(0.00065617, 0, 0, 0.00065617, 762, 3)">
-							<g fill="#eeeeee" stroke-width="9525" stroke="#595959" stroke-linejoin="round">
-								<use xlink:href="#mfid11" fill-rule="evenodd" stroke="none"/>
-								<use xlink:href="#mfid11" fill="none"/>
-							</g>
-						</g>
-					</g>
-					<!-- GetDC -->
-					<g mask="url(#mfid4)">
-						<g transform="matrix(1, 0, 0, 1, 836.96, 152.9)">
-							<g stroke="#000000" stroke-miterlimit="10" fill="none">
-								<g font-family="&#39;Arial&#39;,swiss,sans-serif" font-style="normal" font-weight="400"
-										font-size="117">
-									<text stroke="none" fill="#000000" x="0,71,110,175,234,267,297,375,440,499,564,629,668,698"
-											y="0" transform="translate(0,0)" xml:space="preserve">Trust Anchor </text>
-								</g>
-							</g>
-						</g>
-					</g>
-					<!-- Released DC -->
-					<!-- GetDC -->
-					<g mask="url(#mfid4)">
-						<g transform="matrix(1, 0, 0, 1, 836.96, 260.9)">
-							<g stroke="#000000" stroke-miterlimit="10" fill="none">
-								<g font-family="&#39;Arial&#39;,swiss,sans-serif" font-style="normal" font-weight="400"
-										font-size="83">
-									<text stroke="none" fill="#000000"
-											x="0,28,52,98,144,190,218,264,287,305,351,397,419,465,511,534,552,575,614,642" y="0"
-											transform="translate(0,0)" xml:space="preserve">(federation entity)</text>
-								</g>
-							</g>
-						</g>
-					</g>
-					<!-- Released DC -->
-				</svg>
-			</switch>
-			<rect v:rectContext="foreign" x="0" y="36.75" width="453.255" height="314.563" class="st1"/>
+		<g id="shape3-1" v:mID="3" v:groupContext="shape" transform="translate(113.065,-276.119)">
+			<title>Foglio.3</title>
+			<desc>Exposes its Entity Configuration</desc>
+			<v:textBlock v:margins="rect(0,0,0,0)" v:tabSpace="42.5197"/>
+			<v:textRect cx="89.0128" cy="345.236" width="178.03" height="12.1556"/>
+			<path d="M178.03 339.16 L0 339.16 L0 351.31 L178.03 351.31 L178.03 339.16" class="st1"/>
+			<text x="0" y="348.27" class="st2" v:langID="1040"><v:paragraph/><v:tabList/>Exposes its Entity Configuration</text>		</g>
+		<g id="shape4-5" v:mID="4" v:groupContext="shape" transform="translate(113.065,-263.918)">
+			<title>Foglio.4</title>
+			<desc>Exposes the FETCH endpoint and releases Entity Statements</desc>
+			<v:textBlock v:margins="rect(0,0,0,0)" v:tabSpace="42.5197"/>
+			<v:textRect cx="144.02" cy="345.236" width="288.04" height="12.1556"/>
+			<path d="M288.04 339.16 L0 339.16 L0 351.31 L288.04 351.31 L288.04 339.16" class="st1"/>
+			<text x="0" y="348.27" class="st2" v:langID="1040"><v:paragraph/><v:tabList/>Exposes the FETCH endpoint and releases Entity Statements  </text>		</g>
+		<g id="shape5-9" v:mID="5" v:groupContext="shape" transform="translate(113.065,-251.717)">
+			<title>Foglio.5</title>
+			<desc>about its subordinates</desc>
+			<v:textBlock v:margins="rect(0,0,0,0)" v:tabSpace="42.5197"/>
+			<v:textRect cx="67.9704" cy="345.236" width="135.95" height="12.1556"/>
+			<path d="M135.94 339.16 L0 339.16 L0 351.31 L135.94 351.31 L135.94 339.16" class="st1"/>
+			<text x="0" y="348.27" class="st2" v:langID="1040"><v:paragraph/><v:tabList/>about its subordinates</text>		</g>
+		<g id="shape6-13" v:mID="6" v:groupContext="shape" transform="translate(122.592,-48.7545)">
+			<title>Foglio.6</title>
+			<path d="M0 319.39 C0 315.87 2.87 313 6.39 313 L152.84 313 C156.36 313 159.22 315.87 159.22 319.39 L159.22 344.94 C159.22
+						 348.46 156.36 351.31 152.84 351.31 L6.39 351.31 C2.87 351.31 0 348.46 0 344.94 L0 319.39 Z" class="st3"/>
 		</g>
+		<g id="shape7-15" v:mID="7" v:groupContext="shape" transform="translate(122.592,-48.7545)">
+			<title>Foglio.7</title>
+			<path d="M0 319.39 C0 315.87 2.87 313 6.39 313 L152.84 313 C156.36 313 159.22 315.87 159.22 319.39 L159.22 344.94 C159.22
+						 348.46 156.36 351.31 152.84 351.31 L6.39 351.31 C2.87 351.31 0 348.46 0 344.94 L0 319.39 Z" class="st4"/>
+		</g>
+		<g id="shape8-17" v:mID="8" v:groupContext="shape" transform="translate(131.785,-57.2246)">
+			<title>Foglio.8</title>
+			<desc>OpenID Relying Party</desc>
+			<v:textBlock v:margins="rect(0,0,0,0)" v:tabSpace="42.5197"/>
+			<v:textRect cx="81.6625" cy="342.747" width="163.33" height="17.1337"/>
+			<path d="M163.32 334.18 L0 334.18 L0 351.31 L163.32 351.31 L163.32 334.18" class="st1"/>
+			<text x="0" y="347.03" class="st5" v:langID="1040"><v:paragraph/><v:tabList/>OpenID Relying Party</text>		</g>
+		<g id="shape9-21" v:mID="9" v:groupContext="shape" transform="translate(117.224,-169.787)">
+			<title>Foglio.9</title>
+			<path d="M0 319.39 C-0 315.86 2.86 313 6.39 313 L100.86 313 C104.39 313 107.24 315.86 107.24 319.39 L107.24 344.93 C107.24
+						 348.46 104.39 351.31 100.86 351.31 L6.39 351.31 C2.86 351.31 0 348.46 0 344.93 L0 319.39 Z" class="st3"/>
+		</g>
+		<g id="shape10-23" v:mID="10" v:groupContext="shape" transform="translate(117.224,-169.787)">
+			<title>Foglio.10</title>
+			<path d="M0 319.39 C-0 315.86 2.86 313 6.39 313 L100.86 313 C104.39 313 107.24 315.86 107.24 319.39 L107.24 344.93 C107.24
+						 348.46 104.39 351.31 100.86 351.31 L6.39 351.31 C2.86 351.31 0 348.46 0 344.93 L0 319.39 Z" class="st4"/>
+		</g>
+		<g id="shape11-25" v:mID="11" v:groupContext="shape" transform="translate(126.471,-184.349)">
+			<title>Foglio.11</title>
+			<desc>Intermediary</desc>
+			<v:textBlock v:margins="rect(0,0,0,0)" v:tabSpace="42.5197"/>
+			<v:textRect cx="50.1807" cy="342.747" width="100.37" height="17.1337"/>
+			<path d="M100.36 334.18 L0 334.18 L0 351.31 L100.36 351.31 L100.36 334.18" class="st1"/>
+			<text x="0" y="347.03" class="st5" v:langID="1040"><v:paragraph/><v:tabList/>Intermediary  </text>		</g>
+		<g id="shape12-29" v:mID="12" v:groupContext="shape" transform="translate(126.471,-172.782)">
+			<title>Foglio.12</title>
+			<desc>(federation entity)</desc>
+			<v:textBlock v:margins="rect(0,0,0,0)" v:tabSpace="42.5197"/>
+			<v:textRect cx="46.9313" cy="345.236" width="93.87" height="12.1556"/>
+			<path d="M93.86 339.16 L0 339.16 L0 351.31 L93.86 351.31 L93.86 339.16" class="st1"/>
+			<text x="0" y="348.27" class="st2" v:langID="1040"><v:paragraph/><v:tabList/>(federation entity)</text>		</g>
+		<g id="shape13-33" v:mID="13" v:groupContext="shape" transform="translate(118.829,-150.145)">
+			<title>Foglio.13</title>
+			<desc>Exposes its Entity Configuration containing the Trust Marks</desc>
+			<v:textBlock v:margins="rect(0,0,0,0)" v:tabSpace="42.5197"/>
+			<v:textRect cx="154.707" cy="345.236" width="309.42" height="12.1556"/>
+			<path d="M309.41 339.16 L0 339.16 L0 351.31 L309.41 351.31 L309.41 339.16" class="st1"/>
+			<text x="0" y="348.27" class="st2" v:langID="1040"><v:paragraph/><v:tabList/>Exposes its Entity Configuration containing the Trust Marks</text>		</g>
+		<g id="shape14-37" v:mID="14" v:groupContext="shape" transform="translate(118.829,-137.944)">
+			<title>Foglio.14</title>
+			<desc>Exposes the FETCH endpoint and releases Entity Statements</desc>
+			<v:textBlock v:margins="rect(0,0,0,0)" v:tabSpace="42.5197"/>
+			<v:textRect cx="162.463" cy="345.236" width="324.93" height="12.1556"/>
+			<path d="M324.93 339.16 L0 339.16 L0 351.31 L324.93 351.31 L324.93 339.16" class="st1"/>
+			<text x="0" y="348.27" class="st2" v:langID="1040"><v:paragraph/><v:tabList/>Exposes the FETCH endpoint and releases Entity Statements</text>		</g>
+		<g id="shape17-41" v:mID="17" v:groupContext="shape" transform="translate(55.9167,-65.9882)">
+			<title>Foglio.17</title>
+			<path d="M67.88 351.31 C30.38 351.31 0 323.8 0 289.85 C0 258.31 26.35 231.88 61.02 228.69" class="st6"/>
+		</g>
+		<g id="shape18-44" v:mID="18" v:groupContext="shape" transform="translate(49.42,-190.277)">
+			<title>Foglio.18</title>
+			<path d="M67.88 351.31 C30.39 351.31 0 323.79 0 289.84 C-0 258.3 26.36 231.87 61.01 228.69" class="st6"/>
+		</g>
+		<g id="shape19-47" v:mID="19" v:groupContext="shape" transform="translate(24.2567,-107.563)">
+			<title>Foglio.19</title>
+			<path d="M0 342.16 C0 337.11 4.1 333.01 9.15 333.01 L74.54 333.01 C79.6 333.01 83.69 337.11 83.69 342.16 C83.69 347.22
+						 79.6 351.31 74.54 351.31 L9.15 351.31 C4.1 351.31 0 347.22 0 342.16 Z" class="st3"/>
+		</g>
+		<g id="shape20-49" v:mID="20" v:groupContext="shape" transform="translate(24.2567,-107.563)">
+			<title>Foglio.20</title>
+			<path d="M0 342.16 C0 337.11 4.1 333.01 9.15 333.01 L74.54 333.01 C79.6 333.01 83.69 337.11 83.69 342.16 C83.69 347.22
+						 79.6 351.31 74.54 351.31 L9.15 351.31 C4.1 351.31 0 347.22 0 342.16" class="st6"/>
+		</g>
+		<g id="shape21-52" v:mID="21" v:groupContext="shape" transform="translate(34.2683,-109.092)">
+			<title>Foglio.21</title>
+			<desc>authority</desc>
+			<v:textBlock v:margins="rect(0,0,0,0)" v:tabSpace="42.5197"/>
+			<v:textRect cx="25.5707" cy="345.236" width="51.15" height="12.1556"/>
+			<path d="M51.14 339.16 L0 339.16 L0 351.31 L51.14 351.31 L51.14 339.16" class="st1"/>
+			<text x="0" y="348.27" class="st2" v:langID="1040"><v:paragraph/><v:tabList/>authority  </text>		</g>
+		<g id="shape22-56" v:mID="22" v:groupContext="shape" transform="translate(75.8717,-109.092)">
+			<title>Foglio.22</title>
+			<desc>hint</desc>
+			<v:textBlock v:margins="rect(0,0,0,0)" v:tabSpace="42.5197"/>
+			<v:textRect cx="11.0079" cy="345.236" width="22.02" height="12.1556"/>
+			<path d="M22.02 339.16 L0 339.16 L0 351.31 L22.02 351.31 L22.02 339.16" class="st1"/>
+			<text x="0" y="348.27" class="st2" v:langID="1040"><v:paragraph/><v:tabList/>hint</text>		</g>
+		<g id="shape23-60" v:mID="23" v:groupContext="shape" transform="translate(18.7665,-229.328)">
+			<title>Foglio.23</title>
+			<path d="M0 342.16 C-0 337.11 4.1 333.01 9.15 333.01 L74.67 333.01 C79.72 333.01 83.82 337.11 83.82 342.16 C83.82 347.22
+						 79.72 351.31 74.67 351.31 L9.15 351.31 C4.1 351.31 0 347.22 0 342.16 Z" class="st3"/>
+		</g>
+		<g id="shape24-62" v:mID="24" v:groupContext="shape" transform="translate(18.7665,-229.328)">
+			<title>Foglio.24</title>
+			<path d="M0 342.16 C-0 337.11 4.1 333.01 9.15 333.01 L74.67 333.01 C79.72 333.01 83.82 337.11 83.82 342.16 C83.82 347.22
+						 79.72 351.31 74.67 351.31 L9.15 351.31 C4.1 351.31 0 347.22 0 342.16" class="st6"/>
+		</g>
+		<g id="shape25-65" v:mID="25" v:groupContext="shape" transform="translate(28.878,-230.843)">
+			<title>Foglio.25</title>
+			<desc>authority</desc>
+			<v:textBlock v:margins="rect(0,0,0,0)" v:tabSpace="42.5197"/>
+			<v:textRect cx="25.5707" cy="345.236" width="51.15" height="12.1556"/>
+			<path d="M51.14 339.16 L0 339.16 L0 351.31 L51.14 351.31 L51.14 339.16" class="st1"/>
+			<text x="0" y="348.27" class="st2" v:langID="1040"><v:paragraph/><v:tabList/>authority  </text>		</g>
+		<g id="shape26-69" v:mID="26" v:groupContext="shape" transform="translate(70.4814,-230.843)">
+			<title>Foglio.26</title>
+			<desc>hint</desc>
+			<v:textBlock v:margins="rect(0,0,0,0)" v:tabSpace="42.5197"/>
+			<v:textRect cx="11.0079" cy="345.236" width="22.02" height="12.1556"/>
+			<path d="M22.02 339.16 L0 339.16 L0 351.31 L22.02 351.31 L22.02 339.16" class="st1"/>
+			<text x="0" y="348.27" class="st2" v:langID="1040"><v:paragraph/><v:tabList/>hint</text>		</g>
+		<g id="shape27-73" v:mID="27" v:groupContext="shape" transform="translate(111.368,-294.236)">
+			<title>Foglio.27</title>
+			<path d="M0 319.39 C-0 315.86 2.86 313 6.39 313 L100.86 313 C104.39 313 107.24 315.86 107.24 319.39 L107.24 344.93 C107.24
+						 348.46 104.39 351.31 100.86 351.31 L6.39 351.31 C2.86 351.31 0 348.46 0 344.93 L0 319.39 Z" class="st3"/>
+		</g>
+		<g id="shape28-75" v:mID="28" v:groupContext="shape" transform="translate(111.368,-294.236)">
+			<title>Foglio.28</title>
+			<path d="M0 319.39 C-0 315.86 2.86 313 6.39 313 L100.86 313 C104.39 313 107.24 315.86 107.24 319.39 L107.24 344.93 C107.24
+						 348.46 104.39 351.31 100.86 351.31 L6.39 351.31 C2.86 351.31 0 348.46 0 344.93 L0 319.39 Z" class="st4"/>
+		</g>
+		<g id="shape29-77" v:mID="29" v:groupContext="shape" transform="translate(120.574,-308.815)">
+			<title>Foglio.29</title>
+			<desc>Trust Anchor</desc>
+			<v:textBlock v:margins="rect(0,0,0,0)" v:tabSpace="42.5197"/>
+			<v:textRect cx="51.5474" cy="342.747" width="103.1" height="17.1337"/>
+			<path d="M103.09 334.18 L0 334.18 L0 351.31 L103.09 351.31 L103.09 334.18" class="st1"/>
+			<text x="0" y="347.03" class="st5" v:langID="1040"><v:paragraph/><v:tabList/>Trust Anchor  </text>		</g>
+		<g id="shape30-81" v:mID="30" v:groupContext="shape" transform="translate(120.574,-297.248)">
+			<title>Foglio.30</title>
+			<desc>(federation entity)</desc>
+			<v:textBlock v:margins="rect(0,0,0,0)" v:tabSpace="42.5197"/>
+			<v:textRect cx="46.9313" cy="345.236" width="93.87" height="12.1556"/>
+			<path d="M93.86 339.16 L0 339.16 L0 351.31 L93.86 351.31 L93.86 339.16" class="st1"/>
+			<text x="0" y="348.27" class="st2" v:langID="1040"><v:paragraph/><v:tabList/>(federation entity)</text>		</g>
+		<g id="shape31-85" v:mID="31" v:groupContext="shape" transform="translate(117.868,-125.901)">
+			<title>Foglio.31</title>
+			<desc>about its subordinates</desc>
+			<v:textBlock v:margins="rect(0,0,0,0)" v:tabSpace="42.5197"/>
+			<v:textRect cx="67.9704" cy="345.236" width="135.95" height="12.1556"/>
+			<path d="M135.94 339.16 L0 339.16 L0 351.31 L135.94 351.31 L135.94 339.16" class="st1"/>
+			<text x="0" y="348.27" class="st2" v:langID="1040"><v:paragraph/><v:tabList/>about its subordinates</text>		</g>
+		<g id="shape32-89" v:mID="32" v:groupContext="shape" transform="translate(122.592,-28.3465)">
+			<title>Foglio.32</title>
+			<desc>Exposes its Entity Configuration containing the Trust Marks</desc>
+			<v:textBlock v:margins="rect(0,0,0,0)" v:tabSpace="42.5197"/>
+			<v:textRect cx="154.707" cy="345.236" width="309.42" height="12.1556"/>
+			<path d="M309.41 339.16 L0 339.16 L0 351.31 L309.41 351.31 L309.41 339.16" class="st1"/>
+			<text x="0" y="348.27" class="st2" v:langID="1040"><v:paragraph/><v:tabList/>Exposes its Entity Configuration containing the Trust Marks</text>		</g>
 	</g>
 </svg>

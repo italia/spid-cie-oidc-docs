@@ -1,9 +1,9 @@
-.. include:: ./common_definitions.rst
+.. include:: ../common/common_definitions.rst
 
 Trust Negotiation
 -----------------
 
-In questa sezione sono illustrate le modalità di mutuo riconoscimento tra RP e OP, le modalità con le quali le foglie della Federazione SPID si riconoscono all'interno della medesima Federazione e ottengono gli uni i Metadata degli altri.
+In questa sezione sono illustrate le modalità di mutuo riconoscimento tra RP e OP, le modalità con le quali le foglie si riconoscono all'interno della medesima Federazione e ottengono gli uni i Metadata degli altri.
 
 
 Relying Party
@@ -15,7 +15,7 @@ Per ogni EC degli OP, il RP verifica la firma del contenuto adoperando la chiave
 
 Il RP applica infine le politiche pubblicate dal Trust Anchor sui Metadata dell'OP e salva il Metadata finale associandolo ad una data di scadenza (claim **exp**). La data di scadenza corrisponde al valore di **exp** più basso ottenuto da tutti gli elementi che compongono la **Trust Chain**. Periodicamente il RP aggiorna i Metadata di tutti gli OP rinnovando la Trust Chain relativa a questi.
 
-Ottenuti i Metadata finali di tutti i OpenID Connect Provider, il RP genera lo **SPID Button** e il **CIE id Button** e lo pubblica all'interno della pagina di autenticazione destinata agli utenti.
+Ottenuti i Metadata finali di tutti i OpenID Connect Provider, il RP genera lo **SPID Button** o il **CIE id Button** e lo pubblica all'interno della pagina di autenticazione destinata agli utenti.
 
 La procedura di Metadata Discovery risulta semplificata per i RP, perché all'interno della Federazione non è consentita l'esistenza di Intermediari tra gli OP ed il loro Trust Anchor.
 
@@ -80,7 +80,7 @@ Esempi:
 Se l'URL che identifica il soggetto non presenta il simbolo di slash finale ("/"), è necessario aggiungerlo prima di concatenare il web path della risorsa .well-known.
 
 
-Una volta che un RP viene riconosciuto come parte della Federazione, ottiene il permesso di effettuare una Richiesta di Autenticazione. L'OP che non riconosce il RP che fa la richiesta, è in grado di risolvere correttamente il Trust. L'OP inizia richiedendo la configurazione di entità del RP al .well-known endpoint del RP e, seguendo il percorso dato dall'*authority_hint*, raggiunge la radice del Trust, cioè il TA. In ogni passo della catena l'OP può eseguire tutti i controlli di sicurezza richiedendo le dichiarazioni di entità da ciascuna entità e convalidando i Trust Mark e le firme. La figura che segue dà un esempio rappresentativo di come funziona la catena del Trust.
+Una volta che un RP viene riconosciuto come parte della Federazione, ottiene il permesso di effettuare una Richiesta di Autenticazione. L'OP che non riconosce il RP che fa la richiesta, è in grado di risolvere correttamente il Trust. L'OP inizia richiedendo la Entity Configuration del RP al .well-known endpoint del RP e, seguendo il percorso dato dall'*authority_hint*, raggiunge la radice del Trust, cioè il TA. In ogni passo della catena l'OP può eseguire tutti i controlli di sicurezza richiedendo le dichiarazioni di entità da ciascuna entità e convalidando i Trust Mark e le firme. La figura che segue dà un esempio rappresentativo di come funziona la catena del Trust.
 
 
 .. image:: ../../images/cie_esempio_trust_chain.svg

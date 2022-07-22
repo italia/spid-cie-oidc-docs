@@ -1,4 +1,4 @@
-.. include:: ./common_definitions.rst
+.. include:: ../common/common_definitions.rst
 
 
 .. _differenze_con_oidc_federation:
@@ -18,13 +18,13 @@ SPID supporta esclusivamente **automatic_client_registration**. La modalità **i
 Listing endpoint
 ++++++++++++++++
 
-In SPID viene adottato il parametro aggiuntivo **entity_type** a quelli esistenti nello Standard `OIDC-FED`_ per questo endpoint, con lo scopo di ottenere un filtro sulla tipologia delle entità discendenti. Questa esigenza consente nello specifico di filtrare entità di tipo **federation_entity**, **openid_relying_party**, **openid_provider** e **oauth_resource**.
+In SPID e CIE id viene adottato il parametro aggiuntivo **entity_type** a quelli esistenti nello Standard `OIDC-FED`_ per questo endpoint, con lo scopo di ottenere un filtro sulla tipologia delle entità discendenti. Questa esigenza consente nello specifico di filtrare entità di tipo **federation_entity**, **openid_relying_party**, **openid_provider** e **oauth_resource**.
 
 
 Trust Mark
 ++++++++++
 
-In `OIDC-FED`_ l'uso dei Trust Mark non è obbligatorio. In SPID piuttosto l'esposizione dei Trust Mark è obbligatoria. Per approfondimenti sulla ragione dell'obbligo dei Trust Mark si rimanda alla sezione :ref:`Considerazioni di Sicurezza<Considerazioni_di_Sicurezza>`.
+In SPID e CIE id l'uso dei Trust Mark non è obbligatorio. In SPID piuttosto l'esposizione dei Trust Mark è obbligatoria. Per approfondimenti sulla ragione dell'obbligo dei Trust Mark si rimanda alla sezione :ref:`Considerazioni di Sicurezza<Considerazioni_di_Sicurezza>`.
 
 
 Claim non supportati negli Entity Statement

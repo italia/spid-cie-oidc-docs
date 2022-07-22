@@ -1,4 +1,4 @@
-.. include:: ./common_definitions.rst
+.. include:: ../common/common_definitions.rst
 
 =======================
 SPID/CIE OpenID Connect
@@ -49,6 +49,7 @@ Indice dei contenuti
    attributi_utente.rst
    introspection_endpoint.rst
    revocation_endpoint.rst
+   confronto_oidc_cie_e_oidc_igov.rst
    differenze_oidc_fed.rst
    seccons_bcps.rst
    esempi.rst

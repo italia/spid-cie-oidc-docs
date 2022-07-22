@@ -1,4 +1,4 @@
-.. include:: ./common_definitions.rst
+.. include:: ../common/common_definitions.rst
 
 .. _Considerazioni_di_Sicurezza:
 
@@ -54,7 +54,7 @@ La buona pratica per evitare le interruzioni di servizio relative alle operazion
 
 In questa maniera dopo il limite massimo di durata delle Trust Chain, definito con il claim **exp** e pubblicato nella Entity Configuration della TA, si ha la certezza che tutti i partecipanti abbiano rinnovato le loro Trust Chain, e sarà possibile agli amministratori della Foglia rimuovere le vecchie definizioni in cima alla lista.
 
-Periodo di grazia per le Trust Chain scadute
-++++++++++++++++++++++++++++++++++++++++++++
+Politica dei Metadata
++++++++++++++++++++++
 
 L'Autorità di Federazione o il suo Intermediario PUÒ pubblicare una politica dei Metadata (vedi `OIDC-FED#Section.5.1`_) per forzare la modifica dei Metadata OIDC della Foglia, nelle parti in cui questo fosse necessario.

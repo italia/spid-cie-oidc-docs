@@ -1,52 +1,54 @@
-``publiccode.yml``
-==================
+.. include:: ../common/common_definitions.rst
 
-``publiccode.yml`` is a metadata standard for repositories containing software
-developed or acquired by the Public Administration, aimed at making them easily
-discoverable and thus reusable by other entities.
+=======================
+SPID/CIE OpenID Connect
+=======================
 
-By including a ``publiccode.yml`` file in the root of a repository, and
-populating it with information about the software, technicians and civil
-servants can evaluate it. Automatic indexing tools can also be built, since the
-format is easily readable by both humans and machines.
+`SPID <https://www.spid.gov.it/>`_ and `CIE id <https://www.cartaidentita.interno.gov.it/>`_ are the Italian Systems of Public Digital Identity. They adopt the standards `OpenID Connect Core <https://openid.net/specs/openid-connect-core-1_0.html>`_, `International Government Assurance Profile (iGov) for OpenID Connect 1.0 <https://openid.net/specs/openid-igov-openid-connect-1_0-03.html>`_ and `OpenID Connect Federation 1.0 <https://openid.net/specs/openid-connect-federation-1_0.html>`_.
 
-``publiccode.yml`` is mandatory for all public software developed in Italy,
-according to the national `guidelines
-<https://docs.italia.it/AgID/linee-guida-riuso-software/lg-acquisizione-e-riuso-software-per-pa-docs/>`__:
-this enables the Developers Italia crawler to build the national `software
-catalog <https://developers.italia.it/>`__. The standard is designed to be
-interoperable internationally, thus the country-specific keys are separated by
-the core part and are defined in specific sections that each government can
-rule.
+Thanks to the `digital identity <https://identitadigitale.gov.it/>`_, the Public Administration and the private service suppliers, supply the keys to access the online services through unique access credentials.
 
-Details carried by a ``publiccode.yml`` file include: 
+This documentation contains the consolidated technical specifications, compliant to the National Guidelines, to improve the experience of integration in the OIDC SPID and CIE id Federations, for the public and private Service Suppliers (RP), Identity Providers (OP) and Intermediate Entities (SA). 
 
-- title and description of the project or product (in one or more languages); 
-- development state (e.g., ``concept``, ``development``, ``beta``, ``stable``, ``obsolete``; 
-- contacts of the entity who published the codebase; 
-- contacts of the maintainer, if any, including the expire date of the maintenance contract; 
-- information about the legal context for which the project or product was designed; 
-- dependencies
-  
-and much more.
+In this documentation you can find:
 
-See also
-----------
+ - practical examples of Metadata, OpenID Connect requests and responses,
+ - how to perform and automatic registration of the RPs to the OpenID Providers, 
+ - how an OpenID Provider recognizes and dynamically registers an RP,
+ - how to use the endpoints of the Federation APIs,
+ - how to authenticate a user to SPID and CIE and get their attributes.
 
-- `More information about software reuse <https://developers.italia.it/en/reuse>`__
-- `publiccode.yml web editor
-  <https://publiccode-editor.developers.italia.it/>`__
 
-Table of contents
------------------
+Indix of content
+----------------
 
 .. toctree:: 
    :maxdepth: 2
-   :numbered:
 
-   schema.core.rst
-   country.rst
-   forks.rst
-   categories-list.rst
-   scope-list.rst
-   example.rst
+   standards.rst
+   termini_acronimi.rst
+   la_federazione_delle_identita.rst
+   entity_configuration.rst
+   entity_statement.rst
+   trust_marks.rst
+   trust_marks_cie.rst
+   soggetti_aggregatori.rst
+   trust_negotiation.rst
+   federation_endpoint.rst
+   metadata_oidc.rst
+   parametri_scope_claims.rst
+   flusso_autenticazione.rst
+   authorization_endpoint.rst
+   authentication_response.rst
+   token_endpoint.rst
+   userinfo_endpoint.rst
+   attributi_utente.rst
+   introspection_endpoint.rst
+   revocation_endpoint.rst
+   confronto_oidc_cie_e_oidc_igov.rst
+   differenze_oidc_fed.rst
+   seccons_bcps.rst
+   esempi.rst
+   avvisi_spid.rst
+   diventa_fornitore.rst
+   come_contribuire.rst

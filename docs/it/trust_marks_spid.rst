@@ -1,8 +1,14 @@
-.. include:: ./common_definitions.rst
+.. include:: ../common/common_definitions.rst
 
 
 Trust Mark per SPID
 +++++++++++++++++++
+
+
+Esempi di Trust Mark SPID
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+I TM emessi per le foglie DEVONO essere pubblicati dalle foglie stesse nelle proprie **Entity Configuration**, all'interno dell'attributo **trust_marks**. Questo è composto da liste di oggetti JSON, ognuno dei quali DEVE contenere almeno gli attributi **id** e **trust_mark**, il primo che identifica il TM, il secondo che contiene il JWT firmato del TM.
 
 Di seguito un esempio non normativo dell'oggetto **trust_marks** all'interno della Entity Configuration di una Foglia di tipo RP.
 
@@ -20,7 +26,7 @@ Di seguito un esempio non normativo dell'oggetto **trust_marks** all'interno del
 
 
 
-Quello che segue è un esempio non normativo di un marchio di fiducia emesso dalla AgID per un Intermediario privato.
+Quello che segue è un esempio non normativo di un Trust Mark emesso dalla AgID per un Intermediario privato.
 
 .. code-block::
 
@@ -66,7 +72,7 @@ Un'entità Intermediaria o Soggetto Aggregatore (SA) è riconoscibile come emett
  }
 
 
-Dove il contenuto del JWT firmato all'interno dell'attributo **trust_mark** corrisponde al seguente esempio non normativo.
+Dove il contenuto del JWT firmato all'interno dell'attributo **trust_mark** corrisponde al seguente esempio non normativo:
 
 .. code-block::
 

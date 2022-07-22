@@ -1,4 +1,4 @@
-.. include:: ./common_definitions.rst
+.. include:: ../common/common_definitions.rst
 
 Termini e Acronimi
 ------------------
@@ -29,7 +29,7 @@ Seguono i termini utilizzati da `OIDC-FED#Section_1.2`_ e in questo documento.
     * - **Entity statement**
       - Dichiarazione di riconoscimento emessa da un'entità superiore (Trust Anchor o Intermediario) riguardante un'entità discendente (RP, OP o Intermediario) in formato JWT firmato :rfc:`7515`, contenente la chiave pubblica del soggetto discendente, i Trust Mark emessi per i quali è emettitore e la politica dei Metadata da applicare ai Metadata del soggetto.
     * - **Trust Mark**
-      - JWT firmato :rfc:`7515` dall'ente emettitore e relativo ad un partecipante. Attesta la conformità di questo ai profili riconoscibili all'interno Federazione (RP pubblico o privato, Soggetto Aggregatore Pubblico o Privato, etc.). La Foglia che acquisisce il marchio di fiducia durante la fase di onboarding DEVE includere questo nella sua Entity Configuration a mo' di Badge di riconoscimento.
+      - JWT firmato :rfc:`7515` dall'ente emettitore e relativo ad un partecipante. Attesta la conformità di questo ai profili riconoscibili all'interno Federazione (RP pubblico o privato, Soggetto Aggregatore Pubblico o Privato, etc.). La Foglia che acquisisce il marchio di fiducia durante il processo di onboarding DEVE includere questo nella sua Entity Configuration a mo' di Badge di riconoscimento.
     * - **Metadata**
       - Un documento di Metadata descrive una implementazione di una entità OpenID Connect. Le implementazioni di ogni Entità condividono i Metadata per stabilire una base di fiducia e interoperabilità.
     * - **Metadata policy**
@@ -107,4 +107,4 @@ Le notazioni [...] e ... indicano che il testo è stato troncato per esigenze ed
 *base64url* denota la codifica URL-safe base64 senza padding definita in :rfc:`7515#section-2`.
 
 .. warning::
-    |warning-message|
+    |warning-message-it|

@@ -1,3 +1,5 @@
+.. include:: ../common/common_definitions.rst
+
 .. _Soggetti_aggregatori:
 
 Soggetti Aggregatori
@@ -12,7 +14,7 @@ I SA **Full** provvedono a costruire una interfaccia di autenticazione e federaz
     - **.well-known/openid-federation**, contenente un *subject identifier* del RP univoco;
     - Authorization callback endpoint per l’acquisizione dell’auth code da parte del OP (**redirect_uri**).
 
-Il SA di tipo **Full** DEVE aggiungere l'**id_code** (così come definito nella Sezione :ref:`Composizione dei Trust Mark <ComposizioneTM>`), all’interno del webpath all’interno del client_id che identifica l’aggregato ``<SA_dominio>/<id_code>/``.
+Il SA di tipo **Full** DEVE aggiungere l'**id_code** (così come definito nella Sezione :ref:`Composizione dei Trust Mark <ComposizioneTM>`), all’interno del webpath all’interno del client_id che identifica l’aggregato ``<SA_domain>/<id_code>/``.
 
 Nella seguente tabella sono presenti alcuni esempi non normativi per evidenziare le differenze tra gli aggregati Light e Full:
 

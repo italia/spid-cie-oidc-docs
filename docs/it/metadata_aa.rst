@@ -1,10 +1,11 @@
-.. include:: ./common_definitions.rst
+.. include:: ../common/common_definitions.rst
 
 
 Metadata Attribute Authority
 ++++++++++++++++++++++++++++
 
-Una AA DEVE pubblicare all'interno del suo EC un Metadata da *federation_entity*, uno da *oauth_authorization_server* e uno da *oauth_resource* come riportato nel seguente esempio:
+Una AA DEVE pubblicare, all'interno del suo EC, un Metadata *federation_entity* e un Metadata *oauth_resource* e, se le risorse sono protette, DEVE anche pubblicare un Metadata *oauth_authorization_server*.
+
 
 .. code-block:: 
 
