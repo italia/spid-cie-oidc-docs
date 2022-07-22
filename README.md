@@ -34,7 +34,12 @@ reason it is the reference platform for displaying this standard.
 
 ````
 pip install -r requirements.txt
+
+# italian version
 sphinx-build -b html -d html/it/doctrees docs/it/  html/it
+
+# english version
+sphinx-build -b html -d html/en/doctrees docs/en/  html/en
 ````
 
 ## Versioning
