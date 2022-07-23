@@ -14,19 +14,19 @@ Following, the terms used by `OIDC-FED#Section_1.2`_ and this documentation.
 
     * - **Fedetarion Authority**
       - A legal Entity that handles the trust among the parties involved in the Federation, regulates the 
-        operation, the registration modes and the parties' recognition. It is about a **Trust Anchor** (the *trust* root). 
+        funcional aspects and the onboarding procedures. It is about a **Trust Anchor** (the *trust* root). 
     * - **Trust Anchor**
       - Entity handled by the Federation Authority that represents the Federation, its configuration and the trust root.
     * - **Intermediate Entity** or **Intermediary**
-      - An Intermediate Entity (SA), facilitates entering the Federation and CAN handle the functionalities on behalf of its subordinate (Aggregated) Entities. Inside the Federation, an SA publishes its own configuration and the Entity statements of its subordinates, according to the rules defined by the Federation.
+      - An Intermediate Entity (SA), facilitates the onboarding process in the Federation and CAN handle the functionalities on behalf of its subordinate (Aggregated) Entities. Inside the Federation, an SA publishes its own configuration and the Entity statements of its subordinates, according to the rules defined by the Federation.
     * - **Leaf Entity** or **Leaf**
-      - Entity defined by the OIDC protocol as Relying Party and OpenID Provider.
+      - Entity defined by OpenID Connect as Relying Party and OpenID Provider.
     * - **Entity**
       - Participant to the the Federation. It may be a Trust Anchor, Intermediary or Leaf.
     * - **Entity Configuration**
-      - An Entity Statement issued by an Entity about itself, in the form of a self-signed JWT :rfc:`7515` containing the Entity's configuration. It contains the public Federation's signing keys, the OIDC metadata, the URLs of its higher-level authorities and the Trust Marks issued by authorities that are recognizable inside the Federation and that certify the Entity's compliance to specific profiles.
+      - Federation metadata issued by an Entity about itself, in the form of a self-signed JWT :rfc:`7515` containing the Entity's configuration. It contains the public Federation's signing keys, the OIDC metadata, the URLs of its superiors authorities and the Trust Marks issued by authorities that are recognizable inside the Federation and that certify the Entity's compliance to specific profiles.
     * - **Entity Statement**
-      - Statement of recognition issued by a higher-level Entity (Trust Anchor or Intermediary) regarding
+      - Statement issued by a superior Entity (Trust Anchor or Intermediary) regarding
         a subordinate Entity (RP, OP or Intermediary), in the form of a signed JWT :rfc:`7515`, containing
         the public key of the Entity, the Trust Marks issued by the Entity itself and the Metadata policy 
         to be applied to the Entity's Metadata.
@@ -40,10 +40,10 @@ Following, the terms used by `OIDC-FED#Section_1.2`_ and this documentation.
       - The Trust Anchor publishes rules and policies to be applied to the subordinates' Metadata, 
         specifying what values and values subsets are allowed for a given Metadata claim.
     * - **Authority hint**
-      - An array of URLs regarding the identifiers of the higher-level Entities, Trust Anchor or 
+      - An array of URLs regarding the identifiers of the superior Entities, Trust Anchor or 
         Intermediary, that MUST issue an Entity Statement for their own subordinates. 
     * - **Metadata Discovery**
-      - Collection of Entity Configuration / Statements. It goes from a Leaf Entity up to the Trust Anchor
+      - Collection of Entity Configuration / Statements, from a Leaf Entity up to the Trust Anchor
     * - **Trust Chain**
       - Validation Procedure of the sequence of Entity Configuration / Statements that have
         been collected through the Metadata Discovery, whose positive result is a final Metadata regarding 
