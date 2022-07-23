@@ -17,11 +17,6 @@
 - [Authors](#authors)
 - [License](#license)
 
-## Description
-
-Aim of this repository
-
-
 ## Documentation
 
 This repository is structured to be compliant with [Docs Italia](https://docs.italia.it/italia/developers-italia/publiccodeyml/it/master/index.html).
