@@ -16,11 +16,11 @@ pubblici e privati (RP), Identity Providers (OP) e Soggetti Aggregatori (SA).
 
 In questa documentazione trovi:
 
- - gli esempi pratici dei Metadata, delle richieste e delle risposte OpenID Connect,
- - come effettuare la registrazione automatica dei RP presso gli OpenID Provider, 
- - come un OpenID Provider riconosce e registra dinamicamente un RP,
- - come utilizzare gli endpoint della API della Federazione,
- - come autenticare un utente a SPID e CIE ed ottenere i suoi attributi.
+ - Gli esempi pratici dei Metadata, delle richieste e delle risposte OpenID Connect.
+ - Come effettuare la registrazione automatica dei RP presso gli OpenID Provider.
+ - Come un OpenID Provider riconosce e registra dinamicamente un RP.
+ - Come utilizzare gli endpoint della API della Federazione.
+ - Come autenticare un utente a SPID e CIE ed ottenere i suoi attributi.
 
 
 Indice dei contenuti

@@ -12,11 +12,11 @@ This documentation contains the consolidated technical specifications, compliant
 
 In this documentation you can find:
 
- - practical examples of Metadata, OpenID Connect requests and responses,
- - how to perform and automatic registration of the RPs to the OpenID Providers, 
- - how an OpenID Provider recognizes and dynamically registers an RP,
- - how to use the endpoints of the Federation APIs,
- - how to authenticate a user to SPID and CIE and get their attributes.
+ - Practical examples of Metadata, OpenID Connect requests and responses.
+ - How to perform and automatic registration of the RPs to the OpenID Providers.
+ - How an OpenID Provider recognizes and dynamically registers an RP.
+ - How to use the endpoints of the Federation APIs.
+ - How to authenticate a user to SPID and CIE and get their attributes.
 
 
 Indix of content
