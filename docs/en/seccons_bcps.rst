@@ -50,7 +50,7 @@ Specializing the OpenID Core and Federation public keys
 
 It is a good practice to use public keys that are specialized for the two kinds of operations, Core and Federation.
 
-Updating Mode of the OpenID Core Metadata
+Upgrading strategy of the OpenID Metadata
 +++++++++++++++++++++++++++++++++++++++++
 
 The interoperability among members works through the Metadata obtained from the Trust Chain calculation and preservation. This means that if an OP at the time T calculates the Trust Chain for an RP and this, at the time T+n, changes its own Metadata, the OP could consequently run into problems of validating the RP authorization requests, until the OP will have once again updated the RP-related Trust Chain.
