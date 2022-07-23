@@ -1,7 +1,7 @@
 .. include:: ../common/common_definitions.rst
 
-Introspection Endpoint (token velidity verification) 
-----------------------------------------------------
+Introspection Endpoint (token validity check) 
+---------------------------------------------
 
 The Introspection Endpoint exposed by the OP, allows the RPs to obtain information 
 about a token in their possession, as for example its validity.

@@ -43,7 +43,6 @@ Indice dei contenuti
    parametri_scope_claims.rst
    flusso_autenticazione.rst
    authorization_endpoint.rst
-   authentication_response.rst
    token_endpoint.rst
    userinfo_endpoint.rst
    attributi_utente.rst
