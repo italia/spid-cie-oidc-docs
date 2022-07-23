@@ -20,12 +20,6 @@ La firma dei JWT :rfc:`7515` avviene mediante l'algoritmo RSA SHA-256 (RS256). T
   Distinguiamo le chiavi di Federazione da quelle di OIDC Core. Queste ultime risiedono nei Metadata OIDC. Un EC contiene sia le chiavi pubbliche di Federazione che i Metadata OIDC.
 
 
-Metadata di Federazione
-+++++++++++++++++++++++
-
-OIDC Federation definisce i Metadata di Federazione contenenti le informazioni di seguito indicate 
-e i Metadata OIDC per ogni tipo di entità.
-
 
 Entity Configuration - claim comuni
 +++++++++++++++++++++++++++++++++++

@@ -18,14 +18,7 @@ members MUST support this signing algorithm. All the signature-check operations 
 are carried out with the Federation public keys.
 
 .. warning::
-  We distinguish the Federation keys from the OIDC Core ones. The latter ones are contained in the OIDC Metadata. An EC contains both the Federation public keys and the OIDC Metadata.
-
-
-Federation Metadata
-+++++++++++++++++++
-
-OIDC Federation defines the Federation Metadata containing the information indicated below and the 
-OIDC Metadata for each type of Entity.
+  The Federation keys must be distinguished by the OIDC Core ones. The latter ones are contained in the OIDC Metadata. An EC contains both the Federation public keys and the OIDC Metadata.
 
 
 Entity Configuration - common claims
