@@ -5,19 +5,19 @@ Confronto fra OIDC CIE / SPID e OIDC iGov
 
 CIE OpenID Connect e SPID OpenID Connect sono basati sul profilo iGov (openid-gov-profile) di OpenID connect, `International Government Assurance Profile (iGov) for OpenID Connect 1.0 <https://openid.net/specs/openid-igov-openid-connect-1_0-03.html>`_  con le seguenti differenze:
 
- - La sezione 2.1 di iGOV riporta **vtr**, **acr_values** e **PKCE** come OPZIONALI, sia in SPID che in CIE id **PKCE** e **acr_values** sono OBBLIGATORI. In entrambe le implementazioni di SPID e CIE, si è adottato **acr_values** al posto di **vtr**.
+ - La sezione 2.1 di iGov riporta **vtr**, **acr_values** e **PKCE** come OPZIONALI, sia in SPID che in CIE id **PKCE** e **acr_values** sono RICHIESTI. In entrambe le implementazioni di SPID e CIE, si è adottato **acr_values** al posto di **vtr**.
 
  - L'Authentication Response nel flusso di autenticazione di CIE impone l'uso del claim **iss** per evitare l'attacco mix-up `I-D.ietf-OAuth-Security-BCP`_. L'uso di questo claim è OPZIONALE in SPID.
 
- - La sezione 2.4 di iGov stabilisce "Gli RP POSSONO opzionalmente mandare richieste all'Authorization Endpoint usando il parametro request." Sia in SPID che in CIE id, l'uso del parametro request è OBBLIGATORIO.
+ - La sezione 2.4 di iGov stabilisce "Gli RP POSSONO opzionalmente mandare richieste all'Authorization Endpoint usando il parametro request." Sia in SPID che in CIE id, l'uso del parametro request è RICHIESTO.
 
- - La sezione 3.1 di iGov stabilisce che "in caso di utilizzo di **vtr** nella richiesta di autenticazione, l'ID Token DEVE contenere i seguenti claim OBBLIGATORI, cioè: **vot** e **vtm**. Siccome **vtr** non è usato in entrambi SPID e CIE id, i claim appena citati non vengono inclusi all'interno dell'ID Token. 
+ - La sezione 3.1 di iGov stabilisce che "in caso di utilizzo di **vtr** nella richiesta di autenticazione, l'ID Token DEVE contenere i seguenti claim RICHIESTI, cioè: **vot** e **vtm** ". Considerando che **vtr** non è usato in SPID e CIE id, i claim appena citati non vengono inclusi all'interno dell'ID Token. 
 
  - La sezione 3.1 di iGov stabilisce che "il claim **auth-time** nell'ID Token è RACCOMANDATO". SPID e CIE id non adottano questo claim nell'ID Token.
 
- - L'ID Token, sia in SPID che in CIE id, DEVE avere il claim **acr** OBBLIGATORIO, mentre questo è opzionale nell'iGov draft iGov.
+ - L'ID Token, sia in SPID che in CIE id, DEVE avere il claim **acr** RICHIESTO, mentre questo è opzionale nell'iGov draft iGov.
 
- - L'ID Token, sia in SPID che in CIE id, ha il requisito del claim **at_hash** obbligatorio. Questo è OPZIONALE in OIDC-CORE è ASSENTE in iGOV.
+ - L'ID Token, sia in SPID che in CIE id, ha il requisito del claim **at_hash** RICHIESTO. Questo è OPZIONALE in OIDC-CORE è assente in iGOV.
 
  - Sia in SPID che in CIE id, l'identificatore del soggetto DEVE essere **pairwised**.
 
@@ -35,5 +35,5 @@ CIE OpenID Connect e SPID OpenID Connect sono basati sul profilo iGov (openid-go
 
  - Nelle sezioni 3.7 e 2.5 di iGOV, i Metadata sia di SPID che di CIE id vengono distribuiti secondo le modalità definite nella sezione "3. Metadata".
 
- - Dobbiamo accennare che l'Access Token è un JWT firmato in conformità a :rfc:`9068`?
+ - L'Access Token è un JWT firmato in conformità a :rfc:`9068`.
 

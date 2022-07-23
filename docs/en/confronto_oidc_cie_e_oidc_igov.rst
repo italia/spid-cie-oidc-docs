@@ -5,19 +5,19 @@ Comparison between OIDC CIE / SPID and OIDC iGov
 
 CIE OpenID Connect and e SPID OpenID Connect are based on the iGov profile (openid-gov-profile) of OpenID connect,  `International Government Assurance Profile (iGov) for OpenID Connect 1.0 <https://openid.net/specs/openid-igov-openid-connect-1_0-03.html>`_  with the following differences:
 
- - Section 2.1 of iGOV shows **vtr**, **acr_values** and **PKCE** as OPTIONAL, in both SPID and CIE id PKCE and acr_values are REQUIRED. In the both SPID and CIE implementation the acr_values has been adopted instead of vtr. 
+ - Section 2.1 of iGov shows **vtr**, **acr_values** and **PKCE** as OPTIONAL, in both SPID and CIE id PKCE and acr_values are REQUIRED. In the both SPID and CIE implementation the acr_values has been adopted instead of vtr. 
 
  - The Authentication response in the Auth code flow of CIE mandates the usage of the **iss** claim parameter to avoid the mix-up attack `I-D.ietf-OAuth-Security-BCP`_. The usage of this parameter is OPTIONAL in SPID.  
 
  - Section 2.4 of iGov states "RPs MAY optionally send requests to the Authorization endpoint using request parameter." In both SPID and CIE id the usage of request parameter is REQUIRED.
 
- - Section 3.1 of iGov states " in the case of using vtr in the authentication request the ID Token MUST contain the following REQUIRED claims, namely: **vot** and **vtm**. As vtr is not used in both SPID and CIE id, thus the aforementioned claims are not included within the ID Token. 
+ - Section 3.1 of iGov states " in the case of using vtr in the authentication request the ID Token MUST contain the following REQUIRED claims, namely: **vot** and **vtm** ". As vtr is not used in both SPID and CIE id, thus the aforementioned claims are not included within the ID Token. 
 
  - Section 3.1 of iGov states "the auth-time claim in ID Token is RECOMMENDED". The SPID and CIE id do not adopt this claim in the ID Token.
 
- - ID Token in both SPID and CIE id MUST have the acr claim as REQUIRED, while this is optional in the iGov draft iGov.
+ - ID Token in both SPID and CIE id MUST have the acr claim as REQUIRED, while this is optional in the OpenID iGov specs .
 
- - ID Token in both SPID and CIE id has the requirement of the **at_hash** claim as mandatory, this is OPTIONAL in OIDC-CORE and not present in iGOV.
+ - ID Token in both SPID and CIE id has the requirement of the **at_hash** claim as mandatory, this is OPTIONAL in OIDC-CORE and not present in iGov.
 
  - In both SPID and CIE id the subject identifier MUST be pairwised.
 
@@ -35,5 +35,5 @@ CIE OpenID Connect and e SPID OpenID Connect are based on the iGov profile (open
 
  - Sections 3.7 and 2.5 of iGOV : both SPID and CIE id OP metadata are distributed according to the modalities defined  in Section "3. Metadata".
 
- - shall we mention the Access token is signed jwt in compliance to :rfc:`9068`?
+ - The Access token is a signed jwt in compliance to :rfc:`9068`
 
