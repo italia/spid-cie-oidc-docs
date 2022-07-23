@@ -3,7 +3,7 @@
 Differences with OIDC iGov
 --------------------------
 
-CIE OpenID Connect and e SPID OpenID Connect are based on the iGov profile (openid-gov-profile) of OpenID connect,  `International Government Assurance Profile (iGov) for OpenID Connect 1.0 <https://openid.net/specs/openid-igov-openid-connect-1_0-03.html>`_  with the following differences:
+CIE OpenID Connect and e SPID OpenID Connect are based on `iGov.OIDC`_  with the following differences:
 
  - Section 2.1 of iGov shows **vtr**, **acr_values** and **PKCE** as OPTIONAL, in both SPID and CIE id PKCE and acr_values are REQUIRED. In the both SPID and CIE implementation the acr_values has been adopted instead of vtr. 
 
