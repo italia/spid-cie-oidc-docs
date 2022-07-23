@@ -1,7 +1,7 @@
 .. include:: ../common/common_definitions.rst
 
-Confronto fra OIDC CIE / SPID e OIDC iGov
------------------------------------------
+Differenze con OIDC iGov
+------------------------
 
 CIE OpenID Connect e SPID OpenID Connect sono basati sul profilo iGov (openid-gov-profile) di OpenID connect, `International Government Assurance Profile (iGov) for OpenID Connect 1.0 <https://openid.net/specs/openid-igov-openid-connect-1_0-03.html>`_  con le seguenti differenze:
 

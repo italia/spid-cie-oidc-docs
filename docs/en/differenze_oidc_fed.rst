@@ -2,8 +2,8 @@
 
 .. _differenze_con_oidc_federation:
 
-Differences with the OIDC Federation
-------------------------------------
+Differences with OIDC Federation
+--------------------------------
 
 This section lists the differences between the official standard and the SPID / CIE implementation.
 
