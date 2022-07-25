@@ -4,11 +4,13 @@
 Token Endpoint (token request)
 --------------------------------
 
-The Token Endpoint returns an *Access Token*, an *ID Token* and a *Refresh Token*. The RP sends a request to the Token Endpoint:
+The RP sends a request to the Token Endpoint:
 
  1. at the end of the authentication flow described at the previous section, sending the authorization code received by the OP (example, code=usDwMnEzJPpG5oaV8x3j) for getting an ID Token, an Access Token and possibly a Refresh Token (if a `long revocable session`_ has been started).
 
  2. in a `long revocable session`_, the RP calls the Token Endpoint sending a Refresh Token in its possession, for obtaining a new Access Token.
+
+The Token Endpoint returns an *Access Token*, an *ID Token* and optionally a *Refresh Token*. 
 
 .. seealso:: 
 
@@ -164,7 +166,7 @@ The ID Token is a JSON Web Token (JWT) that contains information on the user tha
 
  {
      "iss":"https://op.spid.agid.gov.it/",
-     "sub":"OP-1234567890",
+     "sub":"9sd798asd98asui23hiuds89y798sfyg",
      "aud":"https://rp.spid.agid.gov.it/auth",
      "acr":"https://www.spid.gov.it/SpidL2",
      "at_hash":"qiyh4XPJGsOZ2MEAyLkfWqeQ",
