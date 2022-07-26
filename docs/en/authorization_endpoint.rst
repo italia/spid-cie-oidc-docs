@@ -1,7 +1,7 @@
 .. include:: ../common/common_definitions.rst
 
 Authorization endpoint
----------------------
+----------------------
 
 Request
 +++++++
