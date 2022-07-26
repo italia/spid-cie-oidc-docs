@@ -93,11 +93,11 @@ The EC of an OP MUST configure a metadata of type **"openid_provider"**, that MU
     - See `OpenID.Discovery#OP_Metadata`_. The supported value is **pairwise**. 
     - |spid-icon| |cieid-icon|
   * - **id_token_signing_alg_values_supported**
-    - See `OpenID.Discovery#OP_Metadata`_. The OP MUST support RS256 and CAN also support other 
+    - See `OpenID.Discovery#OP_Metadata`_. The OP MUST support RS256 and MAY also support other 
       algorithms of types RS, ES and PS, defined at :rfc:`7518#section-3.1`
     - |spid-icon| |cieid-icon|
   * - **userinfo_signing_alg_values_supported**
-    - See `OpenID.Discovery#OP_Metadata`_. The OP MUST support RS256 and CAN also support other  
+    - See `OpenID.Discovery#OP_Metadata`_. The OP MUST support RS256 and MAY also support other  
       algorithms of types RS, ES and PS, defined at :rfc:`7518#section-3.1`.
     - |spid-icon| |cieid-icon|
   * - **userinfo_encryption_alg_values_supported**
@@ -107,14 +107,14 @@ The EC of an OP MUST configure a metadata of type **"openid_provider"**, that MU
     - See `OpenID.Discovery#OP_Metadata`_. For the definition of the encryption algorithms (*enc*) see :rfc:`7518#section-5.1`
     - |spid-icon| |cieid-icon|
   * - **request_object_signing_alg_values_supported**
-    - See `OpenID.Discovery#OP_Metadata`_. The OP MUST support RS256 and CAN also support other 
+    - See `OpenID.Discovery#OP_Metadata`_. The OP MUST support RS256 and MAY also support other 
       algorithms of types RS, ES and PS, defined at :rfc:`7518#section-3.1`.
     - |spid-icon| |cieid-icon|
   * - **token_endpoint_auth_methods_supported**
     - See `OpenID.Discovery#OP_Metadata`_. The supported value is **private_key_jwt**
     - |spid-icon| |cieid-icon|
   * - **token_endpoint_auth_signing_alg_values_supported**
-    - See `OpenID.Discovery#OP_Metadata`_. The OP MUST support RS256 and CAN also support other
+    - See `OpenID.Discovery#OP_Metadata`_. The OP MUST support RS256 and MAY also support other
       algorithms of types RS, ES and PS, defined at :rfc:`7518#section-3.1`.
     - |spid-icon| |cieid-icon|
   * - **claims_supported**
@@ -139,7 +139,7 @@ The EC of an OP MUST configure a metadata of type **"openid_provider"**, that MU
     - See `OIDC-FED#Section.4.2`_. The supported value is **request_object**.
     - |spid-icon| |cieid-icon|
   * - **request_authentication_signing_alg_values_supported**
-    - See `OIDC-FED#Section.4.2`_. The OP MUST support RS256 and CAN also support other
+    - See `OIDC-FED#Section.4.2`_. The OP MUST support RS256 and MAY also support other
       algorithms of types RS, ES and PS, defined at :rfc:`7518#section-3.1`.
     - |spid-icon| |cieid-icon|
 

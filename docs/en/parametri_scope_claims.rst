@@ -5,7 +5,7 @@
 Usage of the parameters **scope** and **claims**
 ------------------------------------------------
 
-The user attributes CAN be requested by the RP using the **scope** or **claims** parameters in the Authorization Request.
+The user attributes MAY be requested by the RP using the **scope** or **claims** parameters in the Authorization Request.
 
 In case of using the **scope** parameter, the following values are supported:
 
@@ -24,9 +24,9 @@ In case of using the **scope** parameter, the following values are supported:
 The attributes requested by the parameter **scope** are available both in the ID Token and in the response to the Userinfo Endpoint.
 
 .. note::
-   The parameter **scope** CAN contain one or more values, with single spaces as separators.
+   The parameter **scope** MAY contain one or more values, with single spaces as separators.
 
-In case of requests of single user-attributes or specific combinations of them, the RP CAN use the parameter **claims**. 
+In case of requests of single user-attributes or specific combinations of them, the RP MAY use the parameter **claims**. 
 For the definition of the parameter **claims** and its usage modes for requesting the user attributes, please refer to `OpenID.Core#ClaimsParameter`_. 
 
 .. warning::

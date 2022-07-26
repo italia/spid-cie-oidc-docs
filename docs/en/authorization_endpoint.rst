@@ -8,7 +8,7 @@ Request
 
 For starting the authentication process, the RP redirects the user to the *Authorization Endpoint* of the selected OP, and sends an *HTTP* request with the parameter **request**, an object in **JWT** format that contains the *Authorization Request* signed by the RP.
 
-For conveying the request, the RP CAN use the methods **POST** and **GET**. With the method **POST** the parameters MUST be sent using the *Form Serialization*. 
+For conveying the request, the RP MAY use the methods **POST** and **GET**. With the method **POST** the parameters MUST be sent using the *Form Serialization*. 
 With the method **GET** the parameters MUST be sent using the *Query String Serialization*. For more details see `OpenID.Core#Serializations`_.
 
 .. warning::
@@ -118,7 +118,7 @@ The **JWT** payload contains the following mandatory claims:
      - See `OpenID.Core#AuthRequest`_. As defined by the parameter **acr_values_supported** in the
        :ref:`Metadata OP <MetadataOP>`.
        Reference values of the contest class of the Authentication Request. 
-       It MUST be a string with the requested "acr" values, each of them separated by a single space, appearing in order of preference. The OP CAN use an authentication at a higher level than requested. Such a choice MUST NOT cause a negative result of the request.
+       It MUST be a string with the requested "acr" values, each of them separated by a single space, appearing in order of preference. The OP MAY use an authentication at a higher level than requested. Such a choice MUST NOT cause a negative result of the request.
      - |spid-icon| |cieid-icon|
    * - **claims**
      - See `OpenID.Core#AuthRequest`_. See Section :ref:`Use of the scope and claims parameters <parametri_scope_claims>`

@@ -10,7 +10,7 @@ contains the signing keys of the subordinate Entities and further data used to c
 process of Trust Chain resolution.
 
 An Entity publishes an **ES** related to a subordinate, at its :ref:`Fetch Endpoint<Esempio_EN2>`. 
-The superior Entity CAN define the Metadata policy of the subordinate subjects 
+The superior Entity MAY define the Metadata policy of the subordinate subjects 
 and publish the TMs that it has issued for them.
 
 

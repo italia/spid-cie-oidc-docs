@@ -77,7 +77,7 @@ The Leaf MUST include the TM inside its own Federation configuration (Entity Con
 success in the Onboarding process.
 
 The Federation Authority or an Intermediary MUST publish the Leaf Entity Statement containing the Federation public keys of the Leaf and the TMs released for it.
-The Federation Authority or an Intermediary CAN publish a `Metadata policy <https://openid.net/specs/openid-connect-federation-1_0.html#rfc.section.5.1>`_ to force the change
+The Federation Authority or an Intermediary MAY publish a `Metadata policy <https://openid.net/specs/openid-connect-federation-1_0.html#rfc.section.5.1>`_ to force the change
 to the OIDC Metadata of the subordinate Entity, in the parts where it might be needed.
 
 
