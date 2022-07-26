@@ -176,17 +176,7 @@ to the URL contained in the parameter redirect_uri specified in the authorizatio
  - https://tools.ietf.org/html/rfc6749#section-4.1.2
  - https://openid.net/specs/openid-connect-core-1_0.html#AuthRequestValidation
 
-If the authentication is successful, the OpenID Provider (OP), redirects the user with the following parameters:
-
-
-.. code-block:: 
-
- GET /resp?
- code=usDwMnEzJPpG5oaV8x3j&
- state=fyZiOL9Lf2CeKuNT2JzxiLRDink0uPcd
-
- Host: https://rp.spid.agid.gov.it
- HTTP/1.1
+If the authentication is successful, the OpenID Provider (OP), redirects the user by adding the following parameters required as query parameters to the *redirect_uri* (as defined in `OpenID.Core#AuthResponse`_): 
 
 
 .. list-table:: 
@@ -204,7 +194,7 @@ If the authentication is successful, the OpenID Provider (OP), redirects the use
      - |spid-icon| |cieid-icon|
    * - **iss**
      - Unique Identifier of the OP that has created the Authentication Response. The RP MUST validate
-       this parameter and MUST NOT allow more OPs to use the same identifier. MANDATORY only for CIE.
+       this parameter and MUST NOT allow more OPs to use the same identifier.
      - |cieid-icon|
 
 Errors
@@ -214,19 +204,6 @@ In case of errors, the OP displays error messages about the OpenID Connect inter
 as described in the tables defined in the `SPID UX Guidelines`_. 
 In case the guidelines require a user's redirect to the RP, the OP performs a redirect to the URL indicated 
 in the parameter redirect_uri of the request (only if it is valid, i.e. it is present in the client Metadata), with the following parameters.
-
-
-**Example:**
-
-.. code-block:: 
-
- GET /resp?
- error=invalid_request&
- error_description=request%20malformata&
- state=fyZiOL9Lf2CeKuNT2JzxiLRDink0uPcd
-
- Host: https://rp.spid.agid.gov.it
- HTTP/1.1
 
 
 .. list-table:: 
