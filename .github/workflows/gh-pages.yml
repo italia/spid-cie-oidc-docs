@@ -33,13 +33,13 @@ jobs:
         run: |-
           pip install tox
           tox -re build
-          # touch _build/.nojekyll
+          touch html/.nojekyll
 
       - name: Deploy to GitHub Pages
         if: success()
         uses: crazy-max/ghaction-github-pages@v2
         with:
           target_branch: gh-pages
-          build_dir: build
+          build_dir: html
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
