@@ -1,0 +1,1816 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generato da Microsoft Visio, esportazione SVG flusso.svg flow -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events"
+		xmlns:v="http://schemas.microsoft.com/visio/2003/SVGExtensions/" width="7.60227in" height="6.74349in"
+		viewBox="0 0 547.363 485.531" xml:space="preserve" color-interpolation-filters="sRGB" class="st26">
+	<v:documentProperties v:langID="1040" v:metric="true" v:viewMarkup="false">
+		<v:userDefs>
+			<v:ud v:nameU="msvNoAutoConnect" v:val="VT0(1):26"/>
+		</v:userDefs>
+	</v:documentProperties>
+
+	<style type="text/css">
+	<![CDATA[
+		.st1 {fill:#fff2cc;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
+		.st2 {fill:#fff2cc;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24;visibility:hidden}
+		.st3 {fill:#ffffff;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.72;visibility:hidden}
+		.st4 {fill:#000000;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.35714285714286}
+		.st5 {fill:#000000;stroke:#cccccc;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.72;visibility:hidden}
+		.st6 {fill:#0033cc;stroke:#0070c0;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
+		.st7 {fill:#92d050;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
+		.st8 {fill:#92d050;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5;visibility:hidden}
+		.st9 {fill:#000000;font-family:Calibri;font-size:0.833336em;font-weight:bold}
+		.st10 {fill:#ffc000;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
+		.st11 {fill:#ffc000;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24;visibility:hidden}
+		.st12 {fill:#ff7c80;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
+		.st13 {fill:#ff7c80;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24;visibility:hidden}
+		.st14 {font-size:1em}
+		.st15 {fill:#99ccff;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
+		.st16 {fill:#99ccff;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24;visibility:hidden}
+		.st17 {fill:#0033cc;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
+		.st18 {fill:#ffffff;font-family:Calibri;font-size:0.833336em;font-weight:bold}
+		.st19 {marker-end:url(#mrkr4-334);stroke:#0033cc;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.72}
+		.st20 {fill:#0033cc;fill-opacity:1;stroke:#0033cc;stroke-opacity:1;stroke-width:0.28571428571429}
+		.st21 {fill:#ffffff;stroke:none;stroke-linecap:butt;stroke-width:7.2}
+		.st22 {fill:#000000;font-family:Calibri;font-size:0.666664em}
+		.st23 {marker-end:url(#mrkr4-368);stroke:#0033cc;stroke-dasharray:0,3;stroke-linecap:round;stroke-linejoin:round;stroke-width:1}
+		.st24 {fill:#0033cc;fill-opacity:1;stroke:#0033cc;stroke-opacity:1;stroke-width:0.35714285714286}
+		.st25 {fill:none;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.75}
+		.st26 {fill:none;fill-rule:evenodd;font-size:12px;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
+	]]>
+	</style>
+
+	<defs id="Markers">
+		<g id="lend1">
+			<path d="M 1 -1 L 0 0 L 1 1 " style="stroke-linecap:round;stroke-linejoin:round;fill:none"/>
+		</g>
+		<marker id="mrkr1-24" class="st4" v:arrowType="1" v:arrowSize="1" orient="auto" markerUnits="strokeWidth"
+				overflow="visible">
+			<use xlink:href="#lend1" transform="scale(-2.8,-2.8) "/>
+		</marker>
+		<g id="lend4">
+			<path d="M 2 1 L 0 0 L 2 -1 L 2 1 " style="stroke:none"/>
+		</g>
+		<marker id="mrkr4-334" class="st20" v:arrowType="4" v:arrowSize="1" v:setback="7" refX="-7" orient="auto"
+				markerUnits="strokeWidth" overflow="visible">
+			<use xlink:href="#lend4" transform="scale(-3.5,-3.5) "/>
+		</marker>
+		<marker id="mrkr4-368" class="st24" v:arrowType="4" v:arrowSize="1" v:setback="5.6" refX="-5.6" orient="auto"
+				markerUnits="strokeWidth" overflow="visible">
+			<use xlink:href="#lend4" transform="scale(-2.8,-2.8) "/>
+		</marker>
+	</defs>
+	<g v:mID="4" v:index="2" v:groupContext="foregroundPage">
+		<title>flow</title>
+		<v:pageProperties v:drawingScale="0.0393701" v:pageScale="0.0393701" v:drawingUnits="24" v:shadowOffsetX="8.50394"
+				v:shadowOffsetY="-8.50394"/>
+		<v:layer v:name="Diagramma di flusso" v:index="0"/>
+		<v:layer v:name="Connettore" v:index="1"/>
+		<g id="group363-1" transform="translate(245.779,-18.12)" v:mID="363" v:groupContext="group" v:layerMember="0">
+			<v:custProps>
+				<v:cp v:nameU="BpmnId" v:lbl="Id" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="true" v:ask="false"
+						v:langID="1040" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="BpmnCategories" v:lbl="Categories" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1040" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="BpmnDocumentation" v:lbl="Documentation" v:prompt="" v:type="0" v:format="" v:sortKey=""
+						v:invis="false" v:ask="false" v:langID="1040" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="BpmnName" v:lbl="Name" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="true" v:ask="false"
+						v:langID="1040" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="BpmnActivityType" v:lbl="ActivityType" v:prompt="" v:type="1"
+						v:format="Attività;Processo secondario" v:sortKey="" v:invis="true" v:ask="false" v:langID="1040" v:cal="0"
+						v:val="VT4(Attività)"/>
+				<v:cp v:nameU="BpmnLoopType" v:lbl="LoopType" v:prompt="" v:type="1"
+						v:format="Nessuno;standard;parallelo a istanza multipla;sequenziale a istanza multipla" v:sortKey=""
+						v:invis="false" v:ask="false" v:langID="1040" v:cal="0" v:val="VT4(Nessuno)"/>
+				<v:cp v:nameU="BpmnTaskType" v:lbl="TaskType" v:prompt="" v:type="1"
+						v:format="Nessuno;servizio;ricezione;invio;utente;script;sunto;manuale;creazione istanza ricezione;regola di business"
+						v:sortKey="" v:invis="false" v:ask="false" v:langID="1040" v:cal="0" v:val="VT4(Nessuno)"/>
+				<v:cp v:nameU="BpmnScript" v:lbl="Script" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="true"
+						v:ask="false" v:langID="1040" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="BpmnInstantiate" v:lbl="Instantiate" v:prompt="" v:type="3" v:format="" v:sortKey="" v:invis="true"
+						v:ask="false" v:langID="1040" v:cal="0" v:val="VT0(0):5"/>
+				<v:cp v:nameU="BpmnSubProcessType" v:lbl="SubProcessType" v:prompt="" v:type="1"
+						v:format="Incorporato;Riutilizzabile;Riferimento" v:sortKey="" v:invis="true" v:ask="false" v:langID="1040"
+						v:cal="0" v:val="VT4(Incorporato)"/>
+				<v:cp v:nameU="BpmnIsCollapsed" v:lbl="IsCollapsed" v:prompt="" v:type="3" v:format="" v:sortKey="" v:invis="true"
+						v:ask="false" v:langID="1040" v:cal="0" v:val="VT0(0):5"/>
+				<v:cp v:nameU="BpmnIsATransaction" v:lbl="IsATransaction" v:prompt="" v:type="3" v:format="" v:sortKey=""
+						v:invis="true" v:ask="false" v:langID="1040" v:cal="0" v:val="VT0(0):5"/>
+				<v:cp v:nameU="BpmnIsForCompensation" v:lbl="IsForCompensation" v:prompt="" v:type="3" v:format="" v:sortKey=""
+						v:invis="false" v:ask="false" v:langID="1040" v:cal="0" v:val="VT0(0):5"/>
+				<v:cp v:nameU="BpmnElementType" v:lbl="ElementType" v:prompt="" v:type="1"
+						v:format="Processo secondario;Evento;Gateway;Diagramma di processo;Pool;Corsia;Elemento;Oggetto di connessione"
+						v:sortKey="" v:invis="true" v:ask="false" v:langID="1040" v:cal="0" v:val="VT4(Processo secondario)"/>
+				<v:cp v:nameU="BpmnAdHoc" v:lbl="AdHoc" v:prompt="" v:type="3" v:format="" v:sortKey="" v:invis="true"
+						v:ask="false" v:langID="1040" v:cal="0" v:val="VT0(0):5"/>
+				<v:cp v:nameU="BpmnAdHocOrdering" v:lbl="AdHocOrdering" v:prompt="" v:type="1" v:format="Sequenziale;Parallela"
+						v:sortKey="" v:invis="true" v:ask="false" v:langID="1040" v:cal="0" v:val="VT4(Parallela)"/>
+				<v:cp v:nameU="BpmnBoundaryType" v:lbl="Tipo di limite" v:prompt="" v:type="1" v:format="Predefinita;Chiamata"
+						v:sortKey="" v:invis="false" v:ask="false" v:langID="1040" v:cal="0" v:val="VT4(Predefinita)"/>
+			</v:custProps>
+			<v:userDefs>
+				<v:ud v:nameU="BpmnNumIconsVisible" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="BpmnIsExtendedSubProcess" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="msvStructureType" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="msvSDContainerResize" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="msvShapeCategories" v:prompt="" v:val="VT4(Task)"/>
+				<v:ud v:nameU="BpmnIconHeight" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+				<v:ud v:nameU="BpmnIconPinY" v:prompt="" v:val="VT0(0.11811023622047):24"/>
+				<v:ud v:nameU="BpmnBoundaryType" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="DefaultWidth" v:prompt="" v:val="VT0(0.98425196850394):24"/>
+				<v:ud v:nameU="DefaultHeight" v:prompt="" v:val="VT0(0.78740157480315):24"/>
+				<v:ud v:nameU="ResizeTxtHeight" v:prompt="" v:val="VT0(0.78740157480315):24"/>
+				<v:ud v:nameU="IsInstance" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsInstance" v:prompt="" v:val="VT0(1):5"/>
+			</v:userDefs>
+			<title>Attività.363</title>
+			<g id="shape364-2" v:mID="364" v:groupContext="shape" v:layerMember="0">
+				<title>Foglio.364</title>
+				<rect x="0" y="36.24" width="283.465" height="449.291" rx="5.66929" ry="5.66929" class="st1"/>
+			</g>
+			<g id="group365-4" v:mID="365" v:groupContext="group" v:layerMember="0">
+				<title>Foglio.365</title>
+				<g id="shape366-5" v:mID="366" v:groupContext="shape" v:layerMember="0">
+					<title>Foglio.366</title>
+					<rect x="0" y="36.24" width="283.465" height="449.291" rx="2.12598" ry="2.12598" class="st2"/>
+				</g>
+				<g id="shape367-7" v:mID="367" v:groupContext="shape" v:layerMember="0" transform="translate(1.8,-1.8)">
+					<title>Foglio.367</title>
+					<rect x="0" y="39.84" width="279.865" height="445.691" rx="2.12598" ry="2.12598" class="st2"/>
+				</g>
+			</g>
+			<g id="shape368-9" v:mID="368" v:groupContext="shape" v:layerMember="0" transform="translate(142.543,-2.12598)">
+				<title>Foglio.368</title>
+				<v:userDefs>
+					<v:ud v:nameU="BpmnIconPosition" v:prompt="" v:val="VT0(1):26"/>
+					<v:ud v:nameU="BpmnIconWidth" v:prompt="" v:val="VT0(0.18):26"/>
+				</v:userDefs>
+			</g>
+			<g id="group369-11" transform="translate(142.903,-2.83465)" v:mID="369" v:groupContext="group" v:layerMember="0">
+				<v:userDefs>
+					<v:ud v:nameU="BpmnIconPosition" v:prompt="" v:val="VT0(1):26"/>
+					<v:ud v:nameU="BpmnIconWidth" v:prompt="" v:val="VT0(0.19):26"/>
+				</v:userDefs>
+				<title>Foglio.369</title>
+				<g id="shape370-12" v:mID="370" v:groupContext="shape" v:layerMember="0">
+					<title>Foglio.370</title>
+					<rect x="0" y="474.193" width="11.3386" height="11.3386" class="st3"/>
+				</g>
+				<g id="shape371-14" v:mID="371" v:groupContext="shape" v:layerMember="0" transform="translate(2.83465,-2.83465)">
+					<title>Foglio.371</title>
+				</g>
+			</g>
+			<g id="shape372-16" v:mID="372" v:groupContext="shape" v:layerMember="0" transform="translate(142.903,-3.68504)">
+				<title>Foglio.372</title>
+				<v:userDefs>
+					<v:ud v:nameU="BpmnIconPosition" v:prompt="" v:val="VT0(1):26"/>
+					<v:ud v:nameU="BpmnIconWidth" v:prompt="" v:val="VT0(0.19):26"/>
+				</v:userDefs>
+			</g>
+			<g id="shape373-18" v:mID="373" v:groupContext="shape" v:layerMember="0" transform="translate(144.017,-3.68504)">
+				<title>Foglio.373</title>
+				<v:userDefs>
+					<v:ud v:nameU="BpmnIconPosition" v:prompt="" v:val="VT0(1):26"/>
+					<v:ud v:nameU="BpmnIconWidth" v:prompt="" v:val="VT0(0.18):26"/>
+				</v:userDefs>
+			</g>
+			<g id="group374-20" transform="translate(142.543,-2.83465)" v:mID="374" v:groupContext="group" v:layerMember="0">
+				<v:userDefs>
+					<v:ud v:nameU="BpmnIconPosition" v:prompt="" v:val="VT0(1):26"/>
+					<v:ud v:nameU="BpmnIconWidth" v:prompt="" v:val="VT0(0.18):26"/>
+				</v:userDefs>
+				<title>Foglio.374</title>
+				<g id="shape375-21" v:mID="375" v:groupContext="shape" v:layerMember="0"
+						transform="translate(9.4603,960.725) rotate(179.753)">
+					<title>Foglio.375</title>
+				</g>
+			</g>
+			<g id="shape376-25" v:mID="376" v:groupContext="shape" v:layerMember="0" transform="translate(3.50394,-435.787)">
+				<title>Foglio.376</title>
+			</g>
+			<g id="shape377-27" v:mID="377" v:groupContext="shape" v:layerMember="0" transform="translate(3.00394,-435.287)">
+				<title>Foglio.377</title>
+			</g>
+			<g id="group378-29" transform="translate(2.50394,-436.787)" v:mID="378" v:groupContext="group" v:layerMember="0">
+				<title>Foglio.378</title>
+				<g id="shape379-30" v:mID="379" v:groupContext="shape" v:layerMember="0">
+					<title>Foglio.379</title>
+					<rect x="0" y="477.531" width="12" height="8" class="st5"/>
+				</g>
+				<g id="shape380-32" v:mID="380" v:groupContext="shape" v:layerMember="0"
+						transform="translate(-1.9984E-15,-4.20339)">
+					<title>Foglio.380</title>
+				</g>
+			</g>
+			<g id="shape381-34" v:mID="381" v:groupContext="shape" v:layerMember="0" transform="translate(2.50394,-436.787)">
+				<title>Foglio.381</title>
+			</g>
+			<g id="shape382-36" v:mID="382" v:groupContext="shape" v:layerMember="0" transform="translate(3.50394,-435.787)">
+				<title>Foglio.382</title>
+			</g>
+			<g id="shape383-38" v:mID="383" v:groupContext="shape" v:layerMember="0" transform="translate(3.00394,-436.787)">
+				<title>Foglio.383</title>
+			</g>
+			<g id="shape384-40" v:mID="384" v:groupContext="shape" v:layerMember="0" transform="translate(3.00394,-436.787)">
+				<title>Foglio.384</title>
+			</g>
+			<g id="shape385-42" v:mID="385" v:groupContext="shape" v:layerMember="0"
+					transform="translate(-332.5,481.223) rotate(-90)">
+				<title>Foglio.385</title>
+				<v:userDefs>
+					<v:ud v:nameU="BpmnIconPosition" v:prompt="" v:val="VT0(1):26"/>
+					<v:ud v:nameU="BpmnIconWidth" v:prompt="" v:val="VT0(0.18):26"/>
+				</v:userDefs>
+			</g>
+		</g>
+		<g id="shape174-44" v:mID="174" v:groupContext="shape" transform="translate(176.816,-42.2145)">
+			<title>Rettangolo</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<rect x="0" y="151.043" width="2.8189" height="334.488" class="st6"/>
+		</g>
+		<g id="shape175-46" v:mID="175" v:groupContext="shape" transform="translate(52.5688,-42.2145)">
+			<title>Rettangolo.175</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<rect x="0" y="151.043" width="2.8189" height="334.488" class="st6"/>
+		</g>
+		<g id="shape176-48" v:mID="176" v:groupContext="shape" transform="translate(301.062,-42.2145)">
+			<title>Rettangolo.176</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<rect x="0" y="151.043" width="2.8189" height="334.488" class="st6"/>
+		</g>
+		<g id="shape177-50" v:mID="177" v:groupContext="shape" transform="translate(386.527,-42.2145)">
+			<title>Rettangolo.177</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<rect x="0" y="151.043" width="2.8189" height="334.488" class="st6"/>
+		</g>
+		<g id="shape178-52" v:mID="178" v:groupContext="shape" transform="translate(471.991,-42.2145)">
+			<title>Rettangolo.178</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<rect x="0" y="151.043" width="2.8189" height="334.488" class="st6"/>
+		</g>
+		<g id="group1-54" transform="translate(18.12,-377.123)" v:mID="1" v:groupContext="group" v:layerMember="0">
+			<v:custProps>
+				<v:cp v:nameU="BpmnId" v:lbl="Id" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="true" v:ask="false"
+						v:langID="1040" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="BpmnCategories" v:lbl="Categories" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1040" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="BpmnDocumentation" v:lbl="Documentation" v:prompt="" v:type="0" v:format="" v:sortKey=""
+						v:invis="false" v:ask="false" v:langID="1040" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="BpmnName" v:lbl="Name" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="true" v:ask="false"
+						v:langID="1040" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="BpmnActivityType" v:lbl="ActivityType" v:prompt="" v:type="1"
+						v:format="Attività;Processo secondario" v:sortKey="" v:invis="true" v:ask="false" v:langID="1040" v:cal="0"
+						v:val="VT4(Attività)"/>
+				<v:cp v:nameU="BpmnLoopType" v:lbl="LoopType" v:prompt="" v:type="1"
+						v:format="Nessuno;standard;parallelo a istanza multipla;sequenziale a istanza multipla" v:sortKey=""
+						v:invis="false" v:ask="false" v:langID="1040" v:cal="0" v:val="VT4(Nessuno)"/>
+				<v:cp v:nameU="BpmnTaskType" v:lbl="TaskType" v:prompt="" v:type="1"
+						v:format="Nessuno;servizio;ricezione;invio;utente;script;sunto;manuale;creazione istanza ricezione;regola di business"
+						v:sortKey="" v:invis="false" v:ask="false" v:langID="1040" v:cal="0" v:val="VT4(Nessuno)"/>
+				<v:cp v:nameU="BpmnScript" v:lbl="Script" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="true"
+						v:ask="false" v:langID="1040" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="BpmnInstantiate" v:lbl="Instantiate" v:prompt="" v:type="3" v:format="" v:sortKey="" v:invis="true"
+						v:ask="false" v:langID="1040" v:cal="0" v:val="VT0(0):5"/>
+				<v:cp v:nameU="BpmnSubProcessType" v:lbl="SubProcessType" v:prompt="" v:type="1"
+						v:format="Incorporato;Riutilizzabile;Riferimento" v:sortKey="" v:invis="true" v:ask="false" v:langID="1040"
+						v:cal="0" v:val="VT4(Incorporato)"/>
+				<v:cp v:nameU="BpmnIsCollapsed" v:lbl="IsCollapsed" v:prompt="" v:type="3" v:format="" v:sortKey="" v:invis="true"
+						v:ask="false" v:langID="1040" v:cal="0" v:val="VT0(0):5"/>
+				<v:cp v:nameU="BpmnIsATransaction" v:lbl="IsATransaction" v:prompt="" v:type="3" v:format="" v:sortKey=""
+						v:invis="true" v:ask="false" v:langID="1040" v:cal="0" v:val="VT0(0):5"/>
+				<v:cp v:nameU="BpmnIsForCompensation" v:lbl="IsForCompensation" v:prompt="" v:type="3" v:format="" v:sortKey=""
+						v:invis="false" v:ask="false" v:langID="1040" v:cal="0" v:val="VT0(0):5"/>
+				<v:cp v:nameU="BpmnElementType" v:lbl="ElementType" v:prompt="" v:type="1"
+						v:format="Processo secondario;Evento;Gateway;Diagramma di processo;Pool;Corsia;Elemento;Oggetto di connessione"
+						v:sortKey="" v:invis="true" v:ask="false" v:langID="1040" v:cal="0" v:val="VT4(Processo secondario)"/>
+				<v:cp v:nameU="BpmnAdHoc" v:lbl="AdHoc" v:prompt="" v:type="3" v:format="" v:sortKey="" v:invis="true"
+						v:ask="false" v:langID="1040" v:cal="0" v:val="VT0(0):5"/>
+				<v:cp v:nameU="BpmnAdHocOrdering" v:lbl="AdHocOrdering" v:prompt="" v:type="1" v:format="Sequenziale;Parallela"
+						v:sortKey="" v:invis="true" v:ask="false" v:langID="1040" v:cal="0" v:val="VT4(Parallela)"/>
+				<v:cp v:nameU="BpmnBoundaryType" v:lbl="Tipo di limite" v:prompt="" v:type="1" v:format="Predefinita;Chiamata"
+						v:sortKey="" v:invis="false" v:ask="false" v:langID="1040" v:cal="0" v:val="VT4(Predefinita)"/>
+				<v:cp v:nameU="BpmnName" v:lbl="" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false" v:ask="false"
+						v:langID="0" v:cal="0" v:val="VT4(Relying Party)"/>
+			</v:custProps>
+			<v:userDefs>
+				<v:ud v:nameU="BpmnNumIconsVisible" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="BpmnIsExtendedSubProcess" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="msvStructureType" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="msvSDContainerResize" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="msvShapeCategories" v:prompt="" v:val="VT4(Task)"/>
+				<v:ud v:nameU="BpmnIconHeight" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+				<v:ud v:nameU="BpmnIconPinY" v:prompt="" v:val="VT0(0.11811023622047):24"/>
+				<v:ud v:nameU="BpmnBoundaryType" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="DefaultWidth" v:prompt="" v:val="VT0(0.98425196850394):24"/>
+				<v:ud v:nameU="DefaultHeight" v:prompt="" v:val="VT0(0.78740157480315):24"/>
+				<v:ud v:nameU="ResizeTxtHeight" v:prompt="" v:val="VT0(0.78740157480315):24"/>
+				<v:ud v:nameU="IsInstance" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsInstance" v:prompt="" v:val="VT0(1):5"/>
+			</v:userDefs>
+			<title>Attività</title>
+			<desc>Relying Party</desc>
+			<g id="shape2-55" v:mID="2" v:groupContext="shape" v:layerMember="0">
+				<title>Foglio.2</title>
+				<rect x="0" y="452.355" width="71.7165" height="33.1759" rx="5.66929" ry="5.66929" class="st7"/>
+			</g>
+			<g id="group3-57" v:mID="3" v:groupContext="group" v:layerMember="0">
+				<title>Foglio.3</title>
+				<g id="shape4-58" v:mID="4" v:groupContext="shape" v:layerMember="0">
+					<title>Foglio.4</title>
+					<rect x="0" y="452.355" width="71.7165" height="33.1759" rx="2.12598" ry="2.12598" class="st8"/>
+				</g>
+				<g id="shape5-60" v:mID="5" v:groupContext="shape" v:layerMember="0" transform="translate(1.8,-1.8)">
+					<title>Foglio.5</title>
+					<rect x="0" y="455.955" width="68.1165" height="29.5759" rx="2.12598" ry="2.12598" class="st8"/>
+				</g>
+			</g>
+			<g id="shape6-62" v:mID="6" v:groupContext="shape" v:layerMember="0" transform="translate(36.669,-2.12598)">
+				<title>Foglio.6</title>
+				<v:userDefs>
+					<v:ud v:nameU="BpmnIconPosition" v:prompt="" v:val="VT0(1):26"/>
+					<v:ud v:nameU="BpmnIconWidth" v:prompt="" v:val="VT0(0.18):26"/>
+				</v:userDefs>
+			</g>
+			<g id="group7-64" transform="translate(37.029,-2.83465)" v:mID="7" v:groupContext="group" v:layerMember="0">
+				<v:userDefs>
+					<v:ud v:nameU="BpmnIconPosition" v:prompt="" v:val="VT0(1):26"/>
+					<v:ud v:nameU="BpmnIconWidth" v:prompt="" v:val="VT0(0.19):26"/>
+				</v:userDefs>
+				<title>Foglio.7</title>
+				<g id="shape8-65" v:mID="8" v:groupContext="shape" v:layerMember="0">
+					<title>Foglio.8</title>
+					<rect x="0" y="474.193" width="11.3386" height="11.3386" class="st3"/>
+				</g>
+				<g id="shape9-67" v:mID="9" v:groupContext="shape" v:layerMember="0" transform="translate(2.83465,-2.83465)">
+					<title>Foglio.9</title>
+				</g>
+			</g>
+			<g id="shape10-69" v:mID="10" v:groupContext="shape" v:layerMember="0" transform="translate(37.029,-3.68504)">
+				<title>Foglio.10</title>
+				<v:userDefs>
+					<v:ud v:nameU="BpmnIconPosition" v:prompt="" v:val="VT0(1):26"/>
+					<v:ud v:nameU="BpmnIconWidth" v:prompt="" v:val="VT0(0.19):26"/>
+				</v:userDefs>
+			</g>
+			<g id="shape11-71" v:mID="11" v:groupContext="shape" v:layerMember="0" transform="translate(38.143,-3.68504)">
+				<title>Foglio.11</title>
+				<v:userDefs>
+					<v:ud v:nameU="BpmnIconPosition" v:prompt="" v:val="VT0(1):26"/>
+					<v:ud v:nameU="BpmnIconWidth" v:prompt="" v:val="VT0(0.18):26"/>
+				</v:userDefs>
+			</g>
+			<g id="group12-73" transform="translate(36.669,-2.83465)" v:mID="12" v:groupContext="group" v:layerMember="0">
+				<v:userDefs>
+					<v:ud v:nameU="BpmnIconPosition" v:prompt="" v:val="VT0(1):26"/>
+					<v:ud v:nameU="BpmnIconWidth" v:prompt="" v:val="VT0(0.18):26"/>
+				</v:userDefs>
+				<title>Foglio.12</title>
+				<g id="shape13-74" v:mID="13" v:groupContext="shape" v:layerMember="0"
+						transform="translate(9.4603,960.725) rotate(179.753)">
+					<title>Foglio.13</title>
+				</g>
+			</g>
+			<g id="shape14-77" v:mID="14" v:groupContext="shape" v:layerMember="0" transform="translate(3.50394,-19.6719)">
+				<title>Foglio.14</title>
+			</g>
+			<g id="shape15-79" v:mID="15" v:groupContext="shape" v:layerMember="0" transform="translate(3.00394,-19.1719)">
+				<title>Foglio.15</title>
+			</g>
+			<g id="group16-81" transform="translate(2.50394,-20.6719)" v:mID="16" v:groupContext="group" v:layerMember="0">
+				<title>Foglio.16</title>
+				<g id="shape17-82" v:mID="17" v:groupContext="shape" v:layerMember="0">
+					<title>Foglio.17</title>
+					<rect x="0" y="477.531" width="12" height="8" class="st5"/>
+				</g>
+				<g id="shape18-84" v:mID="18" v:groupContext="shape" v:layerMember="0" transform="translate(-1.9984E-15,-4.20339)">
+					<title>Foglio.18</title>
+				</g>
+			</g>
+			<g id="shape19-86" v:mID="19" v:groupContext="shape" v:layerMember="0" transform="translate(2.50394,-20.6719)">
+				<title>Foglio.19</title>
+			</g>
+			<g id="shape20-88" v:mID="20" v:groupContext="shape" v:layerMember="0" transform="translate(3.50394,-19.6719)">
+				<title>Foglio.20</title>
+			</g>
+			<g id="shape21-90" v:mID="21" v:groupContext="shape" v:layerMember="0" transform="translate(3.00394,-20.6719)">
+				<title>Foglio.21</title>
+			</g>
+			<g id="shape22-92" v:mID="22" v:groupContext="shape" v:layerMember="0" transform="translate(3.00394,-20.6719)">
+				<title>Foglio.22</title>
+			</g>
+			<g id="shape23-94" v:mID="23" v:groupContext="shape" v:layerMember="0"
+					transform="translate(-438.374,481.223) rotate(-90)">
+				<title>Foglio.23</title>
+				<v:userDefs>
+					<v:ud v:nameU="BpmnIconPosition" v:prompt="" v:val="VT0(1):26"/>
+					<v:ud v:nameU="BpmnIconWidth" v:prompt="" v:val="VT0(0.18):26"/>
+				</v:userDefs>
+			</g>
+			<g id="shape1-96" v:mID="1" v:groupContext="groupContent" v:layerMember="0">
+				<v:textBlock v:margins="rect(2,2,2,2)" v:tabSpace="42.5197"/>
+				<v:textRect cx="35.8583" cy="468.943" width="71.72" height="0"/>
+				<text x="8.51" y="471.94" class="st9" v:langID="1040"><v:paragraph v:horizAlign="1"/><v:tabList/>Relying Party</text>			</g>
+		</g>
+		<g id="group24-98" transform="translate(142.367,-377.123)" v:mID="24" v:groupContext="group" v:layerMember="0">
+			<v:custProps>
+				<v:cp v:nameU="BpmnId" v:lbl="Id" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="true" v:ask="false"
+						v:langID="1040" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="BpmnCategories" v:lbl="Categories" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1040" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="BpmnDocumentation" v:lbl="Documentation" v:prompt="" v:type="0" v:format="" v:sortKey=""
+						v:invis="false" v:ask="false" v:langID="1040" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="BpmnName" v:lbl="Name" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="true" v:ask="false"
+						v:langID="1040" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="BpmnActivityType" v:lbl="ActivityType" v:prompt="" v:type="1"
+						v:format="Attività;Processo secondario" v:sortKey="" v:invis="true" v:ask="false" v:langID="1040" v:cal="0"
+						v:val="VT4(Attività)"/>
+				<v:cp v:nameU="BpmnLoopType" v:lbl="LoopType" v:prompt="" v:type="1"
+						v:format="Nessuno;standard;parallelo a istanza multipla;sequenziale a istanza multipla" v:sortKey=""
+						v:invis="false" v:ask="false" v:langID="1040" v:cal="0" v:val="VT4(Nessuno)"/>
+				<v:cp v:nameU="BpmnTaskType" v:lbl="TaskType" v:prompt="" v:type="1"
+						v:format="Nessuno;servizio;ricezione;invio;utente;script;sunto;manuale;creazione istanza ricezione;regola di business"
+						v:sortKey="" v:invis="false" v:ask="false" v:langID="1040" v:cal="0" v:val="VT4(Nessuno)"/>
+				<v:cp v:nameU="BpmnScript" v:lbl="Script" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="true"
+						v:ask="false" v:langID="1040" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="BpmnInstantiate" v:lbl="Instantiate" v:prompt="" v:type="3" v:format="" v:sortKey="" v:invis="true"
+						v:ask="false" v:langID="1040" v:cal="0" v:val="VT0(0):5"/>
+				<v:cp v:nameU="BpmnSubProcessType" v:lbl="SubProcessType" v:prompt="" v:type="1"
+						v:format="Incorporato;Riutilizzabile;Riferimento" v:sortKey="" v:invis="true" v:ask="false" v:langID="1040"
+						v:cal="0" v:val="VT4(Incorporato)"/>
+				<v:cp v:nameU="BpmnIsCollapsed" v:lbl="IsCollapsed" v:prompt="" v:type="3" v:format="" v:sortKey="" v:invis="true"
+						v:ask="false" v:langID="1040" v:cal="0" v:val="VT0(0):5"/>
+				<v:cp v:nameU="BpmnIsATransaction" v:lbl="IsATransaction" v:prompt="" v:type="3" v:format="" v:sortKey=""
+						v:invis="true" v:ask="false" v:langID="1040" v:cal="0" v:val="VT0(0):5"/>
+				<v:cp v:nameU="BpmnIsForCompensation" v:lbl="IsForCompensation" v:prompt="" v:type="3" v:format="" v:sortKey=""
+						v:invis="false" v:ask="false" v:langID="1040" v:cal="0" v:val="VT0(0):5"/>
+				<v:cp v:nameU="BpmnElementType" v:lbl="ElementType" v:prompt="" v:type="1"
+						v:format="Processo secondario;Evento;Gateway;Diagramma di processo;Pool;Corsia;Elemento;Oggetto di connessione"
+						v:sortKey="" v:invis="true" v:ask="false" v:langID="1040" v:cal="0" v:val="VT4(Processo secondario)"/>
+				<v:cp v:nameU="BpmnAdHoc" v:lbl="AdHoc" v:prompt="" v:type="3" v:format="" v:sortKey="" v:invis="true"
+						v:ask="false" v:langID="1040" v:cal="0" v:val="VT0(0):5"/>
+				<v:cp v:nameU="BpmnAdHocOrdering" v:lbl="AdHocOrdering" v:prompt="" v:type="1" v:format="Sequenziale;Parallela"
+						v:sortKey="" v:invis="true" v:ask="false" v:langID="1040" v:cal="0" v:val="VT4(Parallela)"/>
+				<v:cp v:nameU="BpmnBoundaryType" v:lbl="Tipo di limite" v:prompt="" v:type="1" v:format="Predefinita;Chiamata"
+						v:sortKey="" v:invis="false" v:ask="false" v:langID="1040" v:cal="0" v:val="VT4(Predefinita)"/>
+				<v:cp v:nameU="BpmnName" v:lbl="" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false" v:ask="false"
+						v:langID="0" v:cal="0" v:val="VT4(User)"/>
+			</v:custProps>
+			<v:userDefs>
+				<v:ud v:nameU="BpmnNumIconsVisible" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="BpmnIsExtendedSubProcess" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="msvStructureType" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="msvSDContainerResize" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="msvShapeCategories" v:prompt="" v:val="VT4(Task)"/>
+				<v:ud v:nameU="BpmnIconHeight" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+				<v:ud v:nameU="BpmnIconPinY" v:prompt="" v:val="VT0(0.11811023622047):24"/>
+				<v:ud v:nameU="BpmnBoundaryType" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="DefaultWidth" v:prompt="" v:val="VT0(0.98425196850394):24"/>
+				<v:ud v:nameU="DefaultHeight" v:prompt="" v:val="VT0(0.78740157480315):24"/>
+				<v:ud v:nameU="ResizeTxtHeight" v:prompt="" v:val="VT0(0.78740157480315):24"/>
+				<v:ud v:nameU="IsInstance" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsInstance" v:prompt="" v:val="VT0(1):5"/>
+			</v:userDefs>
+			<title>Attività.24</title>
+			<desc>User</desc>
+			<g id="shape25-99" v:mID="25" v:groupContext="shape" v:layerMember="0">
+				<title>Foglio.25</title>
+				<rect x="0" y="452.355" width="71.7165" height="33.1759" rx="5.66929" ry="5.66929" class="st10"/>
+			</g>
+			<g id="group26-101" v:mID="26" v:groupContext="group" v:layerMember="0">
+				<title>Foglio.26</title>
+				<g id="shape27-102" v:mID="27" v:groupContext="shape" v:layerMember="0">
+					<title>Foglio.27</title>
+					<rect x="0" y="452.355" width="71.7165" height="33.1759" rx="2.12598" ry="2.12598" class="st11"/>
+				</g>
+				<g id="shape28-104" v:mID="28" v:groupContext="shape" v:layerMember="0" transform="translate(1.8,-1.8)">
+					<title>Foglio.28</title>
+					<rect x="0" y="455.955" width="68.1165" height="29.5759" rx="2.12598" ry="2.12598" class="st11"/>
+				</g>
+			</g>
+			<g id="shape29-106" v:mID="29" v:groupContext="shape" v:layerMember="0" transform="translate(36.669,-2.12598)">
+				<title>Foglio.29</title>
+				<v:userDefs>
+					<v:ud v:nameU="BpmnIconPosition" v:prompt="" v:val="VT0(1):26"/>
+					<v:ud v:nameU="BpmnIconWidth" v:prompt="" v:val="VT0(0.18):26"/>
+				</v:userDefs>
+			</g>
+			<g id="group30-108" transform="translate(37.029,-2.83465)" v:mID="30" v:groupContext="group" v:layerMember="0">
+				<v:userDefs>
+					<v:ud v:nameU="BpmnIconPosition" v:prompt="" v:val="VT0(1):26"/>
+					<v:ud v:nameU="BpmnIconWidth" v:prompt="" v:val="VT0(0.19):26"/>
+				</v:userDefs>
+				<title>Foglio.30</title>
+				<g id="shape31-109" v:mID="31" v:groupContext="shape" v:layerMember="0">
+					<title>Foglio.31</title>
+					<rect x="0" y="474.193" width="11.3386" height="11.3386" class="st3"/>
+				</g>
+				<g id="shape32-111" v:mID="32" v:groupContext="shape" v:layerMember="0" transform="translate(2.83465,-2.83465)">
+					<title>Foglio.32</title>
+				</g>
+			</g>
+			<g id="shape33-113" v:mID="33" v:groupContext="shape" v:layerMember="0" transform="translate(37.029,-3.68504)">
+				<title>Foglio.33</title>
+				<v:userDefs>
+					<v:ud v:nameU="BpmnIconPosition" v:prompt="" v:val="VT0(1):26"/>
+					<v:ud v:nameU="BpmnIconWidth" v:prompt="" v:val="VT0(0.19):26"/>
+				</v:userDefs>
+			</g>
+			<g id="shape34-115" v:mID="34" v:groupContext="shape" v:layerMember="0" transform="translate(38.143,-3.68504)">
+				<title>Foglio.34</title>
+				<v:userDefs>
+					<v:ud v:nameU="BpmnIconPosition" v:prompt="" v:val="VT0(1):26"/>
+					<v:ud v:nameU="BpmnIconWidth" v:prompt="" v:val="VT0(0.18):26"/>
+				</v:userDefs>
+			</g>
+			<g id="group35-117" transform="translate(36.669,-2.83465)" v:mID="35" v:groupContext="group" v:layerMember="0">
+				<v:userDefs>
+					<v:ud v:nameU="BpmnIconPosition" v:prompt="" v:val="VT0(1):26"/>
+					<v:ud v:nameU="BpmnIconWidth" v:prompt="" v:val="VT0(0.18):26"/>
+				</v:userDefs>
+				<title>Foglio.35</title>
+				<g id="shape36-118" v:mID="36" v:groupContext="shape" v:layerMember="0"
+						transform="translate(9.4603,960.725) rotate(179.753)">
+					<title>Foglio.36</title>
+				</g>
+			</g>
+			<g id="shape37-121" v:mID="37" v:groupContext="shape" v:layerMember="0" transform="translate(3.50394,-19.6719)">
+				<title>Foglio.37</title>
+			</g>
+			<g id="shape38-123" v:mID="38" v:groupContext="shape" v:layerMember="0" transform="translate(3.00394,-19.1719)">
+				<title>Foglio.38</title>
+			</g>
+			<g id="group39-125" transform="translate(2.50394,-20.6719)" v:mID="39" v:groupContext="group" v:layerMember="0">
+				<title>Foglio.39</title>
+				<g id="shape40-126" v:mID="40" v:groupContext="shape" v:layerMember="0">
+					<title>Foglio.40</title>
+					<rect x="0" y="477.531" width="12" height="8" class="st5"/>
+				</g>
+				<g id="shape41-128" v:mID="41" v:groupContext="shape" v:layerMember="0" transform="translate(-1.9984E-15,-4.20339)">
+					<title>Foglio.41</title>
+				</g>
+			</g>
+			<g id="shape42-130" v:mID="42" v:groupContext="shape" v:layerMember="0" transform="translate(2.50394,-20.6719)">
+				<title>Foglio.42</title>
+			</g>
+			<g id="shape43-132" v:mID="43" v:groupContext="shape" v:layerMember="0" transform="translate(3.50394,-19.6719)">
+				<title>Foglio.43</title>
+			</g>
+			<g id="shape44-134" v:mID="44" v:groupContext="shape" v:layerMember="0" transform="translate(3.00394,-20.6719)">
+				<title>Foglio.44</title>
+			</g>
+			<g id="shape45-136" v:mID="45" v:groupContext="shape" v:layerMember="0" transform="translate(3.00394,-20.6719)">
+				<title>Foglio.45</title>
+			</g>
+			<g id="shape46-138" v:mID="46" v:groupContext="shape" v:layerMember="0"
+					transform="translate(-438.374,481.223) rotate(-90)">
+				<title>Foglio.46</title>
+				<v:userDefs>
+					<v:ud v:nameU="BpmnIconPosition" v:prompt="" v:val="VT0(1):26"/>
+					<v:ud v:nameU="BpmnIconWidth" v:prompt="" v:val="VT0(0.18):26"/>
+				</v:userDefs>
+			</g>
+			<g id="shape24-140" v:mID="24" v:groupContext="groupContent" v:layerMember="0">
+				<v:textBlock v:margins="rect(2,2,2,2)" v:tabSpace="42.5197"/>
+				<v:textRect cx="35.8583" cy="468.943" width="71.72" height="0"/>
+				<text x="26.31" y="471.94" class="st9" v:langID="1040"><v:paragraph v:horizAlign="1"/><v:tabList/>User</text>			</g>
+		</g>
+		<g id="group47-142" transform="translate(266.613,-377.123)" v:mID="47" v:groupContext="group" v:layerMember="0">
+			<v:custProps>
+				<v:cp v:nameU="BpmnId" v:lbl="Id" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="true" v:ask="false"
+						v:langID="1040" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="BpmnCategories" v:lbl="Categories" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1040" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="BpmnDocumentation" v:lbl="Documentation" v:prompt="" v:type="0" v:format="" v:sortKey=""
+						v:invis="false" v:ask="false" v:langID="1040" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="BpmnName" v:lbl="Name" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="true" v:ask="false"
+						v:langID="1040" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="BpmnActivityType" v:lbl="ActivityType" v:prompt="" v:type="1"
+						v:format="Attività;Processo secondario" v:sortKey="" v:invis="true" v:ask="false" v:langID="1040" v:cal="0"
+						v:val="VT4(Attività)"/>
+				<v:cp v:nameU="BpmnLoopType" v:lbl="LoopType" v:prompt="" v:type="1"
+						v:format="Nessuno;standard;parallelo a istanza multipla;sequenziale a istanza multipla" v:sortKey=""
+						v:invis="false" v:ask="false" v:langID="1040" v:cal="0" v:val="VT4(Nessuno)"/>
+				<v:cp v:nameU="BpmnTaskType" v:lbl="TaskType" v:prompt="" v:type="1"
+						v:format="Nessuno;servizio;ricezione;invio;utente;script;sunto;manuale;creazione istanza ricezione;regola di business"
+						v:sortKey="" v:invis="false" v:ask="false" v:langID="1040" v:cal="0" v:val="VT4(Nessuno)"/>
+				<v:cp v:nameU="BpmnScript" v:lbl="Script" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="true"
+						v:ask="false" v:langID="1040" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="BpmnInstantiate" v:lbl="Instantiate" v:prompt="" v:type="3" v:format="" v:sortKey="" v:invis="true"
+						v:ask="false" v:langID="1040" v:cal="0" v:val="VT0(0):5"/>
+				<v:cp v:nameU="BpmnSubProcessType" v:lbl="SubProcessType" v:prompt="" v:type="1"
+						v:format="Incorporato;Riutilizzabile;Riferimento" v:sortKey="" v:invis="true" v:ask="false" v:langID="1040"
+						v:cal="0" v:val="VT4(Incorporato)"/>
+				<v:cp v:nameU="BpmnIsCollapsed" v:lbl="IsCollapsed" v:prompt="" v:type="3" v:format="" v:sortKey="" v:invis="true"
+						v:ask="false" v:langID="1040" v:cal="0" v:val="VT0(0):5"/>
+				<v:cp v:nameU="BpmnIsATransaction" v:lbl="IsATransaction" v:prompt="" v:type="3" v:format="" v:sortKey=""
+						v:invis="true" v:ask="false" v:langID="1040" v:cal="0" v:val="VT0(0):5"/>
+				<v:cp v:nameU="BpmnIsForCompensation" v:lbl="IsForCompensation" v:prompt="" v:type="3" v:format="" v:sortKey=""
+						v:invis="false" v:ask="false" v:langID="1040" v:cal="0" v:val="VT0(0):5"/>
+				<v:cp v:nameU="BpmnElementType" v:lbl="ElementType" v:prompt="" v:type="1"
+						v:format="Processo secondario;Evento;Gateway;Diagramma di processo;Pool;Corsia;Elemento;Oggetto di connessione"
+						v:sortKey="" v:invis="true" v:ask="false" v:langID="1040" v:cal="0" v:val="VT4(Processo secondario)"/>
+				<v:cp v:nameU="BpmnAdHoc" v:lbl="AdHoc" v:prompt="" v:type="3" v:format="" v:sortKey="" v:invis="true"
+						v:ask="false" v:langID="1040" v:cal="0" v:val="VT0(0):5"/>
+				<v:cp v:nameU="BpmnAdHocOrdering" v:lbl="AdHocOrdering" v:prompt="" v:type="1" v:format="Sequenziale;Parallela"
+						v:sortKey="" v:invis="true" v:ask="false" v:langID="1040" v:cal="0" v:val="VT4(Parallela)"/>
+				<v:cp v:nameU="BpmnBoundaryType" v:lbl="Tipo di limite" v:prompt="" v:type="1" v:format="Predefinita;Chiamata"
+						v:sortKey="" v:invis="false" v:ask="false" v:langID="1040" v:cal="0" v:val="VT4(Predefinita)"/>
+				<v:cp v:nameU="BpmnName" v:lbl="" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false" v:ask="false"
+						v:langID="0" v:cal="0" v:val="VT4(Authorization&#10;Endpoint)"/>
+			</v:custProps>
+			<v:userDefs>
+				<v:ud v:nameU="BpmnNumIconsVisible" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="BpmnIsExtendedSubProcess" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="msvStructureType" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="msvSDContainerResize" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="msvShapeCategories" v:prompt="" v:val="VT4(Task)"/>
+				<v:ud v:nameU="BpmnIconHeight" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+				<v:ud v:nameU="BpmnIconPinY" v:prompt="" v:val="VT0(0.11811023622047):24"/>
+				<v:ud v:nameU="BpmnBoundaryType" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="DefaultWidth" v:prompt="" v:val="VT0(0.98425196850394):24"/>
+				<v:ud v:nameU="DefaultHeight" v:prompt="" v:val="VT0(0.78740157480315):24"/>
+				<v:ud v:nameU="ResizeTxtHeight" v:prompt="" v:val="VT0(0.78740157480315):24"/>
+				<v:ud v:nameU="IsInstance" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsInstance" v:prompt="" v:val="VT0(1):5"/>
+			</v:userDefs>
+			<title>Attività.47</title>
+			<desc>Authorization Endpoint</desc>
+			<g id="shape48-143" v:mID="48" v:groupContext="shape" v:layerMember="0">
+				<title>Foglio.48</title>
+				<rect x="0" y="452.355" width="71.7165" height="33.1759" rx="5.66929" ry="5.66929" class="st12"/>
+			</g>
+			<g id="group49-145" v:mID="49" v:groupContext="group" v:layerMember="0">
+				<title>Foglio.49</title>
+				<g id="shape50-146" v:mID="50" v:groupContext="shape" v:layerMember="0">
+					<title>Foglio.50</title>
+					<rect x="0" y="452.355" width="71.7165" height="33.1759" rx="2.12598" ry="2.12598" class="st13"/>
+				</g>
+				<g id="shape51-148" v:mID="51" v:groupContext="shape" v:layerMember="0" transform="translate(1.8,-1.8)">
+					<title>Foglio.51</title>
+					<rect x="0" y="455.955" width="68.1165" height="29.5759" rx="2.12598" ry="2.12598" class="st13"/>
+				</g>
+			</g>
+			<g id="shape52-150" v:mID="52" v:groupContext="shape" v:layerMember="0" transform="translate(36.669,-2.12598)">
+				<title>Foglio.52</title>
+				<v:userDefs>
+					<v:ud v:nameU="BpmnIconPosition" v:prompt="" v:val="VT0(1):26"/>
+					<v:ud v:nameU="BpmnIconWidth" v:prompt="" v:val="VT0(0.18):26"/>
+				</v:userDefs>
+			</g>
+			<g id="group53-152" transform="translate(37.029,-2.83465)" v:mID="53" v:groupContext="group" v:layerMember="0">
+				<v:userDefs>
+					<v:ud v:nameU="BpmnIconPosition" v:prompt="" v:val="VT0(1):26"/>
+					<v:ud v:nameU="BpmnIconWidth" v:prompt="" v:val="VT0(0.19):26"/>
+				</v:userDefs>
+				<title>Foglio.53</title>
+				<g id="shape54-153" v:mID="54" v:groupContext="shape" v:layerMember="0">
+					<title>Foglio.54</title>
+					<rect x="0" y="474.193" width="11.3386" height="11.3386" class="st3"/>
+				</g>
+				<g id="shape55-155" v:mID="55" v:groupContext="shape" v:layerMember="0" transform="translate(2.83465,-2.83465)">
+					<title>Foglio.55</title>
+				</g>
+			</g>
+			<g id="shape56-157" v:mID="56" v:groupContext="shape" v:layerMember="0" transform="translate(37.029,-3.68504)">
+				<title>Foglio.56</title>
+				<v:userDefs>
+					<v:ud v:nameU="BpmnIconPosition" v:prompt="" v:val="VT0(1):26"/>
+					<v:ud v:nameU="BpmnIconWidth" v:prompt="" v:val="VT0(0.19):26"/>
+				</v:userDefs>
+			</g>
+			<g id="shape57-159" v:mID="57" v:groupContext="shape" v:layerMember="0" transform="translate(38.143,-3.68504)">
+				<title>Foglio.57</title>
+				<v:userDefs>
+					<v:ud v:nameU="BpmnIconPosition" v:prompt="" v:val="VT0(1):26"/>
+					<v:ud v:nameU="BpmnIconWidth" v:prompt="" v:val="VT0(0.18):26"/>
+				</v:userDefs>
+			</g>
+			<g id="group58-161" transform="translate(36.669,-2.83465)" v:mID="58" v:groupContext="group" v:layerMember="0">
+				<v:userDefs>
+					<v:ud v:nameU="BpmnIconPosition" v:prompt="" v:val="VT0(1):26"/>
+					<v:ud v:nameU="BpmnIconWidth" v:prompt="" v:val="VT0(0.18):26"/>
+				</v:userDefs>
+				<title>Foglio.58</title>
+				<g id="shape59-162" v:mID="59" v:groupContext="shape" v:layerMember="0"
+						transform="translate(9.4603,960.725) rotate(179.753)">
+					<title>Foglio.59</title>
+				</g>
+			</g>
+			<g id="shape60-165" v:mID="60" v:groupContext="shape" v:layerMember="0" transform="translate(3.50394,-19.6719)">
+				<title>Foglio.60</title>
+			</g>
+			<g id="shape61-167" v:mID="61" v:groupContext="shape" v:layerMember="0" transform="translate(3.00394,-19.1719)">
+				<title>Foglio.61</title>
+			</g>
+			<g id="group62-169" transform="translate(2.50394,-20.6719)" v:mID="62" v:groupContext="group" v:layerMember="0">
+				<title>Foglio.62</title>
+				<g id="shape63-170" v:mID="63" v:groupContext="shape" v:layerMember="0">
+					<title>Foglio.63</title>
+					<rect x="0" y="477.531" width="12" height="8" class="st5"/>
+				</g>
+				<g id="shape64-172" v:mID="64" v:groupContext="shape" v:layerMember="0" transform="translate(-1.9984E-15,-4.20339)">
+					<title>Foglio.64</title>
+				</g>
+			</g>
+			<g id="shape65-174" v:mID="65" v:groupContext="shape" v:layerMember="0" transform="translate(2.50394,-20.6719)">
+				<title>Foglio.65</title>
+			</g>
+			<g id="shape66-176" v:mID="66" v:groupContext="shape" v:layerMember="0" transform="translate(3.50394,-19.6719)">
+				<title>Foglio.66</title>
+			</g>
+			<g id="shape67-178" v:mID="67" v:groupContext="shape" v:layerMember="0" transform="translate(3.00394,-20.6719)">
+				<title>Foglio.67</title>
+			</g>
+			<g id="shape68-180" v:mID="68" v:groupContext="shape" v:layerMember="0" transform="translate(3.00394,-20.6719)">
+				<title>Foglio.68</title>
+			</g>
+			<g id="shape69-182" v:mID="69" v:groupContext="shape" v:layerMember="0"
+					transform="translate(-438.374,481.223) rotate(-90)">
+				<title>Foglio.69</title>
+				<v:userDefs>
+					<v:ud v:nameU="BpmnIconPosition" v:prompt="" v:val="VT0(1):26"/>
+					<v:ud v:nameU="BpmnIconWidth" v:prompt="" v:val="VT0(0.18):26"/>
+				</v:userDefs>
+			</g>
+			<g id="shape47-184" v:mID="47" v:groupContext="groupContent" v:layerMember="0">
+				<v:textBlock v:margins="rect(2,2,2,2)" v:tabSpace="42.5197"/>
+				<v:textRect cx="35.8583" cy="468.943" width="71.72" height="0"/>
+				<text x="7.25" y="465.94" class="st9" v:langID="1040"><v:paragraph v:horizAlign="1"/><v:tabList/>Authorization<v:newlineChar/><tspan
+							x="17.04" dy="1.2em" class="st14">Endpoint</tspan></text>			</g>
+		</g>
+		<g id="group70-187" transform="translate(352.078,-377.123)" v:mID="70" v:groupContext="group" v:layerMember="0">
+			<v:custProps>
+				<v:cp v:nameU="BpmnId" v:lbl="Id" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="true" v:ask="false"
+						v:langID="1040" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="BpmnCategories" v:lbl="Categories" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1040" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="BpmnDocumentation" v:lbl="Documentation" v:prompt="" v:type="0" v:format="" v:sortKey=""
+						v:invis="false" v:ask="false" v:langID="1040" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="BpmnName" v:lbl="Name" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="true" v:ask="false"
+						v:langID="1040" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="BpmnActivityType" v:lbl="ActivityType" v:prompt="" v:type="1"
+						v:format="Attività;Processo secondario" v:sortKey="" v:invis="true" v:ask="false" v:langID="1040" v:cal="0"
+						v:val="VT4(Attività)"/>
+				<v:cp v:nameU="BpmnLoopType" v:lbl="LoopType" v:prompt="" v:type="1"
+						v:format="Nessuno;standard;parallelo a istanza multipla;sequenziale a istanza multipla" v:sortKey=""
+						v:invis="false" v:ask="false" v:langID="1040" v:cal="0" v:val="VT4(Nessuno)"/>
+				<v:cp v:nameU="BpmnTaskType" v:lbl="TaskType" v:prompt="" v:type="1"
+						v:format="Nessuno;servizio;ricezione;invio;utente;script;sunto;manuale;creazione istanza ricezione;regola di business"
+						v:sortKey="" v:invis="false" v:ask="false" v:langID="1040" v:cal="0" v:val="VT4(Nessuno)"/>
+				<v:cp v:nameU="BpmnScript" v:lbl="Script" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="true"
+						v:ask="false" v:langID="1040" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="BpmnInstantiate" v:lbl="Instantiate" v:prompt="" v:type="3" v:format="" v:sortKey="" v:invis="true"
+						v:ask="false" v:langID="1040" v:cal="0" v:val="VT0(0):5"/>
+				<v:cp v:nameU="BpmnSubProcessType" v:lbl="SubProcessType" v:prompt="" v:type="1"
+						v:format="Incorporato;Riutilizzabile;Riferimento" v:sortKey="" v:invis="true" v:ask="false" v:langID="1040"
+						v:cal="0" v:val="VT4(Incorporato)"/>
+				<v:cp v:nameU="BpmnIsCollapsed" v:lbl="IsCollapsed" v:prompt="" v:type="3" v:format="" v:sortKey="" v:invis="true"
+						v:ask="false" v:langID="1040" v:cal="0" v:val="VT0(0):5"/>
+				<v:cp v:nameU="BpmnIsATransaction" v:lbl="IsATransaction" v:prompt="" v:type="3" v:format="" v:sortKey=""
+						v:invis="true" v:ask="false" v:langID="1040" v:cal="0" v:val="VT0(0):5"/>
+				<v:cp v:nameU="BpmnIsForCompensation" v:lbl="IsForCompensation" v:prompt="" v:type="3" v:format="" v:sortKey=""
+						v:invis="false" v:ask="false" v:langID="1040" v:cal="0" v:val="VT0(0):5"/>
+				<v:cp v:nameU="BpmnElementType" v:lbl="ElementType" v:prompt="" v:type="1"
+						v:format="Processo secondario;Evento;Gateway;Diagramma di processo;Pool;Corsia;Elemento;Oggetto di connessione"
+						v:sortKey="" v:invis="true" v:ask="false" v:langID="1040" v:cal="0" v:val="VT4(Processo secondario)"/>
+				<v:cp v:nameU="BpmnAdHoc" v:lbl="AdHoc" v:prompt="" v:type="3" v:format="" v:sortKey="" v:invis="true"
+						v:ask="false" v:langID="1040" v:cal="0" v:val="VT0(0):5"/>
+				<v:cp v:nameU="BpmnAdHocOrdering" v:lbl="AdHocOrdering" v:prompt="" v:type="1" v:format="Sequenziale;Parallela"
+						v:sortKey="" v:invis="true" v:ask="false" v:langID="1040" v:cal="0" v:val="VT4(Parallela)"/>
+				<v:cp v:nameU="BpmnBoundaryType" v:lbl="Tipo di limite" v:prompt="" v:type="1" v:format="Predefinita;Chiamata"
+						v:sortKey="" v:invis="false" v:ask="false" v:langID="1040" v:cal="0" v:val="VT4(Predefinita)"/>
+				<v:cp v:nameU="BpmnName" v:lbl="" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false" v:ask="false"
+						v:langID="0" v:cal="0" v:val="VT4(Token&#10;Endpoint)"/>
+			</v:custProps>
+			<v:userDefs>
+				<v:ud v:nameU="BpmnNumIconsVisible" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="BpmnIsExtendedSubProcess" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="msvStructureType" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="msvSDContainerResize" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="msvShapeCategories" v:prompt="" v:val="VT4(Task)"/>
+				<v:ud v:nameU="BpmnIconHeight" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+				<v:ud v:nameU="BpmnIconPinY" v:prompt="" v:val="VT0(0.11811023622047):24"/>
+				<v:ud v:nameU="BpmnBoundaryType" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="DefaultWidth" v:prompt="" v:val="VT0(0.98425196850394):24"/>
+				<v:ud v:nameU="DefaultHeight" v:prompt="" v:val="VT0(0.78740157480315):24"/>
+				<v:ud v:nameU="ResizeTxtHeight" v:prompt="" v:val="VT0(0.78740157480315):24"/>
+				<v:ud v:nameU="IsInstance" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsInstance" v:prompt="" v:val="VT0(1):5"/>
+			</v:userDefs>
+			<title>Attività.70</title>
+			<desc>Token Endpoint</desc>
+			<g id="shape71-188" v:mID="71" v:groupContext="shape" v:layerMember="0">
+				<title>Foglio.71</title>
+				<rect x="0" y="452.355" width="71.7165" height="33.1759" rx="5.66929" ry="5.66929" class="st12"/>
+			</g>
+			<g id="group72-190" v:mID="72" v:groupContext="group" v:layerMember="0">
+				<title>Foglio.72</title>
+				<g id="shape73-191" v:mID="73" v:groupContext="shape" v:layerMember="0">
+					<title>Foglio.73</title>
+					<rect x="0" y="452.355" width="71.7165" height="33.1759" rx="2.12598" ry="2.12598" class="st13"/>
+				</g>
+				<g id="shape74-193" v:mID="74" v:groupContext="shape" v:layerMember="0" transform="translate(1.8,-1.8)">
+					<title>Foglio.74</title>
+					<rect x="0" y="455.955" width="68.1165" height="29.5759" rx="2.12598" ry="2.12598" class="st13"/>
+				</g>
+			</g>
+			<g id="shape75-195" v:mID="75" v:groupContext="shape" v:layerMember="0" transform="translate(36.669,-2.12598)">
+				<title>Foglio.75</title>
+				<v:userDefs>
+					<v:ud v:nameU="BpmnIconPosition" v:prompt="" v:val="VT0(1):26"/>
+					<v:ud v:nameU="BpmnIconWidth" v:prompt="" v:val="VT0(0.18):26"/>
+				</v:userDefs>
+			</g>
+			<g id="group76-197" transform="translate(37.029,-2.83465)" v:mID="76" v:groupContext="group" v:layerMember="0">
+				<v:userDefs>
+					<v:ud v:nameU="BpmnIconPosition" v:prompt="" v:val="VT0(1):26"/>
+					<v:ud v:nameU="BpmnIconWidth" v:prompt="" v:val="VT0(0.19):26"/>
+				</v:userDefs>
+				<title>Foglio.76</title>
+				<g id="shape77-198" v:mID="77" v:groupContext="shape" v:layerMember="0">
+					<title>Foglio.77</title>
+					<rect x="0" y="474.193" width="11.3386" height="11.3386" class="st3"/>
+				</g>
+				<g id="shape78-200" v:mID="78" v:groupContext="shape" v:layerMember="0" transform="translate(2.83465,-2.83465)">
+					<title>Foglio.78</title>
+				</g>
+			</g>
+			<g id="shape79-202" v:mID="79" v:groupContext="shape" v:layerMember="0" transform="translate(37.029,-3.68504)">
+				<title>Foglio.79</title>
+				<v:userDefs>
+					<v:ud v:nameU="BpmnIconPosition" v:prompt="" v:val="VT0(1):26"/>
+					<v:ud v:nameU="BpmnIconWidth" v:prompt="" v:val="VT0(0.19):26"/>
+				</v:userDefs>
+			</g>
+			<g id="shape80-204" v:mID="80" v:groupContext="shape" v:layerMember="0" transform="translate(38.143,-3.68504)">
+				<title>Foglio.80</title>
+				<v:userDefs>
+					<v:ud v:nameU="BpmnIconPosition" v:prompt="" v:val="VT0(1):26"/>
+					<v:ud v:nameU="BpmnIconWidth" v:prompt="" v:val="VT0(0.18):26"/>
+				</v:userDefs>
+			</g>
+			<g id="group81-206" transform="translate(36.669,-2.83465)" v:mID="81" v:groupContext="group" v:layerMember="0">
+				<v:userDefs>
+					<v:ud v:nameU="BpmnIconPosition" v:prompt="" v:val="VT0(1):26"/>
+					<v:ud v:nameU="BpmnIconWidth" v:prompt="" v:val="VT0(0.18):26"/>
+				</v:userDefs>
+				<title>Foglio.81</title>
+				<g id="shape82-207" v:mID="82" v:groupContext="shape" v:layerMember="0"
+						transform="translate(9.4603,960.725) rotate(179.753)">
+					<title>Foglio.82</title>
+				</g>
+			</g>
+			<g id="shape83-210" v:mID="83" v:groupContext="shape" v:layerMember="0" transform="translate(3.50394,-19.6719)">
+				<title>Foglio.83</title>
+			</g>
+			<g id="shape84-212" v:mID="84" v:groupContext="shape" v:layerMember="0" transform="translate(3.00394,-19.1719)">
+				<title>Foglio.84</title>
+			</g>
+			<g id="group85-214" transform="translate(2.50394,-20.6719)" v:mID="85" v:groupContext="group" v:layerMember="0">
+				<title>Foglio.85</title>
+				<g id="shape86-215" v:mID="86" v:groupContext="shape" v:layerMember="0">
+					<title>Foglio.86</title>
+					<rect x="0" y="477.531" width="12" height="8" class="st5"/>
+				</g>
+				<g id="shape87-217" v:mID="87" v:groupContext="shape" v:layerMember="0" transform="translate(-1.9984E-15,-4.20339)">
+					<title>Foglio.87</title>
+				</g>
+			</g>
+			<g id="shape88-219" v:mID="88" v:groupContext="shape" v:layerMember="0" transform="translate(2.50394,-20.6719)">
+				<title>Foglio.88</title>
+			</g>
+			<g id="shape89-221" v:mID="89" v:groupContext="shape" v:layerMember="0" transform="translate(3.50394,-19.6719)">
+				<title>Foglio.89</title>
+			</g>
+			<g id="shape90-223" v:mID="90" v:groupContext="shape" v:layerMember="0" transform="translate(3.00394,-20.6719)">
+				<title>Foglio.90</title>
+			</g>
+			<g id="shape91-225" v:mID="91" v:groupContext="shape" v:layerMember="0" transform="translate(3.00394,-20.6719)">
+				<title>Foglio.91</title>
+			</g>
+			<g id="shape92-227" v:mID="92" v:groupContext="shape" v:layerMember="0"
+					transform="translate(-438.374,481.223) rotate(-90)">
+				<title>Foglio.92</title>
+				<v:userDefs>
+					<v:ud v:nameU="BpmnIconPosition" v:prompt="" v:val="VT0(1):26"/>
+					<v:ud v:nameU="BpmnIconWidth" v:prompt="" v:val="VT0(0.18):26"/>
+				</v:userDefs>
+			</g>
+			<g id="shape70-229" v:mID="70" v:groupContext="groupContent" v:layerMember="0">
+				<v:textBlock v:margins="rect(2,2,2,2)" v:tabSpace="42.5197"/>
+				<v:textRect cx="35.8583" cy="468.943" width="71.72" height="0"/>
+				<text x="23.09" y="465.94" class="st9" v:langID="1040"><v:paragraph v:horizAlign="1"/><v:tabList/>Token<v:newlineChar/><tspan
+							x="17.04" dy="1.2em" class="st14">Endpoint</tspan></text>			</g>
+		</g>
+		<g id="group93-232" transform="translate(437.543,-377.123)" v:mID="93" v:groupContext="group" v:layerMember="0">
+			<v:custProps>
+				<v:cp v:nameU="BpmnId" v:lbl="Id" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="true" v:ask="false"
+						v:langID="1040" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="BpmnCategories" v:lbl="Categories" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1040" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="BpmnDocumentation" v:lbl="Documentation" v:prompt="" v:type="0" v:format="" v:sortKey=""
+						v:invis="false" v:ask="false" v:langID="1040" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="BpmnName" v:lbl="Name" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="true" v:ask="false"
+						v:langID="1040" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="BpmnActivityType" v:lbl="ActivityType" v:prompt="" v:type="1"
+						v:format="Attività;Processo secondario" v:sortKey="" v:invis="true" v:ask="false" v:langID="1040" v:cal="0"
+						v:val="VT4(Attività)"/>
+				<v:cp v:nameU="BpmnLoopType" v:lbl="LoopType" v:prompt="" v:type="1"
+						v:format="Nessuno;standard;parallelo a istanza multipla;sequenziale a istanza multipla" v:sortKey=""
+						v:invis="false" v:ask="false" v:langID="1040" v:cal="0" v:val="VT4(Nessuno)"/>
+				<v:cp v:nameU="BpmnTaskType" v:lbl="TaskType" v:prompt="" v:type="1"
+						v:format="Nessuno;servizio;ricezione;invio;utente;script;sunto;manuale;creazione istanza ricezione;regola di business"
+						v:sortKey="" v:invis="false" v:ask="false" v:langID="1040" v:cal="0" v:val="VT4(Nessuno)"/>
+				<v:cp v:nameU="BpmnScript" v:lbl="Script" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="true"
+						v:ask="false" v:langID="1040" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="BpmnInstantiate" v:lbl="Instantiate" v:prompt="" v:type="3" v:format="" v:sortKey="" v:invis="true"
+						v:ask="false" v:langID="1040" v:cal="0" v:val="VT0(0):5"/>
+				<v:cp v:nameU="BpmnSubProcessType" v:lbl="SubProcessType" v:prompt="" v:type="1"
+						v:format="Incorporato;Riutilizzabile;Riferimento" v:sortKey="" v:invis="true" v:ask="false" v:langID="1040"
+						v:cal="0" v:val="VT4(Incorporato)"/>
+				<v:cp v:nameU="BpmnIsCollapsed" v:lbl="IsCollapsed" v:prompt="" v:type="3" v:format="" v:sortKey="" v:invis="true"
+						v:ask="false" v:langID="1040" v:cal="0" v:val="VT0(0):5"/>
+				<v:cp v:nameU="BpmnIsATransaction" v:lbl="IsATransaction" v:prompt="" v:type="3" v:format="" v:sortKey=""
+						v:invis="true" v:ask="false" v:langID="1040" v:cal="0" v:val="VT0(0):5"/>
+				<v:cp v:nameU="BpmnIsForCompensation" v:lbl="IsForCompensation" v:prompt="" v:type="3" v:format="" v:sortKey=""
+						v:invis="false" v:ask="false" v:langID="1040" v:cal="0" v:val="VT0(0):5"/>
+				<v:cp v:nameU="BpmnElementType" v:lbl="ElementType" v:prompt="" v:type="1"
+						v:format="Processo secondario;Evento;Gateway;Diagramma di processo;Pool;Corsia;Elemento;Oggetto di connessione"
+						v:sortKey="" v:invis="true" v:ask="false" v:langID="1040" v:cal="0" v:val="VT4(Processo secondario)"/>
+				<v:cp v:nameU="BpmnAdHoc" v:lbl="AdHoc" v:prompt="" v:type="3" v:format="" v:sortKey="" v:invis="true"
+						v:ask="false" v:langID="1040" v:cal="0" v:val="VT0(0):5"/>
+				<v:cp v:nameU="BpmnAdHocOrdering" v:lbl="AdHocOrdering" v:prompt="" v:type="1" v:format="Sequenziale;Parallela"
+						v:sortKey="" v:invis="true" v:ask="false" v:langID="1040" v:cal="0" v:val="VT4(Parallela)"/>
+				<v:cp v:nameU="BpmnBoundaryType" v:lbl="Tipo di limite" v:prompt="" v:type="1" v:format="Predefinita;Chiamata"
+						v:sortKey="" v:invis="false" v:ask="false" v:langID="1040" v:cal="0" v:val="VT4(Predefinita)"/>
+				<v:cp v:nameU="BpmnName" v:lbl="" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false" v:ask="false"
+						v:langID="0" v:cal="0" v:val="VT4(UserInfo&#10;Endpoint)"/>
+			</v:custProps>
+			<v:userDefs>
+				<v:ud v:nameU="BpmnNumIconsVisible" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="BpmnIsExtendedSubProcess" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="msvStructureType" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="msvSDContainerResize" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="msvShapeCategories" v:prompt="" v:val="VT4(Task)"/>
+				<v:ud v:nameU="BpmnIconHeight" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+				<v:ud v:nameU="BpmnIconPinY" v:prompt="" v:val="VT0(0.11811023622047):24"/>
+				<v:ud v:nameU="BpmnBoundaryType" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="DefaultWidth" v:prompt="" v:val="VT0(0.98425196850394):24"/>
+				<v:ud v:nameU="DefaultHeight" v:prompt="" v:val="VT0(0.78740157480315):24"/>
+				<v:ud v:nameU="ResizeTxtHeight" v:prompt="" v:val="VT0(0.78740157480315):24"/>
+				<v:ud v:nameU="IsInstance" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsInstance" v:prompt="" v:val="VT0(1):5"/>
+			</v:userDefs>
+			<title>Attività.93</title>
+			<desc>UserInfo Endpoint</desc>
+			<g id="shape94-233" v:mID="94" v:groupContext="shape" v:layerMember="0">
+				<title>Foglio.94</title>
+				<rect x="0" y="452.355" width="71.7165" height="33.1759" rx="5.66929" ry="5.66929" class="st12"/>
+			</g>
+			<g id="group95-235" v:mID="95" v:groupContext="group" v:layerMember="0">
+				<title>Foglio.95</title>
+				<g id="shape96-236" v:mID="96" v:groupContext="shape" v:layerMember="0">
+					<title>Foglio.96</title>
+					<rect x="0" y="452.355" width="71.7165" height="33.1759" rx="2.12598" ry="2.12598" class="st13"/>
+				</g>
+				<g id="shape97-238" v:mID="97" v:groupContext="shape" v:layerMember="0" transform="translate(1.8,-1.8)">
+					<title>Foglio.97</title>
+					<rect x="0" y="455.955" width="68.1165" height="29.5759" rx="2.12598" ry="2.12598" class="st13"/>
+				</g>
+			</g>
+			<g id="shape98-240" v:mID="98" v:groupContext="shape" v:layerMember="0" transform="translate(36.669,-2.12598)">
+				<title>Foglio.98</title>
+				<v:userDefs>
+					<v:ud v:nameU="BpmnIconPosition" v:prompt="" v:val="VT0(1):26"/>
+					<v:ud v:nameU="BpmnIconWidth" v:prompt="" v:val="VT0(0.18):26"/>
+				</v:userDefs>
+			</g>
+			<g id="group99-242" transform="translate(37.029,-2.83465)" v:mID="99" v:groupContext="group" v:layerMember="0">
+				<v:userDefs>
+					<v:ud v:nameU="BpmnIconPosition" v:prompt="" v:val="VT0(1):26"/>
+					<v:ud v:nameU="BpmnIconWidth" v:prompt="" v:val="VT0(0.19):26"/>
+				</v:userDefs>
+				<title>Foglio.99</title>
+				<g id="shape100-243" v:mID="100" v:groupContext="shape" v:layerMember="0">
+					<title>Foglio.100</title>
+					<rect x="0" y="474.193" width="11.3386" height="11.3386" class="st3"/>
+				</g>
+				<g id="shape101-245" v:mID="101" v:groupContext="shape" v:layerMember="0" transform="translate(2.83465,-2.83465)">
+					<title>Foglio.101</title>
+				</g>
+			</g>
+			<g id="shape102-247" v:mID="102" v:groupContext="shape" v:layerMember="0" transform="translate(37.029,-3.68504)">
+				<title>Foglio.102</title>
+				<v:userDefs>
+					<v:ud v:nameU="BpmnIconPosition" v:prompt="" v:val="VT0(1):26"/>
+					<v:ud v:nameU="BpmnIconWidth" v:prompt="" v:val="VT0(0.19):26"/>
+				</v:userDefs>
+			</g>
+			<g id="shape103-249" v:mID="103" v:groupContext="shape" v:layerMember="0" transform="translate(38.143,-3.68504)">
+				<title>Foglio.103</title>
+				<v:userDefs>
+					<v:ud v:nameU="BpmnIconPosition" v:prompt="" v:val="VT0(1):26"/>
+					<v:ud v:nameU="BpmnIconWidth" v:prompt="" v:val="VT0(0.18):26"/>
+				</v:userDefs>
+			</g>
+			<g id="group104-251" transform="translate(36.669,-2.83465)" v:mID="104" v:groupContext="group" v:layerMember="0">
+				<v:userDefs>
+					<v:ud v:nameU="BpmnIconPosition" v:prompt="" v:val="VT0(1):26"/>
+					<v:ud v:nameU="BpmnIconWidth" v:prompt="" v:val="VT0(0.18):26"/>
+				</v:userDefs>
+				<title>Foglio.104</title>
+				<g id="shape105-252" v:mID="105" v:groupContext="shape" v:layerMember="0"
+						transform="translate(9.4603,960.725) rotate(179.753)">
+					<title>Foglio.105</title>
+				</g>
+			</g>
+			<g id="shape106-255" v:mID="106" v:groupContext="shape" v:layerMember="0" transform="translate(3.50394,-19.6719)">
+				<title>Foglio.106</title>
+			</g>
+			<g id="shape107-257" v:mID="107" v:groupContext="shape" v:layerMember="0" transform="translate(3.00394,-19.1719)">
+				<title>Foglio.107</title>
+			</g>
+			<g id="group108-259" transform="translate(2.50394,-20.6719)" v:mID="108" v:groupContext="group" v:layerMember="0">
+				<title>Foglio.108</title>
+				<g id="shape109-260" v:mID="109" v:groupContext="shape" v:layerMember="0">
+					<title>Foglio.109</title>
+					<rect x="0" y="477.531" width="12" height="8" class="st5"/>
+				</g>
+				<g id="shape110-262" v:mID="110" v:groupContext="shape" v:layerMember="0"
+						transform="translate(-1.9984E-15,-4.20339)">
+					<title>Foglio.110</title>
+				</g>
+			</g>
+			<g id="shape111-264" v:mID="111" v:groupContext="shape" v:layerMember="0" transform="translate(2.50394,-20.6719)">
+				<title>Foglio.111</title>
+			</g>
+			<g id="shape112-266" v:mID="112" v:groupContext="shape" v:layerMember="0" transform="translate(3.50394,-19.6719)">
+				<title>Foglio.112</title>
+			</g>
+			<g id="shape113-268" v:mID="113" v:groupContext="shape" v:layerMember="0" transform="translate(3.00394,-20.6719)">
+				<title>Foglio.113</title>
+			</g>
+			<g id="shape114-270" v:mID="114" v:groupContext="shape" v:layerMember="0" transform="translate(3.00394,-20.6719)">
+				<title>Foglio.114</title>
+			</g>
+			<g id="shape115-272" v:mID="115" v:groupContext="shape" v:layerMember="0"
+					transform="translate(-438.374,481.223) rotate(-90)">
+				<title>Foglio.115</title>
+				<v:userDefs>
+					<v:ud v:nameU="BpmnIconPosition" v:prompt="" v:val="VT0(1):26"/>
+					<v:ud v:nameU="BpmnIconWidth" v:prompt="" v:val="VT0(0.18):26"/>
+				</v:userDefs>
+			</g>
+			<g id="shape93-274" v:mID="93" v:groupContext="groupContent" v:layerMember="0">
+				<v:textBlock v:margins="rect(2,2,2,2)" v:tabSpace="42.5197"/>
+				<v:textRect cx="35.8583" cy="468.943" width="71.72" height="0"/>
+				<text x="18.02" y="465.94" class="st9" v:langID="1040"><v:paragraph v:horizAlign="1"/><v:tabList/>UserInfo<v:newlineChar/><tspan
+							x="17.04" dy="1.2em" class="st14">Endpoint</tspan></text>			</g>
+		</g>
+		<g id="group116-277" transform="translate(266.613,-422.057)" v:mID="116" v:groupContext="group" v:layerMember="0">
+			<v:custProps>
+				<v:cp v:nameU="BpmnId" v:lbl="Id" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="true" v:ask="false"
+						v:langID="1040" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="BpmnCategories" v:lbl="Categories" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1040" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="BpmnDocumentation" v:lbl="Documentation" v:prompt="" v:type="0" v:format="" v:sortKey=""
+						v:invis="false" v:ask="false" v:langID="1040" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="BpmnName" v:lbl="Name" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="true" v:ask="false"
+						v:langID="1040" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="BpmnActivityType" v:lbl="ActivityType" v:prompt="" v:type="1"
+						v:format="Attività;Processo secondario" v:sortKey="" v:invis="true" v:ask="false" v:langID="1040" v:cal="0"
+						v:val="VT4(Attività)"/>
+				<v:cp v:nameU="BpmnLoopType" v:lbl="LoopType" v:prompt="" v:type="1"
+						v:format="Nessuno;standard;parallelo a istanza multipla;sequenziale a istanza multipla" v:sortKey=""
+						v:invis="false" v:ask="false" v:langID="1040" v:cal="0" v:val="VT4(Nessuno)"/>
+				<v:cp v:nameU="BpmnTaskType" v:lbl="TaskType" v:prompt="" v:type="1"
+						v:format="Nessuno;servizio;ricezione;invio;utente;script;sunto;manuale;creazione istanza ricezione;regola di business"
+						v:sortKey="" v:invis="false" v:ask="false" v:langID="1040" v:cal="0" v:val="VT4(Nessuno)"/>
+				<v:cp v:nameU="BpmnScript" v:lbl="Script" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="true"
+						v:ask="false" v:langID="1040" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="BpmnInstantiate" v:lbl="Instantiate" v:prompt="" v:type="3" v:format="" v:sortKey="" v:invis="true"
+						v:ask="false" v:langID="1040" v:cal="0" v:val="VT0(0):5"/>
+				<v:cp v:nameU="BpmnSubProcessType" v:lbl="SubProcessType" v:prompt="" v:type="1"
+						v:format="Incorporato;Riutilizzabile;Riferimento" v:sortKey="" v:invis="true" v:ask="false" v:langID="1040"
+						v:cal="0" v:val="VT4(Incorporato)"/>
+				<v:cp v:nameU="BpmnIsCollapsed" v:lbl="IsCollapsed" v:prompt="" v:type="3" v:format="" v:sortKey="" v:invis="true"
+						v:ask="false" v:langID="1040" v:cal="0" v:val="VT0(0):5"/>
+				<v:cp v:nameU="BpmnIsATransaction" v:lbl="IsATransaction" v:prompt="" v:type="3" v:format="" v:sortKey=""
+						v:invis="true" v:ask="false" v:langID="1040" v:cal="0" v:val="VT0(0):5"/>
+				<v:cp v:nameU="BpmnIsForCompensation" v:lbl="IsForCompensation" v:prompt="" v:type="3" v:format="" v:sortKey=""
+						v:invis="false" v:ask="false" v:langID="1040" v:cal="0" v:val="VT0(0):5"/>
+				<v:cp v:nameU="BpmnElementType" v:lbl="ElementType" v:prompt="" v:type="1"
+						v:format="Processo secondario;Evento;Gateway;Diagramma di processo;Pool;Corsia;Elemento;Oggetto di connessione"
+						v:sortKey="" v:invis="true" v:ask="false" v:langID="1040" v:cal="0" v:val="VT4(Processo secondario)"/>
+				<v:cp v:nameU="BpmnAdHoc" v:lbl="AdHoc" v:prompt="" v:type="3" v:format="" v:sortKey="" v:invis="true"
+						v:ask="false" v:langID="1040" v:cal="0" v:val="VT0(0):5"/>
+				<v:cp v:nameU="BpmnAdHocOrdering" v:lbl="AdHocOrdering" v:prompt="" v:type="1" v:format="Sequenziale;Parallela"
+						v:sortKey="" v:invis="true" v:ask="false" v:langID="1040" v:cal="0" v:val="VT4(Parallela)"/>
+				<v:cp v:nameU="BpmnBoundaryType" v:lbl="Tipo di limite" v:prompt="" v:type="1" v:format="Predefinita;Chiamata"
+						v:sortKey="" v:invis="false" v:ask="false" v:langID="1040" v:cal="0" v:val="VT4(Predefinita)"/>
+				<v:cp v:nameU="BpmnName" v:lbl="" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false" v:ask="false"
+						v:langID="0" v:cal="0" v:val="VT4(OpenID Provider (OP))"/>
+			</v:custProps>
+			<v:userDefs>
+				<v:ud v:nameU="BpmnNumIconsVisible" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="BpmnIsExtendedSubProcess" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="msvStructureType" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="msvSDContainerResize" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="msvShapeCategories" v:prompt="" v:val="VT4(Task)"/>
+				<v:ud v:nameU="BpmnIconHeight" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+				<v:ud v:nameU="BpmnIconPinY" v:prompt="" v:val="VT0(0.11811023622047):24"/>
+				<v:ud v:nameU="BpmnBoundaryType" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="DefaultWidth" v:prompt="" v:val="VT0(0.98425196850394):24"/>
+				<v:ud v:nameU="DefaultHeight" v:prompt="" v:val="VT0(0.78740157480315):24"/>
+				<v:ud v:nameU="ResizeTxtHeight" v:prompt="" v:val="VT0(0.78740157480315):24"/>
+				<v:ud v:nameU="IsInstance" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsInstance" v:prompt="" v:val="VT0(1):5"/>
+			</v:userDefs>
+			<title>Attività.116</title>
+			<desc>OpenID Provider (OP)</desc>
+			<g id="shape117-278" v:mID="117" v:groupContext="shape" v:layerMember="0">
+				<title>Foglio.117</title>
+				<rect x="0" y="452.355" width="242.646" height="33.1759" rx="5.66929" ry="5.66929" class="st15"/>
+			</g>
+			<g id="group118-280" v:mID="118" v:groupContext="group" v:layerMember="0">
+				<title>Foglio.118</title>
+				<g id="shape119-281" v:mID="119" v:groupContext="shape" v:layerMember="0">
+					<title>Foglio.119</title>
+					<rect x="0" y="452.355" width="242.646" height="33.1759" rx="2.12598" ry="2.12598" class="st16"/>
+				</g>
+				<g id="shape120-283" v:mID="120" v:groupContext="shape" v:layerMember="0" transform="translate(1.8,-1.8)">
+					<title>Foglio.120</title>
+					<rect x="0" y="455.955" width="239.046" height="29.5759" rx="2.12598" ry="2.12598" class="st16"/>
+				</g>
+			</g>
+			<g id="shape121-285" v:mID="121" v:groupContext="shape" v:layerMember="0" transform="translate(122.134,-2.12598)">
+				<title>Foglio.121</title>
+				<v:userDefs>
+					<v:ud v:nameU="BpmnIconPosition" v:prompt="" v:val="VT0(1):26"/>
+					<v:ud v:nameU="BpmnIconWidth" v:prompt="" v:val="VT0(0.18):26"/>
+				</v:userDefs>
+			</g>
+			<g id="group122-287" transform="translate(122.494,-2.83465)" v:mID="122" v:groupContext="group" v:layerMember="0">
+				<v:userDefs>
+					<v:ud v:nameU="BpmnIconPosition" v:prompt="" v:val="VT0(1):26"/>
+					<v:ud v:nameU="BpmnIconWidth" v:prompt="" v:val="VT0(0.19):26"/>
+				</v:userDefs>
+				<title>Foglio.122</title>
+				<g id="shape123-288" v:mID="123" v:groupContext="shape" v:layerMember="0">
+					<title>Foglio.123</title>
+					<rect x="0" y="474.193" width="11.3386" height="11.3386" class="st3"/>
+				</g>
+				<g id="shape124-290" v:mID="124" v:groupContext="shape" v:layerMember="0" transform="translate(2.83465,-2.83465)">
+					<title>Foglio.124</title>
+				</g>
+			</g>
+			<g id="shape125-292" v:mID="125" v:groupContext="shape" v:layerMember="0" transform="translate(122.494,-3.68504)">
+				<title>Foglio.125</title>
+				<v:userDefs>
+					<v:ud v:nameU="BpmnIconPosition" v:prompt="" v:val="VT0(1):26"/>
+					<v:ud v:nameU="BpmnIconWidth" v:prompt="" v:val="VT0(0.19):26"/>
+				</v:userDefs>
+			</g>
+			<g id="shape126-294" v:mID="126" v:groupContext="shape" v:layerMember="0" transform="translate(123.608,-3.68504)">
+				<title>Foglio.126</title>
+				<v:userDefs>
+					<v:ud v:nameU="BpmnIconPosition" v:prompt="" v:val="VT0(1):26"/>
+					<v:ud v:nameU="BpmnIconWidth" v:prompt="" v:val="VT0(0.18):26"/>
+				</v:userDefs>
+			</g>
+			<g id="group127-296" transform="translate(122.134,-2.83465)" v:mID="127" v:groupContext="group" v:layerMember="0">
+				<v:userDefs>
+					<v:ud v:nameU="BpmnIconPosition" v:prompt="" v:val="VT0(1):26"/>
+					<v:ud v:nameU="BpmnIconWidth" v:prompt="" v:val="VT0(0.18):26"/>
+				</v:userDefs>
+				<title>Foglio.127</title>
+				<g id="shape128-297" v:mID="128" v:groupContext="shape" v:layerMember="0"
+						transform="translate(9.4603,960.725) rotate(179.753)">
+					<title>Foglio.128</title>
+				</g>
+			</g>
+			<g id="shape129-300" v:mID="129" v:groupContext="shape" v:layerMember="0" transform="translate(3.50394,-19.6719)">
+				<title>Foglio.129</title>
+			</g>
+			<g id="shape130-302" v:mID="130" v:groupContext="shape" v:layerMember="0" transform="translate(3.00394,-19.1719)">
+				<title>Foglio.130</title>
+			</g>
+			<g id="group131-304" transform="translate(2.50394,-20.6719)" v:mID="131" v:groupContext="group" v:layerMember="0">
+				<title>Foglio.131</title>
+				<g id="shape132-305" v:mID="132" v:groupContext="shape" v:layerMember="0">
+					<title>Foglio.132</title>
+					<rect x="0" y="477.531" width="12" height="8" class="st5"/>
+				</g>
+				<g id="shape133-307" v:mID="133" v:groupContext="shape" v:layerMember="0"
+						transform="translate(-1.9984E-15,-4.20339)">
+					<title>Foglio.133</title>
+				</g>
+			</g>
+			<g id="shape134-309" v:mID="134" v:groupContext="shape" v:layerMember="0" transform="translate(2.50394,-20.6719)">
+				<title>Foglio.134</title>
+			</g>
+			<g id="shape135-311" v:mID="135" v:groupContext="shape" v:layerMember="0" transform="translate(3.50394,-19.6719)">
+				<title>Foglio.135</title>
+			</g>
+			<g id="shape136-313" v:mID="136" v:groupContext="shape" v:layerMember="0" transform="translate(3.00394,-20.6719)">
+				<title>Foglio.136</title>
+			</g>
+			<g id="shape137-315" v:mID="137" v:groupContext="shape" v:layerMember="0" transform="translate(3.00394,-20.6719)">
+				<title>Foglio.137</title>
+			</g>
+			<g id="shape138-317" v:mID="138" v:groupContext="shape" v:layerMember="0"
+					transform="translate(-352.91,481.223) rotate(-90)">
+				<title>Foglio.138</title>
+				<v:userDefs>
+					<v:ud v:nameU="BpmnIconPosition" v:prompt="" v:val="VT0(1):26"/>
+					<v:ud v:nameU="BpmnIconWidth" v:prompt="" v:val="VT0(0.18):26"/>
+				</v:userDefs>
+			</g>
+			<g id="shape116-319" v:mID="116" v:groupContext="groupContent" v:layerMember="0">
+				<v:textBlock v:margins="rect(2,2,2,2)" v:tabSpace="42.5197"/>
+				<v:textRect cx="121.323" cy="468.943" width="242.65" height="0"/>
+				<text x="76.46" y="471.94" class="st9" v:langID="1040"><v:paragraph v:horizAlign="1"/><v:tabList/>OpenID Provider (OP)</text>			</g>
+		</g>
+		<g id="shape173-321" v:mID="173" v:groupContext="shape" transform="translate(166.17,-341.004)">
+			<title>Cerchio</title>
+			<desc>1</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="12.0551" cy="473.476" width="21.1" height="18.0827"/>
+			<path d="M0 473.48 A12.0551 12.0551 0 1 1 24.11 473.48 A12.0551 12.0551 0 0 1 0 473.48 Z" class="st17"/>
+			<text x="9.52" y="476.48" class="st18" v:langID="1040"><v:paragraph v:horizAlign="1"/><v:tabList/>1</text>		</g>
+		<g id="shape179-324" v:mID="179" v:groupContext="shape" transform="translate(41.9232,-341.004)">
+			<title>Cerchio.179</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<path d="M0 473.48 A12.0551 12.0551 0 1 1 24.11 473.48 A12.0551 12.0551 0 0 1 0 473.48 Z" class="st17"/>
+		</g>
+		<g id="shape180-326" v:mID="180" v:groupContext="shape" transform="translate(41.9232,-304.379)">
+			<title>Cerchio.180</title>
+			<desc>2</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="12.0551" cy="473.476" width="21.1" height="18.0827"/>
+			<path d="M0 473.48 A12.0551 12.0551 0 1 1 24.11 473.48 A12.0551 12.0551 0 0 1 0 473.48 Z" class="st17"/>
+			<text x="9.52" y="476.48" class="st18" v:langID="1040"><v:paragraph v:horizAlign="1"/><v:tabList/>2</text>		</g>
+		<g id="shape182-329" v:mID="182" v:groupContext="shape" v:layerMember="1" transform="translate(166.17,-345.972)">
+			<title>Flusso di attività</title>
+			<desc>Scelta OP</desc>
+			<v:custProps>
+				<v:cp v:nameU="BpmnId" v:lbl="Id" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="true" v:ask="false"
+						v:langID="1040" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="BpmnCategories" v:lbl="Categories" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1040" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="BpmnDocumentation" v:lbl="Documentation" v:prompt="" v:type="0" v:format="" v:sortKey=""
+						v:invis="false" v:ask="false" v:langID="1040" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="BpmnName" v:lbl="Name" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="true" v:ask="false"
+						v:langID="1040" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="BpmnConnectingObjectType" v:lbl="ConnectingObjectType" v:prompt="" v:type="1"
+						v:format="Flusso di attività;Flusso messaggi;Associazione" v:sortKey="" v:invis="false" v:ask="false"
+						v:langID="1040" v:cal="0" v:val="VT4(Flusso di attività)"/>
+				<v:cp v:nameU="BpmnConditionType" v:lbl="ConditionType" v:prompt="" v:type="1"
+						v:format="Nessuno;Espressione;Predefinito" v:sortKey="" v:invis="false" v:ask="false" v:langID="1040"
+						v:cal="0" v:val="VT4(Nessuno)"/>
+				<v:cp v:nameU="BpmnDirection" v:lbl="Direction" v:prompt="" v:type="1" v:format="Nessuno;Uno;Entrambi" v:sortKey=""
+						v:invis="true" v:ask="false" v:langID="1040" v:cal="0" v:val="VT4(Uno)"/>
+				<v:cp v:nameU="BpmnElementType" v:lbl="ElementType" v:prompt="" v:type="1"
+						v:format="Processo secondario;Evento;Gateway;Diagramma di processo;Pool;Corsia;Elemento;Oggetto di connessione"
+						v:sortKey="" v:invis="true" v:ask="false" v:langID="1040" v:cal="0" v:val="VT4(Oggetto di connessione)"/>
+				<v:cp v:nameU="BpmnName" v:lbl="" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false" v:ask="false"
+						v:langID="0" v:cal="0" v:val="VT4(Scelta OP)"/>
+			</v:custProps>
+			<v:userDefs>
+				<v:ud v:nameU="msvShapeCategories" v:prompt="" v:val="VT4(Connecting Object)"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="PositionX" v:prompt="" v:val="VT0(0.49212598425197):24"/>
+				<v:ud v:nameU="PositionY" v:prompt="" v:val="VT0(0.098425196850394):1"/>
+				<v:ud v:nameU="NearestPointOnPath" v:prompt="" v:val="VT0(0.4999999961853):26"/>
+				<v:ud v:nameU="PtOnPath" v:prompt="" v:val="VT7(PNT(0.49212598425197,0.098425194621086)):40"/>
+				<v:ud v:nameU="IsInstance" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="PositionX" v:prompt="" v:val="VT0(-0.69539229594783):1"/>
+				<v:ud v:nameU="NearestPointOnPath" v:prompt="" v:val="VT0(0.4999999894509):26"/>
+				<v:ud v:nameU="PtOnPath" v:prompt="" v:val="VT7(PNT(-0.69539229594783,0.098425194621086)):40"/>
+				<v:ud v:nameU="IsInstance" v:prompt="" v:val="VT0(1):5"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="-73.4619" cy="471.809" width="40.44" height="17.6036"/>
+			<path d="M0 478.44 L-95.1 478.44" class="st19"/>
+			<rect v:rectContext="textBkgnd" x="-88.774" y="467.009" width="30.6244" height="9.59985" class="st21"/>
+			<text x="-88.77" y="474.21" class="st22" v:langID="1040"><v:paragraph v:horizAlign="1"/><v:tabList/>Scelta OP</text>		</g>
+		<g id="shape183-337" v:mID="183" v:groupContext="shape" transform="translate(290.417,-304.266)">
+			<title>Cerchio.183</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<path d="M0 473.48 A12.0551 12.0551 0 1 1 24.11 473.48 A12.0551 12.0551 0 0 1 0 473.48 Z" class="st17"/>
+		</g>
+		<g id="shape184-339" v:mID="184" v:groupContext="shape" v:layerMember="1" transform="translate(66.0334,-323.464)">
+			<title>Flusso di attività.184</title>
+			<desc>Authorization Request</desc>
+			<v:custProps>
+				<v:cp v:nameU="BpmnId" v:lbl="Id" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="true" v:ask="false"
+						v:langID="1040" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="BpmnCategories" v:lbl="Categories" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1040" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="BpmnDocumentation" v:lbl="Documentation" v:prompt="" v:type="0" v:format="" v:sortKey=""
+						v:invis="false" v:ask="false" v:langID="1040" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="BpmnName" v:lbl="Name" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="true" v:ask="false"
+						v:langID="1040" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="BpmnConnectingObjectType" v:lbl="ConnectingObjectType" v:prompt="" v:type="1"
+						v:format="Flusso di attività;Flusso messaggi;Associazione" v:sortKey="" v:invis="false" v:ask="false"
+						v:langID="1040" v:cal="0" v:val="VT4(Flusso di attività)"/>
+				<v:cp v:nameU="BpmnConditionType" v:lbl="ConditionType" v:prompt="" v:type="1"
+						v:format="Nessuno;Espressione;Predefinito" v:sortKey="" v:invis="false" v:ask="false" v:langID="1040"
+						v:cal="0" v:val="VT4(Nessuno)"/>
+				<v:cp v:nameU="BpmnDirection" v:lbl="Direction" v:prompt="" v:type="1" v:format="Nessuno;Uno;Entrambi" v:sortKey=""
+						v:invis="true" v:ask="false" v:langID="1040" v:cal="0" v:val="VT4(Uno)"/>
+				<v:cp v:nameU="BpmnElementType" v:lbl="ElementType" v:prompt="" v:type="1"
+						v:format="Processo secondario;Evento;Gateway;Diagramma di processo;Pool;Corsia;Elemento;Oggetto di connessione"
+						v:sortKey="" v:invis="true" v:ask="false" v:langID="1040" v:cal="0" v:val="VT4(Oggetto di connessione)"/>
+				<v:cp v:nameU="BpmnName" v:lbl="" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false" v:ask="false"
+						v:langID="0" v:cal="0" v:val="VT4(Authorization Request)"/>
+			</v:custProps>
+			<v:userDefs>
+				<v:ud v:nameU="msvShapeCategories" v:prompt="" v:val="VT4(Connecting Object)"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="PositionX" v:prompt="" v:val="VT0(0.49212598425197):24"/>
+				<v:ud v:nameU="PositionY" v:prompt="" v:val="VT0(0.098425196850394):1"/>
+				<v:ud v:nameU="NearestPointOnPath" v:prompt="" v:val="VT0(0.4999999961853):26"/>
+				<v:ud v:nameU="PtOnPath" v:prompt="" v:val="VT7(PNT(0.49212598425197,0.098425194621086)):40"/>
+				<v:ud v:nameU="IsInstance" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="PositionX" v:prompt="" v:val="VT0(1.5582167582349):24"/>
+				<v:ud v:nameU="PositionY" v:prompt="" v:val="VT0(-0.098425196850394):1"/>
+				<v:ud v:nameU="NearestPointOnPath" v:prompt="" v:val="VT0(0.50010381048093):26"/>
+				<v:ud v:nameU="PtOnPath" v:prompt="" v:val="VT7(PNT(1.5582167582349,-0.099206401703873)):40"/>
+				<v:ud v:nameU="IsInstance" v:prompt="" v:val="VT0(1):5"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="38.0465" cy="483.639" width="82.63" height="17.6036"/>
+			<path d="M0 492.56 L10.57 492.56 a0.0562467 0.0562467 0 0 1 0.0562467 0.0562467 L10.63 492.62 a0.0562467 0.0562467 -180
+						 0 0 0.0562467 0.0562467 L219.34 492.67" class="st19"/>
+			<rect v:rectContext="textBkgnd" x="1.63891" y="478.839" width="72.8155" height="9.59985" class="st21"/>
+			<text x="1.64" y="486.04" class="st22" v:langID="1040"><v:paragraph v:horizAlign="1"/><v:tabList/>Authorization Request</text>		</g>
+		<g id="shape185-346" v:mID="185" v:groupContext="shape" transform="translate(290.417,-268.809)">
+			<title>Cerchio.185</title>
+			<desc>3</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="12.0551" cy="473.476" width="21.1" height="18.0827"/>
+			<path d="M0 473.48 A12.0551 12.0551 0 1 1 24.11 473.48 A12.0551 12.0551 0 0 1 0 473.48 Z" class="st17"/>
+			<text x="9.52" y="476.48" class="st18" v:langID="1040"><v:paragraph v:horizAlign="1"/><v:tabList/>3</text>		</g>
+		<g id="shape187-349" v:mID="187" v:groupContext="shape" transform="translate(166.17,-268.809)">
+			<title>Cerchio.187</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<path d="M0 473.48 A12.0551 12.0551 0 1 1 24.11 473.48 A12.0551 12.0551 0 0 1 0 473.48 Z" class="st17"/>
+		</g>
+		<g id="shape339-351" v:mID="339" v:groupContext="shape" v:layerMember="1" transform="translate(290.417,-273.777)">
+			<title>Flusso di attività.339</title>
+			<v:custProps>
+				<v:cp v:nameU="BpmnId" v:lbl="Id" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="true" v:ask="false"
+						v:langID="1040" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="BpmnCategories" v:lbl="Categories" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1040" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="BpmnDocumentation" v:lbl="Documentation" v:prompt="" v:type="0" v:format="" v:sortKey=""
+						v:invis="false" v:ask="false" v:langID="1040" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="BpmnName" v:lbl="Name" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="true" v:ask="false"
+						v:langID="1040" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="BpmnConnectingObjectType" v:lbl="ConnectingObjectType" v:prompt="" v:type="1"
+						v:format="Flusso di attività;Flusso messaggi;Associazione" v:sortKey="" v:invis="false" v:ask="false"
+						v:langID="1040" v:cal="0" v:val="VT4(Flusso di attività)"/>
+				<v:cp v:nameU="BpmnConditionType" v:lbl="ConditionType" v:prompt="" v:type="1"
+						v:format="Nessuno;Espressione;Predefinito" v:sortKey="" v:invis="false" v:ask="false" v:langID="1040"
+						v:cal="0" v:val="VT4(Nessuno)"/>
+				<v:cp v:nameU="BpmnDirection" v:lbl="Direction" v:prompt="" v:type="1" v:format="Nessuno;Uno;Entrambi" v:sortKey=""
+						v:invis="true" v:ask="false" v:langID="1040" v:cal="0" v:val="VT4(Uno)"/>
+				<v:cp v:nameU="BpmnElementType" v:lbl="ElementType" v:prompt="" v:type="1"
+						v:format="Processo secondario;Evento;Gateway;Diagramma di processo;Pool;Corsia;Elemento;Oggetto di connessione"
+						v:sortKey="" v:invis="true" v:ask="false" v:langID="1040" v:cal="0" v:val="VT4(Oggetto di connessione)"/>
+			</v:custProps>
+			<v:userDefs>
+				<v:ud v:nameU="msvShapeCategories" v:prompt="" v:val="VT4(Connecting Object)"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="PositionX" v:prompt="" v:val="VT0(0.49212598425197):24"/>
+				<v:ud v:nameU="PositionY" v:prompt="" v:val="VT0(0.098425196850394):1"/>
+				<v:ud v:nameU="NearestPointOnPath" v:prompt="" v:val="VT0(0.4999999961853):26"/>
+				<v:ud v:nameU="PtOnPath" v:prompt="" v:val="VT7(PNT(0.49212598425197,0.098425194621086)):40"/>
+				<v:ud v:nameU="IsInstance" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="PositionX" v:prompt="" v:val="VT0(-0.69539229594783):24"/>
+				<v:ud v:nameU="NearestPointOnPath" v:prompt="" v:val="VT0(0.4999999894509):26"/>
+				<v:ud v:nameU="PtOnPath" v:prompt="" v:val="VT7(PNT(-0.69539229594783,0.098425194621086)):40"/>
+				<v:ud v:nameU="IsInstance" v:prompt="" v:val="VT0(1):5"/>
+			</v:userDefs>
+			<path d="M0 478.44 L-95.1 478.44" class="st19"/>
+		</g>
+		<g id="shape340-356" v:mID="340" v:groupContext="shape" transform="translate(166.17,-230.374)">
+			<title>Cerchio.340</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<path d="M0 473.48 A12.0551 12.0551 0 1 1 24.11 473.48 A12.0551 12.0551 0 0 1 0 473.48 Z" class="st17"/>
+		</g>
+		<g id="shape342-358" v:mID="342" v:groupContext="shape" v:layerMember="1" transform="translate(190.28,-235.368)">
+			<title>Flusso di attività.342</title>
+			<v:custProps>
+				<v:cp v:nameU="BpmnId" v:lbl="Id" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="true" v:ask="false"
+						v:langID="1040" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="BpmnCategories" v:lbl="Categories" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1040" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="BpmnDocumentation" v:lbl="Documentation" v:prompt="" v:type="0" v:format="" v:sortKey=""
+						v:invis="false" v:ask="false" v:langID="1040" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="BpmnName" v:lbl="Name" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="true" v:ask="false"
+						v:langID="1040" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="BpmnConnectingObjectType" v:lbl="ConnectingObjectType" v:prompt="" v:type="1"
+						v:format="Flusso di attività;Flusso messaggi;Associazione" v:sortKey="" v:invis="false" v:ask="false"
+						v:langID="1040" v:cal="0" v:val="VT4(Flusso di attività)"/>
+				<v:cp v:nameU="BpmnConditionType" v:lbl="ConditionType" v:prompt="" v:type="1"
+						v:format="Nessuno;Espressione;Predefinito" v:sortKey="" v:invis="false" v:ask="false" v:langID="1040"
+						v:cal="0" v:val="VT4(Nessuno)"/>
+				<v:cp v:nameU="BpmnDirection" v:lbl="Direction" v:prompt="" v:type="1" v:format="Nessuno;Uno;Entrambi" v:sortKey=""
+						v:invis="true" v:ask="false" v:langID="1040" v:cal="0" v:val="VT4(Uno)"/>
+				<v:cp v:nameU="BpmnElementType" v:lbl="ElementType" v:prompt="" v:type="1"
+						v:format="Processo secondario;Evento;Gateway;Diagramma di processo;Pool;Corsia;Elemento;Oggetto di connessione"
+						v:sortKey="" v:invis="true" v:ask="false" v:langID="1040" v:cal="0" v:val="VT4(Oggetto di connessione)"/>
+			</v:custProps>
+			<v:userDefs>
+				<v:ud v:nameU="msvShapeCategories" v:prompt="" v:val="VT4(Connecting Object)"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="PositionX" v:prompt="" v:val="VT0(0.49212598425197):24"/>
+				<v:ud v:nameU="PositionY" v:prompt="" v:val="VT0(0.098425196850394):1"/>
+				<v:ud v:nameU="NearestPointOnPath" v:prompt="" v:val="VT0(0.4999999961853):26"/>
+				<v:ud v:nameU="PtOnPath" v:prompt="" v:val="VT7(PNT(0.49212598425197,0.098425194621086)):40"/>
+				<v:ud v:nameU="IsInstance" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="PositionX" v:prompt="" v:val="VT0(0.69539229594783):24"/>
+				<v:ud v:nameU="NearestPointOnPath" v:prompt="" v:val="VT0(0.50010367274575):26"/>
+				<v:ud v:nameU="PtOnPath" v:prompt="" v:val="VT7(PNT(0.69539229594783,0.098773365942613)):40"/>
+				<v:ud v:nameU="IsInstance" v:prompt="" v:val="VT0(1):5"/>
+			</v:userDefs>
+			<path d="M0 478.47 L10.6 478.47 a0.0250682 0.0250682 -180 0 0 0.0250682 -0.0250682 L10.63 478.44 a0.0250682 0.0250682
+						 0 0 1 0.0250682 -0.0250682 L95.1 478.42" class="st19"/>
+		</g>
+		<g id="shape344-363" v:mID="344" v:groupContext="shape" v:layerMember="1" transform="translate(159.083,-280.864)">
+			<title>Connettore dinamico</title>
+			<path d="M7.09 485.53 L-9.33 485.53 A8.50394 8.50394 -180 0 0 -17.83 494.04 L-17.83 515.46 A8.50394 8.50394 -180 0 0
+						 -9.33 523.97 L1.49 523.97" class="st23"/>
+		</g>
+		<g id="shape341-369" v:mID="341" v:groupContext="shape" transform="translate(290.417,-230.424)">
+			<title>Cerchio.341</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<path d="M0 473.48 A12.0551 12.0551 0 1 1 24.11 473.48 A12.0551 12.0551 0 0 1 0 473.48 Z" class="st17"/>
+		</g>
+		<g id="shape345-371" v:mID="345" v:groupContext="shape" v:layerMember="1" transform="translate(307.44,-242.479)">
+			<title>Connettore dinamico.345</title>
+			<path d="M7.09 485.53 L17.97 485.53 A8.50394 8.50394 -180 0 0 26.48 477.03 L26.48 455.65 A8.50394 8.50394 -180 0 0 17.97
+						 447.15 L12.69 447.15" class="st23"/>
+		</g>
+		<g id="shape346-376" v:mID="346" v:groupContext="shape" transform="translate(290.417,-192.628)">
+			<title>Cerchio.346</title>
+			<desc>4</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="12.0551" cy="473.476" width="21.1" height="18.0827"/>
+			<path d="M0 473.48 A12.0551 12.0551 0 1 1 24.11 473.48 A12.0551 12.0551 0 0 1 0 473.48 Z" class="st17"/>
+			<text x="9.52" y="476.48" class="st18" v:langID="1040"><v:paragraph v:horizAlign="1"/><v:tabList/>4</text>		</g>
+		<g id="shape347-379" v:mID="347" v:groupContext="shape" transform="translate(41.9232,-192.628)">
+			<title>Cerchio.347</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<path d="M0 473.48 A12.0551 12.0551 0 1 1 24.11 473.48 A12.0551 12.0551 0 0 1 0 473.48 Z" class="st17"/>
+		</g>
+		<g id="shape348-381" v:mID="348" v:groupContext="shape" v:layerMember="1" transform="translate(290.417,-197.596)">
+			<title>Flusso di attività.348</title>
+			<v:custProps>
+				<v:cp v:nameU="BpmnId" v:lbl="Id" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="true" v:ask="false"
+						v:langID="1040" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="BpmnCategories" v:lbl="Categories" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1040" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="BpmnDocumentation" v:lbl="Documentation" v:prompt="" v:type="0" v:format="" v:sortKey=""
+						v:invis="false" v:ask="false" v:langID="1040" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="BpmnName" v:lbl="Name" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="true" v:ask="false"
+						v:langID="1040" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="BpmnConnectingObjectType" v:lbl="ConnectingObjectType" v:prompt="" v:type="1"
+						v:format="Flusso di attività;Flusso messaggi;Associazione" v:sortKey="" v:invis="false" v:ask="false"
+						v:langID="1040" v:cal="0" v:val="VT4(Flusso di attività)"/>
+				<v:cp v:nameU="BpmnConditionType" v:lbl="ConditionType" v:prompt="" v:type="1"
+						v:format="Nessuno;Espressione;Predefinito" v:sortKey="" v:invis="false" v:ask="false" v:langID="1040"
+						v:cal="0" v:val="VT4(Nessuno)"/>
+				<v:cp v:nameU="BpmnDirection" v:lbl="Direction" v:prompt="" v:type="1" v:format="Nessuno;Uno;Entrambi" v:sortKey=""
+						v:invis="true" v:ask="false" v:langID="1040" v:cal="0" v:val="VT4(Uno)"/>
+				<v:cp v:nameU="BpmnElementType" v:lbl="ElementType" v:prompt="" v:type="1"
+						v:format="Processo secondario;Evento;Gateway;Diagramma di processo;Pool;Corsia;Elemento;Oggetto di connessione"
+						v:sortKey="" v:invis="true" v:ask="false" v:langID="1040" v:cal="0" v:val="VT4(Oggetto di connessione)"/>
+			</v:custProps>
+			<v:userDefs>
+				<v:ud v:nameU="msvShapeCategories" v:prompt="" v:val="VT4(Connecting Object)"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="PositionX" v:prompt="" v:val="VT0(0.49212598425197):24"/>
+				<v:ud v:nameU="PositionY" v:prompt="" v:val="VT0(0.098425196850394):1"/>
+				<v:ud v:nameU="NearestPointOnPath" v:prompt="" v:val="VT0(0.4999999961853):26"/>
+				<v:ud v:nameU="PtOnPath" v:prompt="" v:val="VT7(PNT(0.49212598425197,0.098425194621086)):40"/>
+				<v:ud v:nameU="IsInstance" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="PositionX" v:prompt="" v:val="VT0(-1.5582167582349):1"/>
+				<v:ud v:nameU="NearestPointOnPath" v:prompt="" v:val="VT0(0.49999998331699):26"/>
+				<v:ud v:nameU="PtOnPath" v:prompt="" v:val="VT7(PNT(-1.5582167582349,0.098425194621086)):40"/>
+				<v:ud v:nameU="IsInstance" v:prompt="" v:val="VT0(1):5"/>
+			</v:userDefs>
+			<path d="M0 478.44 L-219.34 478.44" class="st19"/>
+		</g>
+		<g id="shape349-386" v:mID="349" v:groupContext="shape" transform="translate(41.9232,-155.206)">
+			<title>Cerchio.349</title>
+			<desc>5</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="12.0551" cy="473.476" width="21.1" height="18.0827"/>
+			<path d="M0 473.48 A12.0551 12.0551 0 1 1 24.11 473.48 A12.0551 12.0551 0 0 1 0 473.48 Z" class="st17"/>
+			<text x="9.52" y="476.48" class="st18" v:langID="1040"><v:paragraph v:horizAlign="1"/><v:tabList/>5</text>		</g>
+		<g id="shape350-389" v:mID="350" v:groupContext="shape" transform="translate(375.881,-154.98)">
+			<title>Cerchio.350</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<path d="M0 473.48 A12.0551 12.0551 0 1 1 24.11 473.48 A12.0551 12.0551 0 0 1 0 473.48 Z" class="st17"/>
+		</g>
+		<g id="shape351-391" v:mID="351" v:groupContext="shape" v:layerMember="1" transform="translate(66.0334,-174.235)">
+			<title>Flusso di attività.351</title>
+			<desc>Authorization Code</desc>
+			<v:custProps>
+				<v:cp v:nameU="BpmnId" v:lbl="Id" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="true" v:ask="false"
+						v:langID="1040" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="BpmnCategories" v:lbl="Categories" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1040" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="BpmnDocumentation" v:lbl="Documentation" v:prompt="" v:type="0" v:format="" v:sortKey=""
+						v:invis="false" v:ask="false" v:langID="1040" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="BpmnName" v:lbl="Name" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="true" v:ask="false"
+						v:langID="1040" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="BpmnConnectingObjectType" v:lbl="ConnectingObjectType" v:prompt="" v:type="1"
+						v:format="Flusso di attività;Flusso messaggi;Associazione" v:sortKey="" v:invis="false" v:ask="false"
+						v:langID="1040" v:cal="0" v:val="VT4(Flusso di attività)"/>
+				<v:cp v:nameU="BpmnConditionType" v:lbl="ConditionType" v:prompt="" v:type="1"
+						v:format="Nessuno;Espressione;Predefinito" v:sortKey="" v:invis="false" v:ask="false" v:langID="1040"
+						v:cal="0" v:val="VT4(Nessuno)"/>
+				<v:cp v:nameU="BpmnDirection" v:lbl="Direction" v:prompt="" v:type="1" v:format="Nessuno;Uno;Entrambi" v:sortKey=""
+						v:invis="true" v:ask="false" v:langID="1040" v:cal="0" v:val="VT4(Uno)"/>
+				<v:cp v:nameU="BpmnElementType" v:lbl="ElementType" v:prompt="" v:type="1"
+						v:format="Processo secondario;Evento;Gateway;Diagramma di processo;Pool;Corsia;Elemento;Oggetto di connessione"
+						v:sortKey="" v:invis="true" v:ask="false" v:langID="1040" v:cal="0" v:val="VT4(Oggetto di connessione)"/>
+				<v:cp v:nameU="BpmnName" v:lbl="" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false" v:ask="false"
+						v:langID="0" v:cal="0" v:val="VT4(Authorization Code)"/>
+			</v:custProps>
+			<v:userDefs>
+				<v:ud v:nameU="msvShapeCategories" v:prompt="" v:val="VT4(Connecting Object)"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="PositionX" v:prompt="" v:val="VT0(0.49212598425197):24"/>
+				<v:ud v:nameU="PositionY" v:prompt="" v:val="VT0(0.098425196850394):1"/>
+				<v:ud v:nameU="NearestPointOnPath" v:prompt="" v:val="VT0(0.4999999961853):26"/>
+				<v:ud v:nameU="PtOnPath" v:prompt="" v:val="VT7(PNT(0.49212598425197,0.098425194621086)):40"/>
+				<v:ud v:nameU="IsInstance" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="PositionX" v:prompt="" v:val="VT0(2.1517206971349):24"/>
+				<v:ud v:nameU="PositionY" v:prompt="" v:val="VT0(-0.098425196850394):1"/>
+				<v:ud v:nameU="NearestPointOnPath" v:prompt="" v:val="VT0(0.49984920789527):26"/>
+				<v:ud v:nameU="PtOnPath" v:prompt="" v:val="VT7(PNT(2.1517206971349,-0.096858080732184)):40"/>
+				<v:ud v:nameU="IsInstance" v:prompt="" v:val="VT0(1):5"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="40.8548" cy="484.568" width="72.78" height="17.6036"/>
+			<path d="M0 492.51 L299.11 492.51 a0.112832 0.112832 0 0 1 0.112832 0.112832 L299.22 492.62 a0.112832 0.112832 -180 0
+						 0 0.112832 0.112832 L304.81 492.73" class="st19"/>
+			<rect v:rectContext="textBkgnd" x="9.37279" y="479.768" width="62.9643" height="9.59985" class="st21"/>
+			<text x="9.37" y="486.97" class="st22" v:langID="1040"><v:paragraph v:horizAlign="1"/><v:tabList/>Authorization Code</text>		</g>
+		<g id="shape352-398" v:mID="352" v:groupContext="shape" transform="translate(41.9338,-119.883)">
+			<title>Cerchio.352</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<path d="M0 473.48 A12.0551 12.0551 0 1 1 24.11 473.48 A12.0551 12.0551 0 0 1 0 473.48 Z" class="st17"/>
+		</g>
+		<g id="shape353-400" v:mID="353" v:groupContext="shape" transform="translate(375.892,-119.979)">
+			<title>Cerchio.353</title>
+			<desc>6</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="12.0551" cy="473.476" width="21.1" height="18.0827"/>
+			<path d="M0 473.48 A12.0551 12.0551 0 1 1 24.11 473.48 A12.0551 12.0551 0 0 1 0 473.48 Z" class="st17"/>
+			<text x="9.52" y="476.48" class="st18" v:langID="1040"><v:paragraph v:horizAlign="1"/><v:tabList/>6</text>		</g>
+		<g id="shape354-403" v:mID="354" v:groupContext="shape" v:layerMember="1" transform="translate(375.892,-139.073)">
+			<title>Flusso di attività.354</title>
+			<v:custProps>
+				<v:cp v:nameU="BpmnId" v:lbl="Id" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="true" v:ask="false"
+						v:langID="1040" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="BpmnCategories" v:lbl="Categories" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1040" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="BpmnDocumentation" v:lbl="Documentation" v:prompt="" v:type="0" v:format="" v:sortKey=""
+						v:invis="false" v:ask="false" v:langID="1040" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="BpmnName" v:lbl="Name" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="true" v:ask="false"
+						v:langID="1040" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="BpmnConnectingObjectType" v:lbl="ConnectingObjectType" v:prompt="" v:type="1"
+						v:format="Flusso di attività;Flusso messaggi;Associazione" v:sortKey="" v:invis="false" v:ask="false"
+						v:langID="1040" v:cal="0" v:val="VT4(Flusso di attività)"/>
+				<v:cp v:nameU="BpmnConditionType" v:lbl="ConditionType" v:prompt="" v:type="1"
+						v:format="Nessuno;Espressione;Predefinito" v:sortKey="" v:invis="false" v:ask="false" v:langID="1040"
+						v:cal="0" v:val="VT4(Nessuno)"/>
+				<v:cp v:nameU="BpmnDirection" v:lbl="Direction" v:prompt="" v:type="1" v:format="Nessuno;Uno;Entrambi" v:sortKey=""
+						v:invis="true" v:ask="false" v:langID="1040" v:cal="0" v:val="VT4(Uno)"/>
+				<v:cp v:nameU="BpmnElementType" v:lbl="ElementType" v:prompt="" v:type="1"
+						v:format="Processo secondario;Evento;Gateway;Diagramma di processo;Pool;Corsia;Elemento;Oggetto di connessione"
+						v:sortKey="" v:invis="true" v:ask="false" v:langID="1040" v:cal="0" v:val="VT4(Oggetto di connessione)"/>
+			</v:custProps>
+			<v:userDefs>
+				<v:ud v:nameU="msvShapeCategories" v:prompt="" v:val="VT4(Connecting Object)"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="PositionX" v:prompt="" v:val="VT0(0.49212598425197):24"/>
+				<v:ud v:nameU="PositionY" v:prompt="" v:val="VT0(0.098425196850394):1"/>
+				<v:ud v:nameU="NearestPointOnPath" v:prompt="" v:val="VT0(0.4999999961853):26"/>
+				<v:ud v:nameU="PtOnPath" v:prompt="" v:val="VT7(PNT(0.49212598425197,0.098425194621086)):40"/>
+				<v:ud v:nameU="IsInstance" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="PositionX" v:prompt="" v:val="VT0(-2.1517206971349):1"/>
+				<v:ud v:nameU="PositionY" v:prompt="" v:val="VT0(-0.098425196850394):1"/>
+				<v:ud v:nameU="NearestPointOnPath" v:prompt="" v:val="VT0(0.49999998486831):26"/>
+				<v:ud v:nameU="PtOnPath" v:prompt="" v:val="VT7(PNT(-2.1517206971344,-0.098425198326105)):40"/>
+				<v:ud v:nameU="IsInstance" v:prompt="" v:val="VT0(1):5"/>
+			</v:userDefs>
+			<path d="M0 492.57 L-304.81 492.66" class="st19"/>
+		</g>
+		<g id="shape355-408" v:mID="355" v:groupContext="shape" transform="translate(42.2873,-83.2283)">
+			<title>Cerchio.355</title>
+			<desc>7</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="12.0551" cy="473.476" width="21.1" height="18.0827"/>
+			<path d="M0 473.48 A12.0551 12.0551 0 1 1 24.11 473.48 A12.0551 12.0551 0 0 1 0 473.48 Z" class="st17"/>
+			<text x="9.52" y="476.48" class="st18" v:langID="1040"><v:paragraph v:horizAlign="1"/><v:tabList/>7</text>		</g>
+		<g id="shape356-411" v:mID="356" v:groupContext="shape" transform="translate(461.346,-83.9212)">
+			<title>Cerchio.356</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<path d="M0 473.48 A12.0551 12.0551 0 1 1 24.11 473.48 A12.0551 12.0551 0 0 1 0 473.48 Z" class="st17"/>
+		</g>
+		<g id="shape357-413" v:mID="357" v:groupContext="shape" v:layerMember="1" transform="translate(66.3976,-88.5432)">
+			<title>Flusso di attività.357</title>
+			<desc>Access Token</desc>
+			<v:custProps>
+				<v:cp v:nameU="BpmnId" v:lbl="Id" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="true" v:ask="false"
+						v:langID="1040" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="BpmnCategories" v:lbl="Categories" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1040" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="BpmnDocumentation" v:lbl="Documentation" v:prompt="" v:type="0" v:format="" v:sortKey=""
+						v:invis="false" v:ask="false" v:langID="1040" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="BpmnName" v:lbl="Name" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="true" v:ask="false"
+						v:langID="1040" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="BpmnConnectingObjectType" v:lbl="ConnectingObjectType" v:prompt="" v:type="1"
+						v:format="Flusso di attività;Flusso messaggi;Associazione" v:sortKey="" v:invis="false" v:ask="false"
+						v:langID="1040" v:cal="0" v:val="VT4(Flusso di attività)"/>
+				<v:cp v:nameU="BpmnConditionType" v:lbl="ConditionType" v:prompt="" v:type="1"
+						v:format="Nessuno;Espressione;Predefinito" v:sortKey="" v:invis="false" v:ask="false" v:langID="1040"
+						v:cal="0" v:val="VT4(Nessuno)"/>
+				<v:cp v:nameU="BpmnDirection" v:lbl="Direction" v:prompt="" v:type="1" v:format="Nessuno;Uno;Entrambi" v:sortKey=""
+						v:invis="true" v:ask="false" v:langID="1040" v:cal="0" v:val="VT4(Uno)"/>
+				<v:cp v:nameU="BpmnElementType" v:lbl="ElementType" v:prompt="" v:type="1"
+						v:format="Processo secondario;Evento;Gateway;Diagramma di processo;Pool;Corsia;Elemento;Oggetto di connessione"
+						v:sortKey="" v:invis="true" v:ask="false" v:langID="1040" v:cal="0" v:val="VT4(Oggetto di connessione)"/>
+				<v:cp v:nameU="BpmnName" v:lbl="" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false" v:ask="false"
+						v:langID="0" v:cal="0" v:val="VT4(Access Token)"/>
+			</v:custProps>
+			<v:userDefs>
+				<v:ud v:nameU="msvShapeCategories" v:prompt="" v:val="VT4(Connecting Object)"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="PositionX" v:prompt="" v:val="VT0(0.49212598425197):24"/>
+				<v:ud v:nameU="PositionY" v:prompt="" v:val="VT0(0.098425196850394):1"/>
+				<v:ud v:nameU="NearestPointOnPath" v:prompt="" v:val="VT0(0.4999999961853):26"/>
+				<v:ud v:nameU="PtOnPath" v:prompt="" v:val="VT7(PNT(0.49212598425197,0.098425194621086)):40"/>
+				<v:ud v:nameU="IsInstance" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="PositionX" v:prompt="" v:val="VT0(2.7426955653833):1"/>
+				<v:ud v:nameU="NearestPointOnPath" v:prompt="" v:val="VT0(0.49999999916053):26"/>
+				<v:ud v:nameU="PtOnPath" v:prompt="" v:val="VT7(PNT(2.7426955653872,0.098425194613007)):40"/>
+				<v:ud v:nameU="IsInstance" v:prompt="" v:val="VT0(1):5"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="37.6489" cy="472.333" width="53.2" height="17.6036"/>
+			<path d="M0 478.79 L389.91 478.11" class="st19"/>
+			<rect v:rectContext="textBkgnd" x="15.9598" y="467.533" width="43.3784" height="9.59985" class="st21"/>
+			<text x="15.96" y="474.73" class="st22" v:langID="1040"><v:paragraph v:horizAlign="1"/><v:tabList/>Access Token</text>		</g>
+		<g id="shape358-420" v:mID="358" v:groupContext="shape" transform="translate(41.8551,-48.2275)">
+			<title>Cerchio.358</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<path d="M0 473.48 A12.0551 12.0551 0 1 1 24.11 473.48 A12.0551 12.0551 0 0 1 0 473.48 Z" class="st17"/>
+		</g>
+		<g id="shape359-422" v:mID="359" v:groupContext="shape" transform="translate(460.913,-48.9204)">
+			<title>Cerchio.359</title>
+			<desc>8</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="12.0551" cy="473.476" width="21.1" height="18.0827"/>
+			<path d="M0 473.48 A12.0551 12.0551 0 1 1 24.11 473.48 A12.0551 12.0551 0 0 1 0 473.48 Z" class="st17"/>
+			<text x="9.52" y="476.48" class="st18" v:langID="1040"><v:paragraph v:horizAlign="1"/><v:tabList/>8</text>		</g>
+		<g id="shape360-425" v:mID="360" v:groupContext="shape" v:layerMember="1" transform="translate(460.913,-67.7157)">
+			<title>Flusso di attività.360</title>
+			<v:custProps>
+				<v:cp v:nameU="BpmnId" v:lbl="Id" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="true" v:ask="false"
+						v:langID="1040" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="BpmnCategories" v:lbl="Categories" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1040" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="BpmnDocumentation" v:lbl="Documentation" v:prompt="" v:type="0" v:format="" v:sortKey=""
+						v:invis="false" v:ask="false" v:langID="1040" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="BpmnName" v:lbl="Name" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="true" v:ask="false"
+						v:langID="1040" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="BpmnConnectingObjectType" v:lbl="ConnectingObjectType" v:prompt="" v:type="1"
+						v:format="Flusso di attività;Flusso messaggi;Associazione" v:sortKey="" v:invis="false" v:ask="false"
+						v:langID="1040" v:cal="0" v:val="VT4(Flusso di attività)"/>
+				<v:cp v:nameU="BpmnConditionType" v:lbl="ConditionType" v:prompt="" v:type="1"
+						v:format="Nessuno;Espressione;Predefinito" v:sortKey="" v:invis="false" v:ask="false" v:langID="1040"
+						v:cal="0" v:val="VT4(Nessuno)"/>
+				<v:cp v:nameU="BpmnDirection" v:lbl="Direction" v:prompt="" v:type="1" v:format="Nessuno;Uno;Entrambi" v:sortKey=""
+						v:invis="true" v:ask="false" v:langID="1040" v:cal="0" v:val="VT4(Uno)"/>
+				<v:cp v:nameU="BpmnElementType" v:lbl="ElementType" v:prompt="" v:type="1"
+						v:format="Processo secondario;Evento;Gateway;Diagramma di processo;Pool;Corsia;Elemento;Oggetto di connessione"
+						v:sortKey="" v:invis="true" v:ask="false" v:langID="1040" v:cal="0" v:val="VT4(Oggetto di connessione)"/>
+			</v:custProps>
+			<v:userDefs>
+				<v:ud v:nameU="msvShapeCategories" v:prompt="" v:val="VT4(Connecting Object)"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="PositionX" v:prompt="" v:val="VT0(0.49212598425197):24"/>
+				<v:ud v:nameU="PositionY" v:prompt="" v:val="VT0(0.098425196850394):1"/>
+				<v:ud v:nameU="NearestPointOnPath" v:prompt="" v:val="VT0(0.4999999961853):26"/>
+				<v:ud v:nameU="PtOnPath" v:prompt="" v:val="VT7(PNT(0.49212598425197,0.098425194621086)):40"/>
+				<v:ud v:nameU="IsInstance" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="PositionX" v:prompt="" v:val="VT0(-2.7426955653833):1"/>
+				<v:ud v:nameU="PositionY" v:prompt="" v:val="VT0(-0.098425196850394):1"/>
+				<v:ud v:nameU="NearestPointOnPath" v:prompt="" v:val="VT0(0.49999999916053):26"/>
+				<v:ud v:nameU="PtOnPath" v:prompt="" v:val="VT7(PNT(-2.7426955653872,-0.098425194613007)):40"/>
+				<v:ud v:nameU="IsInstance" v:prompt="" v:val="VT0(1):5"/>
+			</v:userDefs>
+			<path d="M0 492.27 L-389.91 492.96" class="st19"/>
+		</g>
+		<g id="shape386-430" v:mID="386" v:groupContext="shape" transform="translate(174.588,-277.211)">
+			<title>Foglio.386</title>
+			<desc>User Authentication Autorizzazione Invio Attributi</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="65.7638" cy="470.003" width="131.53" height="31.0564"/>
+			<rect x="0" y="454.475" width="131.528" height="31.0564" class="st25"/>
+			<text x="33.06" y="466" class="st22" v:langID="1040"><v:paragraph v:spLine="-1" v:horizAlign="1"/><v:tabList/>User Authentication <v:newlineChar/><tspan
+						x="18.29" dy="1.375em" class="st14">Autorizzazione Invio Attributi</tspan></text>		</g>
+		<g id="shape388-434" v:mID="388" v:groupContext="shape" transform="translate(148.819,-196.17)">
+			<title>Foglio.388</title>
+			<desc>Redirect Message</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="65.7638" cy="470.003" width="131.53" height="31.0564"/>
+			<rect x="0" y="454.475" width="131.528" height="31.0564" class="st25"/>
+			<text x="36.93" y="473" class="st22" v:langID="1040"><v:paragraph v:spLine="-1" v:horizAlign="1"/><v:tabList/>Redirect Message</text>		</g>
+		<g id="shape390-437" v:mID="390" v:groupContext="shape" transform="translate(308.268,-126.46)">
+			<title>Foglio.390</title>
+			<desc>Access Token e ID Token</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="39.6206" cy="470.003" width="79.25" height="31.0564"/>
+			<rect x="0" y="454.475" width="79.2412" height="31.0564" class="st25"/>
+			<text x="15.04" y="466" class="st22" v:langID="1040"><v:paragraph v:spLine="-1" v:horizAlign="1"/><v:tabList/>Access Token e<v:newlineChar/><tspan
+						x="25.28" dy="1.375em" class="st14">ID Token</tspan></text>		</g>
+		<g id="shape392-441" v:mID="392" v:groupContext="shape" transform="translate(399.749,-53.9829)">
+			<title>Foglio.392</title>
+			<desc>Claims</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="39.6206" cy="470.003" width="79.25" height="31.0564"/>
+			<rect x="0" y="454.475" width="79.2412" height="31.0564" class="st25"/>
+			<text x="28.98" y="473" class="st22" v:langID="1040"><v:paragraph v:spLine="-1" v:horizAlign="1"/><v:tabList/>Claims</text>		</g>
+	</g>
+</svg>
