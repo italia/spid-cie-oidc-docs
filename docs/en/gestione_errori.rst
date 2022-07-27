@@ -1,5 +1,7 @@
 .. include:: ../common/common_definitions.rst
 
+.. _gestione_errori: 
+
 Error Management
 ================
 
@@ -24,10 +26,25 @@ in the parameter redirect_uri of the request (only if it is valid, i.e. it is pr
        to be displayed to the user (for this purpose, please see the `SPID UX Guidelines`_
      - |spid-icon| |cieid-icon|
    * - **state**
-     - *state* value included in the Authentication Request. It is up to the client to test its
+     - REQUIRED only in case of error response in an Authentication Request. It MUST match the *state* value included in the Authentication Request. The RP MUST verify its
        correspondence to the one that has been sent in the Authentication Request.
      - |spid-icon| |cieid-icon|
 
 Error codes 
 -----------
-TBD
+
+.. warning::
+  To Be Completed
+
+.. list-table:: 
+   :widths: 20 20 20 20
+   :header-rows: 1
+
+   * - **Error Code**
+     - **Endpoint**
+     - **Reference**
+     - **Supported by**
+   * - *invalid_request*
+     - *Authorization*
+     - :rfc:`6749#section-4.1.2.1`.
+     - |cieid-icon|

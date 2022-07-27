@@ -1,7 +1,9 @@
 .. include:: ../common/common_definitions.rst
 
-Errori
-++++++
+.. _gestione_errori:
+
+Gestione degli errori
++++++++++++++++++++++
 
 In caso di errore, l'OP visualizza i messaggi di anomalia relativi agli scambi OpenID
 Connect descritti nelle relative tabelle definite dalle `Linee Guida UX SPID`_. Nei casi in cui tali linee
@@ -21,11 +23,11 @@ i seguenti parametri.
      - Vedi :ref:`Codici di errori <codici_errore>`
      - |spid-icon| |cieid-icon|
    * - **error_description**
-     - Vedi .Descrizione più dettagliata dell'errore, finalizzata ad aiutare lo sviluppatore per eventuale debugging. Questo messaggio non è 
-       destinato ad essere visualizzato all'utente (a tal fine si faccia riferimento alle `Linee Guida UX SPID`_
+     - Descrizione più dettagliata dell'errore, finalizzata ad aiutare lo sviluppatore per eventuale debugging. Questo messaggio non è 
+       destinato ad essere visualizzato all'utente (a tal fine si faccia riferimento alle `Linee Guida UX SPID`_)
      - |spid-icon| |cieid-icon|
    * - **state**
-     - Valore *state* incluso nella Authentication Request.  Il client è tenuto a verificare che corrisponda a quello inviato nella Authentication Request.
+     - Parametro obbligatorio solo nel caso di risposta di errore alla *Authentication Request* e DEVE essere uguale al valore *state* incluso nella *Authentication Request*.  Il RP DEVE verificare che corrisponda a quello inviato nella *Authentication Request*.
      - |spid-icon| |cieid-icon|
 
 
@@ -33,6 +35,19 @@ i seguenti parametri.
 
 Codici di errore
 ----------------
-TBD
 
+.. warning::
+  Sezione da completare
 
+.. list-table:: 
+   :widths: 20 20 20 20
+   :header-rows: 1
+
+   * - **Error Code**
+     - **Endpoint**
+     - **Reference**
+     - **Supportato da**
+   * - *invalid_request*
+     - *Authorization*
+     - :rfc:`6749#section-4.1.2.1`.
+     - |cieid-icon|
