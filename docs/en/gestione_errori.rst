@@ -19,7 +19,7 @@ in the parameter redirect_uri of the request (only if it is valid, i.e. it is pr
      - **Description**
      - **Supported by**
    * - **error**
-     - Error code
+     - Error code. See :ref:`Codici di errori <codici_errore>`
      - |spid-icon| |cieid-icon|
    * - **error_description**
      - More detailed error description, aimed at helping the developers to debug. This message is not supposed
@@ -29,6 +29,8 @@ in the parameter redirect_uri of the request (only if it is valid, i.e. it is pr
      - REQUIRED only in case of error response in an Authentication Request. It MUST match the *state* value included in the Authentication Request. The RP MUST verify its
        correspondence to the one that has been sent in the Authentication Request.
      - |spid-icon| |cieid-icon|
+
+.. _codici_errore:
 
 Error codes 
 -----------
@@ -48,4 +50,5 @@ Error codes
      - *Authorization*
      - :rfc:`6749#section-4.1.2.1`.
      - |cieid-icon|
+
 
