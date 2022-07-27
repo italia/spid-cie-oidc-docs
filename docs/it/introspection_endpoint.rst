@@ -83,5 +83,3 @@ L'Introspection Endpoint risponde con un oggetto JSON definito come segue.
    * - **active**
      - Valore booleano che indica la validità del token. Se il token è scaduto, è revocato o non è mai stato emesso per il client_id chiamante, l'Introspection Endpoint deve restituire false.
      - 
-
-	

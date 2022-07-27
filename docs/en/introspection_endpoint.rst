@@ -90,4 +90,3 @@ The Introspection Endpoint responds with a JSON Object defined as follows.
        has never been issued for the calling client_id, the Introspection Endpoint must return false.
      - 
 
-	 
