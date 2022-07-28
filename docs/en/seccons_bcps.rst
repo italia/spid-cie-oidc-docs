@@ -23,7 +23,7 @@ Maximum Number of authority_hints
 
 Inside a Federation, through the constraint named **max_path_lenght**, the Trust Anchor decides how many intermediaries are allowed between it and the Leaves. This kind of relationship is vertical, from the Leaf to the root. As an example, if this attribute has the value equal to 1, it means that only one SA is allowed between a Leaf and the TA.
 
-Every Leaf MUST publish its superiors inside the list contained in the claim **authority_hints**. A Leaf in the Federation CAN have superiors belonging to different Federations. The analysis of the available superiors introduces an horizontal navigation model. As an example, an OP tries to find the shortest path to the Trust Anchor through all the URLs contained in the array **authority_hints**, before doing a further vertical move upwards, to one of the Intermediaries that are present in this array.
+Every Leaf MUST publish its superiors inside the list contained in the claim **authority_hints**. A Leaf in the Federation MAY have superiors belonging to different Federations. The analysis of the available superiors introduces an horizontal navigation model. As an example, an OP tries to find the shortest path to the Trust Anchor through all the URLs contained in the array **authority_hints**, before doing a further vertical move upwards, to one of the Intermediaries that are present in this array.
 
 The threshold **max_path_lenght** is applied to the vertical navigation and, after exceeding this threshold without finding a TA, the procedure of Metadata Discovery MUST be stopped. Consider the example of an RP that's a subordinate of an SA that's in turn a subordinate of another SA, while the **max_path_lenght** claim is equal to 1 and, after exceeding this threshold without finding the Trust Anchor, the procedure MUST be stopped.
 
@@ -64,6 +64,6 @@ In this way, after exceeding the maximum duration limit of the Trust Chain, defi
 Metadata Policy
 +++++++++++++++
 
-The Federation Authority or its Intermediary CAN publish a Metadata policy (see `OIDC-FED#Section.5.1`_) 
+The Federation Authority or its Intermediary MAY publish a Metadata policy (see `OIDC-FED#Section.5.1`_) 
 to force the change of the OIDC Metadata of the Leaf, in the parts where this might be needed.
 

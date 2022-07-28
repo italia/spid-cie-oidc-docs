@@ -3,7 +3,7 @@
 Revocation Endpoint (logout)
 ----------------------------
 
-An RP CAN request the revocation of an Access Token or a Refresh Token issued by an OP.
+An RP MAY request the revocation of an Access Token or a Refresh Token issued by an OP.
 
 When the user logs out, the RP MUST revoke the Access Token in its possession.
 

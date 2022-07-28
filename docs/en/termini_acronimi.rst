@@ -18,7 +18,7 @@ Following, the terms used by `OIDC-FED#Section_1.2`_ and this documentation.
     * - **Trust Anchor**
       - Entity handled by the Federation Authority that represents the Federation, its configuration and the trust root.
     * - **Intermediate Entity** or **Intermediary**
-      - An Intermediate Entity (SA), facilitates the onboarding process in the Federation and CAN handle the functionalities on behalf of its subordinate (Aggregated) Entities. Inside the Federation, an SA publishes its own configuration and the Entity statements of its subordinates, according to the rules defined by the Federation.
+      - An Intermediate Entity (SA), facilitates the onboarding process in the Federation and MAY handle the functionalities on behalf of its subordinate (Aggregated) Entities. Inside the Federation, an SA publishes its own configuration and the Entity statements of its subordinates, according to the rules defined by the Federation.
     * - **Leaf Entity** or **Leaf**
       - Entity defined by OpenID Connect as Relying Party and OpenID Provider.
     * - **Entity**
@@ -111,7 +111,7 @@ In this section are defined all the acronyms that are used throughout the text.
 Conventions and Normative Terms
 +++++++++++++++++++++++++++++++
 
-The keywords "MUST", "MUST NOT", "REQUIRES", "REQUIRE", "SHOULD", "SHOULD NOT", "RECOMMENDED", "CAN" and "OPTIONAL" in the present document must be interpreted as described at BCP 14 :rfc:`2119` :rfc:`8174` when and only when they appear in capital letters.
+The keywords "MUST", "MUST NOT", "REQUIRES", "REQUIRE", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY" and "OPTIONAL" in the present document must be interpreted as described at BCP 14 :rfc:`2119` :rfc:`8174` when and only when they appear in capital letters.
 
 Le notations [...] and ... mean that the text has been cut off for editor's requirements.
 

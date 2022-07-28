@@ -8,7 +8,7 @@ Request
 
 For starting the authentication process, the RP redirects the user to the *Authorization Endpoint* of the selected OP, and sends an *HTTP* request with the parameter **request**, an object in **JWT** format that contains the *Authorization Request* signed by the RP.
 
-For conveying the request, the RP CAN use the methods **POST** and **GET**. With the method **POST** the parameters MUST be sent using the *Form Serialization*. 
+For conveying the request, the RP MAY use the methods **POST** and **GET**. With the method **POST** the parameters MUST be sent using the *Form Serialization*. 
 With the method **GET** the parameters MUST be sent using the *Query String Serialization*. For more details see `OpenID.Core#Serializations`_.
 
 .. warning::
@@ -118,7 +118,7 @@ The **JWT** payload contains the following mandatory claims:
      - See `OpenID.Core#AuthRequest`_. As defined by the parameter **acr_values_supported** in the
        :ref:`Metadata OP <MetadataOP>`.
        Reference values of the contest class of the Authentication Request. 
-       It MUST be a string with the requested "acr" values, each of them separated by a single space, appearing in order of preference. The OP CAN use an authentication at a higher level than requested. Such a choice MUST NOT cause a negative result of the request.
+       It MUST be a string with the requested "acr" values, each of them separated by a single space, appearing in order of preference. The OP MAY use an authentication at a higher level than requested. Such a choice MUST NOT cause a negative result of the request.
      - |spid-icon| |cieid-icon|
    * - **claims**
      - See `OpenID.Core#AuthRequest`_. See Section :ref:`Use of the scope and claims parameters <parametri_scope_claims>`
@@ -176,17 +176,7 @@ to the URL contained in the parameter redirect_uri specified in the authorizatio
  - https://tools.ietf.org/html/rfc6749#section-4.1.2
  - https://openid.net/specs/openid-connect-core-1_0.html#AuthRequestValidation
 
-If the authentication is successful, the OpenID Provider (OP), redirects the user with the following parameters:
-
-
-.. code-block:: 
-
- GET /resp?
- code=usDwMnEzJPpG5oaV8x3j&
- state=fyZiOL9Lf2CeKuNT2JzxiLRDink0uPcd
-
- Host: https://rp.spid.agid.gov.it
- HTTP/1.1
+If the authentication is successful, the OpenID Provider (OP), redirects the user by adding the following parameters required as query parameters to the *redirect_uri* (as defined in `OpenID.Core#AuthResponse`_): 
 
 
 .. list-table:: 
@@ -204,52 +194,5 @@ If the authentication is successful, the OpenID Provider (OP), redirects the use
      - |spid-icon| |cieid-icon|
    * - **iss**
      - Unique Identifier of the OP that has created the Authentication Response. The RP MUST validate
-       this parameter and MUST NOT allow more OPs to use the same identifier. MANDATORY only for CIE.
+       this parameter and MUST NOT allow more OPs to use the same identifier.
      - |cieid-icon|
-
-Errors
-++++++
-
-In case of errors, the OP displays error messages about the OpenID Connect interchanges, 
-as described in the tables defined in the `SPID UX Guidelines`_. 
-In case the guidelines require a user's redirect to the RP, the OP performs a redirect to the URL indicated 
-in the parameter redirect_uri of the request (only if it is valid, i.e. it is present in the client Metadata), with the following parameters.
-
-
-**Example:**
-
-.. code-block:: 
-
- GET /resp?
- error=invalid_request&
- error_description=request%20malformata&
- state=fyZiOL9Lf2CeKuNT2JzxiLRDink0uPcd
-
- Host: https://rp.spid.agid.gov.it
- HTTP/1.1
-
-
-.. list-table:: 
-   :widths: 20 60 20
-   :header-rows: 1
-
-   * - **Claim**
-     - **Description**
-     - **Supported by**
-   * - **error**
-     - Error code
-     - |spid-icon| |cieid-icon|
-   * - **error_description**
-     - More detailed error description, aimed at helping the developers to debug. This message is not supposed
-       to be displayed to the user (for this purpose, please see the `SPID UX Guidelines`_
-     - |spid-icon| |cieid-icon|
-   * - **state**
-     - *state* value included in the Authentication Request. It is up to the client to test its
-       correspondence to the one that has been sent in the Authentication Request.
-     - |spid-icon| |cieid-icon|
-
-
-.. seealso::
-
- - https://tools.ietf.org/html/rfc6749#section-4.1.2.1
-

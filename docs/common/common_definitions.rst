@@ -32,6 +32,10 @@
 .. _OpenID.Core#Serializations: https://openid.net/specs/openid-connect-core-1_0.html#Serializations
 .. _OpenID.Core#JWTRequests: https://openid.net/specs/openid-connect-core-1_0.html#JWTRequests
 .. _OpenID.Core#AuthRequest: https://openid.net/specs/openid-connect-core-1_0.html#AuthRequest
+.. _OpenID.Core#AuthResponse: https://openid.net/specs/openid-connect-core-1_0.html#AuthResponse
+.. _OpenID.Core#SubjectIDTypes: https://openid.net/specs/openid-connect-core-1_0.html#SubjectIDTypes
+.. _OpenID.Core#CodeIDToken: https://openid.net/specs/openid-connect-core-1_0.html#CodeIDToken
+.. _OpenID.Core#ClientAuthentication: https://openid.net/specs/openid-connect-core-1_0.html#ClientAuthentication
 .. _OpenID.Registration: https://openid.net/specs/openid-connect-registration-1_0.html
 .. _OpenID.Registration#ClientMetadata: https://openid.net/specs/openid-connect-registration-1_0.html#ClientMetadata
 .. _OpenID.Discovery: https://openid.net/specs/openid-connect-discovery-1_0.html
