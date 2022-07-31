@@ -5,10 +5,11 @@ The Italian eID Federations
 
 A Digital Identity Federation is an infrastructure inside which many organizations, with different domains,
 participate in the same regulatory framework for building a mechanism of trust, both administrative, by 
-stipulating conventions and getting accreditation by one or more impartial authorities, and technological, by 
-adopting standards of interoperability that allow safe data interchange.
+stipulating conventions and getting accreditation by one or more authorities, and technological, by 
+adopting standards of interoperability.
 
-This configuration establishes the levels of guarantee and security that are appropriate for an individual, in order to authenticate on a web service (Service Provider) using their own digital identity, released 
+This configuration establishes the levels of guarantee and security that are appropriate for an 
+individual, in order to authenticate on a web service (Service Provider) using their own digital identity, released 
 by another web service (Identity Provider).
 
 The members (RP or OP) who are recognized inside the same Federation, obtain Metadata from each

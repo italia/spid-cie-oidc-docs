@@ -19,7 +19,7 @@ In this documentation you can find:
  - How to authenticate a user to SPID and CIE and get his attributes.
 
 
-Indix of content
+Index of content
 ----------------
 
 .. toctree:: 

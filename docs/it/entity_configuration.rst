@@ -87,7 +87,11 @@ Gli EC delle entità Foglia e intermediari, in aggiunta ai claim precedentemente
        Obbligatorio per tutti i partecipanti fatta esclusione del Trust Anchor. 
      - |spid-icon| |cieid-icon|
 
+.. seealso:: 
 
+   - :ref:`Non-normative example of EC of an OP<Esempio_EN1.2>`
+   - :ref:`Non-normative example of EC of a RP<Esempio_EN1.1>`
+   - :ref:`Non-normative example of EC of a Federation Intermediary (SA)<Esempio_EN1.3>`
 
 .. _entity_configuration_ta:
 

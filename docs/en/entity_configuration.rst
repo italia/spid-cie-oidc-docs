@@ -92,7 +92,11 @@ the following claims:
        Required for all the members except the Trust Anchor.
      - |spid-icon| |cieid-icon|
 
+.. seealso:: 
 
+   - :ref:`Non-normative example of EC of an OP<Esempio_EN1.2>`
+   - :ref:`Non-normative example of EC of a RP<Esempio_EN1.1>`
+   - :ref:`Non-normative example of EC of a Federation Intermediary (SA)<Esempio_EN1.3>`
 
 .. _entity_configuration_ta:
 
