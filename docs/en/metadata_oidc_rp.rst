@@ -79,6 +79,6 @@ The RP Metadata of type **"openid_relying_party"** MUST contain at least the fol
     - |spid-icon| |cieid-icon|
 
 .. note:: 
-  The URIs contained in the claim **redirect_uris** CAN also follow possible custom schemas (e.g. myapp://) 
+  The URIs contained in the claim **redirect_uris** MAY also follow possible custom schemas (e.g. myapp://) 
   in order to support mobile applications.
 

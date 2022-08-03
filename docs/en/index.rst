@@ -44,6 +44,7 @@ Index of content
    attributi_utente.rst
    introspection_endpoint.rst
    revocation_endpoint.rst
+   gestione_errori.rst
    confronto_oidc_cie_e_oidc_igov.rst
    differenze_oidc_fed.rst
    seccons_bcps.rst

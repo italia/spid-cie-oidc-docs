@@ -2,11 +2,9 @@
 
 .. _user_claims:
 
-Table of the user's attributes
-------------------------------
+User attributes
+---------------
 
-Table of the user's attributes
-++++++++++++++++++++++++++++++
 
 .. list-table:: 
    :widths: auto
@@ -294,21 +292,6 @@ Table of the user's attributes
      - |spid-icon| |cieid-icon|
 
 .. _user_claims_scopes:
-
-Attributes linked to the scopes
-+++++++++++++++++++++++++++++++
-
-The OIDC standard requires using the claim **scope** for identifying groups of attributes.
-In SPID and CIE id, the following **scope** are defined:
-
- - **profile**. It corresponds to "eIDAS Natural Person Minimum Attribute Set", so it includes:
-
-   - family_name, given_name, birthdate, ``https://attributes.eid.gov.it/spid_fiscal_number``
-
-
- - **email**. This can result as useful, if combined with the profile scope.
-
-To help characterizing the information, according to the annex "Corrispettivi" of the conventions, the scope "profile" supplies claims related to "registry" information, while the "email" scope supplies claims related to "extra registry" information.
 
 
 Non-normative examples

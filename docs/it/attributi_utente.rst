@@ -5,9 +5,6 @@
 Tabella attributi utente
 ------------------------
 
-Tabella attributi identificativi
-++++++++++++++++++++++++++++++++
-
 .. list-table:: 
    :widths: auto
    :header-rows: 1
@@ -297,21 +294,6 @@ Tabella attributi identificativi
      - |spid-icon| |cieid-icon|
 
 .. _user_claims_scopes:
-
-Attributi collegati agli scope
-++++++++++++++++++++++++++++++
-
-Lo standard OIDC prevede l'utilizzo del claim **scope** per identificare gruppi di attributi.
-In SPID e CIE id si definiscono i seguenti **scope**:
-
- - **profile** corrispondente al "eIDAS Natural Person Minimum Attribute Set" quindi comprende:
-
-   - family_name, given_name, birthdate, ``https://attributes.eid.gov.it/spid_fiscal_number``
-
-
- - **email** Questo può rivelarsi utile combinato con lo scope profile
-
-Ai fini della caratterizzazione delle informazioni, in accordo all'allegato "Corrispettivi" delle convenzioni, lo scope "profile" fornisce claim relativi alle informazioni "anagrafiche", mentre lo scope "email" fornisce claim relativi alle informazioni "extra-anagrafiche"
 
 
 Esempi non normativi

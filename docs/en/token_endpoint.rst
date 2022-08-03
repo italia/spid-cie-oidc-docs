@@ -4,13 +4,13 @@
 Token Endpoint (token request)
 --------------------------------
 
-The RP sends a request to the Token Endpoint:
+At the end of the authentication flow described at the previous section, the RP sends a request to the Token Endpoint sending the authorization code received by the OP for getting an *ID Token*, an *Access Token* and possibly a *Refresh Token* (if a `long revocable session`_ has been started).
 
- 1. at the end of the authentication flow described at the previous section, sending the authorization code received by the OP (example, code=usDwMnEzJPpG5oaV8x3j) for getting an ID Token, an Access Token and possibly a Refresh Token (if a `long revocable session`_ has been started).
+In a `long revocable session`_, the RP MAY call the *Token Endpoint* sending a *Refresh Token* in its possession, for obtaining a new *Access Token* and a new *ID Token*.
 
- 2. in a `long revocable session`_, the RP calls the Token Endpoint sending a Refresh Token in its possession, for obtaining a new Access Token.
+.. note::
+  The authentication method of the RP by the Token Endpoint is the **private_key_jwt** (`OpenID.Core#ClientAuthentication`_)
 
-The Token Endpoint returns an *Access Token*, an *ID Token* and optionally a *Refresh Token*. 
 
 .. seealso:: 
 
@@ -23,44 +23,45 @@ The Token Endpoint returns an *Access Token*, an *ID Token* and optionally a *Re
 Request
 +++++++
 
-The authentication method of the RP by the Token Endpoint is the private_key_jwt (OIDC Connect Core 1.0 par. 9).
+The claims that MUST be included in the *Token Request* are given below.
+
+.. TODO: move examples in the specific section
+
+  **Request example with authorization code (case 1)**
+
+  .. code-block:: 
+
+  POST /token?
+  client_id=https://rp.spid.agid.gov.it&
+  client_assertion=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiw
+  ibmFtZSI6IlNQSUQiLCJhZG1pbiI6dHJ1ZX0.LVyRDPVJm0S9q7oiXcYVIIqGWY0wWQlqxvFGYswL…&
+  client_assertion_type=urn%3Aietf%3Aparams%3Aoauth%3Aclient-assertion-type%3Ajwtbearer&
+  code=usDwMnEzJPpG5oaV8x3j&
+  code_verifier=9g8S40MozM3NSqjHnhi7OnsE38jklFv2&
+  grant_type=authorization_code
+
+  Host: https://op.spid.agid.gov.it
+  HTTP/1.1
 
 
-**Request example with authorization code (case 1)**
+  .. seealso::
 
-.. code-block:: 
+  - https://openid.net/specs/openid-connect-core-1_0.html#RPAuthentication
 
- POST /token?
- client_id=https://rp.spid.agid.gov.it&
- client_assertion=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiw
- ibmFtZSI6IlNQSUQiLCJhZG1pbiI6dHJ1ZX0.LVyRDPVJm0S9q7oiXcYVIIqGWY0wWQlqxvFGYswL…&
- client_assertion_type=urn%3Aietf%3Aparams%3Aoauth%3Aclient-assertion-type%3Ajwtbearer&
- code=usDwMnEzJPpG5oaV8x3j&
- code_verifier=9g8S40MozM3NSqjHnhi7OnsE38jklFv2&
- grant_type=authorization_code
+  **Request example with Refresh Token (case 2):**
 
- Host: https://op.spid.agid.gov.it
- HTTP/1.1
+  .. code-block:: 
 
+  POST /token?
+  client_id=https://rp.spid.agid.gov.it&
+  client_assertion=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiw
+  ibmFtZSI6IlNQSUQiLCJhZG1pbiI6dHJ1ZX0.LVyRDPVJm0S9q7oiXcYVIIqGWY0wWQlqxvFGYswL…&
+  client_assertion_type=urn%3Aietf%3Aparams%3Aoauth%3Aclient-assertion-type%3Ajwtbearer&
+  grant_type=refresh_token&
+  refresh_token=8xLOxBtZp8
 
-.. seealso::
-
- - https://openid.net/specs/openid-connect-core-1_0.html#RPAuthentication
-
-**Request example with Refresh Token (case 2):**
-
-.. code-block:: 
-
- POST /token?
- client_id=https://rp.spid.agid.gov.it&
- client_assertion=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiw
- ibmFtZSI6IlNQSUQiLCJhZG1pbiI6dHJ1ZX0.LVyRDPVJm0S9q7oiXcYVIIqGWY0wWQlqxvFGYswL…&
- client_assertion_type=urn%3Aietf%3Aparams%3Aoauth%3Aclient-assertion-type%3Ajwtbearer&
- grant_type=refresh_token&
- refresh_token=8xLOxBtZp8
-
- Host: https://op.spid.agid.gov.it
- HTT/P1.1
+  Host: https://op.spid.agid.gov.it
+  HTT/P1.1
 
  
 .. list-table:: 
@@ -71,14 +72,14 @@ The authentication method of the RP by the Token Endpoint is the private_key_jwt
      - **Description**
      - **Supported by**
    * - **client_id**
-     - URI that uniquely identifies the RP. 
+     - See `OpenID.Registration`_. It MUST contain an HTTPS URL that uniquely identifies the RP.
      - |spid-icon| |cieid-icon|
    * - **client_assertion**
      - JWT signed with the Relying Party's private key containing the following parameters:
 	 
-	 **iss**: RP identifier registered by the OP, that uniquely identifies the Federation's Entity in the Uniform Resource Locator (URL) format. Corresponds to the client_id, used in the authentication request.
+	 **iss**: This MUST contain the *client_id*.
 	 
-	 **sub**: equal to the parameter **iss**.
+	 **sub**: This MUST contain the *iss*.
 	 
 	 **aud**: URL of the OP Token Endpoint.
 	 
@@ -86,7 +87,7 @@ The authentication method of the RP by the Token Endpoint is the private_key_jwt
 	 
 	 **exp**: UNIX Timestamp with the expiry time of the JWT, coded as NumericDate as indicated in :rfc:`7519`. 
 	 
-	 **jti**: Unique Identifier uuid4 for this authentication request, generated by the client.
+	 **jti**: Unique Identifier uuid4 for this authentication request, generated by the client. Eg: it can be in *uuid4* format.
      - |spid-icon| |cieid-icon|
    * - **client_assertion_type**
      - It must get the following value: |br|
@@ -100,7 +101,7 @@ The authentication method of the RP by the Token Endpoint is the private_key_jwt
      - |spid-icon| |cieid-icon|
    * - **grant_type**
      - Type of credentials, presented by the RP, for the current request.
-       It may get one of the following values:
+       It MAY get one of the following values:
 	 
 	   - **authorization_code**
 	   - **refresh_token**
@@ -120,15 +121,19 @@ The Access Token must be formed according to the standard indications of the `"I
 
 The ID Token must be formed according to the indications contained in the next section.
 
-.. code-block:: 
+The response MUST contain the following claims.
 
- {
-     "access_token":"dC34Pf6kdG...",
-     "token_type":"Bearer",
-     "refresh_token":"wJ848BcyLP...",
-     "expires_in":1800,
-     "id_token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY..."
- }
+.. TODO: Move examples in the specific section
+
+  .. code-block:: 
+
+  {
+      "access_token":"dC34Pf6kdG...",
+      "token_type":"Bearer",
+      "refresh_token":"wJ848BcyLP...",
+      "expires_in":1800,
+      "id_token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY..."
+  }
  
 .. list-table:: 
    :widths: 20 60 20
@@ -141,11 +146,10 @@ The ID Token must be formed according to the indications contained in the next s
      - The Access Token, in signed JWT format, allows accessing the UserInfo Endpoint for obtaining the attributes.
      - |spid-icon| |cieid-icon|
    * - **token_type**
-     - Type of *Access Token* returned. It must always be equal to **Bearer**.
+     - Type of *Access Token* returned. It MUST always be equal to **Bearer**.
      - |spid-icon| |cieid-icon|
    * - **refresh_token**
-     - The *Refresh Token*, in signed JWT format, allows calling again the Token Endpoint for obtaining 
-       a new *Access Token* and then recovering a `long revocable session`_.
+     - Available only in case of `long revocable session`_. The *Refresh Token* MUST be a signed JWT format. It allows calling again the *Token Endpoint* for obtaining a new *Access Token* and a new *ID Token*.
      - |spid-icon| |cieid-icon|
    * - **expires_in**
      - Expity time of the *Access Token* in seconds.
@@ -158,24 +162,26 @@ The ID Token must be formed according to the indications contained in the next s
 ID Token
 ++++++++
 
-The ID Token is a JSON Web Token (JWT) that contains information on the user that has executed the authentication. The RPs must validate the ID Token.
+The ID Token is a JSON Web Token (JWT) that contains information on the user that has executed the authentication. The RPs MUST validate the ID Token.
+The claims available in the *ID Token* are given below.
 
-**Example of ID Token:**
+.. TODO: Move examples in the specific section
+  **Example of ID Token:**
 
-.. code-block:: 
+  .. code-block:: 
 
- {
-     "iss":"https://op.spid.agid.gov.it/",
-     "sub":"9sd798asd98asui23hiuds89y798sfyg",
-     "aud":"https://rp.spid.agid.gov.it/auth",
-     "acr":"https://www.spid.gov.it/SpidL2",
-     "at_hash":"qiyh4XPJGsOZ2MEAyLkfWqeQ",
-     "iat":1519032969,
-     "nbf":1519032969,
-     "exp":1519033149,
-     "jti":"nw4J0zMwRk4kRbQ53G7z",
-     "nonce":"MBzGqyf9QytD28eupyWhSqMj78WNqpc2"
- }
+  {
+      "iss":"https://op.spid.agid.gov.it/",
+      "sub":"9sd798asd98asui23hiuds89y798sfyg",
+      "aud":"https://rp.spid.agid.gov.it/auth",
+      "acr":"https://www.spid.gov.it/SpidL2",
+      "at_hash":"qiyh4XPJGsOZ2MEAyLkfWqeQ",
+      "iat":1519032969,
+      "nbf":1519032969,
+      "exp":1519033149,
+      "jti":"nw4J0zMwRk4kRbQ53G7z",
+      "nonce":"MBzGqyf9QytD28eupyWhSqMj78WNqpc2"
+  }
 
 
 .. list-table:: 
@@ -186,47 +192,34 @@ The ID Token is a JSON Web Token (JWT) that contains information on the user tha
      - **Description**
      - **Supported by**
    * - **iss** 
-     - Identifier of the OP that uniquely indentifies it in the Federation, in Uniform Resource Locator (URL) format. The client must check that this value corresponds to the called OP.
+     - It MUST be an HTTPS URL that uniquely identifies the OP. The client MUST verify that this value matches the called OP.
      - |spid-icon| |cieid-icon|
    * - **sub** 
-     - For this parameter value, please see the standard "OpenID Connect Core 1.0", "Pairwise Identifier Algorithm". 
+     - See `OpenID.Core#SubjectIDTypes`_. It MUST be *pairwise*. 
      - |spid-icon| |cieid-icon|
    * - **aud** 
-     - It contains the client ID. The client must check that this value corresponds to its own client ID.
+     - It MUST match the value *client_id*. The RP MUST verify that this value matches its client ID.
      - |spid-icon| |cieid-icon|
    * - **acr** 
-     - Effective authentication level. It can be equal or greater than the one requested by the client in the Authentication Request.
+     - Effective authentication level. It MAY be equal or greater than the one requested by the client in the Authentication Request.
      - |spid-icon| |cieid-icon|
    * - **at_hash** 
-     - Access Token hash. Its value is the base64url coding of the first half of the hash of the value of access_token, using the hashing algorithm indicated in **alg** in the ID Token header. The client must check that this value corresponds to the *Access Token* returned with the ID Token.
+     - See `OpenID.Core#CodeIDToken`_. The client MUST verify that this value matches the *Access Token* returned with the Token ID. 
      - |spid-icon| |cieid-icon|
    * - **iat** 
-     - UNIX Timestamp with the time of JWT generation, coded as NumericDate as indicated in :rfc:`7519`.
+     - UNIX Timestamp with the time of JWT generation, coded as NumericDate as indicated in :rfc:`7519`. 
      - |spid-icon| |cieid-icon|
    * - **nbf** 
-     - UNIX Timestamp. Date/time of the validity beginning of the JWT in NumericDate format, as indicated in :rfc:`7519`. It must correspond to the value of **iat**.
-
-       .. code-block:: 
-	   
-	    {
-              userinfo: {...}
-              id_token: {
-                acr: {...},
-                nbf: { essential: true },
-                jti: { essential: true }
-              }
-	    } 
+     - UNIX Timestamp. Time of the validity beginning of the JWT in NumericDate format, as indicated in :rfc:`7519`. MUST match with the value of **iat**.
      - |spid-icon| |cieid-icon|
    * - **exp**
      - UNIX Timestamp with the expiry time of the JWT, coded as NumericDate as indicated in :rfc:`7519`.
      - |spid-icon| |cieid-icon|
    * - **jti** 
-     - String. Unique identifier of the ID Token that the client can use for preventing a reuse, refusing the
-       ID Token if it has already been processed. It must be difficult to guess by an attacker and composed of a randomicn generated string. It is suggested to use the *uuid4* generator.
+     - It MUST be a String in *uuid4* format. Unique Token ID identifier that the RP MAY use to prevent reuse by rejecting the Token ID if already processed.
      - |spid-icon| |cieid-icon|
    * - **nonce** 
-     - String. Randomic generated string generated by the RP for each user's session and sent in the 
-       Authentication Request (claim nonce), aimed at mitigating replay attacks. The client must make sure that it has the same value as the one tha has been sent in the Authentication Request.
+     - See `OpenID.Core#AuthRequest`_. It MUST be a random string of at least 32 alphanumeric characters. This value MUST match the value sent by the RP in the authentication request.
      - |spid-icon| |cieid-icon|
 
 
@@ -236,41 +229,3 @@ The ID Token is a JSON Web Token (JWT) that contains information on the user tha
  - https://openid.net/specs/openid-igov-openid-connect-1_0-03.html#rfc.section.3.1
 
 
-Errors
-++++++
-
-In case of errors, the OP returns a response with a JSON in its body, made of the parameters indicated in the table below.
-
-**Example:**
-
-.. code-block:: 
-
- {
-     "error":"error code",
-     "error_description":"error description"
- }
-
-
-.. list-table:: 
-   :widths: 20 60 20
-   :header-rows: 1
-
-   * - **Claim**
-     - **Description**
-     - **Supported by**
-   * - **error** 
-     - Error code (see table below).
-     - |spid-icon| |cieid-icon|
-   * - **error_description** 
-     - More detailed error description, aimed at helping the developers to debug. This message is not supposed
-       to be displayed to the user (for this purpose, please see the `SPID UX Guidelines`_.
-     - |spid-icon| |cieid-icon|
-	
-The codes of HTTP status and the values of the claims *error* and *error_description* are described in the error message tables.
-
-
-.. seealso::
-
- - https://tools.ietf.org/html/rfc6749#section-5.2
- - https://openid.net/specs/openid-connect-core-1_0.html#TokenErrorResponse
- 

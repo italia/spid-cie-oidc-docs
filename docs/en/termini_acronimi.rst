@@ -18,7 +18,7 @@ Following, the terms used by `OIDC-FED#Section_1.2`_ and this documentation.
     * - **Trust Anchor**
       - Entity handled by the Federation Authority that represents the Federation, its configuration and the trust root.
     * - **Intermediate Entity** or **Intermediary**
-      - An Intermediate Entity (SA), facilitates the onboarding process in the Federation and CAN handle the functionalities on behalf of its subordinate (Aggregated) Entities. Inside the Federation, an SA publishes its own configuration and the Entity statements of its subordinates, according to the rules defined by the Federation.
+      - An Intermediate Entity (SA), facilitates the onboarding process in the Federation and MAY handle the functionalities on behalf of its subordinate (Aggregated) Entities. Inside the Federation, an SA publishes its own configuration and the Entity statements of its subordinates, according to the rules defined by the Federation.
     * - **Leaf Entity** or **Leaf**
       - Entity defined by OpenID Connect as Relying Party and OpenID Provider.
     * - **Entity**
