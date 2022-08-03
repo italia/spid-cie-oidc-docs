@@ -29,9 +29,10 @@ Nel caso di richiesta di singoli attributi dell'utente o specifiche combinazioni
 Per la definizione del parametro **claims** e la modalità di utilizzo per la richiesta degli attributi dell'utente si può fare riferimento a `OpenID.Core#ClaimsParameter`_. 
 
 .. warning::
-    - Nell'oggetto *id_token* del parametro **claims** è possibile richiedere solo il Minimum Dataset eIDAS. Gli altri attributi dell'utente DEVONO essere richiesti nell'oggetto *userinfo* del parametro **claims**. Inoltre, gli attributi utente richiesti nell'oggetto *id_token* sono disponibili anche allo *userinfo endpoint*. 
-    
-    - Se il parametro **claims** non è presente o non è valorizzato, viene restituito solo il claim *sub* nella risposta allo userinfo endpoint e nell'ID Token. 
+    - Solo per CIE id: Nell'oggetto *id_token* del parametro **claims** è possibile richiedere solo il Minimum Dataset eIDAS. Gli altri attributi dell'utente DEVONO essere richiesti nell'oggetto *userinfo* del parametro **claims**. Inoltre, gli attributi utente richiesti nell'oggetto *id_token* sono disponibili anche allo *userinfo endpoint*. 
+
+.. warning::
+    - Se il parametro **claims** non è presente o non è valorizzato, viene restituito solo il claim *sub* nella risposta allo userinfo endpoint. 
 
 La tabella seguente mostra alcuni esempi di utilizzo.
 

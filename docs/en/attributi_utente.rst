@@ -2,11 +2,9 @@
 
 .. _user_claims:
 
-Table of the user's attributes
-------------------------------
+User attributes
+---------------
 
-Table of the user's attributes
-++++++++++++++++++++++++++++++
 
 .. list-table:: 
    :widths: auto

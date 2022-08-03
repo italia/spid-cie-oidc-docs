@@ -30,10 +30,11 @@ In case of requests of single user-attributes or specific combinations of them, 
 For the definition of the parameter **claims** and its usage modes for requesting the user attributes, please refer to `OpenID.Core#ClaimsParameter`_. 
 
 .. warning::
-    - In the object *id_token* of the parameter **claims**, it is possible to request only the eIDAS Minimum Dataset. The other user attributes MUST be requested in the object *userinfo* of the parameter **claims**. Moreover, the user attributes requested in the *id_token* object are also available at the *userinfo endpoint*.  
-    
-    - If the parameter **claims** is not present or has no value, only the claim *sub* is returned
-      in the response to the Userinfo Endpoint and in the ID Token. 
+    - Only for CIE id: In the object *id_token* of the parameter **claims**, it is possible to request only the eIDAS Minimum Dataset. The other user attributes MUST be requested in the object *userinfo* of the parameter **claims**. Moreover, the user attributes requested in the *id_token* object are also available at the *userinfo endpoint*.  
+
+.. warning::
+    - If the parameter **claims** is not present or has no value and the only scope openid has been requested, only the claim *sub* is returned
+      in the response to the Userinfo Endpoint. 
 
 
 The following table shows some usage examples.

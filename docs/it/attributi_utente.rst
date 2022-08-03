@@ -5,9 +5,6 @@
 Tabella attributi utente
 ------------------------
 
-Tabella attributi identificativi
-++++++++++++++++++++++++++++++++
-
 .. list-table:: 
    :widths: auto
    :header-rows: 1
