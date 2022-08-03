@@ -85,7 +85,7 @@ Di seguito i claim che DEVONO essere inseriti nella *Token Request*.
 	 
 	 **exp**: UNIX Timestamp con l'istante di scadenza del JWT, codificato come NumericDate come indicato in :rfc:`7519`
 	 
-	 **jti**: Identificatore univoco per questa richiesta di autenticazione, generato dal client. DEVE essere in formato *uuid4*.
+	 **jti**: Identificatore univoco per questa richiesta di autenticazione, generato dal client. Ad esempio in formato *uuid4*.
      - |spid-icon| |cieid-icon|
    * - **client_assertion_type**
      - Deve assumere il seguente valore: |br|
