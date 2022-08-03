@@ -5,8 +5,8 @@
 Gestione degli errori
 +++++++++++++++++++++
 
-In caso di errore, l'OP visualizza i messaggi di anomalia relativi agli scambi OpenID
-Connect descritti nelle relative tabelle definite dalle `Linee Guida UX SPID`_. Nei casi in cui tali linee
+In caso di errore, l'OP o il RP rappresentano i messaggi di anomalia relativi agli scambi OpenID
+Connect, come descritti nelle relative tabelle definite dalle `Linee Guida UX SPID`_. Nei casi in cui tali linee
 guida prescrivono un redirect dell'utente verso il RP, l'OP effettua il redirect verso l'URL indicata
 nel parametro redirect_uri della richiesta (solo se valido, ovvero presente nel client metadata), con
 i seguenti parametri.

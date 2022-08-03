@@ -5,8 +5,7 @@
 Error Management
 ================
 
-In case of errors, the OP displays error messages about the OpenID Connect interchanges, 
-as described in the tables defined in the `SPID UX Guidelines`_. 
+In case of errors the OP or the RP adopts the error messages described in the tables defined in the `SPID UX Guidelines`_. 
 In case the guidelines require a user's redirect to the RP, the OP performs a redirect to the URL indicated 
 in the parameter redirect_uri of the request (only if it is valid, i.e. it is present in the client Metadata), with the following parameters.
 
