@@ -207,7 +207,7 @@ Di seguito i claim disponibili nell'ID Token.
      - UNIX Timestamp con l'istante di generazione del JWT, codificato come NumericDate come indicato in :rfc:`7519`
      - |spid-icon| |cieid-icon|
    * - **nbf** 
-     - UNIX Timestamp. Data/ora di inizio validità del JWT in formato NumericDate, come indicato in :rfc:`7519`. DEVE corrispondere con il valore di **iat**.
+     - UNIX Timestamp. Istante di inizio validità del JWT in formato NumericDate, come indicato in :rfc:`7519`. DEVE corrispondere con il valore di **iat**.
      - |spid-icon| 
    * - **exp**
      - UNIX Timestamp con l'istante di scadenza del JWT, codificato come NumericDate come indicato in :rfc:`7519`

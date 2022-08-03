@@ -210,7 +210,7 @@ The claims available in the *ID Token* are given below.
      - UNIX Timestamp with the time of JWT generation, coded as NumericDate as indicated in :rfc:`7519`. 
      - |spid-icon| |cieid-icon|
    * - **nbf** 
-     - UNIX Timestamp. Date/time of the validity beginning of the JWT in NumericDate format, as indicated in :rfc:`7519`. MUST match with the value of **iat**.
+     - UNIX Timestamp. Time of the validity beginning of the JWT in NumericDate format, as indicated in :rfc:`7519`. MUST match with the value of **iat**.
      - |spid-icon| |cieid-icon|
    * - **exp**
      - UNIX Timestamp with the expiry time of the JWT, coded as NumericDate as indicated in :rfc:`7519`.
