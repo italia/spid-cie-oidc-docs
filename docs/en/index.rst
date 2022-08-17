@@ -16,7 +16,7 @@ In this documentation you can find:
  - How to perform and automatic registration of the RPs to the OpenID Providers.
  - How an OpenID Provider recognizes and dynamically registers an RP.
  - How to use the endpoints of the Federation APIs.
- - How to authenticate a user to SPID and CIE and get his attributes.
+ - How to authenticate a user to SPID and CIE and get his/her attributes.
 
 
 Index of content
