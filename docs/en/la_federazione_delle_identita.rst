@@ -67,17 +67,17 @@ How to participate
 To take part in the SPID and CIE id Federations, a participant must publish its own configuration
 (Entity Configuration) at its own web endpoint :ref:`.well-known/openid-federation<Esempio_EN1>`.
 
-The technical and administrative representatives complete the administrative procedure,
+The technical and administrative representatives complete the onboarding procedure,
 defined by the Federation Authority or by an Intermediary (SA),
 for registering a new Entity or for updating a preexisting one. 
 
-The Federation Authority or an Intermediary, after doing all the required technical and administrative controls, registers the public keys of the Leaf and releases a proof of Federation membership, 
+The Federation Authority or an Intermediary, after doing all the required technical and administrative controls, registers the public keys of the onboarded Entity and releases a proof of Federation membership, 
 in the form of Trust Mark (TM).
 
 The Leaf MUST include the TM inside its own Federation configuration (Entity Configuration) as proof of
 success in the Onboarding process.
 
-The Federation Authority or an Intermediary MUST publish the Leaf Entity Statement containing the Federation public keys of the Leaf and the TMs released for it.
+The Federation Authority or an Intermediary MUST publish the Leaf Entity Statement containing the Federation public keys of the onboarded Entity and the TMs released for it.
 The Federation Authority or an Intermediary MAY publish a `Metadata policy <https://openid.net/specs/openid-connect-federation-1_0.html#rfc.section.5.1>`_ to force the change
 to the OIDC Metadata of the subordinate Entity, in the parts where it might be needed.
 
