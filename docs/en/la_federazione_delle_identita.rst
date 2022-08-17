@@ -64,7 +64,7 @@ For further details, please read the Section about the :ref:`Entity Configuratio
 How to participate
 ++++++++++++++++++
 
-To take part in the SPID and CIEid Federations, a Leaf Entity must publish its own configuration
+To take part in the SPID and CIE id Federations, a participant must publish its own configuration
 (Entity Configuration) at its own web endpoint :ref:`.well-known/openid-federation<Esempio_EN1>`.
 
 The technical and administrative representatives complete the administrative procedure,
