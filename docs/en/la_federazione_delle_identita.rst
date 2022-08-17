@@ -55,7 +55,7 @@ The configuration of the Federation is published by the Trust Anchor inside its 
 
 All the members MUST obtain the Federation configuration before the operational phase and they
 MUST keep it up-to-date on a daily basis. The Federation configuration contains the Trust Anchor
-public key for the signature operations, the maximum number if Intermediaries allowed between a Leaf and the Trust Anchor (**max_path length**) and the authorities who are enabled to issue the Trust Marks (**trust_marks_issuers**).
+public key for the signature operations, the maximum number of Intermediaries allowed between a Leaf and the Trust Anchor (**max_path length**) and the authorities who are enabled to issue the Trust Marks (**trust_marks_issuers**).
 
 Please find a non-normative example of :ref:`Entity Configuration response Trust Anchor<Esempio_EN1.4>` here.
 
