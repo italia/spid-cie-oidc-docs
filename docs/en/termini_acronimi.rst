@@ -24,7 +24,7 @@ Following, the terms used by `OIDC-FED#Section_1.2`_ and this documentation.
     * - **Entity**
       - Participant to the the Federation. It may be a Trust Anchor, Intermediary or Leaf.
     * - **Entity Configuration**
-      - Federation metadata issued by an Entity about itself, in the form of a self-signed JWT :rfc:`7515` containing the Entity's configuration. It contains the public Federation's signing keys, the OIDC metadata, the URLs of its superiors authorities and the Trust Marks issued by authorities that are recognizable inside the Federation and that certify the Entity's compliance to specific profiles.
+      - Federation metadata issued by an Entity about itself, in the form of a self-signed JWT :rfc:`7515`. It contains the public Federation's signing keys, the OIDC metadata, the URLs of its superiors authorities and the Trust Marks issued by authorities that are recognizable inside the Federation and that certify the Entity's compliance to specific profiles.
     * - **Entity Statement**
       - Statement issued by a superior Entity (Trust Anchor or Intermediary) regarding
         a subordinate Entity (RP, OP or Intermediary), in the form of a signed JWT :rfc:`7515`, containing
