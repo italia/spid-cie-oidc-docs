@@ -8,12 +8,19 @@ Lo UserInfo Endpoint è una risorsa protetta OIDC che restituisce gli attributi 
 Request
 +++++++
 
-Lo UserInfo Endpoint DEVE supportare l'uso del solo metodo HTTP GET :rfc:`2616` e DEVE accettare e validare l'Access Token inviato all'interno del campo Authorization dell'Header, di tipo Bearer :rfc:`6750`.
+.. admonition:: |spid-icon|
+
+  Lo UserInfo Endpoint DEVE supportare l'uso del solo metodo HTTP GET :rfc:`2616` e DEVE accettare e validare l'Access Token inviato all'interno del campo Authorization dell'Header, di tipo Bearer :rfc:`6750`.
 
 
-.. code-block:: 
+.. admonition:: |cieid-icon|
 
- GET https://op.spid.agid.gov.it/userinfo
+  Lo UserInfo Endpoint DEVE supportare l'uso dei metodi HTTP GET e POST :rfc:`2616` e DEVE accettare e validare l'Access Token inviato all'interno del campo Authorization dell'Header, di tipo Bearer :rfc:`6750`. 
+
+.. TODO: Move examples in the specific section
+  .. code-block:: 
+
+  GET https://op.spid.agid.gov.it/userinfo
   Authorization: Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRCNjdnTDdja ...
   
 .. seealso::
@@ -27,27 +34,32 @@ Lo UserInfo Endpoint DEVE supportare l'uso del solo metodo HTTP GET :rfc:`2616` 
 Response
 ++++++++
 
-La response dello UserInfo Endpoint DEVE specificare nel "Content-Type" il valore "application/jwt".
+.. admonition:: |spid-icon|
+
+  La response dello UserInfo Endpoint DEVE specificare nel "Content-Type" il valore "application/jwt".
 
 Il contenuto del corpo della Response DEVE essere un `JWT firmato e cifrato. <https://openid.net/specs/openid-connect-core-1_0.html#UserInfoResponse>`_
 
-Lo UserInfo Endpoint restituisce i claim autorizzati nella Authentication Request.
+L'header JOSE DEVE contenere il parametro *cty* (Content Type) valorizzato con *JWT* (vedi :rfc:`7515#section-4`).
 
-**Esempio:**
+Lo UserInfo Endpoint restituisce gli attributi utente esplicitamente richiesti tramite il parametro **claims** o tramite l'utilizzo del parametro **scope** nella Authentication Request.
 
-.. code-block:: 
+.. TODO: Move the examples in the specific section
+  **Esempio:**
 
- {
-     "iss":"https://op.fornitore_identita.it",
-     "aud":"https://rp.fornitore_servizio.it",
-     "iat":1519032969,
-     "nbf":1519032969,
-     "exp":1519033149,
-     "sub":"OP-1234567890",
-     "name":"Mario",
-     "https://attributes.spid.gov.it/familyName":"Rossi",
-     "https://attributes.spid.gov.it/fiscalNumber":"MROXXXXXXXXXXXXX"
- }
+  .. code-block:: 
+
+  {
+      "iss":"https://op.fornitore_identita.it",
+      "aud":"https://rp.fornitore_servizio.it",
+      "iat":1519032969,
+      "nbf":1519032969,
+      "exp":1519033149,
+      "sub":"OP-1234567890",
+      "name":"Mario",
+      "https://attributes.spid.gov.it/familyName":"Rossi",
+      "https://attributes.spid.gov.it/fiscalNumber":"MROXXXXXXXXXXXXX"
+  }
 
 
 Il payload del JWT è un JSON contenente i seguenti parametri:
@@ -58,25 +70,22 @@ Il payload del JWT è un JSON contenente i seguenti parametri:
 
    * - **Claim**
      - **Descrizione**
-     - **Obbligatorio**
+     - **Supportato da**
    * - **sub**
      - String. Identificatore del soggetto, coincidente con quello già rilasciato nell'ID Token.
        Il RP DEVE verificare che il valore coincida con quello contenuto nell'ID Token.
-     - 
+     - |spid-icon| |cieid-icon|
    * - **aud**
      - String. Identificatore del soggetto destinatario della response (RP).
        Il RP DEVE verificare che il valore coincida con il proprio client_id.
-     - 
+     - |spid-icon| |cieid-icon|
    * - **iss**
      - String. URI che identifica univocamente l'OP.
-     - 
+     - |spid-icon| |cieid-icon|
    * - **<attributo>**
      - I claim richiesti al momento dell'autenticazione.
-     - 
+     - |spid-icon| |cieid-icon|
 
 
-In caso di errore di autenticazione, lo UserInfo Endpoint restituisce un errore HTTP in accordo con quanto indicato in `OpenID Connect Core 1.0 al paragrafo 5.3.3 <https://openid.net/specs/openid-connect-core-1_0.html#UserInfoError>`_
+In caso di errore di autenticazione, lo UserInfo Endpoint restituisce un errore HTTP in accordo con quanto indicato in :ref:`Gestioni Errori <gestione_errori>`
 
-.. seealso::
-
- - https://openid.net/specs/openid-connect-core-1_0.html#UserInfoError

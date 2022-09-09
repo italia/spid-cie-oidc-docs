@@ -29,44 +29,8 @@ Nel caso di richiesta di singoli attributi dell'utente o specifiche combinazioni
 Per la definizione del parametro **claims** e la modalità di utilizzo per la richiesta degli attributi dell'utente si può fare riferimento a `OpenID.Core#ClaimsParameter`_. 
 
 .. warning::
-    - Solo per CIE id: Nell'oggetto *id_token* del parametro **claims** è possibile richiedere solo il Minimum Dataset eIDAS. Gli altri attributi dell'utente DEVONO essere richiesti nell'oggetto *userinfo* del parametro **claims**. Inoltre, gli attributi utente richiesti nell'oggetto *id_token* sono disponibili anche allo *userinfo endpoint*. 
+  Se il parametro **claims** non è presente o non è valorizzato, viene restituito solo il claim *sub* nella risposta allo userinfo endpoint. 
 
-.. warning::
-    - Se il parametro **claims** non è presente o non è valorizzato, viene restituito solo il claim *sub* nella risposta allo userinfo endpoint. 
-
-La tabella seguente mostra alcuni esempi di utilizzo.
-
-.. list-table:: 
-    :widths: 10 10 20 20
-    :header-rows: 1
-
-    * - **claims**
-      - **scope**
-      - **Attributi nella Userinfo Response**
-      - **Attributi nell'ID Token**
-    * - *userinfo*: \- |br| *id_token*: \-
-      - *openid*
-      - *sub*
-      - *sub*
-    * - *userinfo*: \- |br| *id_token*: \-
-      - *openid* |br| *profile*
-      - *sub*, |br| *given_name*, |br| *family_name*, |br| *birthdate*, |br| *\https://attributes.eid.gov.it/fiscal_number*
-      - *sub*, |br| *given_name*, |br| *family_name*, |br| *birthdate*, |br| *\https://attributes.eid.gov.it/fiscal_number*
-    * - *userinfo*: \- |br| *id_token*:"birthdate":{essential:true}
-      - *openid* 
-      - *sub*, |br|  *birthdate*
-      - *sub*, |br|  *birthdate*
-    * - *userinfo*: \- |br| *id_token*: \-
-      - *openid* |br| *email*
-      - *sub*, |br| *email*, |br| *email_verified*
-      - *sub*, |br| *email*, |br| *email_verified*
-    * - *userinfo*:"family_name":null |br| *id_token*:"given_name":{essential:true}
-      - *openid* 
-      - *sub*, |br|  *given_name*, |br|  *family_name*
-      - *sub*, |br|  *given_name*
-    * - *userinfo*:\- |br| *id_token*:"birthdate":{essential:true} "gender":{essential:true}
-      - *openid* 
-      - *sub*, |br|  *birthdate*, |br|  *gender*
-      - *sub*, |br|  *birthdate*
-
+  Tutt gli attributi dell'utente richiesti tramite parametro **scope** o tramite parametro **claims** sono disponibili anche nell'*ID Token* oltre che allo *userinfo endpoint*.
+  
 

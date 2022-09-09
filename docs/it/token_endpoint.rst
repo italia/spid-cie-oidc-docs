@@ -160,6 +160,8 @@ ID Token
 ++++++++
 
 L'ID Token è un JSON Web Token (JWT) che contiene informazioni sull'utente che ha eseguito l'autenticazione. I RP DEVONO eseguire la validazione dell'ID Token.
+Il RP PUÒ richiedere che L'ID Token sia cifrato (vedere il parametro *id_token_encrypted_response_alg* nel :ref:`Metadata RP <MetadataRP>` ). In questo caso l'ID Token sarà un JWT **firmato e cifrato** e DEVE contenere il parametro *cty* (Content-Type) nell'intestazione JOSE con il valore *JWT* (vedere :rfc:`7515#section-4`).
+
 Di seguito i claim disponibili nell'ID Token.
 
 .. TODO: Move examples in the specific section

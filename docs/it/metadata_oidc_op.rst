@@ -95,6 +95,12 @@ L'EC di un OP DEVE configurare un metadata di tipo **"openid_provider"** DEVE co
   * - **id_token_signing_alg_values_supported**
     - Vedi `OpenID.Discovery#OP_Metadata`_. L'OP DEVE supportare RS256 e PUÒ supportare anche altri algoritmi di tipo RS, ES e PS definiti in :rfc:`7518#section-3.1`
     - |spid-icon| |cieid-icon|
+  * - **id_token_encryption_alg_values_supported**
+    - See `OpenID.Discovery#OP_Metadata`_. 
+    - |spid-icon| |cieid-icon|
+  * - **id_token_encryption_enc_values_supported**
+    - See `OpenID.Discovery#OP_Metadata`_. 
+    - |spid-icon| |cieid-icon|
   * - **userinfo_signing_alg_values_supported**
     - Vedi `OpenID.Discovery#OP_Metadata`_. L'OP DEVE supportare RS256 e PUÒ supportare anche altri algoritmi di tipo RS, ES e PS definiti in :rfc:`7518#section-3.1`.
     - |spid-icon| |cieid-icon|
