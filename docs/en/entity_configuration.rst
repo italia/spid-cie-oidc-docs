@@ -52,7 +52,7 @@ Entity Configuration - common claims
        :ref:`Metadata<metadata_oidc>` and each value MUST be a JSON Object that represents
        the Metadata, according to the Metadata schema of that type.
 
-       An Entity configuration MAY contain more Metadata statements, but only one for each type of
+       An Entity Configuration MAY contain more Metadata statements, but only one for each type of
        Metadata (<**entity_type**>). 
 
        The allowed types are the following:
@@ -124,4 +124,3 @@ The ECs of a TA, other than the common claims of all the other members, contain 
 .. seealso:: 
 
    - :ref:`Non-normative example of EC of a TA<Esempio_EN1.4>`
-   

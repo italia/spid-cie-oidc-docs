@@ -35,7 +35,6 @@ types Light and Full:
     * - **authz endpoint**
       - \https://www.rp.it/authorization/
       - \https://www.rp.it/<id_code>/authorization/
-    * - **Entity configuration**
+    * - **Entity Configuration**
       - \https://www.rp.it/.well-known/openid-federation
       - \https://www.rp.it/<id_code>/.well-known/openid-federation
-
