@@ -23,7 +23,7 @@ With the method **GET** the parameters MUST be sent using the *Query String Seri
 Autorization Request parameters
 +++++++++++++++++++++++++++++++
 
-Following, the mandatory parameters in the *HTTP* authentication request.
+In the following the mandatory parameters in the *HTTP* authentication request.
 
 .. _tabella_parametri_http_req:
 
@@ -49,7 +49,7 @@ Following, the mandatory parameters in the *HTTP* authentication request.
     - See `OpenID.Core#JWTRequests`_. It MUST be a signed **JWT**.
     - |spid-icon| |cieid-icon|
 
-Following, a table that reports the composition of the **JWT** header.
+In the following, a table that reports the composition of the **JWT** header.
 
 .. list-table:: 
   :widths: 20 60 20
@@ -143,7 +143,7 @@ The **JWT** payload contains the following mandatory claims:
 
 ..
   FIXME: Made an ad hoc section for the ways of using the parameters claims e scope
-	 
+     
   Claims
   ++++++
 
@@ -176,7 +176,7 @@ to the URL contained in the parameter redirect_uri specified in the authorizatio
  - https://tools.ietf.org/html/rfc6749#section-4.1.2
  - https://openid.net/specs/openid-connect-core-1_0.html#AuthRequestValidation
 
-If the authentication is successful, the OpenID Provider (OP), redirects the user by adding the following parameters required as query parameters to the *redirect_uri* (as defined in `OpenID.Core#AuthResponse`_): 
+If the authentication is successful the OpenID Provider (OP) redirects the user by adding the following parameters required as query parameters to the *redirect_uri* (as defined in `OpenID.Core#AuthResponse`_): 
 
 
 .. list-table:: 

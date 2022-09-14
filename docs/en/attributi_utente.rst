@@ -82,7 +82,7 @@ User attributes
      - |spid-icon| |cieid-icon|
    * - **birthdate**
      - registry
-     - Date of birth. String. Following the specifications ISO8601-2004 in the format
+     - Date of birth. String. In the following the specifications ISO8601-2004 in the format
        YYYY indicates the year using 4 (four) digits |br|
        MM indicates the month with 2 (two) digits |br|
        DD indicates the day with 2 (two) digits |br|
@@ -339,9 +339,9 @@ As an example, two Italian addresses are reported:
             "country_code":"IT"
         }
 
-There are cases, as for the United States of America, where not only the country (US), but also a State, must be indicated.
+There are cases, as for the United States of America, where both the country (US) and a State must be indicated.
 In such cases the State is indicated in the field Province.
-Following, an example:
+In the following, an example:
 
 .. list-table:: 
    :widths: 20 80
@@ -363,4 +363,3 @@ Following, an example:
             "region":"New york",
             "country_code":"US"
         }
-

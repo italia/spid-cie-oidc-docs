@@ -3,7 +3,7 @@
 Trust Negotiation
 -----------------
 
-This section explains the ways of mutual recognition between RP and OP, the ways for the Leaves to recognize each other inside the same Federation and to obtain each other's Metadata.
+This section explains the ways of mutual recognition between RP and OP, the ways for the Leaves to recognize each other inside the same Federation and get each other's Metadata.
 
 
 Relying Party
@@ -55,7 +55,7 @@ If the RP configuration does not expose any Trust Mark that is recognizable by t
 
 If the Provider successfully validates at least a Trust Mark for the RP profile contained inside the
 configuration of the requesting RP, it extracts the superior Entities from the claim **authority_hints** and
-starts the Metadata Discovery process. Following, the **Trust Chain** calculation and the achievement of 
+starts the Metadata Discovery process until the **Trust Chain** calculation and the achievement of 
 the final Metadata.
 
 During the Metadata Discovery, the Provider requests one ore more superior Entities [2]_ for the Entity
@@ -87,10 +87,9 @@ the Trust Anchor occurs directly or through an Intermediary (SA) as in the pictu
 Access to the Entity Configuration
 ++++++++++++++++++++++++++++++++++
 
-This section describes how to identify the URL :rfc:`3986` for downloading the Entity Configuration of a given subject.
+This section describes how to identify the URL :rfc:`3986` in roder to download the Entity Configuration of a given subject.
 
-The resource for member for publishing its configuration (Entity Configuration) corresponds to 
-the web path ``.well-known/openid-federation`` and MUST be hung upon the URL the identifies the subject.
+The web path ``.well-known/openid-federation`` is the resource by which a member publishes its configuration (Entity Configuration). This web path MUST be appended to the URL which identifies the subject.
 
 Examples:
 
@@ -101,8 +100,7 @@ Examples:
    Entity Configuration URL is |br|
    ``https://rp.servizi-spid.it/oidc/.well-known/oidc-federation``.
 
-If not present at the end of the URL that identifies a subject, the slash mark ("/") must be added before
-concatenating the web path to the .well-known resource.
+In case of subject identifier URLs lacking the ending slash mark "/", this must be added between the URL and the appended web path resource.
 
 Once the RP is recognized as part in the Federation, it gets the permission to make an Authentication Request.
 An OP that doesn't recognize the RP that makes the request, can correctly resolve the Trust. The OP starts
@@ -115,5 +113,3 @@ provided by the *authority_hint*, reaches the TA. At each chain step, the OP can
 
 
 *The Metadata Discovery process to build a Trust Chain and obtain the final Metadata.*
-
-

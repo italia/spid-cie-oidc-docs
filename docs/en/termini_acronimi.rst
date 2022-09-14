@@ -6,7 +6,7 @@ Terms and Acronyms
 Terms
 +++++
 
-Following, the terms used by `OIDC-FED#Section_1.2`_ and this documentation.
+Terms used by `OIDC-FED#Section_1.2`_ and this documentation.
 
 .. list-table::
     :widths: 15 85

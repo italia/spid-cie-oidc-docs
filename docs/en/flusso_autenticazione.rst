@@ -14,7 +14,7 @@ The **Authorization Code Flow** gets the **Authorization Code** from the *Author
     :width: 100%
 
 
-Following, the descriptions of the flow steps, with the numbers indicated in the picture.
+In the following, the descriptions of the flow steps, with the numbers indicated in the picture.
 
   #. The User, in the access page of the Relying Party (RP):
 
@@ -42,11 +42,7 @@ Following, the descriptions of the flow steps, with the numbers indicated in the
   
   When the RP contacts the *Token Endpoint* at the end of the authentication flow, it sends the **code verifier** created initially, so that the OP can check if its hash is the same as in the authentication request.
 
-  Following, an example of a Python script for generating the requested parameters.
+  An example of a Python script for generating the requested parameters is shown.
 
   .. literalinclude :: ../../static/pkce.py
    :language: python
-
-
-
-

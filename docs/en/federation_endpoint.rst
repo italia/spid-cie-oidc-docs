@@ -10,7 +10,7 @@ All the Entities MUST contain the following endpoints:
  - **/.well-known/openid-federation**: gives the `Entity Configuration <Entity_Configuration>`__ (for 
    more details, see `OIDC-FED#Section.6`_)
  - **resolve Entity statement endpoint**: gives the final Metadata, the Trust Chain and the Trust Marks
-   regarding another subject. For more details, see `OIDC-FED#Section.7.2`_)
+   regarding another subject. For more details, see `OIDC-FED#Section.7.2`_).
 
 .. warning::
   The **resolve Entity statement endpoint** MUST NOT return any information regarding a subject
@@ -41,4 +41,3 @@ Generic error response
 ++++++++++++++++++++++
 
 If the request is malformed or errors occur during the request processing, the format defined at `OIDC-FED#Section.7.5`_ SHOULD be used.
-

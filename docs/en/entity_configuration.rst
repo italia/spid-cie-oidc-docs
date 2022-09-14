@@ -72,7 +72,7 @@ Entity Configuration - common claims
 Entity Configuration Leaves and Intermediaries
 ++++++++++++++++++++++++++++++++++++++++++++++
 
-In addition to the previously defines claims, the EC of the Leaf and Intermediate Entities, contain also
+In addition to the previously defined claims, the EC of the Leaf and Intermediate Entities, contain also
 the following claims:
 
 
@@ -103,7 +103,7 @@ the following claims:
 Entity Configuration Trust Anchor
 +++++++++++++++++++++++++++++++++
 
-The ECs of a TA, other than the common claims of all the other members, contain also the following ones:
+The ECs of a TA, other than the common claims of all the other members, contains also the following ones:
 
 .. list-table::
    :widths: 20 60 20
