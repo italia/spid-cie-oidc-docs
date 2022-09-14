@@ -19,7 +19,7 @@ EN 1.1. Entity Configuration Response Relying Party
 
  HTTP/1.1 200 OK
  Last-Modified: Wed, 22 Jul 2018 19:15:56 GMT
- Content-Type: application/jose 
+ Content-Type: application/entity-statement+jwt 
  
  {
      "alg":"RS256",
@@ -101,7 +101,7 @@ EN 1.2. Entity Configuration Response Openid Provider
 
  HTTP/1.1 200 OK
  Last-Modified: Wed, 22 Jul 2018 19:15:56 GMT
- Content-Type: application/jose 
+ Content-Type: application/entity-statement+jwt 
  
  {
      "alg":"RS256",
@@ -283,7 +283,7 @@ EN 1.3. Entity Configuration Response Intermediary
 
  HTTP/1.1 200 OK
  Last-Modified: Wed, 22 Jul 2018 19:15:56 GMT
- Content-Type: application/jose 
+ Content-Type: application/entity-statement+jwt 
 
  {
      "alg":"RS256",
@@ -341,7 +341,7 @@ EN 1.4. Entity Configuration Response Trust Anchor
 
  HTTP/1.1 200 OK
  Last-Modified: Wed, 22 Jul 2018 19:15:56 GMT
- Content-Type: application/jose
+ Content-Type: application/entity-statement+jwt
  
  {
      "alg":"RS256",
@@ -415,7 +415,7 @@ EN 2.1 Entity Statement Response
 
  HTTP/1.1 200 OK
  Last-Modified: Wed, 22 Jul 2018 19:15:56 GMT
- Content-Type: application/jose
+ Content-Type: application/entity-statement+jwt
  
  {
      "alg":"RS256",
@@ -512,7 +512,7 @@ EN 4.1. Resolve Entity Statement Endpoint Response
 
  HTTP/1.1 200 OK
  Last-Modified: Wed, 22 Jul 2018 19:15:56 GMT
- Content-Type: application/jose 
+ Content-Type: application/entity-statement+jwt 
  
  {
      "alg":"RS256",
@@ -645,6 +645,3 @@ EN 6. Authorization Request
       },
       "state":"fyZiOL9Lf2CeKuNT2JzxiLRDink0uPcd"
   }
-
-
-
