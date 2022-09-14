@@ -8,7 +8,7 @@ SPID/CIE OpenID Connect
 
 Thanks to the `digital identity <https://identitadigitale.gov.it/>`_ the Public Administration and the private service suppliers provides the keys to access the online services through unique access credentials.
 
-This documentation contains the consolidated technical specifications, compliant to the National Guidelines, to improve the experience of integration in the OIDC SPID and CIE id Federations, for the public and private Service Suppliers (RP), Identity Providers (OP) and Intermediate Entities (SA). 
+This documentation contains the consolidated technical specifications, compliant to the National Guidelines, to improve the experience of integration in the OIDC SPID and CIE id Federations, for the public and private Service Providers (RP), Identity Providers (OP) and Intermediate Entities (SA). 
 
 In this documentation you can find:
 
