@@ -20,7 +20,13 @@ Nel caso di utilizzo del parametro **scope** i seguenti valori sono supportati:
     - *email*,
     - *email_verified*.
 
-Gli attributi richiesti tramite il parametro **scope** sono disponibili sia nell'ID Token e sia nella risposta allo userinfo endpoint.
+.. admonition:: |cieid-icon|
+
+    Gli attributi richiesti tramite il parametro **scope** sono disponibili sia nell'ID Token e sia nella risposta allo *userinfo endpoint*.
+
+.. admonition:: |spid-icon|
+
+    Gli attributi richiesti tramite il parametro **scope** sono disponibili nella risposta allo *userinfo endpoint*.
 
 .. note::
     Il parametro **scope** PUÒ contenere uno o più valori separati da uno spazio. Ad esempio l'utilizzo congiunto di *profile* e *email* permette di ottenere l'unione degli insiemi degli attributi (Minimum Dataset eIDAS e l'email).
@@ -29,8 +35,14 @@ Nel caso di richiesta di singoli attributi dell'utente o specifiche combinazioni
 Per la definizione del parametro **claims** e la modalità di utilizzo per la richiesta degli attributi dell'utente si può fare riferimento a `OpenID.Core#ClaimsParameter`_. 
 
 .. warning::
-  Se il parametro **claims** non è presente o non è valorizzato, viene restituito solo il claim *sub* nella risposta allo userinfo endpoint. 
+  Se il parametro **claims** non è presente o non è valorizzato, viene restituito solo il claim *sub* nella risposta allo *userinfo endpoint*. 
 
-  Tutt gli attributi dell'utente richiesti tramite parametro **scope** o tramite parametro **claims** sono disponibili anche nell'*ID Token* oltre che allo *userinfo endpoint*.
+.. admonition:: |spid-icon|
+
+    Gli attributi dell'utente richiesti dal RP tramite il parametro **claims** sono disponibili allo *userinfo endpoint*
+
+.. admonition:: |cieid-icon|
+  
+    Tutt gli attributi dell'utente richiesti tramite parametro **scope** o tramite parametro **claims** sono disponibili anche nell'*ID Token* oltre che allo *userinfo endpoint*.
   
 

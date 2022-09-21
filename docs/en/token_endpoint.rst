@@ -163,7 +163,10 @@ ID Token
 ++++++++
 
 The ID Token is a JSON Web Token (JWT) that contains information on the user that has executed the authentication. The RPs MUST validate the ID Token.
-The RP MAY require the ID Token to be encrypted (see the parameter *id_token_encrypted_response_alg* in the :ref:`RP Metadata <MetadataRP>`). In this case the ID Token will be a **nested signed and encrypted JWT** and MUST contain the *cty* (Content-Type) parameter in the JOSE header with the value *JWT* (see :rfc:`7515#section-4`).
+
+.. admonition:: |cieid-icon|
+
+  The RP MAY require the ID Token to be encrypted (see the parameter *id_token_encrypted_response_alg* in the :ref:`RP Metadata <MetadataRP>`). In this case the ID Token will be a **nested signed and encrypted JWT** and MUST contain the *cty* (Content-Type) parameter in the JOSE header with the value *JWT* (see :rfc:`7515#section-4`).
 
 The claims available in the *ID Token* are given below.
 
