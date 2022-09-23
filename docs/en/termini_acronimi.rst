@@ -6,7 +6,7 @@ Terms and Acronyms
 Terms
 +++++
 
-Following, the terms used by `OIDC-FED#Section_1.2`_ and this documentation.
+Terms used by `OIDC-FED#Section_1.2`_ and this documentation.
 
 .. list-table::
     :widths: 15 85
@@ -67,7 +67,7 @@ In this section are defined all the acronyms that are used throughout the text.
       - Public System of Digital Identity
     * - **CIEid**
       - The Italian digital identity system based on the Electronic ID Card (CIE), whose owner is the
-        Interior Ministry. The technical and operative management is given to the State Mint and Polygraphic Institute (IPZS).
+        Ministry of the Interior. The technical and operative management is given to the State Mint and Polygraphic Institute (IPZS).
     * - **OIDC**
       - OpenID Connect
     * - **OIDC-FED**

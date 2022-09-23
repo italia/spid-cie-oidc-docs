@@ -3,7 +3,7 @@
 UserInfo Endpoint (attributes)
 ------------------------------
 
-The UserInfo Endpoint is an OIDC protected resource that returns the authenticated user's claims. To obtain 
+The UserInfo Endpoint is an OIDC protected resource that returns the authenticated user's claims. In order to obtain 
 the requested claims, the RP sends a request to the UserInfo Endpoint using the Access Token.
 
 Request

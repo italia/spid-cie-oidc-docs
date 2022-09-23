@@ -12,7 +12,7 @@ The TMs issued for the Leaves MUST be published by the Leaves themselves in thei
 inside the claim **trust_marks**. This is composed by lists of JSON objects, each of them MUST contain at least
 the claims **id** and **trust_mark**, where the first identifies the TM, and the second contains the signed JWT of the TM.
 
-Following, a non-normative example of the object **trust_marks** inside the Entity Configuration of an RP-type Leaf.
+In the following, a non-normative example of the object **trust_marks** inside the Entity Configuration of an RP-type Leaf.
 
 
 .. code-block::
@@ -28,7 +28,7 @@ Following, a non-normative example of the object **trust_marks** inside the Enti
 
 
 
-Following, a non-normative example of a Trust Mark issued by AgID for a private Intermediary.
+In the following, a non-normative example of a Trust Mark issued by AgID for a private Intermediary.
 
 
 .. code-block::
@@ -91,5 +91,3 @@ Where the content of the signed JWT inside the claim **trust_mark**, corresponds
      "organization_name":"Full name of the RP",
      "ref":"https://reference_to_some_documentation.it/"
  }
-
-

@@ -14,7 +14,7 @@ about a token in their possession, as for example its validity.
 Request
 +++++++
 
-The request to the Introspection Endpoint consists of sending the token about which to obtain information,
+The request to the Introspection Endpoint contains the token,
 together with a Client Assertion that allows authenticating the RP that makes the request.
 
 
@@ -89,4 +89,3 @@ The Introspection Endpoint responds with a JSON Object defined as follows.
      - Boolean value that indicates the token validity. If the token is expired, it has been revoked or it
        has never been issued for the calling client_id, the Introspection Endpoint must return false.
      - 
-

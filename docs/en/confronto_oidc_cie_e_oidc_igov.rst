@@ -3,7 +3,7 @@
 Differences with OIDC iGov
 --------------------------
 
-CIE OpenID Connect and e SPID OpenID Connect are based on `iGov.OIDC`_  with the following differences:
+CIE OpenID Connect and SPID OpenID Connect are based on `iGov.OIDC`_  with the following differences:
 
  - Section 2.1 of iGov shows **vtr**, **acr_values** and **PKCE** as OPTIONAL, in both SPID and CIE id PKCE and acr_values are REQUIRED. In the both SPID and CIE implementation the acr_values has been adopted instead of vtr. 
 
@@ -36,4 +36,3 @@ CIE OpenID Connect and e SPID OpenID Connect are based on `iGov.OIDC`_  with the
  - Sections 3.7 and 2.5 of iGOV : both SPID and CIE id OP metadata are distributed according to the modalities defined  in Section "3. Metadata".
 
  - The Access token is a signed jwt in compliance to :rfc:`9068`
-

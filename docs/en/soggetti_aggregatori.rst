@@ -7,7 +7,7 @@ Intermediate Entities
 
 An Intermediate Entity (SA) can register pre-existing RPs that are compliant to the OIDC-FED standard and lead to domains that are external to their own domains, or that mask their subordinates behind them. In the first case, the SA is of type *Transparent* (**Light Aggregator**), and in the second case it is of type *Proxy* (**Full Aggregator**)
 
-The **Light** SAs register pre-existing RPs that are compliant to OIDC-FED and publish the ESs referred to them.
+The **Light** SAs register pre-existing RPs that are compliant to OIDC-FED and publishes the ESs referred to them.
 
 The **Full** SAs arrange building an authentication and federation interface, on behalf of their own subordinates, by using web resources that are usually exposed inside their own domain. This kind of SAs expose for each of their subordinates, the following resources:
 
@@ -35,7 +35,6 @@ types Light and Full:
     * - **authz endpoint**
       - \https://www.rp.it/authorization/
       - \https://www.rp.it/<id_code>/authorization/
-    * - **Entity configuration**
+    * - **Entity Configuration**
       - \https://www.rp.it/.well-known/openid-federation
       - \https://www.rp.it/<id_code>/.well-known/openid-federation
-

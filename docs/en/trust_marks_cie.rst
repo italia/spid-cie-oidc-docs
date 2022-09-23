@@ -6,7 +6,7 @@ Trust Marks for CIEid
 Examples of Trust Marks for CIE
 +++++++++++++++++++++++++++++++
 
-Following, a non-normative example of a Trust Mark, issued by *MinInterno* for SAs of type **full**, belonging to the Public Administration.
+A non-normative example of a Trust Mark, issued by *MinInterno* for SAs of type **full**, belonging to the Public Administration.
 
 .. code-block::
 
@@ -21,7 +21,7 @@ Following, a non-normative example of a Trust Mark, issued by *MinInterno* for S
  }
 
 
-Where the JWT payload is the following:
+Where the JWT payload is:
 
 .. code-block::
 
@@ -39,7 +39,7 @@ Where the JWT payload is the following:
  }
 
 
-Following, a non-normative example of a TM, issued by an SA of type RP Leaf, belonging to the Public Administration.
+Non-normative example of a TM, issued by an SA of type RP Leaf, belonging to the Public Administration.
 
 .. code-block::
 

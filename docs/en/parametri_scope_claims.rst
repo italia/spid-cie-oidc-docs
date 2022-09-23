@@ -7,16 +7,16 @@ Usage of the parameters **scope** and **claims**
 
 The user attributes MAY be requested by the RP using the **scope** or **claims** parameters in the Authorization Request.
 
-In case of using the **scope** parameter, the following values are supported:
+When the **scope** parameter is used, the following values are supported:
 
-- **profile**: using this value it is possible to obtain the default user profile that corresponds to the eIDAS Minimum Dataset: 
+- **profile**: the use of this value permits to obtain the default user profile which corresponds to the eIDAS Minimum Dataset: 
 
     - *family_name*, 
     - *given_name*,
     - *birthdate*, 
     - *\https://attributes.eid.gov.it/fiscal_number* (National Unique Identifier).
 
-- **email**: this values allows obtaining, if made available by the user, the following attributes:
+- **email**: : this value permits to get, when they are made available by the user, the following attributes:
 
     - *email*;
     - *email_verified*.
@@ -24,7 +24,7 @@ In case of using the **scope** parameter, the following values are supported:
 The attributes requested by the parameter **scope** are available both in the ID Token and in the response to the Userinfo Endpoint.
 
 .. note::
-   The parameter **scope** MAY contain one or more values, with single spaces as separators. For example, using both *profile* and *email* in the **scope** parameter gives the Minimum Dataset eIDAS and the email.
+   The parameter **scope** MAY contain one or more values, with single spaces as separators. For example, using both profile and email in the scope parameter returns the Minimum eIDAS Dataset and the email.
 
 In case of requests of single user-attributes or specific combinations of them, the RP MAY use the parameter **claims**. 
 For the definition of the parameter **claims** and its usage modes for requesting the user attributes, please refer to `OpenID.Core#ClaimsParameter`_. 
@@ -71,5 +71,3 @@ The following table shows some usage examples.
       - *openid* 
       - *sub*, |br|  *birthdate*, |br|  *gender*
       - *sub*, |br|  *birthdate*
-
-
