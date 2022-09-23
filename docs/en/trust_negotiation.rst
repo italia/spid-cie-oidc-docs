@@ -87,7 +87,7 @@ the Trust Anchor occurs directly or through an Intermediary (SA) as in the pictu
 Access to the Entity Configuration
 ++++++++++++++++++++++++++++++++++
 
-This section describes how to identify the URL :rfc:`3986` in roder to download the Entity Configuration of a given subject.
+This section describes how to identify the URL :rfc:`3986` in order to download the Entity Configuration of a given subject.
 
 The web path ``.well-known/openid-federation`` is the resource by which a member publishes its configuration (Entity Configuration). This web path MUST be appended to the URL which identifies the subject.
 
