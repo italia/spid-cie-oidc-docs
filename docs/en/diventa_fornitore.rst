@@ -1,4 +1,4 @@
-.. include:: ../common/common_definitions.rst
+.. include:: ../it/common/common_definitions.rst
 
 
 Become a service provider

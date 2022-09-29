@@ -1,4 +1,4 @@
-.. include:: ../common/common_definitions.rst
+.. include:: ../it/common/common_definitions.rst
 
 Introspection Endpoint (token validity check) 
 ---------------------------------------------

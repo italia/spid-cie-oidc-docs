@@ -1,4 +1,4 @@
-.. include:: ../common/common_definitions.rst
+.. include:: ./common/common_definitions.rst
 
 Le Federazioni eID Italiane
 ---------------------------
