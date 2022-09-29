@@ -1,4 +1,4 @@
-.. include:: ../it/common_definitions.rst
+.. include:: ../it/common/common_definitions.rst
 
 .. _MetadataRP:
 

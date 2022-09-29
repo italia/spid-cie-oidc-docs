@@ -1,4 +1,4 @@
-.. include:: common_definitions.rst
+.. include:: ./common/common_definitions.rst
 
 Esempi
 ======
@@ -7,4 +7,4 @@ In questa sezione sono raccolti tutti gli esempi non normativi delle richieste e
 
 Tutte le response di tipo jose sono state decodificate e rappresentate insieme alle loro intestazioni per migliorare la lettura.
 
-.. include:: common_examples.rst
+.. include:: ./common/common_examples.rst
