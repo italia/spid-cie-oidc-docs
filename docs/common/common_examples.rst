@@ -274,7 +274,7 @@ EN 1.2. Entity Configuration Response Openid Provider
      ]
  }
 
-
+.. _Esempio_EN1.3:
 
 EN 1.3. Entity Configuration Response Intermediary 
 ++++++++++++++++++++++++++++++++++++++++++++++++++
