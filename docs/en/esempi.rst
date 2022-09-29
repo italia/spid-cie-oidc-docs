@@ -1,4 +1,4 @@
-.. include:: ../it/common/common_definitions.rst
+.. include:: ../common/common_definitions.rst
 
 Examples
 ========
@@ -7,4 +7,4 @@ This section gathers all the non-normative examples of the requests and response
 
 All the responses of type jose have been decoded and represented with their headings, for the sake of reading.
 
-.. include:: ../it/common/common_examples.rst
+.. include:: ../common/common_examples.rst
