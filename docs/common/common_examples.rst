@@ -4,7 +4,7 @@
 EN 1. Entity Configuration Request
 ++++++++++++++++++++++++++++++++++
 
-.. code-block:: 
+.. code-block:: python
 
  GET /.well-known/openid-federation HTTP/1.1
  Host: rp.example.it
@@ -15,7 +15,7 @@ EN 1. Entity Configuration Request
 EN 1.1. Entity Configuration Response Relying Party
 +++++++++++++++++++++++++++++++++++++++++++++++++++
 
-.. code-block:: 
+.. code-block:: python
 
  HTTP/1.1 200 OK
  Last-Modified: Wed, 22 Jul 2018 19:15:56 GMT
@@ -97,7 +97,7 @@ EN 1.1. Entity Configuration Response Relying Party
 EN 1.2. Entity Configuration Response Openid Provider
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-.. code-block:: 
+.. code-block:: python
 
  HTTP/1.1 200 OK
  Last-Modified: Wed, 22 Jul 2018 19:15:56 GMT
@@ -279,7 +279,7 @@ EN 1.2. Entity Configuration Response Openid Provider
 EN 1.3. Entity Configuration Response Intermediary 
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
-.. code-block:: 
+.. code-block:: python
 
  HTTP/1.1 200 OK
  Last-Modified: Wed, 22 Jul 2018 19:15:56 GMT
@@ -337,7 +337,7 @@ EN 1.3. Entity Configuration Response Intermediary
 EN 1.4. Entity Configuration Response Trust Anchor
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
-.. code-block:: 
+.. code-block:: python
 
  HTTP/1.1 200 OK
  Last-Modified: Wed, 22 Jul 2018 19:15:56 GMT
@@ -398,7 +398,7 @@ EN 1.4. Entity Configuration Response Trust Anchor
 EN 2. Entity Statement Request
 ++++++++++++++++++++++++++++++
 
-.. code-block:: 
+.. code-block:: none
 
  GET /fetch?sub=https://rp.example.it/
  HTTP/1.1
@@ -411,7 +411,7 @@ EN 2. Entity Statement Request
 EN 2.1 Entity Statement Response
 ++++++++++++++++++++++++++++++++
 
-.. code-block:: 
+.. code-block:: python
 
  HTTP/1.1 200 OK
  Last-Modified: Wed, 22 Jul 2018 19:15:56 GMT
@@ -471,7 +471,7 @@ EN 2.1 Entity Statement Response
 EN 3. Entity List Request
 +++++++++++++++++++++++++
 
-.. code-block:: 
+.. code-block:: none
 
  GET /list?entity_type=openid_provider
  HTTP/1.1
@@ -484,7 +484,7 @@ EN 3. Entity List Request
 EN 3.1. Entity List Response
 ++++++++++++++++++++++++++++
 
-.. code-block:: 
+.. code-block:: none
 
  HTTP/1.1 200 OK
  Last-Modified: Wed, 22 Jul 2018 19:15:56 GMT
@@ -497,7 +497,7 @@ EN 3.1. Entity List Response
 EN 4. Resolve Entity Statement Endpoint Request
 +++++++++++++++++++++++++++++++++++++++++++++++
 
-.. code-block:: 
+.. code-block:: none
 
  GET /resolve/?sub=https://openid.provider.it/&anchor=https://registry.agid.gov.it/
  HTTP/1.1
@@ -508,7 +508,7 @@ EN 4. Resolve Entity Statement Endpoint Request
 EN 4.1. Resolve Entity Statement Endpoint Response
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
-.. code-block:: 
+.. code-block:: python
 
  HTTP/1.1 200 OK
  Last-Modified: Wed, 22 Jul 2018 19:15:56 GMT
@@ -576,7 +576,7 @@ EN 4.1. Resolve Entity Statement Endpoint Response
 EN 5. Trust Mark Status Request
 +++++++++++++++++++++++++++++++
 
-.. code-block:: 
+.. code-block:: none
 
  GET /trust_mark_status/?
  id=https://registry.agid.gov.it/openid_relying_party/public/
@@ -590,7 +590,7 @@ EN 5. Trust Mark Status Request
 EN 5.1. Trust Mark Status Response
 ++++++++++++++++++++++++++++++++++
 
-.. code-block:: 
+.. code-block:: python
 
  HTTP/1.1 200 OK
  Last-Modified: Wed, 22 Jul 2018 19:15:56 GMT
@@ -605,7 +605,7 @@ EN 6. Authorization Request
 
 **Example (HTTP call):**
 
-.. code-block::
+.. code-block:: none
 
   GET /auth?client_id=https://rp.spid.agid.gov.it&
   response_type=code&scope=openid& code_challenge=qWJlMe0xdbXrKxTm72EpH659bUxAxw80&
@@ -622,7 +622,7 @@ EN 6. Authorization Request
   
 **Example of JWT payload:**
 
-.. code-block::
+.. code-block:: python
 
   {
       "client_id":"https://rp.spid.agid.gov.it",
