@@ -1,4 +1,4 @@
-.. include:: ../it/common/common_definitions.rst
+.. include:: ../it/common_definitions.rst
 
 .. _Trust_Mark:
 
