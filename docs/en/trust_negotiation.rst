@@ -1,7 +1,7 @@
 .. include:: ../common/common_definitions.rst
 
-Trust Negotiation
------------------
+Metadata retrieval
+------------------
 
 This section explains the ways of mutual recognition between RP and OP, the ways for the Leaves to recognize each other inside the same Federation and get each other's Metadata.
 

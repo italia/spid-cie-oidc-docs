@@ -1,7 +1,7 @@
 .. include:: ../common/common_definitions.rst
 
-Trust Negotiation
------------------
+Acquisire i Metadata
+--------------------
 
 In questa sezione sono illustrate le modalità di mutuo riconoscimento tra RP e OP, le modalità con le quali le foglie si riconoscono all'interno della medesima Federazione e ottengono gli uni i Metadata degli altri.
 
