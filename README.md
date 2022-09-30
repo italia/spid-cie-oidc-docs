@@ -25,8 +25,9 @@ This is why the content of the relevant folders will be compiled and rendered in
 reason it is the reference platform for displaying this standard.
 
 
-## Developers
+## Build
 
+HTML
 ````
 pip install -r requirements.txt
 
@@ -35,6 +36,14 @@ sphinx-build -b html -d html/it/doctrees docs/it/  html/it
 
 # english version
 sphinx-build -b html -d html/en/doctrees docs/en/  html/en
+````
+
+ODT
+````
+sudo apt install pandoc
+sphinx-build -b singlehtml docs/it/  html/
+cd html
+pandoc -o spid-cie-oidc-docs.odt index.html
 ````
 
 ## Versioning
