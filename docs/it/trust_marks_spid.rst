@@ -74,7 +74,7 @@ Un'entità Intermediaria o Soggetto Aggregatore (SA) è riconoscibile come emett
 
 Dove il contenuto del JWT firmato all'interno dell'attributo **trust_mark** corrisponde al seguente esempio non normativo:
 
-.. code-block::
+.. code-block:: json
 
  {
      "id":"https://registry.agid.gov.it/openid_relying_party/public/",
