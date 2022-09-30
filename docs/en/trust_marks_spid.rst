@@ -15,7 +15,7 @@ the claims **id** and **trust_mark**, where the first identifies the TM, and the
 In the following, a non-normative example of the object **trust_marks** inside the Entity Configuration of an RP-type Leaf.
 
 
-.. code-block::
+.. code-block:: json
 
  {
      "trust_marks":[
@@ -31,7 +31,7 @@ In the following, a non-normative example of the object **trust_marks** inside t
 In the following, a non-normative example of a Trust Mark issued by AgID for a private Intermediary.
 
 
-.. code-block::
+.. code-block:: json
 
  {
      "trust_marks":[
@@ -44,7 +44,7 @@ In the following, a non-normative example of a Trust Mark issued by AgID for a p
 
 Where the content of the signed JWT inside the claim **trust_mark**, corresponds to:
 
-.. code-block::
+.. code-block:: json
 
  {
      "id":"https://registry.agid.gov.it/federation_entity/private/",
@@ -63,7 +63,7 @@ Where the content of the signed JWT inside the claim **trust_mark**, corresponds
 An Intermediate Entity or Intermediary (SA) is recognizable as Trust Mark issuer. What follows, is a 
 non-normative example of a Trust Mark, issued by an SA in favor of its subordinate RP.
 
-.. code-block::
+.. code-block:: json
 
  {
      "trust_marks":[
@@ -78,7 +78,7 @@ non-normative example of a Trust Mark, issued by an SA in favor of its subordina
 Where the content of the signed JWT inside the claim **trust_mark**, corresponds to the following non-normative example:
 
 
-.. code-block::
+.. code-block:: json
 
  {
      "id":"https://registry.agid.gov.it/openid_relying_party/public/",

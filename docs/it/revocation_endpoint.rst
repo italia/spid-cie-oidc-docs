@@ -24,7 +24,7 @@ La richiesta al Revocation Endpoint consiste nell'invio del token che si vuole r
 
 **Esempio:**
 
-.. code-block::
+.. code-block:: http
 
  POST /revoke?
  client_assertion=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiw

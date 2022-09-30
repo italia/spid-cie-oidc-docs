@@ -21,7 +21,7 @@ User attributes
 
        The format is the following:
 
-       .. code-block::
+       .. code-block:: http
 
          <Identification code> = <cod_IdP><unique number>
 
@@ -34,9 +34,9 @@ User attributes
 
        Example: 
 
-       .. code-block::
+       .. code-block:: http
 
-         "https://attributes.eid.gov.it/spid_cod":"ABCD123456789A"
+         "https://attributes.eid.gov.it/spid_cod": "ABCD123456789A"
 
      - |spid-icon|
    * - **given_name**
@@ -46,9 +46,9 @@ User attributes
        
        Example:
 
-       .. code-block::
+       .. code-block:: json
       
-         "given_name":"Giovanni Mario"
+         "given_name": "Giovanni Mario"
 
      - |spid-icon| |cieid-icon|
    * - **family_name**
@@ -57,9 +57,9 @@ User attributes
 
        Example:
 
-       .. code-block::
+       .. code-block:: json
        
-         "family_name":"Bianchi Verdi"
+         "family_name": "Bianchi Verdi"
 
      - |spid-icon| |cieid-icon|
    * - **place_of_birth**
@@ -72,9 +72,9 @@ User attributes
 
        Example:
 
-       .. code-block::
+       .. code-block:: json
 
-        "place_of_birth":{
+        "place_of_birth": {
             "region":"MI",
             "locality":"F205"
         }
@@ -88,9 +88,9 @@ User attributes
        DD indicates the day with 2 (two) digits |br|
        Example: |br|
 
-       .. code-block::
+       .. code-block:: json
 
-         "birthdate":"2002-09-24"
+         "birthdate": "2002-09-24"
 
      - |spid-icon| |cieid-icon|
    * - **gender**
@@ -100,9 +100,9 @@ User attributes
        "M" for male |br|
        Example: |br|
 
-       .. code-block::
+       .. code-block:: json
 
-         "gender":"F"
+         "gender": "F"
 
      - |spid-icon| |cieid-icon|
    * - **https://attributes.eid.gov.it/company_name**
@@ -110,9 +110,9 @@ User attributes
      - Company name. String. String composed by a sequence of words, separated by single spaces.
        In capital letters the substrings corresponding to names (e.g. "Agenzia per l'Italia Digitale")
 
-       .. code-block::
+       .. code-block:: json
 
-         "company_name":"Agenzia per l'Italia Digitale"
+         "company_name": "Agenzia per l'Italia Digitale"
 
      - |spid-icon|
    * - **https://attributes.eid.gov.it/registered_office**
@@ -132,9 +132,9 @@ User attributes
 
        Example:
 
-       .. code-block::
+       .. code-block:: json
 
-         "https://attributes.eid.gov.it/registered_office":{
+         "https://attributes.eid.gov.it/registered_office": {
              "formatted":"via Listz 21 00144 Roma"
          }
 
@@ -147,7 +147,7 @@ User attributes
         
        Example:
 
-       .. code-block::
+       .. code-block:: json
 
           "https://attributes.eid.gov.it/fiscal_number": "TINIT-ABCXYZ00W00Z000Z"
 
@@ -159,9 +159,9 @@ User attributes
 
        TINIT-<FiscalNumber>
 
-        .. code-block::
+        .. code-block:: json
 
-          "https://attributes.eid.gov.it/company_fiscalNumber":"TINIT-ABCXYZ00W00Z000Z"
+          "https://attributes.eid.gov.it/company_fiscalNumber": "TINIT-ABCXYZ00W00Z000Z"
 
      - |spid-icon|
    * - **https://attributes.eid.gov.it/vat_number**
@@ -173,7 +173,7 @@ User attributes
 
        Example:
 
-       .. code-block::
+       .. code-block:: json
 
           "https://attributes.eid.gov.it/vat_number": "VATIT-12345678901"
 
@@ -213,7 +213,7 @@ User attributes
 
        Example:
 
-       .. code-block::
+       .. code-block:: json
 
         "document_details":{
             "type":"cartaIdentita",
@@ -314,7 +314,7 @@ As an example, two Italian addresses are reported:
        City of the of the physical domicile
        Province of the physical domicile
        Country of the physical domicile
-     - .. code-block::
+     - .. code-block:: json
 
         "address":{
             "street_address":"Via Liszt 21",
@@ -329,7 +329,7 @@ As an example, two Italian addresses are reported:
        City of the of the physical domicile
        Province of the physical domicile
        Country of the physical domicile
-     - .. code-block::
+     - .. code-block:: json
 
         "address":{
             "street_address":"S.S. Salaria Km 23,800",
@@ -354,7 +354,7 @@ In the following, an example:
        City of the of the physical domicile
        Province of the physical domicile
        Country of the physical domicile
-     - .. code-block::
+     - .. code-block:: json
 
         "address":{
             "street_address":"503,Washington Avenue",

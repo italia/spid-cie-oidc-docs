@@ -8,7 +8,7 @@ Examples of Trust Marks for CIE
 
 A non-normative example of a Trust Mark, issued by *MinInterno* for SAs of type **full**, belonging to the Public Administration.
 
-.. code-block::
+.. code-block:: json
 
  {
      "trust_marks":[
@@ -23,7 +23,7 @@ A non-normative example of a Trust Mark, issued by *MinInterno* for SAs of type 
 
 Where the JWT payload is:
 
-.. code-block::
+.. code-block:: json
 
  {
      "id":"https://registry.interno.gov.it/federation_entity/intermediary/",
@@ -41,7 +41,7 @@ Where the JWT payload is:
 
 Non-normative example of a TM, issued by an SA of type RP Leaf, belonging to the Public Administration.
 
-.. code-block::
+.. code-block:: json
 
  {
      "trust_marks":[
@@ -57,7 +57,7 @@ Non-normative example of a TM, issued by an SA of type RP Leaf, belonging to the
 Where the payload $JWT could be as in the following non-normative example:
 
 
-.. code-block::
+.. code-block:: json
 
  {
      "id":"https://registry.interno.gov.it/openid_relying_party/public/",

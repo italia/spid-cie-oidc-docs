@@ -13,7 +13,7 @@ I TM emessi per le foglie DEVONO essere pubblicati dalle foglie stesse nelle pro
 Di seguito un esempio non normativo dell'oggetto **trust_marks** all'interno della Entity Configuration di una Foglia di tipo RP.
 
 
-.. code-block::
+.. code-block:: json
 
  {
      "trust_marks":[
@@ -28,7 +28,7 @@ Di seguito un esempio non normativo dell'oggetto **trust_marks** all'interno del
 
 Quello che segue è un esempio non normativo di un Trust Mark emesso dalla AgID per un Intermediario privato.
 
-.. code-block::
+.. code-block:: json
 
  {
      "trust_marks":[
@@ -41,7 +41,7 @@ Quello che segue è un esempio non normativo di un Trust Mark emesso dalla AgID 
 
 Dove il contenuto del JWT firmato all'interno dell'attributo **trust_mark** corrisponde a:
 
-.. code-block::
+.. code-block:: json
 
  {
      "id":"https://registry.agid.gov.it/federation_entity/private/",
@@ -60,7 +60,7 @@ Dove il contenuto del JWT firmato all'interno dell'attributo **trust_mark** corr
 
 Un'entità Intermediaria o Soggetto Aggregatore (SA) è riconoscibile come emettitore di Trust Mark. Quello che segue è un esempio non normativo di un Trust Mark emesso da un SA a favore di un RP suo discendente.
 
-.. code-block::
+.. code-block:: json
 
  {
      "trust_marks":[

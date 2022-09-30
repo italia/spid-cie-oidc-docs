@@ -27,7 +27,7 @@ The value of the claim **trust_marks_issuers** is composed by a JSON Object havi
 In the following, a non-normative example of the object **trust_marks_issuers** inside the TA's Entity Configuration.
 
 
-.. code-block::
+.. code-block:: json
 
  {
      "trust_marks_issuers":{

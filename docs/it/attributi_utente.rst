@@ -17,11 +17,7 @@ Tabella attributi utente
      - anagrafica
      - Codice identificativo. String. Il codice identificativo è assegnato dal gestore dell'identità digitale e deve essere univoco.
 
-       Il formato è il seguente:
-
-       .. code-block::
-
-         <codice Identificativo> = <cod_IdP><nr. univoco>
+       Il formato è il seguente: <codice Identificativo> = <cod_IdP><nr. univoco>
 
        Dove:
 
@@ -31,7 +27,7 @@ Tabella attributi utente
 
        Esempio: 
 
-       .. code-block::
+       .. code-block:: json
 
          "https://attributes.eid.gov.it/spid_cod":"ABCD123456789A"
 
@@ -43,9 +39,9 @@ Tabella attributi utente
        
        Esempio:
 
-       .. code-block::
+       .. code-block:: json
       
-         "given_name":"Giovanni Mario"
+         "given_name": "Giovanni Mario"
 
      - |spid-icon| |cieid-icon|
    * - **family_name**
@@ -55,7 +51,7 @@ Tabella attributi utente
 
        Esempio:
 
-       .. code-block::
+       .. code-block:: json
        
          "family_name":"Bianchi Verdi"
 
@@ -71,7 +67,7 @@ Tabella attributi utente
 
        Esempio:
 
-       .. code-block::
+       .. code-block:: json
 
         "place_of_birth":{
             "region":"MI",
@@ -87,7 +83,7 @@ Tabella attributi utente
        DD indica il giorno in (due) cifre |br|
        Esempio: |br|
 
-       .. code-block::
+       .. code-block:: json
 
          "birthdate":"2002-09-24"
 
@@ -99,7 +95,7 @@ Tabella attributi utente
        "M" per sesso maschile |br|
        Esempio: |br|
 
-       .. code-block::
+       .. code-block:: json
 
          "gender":"F"
 
@@ -110,9 +106,9 @@ Tabella attributi utente
        da spazi singoli.
        In maiuscolo le sottostringhe corrispondenti a nomi (es. “Agenzia per l'Italia Digitale”)
 
-       .. code-block::
+       .. code-block:: json
 
-         "company_name":"Agenzia per l'Italia Digitale"
+         "company_name": "Agenzia per l'Italia Digitale"
 
      - |spid-icon|
    * - **https://attributes.eid.gov.it/registered_office**
@@ -132,7 +128,7 @@ Tabella attributi utente
 
        Esempio:
 
-       .. code-block::
+       .. code-block:: json
 
          "https://attributes.eid.gov.it/registered_office":{
              "formatted":"via Listz 21 00144 Roma"
@@ -148,7 +144,7 @@ Tabella attributi utente
         
        Esempio:
 
-       .. code-block::
+       .. code-block:: json
 
           "https://attributes.eid.gov.it/fiscal_number": “TINIT-ABCXYZ00W00Z000Z"
 
@@ -160,7 +156,7 @@ Tabella attributi utente
 
        TINIT-segue il codice fiscale
 
-        .. code-block::
+        .. code-block:: json
 
           "https://attributes.eid.gov.it/company_fiscalNumber":"TINIT-ABCXYZ00W00Z000Z"
 
@@ -174,7 +170,7 @@ Tabella attributi utente
 
        Esempio:
 
-       .. code-block::
+       .. code-block:: json
 
           "https://attributes.eid.gov.it/vat_number": "VATIT-12345678901"
 
@@ -215,7 +211,7 @@ Tabella attributi utente
 
        Esempio:
 
-       .. code-block::
+       .. code-block:: json
 
         "document_details":{
             "type":"cartaIdentita",
@@ -315,9 +311,9 @@ Si riportano a titolo di esempio due indirizzi italiani:
        Comune domicilio fisico
        Provincia domicilio fisico
        Nazione domicilio fisico
-     - .. code-block::
+     - .. code-block:: json
 
-        "address":{
+        "address": {
             "street_address":"Via Liszt 21",
             "postal_code":"00144",
             "locality":"Roma",
@@ -330,9 +326,9 @@ Si riportano a titolo di esempio due indirizzi italiani:
        Comune domicilio fisico
        Provincia domicilio fisico
        Nazione domicilio fisico
-     - .. code-block::
+     - .. code-block:: json
 
-        "address":{
+        "address": {
             "street_address":"S.S. Salaria Km 23,800",
             "postal_code":"00015",
             "locality":"Monterotondo",
@@ -355,7 +351,7 @@ Si riporta il seguente esempio:
        Comune domicilio fisico
        Provincia domicilio fisico
        Nazione domicilio fisico
-     - .. code-block::
+     - .. code-block:: json
 
         "address":{
             "street_address":"503,Washington Avenue",
