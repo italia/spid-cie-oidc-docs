@@ -1,11 +1,12 @@
 document:
-  name: SPID/CIE OIDC Regole tecniche
+  name: SPID/CIE OpenID Connect Regole tecniche
   description: |
-    Regole tecniche OIDC per i sistemi nazionali di Identità Digitale.
+    Regole tecniche OpenID Connect per i sistemi nazionali di Identità Digitale SPID e CIE id.
   tags:
     - standard 
     - interoperabilità
     - spid
     - cie
     - oidc
+    - openid
   
