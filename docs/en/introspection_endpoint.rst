@@ -20,7 +20,7 @@ together with a Client Assertion that allows authenticating the RP that makes th
 
 **Example:**
 
-.. code-block:: 
+.. code-block:: http
 
  POST /introspection?
  client_assertion=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiw
@@ -72,7 +72,7 @@ The Introspection Endpoint responds with a JSON Object defined as follows.
 
 **Example:**
 
-.. code-block:: 
+.. code-block:: json
 
  {
      "active":true

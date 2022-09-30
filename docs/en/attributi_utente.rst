@@ -279,9 +279,9 @@ User attributes
 
        Example: 
        
-       .. code-block:: 
+       .. code-block:: json
 
-         "address":{
+         "address": {
              "street_address":"Via Liszt 21",
              "postal_code":"00144",
              "locality":"Roma",

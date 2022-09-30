@@ -29,7 +29,7 @@ The claims that MUST be included in the *Token Request* are given below.
 
   **Request example with authorization code (case 1)**
 
-  .. code-block:: 
+  .. code-block:: http
 
   POST /token?
   client_id=https://rp.spid.agid.gov.it&
@@ -50,7 +50,7 @@ The claims that MUST be included in the *Token Request* are given below.
 
   **Request example with Refresh Token (case 2):**
 
-  .. code-block:: 
+  .. code-block:: http
 
   POST /token?
   client_id=https://rp.spid.agid.gov.it&
@@ -125,7 +125,7 @@ The response MUST contain the following claims.
 
 .. TODO: Move examples in the specific section
 
-  .. code-block:: 
+  .. code-block:: http
 
   {
       "access_token":"dC34Pf6kdG...",
@@ -168,7 +168,7 @@ The claims available in the *ID Token* are given below.
 .. TODO: Move examples in the specific section
   **Example of ID Token:**
 
-  .. code-block:: 
+  .. code-block:: http
 
   {
       "iss":"https://op.spid.agid.gov.it/",

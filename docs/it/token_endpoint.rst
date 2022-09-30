@@ -27,7 +27,7 @@ Di seguito i claim che DEVONO essere inseriti nella *Token Request*.
 
   **Esempio di richiesta con authorization code (caso 1)**
 
-  .. code-block:: 
+  .. code-block:: json
 
   POST /token?
   client_id=https://rp.spid.agid.gov.it&
@@ -48,7 +48,7 @@ Di seguito i claim che DEVONO essere inseriti nella *Token Request*.
 
   **Esempio di richiesta con Refresh Token (caso 2):**
 
-  .. code-block:: 
+  .. code-block:: json
 
   POST /token?
   client_id=https://rp.spid.agid.gov.it&
@@ -122,7 +122,7 @@ L'ID Token deve essere formato secondo le indicazioni del paragrafo successivo.
 La risposta DEVE contenere i seguenti claim.
 
 .. TODO: Move examples in the specific section
-  .. code-block:: 
+  .. code-block:: json
 
   {
       "access_token":"dC34Pf6kdG...",
@@ -165,7 +165,7 @@ Di seguito i claim disponibili nell'ID Token.
 .. TODO: Move examples in the specific section
   **Esempio di ID Token:**
 
-  .. code-block:: 
+  .. code-block:: json
 
   {
       "iss":"https://op.spid.agid.gov.it/",

@@ -149,7 +149,7 @@ The **JWT** payload contains the following mandatory claims:
 
   The parameter claims defines the attributes required by the **RP**. The SPID attributes are requested in the element "userinfo" by listing the attributes to be requested as keys of JSON Objects, whose values must be indicated as {"essential": true}. For SPID, it is not possible to request attributes in the id_token, while it is possible for CIE. The listed attributes under "userinfo" are available at the moment of the call to the UserInfo Endpoint.
 
-  .. code-block:: 
+  .. code-block:: json
 
   {
       "userinfo":{

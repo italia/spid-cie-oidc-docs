@@ -281,7 +281,7 @@ Tabella attributi utente
 
        Esempio: 
        
-       .. code-block:: 
+       .. code-block:: json
 
          "address":{
              "street_address":"Via Liszt 21",

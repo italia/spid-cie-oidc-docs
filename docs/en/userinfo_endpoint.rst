@@ -12,7 +12,7 @@ Request
 The UserInfo Endpoint MUST only support the method HTTP GET :rfc:`2616` and MUST accept and validate the Access Token sent in the Authorization field of the Header, whose type is Bearer :rfc:`6750`.
 
 
-.. code-block:: 
+.. code-block:: json
 
   GET https://op.spid.agid.gov.it/userinfo
   Authorization: Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRCNjdnTDdja ...
@@ -36,7 +36,7 @@ The UserInfo Endpoint returns the authorized claims in the Authentication Reques
 
 **Example:**
 
-.. code-block:: 
+.. code-block:: json
 
  {
      "iss":"https://op.fornitore_identita.it",
