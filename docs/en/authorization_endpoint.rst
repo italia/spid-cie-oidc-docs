@@ -14,8 +14,8 @@ With the method **GET** the parameters MUST be sent using the *Query String Seri
 .. warning::
   The parameter **scope** MUST be sent both as a parameter in the HTTP call, and inside the request object. The two values MUST be the same.
 
-  The parameters **client_id** and **response_type** SHOULD be sent both as parameters in the HTTP call, and inside the request object. In this case, the parameters of the request object prevail over those in the HTTP call.
-
+  The parameters **client_id** and **response_type** SHOULD be sent both as parameters in the HTTP call, and inside the request object. 
+  
 .. seealso:: 
 
    - :ref:`Example of Authorization Request <Esempio_EN6>`
