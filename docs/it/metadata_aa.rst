@@ -55,7 +55,8 @@ Il Metadata di tipo **"oauth_authorization_server"** DEVE contenere almeno i seg
     - Vedi :rfc:`8414#page-4`.  DEVE essere valorizzato con un HTTPS URL che identifica univocamente l'AA.
     - |spid-icon| |cieid-icon|
   * - **authorization_endpoint**
-    - Solo per Attribute Authority **private** flow. Vedi :rfc:`LG-AA` and :rfc:`8414#page-4`.
+    - Solo per Attribute Authority **private** flow. Vedi `LG-AA` and :rfc:`8414#page-4`.
+    - |spid-icon| |cieid-icon|
   * - **token_endpoint**
     - Vedi :rfc:`8414#page-4`.
     - |spid-icon| |cieid-icon|

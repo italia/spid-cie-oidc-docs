@@ -55,7 +55,7 @@ The AA Metadata with **"oauth_authorization_server"** MUST contain at least the 
     - See :rfc:`8414#page-4`. It MUST contain an HTTPS URL that uniquely identifies the AA.
     - |spid-icon| |cieid-icon|
   * - **authorization_endpoint**
-    - Only for Attribute Authority private flow. See :rfc:`LG-AA` and :rfc:`8414#page-4`.
+    - Only for Attribute Authority private flow. See `LG-AA` and :rfc:`8414#page-4`.
     - |spid-icon| |cieid-icon|
   * - **token_endpoint**
     - See :rfc:`8414#page-4`.
