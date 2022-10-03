@@ -159,6 +159,66 @@ The response MUST contain the following claims.
      - |spid-icon| |cieid-icon|
 
 
+Access Token
+++++++++++++
+
+The Access Token is a JSON Web Token (JWT) that allows access to the
+UserInfo endpoint to get user attributes.
+
+.. TODO: Move examples in the specific section
+  **Access Token example:**
+
+  .. code-block:: json
+
+  {
+    "alg": "RS256",
+    "kid": "dB67gL7ck3TFiIAf7N6_7SHvqk0MDYMEQcoGGlkUAAw",
+    "type": "at+jwt"
+  }
+  .
+  {
+    "iss":"https://op.spid.agid.gov.it/",
+    "sub": "9sd798asd98asui23hiuds89y798sfyg",
+    "aud": [
+    "https://rp.spid.example.it"
+    ],
+    "client_id": "https://rp.spid.example.it",
+    "scope": "openid",
+    "jti": "9ea42af0-594c-4486-9602-8a1f8dde42d3",
+    "exp": 1656859559,
+    "iat": 1656857579
+  }
+
+
+.. list-table:: 
+   :widths: 20 60 20
+   :header-rows: 1
+
+   * - **Claim**
+     - **Description**
+     - **Supported by**
+   * - **iss** 
+     - It MUST be an HTTPS URL that uniquely identifies the OP. The client MUST verify that this value matches the called OP.
+     - |spid-icon| |cieid-icon|
+   * - **sub** 
+     - See `OpenID.Core#SubjectIDTypes`_. It MUST be *pairwise*. 
+     - |spid-icon| |cieid-icon|
+   * - **aud** 
+     - It MUST match the value *client_id*. The RP MUST verify that this value matches its client ID.
+     - |spid-icon| |cieid-icon|
+   * - **iat** 
+     - UNIX Timestamp with the time of JWT generation, coded as NumericDate as indicated in :rfc:`7519`. 
+     - |spid-icon| |cieid-icon|
+   * - **exp**
+     - UNIX Timestamp with the expiry time of the JWT, coded as NumericDate as indicated in :rfc:`7519`.
+     - |spid-icon| |cieid-icon|
+   * - **jti** 
+     - It MUST be a String in *uuid4* format. Unique Token ID identifier that the RP MAY use to prevent reuse by rejecting the Token ID if already processed.
+     - |spid-icon| |cieid-icon|
+   * - **nonce** 
+     - See `OpenID.Core#AuthRequest`_. It MUST be a random string of at least 32 alphanumeric characters. This value MUST match the value sent by the RP in the authentication request.
+     - |spid-icon| |cieid-icon|
+
 ID Token
 ++++++++
 
@@ -170,6 +230,11 @@ The claims available in the *ID Token* are given below.
 
   .. code-block:: http
 
+  {
+    "alg": "RS256",
+    "kid": "dB67gL7ck3TFiIAf7N6_7SHvqk0MDYMEQcoGGlkUAAw"
+  }
+  .
   {
       "iss":"https://op.spid.agid.gov.it/",
       "sub":"9sd798asd98asui23hiuds89y798sfyg",

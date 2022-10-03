@@ -155,6 +155,64 @@ La risposta DEVE contenere i seguenti claim.
      - ID Token in formato JWT (vedi paragrafo successivo)
      - |spid-icon| |cieid-icon|
 
+Access Token
+++++++++++++
+
+L'Access Token è un JSON Web Token (JWT) che consente l’accesso allo
+UserInfo endpoint per ottenere gli attributi dell'utente. 
+Di seguito i claim che compongono l'Access Token.
+
+.. TODO: Move examples in the specific section
+  **Esempio di Access Token:**
+
+  .. code-block:: json
+
+  {
+    "alg": "RS256",
+    "kid": "dB67gL7ck3TFiIAf7N6_7SHvqk0MDYMEQcoGGlkUAAw",
+    "type": "at+jwt"
+  }
+  .
+  {
+    "iss":"https://op.spid.agid.gov.it/",
+    "sub": "9sd798asd98asui23hiuds89y798sfyg",
+    "aud": [
+    "https://rp.spid.example.it"
+    ],
+    "client_id": "https://rp.spid.example.it",
+    "scope": "openid",
+    "jti": "9ea42af0-594c-4486-9602-8a1f8dde42d3",
+    "exp": 1656859559,
+    "iat": 1656857579
+  }
+
+
+.. list-table:: 
+   :widths: 20 60 20
+   :header-rows: 1
+
+   * - **Claim**
+     - **Descrizione**
+     - **Supportato da**
+   * - **iss** 
+     - DEVE essere valorizzato con un HTTPS URL che identifica univocamente l'OP. Il client DEVE verificare che questo valore corrisponda all'OP chiamato.
+     - |spid-icon| |cieid-icon|
+   * - **sub** 
+     - Vedi `OpenID.Core#SubjectIDTypes`_. DEVE essere di tipo *pairwise*.  
+     - |spid-icon| |cieid-icon|
+   * - **aud** 
+     - DEVE coincidere con il valore *client_id*. Il RP DEVE verificare che questo valore corrisponda al proprio client ID.
+     - |spid-icon| |cieid-icon|
+   * - **iat** 
+     - UNIX Timestamp con l'istante di generazione del JWT, codificato come NumericDate come indicato in :rfc:`7519`
+     - |spid-icon| |cieid-icon|
+   * - **exp**
+     - UNIX Timestamp con l'istante di scadenza del JWT, codificato come NumericDate come indicato in :rfc:`7519`
+     - |spid-icon| |cieid-icon|
+   * - **jti** 
+     - DEVE essere una Stringa in formato *uuid4*. Identificatore unico dell'ID Token che il RP PUÒ utilizzare per prevenirne il riuso, rifiutando l'ID Token se già processato.
+     - |spid-icon| |cieid-icon|
+
 
 ID Token
 ++++++++
@@ -167,6 +225,11 @@ Di seguito i claim disponibili nell'ID Token.
 
   .. code-block:: json
 
+  {
+    "alg": "RS256",
+    "kid": "dB67gL7ck3TFiIAf7N6_7SHvqk0MDYMEQcoGGlkUAAw"
+  }
+  .
   {
       "iss":"https://op.spid.agid.gov.it/",
       "sub":"9sd798asd98asui23hiuds89y798sfyg",
