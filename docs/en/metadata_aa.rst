@@ -54,6 +54,9 @@ The AA Metadata with **"oauth_authorization_server"** MUST contain at least the 
   * - **issuer**
     - See :rfc:`8414#page-4`. It MUST contain an HTTPS URL that uniquely identifies the AA.
     - |spid-icon| |cieid-icon|
+  * - **authorization_endpoint**
+    - Only for Attribute Authority private flow. See :rfc:`LG-AA` and :rfc:`8414#page-4`.
+    - |spid-icon| |cieid-icon|
   * - **token_endpoint**
     - See :rfc:`8414#page-4`.
     - |spid-icon| |cieid-icon|
@@ -77,6 +80,9 @@ The AA Metadata with **"oauth_authorization_server"** MUST contain at least the 
     - |spid-icon| |cieid-icon|
   * - **op_policy_uri**
     - See :rfc:`8414#page-4`.
+    - |spid-icon| |cieid-icon|
+  * - **op_tos_uri**
+    - See :rfc:`8414#page-6`.
     - |spid-icon| |cieid-icon|
   * - **dpop_signing_alg_values_supported**
     - See `OAuth-DPoP`_.

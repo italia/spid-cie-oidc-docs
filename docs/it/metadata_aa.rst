@@ -54,6 +54,8 @@ Il Metadata di tipo **"oauth_authorization_server"** DEVE contenere almeno i seg
   * - **issuer**
     - Vedi :rfc:`8414#page-4`.  DEVE essere valorizzato con un HTTPS URL che identifica univocamente l'AA.
     - |spid-icon| |cieid-icon|
+  * - **authorization_endpoint**
+    - Solo per Attribute Authority **private** flow. Vedi :rfc:`LG-AA` and :rfc:`8414#page-4`.
   * - **token_endpoint**
     - Vedi :rfc:`8414#page-4`.
     - |spid-icon| |cieid-icon|
@@ -77,6 +79,9 @@ Il Metadata di tipo **"oauth_authorization_server"** DEVE contenere almeno i seg
     - |spid-icon| |cieid-icon|
   * - **op_policy_uri**
     - Vedi :rfc:`8414#page-4`.
+    - |spid-icon| |cieid-icon|
+  * - **op_tos_uri**
+    - Vedi :rfc:`8414#page-6`.
     - |spid-icon| |cieid-icon|
   * - **dpop_signing_alg_values_supported**
     - Vedi `OAuth-DPoP`_.
