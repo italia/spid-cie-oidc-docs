@@ -1,4 +1,4 @@
-paths-ignore:
+ignored-paths:
  - docs/it/userinfo_endpoint.rst
  - docs/it/introspection_endpoint.rst
  - docs/it/revocation_endpoint.rst
