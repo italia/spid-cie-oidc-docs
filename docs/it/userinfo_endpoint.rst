@@ -13,7 +13,7 @@ Lo UserInfo Endpoint DEVE supportare l'uso del solo metodo HTTP GET :rfc:`2616` 
 
 .. code-block:: http
 
- GET https://op.spid.agid.gov.it/userinfo
+  GET https://op.spid.agid.gov.it/userinfo
   Authorization: Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRCNjdnTDdja ...
   
 .. seealso::
@@ -35,9 +35,19 @@ Lo UserInfo Endpoint restituisce i claim autorizzati nella Authentication Reques
 
 **Esempio:**
 
-.. code-block:: json
+.. code-block:: http
 
- {
+  HTTP/1.1 200 OK
+  Last-Modified: Wed, 22 Jul 2018 19:15:56 GMT
+  Content-Type: application/jose 
+
+  {
+    "alg": "RSA-OAEP",
+    "enc": "A256CBC-HS512",
+    "kid": "HIvo33-Km7n03ZqKDJfWVnlFudsW28YhQZx5eaXtAKA"
+  }
+  .
+  {
      "iss":"https://op.fornitore_identita.it",
      "aud":"https://rp.fornitore_servizio.it",
      "iat":1519032969,
@@ -47,7 +57,7 @@ Lo UserInfo Endpoint restituisce i claim autorizzati nella Authentication Reques
      "name":"Mario",
      "https://attributes.spid.gov.it/familyName":"Rossi",
      "https://attributes.spid.gov.it/fiscalNumber":"MROXXXXXXXXXXXXX"
- }
+  }
 
 
 Il payload del JWT è un JSON contenente i seguenti parametri:

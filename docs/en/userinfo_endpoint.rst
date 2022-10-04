@@ -34,11 +34,21 @@ The content of the Response body MUST be a `signed and encrypted JWT. <https://o
 
 The UserInfo Endpoint returns the authorized claims in the Authentication Request.
 
-**Example:**
+**Example of a decoded response:**
 
-.. code-block:: json
+.. code-block:: http
 
- {
+  HTTP/1.1 200 OK
+  Last-Modified: Wed, 22 Jul 2018 19:15:56 GMT
+  Content-Type: application/jose 
+
+  {
+    "alg": "RSA-OAEP",
+    "enc": "A256CBC-HS512",
+    "kid": "HIvo33-Km7n03ZqKDJfWVnlFudsW28YhQZx5eaXtAKA"
+  }
+  .
+  {
      "iss":"https://op.fornitore_identita.it",
      "aud":"https://rp.fornitore_servizio.it",
      "iat":1519032969,
@@ -48,7 +58,7 @@ The UserInfo Endpoint returns the authorized claims in the Authentication Reques
      "name":"Mario",
      "https://attributes.spid.gov.it/familyName":"Rossi",
      "https://attributes.spid.gov.it/fiscalNumber":"MROXXXXXXXXXXXXX"
- }
+  }
 
 
 The JWT payload is a JSON containing the following parameters:
