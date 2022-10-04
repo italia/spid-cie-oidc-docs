@@ -25,43 +25,41 @@ Request
 
 The claims that MUST be included in the *Token Request* are given below.
 
-.. TODO: move examples in the specific section
-
-  **Request example with authorization code (case 1)**
+**Request example with authorization code (case 1)**
 
   .. code-block:: http
 
-  POST /token?
-  client_id=https://rp.spid.agid.gov.it&
-  client_assertion=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiw
-  ibmFtZSI6IlNQSUQiLCJhZG1pbiI6dHJ1ZX0.LVyRDPVJm0S9q7oiXcYVIIqGWY0wWQlqxvFGYswL…&
-  client_assertion_type=urn%3Aietf%3Aparams%3Aoauth%3Aclient-assertion-type%3Ajwtbearer&
-  code=usDwMnEzJPpG5oaV8x3j&
-  code_verifier=9g8S40MozM3NSqjHnhi7OnsE38jklFv2&
-  grant_type=authorization_code
+    POST /token?
+    client_id=https://rp.spid.agid.gov.it&
+    client_assertion=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiw
+    ibmFtZSI6IlNQSUQiLCJhZG1pbiI6dHJ1ZX0.LVyRDPVJm0S9q7oiXcYVIIqGWY0wWQlqxvFGYswL…&
+    client_assertion_type=urn%3Aietf%3Aparams%3Aoauth%3Aclient-assertion-type%3Ajwtbearer&
+    code=usDwMnEzJPpG5oaV8x3j&
+    code_verifier=9g8S40MozM3NSqjHnhi7OnsE38jklFv2&
+    grant_type=authorization_code
 
-  Host: https://op.spid.agid.gov.it
-  HTTP/1.1
+    Host: https://op.spid.agid.gov.it
+    HTTP/1.1
 
 
   .. seealso::
 
   - https://openid.net/specs/openid-connect-core-1_0.html#RPAuthentication
 
-  **Request example with Refresh Token (case 2):**
+**Request example with Refresh Token (case 2):**
 
   .. code-block:: http
 
-  POST /token?
-  client_id=https://rp.spid.agid.gov.it&
-  client_assertion=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiw
-  ibmFtZSI6IlNQSUQiLCJhZG1pbiI6dHJ1ZX0.LVyRDPVJm0S9q7oiXcYVIIqGWY0wWQlqxvFGYswL…&
-  client_assertion_type=urn%3Aietf%3Aparams%3Aoauth%3Aclient-assertion-type%3Ajwtbearer&
-  grant_type=refresh_token&
-  refresh_token=8xLOxBtZp8
+    POST /token?
+    client_id=https://rp.spid.agid.gov.it&
+    client_assertion=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiw
+    ibmFtZSI6IlNQSUQiLCJhZG1pbiI6dHJ1ZX0.LVyRDPVJm0S9q7oiXcYVIIqGWY0wWQlqxvFGYswL…&
+    client_assertion_type=urn%3Aietf%3Aparams%3Aoauth%3Aclient-assertion-type%3Ajwtbearer&
+    grant_type=refresh_token&
+    refresh_token=8xLOxBtZp8
 
-  Host: https://op.spid.agid.gov.it
-  HTT/P1.1
+    Host: https://op.spid.agid.gov.it
+    HTTP/1.1
 
  
 .. list-table:: 
@@ -123,9 +121,14 @@ The ID Token must be formed according to the indications contained in the next s
 
 The response MUST contain the following claims.
 
-.. TODO: Move examples in the specific section
 
-  .. code-block:: http
+**Response example:**
+
+.. code-block:: http
+
+  HTTP/1.1 200 OK
+  Last-Modified: Wed, 22 Jul 2018 19:15:56 GMT
+  Content-Type: application/json
 
   {
       "access_token":"dC34Pf6kdG...",
@@ -165,8 +168,7 @@ Access Token
 The Access Token is a JSON Web Token (JWT) that allows access to the
 UserInfo endpoint to get user attributes.
 
-.. TODO: Move examples in the specific section
-  **Access Token example:**
+**Access Token header and payload example:**
 
   .. code-block:: json
 
@@ -225,10 +227,9 @@ ID Token
 The ID Token is a JSON Web Token (JWT) that contains information on the user that has executed the authentication. The RPs MUST validate the ID Token.
 The claims available in the *ID Token* are given below.
 
-.. TODO: Move examples in the specific section
-  **Example of ID Token:**
+**Example of header and pyaload of an ID Token:**
 
-  .. code-block:: http
+  .. code-block:: json
 
   {
     "alg": "RS256",
