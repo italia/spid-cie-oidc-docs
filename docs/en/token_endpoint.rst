@@ -170,7 +170,7 @@ UserInfo endpoint to get user attributes.
 
 **Access Token header and payload example:**
 
-  .. code-block:: json
+.. code-block:: json
 
   {
     "alg": "RS256",
@@ -229,7 +229,7 @@ The claims available in the *ID Token* are given below.
 
 **Example of header and pyaload of an ID Token:**
 
-  .. code-block:: json
+.. code-block:: json
 
   {
     "alg": "RS256",
