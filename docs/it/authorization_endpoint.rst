@@ -112,7 +112,7 @@ Il payload del **JWT** contiene i seguenti parametri obbligatori.
        DEVE essere una stringa separata da uno spazio, che specifica i valori "acr" richiesti in ordine di preferenza. L'OP PUÒ utilizzare un'autenticazione ad un livello più alto di quanto richiesto. Tale scelta non DEVE comportare un esito negativo della richiesta.
      - |spid-icon| |cieid-icon|
    * - **claims**
-     - Vedi `OpenID.Core#AuthRequest`_. Vedi Sezione :ref:`Utilizzo dei parametri scope e claims <parametri_scope_claims>`
+     - Vedi `OpenID.Core#ClaimsRequestParameter`_. Vedi Sezione "Parametri scope e claims".
      - |spid-icon| |cieid-icon|
    * - **state**
      - Vedi `OpenID.Core#AuthRequest`_. DEVE essere una stringa casuale di almeno 32 caratteri alfanumerici. Identificativo univoco della sessione lato RP. Questo valore verrà restituito al client nella risposta al termine dell'autenticazione.
@@ -162,6 +162,8 @@ Il payload del **JWT** contiene i seguenti parametri obbligatori.
 
   - https://openid.net/specs/openid-connect-core-1_0.html#IndividualClaimsRequests
 
+
+.. parametri_scope_claims:
 
 Parametri **scope** e **claims**
 --------------------------------
@@ -271,6 +273,6 @@ Esempio di Authorization Response dell'OP:
 
   .. code-block:: http
 
-  http://rp-test.it/oidc/rp/callback/?code=a032faf23d986353019ff8eda96cadce2ea1c368f04bf4c5e1759d559dda1c08056c7c4d4e8058cb002a0c8fa9a920272350aa102548523a8aff4ccdb44cb3fa&state=2Ujz3tbBHWQEL4XPFSJ5ANSjkhd7IlfC&iss=http%3A%2F%2Fop-test%2Foidc%2Fop%2F
+    http://rp-test.it/oidc/rp/callback/?code=a032faf23d986353019ff8eda96cadce2ea1c368f04bf4c5e1759d559dda1c08056c7c4d4e8058cb002a0c8fa9a920272350aa102548523a8aff4ccdb44cb3fa&state=2Ujz3tbBHWQEL4XPFSJ5ANSjkhd7IlfC&iss=http%3A%2F%2Fop-test%2Foidc%2Fop%2F
 
 

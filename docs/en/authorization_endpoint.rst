@@ -121,7 +121,7 @@ The **JWT** payload contains the following mandatory claims:
        It MUST be a string with the requested "acr" values, each of them separated by a single space, appearing in order of preference. The OP MAY use an authentication at a higher level than requested. Such a choice MUST NOT cause a negative result of the request.
      - |spid-icon| |cieid-icon|
    * - **claims**
-     - See `OpenID.Core#AuthRequest`_. See Section :ref:`Use of the scope and claims parameters <parametri_scope_claims>`
+     - See `OpenID.Core#ClaimsRequestParameter`_. See Section "Parameters scope and claims".
      - |spid-icon| |cieid-icon|
    * - **state**
      - See `OpenID.Core#AuthRequest`_. It must be a casual string with at least 32 alphanumeric characters.
@@ -174,6 +174,7 @@ The **JWT** payload contains the following mandatory claims:
   - https://openid.net/specs/openid-connect-core-1_0.html#IndividualClaimsRequests
 
 
+.. parametri_scope_claims:
 
 Parameters **scope** and **claims**
 -----------------------------------
@@ -283,6 +284,6 @@ Authorization Response example:
 
   .. code-block:: http
 
-  http://rp-test.it/oidc/rp/callback/?code=a032faf23d986353019ff8eda96cadce2ea1c368f04bf4c5e1759d559dda1c08056c7c4d4e8058cb002a0c8fa9a920272350aa102548523a8aff4ccdb44cb3fa&state=2Ujz3tbBHWQEL4XPFSJ5ANSjkhd7IlfC&iss=http%3A%2F%2Fop-test%2Foidc%2Fop%2F
+    http://rp-test.it/oidc/rp/callback/?code=a032faf23d986353019ff8eda96cadce2ea1c368f04bf4c5e1759d559dda1c08056c7c4d4e8058cb002a0c8fa9a920272350aa102548523a8aff4ccdb44cb3fa&state=2Ujz3tbBHWQEL4XPFSJ5ANSjkhd7IlfC&iss=http%3A%2F%2Fop-test%2Foidc%2Fop%2F
 
 
