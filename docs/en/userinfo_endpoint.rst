@@ -14,7 +14,7 @@ The UserInfo Endpoint MUST only support the method HTTP GET :rfc:`2616` and MUST
 
 .. code-block:: http
 
-  GET https://op.spid.agid.gov.it/userinfo
+ GET https://op.spid.agid.gov.it/userinfo
   Authorization: Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRCNjdnTDdja ...
   
 .. seealso::
