@@ -130,6 +130,15 @@ Il payload del **JWT** contiene i seguenti parametri obbligatori.
      - DEVE corrispondere all'identificativo del OP (parametro *issuer* presente nel :ref:`Metadata OP <MetadataOP>`.)
      - |spid-icon| |cieid-icon|
 
+.. note::
+  **PKCE** è un'estensione del protocollo *OAuth 2.0* prevista anche nel profilo *iGov* (`International Government Assurance Profile for OAuth 2.0 <https://openid.net/specs/openid-igov-oauth2-1_0-03.html#rfc.section.3.1.7>`_) e finalizzata ad evitare un potenziale attacco attuato con l'intercettazione dell'*authorization code*. Consiste nella generazione di un codice (**code verifier**) e del suo hash (**code challenge**). Il **code challenge** viene inviato all'OP nella richiesta di autenticazione. 
+  
+  Quando il RP contatta il *Token Endpoint* al termine del flusso di autenticazione, invia il **code verifier** originariamente creato, in modo che l'OP possa confrontare che il suo hash corrisponda con quello acquisito nella richiesta di autenticazione.
+
+  Di seguito un script Python di esempio per generare i parametri richiesti.
+
+  .. literalinclude :: ../../static/pkce.py
+   :language: python
 
 ..
   FIXME: Fatta sezione ad hoc per le modalità di utilizzo dei parametri claims e scope	 
