@@ -11,11 +11,12 @@ In this section we describe some security considerations in the OIDC Federation 
 Trust Marks as deterrent against abuses
 +++++++++++++++++++++++++++++++++++++++
 
-The TM implementation and the filter on the TMs in the process of Metadata Discovery, turn out to be necessary
+The TM implementation and the filter on the TMs in the process of Federation Entity Discovery, turn out to be necessary
 against attacks aimed at the resource consumption. If an OP suffers an attack at the *authorization* endpoint and the attack consists of an high number of connections with fake **client_id** and **authority_hints**, then the OP, trying to find a path to the TA for establishing the trust with the requester, would produce several connections to third-party systems.
 
 The OP MUST statically validate the TM or a-priori exclude the request whenever the TM is not present.
-In case the TM is not present or not valid, the procedure of Metadata Discovery MUST NOT be started and consequently MUST NOT create connections to third party systems.
+In case the TM is not present or not valid, the procedure of Federation Entity Discovery MUST NOT 
+be started and consequently MUST NOT create connections to third party systems.
 
 
 Maximum Number of authority_hints
@@ -25,7 +26,7 @@ Inside a Federation, through the constraint named **max_path_lenght**, the Trust
 
 Every Leaf MUST publish its superiors inside the list contained in the claim **authority_hints**. A Leaf in the Federation MAY have superiors belonging to different Federations. The analysis of the available superiors introduces an horizontal navigation model. As an example, an OP tries to find the shortest path to the Trust Anchor through all the URLs contained in the array **authority_hints**, before doing a further vertical move upwards, to one of the Intermediaries that are present in this array.
 
-The threshold **max_path_lenght** is applied to the vertical navigation and, after exceeding this threshold without finding a TA, the procedure of Metadata Discovery MUST be stopped. Consider the example of an RP that's a subordinate of an SA that's in turn a subordinate of another SA, while the **max_path_lenght** claim is equal to 1 and, after exceeding this threshold without finding the Trust Anchor, the procedure MUST be stopped.
+The threshold **max_path_lenght** is applied to the vertical navigation and, after exceeding this threshold without finding a TA, the procedure of Federation Entity Discovery MUST be stopped. Consider the example of an RP that's a subordinate of an SA that's in turn a subordinate of another SA, while the **max_path_lenght** claim is equal to 1 and, after exceeding this threshold without finding the Trust Anchor, the procedure MUST be stopped.
 
 At the same time, the specifications of OIDC Federation 1.0 don't define a limit of the number of **authority_hints**, and this is because no TA can limit the number of Federations in which a member can take part. For this reason, it is useful that implementers adopt a maximum limit to the number of elements allowed inside the array authority_hints. The reason is avoiding that an exaggerated number of URLs contained in the list **authority_hints**, due to a bad configuration of a Leaf, produce an excessive resource consumption.
 
@@ -35,7 +36,7 @@ Resolve Entity Statement
 ++++++++++++++++++++++++
 
 This endpoint MUST release the Metadata, the Trust Marks and the previously processed Trust Chain, and MUST
-NOT trigger a procedure of Metadata Discovery for each request arrival.
+NOT trigger a procedure of Federation Entity Discovery for each request arrival.
 
 
 

@@ -18,6 +18,7 @@ In presenza di una `sessione lunga revocabile`_, il RP PUÒ chiamare il Token En
   * https://openid.net/specs/openid-igov-oauth2-1_0-03.html#rfc.section.2.1.2 
   * https://openid.net/specs/openid-igov-openid-connect-1_0-03.html#rfc.section.2.2
 
+
 Request
 +++++++
 

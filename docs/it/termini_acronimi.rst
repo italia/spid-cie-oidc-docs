@@ -36,10 +36,10 @@ Seguono i termini utilizzati da `OIDC-FED#Section_1.2`_ e in questo documento.
       - Il Trust Anchor pubblica le regole e le politiche da applicare sui Metadata dei discendenti, specificando quali valori o sottoinsiemi di valori sono consentiti per un dato parametro di Metadata.
     * - **Authority hint**
       - Un array di valori url corrispondenti agli identificativi delle entità superiori, Trust Anchor o Intermediario, che DEVONO emettere un Entity Statement per i propri discendenti.
-    * - **Metadata Discovery**
+    * - **Federation Entity Discovery**
       - Raccolta di Entity Configuration e Statement. Inizia da un'entità Foglia fino al raggiungimento del Trust Anchor.
     * - **Trust Chain**
-      - Procedura di validazione della sequenza di Entity Configuration e Statement raccolta mediante Metadata Discovery, il cui esito positivo è un Metadata finale relativo ad una entità e la data di scadenza entro la quale questo deve essere aggiornato.
+      - Procedura di validazione della sequenza di Entity Configuration e Statement raccolta mediante Federation Entity Discovery, il cui esito positivo è un Metadata finale relativo ad una entità e la data di scadenza entro la quale questo deve essere aggiornato.
     * - **Onboarding**
       - Procedura di registrazione di una nuova entità all'interno della Federazione SPID e CIE
     * - **Federation Endpoint**

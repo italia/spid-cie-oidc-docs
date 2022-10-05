@@ -42,11 +42,12 @@ Terms used by `OIDC-FED#Section_1.2`_ and this documentation.
     * - **Authority hint**
       - An array of URLs regarding the identifiers of the superior Entities, Trust Anchor or 
         Intermediary, that MUST issue an Entity Statement for their own subordinates. 
-    * - **Metadata Discovery**
+    * - **Federation Entity Discovery**
       - Collection of Entity Configuration / Statements, from a Leaf Entity up to the Trust Anchor
     * - **Trust Chain**
       - Validation Procedure of the sequence of Entity Configuration / Statements that have
-        been collected through the Metadata Discovery, whose positive result is a final Metadata regarding 
+        been collected through the Federation Entity Discovery, 
+        whose positive result is a final Metadata regarding 
         an Entity, and the expiry date before which it must be updated.
     * - **Onboarding**
       - Registration Procedure of a new Entity inside the SPID and CIE Federations.
