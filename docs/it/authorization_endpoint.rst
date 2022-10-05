@@ -166,7 +166,7 @@ Il payload del **JWT** contiene i seguenti parametri obbligatori.
 .. parametri_scope_claims:
 
 Parametri **scope** e **claims**
---------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Gli attributi dell'utente POSSONO essere richiesti dal RP nell'Authorization Request usando i parametri **scope** o **claims**.
 Nel caso di utilizzo del parametro **scope** i seguenti valori sono supportati:

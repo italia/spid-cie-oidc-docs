@@ -177,7 +177,7 @@ The **JWT** payload contains the following mandatory claims:
 .. parametri_scope_claims:
 
 Parameters **scope** and **claims**
------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The user attributes MAY be requested by the RP using the **scope** or **claims** parameters in the Authorization Request.
 
