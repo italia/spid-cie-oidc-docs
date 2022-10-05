@@ -64,26 +64,21 @@ The UserInfo Endpoint returns the authorized claims in the Authentication Reques
 The JWT payload is a JSON containing the following parameters:
 
 .. list-table:: 
-   :widths: 20 60 20
+   :widths: 20 60
    :header-rows: 1
 
    * - **Claim**
      - **Description**
-     - **Required**
    * - **sub**
      - String. Subject identifier, equal to the identifier already released in the ID Token.
        The RP MUST check that the value is equal to the one, contained in the ID Token.
-     - 
    * - **aud**
      - String. Subject Identifier of the response recipient (RP).
        The RP MUST check that the value is equal to its own client_id.
-     - 
    * - **iss**
      - String. URI that uniquely identifies the OP.
-     - 
    * - **<claim>**
      - The requested claims at the authentication moment.
-     - 
 
 
 In case of authentication errors, the UserInfo Endpoint returns an HTTP error, according to what indicated in the `OpenID Connect Core 1.0 at the section 5.3.3 <https://openid.net/specs/openid-connect-core-1_0.html#UserInfoError>`_

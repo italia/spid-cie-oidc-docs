@@ -13,10 +13,13 @@ Una AA DEVE pubblicare, all'interno del suo EC, un Metadata *federation_entity* 
     "metadata":{
       "federation_entity":{
         ...
-      }
+      },
+      "trust_mark_issuer":{
+        ...
+      },
       "oauth_authorization_server":{
         ...
-      }
+      },
       "oauth_resource":{
         ...
       }

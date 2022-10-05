@@ -23,8 +23,8 @@ a solid implementation and producing the good practices for its adoption. For mo
 standard please refer to the official specifications `OIDC-FED`_ and the section :ref:`Differences with OIDC Federation 1.0<differenze_con_oidc_federation>`. 
 
 
-Why OIDC Federation
-+++++++++++++++++++
+OpenID Connect Federation
++++++++++++++++++++++++++
 
 The OIDC Federation is a hierarchical model:
 
