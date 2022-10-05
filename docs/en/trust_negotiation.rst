@@ -22,13 +22,13 @@ the Metadata of all the OPs, renewing their related Trust Chain.
 
 After obtaining the final Metadata of all the OpenID Connect Providers, the RP generates the **SPID button** or **CIE button** and publishes it inside the users' authentication page.
 
-The procedure of Metadata Discovery for the SPID RPs gets simplified because, inside the Federation, the existence of Intermediaries between the OPs and their Trust Anchor, is not allowed.
+The procedure of Federation Entity Discovery for the SPID RPs gets simplified because, inside the Federation, the existence of Intermediaries between the OPs and their Trust Anchor, is not allowed.
 
 
 .. image:: ../../images/metadata_discovery.svg
     :width: 100%
 
-*The Metadata Discovery procedure from the Leaf, up to the Trust Anchor. Please note how the public key for validating the Entity Configuration of the  subordinate Entity, is obtained from the Entity Statement released by a superior*.
+*The Federation Entity Discovery procedure from the Leaf, up to the Trust Anchor. Please note how the public key for validating the Entity Configuration of the  subordinate Entity, is obtained from the Entity Statement released by a superior*.
 
 
 OpenID Provider
@@ -43,7 +43,7 @@ dynamically register an RP, are described.
 
 
 *The registration of an RP from the perspective of an OP that, for the first time, receives an authorization
-request from the RP and starts the Metadata Discovery process and the Trust Chain saving*.
+request from the RP and starts the Federation Entity Discovery process and the Trust Chain saving*.
 
 
 The OP extracts the unique identifier (**client_id**) from the object *request* contained in the 
@@ -55,10 +55,10 @@ If the RP configuration does not expose any Trust Mark that is recognizable by t
 
 If the Provider successfully validates at least a Trust Mark for the RP profile contained inside the
 configuration of the requesting RP, it extracts the superior Entities from the claim **authority_hints** and
-starts the Metadata Discovery process until the **Trust Chain** calculation and the achievement of 
+starts the Federation Entity Discovery process until the **Trust Chain** calculation and the achievement of 
 the final Metadata.
 
-During the Metadata Discovery, the Provider requests one ore more superior Entities [2]_ for the Entity
+During the Federation Entity Discovery, the Provider requests one ore more superior Entities [2]_ for the Entity
 Statement regarding the RP, obtains the public key for validating the RP configuration and finally reaches
 the Trust Anchor. Then it applies the Metadata policy published by the Trust Anchor and saves the 
 resulting final RP Metadata, associating them to an expiry date. After that date, it will
@@ -69,7 +69,7 @@ defined in the Federation's guidelines.
 
 In case an RP has an SA as a superior Entity and not directly the TA, the procedure of achieving and validating the Entity Configuration of the RP occurs through the Entity Statement published
 by the SA towards the RP and through validating the Entity Configuration of the SA with the Entity Statement issued by the TA towards the SA. If the threshold of the maximum number of vertical Intermediaries, 
-defined by the value **max_path_length**, is exceeded, the OP stops the process of Metadata Discovery and rejects the RP request.
+defined by the value **max_path_length**, is exceeded, the OP stops the process of Federation Entity Discovery and rejects the RP request.
 
 
 .. [1] The Federation Trust Marks are configured in the claim **trust_marks_issuers** and contained in the Entity Configuration of the Trust Anchor.
@@ -112,4 +112,4 @@ provided by the *authority_hint*, reaches the TA. At each chain step, the OP can
     :width: 100%
 
 
-*The Metadata Discovery process to build a Trust Chain and obtain the final Metadata.*
+*The Federation Entity Discovery process to build a Trust Chain and obtain the final Metadata.*

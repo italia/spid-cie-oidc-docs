@@ -13,53 +13,54 @@ In presenza di una `sessione lunga revocabile`_, il RP PUÒ chiamare il Token En
 
 .. seealso:: 
 
- * https://tools.ietf.org/html/rfc6749#section-3.2
- * https://openid.net/specs/openid-connect-core-1_0.html#TokenEndpoint
- * https://openid.net/specs/openid-igov-oauth2-1_0-03.html#rfc.section.2.1.2 
- * https://openid.net/specs/openid-igov-openid-connect-1_0-03.html#rfc.section.2.2
- 
+  * https://tools.ietf.org/html/rfc6749#section-3.2
+  * https://openid.net/specs/openid-connect-core-1_0.html#TokenEndpoint
+  * https://openid.net/specs/openid-igov-oauth2-1_0-03.html#rfc.section.2.1.2 
+  * https://openid.net/specs/openid-igov-openid-connect-1_0-03.html#rfc.section.2.2
+
+
 Request
 +++++++
 
 Di seguito i claim che DEVONO essere inseriti nella *Token Request*.
 
-.. TODO: move examples in the specific section
 
-  **Esempio di richiesta con authorization code (caso 1)**
+**Esempio di richiesta con authorization code (caso 1)**
 
   .. code-block:: json
 
-  POST /token?
-  client_id=https://rp.spid.agid.gov.it&
-  client_assertion=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiw
-  ibmFtZSI6IlNQSUQiLCJhZG1pbiI6dHJ1ZX0.LVyRDPVJm0S9q7oiXcYVIIqGWY0wWQlqxvFGYswL…&
-  client_assertion_type=urn%3Aietf%3Aparams%3Aoauth%3Aclient-assertion-type%3Ajwtbearer&
-  code=usDwMnEzJPpG5oaV8x3j&
-  code_verifier=9g8S40MozM3NSqjHnhi7OnsE38jklFv2&
-  grant_type=authorization_code
+    POST /token?
+    client_id=https://rp.spid.agid.gov.it&
+    client_assertion=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiw
+    ibmFtZSI6IlNQSUQiLCJhZG1pbiI6dHJ1ZX0.LVyRDPVJm0S9q7oiXcYVIIqGWY0wWQlqxvFGYswL…&
+    client_assertion_type=urn%3Aietf%3Aparams%3Aoauth%3Aclient-assertion-type%3Ajwtbearer&
+    code=usDwMnEzJPpG5oaV8x3j&
+    code_verifier=9g8S40MozM3NSqjHnhi7OnsE38jklFv2&
+    grant_type=authorization_code
 
-  Host: https://op.spid.agid.gov.it
-  HTTP/1.1
+    Host: https://op.spid.agid.gov.it
+    HTTP/1.1
 
 
-  .. seealso::
+.. seealso::
 
   - https://openid.net/specs/openid-connect-core-1_0.html#RPAuthentication
 
-  **Esempio di richiesta con Refresh Token (caso 2):**
+
+**Esempio di richiesta con Refresh Token (caso 2):**
 
   .. code-block:: json
 
-  POST /token?
-  client_id=https://rp.spid.agid.gov.it&
-  client_assertion=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiw
-  ibmFtZSI6IlNQSUQiLCJhZG1pbiI6dHJ1ZX0.LVyRDPVJm0S9q7oiXcYVIIqGWY0wWQlqxvFGYswL…&
-  client_assertion_type=urn%3Aietf%3Aparams%3Aoauth%3Aclient-assertion-type%3Ajwtbearer&
-  grant_type=refresh_token&
-  refresh_token=8xLOxBtZp8
+    POST /token?
+    client_id=https://rp.spid.agid.gov.it&
+    client_assertion=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiw
+    ibmFtZSI6IlNQSUQiLCJhZG1pbiI6dHJ1ZX0.LVyRDPVJm0S9q7oiXcYVIIqGWY0wWQlqxvFGYswL…&
+    client_assertion_type=urn%3Aietf%3Aparams%3Aoauth%3Aclient-assertion-type%3Ajwtbearer&
+    grant_type=refresh_token&
+    refresh_token=8xLOxBtZp8
 
-  Host: https://op.spid.agid.gov.it
-  HTT/P1.1
+    Host: https://op.spid.agid.gov.it
+    HTT/P1.1
 
  
 .. list-table:: 
@@ -121,8 +122,13 @@ L'ID Token deve essere formato secondo le indicazioni del paragrafo successivo.
 
 La risposta DEVE contenere i seguenti claim.
 
-.. TODO: Move examples in the specific section
-  .. code-block:: json
+**Esempio di risposta:**
+
+.. code-block:: http
+
+  HTTP/1.1 200 OK
+  Last-Modified: Wed, 22 Jul 2018 19:15:56 GMT
+  Content-Type: application/json
 
   {
       "access_token":"dC34Pf6kdG...",
@@ -131,6 +137,7 @@ La risposta DEVE contenere i seguenti claim.
       "expires_in":1800,
       "id_token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY..."
   }
+
   
 .. list-table:: 
    :widths: 20 60 20
@@ -155,6 +162,63 @@ La risposta DEVE contenere i seguenti claim.
      - ID Token in formato JWT (vedi paragrafo successivo)
      - |spid-icon| |cieid-icon|
 
+Access Token
+++++++++++++
+
+L'Access Token è un JSON Web Token (JWT) che consente l’accesso allo
+UserInfo endpoint per ottenere gli attributi dell'utente. 
+Di seguito i claim che compongono l'Access Token.
+
+**Esempio del contenuto di intestazione di payload di un Access Token:**
+
+.. code-block:: json
+
+  {
+    "alg": "RS256",
+    "kid": "dB67gL7ck3TFiIAf7N6_7SHvqk0MDYMEQcoGGlkUAAw",
+    "type": "at+jwt"
+  }
+  .
+  {
+    "iss":"https://op.spid.agid.gov.it/",
+    "sub": "9sd798asd98asui23hiuds89y798sfyg",
+    "aud": [
+    "https://rp.spid.example.it"
+    ],
+    "client_id": "https://rp.spid.example.it",
+    "scope": "openid",
+    "jti": "9ea42af0-594c-4486-9602-8a1f8dde42d3",
+    "exp": 1656859559,
+    "iat": 1656857579
+  }
+
+
+.. list-table:: 
+   :widths: 20 60 20
+   :header-rows: 1
+
+   * - **Claim**
+     - **Descrizione**
+     - **Supportato da**
+   * - **iss** 
+     - DEVE essere valorizzato con un HTTPS URL che identifica univocamente l'OP. Il client DEVE verificare che questo valore corrisponda all'OP chiamato.
+     - |spid-icon| |cieid-icon|
+   * - **sub** 
+     - Vedi `OpenID.Core#SubjectIDTypes`_. DEVE essere di tipo *pairwise*.  
+     - |spid-icon| |cieid-icon|
+   * - **aud** 
+     - DEVE coincidere con il valore *client_id*. Il RP DEVE verificare che questo valore corrisponda al proprio client ID.
+     - |spid-icon| |cieid-icon|
+   * - **iat** 
+     - UNIX Timestamp con l'istante di generazione del JWT, codificato come NumericDate come indicato in :rfc:`7519`
+     - |spid-icon| |cieid-icon|
+   * - **exp**
+     - UNIX Timestamp con l'istante di scadenza del JWT, codificato come NumericDate come indicato in :rfc:`7519`
+     - |spid-icon| |cieid-icon|
+   * - **jti** 
+     - DEVE essere una Stringa in formato *uuid4*. Identificatore unico dell'ID Token che il RP PUÒ utilizzare per prevenirne il riuso, rifiutando l'ID Token se già processato.
+     - |spid-icon| |cieid-icon|
+
 
 ID Token
 ++++++++
@@ -162,11 +226,15 @@ ID Token
 L'ID Token è un JSON Web Token (JWT) che contiene informazioni sull'utente che ha eseguito l'autenticazione. I RP DEVONO eseguire la validazione dell'ID Token.
 Di seguito i claim disponibili nell'ID Token.
 
-.. TODO: Move examples in the specific section
-  **Esempio di ID Token:**
+ **Esempio del contenuto di intestazione e di payload di un ID Token:**
 
-  .. code-block:: json
+.. code-block:: json
 
+  {
+    "alg": "RS256",
+    "kid": "dB67gL7ck3TFiIAf7N6_7SHvqk0MDYMEQcoGGlkUAAw"
+  }
+  .
   {
       "iss":"https://op.spid.agid.gov.it/",
       "sub":"9sd798asd98asui23hiuds89y798sfyg",

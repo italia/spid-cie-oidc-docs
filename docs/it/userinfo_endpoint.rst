@@ -35,9 +35,19 @@ Lo UserInfo Endpoint restituisce i claim autorizzati nella Authentication Reques
 
 **Esempio:**
 
-.. code-block:: json
+.. code-block:: http
 
- {
+  HTTP/1.1 200 OK
+  Last-Modified: Wed, 22 Jul 2018 19:15:56 GMT
+  Content-Type: application/jose 
+
+  {
+    "alg": "RSA-OAEP",
+    "enc": "A256CBC-HS512",
+    "kid": "HIvo33-Km7n03ZqKDJfWVnlFudsW28YhQZx5eaXtAKA"
+  }
+  .
+  {
      "iss":"https://op.fornitore_identita.it",
      "aud":"https://rp.fornitore_servizio.it",
      "iat":1519032969,
@@ -47,32 +57,27 @@ Lo UserInfo Endpoint restituisce i claim autorizzati nella Authentication Reques
      "name":"Mario",
      "https://attributes.spid.gov.it/familyName":"Rossi",
      "https://attributes.spid.gov.it/fiscalNumber":"MROXXXXXXXXXXXXX"
- }
+  }
 
 
 Il payload del JWT è un JSON contenente i seguenti parametri:
 
 .. list-table:: 
-   :widths: 20 60 20
+   :widths: 20 60
    :header-rows: 1
 
    * - **Claim**
      - **Descrizione**
-     - **Obbligatorio**
    * - **sub**
      - String. Identificatore del soggetto, coincidente con quello già rilasciato nell'ID Token.
        Il RP DEVE verificare che il valore coincida con quello contenuto nell'ID Token.
-     - 
    * - **aud**
      - String. Identificatore del soggetto destinatario della response (RP).
        Il RP DEVE verificare che il valore coincida con il proprio client_id.
-     - 
    * - **iss**
      - String. URI che identifica univocamente l'OP.
-     - 
    * - **<attributo>**
      - I claim richiesti al momento dell'autenticazione.
-     - 
 
 
 In caso di errore di autenticazione, lo UserInfo Endpoint restituisce un errore HTTP in accordo con quanto indicato in `OpenID Connect Core 1.0 al paragrafo 5.3.3 <https://openid.net/specs/openid-connect-core-1_0.html#UserInfoError>`_

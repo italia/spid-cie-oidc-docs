@@ -12,11 +12,13 @@ All the Entities MUST contain the following endpoints:
  - **resolve Entity statement endpoint**: gives the final Metadata, the Trust Chain and the Trust Marks
    regarding another subject. For more details, see `OIDC-FED#Section.7.2`_).
 
-.. warning::
-  The **resolve Entity statement endpoint** MUST NOT return any information regarding a subject
-  about which it hasn't previously collected the statements and calculated the Trust Chain. 
-  In case the TMs are no more valid at the moment of the request, they MUST NOT be included in the
-  response.
+.. warning:: 
+  The resolve Entity statement endpoint MUST use the very same resolve strategy it uses internally for its own operations (e.g. the RP will expose OP's metadata as it sees them).
+  This implies that accordin to the Italian federation's specs:
+
+   - the resolve endpoint MUST NOT return TMs which are not valid at the time of the request;
+   - the resolve endpoint MUST validate the chain for the subject.
+
 
 In addition to the Federation endpoints reported before, the Entities of type **TA** or **SA** MUST provide the following endpoints:
 

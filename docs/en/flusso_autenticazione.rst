@@ -35,14 +35,3 @@ In the following, the descriptions of the flow steps, with the numbers indicated
   #. The RP receives and validates the **Access Token** and the **ID Token**. For asking the attributes that the user has authorized at the point 3, it sends a request to the OP *UserInfo Endpoint* ans uses, for the authentication, the **Access Token** contained in the HTTP Authorization header.
 
   #. The OP *UserInfo Endpoint* checks the **Access Token** validity and releases the required attributes to the RP.
-
-
-.. note::
-  **PKCE** is an extension of the protocol *OAuth 2.0* also provided in the profile *iGov* (`International Government Assurance Profile for OAuth 2.0 <https://openid.net/specs/openid-igov-oauth2-1_0-03.html#rfc.section.3.1.7>`_) and aimed at avoiding possible attacks from intercepting the *authorization code*. It consists of the generation of a code (**code verifier**) and its hash (**code challenge**). The **code challenge** is sent to the OP in the authentication request.
-  
-  When the RP contacts the *Token Endpoint* at the end of the authentication flow, it sends the **code verifier** created initially, so that the OP can check if its hash is the same as in the authentication request.
-
-  An example of a Python script for generating the requested parameters is shown.
-
-  .. literalinclude :: ../../static/pkce.py
-   :language: python

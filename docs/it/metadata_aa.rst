@@ -13,10 +13,13 @@ Una AA DEVE pubblicare, all'interno del suo EC, un Metadata *federation_entity* 
     "metadata":{
       "federation_entity":{
         ...
-      }
+      },
+      "trust_mark_issuer":{
+        ...
+      },
       "oauth_authorization_server":{
         ...
-      }
+      },
       "oauth_resource":{
         ...
       }
@@ -38,6 +41,16 @@ Il Metadata di tipo **"federation_entity"** DEVE contenere almeno i seguenti par
   * - **federation_resolve_endpoint**
     - Vedi Sezione :ref:`Endpoint di Federazione <federation_endpoint>` e `OIDC-FED#Section.4.6`_
     - |spid-icon| |cieid-icon|
+
+Il Metadata di tipo **"trust_mark_issuer"** DEVE contenere almeno i seguenti parametri obbligatori:
+
+.. list-table:: 
+  :widths: 20 60 20
+  :header-rows: 1
+
+  * - **Claim**
+    - **Descrizione**
+    - **Supportato da**
   * - **federation_status_endpoint**
     - Vedi Sezione :ref:`Endpoint di Federazione <federation_endpoint>` e `OIDC-FED#Section.4.6`_
     - |spid-icon| |cieid-icon|
@@ -53,6 +66,9 @@ Il Metadata di tipo **"oauth_authorization_server"** DEVE contenere almeno i seg
     - **Supportato da**
   * - **issuer**
     - Vedi :rfc:`8414#page-4`.  DEVE essere valorizzato con un HTTPS URL che identifica univocamente l'AA.
+    - |spid-icon| |cieid-icon|
+  * - **authorization_endpoint**
+    - Solo per Attribute Authority **private** flow. Vedi `LG-AA` and :rfc:`8414#page-4`.
     - |spid-icon| |cieid-icon|
   * - **token_endpoint**
     - Vedi :rfc:`8414#page-4`.
@@ -77,6 +93,9 @@ Il Metadata di tipo **"oauth_authorization_server"** DEVE contenere almeno i seg
     - |spid-icon| |cieid-icon|
   * - **op_policy_uri**
     - Vedi :rfc:`8414#page-4`.
+    - |spid-icon| |cieid-icon|
+  * - **op_tos_uri**
+    - Vedi :rfc:`8414#page-6`.
     - |spid-icon| |cieid-icon|
   * - **dpop_signing_alg_values_supported**
     - Vedi `OAuth-DPoP`_.

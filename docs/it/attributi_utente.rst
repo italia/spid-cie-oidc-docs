@@ -6,16 +6,14 @@ Tabella attributi utente
 ------------------------
 
 .. list-table:: 
-   :widths: auto
+   :widths: 20 40 20
    :header-rows: 1
 
    * - **Claim**
-     - **Categoria**
      - **Descrizione**
      - **Supportato da**
    * - **https://attributes.eid.gov.it/spid_code**
-     - anagrafica
-     - Codice identificativo. String. Il codice identificativo è assegnato dal gestore dell'identità digitale e deve essere univoco.
+     - Codice identificativo (anagrafica). String. Il codice identificativo è assegnato dal gestore dell'identità digitale e deve essere univoco.
 
        Il formato è il seguente: <codice Identificativo> = <cod_IdP><nr. univoco>
 
@@ -29,12 +27,11 @@ Tabella attributi utente
 
        .. code-block:: json
 
-         "https://attributes.eid.gov.it/spid_cod":"ABCD123456789A"
+         "https://attributes.eid.gov.it/spid_cod": "ABCD123456789A"
 
      - |spid-icon|
    * - **given_name**
-     - anagrafica
-     - Nome. String. Stringa composta da una sequenza di parole con carattere iniziale maiuscolo,
+     - Nome (anagrafica). String. Stringa composta da una sequenza di parole con carattere iniziale maiuscolo,
        intervallate da spazi singoli.
        
        Esempio:
@@ -45,8 +42,7 @@ Tabella attributi utente
 
      - |spid-icon| |cieid-icon|
    * - **family_name**
-     - anagrafica
-     - Cognome. String. Stringa composta da una sequenza di parole con carattere iniziale maiuscolo,
+     - Cognome (anagrafica). String. Stringa composta da una sequenza di parole con carattere iniziale maiuscolo,
        intervallate da spazi singoli.
 
        Esempio:
@@ -57,8 +53,7 @@ Tabella attributi utente
 
      - |spid-icon| |cieid-icon|
    * - **place_of_birth**
-     - anagrafica
-     - Luogo di nascita, Provincia di nascita. JSON Object: 
+     - Luogo di nascita, Provincia di nascita (anagrafica). JSON Object: 
 
        "**locality** : Stringa corrispondente al codice catastale (Codice Belfiore) del Comune 
        o della nazione estera di nascita (Es. "F205" per la città di Milano)
@@ -76,8 +71,7 @@ Tabella attributi utente
 
      - |spid-icon| |cieid-icon|
    * - **birthdate**
-     - anagrafica
-     - Data di nascita. String. Secondo specifica ISO8601-2004 nel formato
+     - Data di nascita (anagrafica). String. Secondo specifica ISO8601-2004 nel formato
        YYYY indica l'anno utilizzando 4 cifre |br|
        MM indica il mese in (due) cifre |br|
        DD indica il giorno in (due) cifre |br|
@@ -89,8 +83,7 @@ Tabella attributi utente
 
      - |spid-icon| |cieid-icon|
    * - **gender**
-     - anagrafica
-     - Sesso. String. Valori ammessi: |br|
+     - Sesso (anagrafica). String. Valori ammessi: |br|
        "F" per sesso femminile |br|
        "M" per sesso maschile |br|
        Esempio: |br|
@@ -101,8 +94,7 @@ Tabella attributi utente
 
      - |spid-icon| |cieid-icon|
    * - **https://attributes.eid.gov.it/company_name**
-     - anagrafica
-     - Ragione o denominazione sociale. String. Stringa composta da una sequenza di parole intervallate 
+     - Ragione o denominazione sociale (anagrafica). String. Stringa composta da una sequenza di parole intervallate 
        da spazi singoli.
        In maiuscolo le sottostringhe corrispondenti a nomi (es. “Agenzia per l'Italia Digitale”)
 
@@ -112,8 +104,7 @@ Tabella attributi utente
 
      - |spid-icon|
    * - **https://attributes.eid.gov.it/registered_office**
-     - extra anagrafica
-     - Sede legale. JSON Object: formatted, street_address, locality, region, postal_code, country, 
+     - Sede legale (extra anagrafica). JSON Object: formatted, street_address, locality, region, postal_code, country, 
        country_code.
        Json composto da una stringa composta da una sequenza di parole intervallate da spazi singoli rappresentanti:
 
@@ -136,8 +127,7 @@ Tabella attributi utente
 
      - |spid-icon|
    * - **https://attributes.eid.gov.it/fiscal_number**
-     - anagrafica
-     - Codice fiscale della persona fisica. String. Per il formato si faccia riferimento alla codifica 
+     - Codice fiscale della persona fisica (anagrafica). String. Per il formato si faccia riferimento alla codifica 
        dell'attributo CF per i certificati, proposta nell'ambito del Draft ETSI EN 319 412-1, 
        che nel caso specifico prevede la seguente composizione:
        TINIT-<CodiceFiscale>
@@ -150,8 +140,7 @@ Tabella attributi utente
 
      - |spid-icon| |cieid-icon|
    * - **https://attributes.eid.gov.it/**
-     - anagrafica
-     - Codice fiscale Persona Giuridica. String. Per il formato si faccia riferimento alla codifica dell'attributo CF per i certificati, proposta
+     - Codice fiscale Persona Giuridica (anagrafica). String. Per il formato si faccia riferimento alla codifica dell'attributo CF per i certificati, proposta
        nell'ambito del Draft ETSI EN 319 412-1, che nel caso specifico prevede la seguente composizione:
 
        TINIT-segue il codice fiscale
@@ -162,8 +151,7 @@ Tabella attributi utente
 
      - |spid-icon|
    * - **https://attributes.eid.gov.it/vat_number**
-     - anagrafica
-     - Partita IVA. String. Per il formato si faccia riferimento alla codifica dell'attributo Partita IVA per i certificati,
+     - Partita IVA (anagrafica). String. Per il formato si faccia riferimento alla codifica dell'attributo Partita IVA per i certificati,
        proposta nell'ambito del Draft ETSI EN 319 412-1, che nel caso specifico prevede la seguente composizione:
 
        VATIT-<PartitaIVA>
@@ -176,8 +164,7 @@ Tabella attributi utente
 
      - |spid-icon|
    * - **document_details**
-     - extra anagrafica
-     - Documento d'identità. JSON Object (document):
+     - Documento d'identità (extra anagrafica). JSON Object (document):
 
        Json contenente le proprietà che rappresentano:
 
@@ -225,26 +212,22 @@ Tabella attributi utente
 
      - |spid-icon| |cieid-icon|
    * - **phone_number**
-     - extra anagrafica
-     - Numero di telefono mobile. String. Stringa numerica senza spazi intermedi |br|
+     - Numero di telefono mobile (extra anagrafica). String. Stringa numerica senza spazi intermedi |br|
        Esempio: |br|
        ``"phone_number": "VATIT-12345678901"``
      - |spid-icon| |cieid-icon|
    * - **email**
-     - extra anagrafica
-     - Indirizzo di posta elettronica. String. Formato standard indirizzo di posta elettronica |br|
+     - Indirizzo di posta elettronica (extra anagrafica). String. Formato standard indirizzo di posta elettronica |br|
        Esempio: |br|
        ``"email": "name@domain.it"``
      - |spid-icon| |cieid-icon|
    * - **https://attributes.eid.gov.it/e_delivery_service**
-     - extra anagrafica
-     - Domicilio digitale. Indirizzo casella PEC |br|
+     - Domicilio digitale (extra anagrafica). Indirizzo casella PEC |br|
        Esempio: |br|
        ``"https://attributes.eid.gov.it/e_delivery_service":"nome@pecdomain.it"``
      - |cieid-icon|
    * - **https://attributes.eid.gov.it/eid_exp_date**
-     - extra anagrafica
-     - Data di scadenza identità. Secondo specifica ISO8601-2004 nel formato
+     - Data di scadenza identità (extra anagrafica). Secondo specifica ISO8601-2004 nel formato
        "YYYY-MM-DD" dove |br|
        YYYY indica l'anno utilizzando 4 cifre |br|
        MM indica il mese in (due) cifre |br|
@@ -253,8 +236,7 @@ Tabella attributi utente
        ``"https://attributes.eid.gov.it/id_exp_date":"2002-09-24"``
      - |spid-icon|
    * - **address**
-     - extra anagrafica 
-     - Indirizzo domicilio fisico |br|
+     - (extra anagrafica) Indirizzo domicilio fisico |br|
        CAP domicilio fisico |br|
        Comune domicilio fisico |br|
        Provincia domicilio fisico |br|
