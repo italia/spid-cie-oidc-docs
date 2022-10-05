@@ -313,10 +313,12 @@ EN 1.3. Entity Configuration Response Intermediary
              ],
              "federation_fetch_endpoint":"https://aggregatore.it/fetch/",
              "federation_resolve_endpoint":"https://aggregatore.it/resolve/",
-             "federation_status_endpoint":"https://aggregatore.it/trust_mark_status/",
              "federation_list_endpoint":"https://aggregatore.it/list/",
              "homepage_uri":"https://soggetto.aggregatore.it",
              "name":"Soggetto Aggregatore di esempio"
+         },
+         "trust_mark_issuer": {
+             "federation_status_endpoint":"https://aggregatore.it/trust_mark_status/",
          }
      },
      "trust_marks":[
@@ -365,16 +367,18 @@ EN 1.4. Entity Configuration Response Trust Anchor
          ]
      },
      "metadata":{
-         "federation_entity":{
+         "federation_entity": {
              "contacts":[
                  "spid.tech@agid.gov.it"
              ],
-             "federation_fetch_endpoint":"https://registry.agid.gov.it/fetch/",
-             "federation_resolve_endpoint":"https://registry.agid.gov.it/resolve/",
-             "federation_status_endpoint":"https://registry.agid.gov.it/trust_mark_status/",
-             "federation_list_endpoint":"https://registry.agid.gov.it/list/",
-             "homepage_uri":"https://registry.agid.gov.it/",
-             "name":"example TA"
+             "federation_fetch_endpoint": "https://registry.agid.gov.it/fetch/",
+             "federation_resolve_endpoint": "https://registry.agid.gov.it/resolve/",
+             "federation_list_endpoint": "https://registry.agid.gov.it/list/",
+             "homepage_uri": "https://registry.agid.gov.it/",
+             "name": "example TA"
+         },
+          "trust_mark_issuer": {
+             "federation_status_endpoint": "https://registry.agid.gov.it/trust_mark_status/"
          }
      },
      "trust_marks_issuers":{

@@ -38,6 +38,16 @@ Il Metadata di tipo **"federation_entity"** DEVE contenere almeno i seguenti par
   * - **federation_resolve_endpoint**
     - Vedi Sezione :ref:`Endpoint di Federazione <federation_endpoint>` e `OIDC-FED#Section.4.6`_
     - |spid-icon| |cieid-icon|
+
+Il Metadata di tipo **"trust_mark_issuer"** DEVE contenere almeno i seguenti parametri obbligatori:
+
+.. list-table:: 
+  :widths: 20 60 20
+  :header-rows: 1
+
+  * - **Claim**
+    - **Descrizione**
+    - **Supportato da**
   * - **federation_status_endpoint**
     - Vedi Sezione :ref:`Endpoint di Federazione <federation_endpoint>` e `OIDC-FED#Section.4.6`_
     - |spid-icon| |cieid-icon|
