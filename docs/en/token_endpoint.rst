@@ -42,7 +42,7 @@ The claims that MUST be included in the *Token Request* are given below.
     HTTP/1.1
 
 
-  .. seealso::
+.. seealso::
 
   - https://openid.net/specs/openid-connect-core-1_0.html#RPAuthentication
 

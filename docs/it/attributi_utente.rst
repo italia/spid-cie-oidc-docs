@@ -274,8 +274,8 @@ Tabella attributi utente
 .. _user_claims_scopes:
 
 
-Esempi non normativi
-++++++++++++++++++++
+Esempi
+++++++
 
 Si riportano per comodità gli esempi che danno luogo alla composizione di un unico JSON Object da parte di più attributi ed in particolare i claim "place_of_birth", "address", "document_details", ``https://attributes.eid.gov.it/registered_office``.
 
