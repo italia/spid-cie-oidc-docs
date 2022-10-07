@@ -1,7 +1,7 @@
 .. include:: ../common/common_definitions.rst
 
-Token Endpoint (richiesta token)
---------------------------------
+Token Endpoint
+--------------
 
 Al termine del flusso di autenticazione descritto nel paragrafo precedente, il RP invia una richiesta al Token Endpoint inviando l'authorization code ricevuto dall'OP per ottenere un *ID Token* e un *Access Token* ed eventualmente un *Refresh Token* (se è stata avviata una `sessione lunga revocabile`_). 
 

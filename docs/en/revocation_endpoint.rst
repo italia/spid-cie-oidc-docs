@@ -1,7 +1,7 @@
 .. include:: ../common/common_definitions.rst
 
-Revocation Endpoint (logout)
-----------------------------
+Revocation Endpoint
+-------------------
 
 An RP MAY request the revocation of an Access Token or a Refresh Token issued by an OP.
 
