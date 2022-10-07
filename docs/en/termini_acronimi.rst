@@ -6,7 +6,7 @@ Terms and Acronyms
 Terms
 +++++
 
-Following, the terms used by `OIDC-FED#Section_1.2`_ and this documentation.
+Terms used by `OIDC-FED#Section_1.2`_ and this documentation.
 
 .. list-table::
     :widths: 15 85
@@ -42,11 +42,12 @@ Following, the terms used by `OIDC-FED#Section_1.2`_ and this documentation.
     * - **Authority hint**
       - An array of URLs regarding the identifiers of the superior Entities, Trust Anchor or 
         Intermediary, that MUST issue an Entity Statement for their own subordinates. 
-    * - **Metadata Discovery**
+    * - **Federation Entity Discovery**
       - Collection of Entity Configuration / Statements, from a Leaf Entity up to the Trust Anchor
     * - **Trust Chain**
       - Validation Procedure of the sequence of Entity Configuration / Statements that have
-        been collected through the Metadata Discovery, whose positive result is a final Metadata regarding 
+        been collected through the Federation Entity Discovery, 
+        whose positive result is a final Metadata regarding 
         an Entity, and the expiry date before which it must be updated.
     * - **Onboarding**
       - Registration Procedure of a new Entity inside the SPID and CIE Federations.
@@ -67,7 +68,7 @@ In this section are defined all the acronyms that are used throughout the text.
       - Public System of Digital Identity
     * - **CIEid**
       - The Italian digital identity system based on the Electronic ID Card (CIE), whose owner is the
-        Interior Ministry. The technical and operative management is given to the State Mint and Polygraphic Institute (IPZS).
+        Ministry of the Interior. The technical and operative management is given to the State Mint and Polygraphic Institute (IPZS).
     * - **OIDC**
       - OpenID Connect
     * - **OIDC-FED**

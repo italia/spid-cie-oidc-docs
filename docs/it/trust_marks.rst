@@ -15,7 +15,7 @@ I TM sono emessi e firmati, durante il processo di registrazione di una nuova en
 
 Di seguito un esempio non normativo dell'oggetto **trust_marks_issuers** all'interno della Entity Configuration del TA.
 
-.. code-block::
+.. code-block:: json
 
  {
      "trust_marks_issuers":{

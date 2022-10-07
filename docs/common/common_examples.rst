@@ -4,7 +4,7 @@
 EN 1. Entity Configuration Request
 ++++++++++++++++++++++++++++++++++
 
-.. code-block:: 
+.. code-block:: python
 
  GET /.well-known/openid-federation HTTP/1.1
  Host: rp.example.it
@@ -15,11 +15,11 @@ EN 1. Entity Configuration Request
 EN 1.1. Entity Configuration Response Relying Party
 +++++++++++++++++++++++++++++++++++++++++++++++++++
 
-.. code-block:: 
+.. code-block:: python
 
  HTTP/1.1 200 OK
  Last-Modified: Wed, 22 Jul 2018 19:15:56 GMT
- Content-Type: application/jose 
+ Content-Type: application/entity-statement+jwt 
  
  {
      "alg":"RS256",
@@ -97,11 +97,11 @@ EN 1.1. Entity Configuration Response Relying Party
 EN 1.2. Entity Configuration Response Openid Provider
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-.. code-block:: 
+.. code-block:: python
 
  HTTP/1.1 200 OK
  Last-Modified: Wed, 22 Jul 2018 19:15:56 GMT
- Content-Type: application/jose 
+ Content-Type: application/entity-statement+jwt 
  
  {
      "alg":"RS256",
@@ -274,16 +274,16 @@ EN 1.2. Entity Configuration Response Openid Provider
      ]
  }
 
-
+.. _Esempio_EN1.3:
 
 EN 1.3. Entity Configuration Response Intermediary 
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
-.. code-block:: 
+.. code-block:: python
 
  HTTP/1.1 200 OK
  Last-Modified: Wed, 22 Jul 2018 19:15:56 GMT
- Content-Type: application/jose 
+ Content-Type: application/entity-statement+jwt 
 
  {
      "alg":"RS256",
@@ -313,10 +313,12 @@ EN 1.3. Entity Configuration Response Intermediary
              ],
              "federation_fetch_endpoint":"https://aggregatore.it/fetch/",
              "federation_resolve_endpoint":"https://aggregatore.it/resolve/",
-             "federation_status_endpoint":"https://aggregatore.it/trust_mark_status/",
              "federation_list_endpoint":"https://aggregatore.it/list/",
              "homepage_uri":"https://soggetto.aggregatore.it",
              "name":"Soggetto Aggregatore di esempio"
+         },
+         "trust_mark_issuer": {
+             "federation_status_endpoint":"https://aggregatore.it/trust_mark_status/",
          }
      },
      "trust_marks":[
@@ -337,11 +339,11 @@ EN 1.3. Entity Configuration Response Intermediary
 EN 1.4. Entity Configuration Response Trust Anchor
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
-.. code-block:: 
+.. code-block:: python
 
  HTTP/1.1 200 OK
  Last-Modified: Wed, 22 Jul 2018 19:15:56 GMT
- Content-Type: application/jose
+ Content-Type: application/entity-statement+jwt
  
  {
      "alg":"RS256",
@@ -365,16 +367,18 @@ EN 1.4. Entity Configuration Response Trust Anchor
          ]
      },
      "metadata":{
-         "federation_entity":{
+         "federation_entity": {
              "contacts":[
                  "spid.tech@agid.gov.it"
              ],
-             "federation_fetch_endpoint":"https://registry.agid.gov.it/fetch/",
-             "federation_resolve_endpoint":"https://registry.agid.gov.it/resolve/",
-             "federation_status_endpoint":"https://registry.agid.gov.it/trust_mark_status/",
-             "federation_list_endpoint":"https://registry.agid.gov.it/list/",
-             "homepage_uri":"https://registry.agid.gov.it/",
-             "name":"example TA"
+             "federation_fetch_endpoint": "https://registry.agid.gov.it/fetch/",
+             "federation_resolve_endpoint": "https://registry.agid.gov.it/resolve/",
+             "federation_list_endpoint": "https://registry.agid.gov.it/list/",
+             "homepage_uri": "https://registry.agid.gov.it/",
+             "name": "example TA"
+         },
+          "trust_mark_issuer": {
+             "federation_status_endpoint": "https://registry.agid.gov.it/trust_mark_status/"
          }
      },
      "trust_marks_issuers":{
@@ -398,7 +402,7 @@ EN 1.4. Entity Configuration Response Trust Anchor
 EN 2. Entity Statement Request
 ++++++++++++++++++++++++++++++
 
-.. code-block:: 
+.. code-block:: http
 
  GET /fetch?sub=https://rp.example.it/
  HTTP/1.1
@@ -411,11 +415,11 @@ EN 2. Entity Statement Request
 EN 2.1 Entity Statement Response
 ++++++++++++++++++++++++++++++++
 
-.. code-block:: 
+.. code-block:: http
 
  HTTP/1.1 200 OK
  Last-Modified: Wed, 22 Jul 2018 19:15:56 GMT
- Content-Type: application/jose
+ Content-Type: application/entity-statement+jwt
  
  {
      "alg":"RS256",
@@ -471,7 +475,7 @@ EN 2.1 Entity Statement Response
 EN 3. Entity List Request
 +++++++++++++++++++++++++
 
-.. code-block:: 
+.. code-block:: http
 
  GET /list?entity_type=openid_provider
  HTTP/1.1
@@ -484,7 +488,7 @@ EN 3. Entity List Request
 EN 3.1. Entity List Response
 ++++++++++++++++++++++++++++
 
-.. code-block:: 
+.. code-block:: http
 
  HTTP/1.1 200 OK
  Last-Modified: Wed, 22 Jul 2018 19:15:56 GMT
@@ -497,7 +501,7 @@ EN 3.1. Entity List Response
 EN 4. Resolve Entity Statement Endpoint Request
 +++++++++++++++++++++++++++++++++++++++++++++++
 
-.. code-block:: 
+.. code-block:: http
 
  GET /resolve/?sub=https://openid.provider.it/&anchor=https://registry.agid.gov.it/
  HTTP/1.1
@@ -508,11 +512,11 @@ EN 4. Resolve Entity Statement Endpoint Request
 EN 4.1. Resolve Entity Statement Endpoint Response
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
-.. code-block:: 
+.. code-block:: python
 
  HTTP/1.1 200 OK
  Last-Modified: Wed, 22 Jul 2018 19:15:56 GMT
- Content-Type: application/jose 
+ Content-Type: application/entity-statement+jwt 
  
  {
      "alg":"RS256",
@@ -576,7 +580,7 @@ EN 4.1. Resolve Entity Statement Endpoint Response
 EN 5. Trust Mark Status Request
 +++++++++++++++++++++++++++++++
 
-.. code-block:: 
+.. code-block:: http
 
  GET /trust_mark_status/?
  id=https://registry.agid.gov.it/openid_relying_party/public/
@@ -590,7 +594,7 @@ EN 5. Trust Mark Status Request
 EN 5.1. Trust Mark Status Response
 ++++++++++++++++++++++++++++++++++
 
-.. code-block:: 
+.. code-block:: python
 
  HTTP/1.1 200 OK
  Last-Modified: Wed, 22 Jul 2018 19:15:56 GMT
@@ -605,7 +609,7 @@ EN 6. Authorization Request
 
 **Example (HTTP call):**
 
-.. code-block::
+.. code-block:: http
 
   GET /auth?client_id=https://rp.spid.agid.gov.it&
   response_type=code&scope=openid& code_challenge=qWJlMe0xdbXrKxTm72EpH659bUxAxw80&
@@ -622,7 +626,7 @@ EN 6. Authorization Request
   
 **Example of JWT payload:**
 
-.. code-block::
+.. code-block:: python
 
   {
       "client_id":"https://rp.spid.agid.gov.it",
@@ -645,6 +649,3 @@ EN 6. Authorization Request
       },
       "state":"fyZiOL9Lf2CeKuNT2JzxiLRDink0uPcd"
   }
-
-
-

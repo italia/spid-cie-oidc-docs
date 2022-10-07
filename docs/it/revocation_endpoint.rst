@@ -1,7 +1,7 @@
 .. include:: ../common/common_definitions.rst
 
-Revocation Endpoint (logout)
-----------------------------
+Revocation Endpoint
+-------------------
 
 Un RP PUÒ chiedere la revoca di un Access Token o di un Refresh Token emesso da un OP.
 
@@ -24,7 +24,7 @@ La richiesta al Revocation Endpoint consiste nell'invio del token che si vuole r
 
 **Esempio:**
 
-.. code-block::
+.. code-block:: http
 
  POST /revoke?
  client_assertion=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiw

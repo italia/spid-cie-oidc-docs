@@ -2,8 +2,8 @@
 
 .. _metadata_oidc:
 
-OIDC Metadata
--------------
+Metadata
+--------
 
 OIDC-FED uses and extends the Metadata claims as defined in the specifications OpenID Connect Discovery 1.0 and OpenID Connect Dynamic Client Registration 1.0 `OpenID.Discovery`_, `OpenID.Registration`_ respectively for OP and RP. 
 

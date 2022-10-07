@@ -12,13 +12,12 @@ Request
 
   Lo UserInfo Endpoint DEVE supportare l'uso del solo metodo HTTP GET :rfc:`2616` e DEVE accettare e validare l'Access Token inviato all'interno del campo Authorization dell'Header, di tipo Bearer :rfc:`6750`.
 
-
 .. admonition:: |cieid-icon|
 
   Lo UserInfo Endpoint DEVE supportare l'uso dei metodi HTTP GET e POST :rfc:`2616` e DEVE accettare e validare l'Access Token inviato all'interno del campo Authorization dell'Header, di tipo Bearer :rfc:`6750`. 
 
-.. TODO: Move examples in the specific section
-  .. code-block:: 
+
+.. code-block::  http
 
   GET https://op.spid.agid.gov.it/userinfo
   Authorization: Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRCNjdnTDdja ...
@@ -44,21 +43,30 @@ L'header JOSE DEVE contenere il parametro *cty* (Content Type) valorizzato con *
 
 Lo UserInfo Endpoint restituisce gli attributi utente esplicitamente richiesti tramite il parametro **claims** o tramite l'utilizzo del parametro **scope** nella Authentication Request.
 
-.. TODO: Move the examples in the specific section
-  **Esempio:**
+**Esempio:**
 
-  .. code-block:: 
+.. code-block:: http
+
+  HTTP/1.1 200 OK
+  Last-Modified: Wed, 22 Jul 2018 19:15:56 GMT
+  Content-Type: application/jose 
 
   {
-      "iss":"https://op.fornitore_identita.it",
-      "aud":"https://rp.fornitore_servizio.it",
-      "iat":1519032969,
-      "nbf":1519032969,
-      "exp":1519033149,
-      "sub":"OP-1234567890",
-      "name":"Mario",
-      "https://attributes.spid.gov.it/familyName":"Rossi",
-      "https://attributes.spid.gov.it/fiscalNumber":"MROXXXXXXXXXXXXX"
+    "alg": "RSA-OAEP",
+    "enc": "A256CBC-HS512",
+    "kid": "HIvo33-Km7n03ZqKDJfWVnlFudsW28YhQZx5eaXtAKA"
+  }
+  .
+  {
+     "iss":"https://op.fornitore_identita.it",
+     "aud":"https://rp.fornitore_servizio.it",
+     "iat":1519032969,
+     "nbf":1519032969,
+     "exp":1519033149,
+     "sub":"OP-1234567890",
+     "name":"Mario",
+     "https://attributes.spid.gov.it/familyName":"Rossi",
+     "https://attributes.spid.gov.it/fiscalNumber":"MROXXXXXXXXXXXXX"
   }
 
 

@@ -1,7 +1,7 @@
 .. include:: ../common/common_definitions.rst
 
-Trust Negotiation
------------------
+Acquisire i Metadata
+--------------------
 
 In questa sezione sono illustrate le modalità di mutuo riconoscimento tra RP e OP, le modalità con le quali le foglie si riconoscono all'interno della medesima Federazione e ottengono gli uni i Metadata degli altri.
 
@@ -17,13 +17,13 @@ Il RP applica infine le politiche pubblicate dal Trust Anchor sui Metadata dell'
 
 Ottenuti i Metadata finali di tutti i OpenID Connect Provider, il RP genera lo **SPID Button** o il **CIE id Button** e lo pubblica all'interno della pagina di autenticazione destinata agli utenti.
 
-La procedura di Metadata Discovery risulta semplificata per i RP, perché all'interno della Federazione non è consentita l'esistenza di Intermediari tra gli OP ed il loro Trust Anchor.
+La procedura di Federation Entity Discovery risulta semplificata per i RP, perché all'interno della Federazione non è consentita l'esistenza di Intermediari tra gli OP ed il loro Trust Anchor.
 
 
 .. image:: ../../images/metadata_discovery.svg
     :width: 100%
 
-*La procedura di Metadata Discovery a partire dalla Foglia fino al Trust Anchor. Si noti come dall'Entity Statement rilasciato da un superiore si ottiene la chiave pubblica per la validazione dell'Entity Configuration dell'entità discendente.*
+*La procedura di Federation Entity Discovery a partire dalla Foglia fino al Trust Anchor. Si noti come dall'Entity Statement rilasciato da un superiore si ottiene la chiave pubblica per la validazione dell'Entity Configuration dell'entità discendente.*
 
 
 OpenID Provider
@@ -35,20 +35,20 @@ Quando un Provider (OP) riceve una richiesta di autorizzazione da parte di un RP
     :width: 100%
 
 
-*La registrazione di un RP dalla prospettiva di un OP che per la prima volta riceve una richiesta di autorizzazione dal RP e avvia il processo di Metadata Discovery e salvataggio della Trust Chain.*
+*La registrazione di un RP dalla prospettiva di un OP che per la prima volta riceve una richiesta di autorizzazione dal RP e avvia il processo di Federation Entity Discovery e salvataggio della Trust Chain.*
 
 
 L'OP estrae l'identificativo univoco (**client_id**) dall'oggetto *request* contenuto all'interno della *Authorization Request* ed effettua una richiesta di Entity Configuration presso il :ref:`RP<Esempio_EN1.1>`. Ottiene la configurazione *self-signed* del RP e convalida la firma dei Trust Mark riconoscibili all'interno della Federazione [1]_. 
 
 Se il RP non espone all'interno della sua configurazione nessun Trust Mark riconoscibile per il profilo di RP (vedi Sezione :ref:`Trust Mark<Trust_Mark>`) il Provider DEVE rifiutare l'autorizzazione con un messaggio di errore di tipo *unauthorized_client*.
 
-Se il Provider convalida con successo almeno un Trust Mark per il profilo RP contenuto all'interno della configurazione del RP richiedente, estrae le entità superiori contenute nel claim **authority_hints** ed avvia la fase di Metadata Discovery. Ne consegue il calcolo della **Trust Chain** e l'ottenimento del Metadata finale.
+Se il Provider convalida con successo almeno un Trust Mark per il profilo RP contenuto all'interno della configurazione del RP richiedente, estrae le entità superiori contenute nel claim **authority_hints** ed avvia la fase di Federation Entity Discovery. Ne consegue il calcolo della **Trust Chain** e l'ottenimento del Metadata finale.
 
-Durante il Metadata Discovery, il Provider richiede ad una o più entità superiori [2]_ l'Entity Statement relativo al RP e ottiene la chiave pubblica con la quale valida la configurazione del RP, fino a giungere al Trust Anchor. Infine applica la politica dei Metadata pubblicata dal Trust Anchor e salva il risultante Metadata finale del RP associandolo ad una data di scadenza, oltre la quale rinnoverà il Metadata secondo le modalità di rinnovo della Trust Chain.
+Durante il Federation Entity Discovery, il Provider richiede ad una o più entità superiori [2]_ l'Entity Statement relativo al RP e ottiene la chiave pubblica con la quale valida la configurazione del RP, fino a giungere al Trust Anchor. Infine applica la politica dei Metadata pubblicata dal Trust Anchor e salva il risultante Metadata finale del RP associandolo ad una data di scadenza, oltre la quale rinnoverà il Metadata secondo le modalità di rinnovo della Trust Chain.
 
 Ottenuto il Metadata finale, il Provider valida la richiesta del RP secondo le modalità definite all'interno delle linee guida della Federazione. 
 
-Nei casi in cui un RP avesse come entità superiore un SA e non direttamente la TA, la procedura di acquisizione e validazione dell'Entity Configuration del RP avviene mediante l'Entity Statement pubblicato dal SA nei confronti del RP e mediante la convalida dell'Entity Configuration del SA con l'Entity Statement emesso dalla TA in relazione al SA. Se la soglia del massimo numero di Intermediari verticali, definita dal valore di **max_path_length**, viene superata, l'OP blocca il processo di Metadata Discovery e rigetta la richiesta del RP.
+Nei casi in cui un RP avesse come entità superiore un SA e non direttamente la TA, la procedura di acquisizione e validazione dell'Entity Configuration del RP avviene mediante l'Entity Statement pubblicato dal SA nei confronti del RP e mediante la convalida dell'Entity Configuration del SA con l'Entity Statement emesso dalla TA in relazione al SA. Se la soglia del massimo numero di Intermediari verticali, definita dal valore di **max_path_length**, viene superata, l'OP blocca il processo di Federation Entity Discovery e rigetta la richiesta del RP.
 
 
 .. [1] I Trust Mark di Federazione sono configurati nel claim **trust_marks_issuers** e contenuti nell'Entity Configuration del Trust Anchor.
@@ -87,6 +87,6 @@ Una volta che un RP viene riconosciuto come parte della Federazione, ottiene il 
     :width: 100%
 
 
-*The Metadata Discovery process to build a Trust Chain and obtain the final Metadata.*
+*The Federation Entity Discovery process to build a Trust Chain and obtain the final Metadata.*
 
 

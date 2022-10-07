@@ -5,7 +5,7 @@
 Trust Marks
 ===========
 
-The **Trust Marks (TM)** are signed JWT :rfc:`7515` and represent the statement of compliance with a well defined set of requirements of trust and/or interoperability, or an agreement among the parties involved in the Federation. 
+The **Trust Marks (TM)** are signed JWT :rfc:`7515` and represent the statements of compliance with a well defined set of requirements of trust and/or interoperability, or an agreement among the parties involved in the Federation. 
 
 The main aim of the TMs is exposing information that is not required by the OpenID Connect Core protocol,
 but turns out to be useful in the federative context.
@@ -24,10 +24,10 @@ The TA defines the subjects who are enabled to issue TMs that are recognizable i
 and this is done by the claim **trust_marks_issuers**, contained in its own Entity Configuration. 
 The value of the claim **trust_marks_issuers** is composed by a JSON Object having as keys the TM identifiers, and as values the list of identifiers (URLs) or the Entities who are enabled to issue them.
 
-Following, a non-normative example of the object **trust_marks_issuers** inside the TA's Entity Configuration.
+In the following, a non-normative example of the object **trust_marks_issuers** inside the TA's Entity Configuration.
 
 
-.. code-block::
+.. code-block:: json
 
  {
      "trust_marks_issuers":{
@@ -42,14 +42,14 @@ Following, a non-normative example of the object **trust_marks_issuers** inside 
      }
  }
 
-Each member Entity MUST expose in its configuration (EC), the TMs that have been released by the issuing authority.
+Each member Entity MUST expose in its configuration (EC), the TMs released by the issuing authority.
 
 In the CIE / SPID scenario, a TM is signed by the TA **MinInterno** / **Agid** or their Intermediaries (SA) or
 Attribute Authorities (AA).
 
 The TA defines the subjects that are enabled to issue TMs that are recognizable inside the Federation,
 and it does it with the claim **trust_marks_issuers**, that is present in its Entity Configuration. 
-The value of the attribute **trust_marks_issuers** is composed by a JSON Object whose keys are the TM identifiers and whose values are the list of the identifiers (URLs) of the Entities that are enabled 
+The value of the attribute **trust_marks_issuers** is composed by a JSON Object whose keys are the TM identifiers and whose values are the list of the identifiers (URLs) of the Entities enabled 
 to issue them.
 
 The Trust Marks represent the first filter for establishing the trust among the parties. 
@@ -57,9 +57,9 @@ They are essential elements for starting the Metadata resolution.
 In their absence, an Entity is not recognized as a member inside the Federation.
 
 Inside the SPID Federation, the Trust Marks have unique identifiers (claim id) in URL format, that adopt 
-the following structure: **https:// <domain> / <entity_type> / <trustmark_profile> / [estensione /]**
+the following structure: **https:// <domain> / <entity_type> / <trustmark_profile> / [extension /]**
 
-Following, some non-normative examples:
+In the following, some non-normative examples:
 
 
  - TM RP public: **\https://registry.agid.gov.it/openid_relying_party/public/**
@@ -178,7 +178,7 @@ For example, in case of exclusion of an Aggregated Subject by the Federation Aut
 Trust Mark Composition
 ----------------------
 
-The claims defined inside the TMs, comply to what defined in the OIDC Federation 1.0 (`OIDC-FED`_) standard. Following, the list.
+The claims defined inside the TMs are compliant with the elements defined in the OIDC Federation 1.0 (`OIDC-FED`_) standard. See the following list.
 
 .. list-table::
     :widths: 20 60 20
@@ -225,7 +225,8 @@ The claims defined inside the TMs, comply to what defined in the OIDC Federation
       - |spid-icon| |cieid-icon|
 
 .. warning::
-  In case of CIEid, the public Organizations that have not only the **IPA code**, but also a **unique AOO code**, MUST include this latter one in the claim **id_code**, in the format *<IPA_code>-<AOO_code>*.
+  In case of CIEid, the public Organizations having both the IPA code and a unique AOO code, MUST include the latter one in the claim id_code, in the format
+  *<IPA_code>-<AOO_code>*.
   Furthermore, the value in the claim **exp** MUST NOT be greater than the duration of the specific 
   conventions/agreements concluded in the onboarding process, between the Trust Mark issuer and the Organizations 
   that receive the TM.

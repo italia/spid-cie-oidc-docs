@@ -3,7 +3,7 @@
 UserInfo Endpoint (attributes)
 ------------------------------
 
-The UserInfo Endpoint is an OIDC protected resource that returns the authenticated user's claims. To obtain 
+The UserInfo Endpoint is an OIDC protected resource that returns the authenticated user's claims. In order to obtain 
 the requested claims, the RP sends a request to the UserInfo Endpoint using the Access Token.
 
 Request
@@ -14,14 +14,14 @@ Request
   The UserInfo Endpoint MUST only support the method HTTP GET :rfc:`2616` and MUST accept and validate the Access Token sent in the Authorization field of the Header, whose type is Bearer :rfc:`6750`.
 
 .. admonition:: |cieid-icon|
-  
+ 
   The UserInfo Endpoint MUST support the method HTTP GET and HTTP POST :rfc:`2616` and MUST accept and validate the Access Token sent in the Authorization field of the Header, whose type is Bearer :rfc:`6750`.
 
-.. TODO: Move examples in the specific section
-  .. code-block:: 
 
-    GET https://op.spid.agid.gov.it/userinfo
-    Authorization: Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRCNjdnTDdja ...
+.. code-block:: http
+
+ GET https://op.spid.agid.gov.it/userinfo
+  Authorization: Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRCNjdnTDdja ...
   
 .. seealso::
 
@@ -38,25 +38,30 @@ The content of the Response body MUST be a `signed and encrypted JWT. <https://o
 
 The JOSE header MUST contain the *cty* parameter (Content Type) with the value *JWT* (see :rfc:`7515#section-4`).
 
-
-
 The UserInfo Endpoint returns user attributes explicitly requested through the **claims** parameter or through the use of the **scope** parameter in the Authentication Request.
 
-.. TODO: Move examples in the specific section
-  **Example:**
+.. code-block:: http
 
-  .. code-block:: 
+  HTTP/1.1 200 OK
+  Last-Modified: Wed, 22 Jul 2018 19:15:56 GMT
+  Content-Type: application/jose 
 
   {
-      "iss":"https://op.fornitore_identita.it",
-      "aud":"https://rp.fornitore_servizio.it",
-      "iat":1519032969,
-      "nbf":1519032969,
-      "exp":1519033149,
-      "sub":"OP-1234567890",
-      "name":"Mario",
-      "https://attributes.spid.gov.it/familyName":"Rossi",
-      "https://attributes.spid.gov.it/fiscalNumber":"MROXXXXXXXXXXXXX"
+    "alg": "RSA-OAEP",
+    "enc": "A256CBC-HS512",
+    "kid": "HIvo33-Km7n03ZqKDJfWVnlFudsW28YhQZx5eaXtAKA"
+  }
+  .
+  {
+     "iss":"https://op.fornitore_identita.it",
+     "aud":"https://rp.fornitore_servizio.it",
+     "iat":1519032969,
+     "nbf":1519032969,
+     "exp":1519033149,
+     "sub":"OP-1234567890",
+     "name":"Mario",
+     "https://attributes.spid.gov.it/familyName":"Rossi",
+     "https://attributes.spid.gov.it/fiscalNumber":"MROXXXXXXXXXXXXX"
   }
 
 
