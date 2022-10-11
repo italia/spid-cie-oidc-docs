@@ -39,7 +39,7 @@ Response
 
 Il contenuto del corpo della Response DEVE essere un `JWT firmato e cifrato. <https://openid.net/specs/openid-connect-core-1_0.html#UserInfoResponse>`_
 
-L'header JOSE DEVE contenere il parametro *cty* (Content Type) valorizzato con *JWT* (vedi :rfc:`7515#section-4`).
+L'header JOSE DEVE contenere il parametro *cty* (Content Type) valorizzato con *JWT* (vedi :rfc:`7519#section-5.2`).
 
 Lo UserInfo Endpoint restituisce gli attributi utente esplicitamente richiesti tramite il parametro **claims** o tramite l'utilizzo del parametro **scope** nella Authentication Request.
 

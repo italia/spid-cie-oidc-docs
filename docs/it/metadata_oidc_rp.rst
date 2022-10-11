@@ -61,7 +61,7 @@ Il Metadata di tipo **"openid_relying_party"** DEVE contenere almeno i seguenti 
     - Vedi `OpenID.Registration#ClientMetadata`_.
     - |spid-icon| |cieid-icon| 
   * - **id_token_encrypted_response_alg**
-    - Vedi `OpenID.Registration#ClientMetadata`_. Opzionale. Se questo parametro è incluso l'ID Token restituito sarà un *nested JWT* firmato e cifrato come definito in :rfc:`7515#section-4`.
+    - Vedi `OpenID.Registration#ClientMetadata`_. Opzionale. Se questo parametro è incluso l'ID Token restituito sarà un *nested JWT* firmato e cifrato come definito in :rfc:`7519#section-5.2`.
     - |spid-icon| |cieid-icon| 
   * - **id_token_encrypted_response_enc**
     - Vedi `OpenID.Registration#ClientMetadata`_. Obbligatorio solo nel caso sia presente anche il parametro *id_token_encrypted_response_alg*.

@@ -36,7 +36,7 @@ Response
 
 The content of the Response body MUST be a `signed and encrypted JWT. <https://openid.net/specs/openid-connect-core-1_0.html#UserInfoResponse>`_
 
-The JOSE header MUST contain the *cty* parameter (Content Type) with the value *JWT* (see :rfc:`7515#section-4`).
+The JOSE header MUST contain the *cty* parameter (Content Type) configured to *JWT* (see :rfc:`7515#section-4`).
 
 The UserInfo Endpoint returns user attributes explicitly requested through the **claims** parameter or through the use of the **scope** parameter in the Authentication Request.
 
