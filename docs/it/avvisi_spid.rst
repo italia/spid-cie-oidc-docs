@@ -16,3 +16,13 @@ Le presenti regole tecniche implementano i seguenti avvisi SPID:
       - Data
     * - `Avviso n.41 - Integrazione LL.GG. OpenID Connect in SPID.pdf  <https://www.agid.gov.it/sites/default/files/repository_files/spid-avviso-n41-integrazione_ll.gg_._openid_connect_in_spid.pdf>`_
       - 06/05/2022 
+
+    * - Tabella Attributi utente v1.3
+      - Data
+    * - `TABELLA ATTRIBUTI IN SPID - Integrazione LL.GG. OpenID Connect in SPID.pdf  <https://www.agid.gov.it/sites/default/files/repository_files/tabella_attributi_v.1.3.pdf>`_
+      - 24/06/2022 
+
+    * - Determina SPID OpenID Connect Federation
+      - Data
+    * - `Regole tecniche per il funzionamento della Federazione SPID OpenID Connect - Integrazione LL.GG. OpenID Connect in SPID.pdf  <https://www.agid.gov.it/sites/default/files/repository_files/regolamento-spid_openid_connect_federation_1.0.pdf>`_
+      - 06/05/2022 
