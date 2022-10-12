@@ -37,7 +37,7 @@ Response
 
   La response dello UserInfo Endpoint DEVE specificare nel "Content-Type" il valore "application/jwt".
 
-Il contenuto del corpo della Response DEVE essere un `JWT firmato e cifrato. <https://openid.net/specs/openid-connect-core-1_0.html#UserInfoResponse>`_
+Il contenuto del corpo della Response DEVE essere un `JWT firmato e cifrato. <https://openid.net/specs/openid-connect-core-1_0.html#UserInfoResponse>`_.
 
 L'header JOSE DEVE contenere il parametro *cty* (Content Type) valorizzato con *JWT* (vedi :rfc:`7519#section-5.2`).
 
@@ -54,7 +54,8 @@ Lo UserInfo Endpoint restituisce gli attributi utente esplicitamente richiesti t
   {
     "alg": "RSA-OAEP",
     "enc": "A256CBC-HS512",
-    "kid": "HIvo33-Km7n03ZqKDJfWVnlFudsW28YhQZx5eaXtAKA"
+    "kid": "HIvo33-Km7n03ZqKDJfWVnlFudsW28YhQZx5eaXtAKA",
+    "cty": "JWT"
   }
   .
   {
@@ -65,7 +66,7 @@ Lo UserInfo Endpoint restituisce gli attributi utente esplicitamente richiesti t
      "exp":1519033149,
      "sub":"OP-1234567890",
      "name":"Mario",
-     "https://attributes.spid.gov.it/familyName":"Rossi",
+     "family_name":"Rossi",
      "https://attributes.spid.gov.it/fiscalNumber":"MROXXXXXXXXXXXXX"
   }
 

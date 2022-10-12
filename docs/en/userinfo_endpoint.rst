@@ -49,7 +49,8 @@ The UserInfo Endpoint returns user attributes explicitly requested through the *
   {
     "alg": "RSA-OAEP",
     "enc": "A256CBC-HS512",
-    "kid": "HIvo33-Km7n03ZqKDJfWVnlFudsW28YhQZx5eaXtAKA"
+    "kid": "HIvo33-Km7n03ZqKDJfWVnlFudsW28YhQZx5eaXtAKA",
+    "cty": "JWT"
   }
   .
   {
@@ -60,7 +61,7 @@ The UserInfo Endpoint returns user attributes explicitly requested through the *
      "exp":1519033149,
      "sub":"OP-1234567890",
      "name":"Mario",
-     "https://attributes.spid.gov.it/familyName":"Rossi",
+     "family_name":"Rossi",
      "https://attributes.spid.gov.it/fiscalNumber":"MROXXXXXXXXXXXXX"
   }
 
