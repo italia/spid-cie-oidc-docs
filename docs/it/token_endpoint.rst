@@ -294,6 +294,8 @@ Di seguito i claim disponibili nell'ID Token.
  - https://openid.net/specs/openid-igov-openid-connect-1_0-03.html#rfc.section.3.1
 
 
+.. _TOKEN_ENDPOINT_ERRORS:
+
 Errori
 ------
 
