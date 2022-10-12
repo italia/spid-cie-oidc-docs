@@ -20,8 +20,6 @@ With the method **GET** the parameters MUST be sent using the *Query String Seri
 
    - :ref:`Example of Authorization Request <Esempio_EN6>`
 
-Autorization Request parameters
-+++++++++++++++++++++++++++++++
 
 In the following the mandatory parameters in the *HTTP* authentication request.
 
@@ -286,4 +284,71 @@ Authorization Response example:
 
     http://rp-test.it/oidc/rp/callback/?code=a032faf23d986353019ff8eda96cadce2ea1c368f04bf4c5e1759d559dda1c08056c7c4d4e8058cb002a0c8fa9a920272350aa102548523a8aff4ccdb44cb3fa&state=2Ujz3tbBHWQEL4XPFSJ5ANSjkhd7IlfC&iss=http%3A%2F%2Fop-test%2Foidc%2Fop%2F
 
+Errors
+++++++
 
+In the event of an error, the OP or RP represent the anomaly message 
+as described in the related tables defined by the `Linee Guida UX SPID`_. 
+
+
+.. list-table:: 
+   :widths: 20 60 20
+   :header-rows: 1
+
+   * - **Claim**
+     - **Description**
+     - **Supported by**
+   * - **error**
+     - Vedi :ref:`Error codes <codici_errore>`
+     - |spid-icon| |cieid-icon|
+   * - **error_description**
+     - Error description.
+     - |spid-icon| |cieid-icon|
+   * - **state**
+     - It MUST be equal to the *status* value included in the *Authentication Request*. The RP MUST verify that it matches the one sent in the *Authentication Request*.
+     - |spid-icon| |cieid-icon|
+
+
+.. _codici_errore:
+
+Errors
+------
+
+.. list-table:: 
+   :widths: 20 20 20 20
+   :header-rows: 1
+
+   * - **Error Code**
+     - **Description**
+     - **Reference**
+     - **Supported by**
+
+   * - *access_denied*
+     - The OP denied access due to invalid or unsuitable credentials for the required SPID level.
+     - 
+     - |spid-icon| |cieid-icon|
+
+   * - *invalid_client*
+     - The client_id in the request is not known.
+     - 
+     - |spid-icon| |cieid-icon|
+
+   * - *invalid_request*
+     - The request is not valid due to the lack or incorrectness of one or more parameters.
+     - :rfc:`6749#section-4.1.2.1`.
+     - |spid-icon| |cieid-icon|
+
+   * - *invalid_scope*
+     - Invalid scopes in the Authorization request.
+     - 
+     - |spid-icon| |cieid-icon|
+
+   * - *server_error*
+     - The OP encountered an internal problem.
+     - 
+     - |spid-icon| |cieid-icon|
+
+   * - *temporarily_unavailable*
+     - The OP encountered a temporary internal problem.
+     - 
+     - |spid-icon| |cieid-icon|

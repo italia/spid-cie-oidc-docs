@@ -295,3 +295,39 @@ The claims available in the *ID Token* are given below.
  - https://openid.net/specs/openid-igov-openid-connect-1_0-03.html#rfc.section.3.1
 
 
+.. _TOKEN_ENDPOINT_ERRORS:
+
+Errors
+------
+
+.. list-table:: 
+   :widths: 20 60 20
+   :header-rows: 1
+
+   * - **Claim**
+     - **Description**
+     - **Supported by**
+
+   * - *invalid_client*
+     - The client_id indicated in the request is not known.
+     - |spid-icon| |cieid-icon|
+
+   * - *unsupported_grant_type*
+     - The grant_type parameter contains an incorrect value.
+     - |spid-icon| |cieid-icon|
+
+   * - *invalid_grant*
+     - The grant_type, code, code_verifier, access_token parameters are not valid.
+     - |spid-icon| |cieid-icon|
+
+   * - *invalid_request*
+     - The request is not valid due to the lack or incorrectness of one or more parameters.
+     - |spid-icon| |cieid-icon|
+
+   * - *server_error*
+     - The OP encountered an internal problem.
+     - |spid-icon| |cieid-icon|
+
+   * - *temporarily_unavailable*
+     - The OP encountered a temporary internal problem.
+     - |spid-icon| |cieid-icon|

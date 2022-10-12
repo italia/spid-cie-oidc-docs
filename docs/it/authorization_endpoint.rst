@@ -276,3 +276,73 @@ Esempio di Authorization Response dell'OP:
     http://rp-test.it/oidc/rp/callback/?code=a032faf23d986353019ff8eda96cadce2ea1c368f04bf4c5e1759d559dda1c08056c7c4d4e8058cb002a0c8fa9a920272350aa102548523a8aff4ccdb44cb3fa&state=2Ujz3tbBHWQEL4XPFSJ5ANSjkhd7IlfC&iss=http%3A%2F%2Fop-test%2Foidc%2Fop%2F
 
 
+Gestione degli errori
++++++++++++++++++++++
+
+In caso di errore, l'OP o il RP rappresentano i messaggi di anomalia relativi agli scambi OpenID
+Connect, come descritti nelle relative tabelle definite dalle `Linee Guida UX SPID`_.
+
+
+.. list-table:: 
+   :widths: 20 60 20
+   :header-rows: 1
+
+   * - **Claim**
+     - **Descrizione**
+     - **Supportato da**
+   * - **Errore**
+     - Vedi :ref:`Codici di errori <codici_errore>`
+     - |spid-icon| |cieid-icon|
+   * - **Descrizione dell'errore**
+     - Descrizione più dettagliata dell'errore, finalizzata ad aiutare lo sviluppatore per eventuale debugging. Questo messaggio non è 
+       destinato ad essere visualizzato all'utente (a tal fine si faccia riferimento alle `Linee Guida UX SPID`_)
+     - |spid-icon| |cieid-icon|
+   * - **state**
+     - Parametro obbligatorio solo nel caso di risposta di errore alla *Authentication Request* e DEVE essere uguale al valore *state* incluso nella *Authentication Request*.  Il RP DEVE verificare che corrisponda a quello inviato nella *Authentication Request*.
+     - |spid-icon| |cieid-icon|
+
+
+.. _codici_errore:
+
+Codici di errore
+----------------
+
+.. list-table:: 
+   :widths: 20 20 20 20
+   :header-rows: 1
+
+   * - **Errore**
+     - **Descrizione**
+     - **Riferimento**
+     - **Supportato da**
+
+   * - *access_denied*
+     - L’OP ha negato l’accesso a causa di credenziali non valide o non adeguate al livello SPID richiesto.
+     - 
+     - |spid-icon| |cieid-icon|
+
+   * - *invalid_client*
+     - Il client_id indicato nella richiesta non è riconosciuto.
+     - 
+     - |spid-icon| |cieid-icon|
+
+   * - *invalid_request*
+     - La richiesta non è valida a causa della mancanza o della non correttezza di uno o più parametri.
+     - :rfc:`6749#section-4.1.2.1`.
+     - |spid-icon| |cieid-icon|
+
+   * - *invalid_scope*
+     - Sono stati richiesti degli scope non validi.
+     - 
+     - |spid-icon| |cieid-icon|
+
+   * - *server_error*
+     - L’OP ha riscontrato un problema interno.
+     - 
+     - |spid-icon| |cieid-icon|
+
+   * - *temporarily_unavailable*
+     - L’OP ha riscontrato un problema interno temporaneo.
+     - 
+     - |spid-icon| |cieid-icon|
+
