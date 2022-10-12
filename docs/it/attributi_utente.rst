@@ -84,13 +84,13 @@ Tabella attributi utente
      - |spid-icon| |cieid-icon|
    * - **gender**
      - Sesso (anagrafica). String. Valori ammessi: |br|
-       "F" per sesso femminile |br|
-       "M" per sesso maschile |br|
+       "female" per sesso femminile |br|
+       "male" per sesso maschile |br|
        Esempio: |br|
 
        .. code-block:: json
 
-         "gender":"F"
+         "gender":"female"
 
      - |spid-icon| |cieid-icon|
    * - **https://attributes.eid.gov.it/company_name**

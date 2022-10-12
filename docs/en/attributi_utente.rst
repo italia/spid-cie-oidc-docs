@@ -89,13 +89,13 @@ User attributes
      - |spid-icon| |cieid-icon|
    * - **gender**
      - Gender. String. Values accepted: |br|
-       "F" for female |br|
-       "M" for male |br|
+       "female" for female |br|
+       "male" for male |br|
        Example: |br|
 
        .. code-block:: json
 
-         "gender": "F"
+         "gender": "male"
 
      - |spid-icon| |cieid-icon|
    * - **https://attributes.eid.gov.it/company_name**
