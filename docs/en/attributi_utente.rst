@@ -224,14 +224,14 @@ The following table shows the list of user attributes supported by SPID and/or C
        Example: |br|
        ``"$PREFIX/e_delivery_service":"name@pecdomain.it"``
      - |spid-icon| |cieid-icon|
-   * - **$PREFIX/id_exp_date** |br| Category: extra registry
+   * - **$PREFIX/eid_exp_date** |br| Category: extra registry
      - Identity expiry date. According to the specifications ISO8601-2004 in the format
        "YYYY-MM-DD" where |br|
        YYYY indicates the year using 4 (four) digits |br|
        MM indicates the month with 2 (two) digits |br|
        DD indicates the day with 2 (two) digits |br|
        Example: |br|
-       ``"$PREFIX/id_exp_date":"2002-09-24"``
+       ``"$PREFIX/eid_exp_date":"2002-09-24"``
      - |spid-icon|
    * - **address** |br| Category: extra registry
      - Physical home address |br|

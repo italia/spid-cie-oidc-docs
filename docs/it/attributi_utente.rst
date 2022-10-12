@@ -226,14 +226,14 @@ La seguente tabella riporta l'elenco degli attributi utente supportati da SPID e
        Esempio: |br|
        ``"$PREFIX/e_delivery_service":"nome@pecdomain.it"``
      - |spid-icon| |cieid-icon|
-   * - **$PREFIX/id_exp_date** |br| Categoria: extra anagrafica
+   * - **$PREFIX/eid_exp_date** |br| Categoria: extra anagrafica
      - Data di scadenza identità. Secondo specifica ISO8601-2004 nel formato
        "YYYY-MM-DD" dove |br|
        YYYY indica l'anno utilizzando 4 cifre |br|
        MM indica il mese in (due) cifre |br|
        DD indica il giorno in (due) cifre |br|
        Esempio: |br|
-       ``"$PREFIX/id_exp_date":"2002-09-24"``
+       ``"$PREFIX/eid_exp_date":"2002-09-24"``
      - |spid-icon|
    * - **address** |br| Categoria: extra anagrafica 
      - Indirizzo domicilio fisico |br|
