@@ -304,11 +304,10 @@ as described in the related tables defined by the `Linee Guida UX SPID`_.
      - Vedi :ref:`Codici di errori <codici_errore>`
      - |spid-icon| |cieid-icon|
    * - **error_description**
-     - Descrizione più dettagliata dell'errore, finalizzata ad aiutare lo sviluppatore per eventuale debugging. Questo messaggio non è 
-       destinato ad essere visualizzato all'utente (a tal fine si faccia riferimento alle `Linee Guida UX SPID`_)
+     - Error description.
      - |spid-icon| |cieid-icon|
    * - **state**
-     - Parametro obbligatorio solo nel caso di risposta di errore alla *Authentication Request* e DEVE essere uguale al valore *state* incluso nella *Authentication Request*.  Il RP DEVE verificare che corrisponda a quello inviato nella *Authentication Request*.
+     - It MUST be equal to the *status* value included in the *Authentication Request*. The RP MUST verify that it matches the one sent in the *Authentication Request*.
      - |spid-icon| |cieid-icon|
 
 
@@ -327,31 +326,31 @@ Codici di errore
      - **Supportato da**
 
    * - *access_denied*
-     - L’OP ha negato l’accesso a causa di credenziali non valide o non adeguate al livello SPID richiesto.
+     - The OP denied access due to invalid or unsuitable credentials for the required SPID level.
      - 
      - |spid-icon| |cieid-icon|
 
    * - *invalid_client*
-     - Il client_id indicato nella richiesta non è riconosciuto.
+     - The client_id in the request is not known.
      - 
      - |spid-icon| |cieid-icon|
 
    * - *invalid_request*
-     - La richiesta non è valida a causa della mancanza o della non correttezza di uno o più parametri.
+     - The request is not valid due to the lack or incorrectness of one or more parameters.
      - :rfc:`6749#section-4.1.2.1`.
      - |spid-icon| |cieid-icon|
 
    * - *invalid_scope*
-     - Sono stati richiesti degli scope non validi.
+     - Invalid scopes in the Authorization request.
      - 
      - |spid-icon| |cieid-icon|
 
    * - *server_error*
-     - L’OP ha riscontrato un problema interno.
+     - The OP encountered an internal problem.
      - 
      - |spid-icon| |cieid-icon|
 
    * - *temporarily_unavailable*
-     - L’OP ha riscontrato un problema interno temporaneo.
+     - The OP encountered a temporary internal problem.
      - 
      - |spid-icon| |cieid-icon|

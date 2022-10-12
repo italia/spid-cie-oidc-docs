@@ -294,3 +294,38 @@ Di seguito i claim disponibili nell'ID Token.
  - https://openid.net/specs/openid-igov-openid-connect-1_0-03.html#rfc.section.3.1
 
 
+Errori
+------
+
+.. list-table:: 
+   :widths: 20 60 20
+   :header-rows: 1
+
+   * - **Claim**
+     - **Descrizione**
+     - **Supportato da**
+
+   * - *invalid_client*
+     - Il client_id indicato nella richiesta non è riconosciuto.
+     - |spid-icon| |cieid-icon|
+
+   * - *unsupported_grant_type*
+     - Il parametro grant_type contiene un valore non corretto.
+     - |spid-icon| |cieid-icon|
+
+   * - *invalid_grant*
+     - I parametri grant_type, code, code_verifier, access_token non sono validi.
+     - |spid-icon| |cieid-icon|
+
+   * - *invalid_request*
+     - La richiesta non è valida a causa della mancanza o della non correttezza di uno o più parametri.
+     - |spid-icon| |cieid-icon|
+
+   * - *server_error*
+     - L’OP ha riscontrato un problema interno.
+     - |spid-icon| |cieid-icon|
+
+   * - *temporarily_unavailable*
+     - L’OP ha riscontrato un problema interno temporaneo.
+     - |spid-icon| |cieid-icon|
+
