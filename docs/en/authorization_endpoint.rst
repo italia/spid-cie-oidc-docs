@@ -150,29 +150,6 @@ The **JWT** payload contains the following mandatory claims:
   .. literalinclude :: ../../static/pkce.py
    :language: python
 
-..
-  FIXME: Made an ad hoc section for the ways of using the parameters claims e scope
-     
-  Claims
-  ++++++
-
-  The parameter claims defines the attributes required by the **RP**. The SPID attributes are requested in the element "userinfo" by listing the attributes to be requested as keys of JSON Objects, whose values must be indicated as {"essential": true}. For SPID, it is not possible to request attributes in the id_token, while it is possible for CIE. The listed attributes under "userinfo" are available at the moment of the call to the UserInfo Endpoint.
-
-  .. code-block:: json
-
-  {
-      "userinfo":{
-          "https://attributes.spid.gov.it/familyName":{
-              "essential":true
-          }
-      }
-  }
-
-
-  .. seealso::
-
-  - https://openid.net/specs/openid-connect-core-1_0.html#IndividualClaimsRequests
-
 
 .. parametri_scope_claims:
 
@@ -246,6 +223,9 @@ The following table shows some usage examples.
       - *sub*, |br|  *birthdate*, |br|  *gender*
       - *sub*, |br|  *birthdate*
 
+.. seealso::
+
+  - https://openid.net/specs/openid-connect-core-1_0.html#IndividualClaimsRequests
 
 
 Response

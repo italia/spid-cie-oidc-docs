@@ -140,28 +140,6 @@ Il payload del **JWT** contiene i seguenti parametri obbligatori.
   .. literalinclude :: ../../static/pkce.py
    :language: python
 
-..
-  FIXME: Fatta sezione ad hoc per le modalità di utilizzo dei parametri claims e scope	 
-  Claim
-  +++++
-
-  Il parametro claims definisce gli attributi richiesti dal **RP**. Gli attributi SPID sono richiesti all'interno dell'elemento "userinfo", elencando gli attributi da richiedere come chiavi di oggetti JSON, i cui valori devono essere indicati come {"essential": true}. Per SPID non è possibile richiedere attributi nell'id_token, mentre è possibile farlo per CIE. Gli attributi elencati sotto "userinfo" sono disponibili al momento della chiamata allo UserInfo Endpoint.
-
-  .. code-block:: json
-
-  {
-      "userinfo":{
-          "https://attributes.spid.gov.it/familyName":{
-              "essential":true
-          }
-      }
-  }
-
-
-  .. seealso::
-
-  - https://openid.net/specs/openid-connect-core-1_0.html#IndividualClaimsRequests
-
 
 .. parametri_scope_claims:
 
@@ -195,7 +173,7 @@ Per la definizione del parametro **claims** e la modalità di utilizzo per la ri
     - Solo per CIE id: Nell'oggetto *id_token* del parametro **claims** è possibile richiedere solo il Minimum Dataset eIDAS. Gli altri attributi dell'utente DEVONO essere richiesti nell'oggetto *userinfo* del parametro **claims**. Inoltre, gli attributi utente richiesti nell'oggetto *id_token* sono disponibili anche allo *userinfo endpoint*. 
 
 .. warning::
-    - Se il parametro **claims** non è presente o non è valorizzato, viene restituito solo il claim *sub* nella risposta allo userinfo endpoint. 
+    - Se il parametro **claims** non è presente o non è valorizzato e solo lo scope *openid* è presente, verrà restituito il claim *sub* nella risposta allo userinfo endpoint come unico attributo utente.
 
 La tabella seguente mostra alcuni esempi di utilizzo.
 
@@ -231,6 +209,10 @@ La tabella seguente mostra alcuni esempi di utilizzo.
       - *openid* 
       - *sub*, |br|  *birthdate*, |br|  *gender*
       - *sub*, |br|  *birthdate*
+
+.. seealso::
+
+  - https://openid.net/specs/openid-connect-core-1_0.html#IndividualClaimsRequests
 
 
 Response
