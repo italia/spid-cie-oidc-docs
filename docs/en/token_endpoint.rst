@@ -232,7 +232,7 @@ The ID Token is a JSON Web Token (JWT) that contains information on the user tha
   
   If the RP exposes the parameters ... id_token_encrypted_response_alg in the :ref:RP Metadata <MetadataRP> ... the OP MUST encrypt the ID Token as a nested signed and encrypted JWT.
   
-  In this case the ID Token MUST be a **nested signed and encrypted JWT** containing the *cty* (Content-Type) parameter in the JOSE header configured to *JWT* (see :rfc:`7515#section-4`).
+  In this case the ID Token MUST be a **nested signed and encrypted JWT** containing the *cty* (Content-Type) parameter in the JOSE header configured to *JWT* (see :rfc:`7519#section-5.2`).
 
 The claims available in the *ID Token* are given below.
 

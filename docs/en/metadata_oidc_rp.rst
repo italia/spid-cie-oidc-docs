@@ -60,7 +60,7 @@ The RP Metadata of type **"openid_relying_party"** MUST contain at least the fol
     - See `OpenID.Registration#ClientMetadata`_.
     - |spid-icon| |cieid-icon| 
   * - **id_token_encrypted_response_alg**
-    - See `OpenID.Registration#ClientMetadata`_. This is optional. If this is requested, the response MUST signed then encrypted, with the result being a Nested JWT, as defined in :rfc:`7515#section-4`.
+    - See `OpenID.Registration#ClientMetadata`_. This is optional. If this is requested, the response MUST signed then encrypted, with the result being a Nested JWT, as defined in :rfc:`OpenID.Core`_ Section 10.
     - |spid-icon| |cieid-icon| 
   * - **id_token_encrypted_response_enc**
     - See `OpenID.Registration#ClientMetadata`_. This is required only if the *id_token_encrypted_response_alg* is given.

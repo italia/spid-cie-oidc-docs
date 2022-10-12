@@ -3,7 +3,7 @@
 UserInfo Endpoint (attributi)
 -----------------------------
 
-Lo UserInfo Endpoint è una risorsa protetta OIDC che restituisce gli attributi dell'utente autenticato. Per ottenere gli attributi richiesti, il RP inoltra una richiesta allo UserInfo Endpoint utilizzando l'Access Token.
+Lo UserInfo Endpoint è una risorsa protetta che restituisce gli attributi dell'utente autenticato. Per ottenere gli attributi richiesti, il RP inoltra una richiesta allo UserInfo Endpoint utilizzando l'Access Token.
 
 Request
 +++++++
@@ -59,15 +59,15 @@ Lo UserInfo Endpoint restituisce gli attributi utente esplicitamente richiesti t
   }
   .
   {
-     "iss":"https://op.fornitore_identita.it",
-     "aud":"https://rp.fornitore_servizio.it",
-     "iat":1519032969,
-     "nbf":1519032969,
-     "exp":1519033149,
-     "sub":"OP-1234567890",
-     "name":"Mario",
-     "family_name":"Rossi",
-     "https://attributes.spid.gov.it/fiscalNumber":"MROXXXXXXXXXXXXX"
+     "iss": "https://op.fornitore_identita.it",
+     "aud": "https://rp.fornitore_servizio.it",
+     "iat": 1519032969,
+     "nbf": 1519032969,
+     "exp": 1519033149,
+     "sub": "OP-1234567890",
+     "name": "Mario",
+     "family_name": "Rossi",
+     "https://attributes.spid.gov.it/fiscalNumber": "MROXXXXXXXXXXXXX"
   }
 
 

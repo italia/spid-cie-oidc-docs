@@ -3,7 +3,7 @@
 UserInfo Endpoint (attributes)
 ------------------------------
 
-The UserInfo Endpoint is an OIDC protected resource that returns the authenticated user's claims. In order to obtain 
+The UserInfo Endpoint is a protected resource that returns the authenticated user's claims. In order to obtain 
 the requested claims, the RP sends a request to the UserInfo Endpoint using the Access Token.
 
 Request
@@ -36,7 +36,7 @@ Response
 
 The content of the Response body MUST be a `signed and encrypted JWT. <https://openid.net/specs/openid-connect-core-1_0.html#UserInfoResponse>`_
 
-The JOSE header MUST contain the *cty* parameter (Content Type) configured to *JWT* (see :rfc:`7515#section-4`).
+The JOSE header MUST contain the *cty* parameter (Content Type) configured to *JWT* (see :rfc:`7519#section-5.2`).
 
 The UserInfo Endpoint returns user attributes explicitly requested through the **claims** parameter or through the use of the **scope** parameter in the Authentication Request.
 
@@ -54,15 +54,15 @@ The UserInfo Endpoint returns user attributes explicitly requested through the *
   }
   .
   {
-     "iss":"https://op.fornitore_identita.it",
-     "aud":"https://rp.fornitore_servizio.it",
-     "iat":1519032969,
-     "nbf":1519032969,
-     "exp":1519033149,
-     "sub":"OP-1234567890",
-     "name":"Mario",
-     "family_name":"Rossi",
-     "https://attributes.spid.gov.it/fiscalNumber":"MROXXXXXXXXXXXXX"
+     "iss": "https://op.fornitore_identita.it",
+     "aud": "https://rp.fornitore_servizio.it",
+     "iat": 1519032969,
+     "nbf": 1519032969,
+     "exp": 1519033149,
+     "sub": "OP-1234567890",
+     "name": "Mario",
+     "family_name": "Rossi",
+     "https://attributes.spid.gov.it/fiscalNumber": "MROXXXXXXXXXXXXX"
   }
 
 
