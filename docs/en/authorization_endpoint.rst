@@ -296,10 +296,10 @@ as described in the related tables defined by the `Linee Guida UX SPID`_.
    :header-rows: 1
 
    * - **Claim**
-     - **Descrizione**
-     - **Supportato da**
+     - **Description**
+     - **Supported by**
    * - **error**
-     - Vedi :ref:`Codici di errori <codici_errore>`
+     - Vedi :ref:`Error codes <codici_errore>`
      - |spid-icon| |cieid-icon|
    * - **error_description**
      - Error description.
@@ -311,17 +311,17 @@ as described in the related tables defined by the `Linee Guida UX SPID`_.
 
 .. _codici_errore:
 
-Codici di errore
-----------------
+Errors
+------
 
 .. list-table:: 
    :widths: 20 20 20 20
    :header-rows: 1
 
    * - **Error Code**
-     - **Descrizione**
+     - **Description**
      - **Reference**
-     - **Supportato da**
+     - **Supported by**
 
    * - *access_denied*
      - The OP denied access due to invalid or unsuitable credentials for the required SPID level.

@@ -290,10 +290,10 @@ Connect, come descritti nelle relative tabelle definite dalle `Linee Guida UX SP
    * - **Claim**
      - **Descrizione**
      - **Supportato da**
-   * - **error**
+   * - **Errore**
      - Vedi :ref:`Codici di errori <codici_errore>`
      - |spid-icon| |cieid-icon|
-   * - **error_description**
+   * - **Descrizione dell'errore**
      - Descrizione più dettagliata dell'errore, finalizzata ad aiutare lo sviluppatore per eventuale debugging. Questo messaggio non è 
        destinato ad essere visualizzato all'utente (a tal fine si faccia riferimento alle `Linee Guida UX SPID`_)
      - |spid-icon| |cieid-icon|
@@ -311,9 +311,9 @@ Codici di errore
    :widths: 20 20 20 20
    :header-rows: 1
 
-   * - **Error Code**
+   * - **Errore**
      - **Descrizione**
-     - **Reference**
+     - **Riferimento**
      - **Supportato da**
 
    * - *access_denied*
