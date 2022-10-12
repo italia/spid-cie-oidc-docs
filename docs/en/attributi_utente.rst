@@ -96,7 +96,7 @@ The following table shows the list of user attributes supported by SPID and/or C
          "$PREFIX/company_name": "Agenzia per l'Italia Digitale"
 
      - |spid-icon|
-   * - **$PREFIXregistered_office** |br| Category: extra registry
+   * - **$PREFIX/registered_office** |br| Category: extra registry
      - Registered Office. JSON Object: formatted, street_address, locality, region, postal_code, country, 
        country_code.
        Json made of a string composed by a sequence of words, separated by single spaces, representing:
