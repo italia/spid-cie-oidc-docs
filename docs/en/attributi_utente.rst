@@ -5,60 +5,53 @@
 User attributes
 ---------------
 
+The following table shows the list of user attributes supported by SPID and/or CIE. The variable ``$PREFIX=https://attributes.eid.gov.it`` represents the namespace.
 
 .. list-table:: 
-   :widths: 20 40 20
+   :widths: 20 40 1
    :header-rows: 1
 
    * - **Claim**
      - **Description**
      - **Supported by**
-   * - **https://attributes.eid.gov.it/spid_code**
+   * - **$PREFIX/spid_code** |br| Category:registry
      - Identification code. String. The identification code is assigned by the digital identity provider 
        and must be unique.
 
        The format is the following:
 
-       .. code-block:: http
-
-         <Identification code> = <cod_IdP><unique number>
+       ``<Identification code> = <cod_IdP><unique_number>``
 
        Where:
 
          **<cod_IdP>**: is a code made by 4 letters, uniquely assigned to the identity provider.
 
-         **<unique number>**: is an alphanumeric string composed by 10 characters that the identity provider 
+         **<unique_number>**: is an alphanumeric string composed by 10 characters that the identity provider 
          uniquely generates in its own domain.
 
        Example: 
 
-       .. code-block:: http
-
-         "https://attributes.eid.gov.it/spid_cod": "ABCD123456789A"
+       ``"$PREFIX/spid_code":"ABCD123456789A"``
 
      - |spid-icon|
-   * - **given_name**
+   * - **given_name** |br| Category:registry
      - Name. String. String composed by a sequence of words, separated by single spaces, each starting with a capital letter.
        
        
        Example:
 
-       .. code-block:: json
-      
-         "given_name": "Giovanni Mario"
+       ``"given_name":"Giovanni Mario"``
 
      - |spid-icon| |cieid-icon|
-   * - **family_name**
+   * - **family_name** |br| Category:registry
      - Last name. String. String composed by a sequence of words, separated by single spaces, each starting with a capital letter.
 
        Example:
 
-       .. code-block:: json
-       
-         "family_name": "Bianchi Verdi"
+       ``"family_name":"Bianchi Verdi"``
 
      - |spid-icon| |cieid-icon|
-   * - **place_of_birth**
+   * - **place_of_birth** |br| Category:registry
      - Place of birth, province of birth. JSON Object: 
 
        "**locality** : String corresponding to the real estate registry code (Belfiore Code) of the city or foreign country of birth (e.g. "F205" for the city of Milano)
@@ -75,39 +68,35 @@ User attributes
         }
 
      - |spid-icon| |cieid-icon|
-   * - **birthdate**
-     - Date of birth. String. In the following the specifications ISO8601-2004 in the format
+   * - **birthdate** |br| Category:registry
+     - Date of birth. String. Following the specifications ISO8601-2004 in the format
        YYYY indicates the year using 4 (four) digits |br|
        MM indicates the month with 2 (two) digits |br|
        DD indicates the day with 2 (two) digits |br|
        Example: |br|
 
-       .. code-block:: json
-
-         "birthdate": "2002-09-24"
+       ``"birthdate":"2002-09-24"``
 
      - |spid-icon| |cieid-icon|
-   * - **gender**
+   * - **gender** |br| Category:registry
      - Gender. String. Values accepted: |br|
-       "F" for female |br|
-       "M" for male |br|
+       "female" for female |br|
+       "male" for male |br|
        Example: |br|
 
-       .. code-block:: json
-
-         "gender": "F"
+       ``"gender":"female"``
 
      - |spid-icon| |cieid-icon|
-   * - **https://attributes.eid.gov.it/company_name**
+   * - **$PREFIX/company_name** |br| Category:registry
      - Company name. String. String composed by a sequence of words, separated by single spaces.
        In capital letters the substrings corresponding to names (e.g. "Agenzia per l'Italia Digitale")
 
        .. code-block:: json
 
-         "company_name": "Agenzia per l'Italia Digitale"
+         "$PREFIX/company_name": "Agenzia per l'Italia Digitale"
 
      - |spid-icon|
-   * - **https://attributes.eid.gov.it/registered_office**
+   * - **$PREFIX/registered_office** |br| Category: extra registry
      - Registered Office. JSON Object: formatted, street_address, locality, region, postal_code, country, 
        country_code.
        Json made of a string composed by a sequence of words, separated by single spaces, representing:
@@ -125,48 +114,44 @@ User attributes
 
        .. code-block:: json
 
-         "https://attributes.eid.gov.it/registered_office": {
+         "$PREFIX/registered_office":{
              "formatted":"via Listz 21 00144 Roma"
          }
 
      - |spid-icon|
-   * - **https://attributes.eid.gov.it/fiscal_number**
+   * - **$PREFIX/fiscal_number** |br| Category:registry
      - Fiscal number of the natural person. String. For the format, please refer to the coding of the attribute
        CF for the certificates, proposed in the Draft ETSI EN 319 412-1, that implies, in the specific case, the following format:
        TINIT-<FiscalNumber>
         
        Example:
 
-       .. code-block:: json
-
-          "https://attributes.eid.gov.it/fiscal_number": "TINIT-ABCXYZ00W00Z000Z"
+       ``"$PREFIX/fiscal_number":“TINIT-ABCXYZ00W00Z000Z"``
 
      - |spid-icon| |cieid-icon|
-   * - **https://attributes.eid.gov.it/**
+   * - **$PREFIX/company_fiscal_number** |br| Category:registry
      - Fiscal number of the legal person. String. For the format, please refer to the coding of the attribute
        CF for the certificates, proposed in the Draft ETSI EN 319 412-1, that implies, in the specific case, the following format:
 
-       TINIT-<FiscalNumber>
-
-        .. code-block:: json
-
-          "https://attributes.eid.gov.it/company_fiscalNumber": "TINIT-ABCXYZ00W00Z000Z"
-
-     - |spid-icon|
-   * - **https://attributes.eid.gov.it/vat_number**
-     - VAT number. String. For the format, please refer to the coding of the attribute VAT number for 
-       the certificates, proposed in the Draft ETSI EN 319 412-1, that implies, in the specific case, the following format:
-
-       VATIT-<VATnumber>
+       ``TINIT-<FiscalNumber>``
 
        Example:
 
-       .. code-block:: json
-
-          "https://attributes.eid.gov.it/vat_number": "VATIT-12345678901"
+       ``"$PREFIX/company_fiscal_number":"TINIT-ABCXYZ00W00Z000Z"``
 
      - |spid-icon|
-   * - **document_details**
+   * - **$PREFIX/vat_number** |br| Category:registry
+     - VAT number. String. For the format, please refer to the coding of the attribute VAT number for 
+       the certificates, proposed in the Draft ETSI EN 319 412-1, that implies, in the specific case, the following format:
+
+       ``VATIT-<PartitaIVA>``
+
+       Example:
+
+       ``"$PREFIX/vat_number": "VATIT-12345678901"``
+
+     - |spid-icon|
+   * - **document_details** |br| Category: extra registry
      - Identity document. JSON Object (document):
 
        Json contains the proprieties that represent:
@@ -213,36 +198,47 @@ User attributes
         }
 
      - |spid-icon| |cieid-icon|
-   * - **phone_number**
+   * - **phone_number** |br| Category: extra registry
      - Mobile phone name. String. Numeric string without internal spaces |br|
        Example: |br|
        ``"phone_number": "VATIT-12345678901"``
      - |spid-icon| |cieid-icon|
-   * - **email**
+   * - **phone_number_verified** |br| Category: extra registry
+     - Boolean value indicating whether the user's mobile phone number has been verified by the OP. 
+     - |cieid-icon|
+   * - **$PREFIX/landline_number** |br| Category: extra registry
+     - Landline number. String. Numeric string without internal spaces |br|
+       Example: |br|
+       ``"$PREFIX/landline_number":"VATIT-12345678901"``
+     - |cieid-icon|
+   * - **email** |br| Category: extra registry
      - E-mail address. String. Standard e-mail address |br|
        Example: |br|
-       ``"email": "name@domain.it"``
+       ``"email":"name@domain.it"``
      - |spid-icon| |cieid-icon|
-   * - **https://attributes.eid.gov.it/e_delivery_service**
-     - Digital domicile. PEC e-mail address |br|
-       Example: |br|
-       ``"https://attributes.eid.gov.it/e_delivery_service":"name@pecdomain.it"``
+   * - **email_verified** |br| Category: extra registry
+     - Boolean value indicating whether the user's e-mail has been verified by the OP.
      - |cieid-icon|
-   * - **https://attributes.eid.gov.it/eid_exp_date**
+   * - **$PREFIX/e_delivery_service** |br| Category: extra registry
+     - Qualified electronic registered delivery. PEC e-mail address |br|
+       Example: |br|
+       ``"$PREFIX/e_delivery_service":"name@pecdomain.it"``
+     - |spid-icon| |cieid-icon|
+   * - **$PREFIX/eid_exp_date** |br| Category: extra registry
      - Identity expiry date. According to the specifications ISO8601-2004 in the format
        "YYYY-MM-DD" where |br|
        YYYY indicates the year using 4 (four) digits |br|
        MM indicates the month with 2 (two) digits |br|
        DD indicates the day with 2 (two) digits |br|
        Example: |br|
-       ``"https://attributes.eid.gov.it/id_exp_date":"2002-09-24"``
+       ``"$PREFIX/eid_exp_date":"2002-09-24"``
      - |spid-icon|
-   * - **address**
-     - Physical domicile address |br|
-       ZIP code of the physical domicile |br|
-       City of the physical domicile |br|
-       Province of the physical domicile |br|
-       Country of the physical domicile |br|.
+   * - **address** |br| Category: extra registry
+     - Physical home address |br|
+       ZIP code  |br|
+       City  |br|
+       Province  |br|
+       Country  |br|.
        JSON Object (address):
        Formatted, **street_address**
        (**mandatory**), locality, region, postal_code, country, country_code
@@ -280,7 +276,7 @@ Examples
 ++++++++
 
 For convenience, we report examples that produce the composition of a unique JSON Object, from
-several attributes and in particular the claims "place_of_birth", "address", "document_details", ``https://attributes.eid.gov.it/registered_office``.
+several attributes and in particular the claims ``"place_of_birth"``, ``"address"``, ``"document_details"``, ``$PREFIX/registered_office``.
 
 As an example, two Italian addresses are reported:
 

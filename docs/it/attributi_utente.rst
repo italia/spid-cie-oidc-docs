@@ -5,17 +5,20 @@
 Tabella attributi utente
 ------------------------
 
+La seguente tabella riporta l'elenco degli attributi utente supportati da SPID e/o CIE. La variable ``$PREFIX=https://attributes.eid.gov.it`` rappresenta il namespace.
+
 .. list-table:: 
-   :widths: 20 40 20
+   :widths: 20 40 1
    :header-rows: 1
 
    * - **Claim**
      - **Descrizione**
-     - **Supportato da**
-   * - **https://attributes.eid.gov.it/spid_code**
-     - Codice identificativo (anagrafica). String. Il codice identificativo è assegnato dal gestore dell'identità digitale e deve essere univoco.
+     - **Supportato** |br| **da**
+   * - **$PREFIX/spid_code** |br| Categoria: anagrafica
+     - Codice identificativo. String. Il codice identificativo è assegnato dal gestore dell'identità digitale e deve essere univoco.
 
-       Il formato è il seguente: <codice Identificativo> = <cod_IdP><nr. univoco>
+       Il formato è il seguente:
+       ``<codice_Identificativo>=<cod_IdP><nr.univoco>``
 
        Dove:
 
@@ -25,35 +28,29 @@ Tabella attributi utente
 
        Esempio: 
 
-       .. code-block:: json
-
-         "https://attributes.eid.gov.it/spid_cod": "ABCD123456789A"
+       ``"$PREFIX/spid_code":"ABCD123456789A"``
 
      - |spid-icon|
-   * - **given_name**
-     - Nome (anagrafica). String. Stringa composta da una sequenza di parole con carattere iniziale maiuscolo,
+   * - **given_name** |br| Categoria: anagrafica
+     - Nome. String. Stringa composta da una sequenza di parole con carattere iniziale maiuscolo,
        intervallate da spazi singoli.
        
        Esempio:
 
-       .. code-block:: json
-      
-         "given_name": "Giovanni Mario"
+       ``"given_name":"Giovanni Mario"``
 
      - |spid-icon| |cieid-icon|
-   * - **family_name**
-     - Cognome (anagrafica). String. Stringa composta da una sequenza di parole con carattere iniziale maiuscolo,
+   * - **family_name** |br| Categoria: anagrafica
+     - Cognome. String. Stringa composta da una sequenza di parole con carattere iniziale maiuscolo,
        intervallate da spazi singoli.
 
        Esempio:
 
-       .. code-block:: json
-       
-         "family_name":"Bianchi Verdi"
+       ``"family_name":"Bianchi Verdi"``
 
      - |spid-icon| |cieid-icon|
-   * - **place_of_birth**
-     - Luogo di nascita, Provincia di nascita (anagrafica). JSON Object: 
+   * - **place_of_birth** |br| Categoria: anagrafica
+     - Luogo di nascita, Provincia di nascita. JSON Object: 
 
        "**locality** : Stringa corrispondente al codice catastale (Codice Belfiore) del Comune 
        o della nazione estera di nascita (Es. "F205" per la città di Milano)
@@ -70,41 +67,37 @@ Tabella attributi utente
         }
 
      - |spid-icon| |cieid-icon|
-   * - **birthdate**
-     - Data di nascita (anagrafica). String. Secondo specifica ISO8601-2004 nel formato
+   * - **birthdate** |br| Categoria: anagrafica
+     - Data di nascita. String. Secondo specifica ISO8601-2004 nel formato
        YYYY indica l'anno utilizzando 4 cifre |br|
        MM indica il mese in (due) cifre |br|
        DD indica il giorno in (due) cifre |br|
        Esempio: |br|
 
-       .. code-block:: json
-
-         "birthdate":"2002-09-24"
+       ``"birthdate":"2002-09-24"``
 
      - |spid-icon| |cieid-icon|
-   * - **gender**
-     - Sesso (anagrafica). String. Valori ammessi: |br|
-       "F" per sesso femminile |br|
-       "M" per sesso maschile |br|
+   * - **gender** |br| Categoria: anagrafica
+     - Sesso. String. Valori ammessi: |br|
+       "female" per sesso femminile |br|
+       "male" per sesso maschile |br|
        Esempio: |br|
 
-       .. code-block:: json
-
-         "gender":"F"
+       ``"gender":"female"``
 
      - |spid-icon| |cieid-icon|
-   * - **https://attributes.eid.gov.it/company_name**
-     - Ragione o denominazione sociale (anagrafica). String. Stringa composta da una sequenza di parole intervallate 
+   * - **$PREFIX/company_name** |br| Categoria: anagrafica
+     - Ragione o denominazione sociale. String. Stringa composta da una sequenza di parole intervallate 
        da spazi singoli.
        In maiuscolo le sottostringhe corrispondenti a nomi (es. “Agenzia per l'Italia Digitale”)
 
        .. code-block:: json
 
-         "company_name": "Agenzia per l'Italia Digitale"
+         "$PREFIX/company_name": "Agenzia per l'Italia Digitale"
 
      - |spid-icon|
-   * - **https://attributes.eid.gov.it/registered_office**
-     - Sede legale (extra anagrafica). JSON Object: formatted, street_address, locality, region, postal_code, country, 
+   * - **$PREFIX/registered_office** |br| Categoria: extra anagrafica
+     - Sede legale. JSON Object: formatted, street_address, locality, region, postal_code, country, 
        country_code.
        Json composto da una stringa composta da una sequenza di parole intervallate da spazi singoli rappresentanti:
 
@@ -121,50 +114,46 @@ Tabella attributi utente
 
        .. code-block:: json
 
-         "https://attributes.eid.gov.it/registered_office":{
+         "$PREFIX/registered_office":{
              "formatted":"via Listz 21 00144 Roma"
          }
 
      - |spid-icon|
-   * - **https://attributes.eid.gov.it/fiscal_number**
-     - Codice fiscale della persona fisica (anagrafica). String. Per il formato si faccia riferimento alla codifica 
+   * - **$PREFIX/fiscal_number** |br| Categoria: anagrafica
+     - Codice fiscale della persona fisica. String. Per il formato si faccia riferimento alla codifica 
        dell'attributo CF per i certificati, proposta nell'ambito del Draft ETSI EN 319 412-1, 
        che nel caso specifico prevede la seguente composizione:
        TINIT-<CodiceFiscale>
         
        Esempio:
 
-       .. code-block:: json
-
-          "https://attributes.eid.gov.it/fiscal_number": “TINIT-ABCXYZ00W00Z000Z"
+       ``"$PREFIX/fiscal_number":“TINIT-ABCXYZ00W00Z000Z"``
 
      - |spid-icon| |cieid-icon|
-   * - **https://attributes.eid.gov.it/**
-     - Codice fiscale Persona Giuridica (anagrafica). String. Per il formato si faccia riferimento alla codifica dell'attributo CF per i certificati, proposta
+   * - **$PREFIX/company_fiscal_number** |br| Categoria: anagrafica
+     - Codice fiscale Persona Giuridica. String. Per il formato si faccia riferimento alla codifica dell'attributo CF per i certificati, proposta
        nell'ambito del Draft ETSI EN 319 412-1, che nel caso specifico prevede la seguente composizione:
 
-       TINIT-segue il codice fiscale
-
-        .. code-block:: json
-
-          "https://attributes.eid.gov.it/company_fiscalNumber":"TINIT-ABCXYZ00W00Z000Z"
-
-     - |spid-icon|
-   * - **https://attributes.eid.gov.it/vat_number**
-     - Partita IVA (anagrafica). String. Per il formato si faccia riferimento alla codifica dell'attributo Partita IVA per i certificati,
-       proposta nell'ambito del Draft ETSI EN 319 412-1, che nel caso specifico prevede la seguente composizione:
-
-       VATIT-<PartitaIVA>
+       ``TINIT-segue il codice fiscale``
 
        Esempio:
 
-       .. code-block:: json
-
-          "https://attributes.eid.gov.it/vat_number": "VATIT-12345678901"
+       ``"$PREFIX/company_fiscal_number":"TINIT-ABCXYZ00W00Z000Z"``
 
      - |spid-icon|
-   * - **document_details**
-     - Documento d'identità (extra anagrafica). JSON Object (document):
+   * - **$PREFIX/vat_number** |br| Categoria: anagrafica
+     - Partita IVA. String. Per il formato si faccia riferimento alla codifica dell'attributo Partita IVA per i certificati,
+       proposta nell'ambito del Draft ETSI EN 319 412-1, che nel caso specifico prevede la seguente composizione:
+
+       ``VATIT-<PartitaIVA>``
+
+       Esempio:
+
+       ``"$PREFIX/vat_number": "VATIT-12345678901"``
+
+     - |spid-icon|
+   * - **document_details** |br| Categoria: extra anagrafica
+     - Documento d'identità. JSON Object (document):
 
        Json contenente le proprietà che rappresentano:
 
@@ -211,32 +200,43 @@ Tabella attributi utente
         }
 
      - |spid-icon| |cieid-icon|
-   * - **phone_number**
-     - Numero di telefono mobile (extra anagrafica). String. Stringa numerica senza spazi intermedi |br|
+   * - **phone_number** |br| Categoria: extra anagrafica
+     - Numero di telefono mobile. String. Stringa numerica senza spazi intermedi |br|
        Esempio: |br|
-       ``"phone_number": "VATIT-12345678901"``
+       ``"phone_number":"VATIT-12345678901"``
      - |spid-icon| |cieid-icon|
-   * - **email**
-     - Indirizzo di posta elettronica (extra anagrafica). String. Formato standard indirizzo di posta elettronica |br|
-       Esempio: |br|
-       ``"email": "name@domain.it"``
-     - |spid-icon| |cieid-icon|
-   * - **https://attributes.eid.gov.it/e_delivery_service**
-     - Domicilio digitale (extra anagrafica). Indirizzo casella PEC |br|
-       Esempio: |br|
-       ``"https://attributes.eid.gov.it/e_delivery_service":"nome@pecdomain.it"``
+   * - **phone_number_verified** |br| Categoria: extra anagrafica
+     - Valore Booleano che indica se il numero di telefono mobile dell'utente è stato verificato dall'OP. 
      - |cieid-icon|
-   * - **https://attributes.eid.gov.it/eid_exp_date**
-     - Data di scadenza identità (extra anagrafica). Secondo specifica ISO8601-2004 nel formato
+   * - **$PREFIX/landline_number** |br| Categoria: extra anagrafica
+     - Numero di telefono fisso. String. Stringa numerica senza spazi intermedi |br|
+       Esempio: |br|
+       ``"$PREFIX/landline_number":"VATIT-12345678901"``
+     - |cieid-icon|
+   * - **email** |br| Categoria: extra anagrafica
+     - Indirizzo di posta elettronica. String. Formato standard indirizzo di posta elettronica |br|
+       Esempio: |br|
+       ``"email":"name@domain.it"``
+     - |spid-icon| |cieid-icon|
+   * - **email_verified** |br| Categoria: extra anagrafica
+     - Valore Booleano che indica se l'email dell'utente è stata verificata dall'OP. 
+     - |cieid-icon|
+   * - **$PREFIX/e_delivery_service** |br| Categoria: extra anagrafica
+     - Domicilio digitale. Indirizzo casella PEC |br|
+       Esempio: |br|
+       ``"$PREFIX/e_delivery_service":"nome@pecdomain.it"``
+     - |spid-icon| |cieid-icon|
+   * - **$PREFIX/eid_exp_date** |br| Categoria: extra anagrafica
+     - Data di scadenza identità. Secondo specifica ISO8601-2004 nel formato
        "YYYY-MM-DD" dove |br|
        YYYY indica l'anno utilizzando 4 cifre |br|
        MM indica il mese in (due) cifre |br|
        DD indica il giorno in (due) cifre |br|
        Esempio: |br|
-       ``"https://attributes.eid.gov.it/id_exp_date":"2002-09-24"``
+       ``"$PREFIX/eid_exp_date":"2002-09-24"``
      - |spid-icon|
-   * - **address**
-     - (extra anagrafica) Indirizzo domicilio fisico |br|
+   * - **address** |br| Categoria: extra anagrafica 
+     - Indirizzo domicilio fisico |br|
        CAP domicilio fisico |br|
        Comune domicilio fisico |br|
        Provincia domicilio fisico |br|
@@ -277,7 +277,7 @@ Tabella attributi utente
 Esempi
 ++++++
 
-Si riportano per comodità gli esempi che danno luogo alla composizione di un unico JSON Object da parte di più attributi ed in particolare i claim "place_of_birth", "address", "document_details", ``https://attributes.eid.gov.it/registered_office``.
+Si riportano per comodità gli esempi che danno luogo alla composizione di un unico JSON Object da parte di più attributi ed in particolare i claim ``"place_of_birth"``, ``"address"``, ``"document_details"``, ``$PREFIX/registered_office``.
 
 Si riportano a titolo di esempio due indirizzi italiani:
 
