@@ -84,7 +84,7 @@ The following table shows the list of user attributes supported by SPID and/or C
        "male" for male |br|
        Example: |br|
 
-       ``"gender":"F"``
+       ``"gender":"female"``
 
      - |spid-icon| |cieid-icon|
    * - **$PREFIX//company_name** |br| Category:registry
