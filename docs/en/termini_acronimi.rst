@@ -82,7 +82,7 @@ In this section are defined all the acronyms that are used throughout the text.
     * - **AgID**
       - Agenzia per l'Italia Digitale, FA/TA of SPID
     * - **MinInterno**
-      - Ministry of Interior, FA/TA of CIEid.
+      - Ministry of Interior, FA/TA of CIE id.
     * - **OP**
       - OpenID Provider (Leaf Entity)
     * - **RP**

@@ -56,7 +56,7 @@ In questa sezione sono definiti tutti gli acronimi utilizzati all'interno del te
 
     * - **SPID**
       - Sistema Pubblico di Identità Digitale
-    * - **CIEid**
+    * - **CIE id**
       - Il sistema di identità digitale italiano basato sulla Carta d'Identità Elettronica (CIE), di cui il Ministero dell'Interno è il titolare. La gestione tecnica e operativa è affidata all'Istituto Poligrafico e Zecca dello Stato (IPZS).
     * - **OIDC**
       - OpenID Connect
@@ -71,7 +71,7 @@ In questa sezione sono definiti tutti gli acronimi utilizzati all'interno del te
     * - **AgID**
       - Agenzia per l'Italia Digitale, FA/TA di SPID
     * - **MinInterno**
-      - Ministero dell'Interno, FA/TA di CIEid.
+      - Ministero dell'Interno, FA/TA di CIE id.
     * - **OP**
       - OpenID Provider (entità Foglia)
     * - **RP**

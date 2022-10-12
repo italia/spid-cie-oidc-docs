@@ -1,7 +1,7 @@
 .. include:: ../common/common_definitions.rst
 
 
-Trust Mark CIEid
+Trust Mark CIE id
 ----------------
 
 Esempi di Trust Mark CIE

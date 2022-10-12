@@ -1,6 +1,6 @@
 .. include:: ../common/common_definitions.rst
 
-Trust Marks for CIEid
+Trust Marks for CIE id
 ----------------------
 
 Examples of Trust Marks for CIE
