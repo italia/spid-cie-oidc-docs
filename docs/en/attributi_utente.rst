@@ -14,7 +14,7 @@ The following table shows the list of user attributes supported by SPID and/or C
    * - **Claim**
      - **Description**
      - **Supported by**
-   * - **$PREFIX/https://attributes.eid.gov.it/spid_code** |br| Category:registry
+   * - **$PREFIX/spid_code** |br| Category:registry
      - Identification code. String. The identification code is assigned by the digital identity provider 
        and must be unique.
 
@@ -31,7 +31,7 @@ The following table shows the list of user attributes supported by SPID and/or C
 
        Example: 
 
-       ``"$PREFIX/spid_cod":"ABCD123456789A"``
+       ``"$PREFIX/spid_code":"ABCD123456789A"``
 
      - |spid-icon|
    * - **given_name** |br| Category:registry
@@ -87,16 +87,16 @@ The following table shows the list of user attributes supported by SPID and/or C
        ``"gender":"female"``
 
      - |spid-icon| |cieid-icon|
-   * - **$PREFIX//company_name** |br| Category:registry
+   * - **$PREFIX/company_name** |br| Category:registry
      - Company name. String. String composed by a sequence of words, separated by single spaces.
        In capital letters the substrings corresponding to names (e.g. "Agenzia per l'Italia Digitale")
 
        .. code-block:: json
 
-         "company_name": "Agenzia per l'Italia Digitale"
+         "$PREFIX/company_name": "Agenzia per l'Italia Digitale"
 
      - |spid-icon|
-   * - **$PREFIX//registered_office** |br| Category: extra registry
+   * - **$PREFIXregistered_office** |br| Category: extra registry
      - Registered Office. JSON Object: formatted, street_address, locality, region, postal_code, country, 
        country_code.
        Json made of a string composed by a sequence of words, separated by single spaces, representing:
@@ -224,7 +224,7 @@ The following table shows the list of user attributes supported by SPID and/or C
        Example: |br|
        ``"$PREFIX/e_delivery_service":"name@pecdomain.it"``
      - |spid-icon| |cieid-icon|
-   * - **$PREFIX/eid_exp_date** |br| Category: extra registry
+   * - **$PREFIX/id_exp_date** |br| Category: extra registry
      - Identity expiry date. According to the specifications ISO8601-2004 in the format
        "YYYY-MM-DD" where |br|
        YYYY indicates the year using 4 (four) digits |br|

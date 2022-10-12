@@ -29,7 +29,7 @@ La seguente tabella riporta l'elenco degli attributi utente supportati da SPID e
 
        Esempio: 
 
-       ``"$PREFIX/spid_cod":"ABCD123456789A"``
+       ``"$PREFIX/spid_code":"ABCD123456789A"``
 
      - |spid-icon|
    * - **given_name** |br| Categoria: anagrafica
@@ -94,7 +94,7 @@ La seguente tabella riporta l'elenco degli attributi utente supportati da SPID e
 
        .. code-block:: json
 
-         "company_name": "Agenzia per l'Italia Digitale"
+         "$PREFIX/company_name": "Agenzia per l'Italia Digitale"
 
      - |spid-icon|
    * - **$PREFIX/registered_office** |br| Categoria: extra anagrafica
@@ -227,7 +227,7 @@ La seguente tabella riporta l'elenco degli attributi utente supportati da SPID e
        Esempio: |br|
        ``"$PREFIX/e_delivery_service":"nome@pecdomain.it"``
      - |spid-icon| |cieid-icon|
-   * - **$PREFIX/eid_exp_date** |br| Categoria: extra anagrafica
+   * - **$PREFIX/id_exp_date** |br| Categoria: extra anagrafica
      - Data di scadenza identità. Secondo specifica ISO8601-2004 nel formato
        "YYYY-MM-DD" dove |br|
        YYYY indica l'anno utilizzando 4 cifre |br|
