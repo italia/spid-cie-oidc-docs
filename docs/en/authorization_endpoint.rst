@@ -20,8 +20,6 @@ With the method **GET** the parameters MUST be sent using the *Query String Seri
 
    - :ref:`Example of Authorization Request <Esempio_EN6>`
 
-Autorization Request parameters
-+++++++++++++++++++++++++++++++
 
 In the following the mandatory parameters in the *HTTP* authentication request.
 
