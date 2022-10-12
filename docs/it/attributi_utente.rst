@@ -8,7 +8,6 @@ Tabella attributi utente
 La seguente tabella riporta l'elenco degli attributi utente supportati da SPID e/o CIE. La variable ``$PREFIX=https://attributes.eid.gov.it`` rappresenta il namespace.
 
 .. list-table:: 
-
    :widths: 20 40 1
    :header-rows: 1
 
