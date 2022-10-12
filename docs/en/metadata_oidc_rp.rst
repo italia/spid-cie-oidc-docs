@@ -7,7 +7,7 @@ OpenID Connect Relying Party Metadata (RP)
 
 An RP MUST publish in its EC a Metadata of type *federation_entity* and a Metadata of type *openid_relying_party*, as reported in the following example:
 
-.. code-block:: 
+.. code-block:: json
 
  {
     "metadata":{

@@ -8,6 +8,7 @@ Tabella attributi utente
 La seguente tabella riporta l'elenco degli attributi utente supportati da SPID e/o CIE. La variable ``$PREFIX=https://attributes.eid.gov.it`` rappresenta il namespace.
 
 .. list-table:: 
+
    :widths: 20 40 1
    :header-rows: 1
 
@@ -59,7 +60,7 @@ La seguente tabella riporta l'elenco degli attributi utente supportati da SPID e
 
        Esempio:
 
-       .. code-block::
+       .. code-block:: json
 
         "place_of_birth":{
             "region":"MI",
@@ -91,9 +92,9 @@ La seguente tabella riporta l'elenco degli attributi utente supportati da SPID e
        da spazi singoli.
        In maiuscolo le sottostringhe corrispondenti a nomi (es. “Agenzia per l'Italia Digitale”)
 
-       .. code-block::
+       .. code-block:: json
 
-         "company_name":"Agenzia per l'Italia Digitale"
+         "company_name": "Agenzia per l'Italia Digitale"
 
      - |spid-icon|
    * - **$PREFIX/registered_office** |br| Categoria: extra anagrafica
@@ -112,7 +113,7 @@ La seguente tabella riporta l'elenco degli attributi utente supportati da SPID e
 
        Esempio:
 
-       .. code-block::
+       .. code-block:: json
 
          "$PREFIX/registered_office":{
              "formatted":"via Listz 21 00144 Roma"
@@ -187,7 +188,7 @@ La seguente tabella riporta l'elenco degli attributi utente supportati da SPID e
 
        Esempio:
 
-       .. code-block::
+       .. code-block:: json
 
         "document_details":{
             "type":"cartaIdentita",
@@ -259,7 +260,7 @@ La seguente tabella riporta l'elenco degli attributi utente supportati da SPID e
 
        Esempio: 
        
-       .. code-block:: 
+       .. code-block:: json
 
          "address":{
              "street_address":"Via Liszt 21",
@@ -274,8 +275,8 @@ La seguente tabella riporta l'elenco degli attributi utente supportati da SPID e
 .. _user_claims_scopes:
 
 
-Esempi non normativi
-++++++++++++++++++++
+Esempi
+++++++
 
 Si riportano per comodità gli esempi che danno luogo alla composizione di un unico JSON Object da parte di più attributi ed in particolare i claim ``"place_of_birth"``, ``"address"``, ``"document_details"``, ``$PREFIX/registered_office``.
 
@@ -293,9 +294,9 @@ Si riportano a titolo di esempio due indirizzi italiani:
        Comune domicilio fisico
        Provincia domicilio fisico
        Nazione domicilio fisico
-     - .. code-block::
+     - .. code-block:: json
 
-        "address":{
+        "address": {
             "street_address":"Via Liszt 21",
             "postal_code":"00144",
             "locality":"Roma",
@@ -308,9 +309,9 @@ Si riportano a titolo di esempio due indirizzi italiani:
        Comune domicilio fisico
        Provincia domicilio fisico
        Nazione domicilio fisico
-     - .. code-block::
+     - .. code-block:: json
 
-        "address":{
+        "address": {
             "street_address":"S.S. Salaria Km 23,800",
             "postal_code":"00015",
             "locality":"Monterotondo",
@@ -333,7 +334,7 @@ Si riporta il seguente esempio:
        Comune domicilio fisico
        Provincia domicilio fisico
        Nazione domicilio fisico
-     - .. code-block::
+     - .. code-block:: json
 
         "address":{
             "street_address":"503,Washington Avenue",

@@ -60,9 +60,9 @@ The following table shows the list of user attributes supported by SPID and/or C
 
        Example:
 
-       .. code-block::
+       .. code-block:: json
 
-        "place_of_birth":{
+        "place_of_birth": {
             "region":"MI",
             "locality":"F205"
         }
@@ -91,9 +91,9 @@ The following table shows the list of user attributes supported by SPID and/or C
      - Company name. String. String composed by a sequence of words, separated by single spaces.
        In capital letters the substrings corresponding to names (e.g. "Agenzia per l'Italia Digitale")
 
-       .. code-block::
+       .. code-block:: json
 
-         "company_name":"Agenzia per l'Italia Digitale"
+         "company_name": "Agenzia per l'Italia Digitale"
 
      - |spid-icon|
    * - **$PREFIX//registered_office** |br| Category: extra registry
@@ -112,7 +112,7 @@ The following table shows the list of user attributes supported by SPID and/or C
 
        Example:
 
-       .. code-block::
+       .. code-block:: json
 
          "$PREFIX/registered_office":{
              "formatted":"via Listz 21 00144 Roma"
@@ -185,7 +185,7 @@ The following table shows the list of user attributes supported by SPID and/or C
 
        Example:
 
-       .. code-block::
+       .. code-block:: json
 
         "document_details":{
             "type":"cartaIdentita",
@@ -257,9 +257,9 @@ The following table shows the list of user attributes supported by SPID and/or C
 
        Example: 
        
-       .. code-block:: 
+       .. code-block:: json
 
-         "address":{
+         "address": {
              "street_address":"Via Liszt 21",
              "postal_code":"00144",
              "locality":"Roma",
@@ -272,8 +272,8 @@ The following table shows the list of user attributes supported by SPID and/or C
 .. _user_claims_scopes:
 
 
-Non-normative examples
-++++++++++++++++++++++
+Examples
+++++++++
 
 For convenience, we report examples that produce the composition of a unique JSON Object, from
 several attributes and in particular the claims ``"place_of_birth"``, ``"address"``, ``"document_details"``, ``$PREFIX/registered_office``.
@@ -292,7 +292,7 @@ As an example, two Italian addresses are reported:
        City of the of the physical domicile
        Province of the physical domicile
        Country of the physical domicile
-     - .. code-block::
+     - .. code-block:: json
 
         "address":{
             "street_address":"Via Liszt 21",
@@ -307,7 +307,7 @@ As an example, two Italian addresses are reported:
        City of the of the physical domicile
        Province of the physical domicile
        Country of the physical domicile
-     - .. code-block::
+     - .. code-block:: json
 
         "address":{
             "street_address":"S.S. Salaria Km 23,800",
@@ -317,9 +317,9 @@ As an example, two Italian addresses are reported:
             "country_code":"IT"
         }
 
-There are cases, as for the United States of America, where not only the country (US), but also a State, must be indicated.
+There are cases, as for the United States of America, where both the country (US) and a State must be indicated.
 In such cases the State is indicated in the field Province.
-Following, an example:
+In the following, an example:
 
 .. list-table:: 
    :widths: 20 80
@@ -332,7 +332,7 @@ Following, an example:
        City of the of the physical domicile
        Province of the physical domicile
        Country of the physical domicile
-     - .. code-block::
+     - .. code-block:: json
 
         "address":{
             "street_address":"503,Washington Avenue",
@@ -341,4 +341,3 @@ Following, an example:
             "region":"New york",
             "country_code":"US"
         }
-

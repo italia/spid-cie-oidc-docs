@@ -18,7 +18,7 @@ La richiesta all'Introspection Endpoint consiste nell'invio del token su cui si 
 
 **Esempio:**
 
-.. code-block:: 
+.. code-block:: http
 
  POST /introspection?
  client_assertion=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiw
@@ -67,7 +67,7 @@ L'Introspection Endpoint risponde con un oggetto JSON definito come segue.
 
 **Esempio:**
 
-.. code-block:: 
+.. code-block:: json
 
  {
      "active":true

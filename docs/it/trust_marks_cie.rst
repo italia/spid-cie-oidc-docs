@@ -9,7 +9,7 @@ Esempi di Trust Mark CIE
 
 Il seguente è un esempio non normativo di un Trust Mark emesso da *MinInterno* per SA di tipo **full** afferente all pubblica amministrazione.
 
-.. code-block::
+.. code-block:: json
 
  {
      "trust_marks":[
@@ -24,7 +24,7 @@ Il seguente è un esempio non normativo di un Trust Mark emesso da *MinInterno* 
 
 Dove il payload JWT è il seguente:
 
-.. code-block::
+.. code-block:: json
 
  {
      "id":"https://registry.interno.gov.it/federation_entity/intermediary/",
@@ -43,7 +43,7 @@ Dove il payload JWT è il seguente:
 
 Il seguente è un esempio non normativo di un TM emesso da un SA a un'entità Foglia RP afferente alla Pubblica Amministrazione.
 
-.. code-block::
+.. code-block:: json
 
  {
      "trust_marks":[
@@ -58,7 +58,7 @@ Il seguente è un esempio non normativo di un TM emesso da un SA a un'entità Fo
 
 Dove il payload $JWT potrebbe essere come nel seguente esempio non normativo:
 
-.. code-block::
+.. code-block:: json
 
  {
      "id":"https://registry.interno.gov.it/openid_relying_party/public/",

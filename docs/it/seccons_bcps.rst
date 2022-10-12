@@ -11,9 +11,9 @@ In questa sezione descriviamo alcune considerazioni di sicurezza in ambito OIDC 
 Trust Mark come deterrente contro gli abusi
 +++++++++++++++++++++++++++++++++++++++++++
 
-L'implementazione dei Trust Mark e il filtro su questi in fase di Metadata Discovery risulta necessario contro gli attacchi destinati al consumo delle risorse. Un OP attaccato con un numero ingente di connessioni presso il suo endpoint di *authorization*, contenenti **client_id** e **authority_hints** fasulli, produrrebbe svariate connessioni verso sistemi di terze parti nel tentativo di trovare un percorso verso la TA e instaurare la fiducia con il richiedente.
+L'implementazione dei Trust Mark e il filtro su questi in fase di Federation Entity Discovery risulta necessario contro gli attacchi destinati al consumo delle risorse. Un OP attaccato con un numero ingente di connessioni presso il suo endpoint di *authorization*, contenenti **client_id** e **authority_hints** fasulli, produrrebbe svariate connessioni verso sistemi di terze parti nel tentativo di trovare un percorso verso la TA e instaurare la fiducia con il richiedente.
 
-L'OP DEVE validare staticamente il TM oppure DEVE escludere a priori la richiesta ove il TM non risultasse presente, in caso di assenza o non validità di un TM la procedura di Metadata Discovery NON DEVE essere avviata e NON DEVE creare di conseguenza connessioni verso sistemi di terze parti.
+L'OP DEVE validare staticamente il TM oppure DEVE escludere a priori la richiesta ove il TM non risultasse presente, in caso di assenza o non validità di un TM la procedura di Federation Entity Discovery NON DEVE essere avviata e NON DEVE creare di conseguenza connessioni verso sistemi di terze parti.
 
 
 Numero Massimo di authority_hints
@@ -23,7 +23,7 @@ All'interno di una Federazione il Trust Anchor decide quante intermediazioni con
 
 Ogni Foglia DEVE pubblicare i suoi superiori all'interno della lista contenuta nel claim **authority_hints**. Una Foglia all'interno della Federazione PUÒ avere superiori afferenti a diverse Federazioni. L'analisi dei superiori disponibili introduce un modello di navigazione orizzontale, ad esempio un OP tenta di trovare il percorso più breve verso il Trust Anchor attraverso tutti gli URL contenuti all'interno dell'array **authority_hints** prima di fare un ulteriore movimento verticale, a salire, verso uno degli Intermediari presenti in questo array.
 
-La soglia **max_path_lenght** si applica per la navigazione verticale e superata questa soglia senza aver trovato il TA, la procedura di Metadata Discovery DEVE essere interrotta. Si faccia l'esempio di un RP discendente di un SA che a sua volta è discendente di un altro SA, essendo il valore di **max_path_lenght** pari a 1 e, superata questa soglia senza aver trovato il Trust Anchor, la procedura DEVE essere interrotta.
+La soglia **max_path_lenght** si applica per la navigazione verticale e superata questa soglia senza aver trovato il TA, la procedura di Federation Entity Discovery DEVE essere interrotta. Si faccia l'esempio di un RP discendente di un SA che a sua volta è discendente di un altro SA, essendo il valore di **max_path_lenght** pari a 1 e, superata questa soglia senza aver trovato il Trust Anchor, la procedura DEVE essere interrotta.
 
 Allo stesso tempo la specifica OIDC Federation 1.0 non definisce un limite per il numero di **authority_hints**, questo perché nessun Trust Anchor può limitare il numero di Federazioni alle quali un partecipante può aderire. Per questa ragione è utile che gli implementatori adottino un limite massimo del numero di elementi consentiti all'interno dell'Array authority_hint. Questo per evitare che un numero esagerato di URL contenuti nella lista di **authority_hints**, dovuto ad una cattiva configurazione di una Foglia, produca un consumo di risorse eccessivo.
 
@@ -31,7 +31,7 @@ Allo stesso tempo la specifica OIDC Federation 1.0 non definisce un limite per i
 Resolve Entity Statement
 ++++++++++++++++++++++++
 
-Questo endpoint DEVE rilasciare i Metadata, i Trust Mark e la Trust Chain già precedentemente elaborata e NON DEVE innescare una procedura di Metadata Discovery ad ogni richiesta pervenuta.
+Questo endpoint DEVE rilasciare i Metadata, i Trust Mark e la Trust Chain già precedentemente elaborata e NON DEVE innescare una procedura di Federation Entity Discovery ad ogni richiesta pervenuta.
 
 
 Buone Pratiche

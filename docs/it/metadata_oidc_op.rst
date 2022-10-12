@@ -7,7 +7,7 @@ OpenID Connect Provider Metadata (OP)
 
 Un OP DEVE pubblicare all'interno del suo EC un Metadata da *federation_entity* e uno da *openid_provider* come riportato nel seguente esempio:
 
-.. code-block:: 
+.. code-block:: json
 
  {
     "metadata":{

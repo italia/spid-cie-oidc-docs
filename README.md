@@ -1,4 +1,4 @@
-# SPID/CIE OIDC Technical Rules
+# SPID/CIE OpenID Connect tecnhical specifications
 
 [![GitHub release](https://img.shields.io/github/release/italia/spid-cie-oidc-docs.svg?style=plastic)](https://github.com/italia/spid-cie-oidc-docs/releases)
 [![Join the #spid openid](https://img.shields.io/badge/Slack%20channel-%23spid%20openid-blue.svg)](https://developersitalia.slack.com/archives/C7E85ED1N/)
@@ -17,6 +17,10 @@
 - [Authors](#authors)
 - [License](#license)
 
+## Intro
+
+This repository hosts the sphinx project tree of SPID/CIE OpenID Connect technical specifications, published to [Docs Italia](https://docs.italia.it/docs/spid-cie-oidc-docs/).
+
 ## Documentation
 
 This repository is structured to be compliant with [Docs Italia](https://docs.italia.it/italia/developers-italia/publiccodeyml/it/master/index.html).
@@ -25,8 +29,9 @@ This is why the content of the relevant folders will be compiled and rendered in
 reason it is the reference platform for displaying this standard.
 
 
-## Developers
+## Build
 
+HTML
 ````
 pip install -r requirements.txt
 
@@ -35,6 +40,14 @@ sphinx-build -b html -d html/it/doctrees docs/it/  html/it
 
 # english version
 sphinx-build -b html -d html/en/doctrees docs/en/  html/en
+````
+
+ODT
+````
+sudo apt install pandoc
+sphinx-build -b singlehtml docs/it/  html/
+cd html
+pandoc -o spid-cie-oidc-docs.odt index.html
 ````
 
 ## Versioning

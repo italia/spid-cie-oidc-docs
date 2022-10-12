@@ -1,7 +1,7 @@
 .. include:: ../common/common_definitions.rst
 
-Introspection Endpoint (token validity check) 
----------------------------------------------
+Introspection Endpoint
+----------------------
 
 The Introspection Endpoint exposed by the OP, allows the RPs to obtain information 
 about a token in their possession, as for example its validity.
@@ -14,13 +14,13 @@ about a token in their possession, as for example its validity.
 Request
 +++++++
 
-The request to the Introspection Endpoint consists of sending the token about which to obtain information,
+The request to the Introspection Endpoint contains the token,
 together with a Client Assertion that allows authenticating the RP that makes the request.
 
 
 **Example:**
 
-.. code-block:: 
+.. code-block:: http
 
  POST /introspection?
  client_assertion=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiw
@@ -72,7 +72,7 @@ The Introspection Endpoint responds with a JSON Object defined as follows.
 
 **Example:**
 
-.. code-block:: 
+.. code-block:: json
 
  {
      "active":true
@@ -89,4 +89,3 @@ The Introspection Endpoint responds with a JSON Object defined as follows.
      - Boolean value that indicates the token validity. If the token is expired, it has been revoked or it
        has never been issued for the calling client_id, the Introspection Endpoint must return false.
      - 
-

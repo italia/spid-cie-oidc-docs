@@ -5,10 +5,10 @@ The Italian eID Federations
 
 A Digital Identity Federation is an infrastructure inside which many organizations, with different domains,
 participate in the same regulatory framework for building a mechanism of trust, both administrative, by 
-stipulating conventions and getting accreditation by one or more authorities, and technological, by 
+stipulating conventions and getting accreditation by one or more authorities and technological by 
 adopting standards of interoperability.
 
-This configuration establishes the levels of guarantee and security that are appropriate for an 
+This configuration establishes the levels of assurance and security that are appropriate for an 
 individual, in order to authenticate on a web service (Service Provider) using their own digital identity, released 
 by another web service (Identity Provider).
 
@@ -23,14 +23,14 @@ a solid implementation and producing the good practices for its adoption. For mo
 standard please refer to the official specifications `OIDC-FED`_ and the section :ref:`Differences with OIDC Federation 1.0<differenze_con_oidc_federation>`. 
 
 
-Why OIDC Federation
-+++++++++++++++++++
+OpenID Connect Federation
++++++++++++++++++++++++++
 
 The OIDC Federation is a hierarchical model:
 
  - **Dynamic**. The trust may be dynamically established during the first authentication request.
    The Federation Authorities expose an endpoint that supplies signed statements about the subordinate
-   Entities. These statements contain the public keys of the subordinat Entities and the Metadata policy.
+   Entities. These statements contain the public keys of the subordinate Entities and the Metadata policy.
    The Federation Authorities can disable an Entity in the Federation at every moment, simply by 
    stopping supplying statements about it.
  - **Distributed**. The trust is distributed among several parties. It is up to the verifier to decide
@@ -57,19 +57,19 @@ All the members MUST obtain the Federation configuration before the operational 
 MUST keep it up-to-date on a daily basis. The Federation configuration contains the Trust Anchor
 public key for the signature operations, the maximum number of Intermediaries allowed between a Leaf and the Trust Anchor (**max_path length**) and the authorities who are enabled to issue the Trust Marks (**trust_marks_issuers**).
 
-Please find a non-normative example of :ref:`Entity Configuration response Trust Anchor<Esempio_EN1.4>` here.
+Please read this non-normative example of :ref:`Entity Configuration response Trust Anchor<Esempio_EN1.4>` here.
 
 For further details, please read the Section about the :ref:`Entity Configuration<Entity_Configuration>`.
 
 How to participate
 ++++++++++++++++++
 
-To take part in the SPID and CIE id Federations, a participant must publish its own configuration
+To join in the SPID and CIE id Federations, a participant must publish its configuration
 (Entity Configuration) at its own web endpoint :ref:`.well-known/openid-federation<Esempio_EN1>`.
 
 The technical and administrative representatives complete the onboarding procedure,
 defined by the Federation Authority or by an Intermediary (SA),
-for registering a new Entity or for updating a preexisting one. 
+in order to register a new Entity or for updating a preexisting one. 
 
 The Federation Authority or an Intermediary, after doing all the required technical and administrative controls, registers the public keys of the onboarded Entity and releases a proof of Federation membership, 
 in the form of Trust Mark (TM).
@@ -80,6 +80,3 @@ success in the Onboarding process.
 The Federation Authority or an Intermediary MUST publish the Leaf Entity Statement containing the Federation public keys of the onboarded Entity and the TMs released for it.
 The Federation Authority or an Intermediary MAY publish a `Metadata policy <https://openid.net/specs/openid-connect-federation-1_0.html#rfc.section.5.1>`_ to force the change
 to the OIDC Metadata of the subordinate Entity, in the parts where it might be needed.
-
-
-
