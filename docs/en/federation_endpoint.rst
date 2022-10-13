@@ -2,8 +2,8 @@
 
 .. _federation_endpoint:
 
-Federation Endpoint
--------------------
+Federation Endpoints
+--------------------
 
 All the Entities MUST contain the following endpoints:
 

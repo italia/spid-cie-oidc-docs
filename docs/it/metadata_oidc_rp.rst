@@ -45,6 +45,11 @@ Il Metadata di tipo **"openid_relying_party"** DEVE contenere almeno i seguenti 
   * - **Claim**
     - **Descrizione**
     - **Supportato da** 
+  * - **organization_name**
+    - Vedi `OpenID.Discovery#OP_Metadata`_. Nome dell'organizzazione, vedi `OIDC-FED`_.
+  * - **logo_uri**
+    - URL del logo del RP in formato SVG.
+    - |spid-icon| |cieid-icon|
   * - **redirect_uris**
     - Vedi `OpenID.Registration#ClientMetadata`_. È obbligatorio l'uso dello schema HTTPS nel caso di client web-based.
     - |spid-icon| |cieid-icon|

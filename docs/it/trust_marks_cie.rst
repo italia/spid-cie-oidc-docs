@@ -71,9 +71,3 @@ Dove il payload $JWT potrebbe essere come nel seguente esempio non normativo:
      "organization_name#it":"Denominazione del RP",
      "ref":"https://documentazione_di_riferimento.it/"
  }
-
-
-Profilo **sgd**
-+++++++++++++++
-
-Per i dettagli tecnici e gli esempi non normativo si veda [INSERIRE LINK ALLA DOCUMENTAZIONE]
