@@ -161,13 +161,9 @@ Nel caso di utilizzo del parametro **scope** i seguenti valori sono supportati:
     - *email*,
     - *email_verified*.
 
-.. admonition:: |cieid-icon|
+.. note:: |cieid-icon| |spid-icon|
 
     Gli attributi richiesti tramite il parametro **scope** sono disponibili sia nell'ID Token e sia nella risposta allo *userinfo endpoint*.
-
-.. admonition:: |spid-icon|
-
-    Gli attributi richiesti tramite il parametro **scope** sono disponibili nella risposta allo *userinfo endpoint*.
 
 .. note::
 
@@ -177,15 +173,7 @@ Nel caso di utilizzo del parametro **scope** i seguenti valori sono supportati:
 
 .. warning::
 
-  Se il parametro **claims** non è presente o non è valorizzato, viene restituito solo il claim *sub* nella risposta allo *userinfo endpoint*.
-
-.. admonition:: |spid-icon|
-
-    Gli attributi dell'utente richiesti dal RP tramite il parametro **claims** sono disponibili allo *userinfo endpoint*
-
-.. admonition:: |cieid-icon|
-
-    Tutti gli attributi dell'utente richiesti tramite parametro **scope** o tramite parametro **claims** sono disponibili anche nell'*ID Token* oltre che allo *userinfo endpoint*.
+  Se il parametro **claims** non è presente o non è valorizzato, viene restituito solo il claim *sub*.
 
 
 Response
