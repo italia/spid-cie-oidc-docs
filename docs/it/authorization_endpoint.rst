@@ -159,7 +159,7 @@ Nel caso di utilizzo del parametro **scope** i seguenti valori sono supportati:
 - **email**: questo valore permette di ottenere, se resi disponibili dall'utente, i seguenti attributi:
 
     - *email*,
-    - *email_verified*.
+    - *email_verified*. Solo per |cieid-icon|
 
 .. note:: |cieid-icon| |spid-icon|
 
