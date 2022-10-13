@@ -16,8 +16,8 @@ In a `long revocable session`_, the RP MAY call the *Token Endpoint* sending a *
 
  * https://tools.ietf.org/html/rfc6749#section-3.2
  * https://openid.net/specs/openid-connect-core-1_0.html#TokenEndpoint
- * https://openid.net/specs/openid-igov-oauth2-1_0-03.html#rfc.section.2.1.2 
- * https://openid.net/specs/openid-igov-openid-connect-1_0-03.html#rfc.section.2.2
+ * https://openid.net/specs/openid-igov-oauth2-1_0-03.html#Section-2.1.2 
+ * https://openid.net/specs/openid-igov-openid-connect-1_0-03.html#Section-2.2
  
 
 Request
@@ -115,7 +115,7 @@ Response
 
 The OpenID Provider (OP) returns an ID Token, an Access Token and possibly a Refresh Token, in signed JWT.
 
-The Access Token must be formed according to the standard indications of the `"International Government Assurance Profile (iGov) for OAuth 2.0 - Draft 03", section 3.2.1, "JWT Bearer Tokens" <https://openid.net/specs/openid-igov-oauth2-1_0-03.html#rfc.section.3.2.1>`_.
+The Access Token must be formed according to the standard indications of the `"International Government Assurance Profile (iGov) for OAuth 2.0 - Draft 03", section 3.2.1, "JWT Bearer Tokens" <https://openid.net/specs/openid-igov-oauth2-1_0-03.html#Section-3.2.1>`_.
 
 The ID Token must be formed according to the indications contained in the next section.
 
@@ -292,6 +292,6 @@ The claims available in the *ID Token* are given below.
 .. seealso::
 
  - https://openid.net/specs/openid-connect-core-1_0.html#IDToken
- - https://openid.net/specs/openid-igov-openid-connect-1_0-03.html#rfc.section.3.1
+ - https://openid.net/specs/openid-igov-openid-connect-1_0-03.html#Section-3.1
 
 

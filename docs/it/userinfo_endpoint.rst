@@ -19,7 +19,7 @@ Lo UserInfo Endpoint DEVE supportare l'uso del solo metodo HTTP GET :rfc:`2616` 
 .. seealso::
 
  - https://openid.net/specs/openid-connect-core-1_0.html#UserInfo
- - https://openid.net/specs/openid-igov-openid-connect-1_0-03.html#rfc.section.4
+ - https://openid.net/specs/openid-igov-openid-connect-1_0-03.html#Section-4
 
 
 .. _userinfo_response:
