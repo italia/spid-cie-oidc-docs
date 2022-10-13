@@ -28,7 +28,7 @@ The UserInfo Endpoint MUST only support the method HTTP GET :rfc:`2616` and MUST
 Response
 ++++++++
 
-The response of the UserInfo Endpoint MUST specify the value "application/jose" in the "Content-Type".
+The response of the UserInfo Endpoint MUST specify the value "application/jwt" in the "Content-Type".
 
 The content of the Response body MUST be a `signed and encrypted JWT. <https://openid.net/specs/openid-connect-core-1_0.html#UserInfoResponse>`_
 

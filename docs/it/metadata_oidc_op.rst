@@ -47,6 +47,7 @@ L'EC di un OP DEVE configurare un metadata di tipo **"openid_provider"** DEVE co
     - **Supportato da**
   * - **organization_name**
     - Vedi `OpenID.Discovery#OP_Metadata`_. Nome dell'organizzazione, vedi `OIDC-FED`_.
+    - |spid-icon| |cieid-icon|
   * - **issuer**
     - Vedi `OpenID.Discovery#OP_Metadata`_. DEVE essere valorizzato con un HTTPS URL che identifica univocamente l'OP.
     - |spid-icon| |cieid-icon|

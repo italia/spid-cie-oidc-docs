@@ -47,6 +47,7 @@ The EC of an OP MUST configure a metadata of type **"openid_provider"**, that MU
     - **Supported by**
   * - **organization_name**
     - Vedi `OpenID.Discovery#OP_Metadata`_. Organization name, see `OIDC-FED`_.
+    - |spid-icon| |cieid-icon|
   * - **logo_uri**
     - URL of the entity's logo, in SVG format.
     - |spid-icon| |cieid-icon|

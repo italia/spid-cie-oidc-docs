@@ -46,8 +46,10 @@ The RP Metadata of type **"openid_relying_party"** MUST contain at least the fol
     - **Supported by***
   * - **organization_name**
     - Vedi `OpenID.Discovery#OP_Metadata`_. Organization name, see `OIDC-FED`_.
+    - |spid-icon| |cieid-icon|
   * - **logo_uri**
     - URL of the entity's logo, in SVG format.
+    - |spid-icon| |cieid-icon|
   * - **redirect_uris**
     - See `OpenID.Registration#ClientMetadata`_. It is mandatory using an HTTPS schema in case of a web-based client.
     - |spid-icon| |cieid-icon|

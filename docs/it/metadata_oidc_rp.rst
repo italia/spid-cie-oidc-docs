@@ -47,6 +47,7 @@ Il Metadata di tipo **"openid_relying_party"** DEVE contenere almeno i seguenti 
     - **Supportato da** 
   * - **organization_name**
     - Vedi `OpenID.Discovery#OP_Metadata`_. Nome dell'organizzazione, vedi `OIDC-FED`_.
+    - |spid-icon| |cieid-icon|
   * - **logo_uri**
     - URL del logo del RP in formato SVG.
     - |spid-icon| |cieid-icon|
