@@ -32,7 +32,7 @@ mandatory parameters:
     - **Description**
     - **Supported by**
   * - **federation_resolve_endpoint**
-    - See Section :ref:`Federation Endpoint <federation_endpoint>` and `OIDC-FED#Section.4.6`_
+    - See Section :ref:`Federation Endpoint <federation_endpoint>` and `OIDC-FED`_ Section 4.6.
     - |spid-icon| |cieid-icon|
 
 
@@ -136,16 +136,16 @@ The EC of an OP MUST configure a metadata of type **"openid_provider"**, that MU
     - See :rfc:`9207#section-3`. It must contain *true*.
     - |cieid-icon|
   * - **jwks**
-    - See `OIDC-FED#Section.4.2`_ and `JWK`_.
+    - See `OIDC-FED`_ Section 4.2 and `JWK`_.
     - |spid-icon| |cieid-icon|
   * - **client_registration_types_supported**
-    - See `OIDC-FED#Section.4.2`_. The supported value is **automatic**. 
+    - See `OIDC-FED`_ Section 4.2. The supported value is **automatic**. 
     - |spid-icon| |cieid-icon|
   * - **request_authentication_methods_supported**
-    - See `OIDC-FED#Section.4.2`_. The supported value is **request_object**.
+    - See `OIDC-FED`_ Section 4.2`_. The supported value is **request_object**.
     - |spid-icon| |cieid-icon|
   * - **request_authentication_signing_alg_values_supported**
-    - See `OIDC-FED#Section.4.2`_. The OP MUST support RS256 and MAY also support other
+    - See `OIDC-FED`_ Section 4.2. The OP MUST support RS256 and MAY also support other
       algorithms of types RS, ES and PS, defined at :rfc:`7518#section-3.1`.
     - |spid-icon| |cieid-icon|
 

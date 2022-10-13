@@ -39,10 +39,10 @@ The AA Metadata of type **"federation_entity"** MUST contain at least the follow
     - Name of the organization.
     - |spid-icon| |cieid-icon|
   * - **federation_resolve_endpoint**
-    - See Section :ref:`Federation Endpoint <federation_endpoint>` and `OIDC-FED#Section.4.6`_
+    - See Section :ref:`Federation Endpoint <federation_endpoint>` and `OIDC-FED`_ Section 4.6
     - |spid-icon| |cieid-icon|
   * - **federation_status_endpoint**
-    - See Section :ref:`Federation Endpoint <federation_endpoint>` and `OIDC-FED#Section.4.6`_
+    - See Section :ref:`Federation Endpoint <federation_endpoint>` and `OIDC-FED`_ Section 4.6
     - |spid-icon| |cieid-icon|
 
 The AA Metadata with **"oauth_authorization_server"** MUST contain at least the following mandatory parameters:

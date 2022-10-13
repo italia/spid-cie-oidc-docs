@@ -65,6 +65,6 @@ In this way, after exceeding the maximum duration limit of the Trust Chain, defi
 Metadata Policy
 +++++++++++++++
 
-The Federation Authority or its Intermediary MAY publish a Metadata policy (see `OIDC-FED#Section.5.1`_) 
+The Federation Authority or its Intermediary MAY publish a Metadata policy (see `OIDC-FED`_ Section 5.1) 
 to force the change of the OIDC Metadata of the Leaf, in the parts where this might be needed.
 

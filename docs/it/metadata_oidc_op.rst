@@ -30,7 +30,7 @@ L'EC di un OP DEVE configurare un metadata di tipo **"federation_entity"** e con
     - **Descrizione**
     - **Supportato da**
   * - **federation_resolve_endpoint**
-    - Vedi Sezione :ref:`Endpoint di Federazione <federation_endpoint>` e `OIDC-FED#Section.4.6`_
+    - Vedi Sezione :ref:`Endpoint di Federazione <federation_endpoint>` e `OIDC-FED`_ Section 4.6
     - |spid-icon| |cieid-icon|
 
 
@@ -132,16 +132,16 @@ L'EC di un OP DEVE configurare un metadata di tipo **"openid_provider"** DEVE co
     - Vedi :rfc:`9207#section-3`. Deve valere *true*.
     - |cieid-icon|
   * - **jwks**
-    - Vedi `OIDC-FED#Section.4.2`_ e `JWK`_.
+    - Vedi `OIDC-FED`_ Section 4.2 e `JWK`_.
     - |spid-icon| |cieid-icon|
   * - **client_registration_types_supported**
-    - Vedi `OIDC-FED#Section.4.2`_. Il valore supportato è **automatic**. 
+    - Vedi `OIDC-FED`_ Section 4.2. Il valore supportato è **automatic**. 
     - |spid-icon| |cieid-icon|
   * - **request_authentication_methods_supported**
-    - Vedi `OIDC-FED#Section.4.2`_. Il valore supportato è **request_object**.
+    - Vedi `OIDC-FED`_ Section 4.2. Il valore supportato è **request_object**.
     - |spid-icon| |cieid-icon|
   * - **request_authentication_signing_alg_values_supported**
-    - Vedi `OIDC-FED#Section.4.2`_. L'OP DEVE supportare RS256 e PUÒ supportare anche altri algoritmi di tipo RS, ES e PS definiti in :rfc:`7518#section-3.1`.
+    - Vedi `OIDC-FED`_ Section 4.2. L'OP DEVE supportare RS256 e PUÒ supportare anche altri algoritmi di tipo RS, ES e PS definiti in :rfc:`7518#section-3.1`.
     - |spid-icon| |cieid-icon|
 
 

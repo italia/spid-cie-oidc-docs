@@ -57,4 +57,4 @@ In questa maniera dopo il limite massimo di durata delle Trust Chain, definito c
 Politica dei Metadata
 +++++++++++++++++++++
 
-L'Autorità di Federazione o il suo Intermediario PUÒ pubblicare una politica dei Metadata (vedi `OIDC-FED#Section.5.1`_) per forzare la modifica dei Metadata OIDC della Foglia, nelle parti in cui questo fosse necessario.
+L'Autorità di Federazione o il suo Intermediario PUÒ pubblicare una politica dei Metadata (vedi `OIDC-FED`_ Section 5.1) per forzare la modifica dei Metadata OIDC della Foglia, nelle parti in cui questo fosse necessario.

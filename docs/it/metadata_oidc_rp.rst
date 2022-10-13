@@ -30,7 +30,7 @@ Il Metadata di tipo **"federation_entity"** DEVE contenere almeno i seguenti par
     - **Descrizione**
     - **Supportato da**
   * - **federation_resolve_endpoint**
-    - Vedi Sezione :ref:`Endpoint di Federazione <federation_endpoint>` e `OIDC-FED#Section.4.6`_
+    - Vedi Sezione :ref:`Endpoint di Federazione <federation_endpoint>` e `OIDC-FED`_ Section 4.6
     - |spid-icon| |cieid-icon|
 
 
@@ -82,7 +82,7 @@ Il Metadata di tipo **"openid_relying_party"** DEVE contenere almeno i seguenti 
     - Vedi `OpenID.Registration`_. DEVE essere valorizzato con un HTTPS URL che identifica univocamente il RP.
     - |spid-icon| |cieid-icon|
   * - **client_registration_types**
-    - Vedi `OIDC-FED#Section.4.1`_. Il valore richiesto è **automatic**. 
+    - Vedi `OIDC-FED`_ Section 4.1. Il valore richiesto è **automatic**. 
     - |spid-icon| |cieid-icon|
 
 .. note:: 

@@ -37,7 +37,7 @@ attributes:
    * - **metadata_policy**
      - JSON Object that describes the Metadata policy. Each key of the JSON Object represents an 
        identifier of the type of Metadata and each value MUST be a JSON Object that represents the Metadata 
-       policy according to that Metadata type. Please refer to the `OIDC-FED#Section.5.1`_ specifications
+       policy according to that Metadata type. Please refer to the `OIDC-FED`_ specifications, Section-5.1,
        for the implementation details.
      - |spid-icon| |cieid-icon|
    * - **trust_marks**
