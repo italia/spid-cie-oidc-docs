@@ -5,7 +5,7 @@
 Authentication Flow
 -------------------
 
-The authentication schemas **"Entra con SPID"** and **"Entra con CIE"** implement the **OpenID Connect Authorization Code Flow** with the extension **PKCE** (Proof Key for Code Exchange, :rfc:`7636`).
+The authentication schemas **"Entra con SPID"** and **"Entra con CIE"** implement the **OpenID Connect Authorization Code Flow** with the **PKCE** (Proof Key for Code Exchange, :rfc:`7636`).
 This flow returns an **Authorization Code** that can be used to get an **ID Token**, an **Access Token** 
 and possibly a **Refresh Token** too.
 The **Authorization Code Flow** gets the **Authorization Code** from the *Authorization Endpoint* of the OpenID Provider and all the tokens are returned by the **Token Endpoint**.
@@ -22,9 +22,9 @@ In the following, the descriptions of the flow steps, with the numbers indicated
      
      * In the SPID case, choses the authentication OP.
 
-  #. The RP prepares an Authorization Request with the parameters needed by *PKCE* and sends it to the *Authorization Endpoint* of the OP.
+  #. The RP prepares an Authorization Request and sends it to the *Authorization Endpoint* of the OP.
 
-  #. The OP authenticates the user by the credentials input and obtains, from the RP, the permission to access the user's attributes.
+  #. The OP authenticates the user and received the user's consent to release his attributes to the RP.
 
   #. The OP redirects the user to the URL contained in the parameter *redirect_uri* specified by the RP, passing an *Authorization Code* in the Authorization Response.
 
@@ -32,6 +32,6 @@ In the following, the descriptions of the flow steps, with the numbers indicated
 
   #. The OP *Token Endpoint* releases an **ID Token**, an **Access Token** and, if expected, a **Refresh Token**.
 
-  #. The RP receives and validates the **Access Token** and the **ID Token**. For asking the attributes that the user has authorized at the point 3, it sends a request to the OP *UserInfo Endpoint* ans uses, for the authentication, the **Access Token** contained in the HTTP Authorization header.
+  #. The RP receives and validates the **Access Token** and the **ID Token**. Then requests the user's attributes to the OP *UserInfo Endpoint* ans uses, for the authentication, the **Access Token** contained in the HTTP Authorization header.
 
   #. The OP *UserInfo Endpoint* checks the **Access Token** validity and releases the required attributes to the RP.

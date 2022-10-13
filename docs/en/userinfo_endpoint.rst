@@ -3,7 +3,7 @@
 UserInfo Endpoint (attributes)
 ------------------------------
 
-The UserInfo Endpoint is an OIDC protected resource that returns the authenticated user's claims. In order to obtain 
+The UserInfo Endpoint is a protected resource that returns the authenticated user's claims. In order to obtain 
 the requested claims, the RP sends a request to the UserInfo Endpoint using the Access Token.
 
 Request
@@ -28,7 +28,7 @@ The UserInfo Endpoint MUST only support the method HTTP GET :rfc:`2616` and MUST
 Response
 ++++++++
 
-The response of the UserInfo Endpoint MUST specify the value "application/jwt" in the "Content-Type".
+The response of the UserInfo Endpoint MUST specify the value "application/jose" in the "Content-Type".
 
 The content of the Response body MUST be a `signed and encrypted JWT. <https://openid.net/specs/openid-connect-core-1_0.html#UserInfoResponse>`_
 

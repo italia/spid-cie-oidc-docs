@@ -13,8 +13,6 @@ All the Entities MUST contain the following endpoints:
    regarding another subject. For more details, see `OIDC-FED#Section.7.2`_).
 
 .. warning:: 
-  The resolve Entity statement endpoint MUST use the very same resolve strategy it uses internally for its own operations (e.g. the RP will expose OP's metadata as it sees them).
-  This implies that accordin to the Italian federation's specs:
 
    - the resolve endpoint MUST NOT return TMs which are not valid at the time of the request;
    - the resolve endpoint MUST validate the chain for the subject.

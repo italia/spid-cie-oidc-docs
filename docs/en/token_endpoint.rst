@@ -4,7 +4,9 @@
 Token Endpoint
 --------------
 
-At the end of the authentication flow described at the previous section, the RP sends a request to the Token Endpoint sending the authorization code received by the OP for getting an *ID Token*, an *Access Token* and possibly a *Refresh Token* (if a `long revocable session`_ has been started).
+At the end of the authentication flow described at the previous section, the RP sends a request to the Token Endpoint with the authorization code received by the OP.
+
+The Token response, if succesfull, returns an *ID Token*, an *Access Token* and possibly a *Refresh Token* (if a `long revocable session`_ has been started).
 
 In a `long revocable session`_, the RP MAY call the *Token Endpoint* sending a *Refresh Token* in its possession, for obtaining a new *Access Token* and a new *ID Token*.
 
@@ -113,7 +115,7 @@ The claims that MUST be included in the *Token Request* are given below.
 Response
 ++++++++
 
-The OpenID Provider (OP) returns an ID Token, an Access Token and possibly a Refresh Token, in signed JWT.
+The OpenID Provider (OP) returns an ID Token, an Access Token and possibly a Refresh Token.
 
 The Access Token must be formed according to the standard indications of the `"International Government Assurance Profile (iGov) for OAuth 2.0 - Draft 03", section 3.2.1, "JWT Bearer Tokens" <https://openid.net/specs/openid-igov-oauth2-1_0-03.html#Section-3.2.1>`_.
 
