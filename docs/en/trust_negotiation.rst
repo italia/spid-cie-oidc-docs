@@ -10,33 +10,33 @@ Relying Party
 +++++++++++++
 
 The RP gets the list of the OPs in JSON format by querying the :ref:`endpoint list<federation_endpoint>`, 
-available by the :ref:`Trust Anchor<Esempio_EN3>`. For each subject contained in the :ref:`JSON response<Esempio_EN3.1>` and corresponding to an OP, the RP :ref:`requires<Esempio_EN2>` and obtains the self-signed Entity Configuration by the OP.
+available by the :ref:`Trust Anchor<Esempio_EN3>`. For each subject contained in the :ref:`JSON response<Esempio_EN3.1>` and corresponding to an OP, the RP :ref:`requests<Esempio_EN2>` the self-signed Entity Configuration by the OP.
 
-For each EC of the OPs, the RP validates the signature by using the public key obtained by the Entity
+For each EC of the OPs, the RP validates the signature by using the public key obtained in the Entity
 Statement released by the Trust Anchor. After validating the Entity Configuration signature with the TA's public key, RP recognizes the trust towards the OP.
 
-Finally, the RP applies the policies published by the Trust Anchor on the OP's Metadata and saves the final
+Finally, the RP applies the policies published by the Trust Anchor on the OP's Metadata and saves the resulting
 Metadata by associating it to an expiry date (claim **exp**). The expiry date corresponds to the lowest 
 value of **exp**, obtained from all the elements that compose the **Trust Chain**. Periodically, the RP updates
 the Metadata of all the OPs, renewing their related Trust Chain.
 
-After obtaining the final Metadata of all the OpenID Connect Providers, the RP generates the **SPID button** or **CIE button** and publishes it inside the users' authentication page.
+After obtaining the final Metadata of all the OpenID Connect Providers, the RP generates the **SPID button** or **CIE button** and publishes it inside its authentication page.
 
-The procedure of Federation Entity Discovery for the SPID RPs gets simplified because, inside the Federation, the existence of Intermediaries between the OPs and their Trust Anchor, is not allowed.
+The procedure of Federation Entity Discovery for the SPID RPs gets simplified because, inside the Federation, the existence of Intermediaries between the OPs and their Trust Anchor is not allowed.
 
 
 .. image:: ../../images/metadata_discovery.svg
     :width: 100%
 
-*The Federation Entity Discovery procedure from the Leaf, up to the Trust Anchor. Please note how the public key for validating the Entity Configuration of the  subordinate Entity, is obtained from the Entity Statement released by a superior*.
+*The Federation Entity Discovery procedure from the Leaf, up to the Trust Anchor. The public key for validating the Entity Configuration of the  subordinate Entity is obtained from the Entity Statement released by a superior*.
 
 
 OpenID Provider
 +++++++++++++++
 
 When a Provider (OP) receives an authorization request from a non-previously-recognized RP, 
-the **automatic client registration** procedure occurs. Following, the operations made by the OP to
-dynamically register an RP, are described.
+the **automatic client registration** procedure occurs. The operations made by the OP to
+dynamically register an RP are described below.
 
 .. image:: ../../images/automatic_client_registration.svg
     :width: 100%
@@ -47,8 +47,8 @@ request from the RP and starts the Federation Entity Discovery process and the T
 
 
 The OP extracts the unique identifier (**client_id**) from the object *request* contained in the 
-*Authorization Request* and carries out an Entity Configuration request by the :ref:`RP<Esempio_EN1.1>`.
-It obtains the *self-signed* configuration of the RP and validates the signatures of Trust Mark that are
+*Authorization Request* and carries out an Entity Configuration request (:ref:`RP<Esempio_EN1.1>`).
+The OP obtains the Entity Configuration of the RP and validates the signatures of Trust Mark that are
 recognized inside the Federation [1]_. 
 
 If the RP configuration does not expose any Trust Mark that is recognizable by the RP profile (see Section :ref:`Trust Mark<Trust_Mark>`), the Provider MUST refuse the authorization with an error message of type *unauthorized_client*.
@@ -64,10 +64,9 @@ the Trust Anchor. Then it applies the Metadata policy published by the Trust Anc
 resulting final RP Metadata, associating them to an expiry date. After that date, it will
 renew the RP Metadata, according to the Trust Chain renewal procedure.
 
-After obtaining the final Metadata, the Provider validates the RP request, according to the procedures 
-defined in the Federation's guidelines.
+After obtaining the final Metadata, the Provider validates the RP request.
 
-In case an RP has an SA as a superior Entity and not directly the TA, the procedure of achieving and validating the Entity Configuration of the RP occurs through the Entity Statement published
+In case an RP has a SA as a superior Entity and not directly the TA, the procedure of achieving and validating the Entity Configuration of the RP occurs through the Entity Statement published
 by the SA towards the RP and through validating the Entity Configuration of the SA with the Entity Statement issued by the TA towards the SA. If the threshold of the maximum number of vertical Intermediaries, 
 defined by the value **max_path_length**, is exceeded, the OP stops the process of Federation Entity Discovery and rejects the RP request.
 
@@ -103,7 +102,7 @@ Examples:
 In case of subject identifier URLs lacking the ending slash mark "/", this must be added between the URL and the appended web path resource.
 
 Once the RP is recognized as part in the Federation, it gets the permission to make an Authentication Request.
-An OP that doesn't recognize the RP that makes the request, can correctly resolve the Trust. The OP starts
+The OP that doesn't recognize the RP that makes the request, has to resolve the trust for that RP. The OP starts
 requesting the Entity Configuration of the RP at the .well-known endpoint of the RP and, following the path
 provided by the *authority_hint*, reaches the TA. At each chain step, the OP can perform all the security controls by requesting the Entity Statements to each Entity and validating the Trust Marks and the signatures. The following picture is a representative example of how the Trust Chain works.
 
