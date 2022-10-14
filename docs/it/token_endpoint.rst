@@ -306,34 +306,40 @@ Errori
 ------
 
 .. list-table:: 
-   :widths: 20 60 20
-   :header-rows: 1
+  :widths: 20 20 20 20
+  :header-rows: 1
 
-   * - **Claim**
-     - **Descrizione**
-     - **Supportato da**
+  * - **Claim**
+    - **Descrizione**
+    - **Codice HTTP**
+    - **Supportato da**
 
-   * - *invalid_client*
-     - Il client_id indicato nella richiesta non è riconosciuto.
-     - |spid-icon| |cieid-icon|
+  * - *invalid_client*
+    - Problemi durante la client authentication (ad esempio, il client_id sè conosciuto, non è fornita l'autenticazione del client o il metodo di autenticazione non è supportato) |br|(:rfc:`6749#section-5.2`).
+    - *401 Unauthorized*
+    - |spid-icon| |cieid-icon|
 
-   * - *unsupported_grant_type*
-     - Il parametro grant_type contiene un valore non corretto.
-     - |spid-icon| |cieid-icon|
+  * - *unsupported_grant_type*
+    - Il parametro grant_type contiene un valore non corretto (:rfc:`6749#section-5.2`).
+    - *400 Bad Request*
+    - |spid-icon| |cieid-icon|
 
-   * - *invalid_grant*
-     - I parametri grant_type, code, code_verifier, access_token non sono validi.
-     - |spid-icon| |cieid-icon|
+  * - *invalid_grant*
+    - I parametri grant_type, code, code_verifier, access_token non sono validi (:rfc:`6749#section-5.2`).
+    - *400 Bad Request*
+    - |spid-icon| |cieid-icon|
 
-   * - *invalid_request*
-     - La richiesta non è valida a causa della mancanza o della non correttezza di uno o più parametri.
-     - |spid-icon| |cieid-icon|
+  * - *invalid_request*
+    - La richiesta non è valida a causa della mancanza o della non correttezza di uno o più parametri (:rfc:`6749#section-5.2`).
+    - *400 Bad Request*
+    - |spid-icon| |cieid-icon|
 
-   * - *server_error*
-     - L’OP ha riscontrato un problema interno.
-     - |spid-icon| |cieid-icon|
+  * - *server_error*
+    - L’OP ha riscontrato un problema interno (:rfc:`6749#section-5.2`).
+    - *400 Bad Request*
+    - |spid-icon| |cieid-icon|
 
-   * - *temporarily_unavailable*
-     - L’OP ha riscontrato un problema interno temporaneo.
-     - |spid-icon| |cieid-icon|
-
+  * - *temporarily_unavailable*
+    - L’OP ha riscontrato un problema interno temporaneo (:rfc:`6749#section-5.2`).
+    - *400 Bad Request*
+    - |spid-icon| |cieid-icon|

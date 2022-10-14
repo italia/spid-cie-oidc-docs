@@ -311,33 +311,40 @@ Errors
 ------
 
 .. list-table:: 
-   :widths: 20 60 20
-   :header-rows: 1
+  :widths: 20 20 20 20
+  :header-rows: 1
 
-   * - **Claim**
-     - **Description**
-     - **Supported by**
+  * - **Claim**
+    - **Description**
+    - **HTTP Code**
+    - **Supported by**
 
-   * - *invalid_client*
-     - The client_id indicated in the request is not known.
-     - |spid-icon| |cieid-icon|
+  * - *invalid_client*
+    - Client authentication failed (e.g., unknown client_id, no client authentication included, or unsupported authentication method) |br| (:rfc:`6749#section-5.2`).
+    - *401 Unauthorized*
+    - |spid-icon| |cieid-icon|
 
-   * - *unsupported_grant_type*
-     - The grant_type parameter contains an incorrect value.
-     - |spid-icon| |cieid-icon|
+  * - *unsupported_grant_type*
+    - The grant_type parameter contains an incorrect value.
+    - *400 Bad Request*
+    - |spid-icon| |cieid-icon|
 
-   * - *invalid_grant*
-     - The grant_type, code, code_verifier, access_token parameters are not valid.
-     - |spid-icon| |cieid-icon|
+  * - *invalid_grant*
+    - The grant_type, code, code_verifier, access_token parameters are not valid.
+    - *400 Bad Request*
+    - |spid-icon| |cieid-icon|
 
-   * - *invalid_request*
-     - The request is not valid due to the lack or incorrectness of one or more parameters.
-     - |spid-icon| |cieid-icon|
+  * - *invalid_request*
+    - The request is not valid due to the lack or incorrectness of one or more parameters.
+    - *400 Bad Request*
+    - |spid-icon| |cieid-icon|
 
-   * - *server_error*
-     - The OP encountered an internal problem.
-     - |spid-icon| |cieid-icon|
+  * - *server_error*
+    - The OP encountered an internal problem.
+    - *400 Bad Request*
+    - |spid-icon| |cieid-icon|
 
-   * - *temporarily_unavailable*
-     - The OP encountered a temporary internal problem.
-     - |spid-icon| |cieid-icon|
+  * - *temporarily_unavailable*
+    - The OP encountered a temporary internal problem.
+    - *400 Bad Request*
+    - |spid-icon| |cieid-icon|
