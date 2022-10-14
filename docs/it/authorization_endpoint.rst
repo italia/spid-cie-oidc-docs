@@ -322,5 +322,6 @@ Codici di errore
 
 .. warning::
 
-  In caso di URI di reindirizzamento non valido, non corrispondente o mancante, l'OP restituisce *400 Bad Request* come codice HTTP.
-  
+  In caso di URI di reindirizzamento non valido, non corrispondente o mancante, l'OP restituisce *400 Bad Request* come codice HTTP.  
+
+
