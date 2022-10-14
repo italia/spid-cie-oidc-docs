@@ -315,7 +315,7 @@ Codici di errore
     - **Supportato da**
 
   * - *invalid_client*
-    - Problemi durante la client authentication (ad esempio, il client_id sè conosciuto, non è fornita l'autenticazione del client o il metodo di autenticazione non è supportato) |br|(:rfc:`6749#section-5.2`).
+    - Problemi durante la client authentication (ad esempio, il client_id è conosciuto, non è fornita l'autenticazione del client o il metodo di autenticazione non è supportato) |br|  (:rfc:`6749#section-5.2`).
     - *401 Unauthorized*
     - |spid-icon| |cieid-icon|
 
