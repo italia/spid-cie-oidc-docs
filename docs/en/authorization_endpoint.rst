@@ -256,40 +256,74 @@ Errors
 ------
 
 .. list-table:: 
-   :widths: 20 20 20 20
-   :header-rows: 1
+  :widths: 20 20 20 20
+  :header-rows: 1
 
-   * - **Error Code**
-     - **Description**
-     - **Reference**
-     - **Supported by**
+  * - **Error Code**
+    - **Description**
+    - **HTTP Code**
+    - **Supported by**
 
-   * - *access_denied*
-     - The OP denied access due to invalid or unsuitable credentials for the required SPID level.
-     - 
+  * - *access_denied*
+    - The OP denied access due to invalid or unsuitable credentials for the required SPID level.
+    - 
+    - |spid-icon| |cieid-icon|
+
+  * - *unauthorized_client*
+    - The client is not authorized to request an authorization code (:rfc:`6749#section-4.1.2.1`).
+    - *302 Found*
+    - |spid-icon| |cieid-icon|
+
+  * - *invalid_request*
+    - The request is not valid due to the lack or incorrectness of one or more parameters (:rfc:`6749#section-4.1.2.1`).
+    - *302 Found*
+    - |spid-icon| |cieid-icon|
+
+  * - *invalid_scope*
+    - Invalid scopes in the Authorization request (:rfc:`6749#section-4.1.2.1`).
+    - *302 Found*
+    - |spid-icon| |cieid-icon|
+
+  * - *server_error*
+    - The OP encountered an internal problem (:rfc:`6749#section-4.1.2.1`).
+    - *302 Found*
+    - |spid-icon| |cieid-icon|
+
+  * - *temporarily_unavailable*
+    - The OP encountered a temporary internal problem (:rfc:`6749#section-4.1.2.1`).
+    - *302 Found*
+    - |spid-icon| |cieid-icon|
+
+  * - *unsupported_response_type*
+     - The OP does not support the requested response_type. (:rfc:`6749#section-4.1.2.1`).
+     - *302 Found*
      - |spid-icon| |cieid-icon|
+    
+  * - *login_required*
+    - The OP requires End-User authentication (`OpenID.Core#AuthError`_).
+    - *302 Found*
+    - |spid-icon| |cieid-icon|
 
-   * - *invalid_client*
-     - The client_id in the request is not known.
-     - 
-     - |spid-icon| |cieid-icon|
+  * - *consent_required*
+    - The OP requires End-User consent (`OpenID.Core#AuthError`_).
+    - *302 Found*
+    - |spid-icon| |cieid-icon|
 
-   * - *invalid_request*
-     - The request is not valid due to the lack or incorrectness of one or more parameters.
-     - :rfc:`6749#section-4.1.2.1`.
-     - |spid-icon| |cieid-icon|
+  * - *request_uri_not_supported*
+    - The OP does not support use of the request_uri parameter (`OpenID.Core#AuthError`_).
+    - *302 Found*
+    - |spid-icon| |cieid-icon|
 
-   * - *invalid_scope*
-     - Invalid scopes in the Authorization request.
-     - 
-     - |spid-icon| |cieid-icon|
+  * - *registration_not_supported*
+    - The OP does not support use of the *registration* parameter (`OpenID.Core#AuthError`_).
+    - *302 Found*
+    - |spid-icon| |cieid-icon|
 
-   * - *server_error*
-     - The OP encountered an internal problem.
-     - 
-     - |spid-icon| |cieid-icon|
+  * - *invalid_request_object*
+    - The *request* parameter contains an invalid *Request Object* (`OpenID.Core#AuthError`_).
+    - *302 Found*
+    - |spid-icon| |cieid-icon|
 
-   * - *temporarily_unavailable*
-     - The OP encountered a temporary internal problem.
-     - 
-     - |spid-icon| |cieid-icon|
+.. warning::
+
+  In case of invalid, mismatching, or missing redirection URI, the OP will return *400 Bad Request* as the HTTP code.

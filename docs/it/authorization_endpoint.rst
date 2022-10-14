@@ -251,41 +251,74 @@ Codici di errore
 ----------------
 
 .. list-table:: 
-   :widths: 20 20 20 20
-   :header-rows: 1
+  :widths: 20 20 20 20
+  :header-rows: 1
 
-   * - **Errore**
-     - **Descrizione**
-     - **Riferimento**
-     - **Supportato da**
+  * - **Errore**
+    - **Descrizione**
+    - **Codice HTTP**
+    - **Supportato da**
 
-   * - *access_denied*
-     - L’OP ha negato l’accesso a causa di credenziali non valide o non adeguate al livello SPID richiesto.
-     - 
-     - |spid-icon| |cieid-icon|
+  * - *access_denied*
+    - L’OP ha negato l’accesso a causa di credenziali non valide o non adeguate al livello SPID richiesto.
+    - 
+    - |spid-icon| |cieid-icon|
 
-   * - *invalid_client*
-     - Il client_id indicato nella richiesta non è riconosciuto.
-     - 
-     - |spid-icon| |cieid-icon|
+  * - *unauthorized_client*
+    - Il client non è autorizzato a richiedere un authorization code (:rfc:`6749#section-4.1.2.1`).
+    - *302 Found*
+    - |spid-icon| |cieid-icon|
 
-   * - *invalid_request*
-     - La richiesta non è valida a causa della mancanza o della non correttezza di uno o più parametri.
-     - :rfc:`6749#section-4.1.2.1`.
-     - |spid-icon| |cieid-icon|
+  * - *invalid_request*
+    - La richiesta non è valida a causa della mancanza o della non correttezza di uno o più parametri (:rfc:`6749#section-4.1.2.1`).
+    - *302 Found*
+    - |spid-icon| |cieid-icon|
 
-   * - *invalid_scope*
-     - Sono stati richiesti degli scope non validi.
-     - 
-     - |spid-icon| |cieid-icon|
+  * - *invalid_scope*
+    - Sono stati richiesti degli scope non validi (:rfc:`6749#section-4.1.2.1`).
+    - *302 Found*
+    - |spid-icon| |cieid-icon|
 
-   * - *server_error*
-     - L’OP ha riscontrato un problema interno.
-     - 
-     - |spid-icon| |cieid-icon|
+  * - *server_error*
+    - L’OP ha riscontrato un problema interno (:rfc:`6749#section-4.1.2.1`).
+    - *302 Found*
+    - |spid-icon| |cieid-icon|
 
-   * - *temporarily_unavailable*
-     - L’OP ha riscontrato un problema interno temporaneo.
-     - 
-     - |spid-icon| |cieid-icon|
+  * - *temporarily_unavailable*
+    - L’OP ha riscontrato un problema interno temporaneo (:rfc:`6749#section-4.1.2.1`).
+    - *302 Found*
+    - |spid-icon| |cieid-icon|
 
+  * - *unsupported_response_type*
+    - Il response_type richiesto non è supportato (:rfc:`6749#section-4.1.2.1`).
+    - *302 Found*
+    - |spid-icon| |cieid-icon|
+
+  * - *login_required*
+    - L'OP richiede l'autenticazione da parte dell'utente (`OpenID.Core#AuthError`_).
+    - *302 Found*
+    - |spid-icon| |cieid-icon|
+  
+  * - *consent_required*
+    - L'OP richiede il consenso esplicito da parte dell'utente (`OpenID.Core#AuthError`_).
+    - *302 Found*
+    - |spid-icon| |cieid-icon|
+
+  * - *request_uri_not_supported*
+    - L'OP non supporta l'uso del parametro *request_uri* (`OpenID.Core#AuthError`_).
+    - *302 Found*
+    - |spid-icon| |cieid-icon|
+
+  * - *registration_not_supported*
+    - L'OP non supporta l'uso del parametro *registration* (`OpenID.Core#AuthError`_).
+    - *302 Found*
+    - |spid-icon| |cieid-icon|
+
+  * - *invalid_request_object*
+    - Il parametro *request* contiene un *Request Object* non valido (`OpenID.Core#AuthError`_).
+    - *302 Found*
+    - |spid-icon| |cieid-icon|
+
+.. warning::
+
+  In caso di URI di reindirizzamento non valido, non corrispondente o mancante, l'OP restituisce *400 Bad Request* come codice HTTP.
