@@ -328,3 +328,4 @@ Error Codes
 .. warning::
 
   In case of invalid, mismatching, or missing redirection URI, the OP will return *400 Bad Request* as the HTTP code.
+  
