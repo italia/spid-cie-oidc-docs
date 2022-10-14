@@ -39,7 +39,7 @@ Il Metadata di tipo **"federation_entity"** DEVE contenere almeno i seguenti par
     - Denominazione dell'organizzazione.
     - |spid-icon| |cieid-icon|
   * - **federation_resolve_endpoint**
-    - Vedi Sezione :ref:`Endpoint di Federazione <federation_endpoint>` e `OIDC-FED#Section.4.6`_
+    - Vedi Sezione :ref:`Endpoint di Federazione <federation_endpoint>` e `OIDC-FED`_ Section 4.6
     - |spid-icon| |cieid-icon|
 
 Il Metadata di tipo **"trust_mark_issuer"** DEVE contenere almeno i seguenti parametri obbligatori:
@@ -52,7 +52,7 @@ Il Metadata di tipo **"trust_mark_issuer"** DEVE contenere almeno i seguenti par
     - **Descrizione**
     - **Supportato da**
   * - **federation_status_endpoint**
-    - Vedi Sezione :ref:`Endpoint di Federazione <federation_endpoint>` e `OIDC-FED#Section.4.6`_
+    - Vedi Sezione :ref:`Endpoint di Federazione <federation_endpoint>` e `OIDC-FED`_ Section 4.6
     - |spid-icon| |cieid-icon|
 
 Il Metadata di tipo **"oauth_authorization_server"** DEVE contenere almeno i seguenti parametri obbligatori:

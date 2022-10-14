@@ -2,19 +2,17 @@
 
 .. _federation_endpoint:
 
-Federation Endpoint
--------------------
+Federation Endpoints
+--------------------
 
 All the Entities MUST contain the following endpoints:
 
  - **/.well-known/openid-federation**: gives the `Entity Configuration <Entity_Configuration>`__ (for 
-   more details, see `OIDC-FED#Section.6`_)
+   more details, see `OIDC-FED`_ Section 6)
  - **resolve Entity statement endpoint**: gives the final Metadata, the Trust Chain and the Trust Marks
-   regarding another subject. For more details, see `OIDC-FED#Section.7.2`_).
+   regarding another subject. For more details, see `OIDC-FED`_ Section 7.2).
 
 .. warning:: 
-  The resolve Entity statement endpoint MUST use the very same resolve strategy it uses internally for its own operations (e.g. the RP will expose OP's metadata as it sees them).
-  This implies that accordin to the Italian federation's specs:
 
    - the resolve endpoint MUST NOT return TMs which are not valid at the time of the request;
    - the resolve endpoint MUST validate the chain for the subject.
@@ -24,11 +22,11 @@ In addition to the Federation endpoints reported before, the Entities of type **
 
 
  - **fetch Entity statement endpoint**: returns the ESs regarding a direct subordinate subject. 
-   For obtaining the ES of an Entity, at least its Entity identifier is needed. (For more details, see `OIDC-FED#Section.7.1`_).
+   For obtaining the ES of an Entity, at least its Entity identifier is needed. (For more details, see `OIDC-FED`_ Section 7.1).
  - **trust mark status endpoint**: allows an Entity to test if a TM is still active or not. The query MUST
-   be sent to the subject that has released that TM. (For more details, see `OIDC-FED#Section.7.4`_).
+   be sent to the subject that has released that TM. (For more details, see `OIDC-FED`_ Section 7.4).
  - **Entity listing endpoint**: returns the list of the subordinate Entities registered by the TA or an SA.
-   (For more details, see `OIDC-FED#Section.7.3`_).
+   (For more details, see `OIDC-FED`_ Section 7.3).
 
 An Entity of type **AA**, in addition to the common Federation endpoints like all the Entities, MUST also include the **trust mark status endpoint** for allowing the dynamic validation of the TMs, released by the AA.
 
@@ -42,4 +40,4 @@ An Entity of type **AA**, in addition to the common Federation endpoints like al
 Generic error response
 ++++++++++++++++++++++
 
-If the request is malformed or errors occur during the request processing, the format defined at `OIDC-FED#Section.7.5`_ SHOULD be used.
+If the request is malformed or errors occur during the request processing, the format defined at `OIDC-FED`_ Section 7.5 SHOULD be used.

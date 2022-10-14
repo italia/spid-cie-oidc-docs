@@ -30,7 +30,7 @@ Gli ES emessi dal TA o da un suo Intermediario per i propri diretti discendenti,
      - **Descrizione**
      - **Supportato da**
    * - **metadata_policy**
-     - JSON Object che descrive un criterio di Metadata. Ogni chiave dell'oggetto JSON rappresenta un identificatore del tipo di Metadata e ogni valore DEVE essere un oggetto JSON che rappresenta la politica dei Metadata in base allo schema di quel tipo di Metadata. Si rimanda alla specifica `OIDC-FED#Section.5.1`_ per i dettagli implementativi.
+     - JSON Object che descrive un criterio di Metadata. Ogni chiave dell'oggetto JSON rappresenta un identificatore del tipo di Metadata e ogni valore DEVE essere un oggetto JSON che rappresenta la politica dei Metadata in base allo schema di quel tipo di Metadata. Si rimanda alla specifica `OIDC-FED`_ Section 5.1 per i dettagli implementativi.
      - |spid-icon| |cieid-icon|
    * - **trust_marks**
      - JSON Array contenente i Trust Mark emessi da se stesso per il soggetto discendente.

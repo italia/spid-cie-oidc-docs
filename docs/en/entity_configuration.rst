@@ -115,6 +115,8 @@ The ECs of a TA, other than the common claims of all the other members, contains
    * - **constraints**
      - JSON Object that describes the Trust Chain bounds and MUST contain the attribute **max_path_length**.
        It represents the maximum number of SAs between a Leaf and the TA.
+       
+       It MAY contain also **allowed_leaf_entity_types**, that restricts what types of Leaf Entities that MAY appear beneath the entity described in this Entity Statement
      - |spid-icon| |cieid-icon|
    * - **trust_marks_issuers**
      - JSON Array that indicates which Federation authorities are considered trustworthy

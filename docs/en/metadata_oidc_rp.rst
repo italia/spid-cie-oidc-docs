@@ -30,7 +30,7 @@ The OP Metadata of type **"federation_entity"** MUST contain at least the follow
     - **Description**
     - **Supported by***
   * - **federation_resolve_endpoint**
-    - See Section :ref:`Federation Endpoint <federation_endpoint>` and `OIDC-FED#Section.4.6`_
+    - See Section :ref:`Federation Endpoint <federation_endpoint>` and `OIDC-FED`_ Section 4.6.
     - |spid-icon| |cieid-icon|
 
 
@@ -44,6 +44,12 @@ The RP Metadata of type **"openid_relying_party"** MUST contain at least the fol
   * - **Claim**
     - **Description**
     - **Supported by***
+  * - **organization_name**
+    - Vedi `OpenID.Discovery#OP_Metadata`_. Organization name, see `OIDC-FED`_.
+    - |spid-icon| |cieid-icon|
+  * - **logo_uri**
+    - URL of the entity's logo, in SVG format.
+    - |spid-icon| |cieid-icon|
   * - **redirect_uris**
     - See `OpenID.Registration#ClientMetadata`_. It is mandatory using an HTTPS schema in case of a web-based client.
     - |spid-icon| |cieid-icon|
@@ -81,7 +87,7 @@ The RP Metadata of type **"openid_relying_party"** MUST contain at least the fol
     - See `OpenID.Registration`_. It MUST contain an HTTPS URL that uniquely identifies the RP.
     - |spid-icon| |cieid-icon|
   * - **client_registration_types**
-    - See `OIDC-FED#Section.4.1`_. The required value is **automatic**. 
+    - See `OIDC-FED`_ Section 4.1. The required value is **automatic**. 
     - |spid-icon| |cieid-icon|
 
 .. note:: 
