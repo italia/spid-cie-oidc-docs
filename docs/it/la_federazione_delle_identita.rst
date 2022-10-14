@@ -47,7 +47,7 @@ Si veda la Sezione dedicata alle :ref:`Entity Configuration<Entity_Configuration
 Modalità di partecipazione
 ++++++++++++++++++++++++++
 
-Per aderire alle Federazioni SPID e CIEid un partecipante deve pubblicare la propria configurazione (Entity Configuration) presso il proprio web endpoint :ref:`.well-known/openid-federation<Esempio_EN1>`.
+Per aderire alle Federazioni SPID e CIE id un partecipante deve pubblicare la propria configurazione (Entity Configuration) presso il proprio web endpoint :ref:`.well-known/openid-federation<Esempio_EN1>`.
 
 Gli incaricati tecnici ed amministrativi della Foglia completano la procedura amministrativa per la registrazione di una nuova entità o l'aggiornamento di un'entità preesistente definita dalla Autorità di Federazione o da un suo Intermediario (SA).
 

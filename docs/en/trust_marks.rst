@@ -225,7 +225,7 @@ The claims defined inside the TMs are compliant with the elements defined in the
       - |spid-icon| |cieid-icon|
 
 .. warning::
-  In case of CIEid, the public Organizations having both the IPA code and a unique AOO code, MUST include the latter one in the claim id_code, in the format
+  In case of CIE id, the public Organizations having both the IPA code and a unique AOO code, MUST include the latter one in the claim id_code, in the format
   *<IPA_code>-<AOO_code>*.
   Furthermore, the value in the claim **exp** MUST NOT be greater than the duration of the specific 
   conventions/agreements concluded in the onboarding process, between the Trust Mark issuer and the Organizations 

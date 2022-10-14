@@ -140,28 +140,6 @@ Il payload del **JWT** contiene i seguenti parametri obbligatori.
   .. literalinclude :: ../../static/pkce.py
    :language: python
 
-..
-  FIXME: Fatta sezione ad hoc per le modalità di utilizzo dei parametri claims e scope	 
-  Claim
-  +++++
-
-  Il parametro claims definisce gli attributi richiesti dal **RP**. Gli attributi SPID sono richiesti all'interno dell'elemento "userinfo", elencando gli attributi da richiedere come chiavi di oggetti JSON, i cui valori devono essere indicati come {"essential": true}. Per SPID non è possibile richiedere attributi nell'id_token, mentre è possibile farlo per CIE. Gli attributi elencati sotto "userinfo" sono disponibili al momento della chiamata allo UserInfo Endpoint.
-
-  .. code-block:: json
-
-  {
-      "userinfo":{
-          "https://attributes.spid.gov.it/familyName":{
-              "essential":true
-          }
-      }
-  }
-
-
-  .. seealso::
-
-  - https://openid.net/specs/openid-connect-core-1_0.html#IndividualClaimsRequests
-
 
 .. parametri_scope_claims:
 
@@ -181,56 +159,21 @@ Nel caso di utilizzo del parametro **scope** i seguenti valori sono supportati:
 - **email**: questo valore permette di ottenere, se resi disponibili dall'utente, i seguenti attributi:
 
     - *email*,
-    - *email_verified*.
+    - *email_verified*. Solo per |cieid-icon|
 
-Gli attributi richiesti tramite il parametro **scope** sono disponibili sia nell'ID Token e sia nella risposta allo userinfo endpoint.
+.. note:: |cieid-icon| |spid-icon|
+
+    Gli attributi richiesti tramite il parametro **scope** sono disponibili sia nell'ID Token e sia nella risposta allo *userinfo endpoint*.
 
 .. note::
+
     Il parametro **scope** PUÒ contenere uno o più valori separati da uno spazio. Ad esempio l'utilizzo congiunto di *profile* e *email* permette di ottenere l'unione degli insiemi degli attributi (Minimum Dataset eIDAS e l'email).
-
-Nel caso di richiesta di singoli attributi dell'utente o specifiche combinazioni di essi, Il RP PUÒ usare il parametro **claims**. 
-Per la definizione del parametro **claims** e la modalità di utilizzo per la richiesta degli attributi dell'utente si può fare riferimento a `OpenID.Core#ClaimsParameter`_. 
-
-.. warning::
-    - Solo per CIE id: Nell'oggetto *id_token* del parametro **claims** è possibile richiedere solo il Minimum Dataset eIDAS. Gli altri attributi dell'utente DEVONO essere richiesti nell'oggetto *userinfo* del parametro **claims**. Inoltre, gli attributi utente richiesti nell'oggetto *id_token* sono disponibili anche allo *userinfo endpoint*. 
+    Nel caso di richiesta di singoli attributi dell'utente o specifiche combinazioni di essi, Il RP PUÒ usare il parametro **claims**.
+    Per la definizione del parametro **claims** e la modalità di utilizzo per la richiesta degli attributi dell'utente si può fare riferimento a `OpenID.Core#ClaimsParameter`_.
 
 .. warning::
-    - Se il parametro **claims** non è presente o non è valorizzato, viene restituito solo il claim *sub* nella risposta allo userinfo endpoint. 
 
-La tabella seguente mostra alcuni esempi di utilizzo.
-
-.. list-table:: 
-    :widths: 10 10 20 20
-    :header-rows: 1
-
-    * - **claims**
-      - **scope**
-      - **Attributi nella Userinfo Response**
-      - **Attributi nell'ID Token**
-    * - *userinfo*: \- |br| *id_token*: \-
-      - *openid*
-      - *sub*
-      - *sub*
-    * - *userinfo*: \- |br| *id_token*: \-
-      - *openid* |br| *profile*
-      - *sub*, |br| *given_name*, |br| *family_name*, |br| *birthdate*, |br| *\https://attributes.eid.gov.it/fiscal_number*
-      - *sub*, |br| *given_name*, |br| *family_name*, |br| *birthdate*, |br| *\https://attributes.eid.gov.it/fiscal_number*
-    * - *userinfo*: \- |br| *id_token*:"birthdate":{essential:true}
-      - *openid* 
-      - *sub*, |br|  *birthdate*
-      - *sub*, |br|  *birthdate*
-    * - *userinfo*: \- |br| *id_token*: \-
-      - *openid* |br| *email*
-      - *sub*, |br| *email*, |br| *email_verified*
-      - *sub*, |br| *email*, |br| *email_verified*
-    * - *userinfo*:"family_name":null |br| *id_token*:"given_name":{essential:true}
-      - *openid* 
-      - *sub*, |br|  *given_name*, |br|  *family_name*
-      - *sub*, |br|  *given_name*
-    * - *userinfo*:\- |br| *id_token*:"birthdate":{essential:true} "gender":{essential:true}
-      - *openid* 
-      - *sub*, |br|  *birthdate*, |br|  *gender*
-      - *sub*, |br|  *birthdate*
+  Se il parametro **claims** non è presente o non è valorizzato, viene restituito solo il claim *sub*.
 
 
 Response
