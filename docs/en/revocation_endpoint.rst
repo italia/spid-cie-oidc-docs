@@ -70,3 +70,7 @@ Response
 The Revocation Endpoint answers with a code HTTP 200, also though the indicated token does not exist or has already been revoked (so that non information is going to be released).
 
 
+Error codes
++++++++++++
+
+As defined for :ref:`Token endpoint<TOKEN_ENDPOINT_ERRORS>`.

@@ -248,7 +248,7 @@ Connect, come descritti nelle relative tabelle definite dalle `Linee Guida UX SP
 .. _codici_errore:
 
 Codici di errore
-----------------
+^^^^^^^^^^^^^^^^
 
 .. list-table:: 
   :widths: 20 20 20 20
@@ -260,8 +260,8 @@ Codici di errore
     - **Supportato da**
 
   * - *access_denied*
-    - L’OP ha negato l’accesso a causa di credenziali non valide o non adeguate al livello SPID richiesto.
-    - 
+    - L’OP ha negato l’accesso a causa di credenziali non valide o non adeguate al livello SPID richiesto (:rfc:`6749#section-4.1.2.1`).
+    - *302 Found*
     - |spid-icon| |cieid-icon|
 
   * - *unauthorized_client*
@@ -318,6 +318,7 @@ Codici di errore
     - Il parametro *request* contiene un *Request Object* non valido (`OpenID.Core#AuthError`_).
     - *302 Found*
     - |spid-icon| |cieid-icon|
+
 
 .. warning::
 

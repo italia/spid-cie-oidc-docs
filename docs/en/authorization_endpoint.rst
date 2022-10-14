@@ -225,8 +225,8 @@ Authorization Response example:
 
     http://rp-test.it/oidc/rp/callback/?code=a032faf23d986353019ff8eda96cadce2ea1c368f04bf4c5e1759d559dda1c08056c7c4d4e8058cb002a0c8fa9a920272350aa102548523a8aff4ccdb44cb3fa&state=2Ujz3tbBHWQEL4XPFSJ5ANSjkhd7IlfC&iss=http%3A%2F%2Fop-test%2Foidc%2Fop%2F
 
-Errors
-++++++
+Error Management
+++++++++++++++++
 
 In the event of an error, the OP or RP represent the anomaly message 
 as described in the related tables defined by the `Linee Guida UX SPID`_. 
@@ -252,8 +252,8 @@ as described in the related tables defined by the `Linee Guida UX SPID`_.
 
 .. _codici_errore:
 
-Errors
-------
+Error Codes
+^^^^^^^^^^^
 
 .. list-table:: 
   :widths: 20 20 20 20
@@ -265,8 +265,8 @@ Errors
     - **Supported by**
 
   * - *access_denied*
-    - The OP denied access due to invalid or unsuitable credentials for the required SPID level.
-    - 
+    - The OP denied access due to invalid or unsuitable credentials for the required SPID level (:rfc:`6749#section-4.1.2.1`).
+    - *302 Found*
     - |spid-icon| |cieid-icon|
 
   * - *unauthorized_client*
@@ -323,6 +323,7 @@ Errors
     - The *request* parameter contains an invalid *Request Object* (`OpenID.Core#AuthError`_).
     - *302 Found*
     - |spid-icon| |cieid-icon|
+
 
 .. warning::
 

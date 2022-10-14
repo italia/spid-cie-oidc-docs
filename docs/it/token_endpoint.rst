@@ -302,8 +302,8 @@ Di seguito i claim disponibili nell'ID Token.
 
 .. _TOKEN_ENDPOINT_ERRORS:
 
-Errori
-------
+Codici di errore
+++++++++++++++++
 
 .. list-table:: 
   :widths: 20 20 20 20

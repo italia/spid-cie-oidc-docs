@@ -307,8 +307,8 @@ The claims available in the *ID Token* are given below.
 
 .. _TOKEN_ENDPOINT_ERRORS:
 
-Errors
-------
+Error codes
++++++++++++
 
 .. list-table:: 
   :widths: 20 20 20 20
