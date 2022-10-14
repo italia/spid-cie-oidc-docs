@@ -295,9 +295,9 @@ Error Codes
     - |spid-icon| |cieid-icon|
 
   * - *unsupported_response_type*
-     - The OP does not support the requested response_type. (:rfc:`6749#section-4.1.2.1`).
-     - *302 Found*
-     - |spid-icon| |cieid-icon|
+    - The OP does not support the requested response_type. (:rfc:`6749#section-4.1.2.1`).
+    - *302 Found*
+    - |spid-icon| |cieid-icon|
     
   * - *login_required*
     - The OP requires End-User authentication (`OpenID.Core#AuthError`_).
