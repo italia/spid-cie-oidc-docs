@@ -171,20 +171,22 @@ When the **scope** parameter is used, the following values are supported:
     - *email_verified*. Only for |cieid-icon|
 
 
+The parameter **scope** MAY contain one or more values, with single spaces as separators. For example, using both profile and email in the scope parameter returns the Minimum eIDAS Dataset and the email.
+In case of requests of single user-attributes or specific combinations of them, the RP SHOULD use the parameter **claims**.
+For the definition of the parameter **claims** and its usage modes for requesting the user attributes, please refer to `OpenID.Core#ClaimsParameter`_.
+
+
 .. admonition:: |cieid-icon| |spid-icon|
 
   The attributes requested by the parameter **scope** are available both in the ID Token and in the response to the *userinfo endpoint*.
-  
-.. note::
 
-   The parameter **scope** MAY contain one or more values, with single spaces as separators. For example, using both profile and email in the scope parameter returns the Minimum eIDAS Dataset and the email.
-   In case of requests of single user-attributes or specific combinations of them, the RP MAY use the parameter **claims**.
-   For the definition of the parameter **claims** and its usage modes for requesting the user attributes, please refer to `OpenID.Core#ClaimsParameter`_.
-  
- 
+.. admonition:: |spid-icon|
+
+  SPID allows the user attributes in the Token ID only if this is encrypted and if the recipient RP contains, within its metadata, the claims * id_token_encrypted_response_alg * and * id_token_encrypted_response_enc *.
+
 .. warning::
 
-    - If the parameter **claims** is not present or has no value and the only scope **openid** has been requested, only the claim *sub* is returned.
+    If in the **scope** parameter there was only the *openid* value and the **claims** parameter was not present or valued, the response of the userinfo endpoint would not have any user attributes but only the claim **sub**.
 
 
 Response
