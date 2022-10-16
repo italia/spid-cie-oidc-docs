@@ -178,11 +178,11 @@ For the definition of the parameter **claims** and its usage modes for requestin
 
 .. admonition:: |cieid-icon| |spid-icon|
 
-  The attributes requested by the parameter **scope** are available both in the ID Token and in the response to the *userinfo endpoint*.
+  The attributes requested by the parameter **scope** are available both in the ID Token and in the *userinfo endpoint* response.
 
 .. admonition:: |spid-icon|
 
-  SPID allows the user attributes in the Token ID only if this is encrypted and if the recipient RP contains, within its metadata, the claims * id_token_encrypted_response_alg * and * id_token_encrypted_response_enc *.
+  SPID allows the user attributes in the Token ID only if this is encrypted and if the recipient RP contains, within its metadata, the claims *id_token_encrypted_response_alg* and *id_token_encrypted_response_enc*.
 
 .. warning::
 
