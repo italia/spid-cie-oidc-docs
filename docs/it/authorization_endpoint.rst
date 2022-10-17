@@ -147,6 +147,8 @@ Parametri **scope** e **claims**
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Gli attributi dell'utente POSSONO essere richiesti dal RP nell'Authorization Request usando i parametri **scope** o **claims**.
+
+
 Nel caso di utilizzo del parametro **scope** i seguenti valori sono supportati:
 
 - **profile**: usando questo valore è possibile ottenere il profilo utente di default che corrisponde al Minimum Dataset eIDAS: 
@@ -161,19 +163,21 @@ Nel caso di utilizzo del parametro **scope** i seguenti valori sono supportati:
     - *email*,
     - *email_verified*. Solo per |cieid-icon|
 
+Il parametro **scope** PUÒ contenere uno o più valori separati da uno spazio. Ad esempio l'utilizzo congiunto di *profile* e *email* permette di ottenere l'unione degli insiemi degli attributi (Minimum Dataset eIDAS e l'email).
+Nel caso di richiesta di singoli attributi dell'utente o specifiche combinazioni di essi, Il RP DOVREBBE usare il parametro **claims**.
+Per la definizione del parametro **claims** e la modalità di utilizzo per la richiesta degli attributi dell'utente si può fare riferimento a `OpenID.Core#ClaimsParameter`_.
+
 .. note:: |cieid-icon| |spid-icon|
 
     Gli attributi richiesti tramite il parametro **scope** sono disponibili sia nell'ID Token e sia nella risposta allo *userinfo endpoint*.
 
-.. note::
+.. admonition:: |spid-icon|
 
-    Il parametro **scope** PUÒ contenere uno o più valori separati da uno spazio. Ad esempio l'utilizzo congiunto di *profile* e *email* permette di ottenere l'unione degli insiemi degli attributi (Minimum Dataset eIDAS e l'email).
-    Nel caso di richiesta di singoli attributi dell'utente o specifiche combinazioni di essi, Il RP PUÒ usare il parametro **claims**.
-    Per la definizione del parametro **claims** e la modalità di utilizzo per la richiesta degli attributi dell'utente si può fare riferimento a `OpenID.Core#ClaimsParameter`_.
+  SPID consente gli attributi utente nell' ID Token esclusivamente se questo è criptato e se il RP destinatoraio contiene, all'interno dei suoi metadata,  i claims *id_token_encrypted_response_alg* e *id_token_encrypted_response_enc*.
 
 .. warning::
 
-  Se il parametro **claims** non è presente o non è valorizzato, viene restituito solo il claim *sub*.
+  Se nel parametro **scope** vi fosse esclusivamente il valore **openid** e il parametro **claims** non fosse presente o valorizzato, la response dello userinfo endpoint non presenterebbe alcun attributo utente ma soltanto il claim *sub*.
 
 
 Response
