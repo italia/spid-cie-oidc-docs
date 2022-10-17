@@ -157,7 +157,7 @@ All the Entities that release Trust Marks, MUST expose a Trust Mark status endpo
 
 .. seealso:: 
 
-  - `OIDC-FED#Section.5.3.2`_
+  - `OIDC-FED`_ Section 5.3.2
 
 
 Trust Mark Revocation
@@ -234,7 +234,7 @@ The claims defined inside the TMs are compliant with the elements defined in the
 
 .. seealso::
 
- * `OIDC-FED#Section.5.3.1`_
+ * `OIDC-FED`_ Section 5.3.1.
 
 
 

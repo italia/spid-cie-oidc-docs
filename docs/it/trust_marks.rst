@@ -133,7 +133,7 @@ Tutte le entità che rilasciano Trust Mark DEVONO esporre un endpoint di Trust M
 
 .. seealso:: 
 
-  - `OIDC-FED#Section.5.3.2`_
+  - `OIDC-FED`_ Sezione 5.3.2
 
 
 Revoca dei Trust Mark
@@ -203,7 +203,7 @@ Gli attributi definiti all'interno dei TM aderiscono a quanto definito all'inter
 
 .. seealso::
 
- * `OIDC-FED#Section.5.3.1`_
+ * `OIDC-FED`_ Sezione 5.3.1.
 
 
 
