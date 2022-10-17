@@ -157,7 +157,7 @@ All the Entities that release Trust Marks, MUST expose a Trust Mark status endpo
 
 .. seealso:: 
 
-  - `OIDC-FED`_ Section 5.3.2
+  - `OIDC-FED`_ Section .5.3.2.
 
 
 Trust Mark Revocation

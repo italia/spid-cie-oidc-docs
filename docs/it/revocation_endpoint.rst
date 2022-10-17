@@ -71,3 +71,7 @@ Response
 Il Revocation Endpoint risponde con un codice HTTP 200, anche nel caso in cui il token indicato non esista o sia già stato revocato (in modo da non rilasciare informazioni).
 
 
+Codici di errore
+++++++++++++++++
+
+Come definiti per :ref:`Token endpoint<TOKEN_ENDPOINT_ERRORS>`.
