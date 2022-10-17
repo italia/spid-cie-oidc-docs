@@ -37,6 +37,7 @@
 .. _OpenID.Core#SubjectIDTypes: https://openid.net/specs/openid-connect-core-1_0.html#SubjectIDTypes
 .. _OpenID.Core#CodeIDToken: https://openid.net/specs/openid-connect-core-1_0.html#CodeIDToken
 .. _OpenID.Core#ClientAuthentication: https://openid.net/specs/openid-connect-core-1_0.html#ClientAuthentication
+.. _OpenID.Core#AuthError: https://openid.net/specs/openid-connect-core-1_0.html#AuthError
 .. _OpenID.Registration: https://openid.net/specs/openid-connect-registration-1_0.html
 .. _OpenID.Registration#ClientMetadata: https://openid.net/specs/openid-connect-registration-1_0.html#ClientMetadata
 .. _OpenID.Discovery: https://openid.net/specs/openid-connect-discovery-1_0.html

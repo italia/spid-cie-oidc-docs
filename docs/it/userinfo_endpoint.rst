@@ -96,5 +96,8 @@ Il payload del JWT è un JSON contenente i seguenti parametri:
      - |spid-icon| |cieid-icon|
 
 
-In caso di errore di autenticazione, lo UserInfo Endpoint restituisce un errore HTTP in accordo con quanto indicato in :ref:`Gestioni Errori <gestione_errori>`
+Codici di errore
+++++++++++++++++
+
+Come definiti per :ref:`Token endpoint<TOKEN_ENDPOINT_ERRORS>`.
 
