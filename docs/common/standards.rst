@@ -63,6 +63,8 @@ Standard di riferimento
       - Leiba, B., "Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words", RFC 8174, DOI 10.17487/RFC8174, May 2017.
     * - :rfc:`8414`
       - Jones, M., Sakimura, N., and J. Bradley, "OAuth 2.0 Authorization Server Metadata", RFC 8414, DOI 10.17487/RFC8414, June 2018.
+    * - :rfc:`8725`
+      - Jones, M., D. Hardt, Sheffer, Y., "JSON Web Token Best Current Practices", February 2020.
     * - :rfc:`9068`
       - Bertocci, V., “JSON Web Token (JWT) Profile for OAuth 2.0 Access Token,” RFC9068, October 2021.
     * - `I-D.ietf-oauth-iss-auth-resp`_
