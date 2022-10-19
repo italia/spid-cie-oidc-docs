@@ -89,7 +89,7 @@ Il Metadata di tipo **"oauth_authorization_server"** DEVE contenere almeno i seg
     - Vedi :rfc:`8414#page-4`. Il valore supportato è **private_key_jwt**.
     - |spid-icon| |cieid-icon|
   * - **token_endpoint_auth_signing_alg_values_supported**
-    - Vedi :rfc:`8414#page-4`. Vedi :ref:`supported_algs`.
+    - Vedi :rfc:`8414#page-4`. Vedi signature :ref:`supported_algs`.
     - |spid-icon| |cieid-icon|
   * - **op_policy_uri**
     - Vedi :rfc:`8414#page-4`.
@@ -98,7 +98,7 @@ Il Metadata di tipo **"oauth_authorization_server"** DEVE contenere almeno i seg
     - Vedi :rfc:`8414#page-6`.
     - |spid-icon| |cieid-icon|
   * - **dpop_signing_alg_values_supported**
-    - Vedi `OAuth-DPoP`_. Vedi :ref:`supported_algs`.
+    - Vedi `OAuth-DPoP`_. Vedi signature :ref:`supported_algs`.
     - |spid-icon| |cieid-icon|
 
 

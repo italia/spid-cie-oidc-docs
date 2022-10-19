@@ -19,7 +19,7 @@ Le presenti regole tecniche implementano i seguenti avvisi SPID:
       - Data
 
     * - LL.GG. OpenID Connect in SPID
-      - `LL.GG. OpenID Connect in SPID <https://www.agid.gov.it/sites/default/files/repository_files/linee_guida_openid_connect_in_spid.pdf>_`
+      - `LL.GG. OpenID Connect in SPID <https://www.agid.gov.it/sites/default/files/repository_files/linee_guida_openid_connect_in_spid.pdf>`_
       - 24/11/2021
 
     * - Avviso n.41
@@ -32,4 +32,4 @@ Le presenti regole tecniche implementano i seguenti avvisi SPID:
 
     * - Determina SPID OpenID Connect Federation
       - `Regole tecniche per il funzionamento della Federazione SPID OpenID Connect - Integrazione LL.GG. OpenID Connect in SPID.pdf  - <https://www.agid.gov.it/sites/default/files/repository_files/regolamento-spid_openid_connect_federation_1.0.pdf>`_
-      - 06/05/2022 
+      - 14/09/2022 

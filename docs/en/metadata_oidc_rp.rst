@@ -47,9 +47,6 @@ The RP Metadata of type **"openid_relying_party"** MUST contain at least the fol
   * - **organization_name**
     - Vedi `OpenID.Discovery#OP_Metadata`_. Organization name, see `OIDC-FED`_.
     - |spid-icon| |cieid-icon|
-  * - **logo_uri**
-    - URL of the entity's logo, in SVG format.
-    - |spid-icon| |cieid-icon|
   * - **redirect_uris**
     - See `OpenID.Registration#ClientMetadata`_. It is mandatory using an HTTPS schema in case of a web-based client.
     - |spid-icon| |cieid-icon|
@@ -63,22 +60,22 @@ The RP Metadata of type **"openid_relying_party"** MUST contain at least the fol
     - See `OpenID.Registration#ClientMetadata`_ and `JWK`_.
     - |spid-icon| |cieid-icon| 
   * - **id_token_signed_response_alg**
-    - See `OpenID.Registration#ClientMetadata`_. See :ref:`supported_algs`.
+    - See `OpenID.Registration#ClientMetadata`_. See signature :ref:`supported_algs`.
     - |spid-icon| |cieid-icon| 
   * - **id_token_encrypted_response_alg**
-    - See `OpenID.Registration#ClientMetadata`_. See :ref:`supported_algs`.
+    - See `OpenID.Registration#ClientMetadata`_. See key encryption :ref:`supported_algs`.
     - |spid-icon| |cieid-icon| 
   * - **id_token_encrypted_response_enc**
-    - See `OpenID.Registration#ClientMetadata`_. This is required only if the *id_token_encrypted_response_alg* is given. See :ref:`supported_algs`.
+    - See `OpenID.Registration#ClientMetadata`_. This content encryption is required only if the *id_token_encrypted_response_alg* is given. See key encryption :ref:`supported_algs`.
     - |spid-icon| |cieid-icon| 
   * - **userinfo_signed_response_alg**
-    - See `OpenID.Registration#ClientMetadata`_. See :ref:`supported_algs`.
+    - See `OpenID.Registration#ClientMetadata`_. See signature :ref:`supported_algs`.
     - |spid-icon| |cieid-icon| 
   * - **userinfo_encrypted_response_alg**
-    - See `OpenID.Registration#ClientMetadata`_. See :ref:`supported_algs`.
+    - See `OpenID.Registration#ClientMetadata`_. See key encryption :ref:`supported_algs`.
     - |spid-icon| |cieid-icon|
   * - **userinfo_encrypted_response_enc**
-    - See `OpenID.Registration#ClientMetadata`_. See :ref:`supported_algs`.
+    - See `OpenID.Registration#ClientMetadata`_. See content encryption :ref:`supported_algs`.
     - |spid-icon| |cieid-icon|
   * - **token_endpoint_auth_method**
     - See `OpenID.Registration#ClientMetadata`_. The required value is **private_key_jwt**.
