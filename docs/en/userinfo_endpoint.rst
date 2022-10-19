@@ -1,7 +1,7 @@
 .. include:: ../common/common_definitions.rst
 
-UserInfo Endpoint (attributes)
-------------------------------
+UserInfo Endpoint
+-----------------
 
 The UserInfo Endpoint is a protected resource that returns the authenticated user's claims. In order to obtain 
 the requested claims, the RP sends a request to the UserInfo Endpoint using the Access Token.
