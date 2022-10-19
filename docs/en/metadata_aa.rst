@@ -79,7 +79,7 @@ The AA Metadata with **"oauth_authorization_server"** MUST contain at least the 
     - See :rfc:`8414#page-4`. The supported value is **private_key_jwt**.
     - |spid-icon| |cieid-icon|
   * - **token_endpoint_auth_signing_alg_values_supported**
-    - See :rfc:`8414#page-4`.
+    - See :rfc:`8414#page-4`. See :ref:`supported_algs`.
     - |spid-icon| |cieid-icon|
   * - **op_policy_uri**
     - See :rfc:`8414#page-4`.
@@ -88,7 +88,7 @@ The AA Metadata with **"oauth_authorization_server"** MUST contain at least the 
     - See :rfc:`8414#page-6`.
     - |spid-icon| |cieid-icon|
   * - **dpop_signing_alg_values_supported**
-    - See `OAuth-DPoP`_.
+    - See `OAuth-DPoP`_. See :ref:`supported_algs`.
     - |spid-icon| |cieid-icon|
 
 

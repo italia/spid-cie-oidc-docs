@@ -14,7 +14,7 @@ aspects and what else might be necessary for the correct System operation as a w
 The present technical rules implement the following SPID announcements:
     
 .. list-table::
-    :widths: 60 20
+    :widths: 20 40 20
     :header-rows: 1
 
     * - Announcement

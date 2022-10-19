@@ -11,7 +11,7 @@ Le presenti regole tecniche implementano i seguenti avvisi SPID:
 
 
 .. list-table::
-    :widths: 60 20
+    :widths: 20 40 20
     :header-rows: 1
 
     * - Avviso

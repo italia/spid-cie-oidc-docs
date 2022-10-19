@@ -63,22 +63,22 @@ The RP Metadata of type **"openid_relying_party"** MUST contain at least the fol
     - See `OpenID.Registration#ClientMetadata`_ and `JWK`_.
     - |spid-icon| |cieid-icon| 
   * - **id_token_signed_response_alg**
-    - See `OpenID.Registration#ClientMetadata`_.
+    - See `OpenID.Registration#ClientMetadata`_. See :ref:`supported_algs`.
     - |spid-icon| |cieid-icon| 
   * - **id_token_encrypted_response_alg**
-    - See `OpenID.Registration#ClientMetadata`_. Optional for CIE id, required for SPID. If this is requested, the response MUST be signed then encrypted, with the result being a Nested JWT, as defined in `OpenID.Core`_ Section 10.
+    - See `OpenID.Registration#ClientMetadata`_. See :ref:`supported_algs`.
     - |spid-icon| |cieid-icon| 
   * - **id_token_encrypted_response_enc**
-    - See `OpenID.Registration#ClientMetadata`_. This is required only if the *id_token_encrypted_response_alg* is given.
+    - See `OpenID.Registration#ClientMetadata`_. This is required only if the *id_token_encrypted_response_alg* is given. See :ref:`supported_algs`.
     - |spid-icon| |cieid-icon| 
   * - **userinfo_signed_response_alg**
-    - See `OpenID.Registration#ClientMetadata`_.
+    - See `OpenID.Registration#ClientMetadata`_. See :ref:`supported_algs`.
     - |spid-icon| |cieid-icon| 
   * - **userinfo_encrypted_response_alg**
-    - See `OpenID.Registration#ClientMetadata`_.
+    - See `OpenID.Registration#ClientMetadata`_. See :ref:`supported_algs`.
     - |spid-icon| |cieid-icon|
   * - **userinfo_encrypted_response_enc**
-    - See `OpenID.Registration#ClientMetadata`_.
+    - See `OpenID.Registration#ClientMetadata`_. See :ref:`supported_algs`.
     - |spid-icon| |cieid-icon|
   * - **token_endpoint_auth_method**
     - See `OpenID.Registration#ClientMetadata`_. The required value is **private_key_jwt**.
