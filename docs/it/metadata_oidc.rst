@@ -107,3 +107,15 @@ In the SPID and CIE id the following algorithms MUST NOT be supported:
     - Key Encryption
     - `RFC7516`_.
     - |spid-icon| |cieid-icon|
+  * - **HS256** 
+    - Signature
+    - `RFC7518`_.
+    - |spid-icon| |cieid-icon|
+  * - **HS384** 
+    - Signature
+    - `RFC7518`_.
+    - |spid-icon| |cieid-icon|
+  * - **HS512** 
+    - Signature
+    - `RFC7518`_.
+    - |spid-icon| |cieid-icon|
