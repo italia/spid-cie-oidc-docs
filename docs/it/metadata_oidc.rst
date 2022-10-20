@@ -26,16 +26,16 @@ Algoritmi supportati
 Tutti i partecipanti devono pubblicare gli algoritmi supportati 
 di criptazione e firma all'interno dei propri metadata.
 
-In the SPID and CIE id the following algorithms MUST be supported:
+In SPID e CIE id i seguenti algoritmi DEVONO essere supportati:
     
 .. list-table:: 
   :widths: 20 20 20 20
   :header-rows: 1
 
-  * - **Algorithm**
-    - **Operations**
-    - **References**
-    - **Supported by**
+  * - **Algoritmi**
+    - **Operazioni**
+    - **Riferimento**
+    - **Supportato da**
   * - **RS256** 
     - Signature
     - `OpenID.Core`_ and `RFC7518 <https://www.rfc-editor.org/rfc/rfc7518>`_.
@@ -61,16 +61,16 @@ In the SPID and CIE id the following algorithms MUST be supported:
     - `RFC7516`_.
     - |spid-icon| |cieid-icon|
 
-In the SPID and CIE id the following algorithms are RECOMMENDED to be supported:
+In SPID e CIE id è RACCOMANDATO il supporto per i seguenti algoritmi:
     
 .. list-table:: 
   :widths: 20 20 20 20
   :header-rows: 1
 
-  * - **Algorithm**
-    - **Operations**
-    - **References**
-    - **Supported by**
+  * - **Algoritmi**
+    - **Operazioni**
+    - **Riferimento**
+    - **Supportato da**
   * - **ES256** 
     - Signature
     - `OpenID.Core`_ and `RFC7518`_.
@@ -89,16 +89,16 @@ In the SPID and CIE id the following algorithms are RECOMMENDED to be supported:
     - |spid-icon| |cieid-icon|
 
 
-In the SPID and CIE id the following algorithms MUST NOT be supported:
+In SPID e CIE id i seguenti algoritmi NON DEVONO essere supportati:
     
 .. list-table:: 
   :widths: 20 20 20 20
   :header-rows: 1
 
-  * - **Algorithm**
-    - **Operations**
-    - **References**
-    - **Supported by**
+  * - **Algoritmi**
+    - **Operazioni**
+    - **Riferimenti**
+    - **Supportato da**
   * - **none** 
     - Signature
     - `RFC7518`_.
