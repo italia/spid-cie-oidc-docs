@@ -27,7 +27,7 @@ Supported algorithms
 All the participants MUST expose the supported 
 signature and encryption algorithms in their metadata.
 
-.. admonition:: 
+.. note:: 
 
   The length of the RSA keys must be equal to or greater than 2048 bits.
   A length of 4096 bits is recommended.

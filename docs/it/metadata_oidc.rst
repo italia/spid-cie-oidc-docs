@@ -26,7 +26,7 @@ Algoritmi supportati
 Tutti i partecipanti devono pubblicare gli algoritmi supportati 
 di criptazione e firma all'interno dei propri metadata.
 
-.. admonition:: 
+.. note:: 
 
   La lunghezza delle chiavi RSA deve essere pari o superiore a 2048 bit.
   Si raccomanda una lunghezza di 4096 bit.
