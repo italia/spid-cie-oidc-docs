@@ -27,6 +27,10 @@ Supported algorithms
 All the participants MUST expose the supported 
 signature and encryption algorithms in their metadata.
 
+.. admonition:: 
+
+  The length of the RSA keys must be equal to or greater than 2048 bits.
+  A length of 4096 bits is recommended.
 
 In the SPID and CIE id the following algorithms MUST be supported:
     
