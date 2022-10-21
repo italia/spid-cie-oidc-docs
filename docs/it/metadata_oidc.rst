@@ -70,7 +70,7 @@ In SPID e CIE id è RACCOMANDATO il supporto per i seguenti algoritmi:
   * - **Algoritmi**
     - **Operazioni**
     - **Riferimento**
-    - **Supportato da**
+    - **Applicabile a**
   * - **ES256** 
     - Signature
     - `OpenID.Core`_ and `RFC7518`_.
@@ -87,6 +87,18 @@ In SPID e CIE id è RACCOMANDATO il supporto per i seguenti algoritmi:
     - Signature
     - `RFC7518`_.
     - |spid-icon| |cieid-icon|
+  * - **ECDH-ES**
+    - Key Encryption
+    - `RFC7518`_.
+    - |cieid-icon|
+  * - **ECDH-ES+A128KW**
+    - Key Encryption
+    - `RFC7518`_.
+    - |cieid-icon|
+  * - **ECDH-ES+A256KW**
+    - Key Encryption
+    - `RFC7518`_.
+    - |cieid-icon|
 
 
 In SPID e CIE id i seguenti algoritmi NON DEVONO essere supportati:
@@ -98,7 +110,7 @@ In SPID e CIE id i seguenti algoritmi NON DEVONO essere supportati:
   * - **Algoritmi**
     - **Operazioni**
     - **Riferimenti**
-    - **Supportato da**
+    - **Applicabile a**
   * - **none** 
     - Signature
     - `RFC7518`_.
