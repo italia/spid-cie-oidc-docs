@@ -48,9 +48,6 @@ Il Metadata di tipo **"openid_relying_party"** DEVE contenere almeno i seguenti 
   * - **organization_name**
     - Vedi `OpenID.Discovery#OP_Metadata`_. Nome dell'organizzazione, vedi `OIDC-FED`_.
     - |spid-icon| |cieid-icon|
-  * - **logo_uri**
-    - URL del logo del RP in formato SVG.
-    - |spid-icon| |cieid-icon|
   * - **redirect_uris**
     - Vedi `OpenID.Registration#ClientMetadata`_. È obbligatorio l'uso dello schema HTTPS nel caso di client web-based.
     - |spid-icon| |cieid-icon|
@@ -64,22 +61,22 @@ Il Metadata di tipo **"openid_relying_party"** DEVE contenere almeno i seguenti 
     - Vedi `OpenID.Registration#ClientMetadata`_ e `JWK`_.
     - |spid-icon| |cieid-icon| 
   * - **id_token_signed_response_alg**
-    - Vedi `OpenID.Registration#ClientMetadata`_.
+    - Vedi `OpenID.Registration#ClientMetadata`_. Vedi signature :ref:`supported_algs`.
     - |spid-icon| |cieid-icon| 
   * - **id_token_encrypted_response_alg**
-    - Vedi `OpenID.Registration#ClientMetadata`_. Opzionale per Cie id. Obbligatorio per SPID. Se questo parametro è incluso l'ID Token restituito sarà un *Nested JWT* firmato e cifrato come definito in `OpenID.Core`_ Sezione 10.
+    - Vedi `OpenID.Registration#ClientMetadata`_. Vedi key encryption :ref:`supported_algs`.
     - |spid-icon| |cieid-icon| 
   * - **id_token_encrypted_response_enc**
-    - Vedi `OpenID.Registration#ClientMetadata`_. Obbligatorio solo nel caso sia presente anche il parametro *id_token_encrypted_response_alg*.
+    - Vedi `OpenID.Registration#ClientMetadata`_. Obbligatorio solo nel caso sia presente anche il parametro *id_token_encrypted_response_alg*. Vedi content encryption :ref:`supported_algs`.
     - |spid-icon| |cieid-icon| 
   * - **userinfo_signed_response_alg**
-    - Vedi `OpenID.Registration#ClientMetadata`_.
+    - Vedi `OpenID.Registration#ClientMetadata`_. Vedi signature :ref:`supported_algs`.
     - |spid-icon| |cieid-icon| 
   * - **userinfo_encrypted_response_alg**
-    - Vedi `OpenID.Registration#ClientMetadata`_.
+    - Vedi `OpenID.Registration#ClientMetadata`_. Vedi key encryption :ref:`supported_algs`.
     - |spid-icon| |cieid-icon|
   * - **userinfo_encrypted_response_enc**
-    - Vedi `OpenID.Registration#ClientMetadata`_.
+    - Vedi `OpenID.Registration#ClientMetadata`_. Vedi content encryption :ref:`supported_algs`.
     - |spid-icon| |cieid-icon|
   * - **token_endpoint_auth_method**
     - Vedi `OpenID.Registration#ClientMetadata`_. Il valore richiesto è **private_key_jwt**.

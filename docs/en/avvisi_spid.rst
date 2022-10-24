@@ -1,7 +1,7 @@
 .. include:: ../common/common_definitions.rst
 
-SPID Announcements
-------------------
+SPID regulatory references
+--------------------------
 
 The **SPID System** start-up, for its nature and complexity, can require interventions on different aspects
 with specifyings, clarifications, information notes and case studies, in order to provide support for a better
@@ -14,20 +14,25 @@ aspects and what else might be necessary for the correct System operation as a w
 The present technical rules implement the following SPID announcements:
     
 .. list-table::
-    :widths: 60 20
+    :widths: 20 40 20
     :header-rows: 1
 
     * - Announcement
+      - Reference
       - Date
-    * - `Announcement n.41 - Integrating LL.GG. OpenID Connect in SPID.pdf  <https://www.agid.gov.it/sites/default/files/repository_files/spid-avviso-n41-integrazione_ll.gg_._openid_connect_in_spid.pdf>`_
+
+    * - LL.GG. OpenID Connect in SPID
+      - `LL.GG. OpenID Connect in SPID <https://www.agid.gov.it/sites/default/files/repository_files/linee_guida_openid_connect_in_spid.pdf>`_
+      - 24/11/2021
+
+    * - Avviso n.41
+      - `Avviso n.41 - Integrazione LL.GG. OpenID Connect in SPID.pdf <https://www.agid.gov.it/sites/default/files/repository_files/spid-avviso-n41-integrazione_ll.gg_._openid_connect_in_spid.pdf>`_
       - 06/05/2022 
 
     * - Tabella Attributi utente v1.3
-      - Data
-    * - `TABELLA ATTRIBUTI IN SPID - Integrazione LL.GG. OpenID Connect in SPID.pdf  <https://www.agid.gov.it/sites/default/files/repository_files/tabella_attributi_v.1.3.pdf>`_
+      - `Tabella Attributi in SPID - Integrazione LL.GG. OpenID Connect in SPID.pdf <https://www.agid.gov.it/sites/default/files/repository_files/tabella_attributi_v.1.3.pdf>`_
       - 24/06/2022 
 
     * - Determina SPID OpenID Connect Federation
-      - Data
-    * - `Regole tecniche per il funzionamento della Federazione SPID OpenID Connect - Integrazione LL.GG. OpenID Connect in SPID.pdf  <https://www.agid.gov.it/sites/default/files/repository_files/regolamento-spid_openid_connect_federation_1.0.pdf>`_
-      - 06/05/2022 
+      - `Regole tecniche per il funzionamento della Federazione SPID OpenID Connect - Integrazione LL.GG. OpenID Connect in SPID.pdf  - <https://www.agid.gov.it/sites/default/files/repository_files/regolamento-spid_openid_connect_federation_1.0.pdf>`_
+      - 14/09/2022 

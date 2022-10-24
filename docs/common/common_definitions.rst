@@ -88,5 +88,7 @@
 .. _OAuth-DPoP: https://datatracker.ietf.org/doc/html/draft-ietf-oauth-dpop-10
 .. _OAuth-RS: https://datatracker.ietf.org/doc/html/draft-jones-oauth-resource-metadata
 .. _I-D.ietf-OAuth-Security-BCP: https://www.ietf.org/archive/id/draft-ietf-oauth-security-topics-19.html
+.. _RFC7518: https://www.rfc-editor.org/rfc/rfc7518
+.. _RFC7516: https://www.rfc-editor.org/rfc/rfc7516
 .. _ISO3166: https://www.iso.org/iso-3166-country-codes.html
 .. _i-d.ietf-oauth-iss-auth-resp: https://www.ietf.org/archive/id/draft-ietf-oauth-iss-auth-resp-00.html
