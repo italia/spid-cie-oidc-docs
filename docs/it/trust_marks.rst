@@ -65,7 +65,7 @@ La tabella seguente definisce gli <entity_type> riconoscibili all'interno delle 
     * - **openid_provider**
       - l'entità nel claim *sub* è un OP.
       - OP
-    * - **federation_entity**
+    * - **intermediary**
       - l'entità nel claim *sub* è un Soggetto Aggregatore.
       - SA
     * - **oauth_resource**
@@ -93,8 +93,7 @@ La tabella seguente definisce i <trustmark_profile> riconoscibili all'interno de
 federation_entity Trust Mark
 --------------------------------
 
-In aggiunta ai claim dei profili **public** e **private**, il profilo **federation_entity** individua i SA e aggiunge le estensioni **full** e **light** all'interno del claim **sa_profile**, 
-a seconda della modalità con cui operano rispetto ai Soggetti Aggregati
+In aggiunta ai claim dei profili **public** e **private**, il profilo **intermediary** individua i SA e aggiunge le estensioni **full** e **light** all'interno del claim **sa_profile**, a seconda della modalità con cui operano rispetto ai Soggetti Aggregati
 
 .. seealso::
 

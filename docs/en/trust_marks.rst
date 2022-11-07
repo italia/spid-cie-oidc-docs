@@ -83,7 +83,7 @@ The following table defines the <entity_types> that are recognizable inside the 
     * - **openid_provider**
       - the Entity in the claim *sub* is an OP.
       - OP
-    * - **federation_entity**
+    * - **intermediary**
       - the Entity in the claim *sub* is an Intermediary.
       - SA
     * - **oauth_resource**
@@ -111,9 +111,7 @@ The following table defines the <trustmark_profiles> that are recognizable insid
 **federation_entity** Trust Mark
 --------------------------------
 
-In addition to the claims of the **public** and **private** profiles, the profile **federation_entity**
-identifies the SA and adds the extensions **full** and **light**, according to the ways of operation 
-towards the subordinate Entities.
+In addition to the claims of the **public** and **private** profiles, the profile **intermediary** identifies the SA and adds the extensions **full** and **light** in the **sa_profile** claim, according to the ways of operation towards the subordinate Entities.
 
 .. seealso::
 
