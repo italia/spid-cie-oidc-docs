@@ -29,6 +29,21 @@ Il Metadata di tipo **"federation_entity"** DEVE contenere almeno i seguenti par
   * - **Claim**
     - **Descrizione**
     - **Supportato da**
+  * - **organization_name**
+    - Vedi Sezione 4.8 di `OIDC-FED`_
+    - |spid-icon| |cieid-icon|
+  * - **homepage_uri**
+    - Vedi Sezione 4.8 di `OIDC-FED`_
+    - |spid-icon| |cieid-icon|
+  * - **policy_uri**
+    - Vedi Sezione 4.8 di `OIDC-FED`_
+    - |spid-icon| |cieid-icon|
+  * - **logo_uri**
+    - (RACCOMANDATO) URL del logo dell'entità; DEVE essere in formato SVG. Vedi Sezione 4.8 di `OIDC-FED`_
+    - |spid-icon| |cieid-icon|
+  * - **contacts**
+    - PEC istituzionale dell'ente. Vedi Sezione 4.8 di `OIDC-FED`_
+    - |spid-icon| |cieid-icon|
   * - **federation_resolve_endpoint**
     - Vedi Sezione :ref:`Endpoint di Federazione <federation_endpoint>` e `OIDC-FED`_ Section 4.6
     - |spid-icon| |cieid-icon|
@@ -45,17 +60,11 @@ Il Metadata di tipo **"openid_relying_party"** DEVE contenere almeno i seguenti 
   * - **Claim**
     - **Descrizione**
     - **Supportato da** 
-  * - **organization_name**
-    - Vedi `OpenID.Discovery#OP_Metadata`_. Nome dell'organizzazione, vedi `OIDC-FED`_.
-    - |spid-icon| |cieid-icon|
   * - **redirect_uris**
     - Vedi `OpenID.Registration#ClientMetadata`_. È obbligatorio l'uso dello schema HTTPS nel caso di client web-based.
     - |spid-icon| |cieid-icon|
   * - **grant_types**
     - Vedi `OpenID.Registration#ClientMetadata`_. I valori ammissibili **authorization_code** e **refresh_token**.
-    - |spid-icon| |cieid-icon|
-  * - **logo_uri**
-    - Vedi `OpenID.Registration#ClientMetadata`_. L'immagine disponibile all'URL indicata DEVE essere in formato *SVG*.
     - |spid-icon| |cieid-icon|
   * - **jwks**
     - Vedi `OpenID.Registration#ClientMetadata`_ e `JWK`_.

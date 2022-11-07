@@ -29,6 +29,21 @@ L'EC di un OP DEVE configurare un metadata di tipo **"federation_entity"** e con
   * - **Claim**
     - **Descrizione**
     - **Supportato da**
+  * - **organization_name**
+    - Vedi Sezione 4.8 di `OIDC-FED`_
+    - |spid-icon| |cieid-icon|
+  * - **homepage_uri**
+    - Vedi Sezione 4.8 di `OIDC-FED`_
+    - |spid-icon| |cieid-icon|
+  * - **policy_uri**
+    - Vedi Sezione 4.8 di `OIDC-FED`_
+    - |spid-icon| |cieid-icon|
+  * - **logo_uri**
+    - URL del logo dell'entità; DEVE essere in formato SVG. Vedi Sezione 4.8 di `OIDC-FED`_
+    - |spid-icon| |cieid-icon|
+  * - **contacts**
+    - PEC istituzionale dell'ente. Vedi Sezione 4.8 di `OIDC-FED`_
+    - |spid-icon| |cieid-icon|
   * - **federation_resolve_endpoint**
     - Vedi Sezione :ref:`Endpoint di Federazione <federation_endpoint>` e `OIDC-FED`_ Section 4.6
     - |spid-icon| |cieid-icon|
@@ -45,14 +60,8 @@ L'EC di un OP DEVE configurare un metadata di tipo **"openid_provider"** DEVE co
   * - **Claim**
     - **Descrizione**
     - **Supportato da**
-  * - **organization_name**
-    - Vedi `OpenID.Discovery#OP_Metadata`_. Nome dell'organizzazione, vedi `OIDC-FED`_.
-    - |spid-icon| |cieid-icon|
   * - **issuer**
     - Vedi `OpenID.Discovery#OP_Metadata`_. DEVE essere valorizzato con un HTTPS URL che identifica univocamente l'OP.
-    - |spid-icon| |cieid-icon|
-  * - **logo_uri**
-    - URL del logo del OP in formato SVG.
     - |spid-icon| |cieid-icon|
   * - **authorization_endpoint**
     - Vedi `OpenID.Discovery#OP_Metadata`_.
