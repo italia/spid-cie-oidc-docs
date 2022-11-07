@@ -184,8 +184,7 @@ Gli attributi definiti all'interno dei TM aderiscono a quanto definito all'inter
       - String. Specifica se l'ente appartiene alla pubblica amministrazione italiana o al settore privato (**public** o **private**)
       - |spid-icon| |cieid-icon|
     * - **id_code**
-      - String. Codice di identificazione dell'organizzazione. A seconda del valore del tipo di organizzazione, deve essere
-        indicato il codice IPA (per il tipo di organizzazione pubblica) o il numero di partita IVA (per quello privato).
+      - String Array. Codice di identificazione dell'organizzazione. A seconda del valore del tipo di organizzazione, DEVE contenere almeno: il codice IPA (per il tipo di organizzazione pubblica) o il numero di partita IVA e/o il codice fiscale (per quello privato).
       - |spid-icon| |cieid-icon|
     * - **email**
       - String. Email istituzionale o PEC dell'organizzazione.
@@ -197,17 +196,13 @@ Gli attributi definiti all'interno dei TM aderiscono a quanto definito all'inter
       - String. RICHIESTO per SA. Specifica il profilo dell’Aggregatore, **full** o **light**.
       - |spid-icon| |cieid-icon|
 
-.. warning::
-  Nel caso di CIE id, le organizzazioni pubbliche che oltre al **codice IPA** dispongono anche di un **codice univoco AOO** DEVONO riportare quest'ultimo all'interno del parametro **id_code** secondo il seguente formato *<IPA_code>-<AOO_code>*.  Inoltre, il valore contenuto nel parametro **exp** NON DEVE essere superiore alla durata delle specifiche convenzioni/accordi stipulati in fase di onboarding tra l'emettitore dei Trust Mark e le organizzazioni che ricevono il TM.  
+.. admonition:: |cieid-icon|
+
+  Nel caso di CIE id, le organizzazioni pubbliche che oltre al **codice IPA** dispongono anche di un **codice univoco AOO** DEVONO riportare anche quest'ultimo all'interno del parametro **id_code**. In questo caso **id_code** DEVE contenere il **codice IPA** seguito dal **codice univoco AOO**. Inoltre, il valore contenuto nel parametro **exp** NON DEVE essere superiore alla durata delle specifiche convenzioni/accordi stipulati in fase di onboarding tra l'emettitore dei Trust Mark e le organizzazioni che ricevono il TM.  
 
 .. seealso::
 
- * `OIDC-FED`_ Sezione 5.3.1.
+  - `OIDC-FED`_ Sezione 5.3.1.
+  - Esempi non normativi: :ref:`Trust Mark issued by TA to a RP <Esempio_EN1.5>`, :ref:`Trust Mark issued by TA to a SA <Esempio_EN1.6>`, :ref:`Trust Mark issued by SA to a RP <Esempio_EN1.7>`,
 
 
-
-.. toctree:: 
-   :maxdepth: 1
-
-   trust_marks_spid.rst
-   trust_marks_cie.rst

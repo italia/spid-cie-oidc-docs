@@ -396,7 +396,112 @@ EN 1.4. Entity Configuration Response Trust Anchor
      }
  }
 
+.. _Esempio_EN1.5:
 
+EN 1.5. Trust Mark issued by TA to a RP
++++++++++++++++++++++++++++++++++++++++
+
+.. code-block:: json
+
+ {
+     "trust_marks":[
+         {
+             "id":"https://registry.interno.gov.it/openid_relying_party/public/",
+             "iss":"https://registry.interno.gov.it/",
+             "trust_mark":"$JWT"
+         }
+     ]
+ }
+
+
+Where the $JWT payload is:
+
+.. code-block:: json
+
+ {
+     "id":"https://registry.interno.gov.it/openid_relying_party/public/",
+     "iss":"https://sa.esempio.it/",
+     "sub":"https://rp.esempio.it/",
+     "iat":1579621160,
+     "organization_type":"public",
+     "id_code":["123456","Uff_protocollo"],
+     "email":"email_or_pec@rp.it",
+     "organization_name#it":"Denominazione del RP",
+     "ref":"https://documentazione_di_riferimento.it/"
+ }
+
+
+.. _Esempio_EN1.6:
+
+EN 1.6. Trust Mark issued by TA to a SA
++++++++++++++++++++++++++++++++++++++++
+
+.. code-block:: json
+
+ {
+     "trust_marks":[
+         {
+             "id":"https://registry.interno.gov.it/intermediary/",
+             "iss":"https://registry.interno.gov.it/",
+             "trust_mark":"$JWT"
+         }
+     ]
+ }
+
+
+Where the $JWT payload is:
+
+.. code-block:: json
+
+ {
+     "id":"https://registry.interno.gov.it/intermediary/",
+     "iss":"https://registry.interno.gov.it/",
+     "sub":"https://sa.esempio.it/",
+     "iat":1579621160,
+     "organization_type":"private",
+     "id_code":["1234567890"],
+     "email":"email_or_pec@intermediate.it",
+     "organization_name#it":"Denominazione del SA",
+     "sa_profile":"full",
+     "ref":"https://documentazione_di_riferimento.it/"
+ }
+
+.. _Esempio_EN1.7:
+
+EN 1.7. Trust Mark issued by SA to a RP
++++++++++++++++++++++++++++++++++++++++
+
+.. code-block:: json
+
+ {
+     "trust_marks":[
+         {
+             "id":"https://registry.interno.gov.it/openid_relying_party/public/",
+             "iss":"https://sa.esempio.it",
+             "trust_mark":"$JWT"
+         }
+     ]
+ }
+
+
+Where the $JWT payload is:
+
+.. code-block:: json
+
+ {
+     "id":"https://registry.interno.gov.it/openid_relying_party/public/",
+     "iss":"https://sa.esempio.it/",
+     "sub":"https://rp.esempio.it/",
+     "iat":1579621160,
+     "organization_type":"public",
+     "id_code":["987654"],
+     "email":"email_or_pec@rp.it",
+     "organization_name#it":"Denominazione del RP",
+     "ref":"https://documentazione_di_riferimento.it/"
+ }
+
+
+ 
 .. _Esempio_EN2:
 
 EN 2. Entity Statement Request
