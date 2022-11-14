@@ -13,9 +13,8 @@ and regarding itself, published at the web endpoint **.well-known/openid-federat
 Entity Configuration Signature
 ++++++++++++++++++++++++++++++
 
-The JWT :rfc:`7515` signature occurs through the RSA SHA-256 (RS256) algorithm. All the Federation
-members MUST support this signing algorithm. All the signature-check operations regarding the ESs, ECs and TMs,
-are carried out with the Federation public keys.
+All the signature-check operations regarding the ESs, ECs and TMs,
+are carried out with the Federation public keys. For the supported algorithms refer to Section :ref:`Cryptografic Algorithm <supported_algs>`
 
 .. warning::
   The Federation keys SHOULD be different from the OIDC Core ones. The latter ones are contained in the OIDC Metadata. An EC contains both the Federation public keys and the OIDC Metadata. 
