@@ -1,3 +1,5 @@
+.. include:: ../common/common_definitions.rst
+  
 .. _supported_algs:
 
 Algoritmi crittografici
