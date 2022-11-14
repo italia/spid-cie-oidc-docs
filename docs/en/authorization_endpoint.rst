@@ -242,7 +242,7 @@ as described in the related tables defined by the `Linee Guida UX SPID`_.
      - **Description**
      - **Supported by**
    * - **error**
-     - Vedi :ref:`Error codes <codici_errore>`
+     - See :ref:`Error codes <codici_errore>`
      - |spid-icon| |cieid-icon|
    * - **error_description**
      - Error description.
