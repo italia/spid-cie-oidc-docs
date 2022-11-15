@@ -308,17 +308,16 @@ EN 1.3. Entity Configuration Response Intermediary
      },
      "metadata":{
          "federation_entity":{
+             "organization_name":"Soggetto Aggregatore di esempio",
              "contacts":[
                  "soggetto@aggregatore.it"
              ],
+             "homepage_uri":"https://soggetto.aggregatore.it",
+             "logo_uri":"https://aggregatore.it/static/svg/logo.svg",
              "federation_fetch_endpoint":"https://aggregatore.it/fetch/",
              "federation_resolve_endpoint":"https://aggregatore.it/resolve/",
              "federation_list_endpoint":"https://aggregatore.it/list/",
-             "homepage_uri":"https://soggetto.aggregatore.it",
-             "name":"Soggetto Aggregatore di esempio"
-         },
-         "trust_mark_issuer": {
-             "federation_status_endpoint":"https://aggregatore.it/trust_mark_status/",
+             "federation_trust_mark_status_endpoint":"https://aggregatore.it/trust_mark_status/"
          }
      },
      "trust_marks":[
@@ -368,17 +367,16 @@ EN 1.4. Entity Configuration Response Trust Anchor
      },
      "metadata":{
          "federation_entity": {
+             "organization_name": "example TA"
              "contacts":[
                  "spid.tech@agid.gov.it"
              ],
+             "homepage_uri": "https://registry.agid.gov.it/",
+             "logo_uri":"https://registry.agid.gov.it/static/svg/logo.svg",
              "federation_fetch_endpoint": "https://registry.agid.gov.it/fetch/",
              "federation_resolve_endpoint": "https://registry.agid.gov.it/resolve/",
              "federation_list_endpoint": "https://registry.agid.gov.it/list/",
-             "homepage_uri": "https://registry.agid.gov.it/",
-             "name": "example TA"
-         },
-          "trust_mark_issuer": {
-             "federation_status_endpoint": "https://registry.agid.gov.it/trust_mark_status/"
+             "federation_trust_mark_status_endpoint": "https://registry.agid.gov.it/trust_mark_status/"
          }
      },
      "trust_marks_issuers":{

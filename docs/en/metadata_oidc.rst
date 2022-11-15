@@ -16,6 +16,7 @@ In OIDC-FED the OIDC Metadata regarding an RP or OP is defined inside the claim 
 
    metadata_oidc_op.rst
    metadata_oidc_rp.rst
+   metadata_oidc_ta_sa.rst
    metadata_aa.rst
 
 
