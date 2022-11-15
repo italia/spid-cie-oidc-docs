@@ -40,7 +40,7 @@ Quando un Provider (OP) riceve una richiesta di autorizzazione da parte di un RP
 
 L'OP estrae l'identificativo univoco (**client_id**) dall'oggetto *request* contenuto all'interno della *Authorization Request* ed effettua una richiesta di Entity Configuration presso il :ref:`RP<Esempio_EN1.1>`. Ottiene la configurazione *self-signed* del RP e convalida la firma dei Trust Mark riconoscibili all'interno della Federazione [1]_. 
 
-Se il RP non espone all'interno della sua configurazione nessun Trust Mark riconoscibile per il profilo di RP (vedi Sezione :ref:`Trust Mark<Trust_Mark>`) il Provider DEVE rifiutare l'autorizzazione con un messaggio di errore di tipo *unauthorized_client*.
+Se il RP non espone all'interno della sua configurazione nessun Trust Mark riconoscibile per il profilo di RP (vedi Sezione :ref:`Trust Mark<Trust_Mark>`) il Provider DEVE rifiutare l'autorizzazione con un messaggio di errore come definito nella Sezione :ref:`Gestione degli errori di Federazione <errors_federation>`.
 
 Se il Provider convalida con successo almeno un Trust Mark per il profilo RP contenuto all'interno della configurazione del RP richiedente, estrae le entità superiori contenute nel claim **authority_hints** ed avvia la fase di Federation Entity Discovery. Ne consegue il calcolo della **Trust Chain** e l'ottenimento del Metadata finale.
 

@@ -13,7 +13,7 @@ The RP gets the list of the OPs in JSON format by querying the :ref:`endpoint li
 available by the :ref:`Trust Anchor<Esempio_EN3>`. For each subject contained in the :ref:`JSON response<Esempio_EN3.1>` and corresponding to an OP, the RP :ref:`requests<Esempio_EN2>` the self-signed Entity Configuration by the OP.
 
 For each EC of the OPs, the RP validates the signature by using the public key obtained in the Entity
-Statement released by the Trust Anchor. After validating the Entity Configuration signature with the TA's public key, RP recognizes the trust towards the OP.
+Statement released by the Trust Anchor. After validating the Entity Configuration signature with the TA's public key, RP establishes the trust with the OP.
 
 Finally, the RP applies the policies published by the Trust Anchor on the OP's Metadata and saves the resulting
 Metadata by associating it to an expiry date (claim **exp**). The expiry date corresponds to the lowest 
@@ -51,7 +51,7 @@ The OP extracts the unique identifier (**client_id**) from the object *request* 
 The OP obtains the Entity Configuration of the RP and validates the signatures of Trust Mark that are
 recognized inside the Federation [1]_. 
 
-If the RP configuration does not expose any Trust Mark that is recognizable by the RP profile (see Section :ref:`Trust Mark<Trust_Mark>`), the Provider MUST refuse the authorization with an error message of type *unauthorized_client*.
+If the RP configuration does not expose any Trust Mark that is recognizable by the RP profile (see Section :ref:`Trust Mark<Trust_Mark>`), the Provider MUST refuse the authorization with an error message as defined in Section :ref:`Federation Error Management <errors_federation>`.
 
 If the Provider successfully validates at least a Trust Mark for the RP profile contained inside the
 configuration of the requesting RP, it extracts the superior Entities from the claim **authority_hints** and

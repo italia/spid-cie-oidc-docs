@@ -40,23 +40,23 @@ NOT trigger a procedure of Federation Entity Discovery for each request arrival.
 
 
 
-Good Practices
+Best Practices
 --------------
 
-In this section we describe some good practices. 
+In this section we describe some best practices. 
 
 
 Specializing the OpenID Core and Federation public keys
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-It is a good practice to use public keys that are specialized for the two kinds of operations, Core and Federation.
+It is a best practice to use public keys that are specialized for the two kinds of operations, Core and Federation.
 
 Upgrading strategy of the OpenID Metadata
 +++++++++++++++++++++++++++++++++++++++++
 
 The interoperability among members works through the Metadata obtained from the Trust Chain calculation and preservation. This means that if an OP at the time T calculates the Trust Chain for an RP and this, at the time T+n, changes its own Metadata, the OP could consequently run into problems of validating the RP authorization requests, until the OP will have once again updated the RP-related Trust Chain.
 
-A good practice to avoid service stops on the OIDC Core operations, is adding the new public keys inside the objects *jwks* without removing the previous values. Or, for example, the new *redirect_uri*.
+A best practice to avoid service stops on the OIDC Core operations, is adding the new public keys inside the objects *jwks* without removing the previous values. Or, for example, the new *redirect_uri*.
 
 In this way, after exceeding the maximum duration limit of the Trust Chain, defined in the claim **exp** and published in the TA Entity Configuration, it is certain that all the members have renewed their Trust Chain and it is possible, for the Leaf administrators, to remove the old definitions from the top of the list.
 

@@ -13,11 +13,11 @@ Un'**Entity Configuration (EC)** è un Metadata di Federazione in formato Jose e
 Firma della Entity Configuration
 ++++++++++++++++++++++++++++++++
 
-La firma dei JWT :rfc:`7515` avviene mediante l'algoritmo RSA SHA-256 (RS256). Tutti i partecipanti della Federazione DEVONO supportare questo algoritmo di firma. Tutte le operazioni di verifica della firma relative agli ES, EC e TM sono eseguite con le chiavi pubbliche di Federazione.
+Tutte le operazioni di verifica della firma relative agli ES, EC e TM sono eseguite con le chiavi pubbliche di Federazione. Per quanto riguarda gli algoritmi di firma supportati si veda la Sezione :ref:`Algoritmi Crittografici <supported_algs>`
 
 
 .. warning::
-  Distinguiamo le chiavi di Federazione da quelle di OIDC Core. Queste ultime risiedono nei Metadata OIDC. Un EC contiene sia le chiavi pubbliche di Federazione che i Metadata OIDC.
+  Distinguiamo le chiavi di Federazione da quelle di OIDC Core. Queste ultime risiedono nei Metadata OIDC. Un EC contiene sia le chiavi pubbliche di Federazione che i Metadata OIDC. Le chiavi di Federazione DOVREBBERO essere diverse da quelle di OIDC Core.
 
 
 
