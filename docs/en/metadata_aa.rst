@@ -14,9 +14,6 @@ An AA MUST publish in its EC a *federation_entity* Metadata and an *oauth_resour
       "federation_entity":{
         ...
       },
-      "trust_mark_issuer":{
-        ...
-      },
       "oauth_authorization_server":{
         ...
       },
@@ -36,13 +33,25 @@ The AA Metadata of type **"federation_entity"** MUST contain at least the follow
     - **Description**
     - **Supported by**
   * - **organization_name**
-    - Name of the organization.
+    - See `OIDC-FED`_ Section 4.8
+    - |spid-icon| |cieid-icon|
+  * - **homepage_uri**
+    - See `OIDC-FED`_ Section 4.8
+    - |spid-icon| |cieid-icon|
+  * - **policy_uri**
+    - See `OIDC-FED`_ Section 4.8
+    - |spid-icon| |cieid-icon|
+  * - **logo_uri**
+    - URL of the entity's logo; it MUST be in SVG format. See `OIDC-FED`_ Section 4.8
+    - |spid-icon| |cieid-icon|
+  * - **contacts**
+    - Institutional certified email address (PEC) of the entity. See `OIDC-FED`_ Section 4.8
+    - |spid-icon| |cieid-icon|
+  * - **federation_trust_mark_status_endpoint**
+    - See Section :ref:`Federation Endpoint <federation_endpoint>` and `OIDC-FED`_ Section 4.8.
     - |spid-icon| |cieid-icon|
   * - **federation_resolve_endpoint**
-    - See Section :ref:`Federation Endpoint <federation_endpoint>` and `OIDC-FED`_ Section 4.6
-    - |spid-icon| |cieid-icon|
-  * - **federation_status_endpoint**
-    - See Section :ref:`Federation Endpoint <federation_endpoint>` and `OIDC-FED`_ Section 4.6
+    - See Section :ref:`Federation Endpoint <federation_endpoint>` and `OIDC-FED`_ Section 4.8.
     - |spid-icon| |cieid-icon|
 
 The AA Metadata with **"oauth_authorization_server"** MUST contain at least the following mandatory parameters:
@@ -102,9 +111,6 @@ The AA Metadata of type **"oauth_resource"** MUST contain at least the following
   * - **Claim**
     - **Description**
     - **Supported by**
-  * - **logo_uri**
-    - See :rfc:`7591`. he image available at the indicated URL MUST be of *SVG* format.
-    - |spid-icon| |cieid-icon|
   * - **resource**
     - See `OAuth-RS`_. One or more HTTPS URLs that identify the endpoints of the protected resources.
     - |spid-icon| |cieid-icon|

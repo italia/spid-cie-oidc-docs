@@ -14,9 +14,6 @@ Una AA DEVE pubblicare, all'interno del suo EC, un Metadata *federation_entity* 
       "federation_entity":{
         ...
       },
-      "trust_mark_issuer":{
-        ...
-      },
       "oauth_authorization_server":{
         ...
       },
@@ -36,24 +33,27 @@ Il Metadata di tipo **"federation_entity"** DEVE contenere almeno i seguenti par
     - **Descrizione**
     - **Supportato da**
   * - **organization_name**
-    - Denominazione dell'organizzazione.
+    - Vedi Sezione 4.8 di `OIDC-FED`_
+    - |spid-icon| |cieid-icon|
+  * - **homepage_uri**
+    - Vedi Sezione 4.8 di `OIDC-FED`_
+    - |spid-icon| |cieid-icon|
+  * - **policy_uri**
+    - Vedi Sezione 4.8 di `OIDC-FED`_
+    - |spid-icon| |cieid-icon|
+  * - **logo_uri**
+    - URL del logo dell'entità; DEVE essere in formato SVG. Vedi Sezione 4.8 di `OIDC-FED`_
+    - |spid-icon| |cieid-icon|
+  * - **contacts**
+    - PEC istituzionale dell'ente. Vedi Sezione 4.8 di `OIDC-FED`_
+    - |spid-icon| |cieid-icon|
+  * - **federation_trust_mark_status_endpoint**
+    - Vedi Sezione :ref:`Endpoint di Federazione <federation_endpoint>` e `OIDC-FED`_ Section 4.8
     - |spid-icon| |cieid-icon|
   * - **federation_resolve_endpoint**
-    - Vedi Sezione :ref:`Endpoint di Federazione <federation_endpoint>` e `OIDC-FED`_ Section 4.6
+    - Vedi Sezione :ref:`Endpoint di Federazione <federation_endpoint>` e `OIDC-FED`_ Section 4.8
     - |spid-icon| |cieid-icon|
 
-Il Metadata di tipo **"trust_mark_issuer"** DEVE contenere almeno i seguenti parametri obbligatori:
-
-.. list-table:: 
-  :widths: 20 60 20
-  :header-rows: 1
-
-  * - **Claim**
-    - **Descrizione**
-    - **Supportato da**
-  * - **federation_status_endpoint**
-    - Vedi Sezione :ref:`Endpoint di Federazione <federation_endpoint>` e `OIDC-FED`_ Section 4.6
-    - |spid-icon| |cieid-icon|
 
 Il Metadata di tipo **"oauth_authorization_server"** DEVE contenere almeno i seguenti parametri obbligatori:
 
@@ -111,9 +111,6 @@ Il Metadata di tipo **"oauth_resource"** DEVE contenere almeno i seguenti parame
   * - **Claim**
     - **Descrizione**
     - **Supportato da**
-  * - **logo_uri**
-    - Vedi :rfc:`7591`. L'immagine disponibile all'URL indicata DEVE essere in formato *SVG*.
-    - |spid-icon| |cieid-icon|
   * - **resource**
     - Vedi `OAuth-RS`_. Una o più HTTPS URL che identificano gli endpoint delle risorse protette.
     - |spid-icon| |cieid-icon|
