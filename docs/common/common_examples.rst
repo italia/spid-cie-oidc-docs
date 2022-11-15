@@ -317,7 +317,7 @@ EN 1.3. Entity Configuration Response Intermediary
              "federation_fetch_endpoint":"https://aggregatore.it/fetch/",
              "federation_resolve_endpoint":"https://aggregatore.it/resolve/",
              "federation_list_endpoint":"https://aggregatore.it/list/",
-             "federation_trsut_mark_status":"https://aggregatore.it/trust_mark_status/"
+             "federation_trust_mark_status_endpoint":"https://aggregatore.it/trust_mark_status/"
          }
      },
      "trust_marks":[
@@ -376,7 +376,7 @@ EN 1.4. Entity Configuration Response Trust Anchor
              "federation_fetch_endpoint": "https://registry.agid.gov.it/fetch/",
              "federation_resolve_endpoint": "https://registry.agid.gov.it/resolve/",
              "federation_list_endpoint": "https://registry.agid.gov.it/list/",
-             "federation_trust_mark_status": "https://registry.agid.gov.it/trust_mark_status/"
+             "federation_trust_mark_status_endpoint": "https://registry.agid.gov.it/trust_mark_status/"
          }
      },
      "trust_marks_issuers":{
