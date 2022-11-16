@@ -32,12 +32,5 @@ An Entity of type **AA**, in addition to the common Federation endpoints like al
 
 
 .. warning::
-  With respect to what defined in the OIDC-FED, to the **Entity listing endpoint** is added the optional
-  claim **entity_type**, that is a filter of the Entity type of the subordinates.
+  As defined in the OIDC-FED, to the **Entity listing endpoint** is added the optional claim **entity_type**, that is a filter of the Entity type of the subordinates.
 
-.. _generic_error_response:
-
-Generic error response
-++++++++++++++++++++++
-
-If the request is malformed or errors occur during the request processing, the format defined at `OIDC-FED`_ Section 7.5 SHOULD be used.

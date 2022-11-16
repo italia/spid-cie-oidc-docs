@@ -32,6 +32,7 @@ Index of content
    soggetti_aggregatori.rst
    trust_negotiation.rst
    federation_endpoint.rst
+   errors_federation.rst
    metadata_oidc.rst
    flusso_autenticazione.rst
    authorization_endpoint.rst
@@ -40,6 +41,7 @@ Index of content
    attributi_utente.rst
    introspection_endpoint.rst
    revocation_endpoint.rst
+   cryptographic_algos.rst
    confronto_oidc_cie_e_oidc_igov.rst
    differenze_oidc_fed.rst
    seccons_bcps.rst

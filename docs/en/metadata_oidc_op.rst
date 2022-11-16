@@ -31,6 +31,21 @@ mandatory parameters:
   * - **Claim**
     - **Description**
     - **Supported by**
+  * - **organization_name**
+    - See `OIDC-FED`_ Section 4.8
+    - |spid-icon| |cieid-icon|
+  * - **homepage_uri**
+    - See `OIDC-FED`_ Section 4.8
+    - |spid-icon| |cieid-icon|
+  * - **policy_uri**
+    - See `OIDC-FED`_ Section 4.8
+    - |spid-icon| |cieid-icon|
+  * - **logo_uri**
+    - URL of the entity's logo; it MUST be in SVG format. See `OIDC-FED`_ Section 4.8
+    - |spid-icon| |cieid-icon|
+  * - **contacts**
+    - Institutional certified email address (PEC) of the entity. See `OIDC-FED`_ Section 4.8
+    - |spid-icon| |cieid-icon|
   * - **federation_resolve_endpoint**
     - See Section :ref:`Federation Endpoint <federation_endpoint>` and `OIDC-FED`_ Section 4.6.
     - |spid-icon| |cieid-icon|
@@ -45,12 +60,6 @@ The EC of an OP MUST configure a metadata of type **"openid_provider"**, that MU
   * - **Claim**
     - **Description**
     - **Supported by**
-  * - **organization_name**
-    - Vedi `OpenID.Discovery#OP_Metadata`_. Organization name, see `OIDC-FED`_.
-    - |spid-icon| |cieid-icon|
-  * - **logo_uri**
-    - URL of the entity's logo, in SVG format.
-    - |spid-icon| |cieid-icon|
   * - **issuer**
     - See `OpenID.Discovery#OP_Metadata`_. It MUST contain an HTTPS URL that uniquely identifies the OP.
     - |spid-icon| |cieid-icon|
