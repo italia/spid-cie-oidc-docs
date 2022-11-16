@@ -27,14 +27,14 @@ Nella seguente tabella sono presenti alcuni esempi non normativi per evidenziare
       - Modalità **Full**
     * - **client_id**
       - \https://www.rp.it/
-      - \https://www.rp.it/<id_code>/
+      - \https://www.sa.it/<id_code>/
     * - **redirect_uri**
       - \https://www.rp.it/callback/
-      - \https://www.rp.it/<id_code>/callback/
+      - \https://www.sa.it/<id_code>/callback/
     * - **authorization endpoint**
       - \https://www.rp.it/authorization/
-      - \https://www.rp.it/<id_code>/authorization/
+      - \https://www.sa.it/<id_code>/authorization/
     * - **Entity Configuration**
       - \https://www.rp.it/.well-known/openid-federation
-      - \https://www.rp.it/<id_code>/.well-known/openid-federation
+      - \https://www.sa.it/<id_code>/.well-known/openid-federation
 

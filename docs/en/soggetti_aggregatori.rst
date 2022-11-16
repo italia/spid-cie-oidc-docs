@@ -14,7 +14,7 @@ The **Full** SAs arrange building an authentication and federation interface, on
     - **.well-known/openid-federation**, containing a *subject identifier* or the unique RP;
     - Authorization callback endpoint for obtaining the auth code by the OP (**redirect_uri**).
 
-The **Full** type SAs MUST add the **id_code** (as defined in the Section :ref:`Trust Mark Composition <ComposizioneTM>`) inside the web path, which in turn is inside the client_id that identifies the subordinate Entity ``<SA_dominio>/<id_code>/``.
+The **Full** type SAs MUST add the **id_code** (as defined in the Section :ref:`Trust Mark Composition <ComposizioneTM>`) inside the web path, which in turn is inside the client_id that identifies the subordinate Entity ``<SA_domain>/<id_code>/``.
 
 The following table contains some non-normative examples for outlining the differences between the SAs of
 types Light and Full:
@@ -28,13 +28,13 @@ types Light and Full:
       - Mode **Full**
     * - **client_id**
       - \https://www.rp.it/
-      - \https://www.rp.it/<id_code>/
+      - \https://www.sa.it/<id_code>/
     * - **redirect_uri**
       - \https://www.rp.it/callback/
-      - \https://www.rp.it/<id_code>/callback/
+      - \https://www.sa.it/<id_code>/callback/
     * - **authz endpoint**
       - \https://www.rp.it/authorization/
-      - \https://www.rp.it/<id_code>/authorization/
+      - \https://www.sa.it/<id_code>/authorization/
     * - **Entity Configuration**
       - \https://www.rp.it/.well-known/openid-federation
-      - \https://www.rp.it/<id_code>/.well-known/openid-federation
+      - \https://www.sa.it/<id_code>/.well-known/openid-federation

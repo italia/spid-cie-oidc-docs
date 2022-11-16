@@ -22,71 +22,71 @@ EN 1.1. Entity Configuration Response Relying Party
  Content-Type: application/entity-statement+jwt 
  
  {
-     "alg":"RS256",
-     "kid":"2HnoFS3YnC9tjiCaivhWLVUJ3AxwGGz_98uRFaqMEEs",
-     "typ":"entity-statement+jwt"
+     "alg": "RS256",
+     "kid": "2HnoFS3YnC9tjiCaivhWLVUJ3AxwGGz_98uRFaqMEEs",
+     "typ": "entity-statement+jwt"
  }
  .
  {
-     "exp":1649590602,
-     "iat":1649417862,
-     "iss":"https://rp.example.it/",
-     "sub":"https://rp.example.it/",
-     "jwks":{
-         "keys":[
+     "exp": 1649590602,
+     "iat": 1649417862,
+     "iss": "https://rp.example.it/",
+     "sub": "https://rp.example.it/",
+     "jwks": {
+         "keys": [
              {
-                 "kty":"RSA",
-                 "n":"5s4qi …",
-                 "e":"AQAB",
-                 "kid":"2HnoFS3YnC9tjiCaivhWLVUJ3AxwGGz_98uRFaqMEEs"
+                 "kty": "RSA",
+                 "n": "5s4qi …",
+                 "e": "AQAB",
+                 "kid": "2HnoFS3YnC9tjiCaivhWLVUJ3AxwGGz_98uRFaqMEEs"
              }
          ]
      },
-     "metadata":{
-         "openid_relying_party":{
-             "application_type":"web",
-             "client_id":"https://rp.example.it/",
-             "client_registration_types":[
+     "metadata": {
+         "openid_relying_party": {
+             "application_type": "web",
+             "client_id": "https://rp.example.it/",
+             "client_registration_types": [
                  "automatic"
              ],
-             "jwks":{
-                 "keys":[
+             "jwks": {
+                 "keys": [
                      {
-                         "kty":"RSA",
-                         "use":"sig",
-                         "n":"1Ta-sE …",
-                         "e":"AQAB",
-                         "kid":"YhNFS3YnC9tjiCaivhWLVUJ3AxwGGz_98uRFaqMEEs"
+                         "kty": "RSA",
+                         "use": "sig",
+                         "n": "1Ta-sE …",
+                         "e": "AQAB",
+                         "kid": "YhNFS3YnC9tjiCaivhWLVUJ3AxwGGz_98uRFaqMEEs"
                      }
                  ]
              },
-             "client_name":"Name of an example organization",
-             "contacts":[
+             "client_name": "Name of an example organization",
+             "contacts": [
                  "ops@rp.example.it"
              ],
-             "grant_types":[
+             "grant_types": [
                  "refresh_token",
                  "authorization_code"
              ],
-             "redirect_uris":[
+             "redirect_uris": [
                  "https://rp.example.it/oidc/rp/callback/"
              ],
-             "response_types":[
+             "response_types": [
                  "code"
              ],
-             "subject_type":"pairwise"
+             "subject_type": "pairwise"
          },
-         "federation_entity":{
-             "federation_resolve_endpoint":"https://rp.example.it/resolve/"
+         "federation_entity": {
+             "federation_resolve_endpoint": "https://rp.example.it/resolve/"
          }
      },
-     "trust_marks":[
+     "trust_marks": [
          {
-             "id":"https://registry.agid.gov.it/openid_relying_party/public/",
-             "trust_mark":"eyJh …"
+             "id": "https://registry.agid.gov.it/openid_relying_party/public/",
+             "trust_mark": "eyJh …"
          }
      ],
-     "authority_hints":[
+     "authority_hints": [
          "https://registry.agid.gov.it/"
      ]
  }
@@ -104,60 +104,60 @@ EN 1.2. Entity Configuration Response Openid Provider
  Content-Type: application/entity-statement+jwt 
  
  {
-     "alg":"RS256",
-     "kid":"dB67gL7ck3TFiIAf7N6_7SHvqk0MDYMEQcoGGlkUAAw",
-     "typ":"entity-statement+jwt"
+     "alg": "RS256",
+     "kid": "dB67gL7ck3TFiIAf7N6_7SHvqk0MDYMEQcoGGlkUAAw",
+     "typ": "entity-statement+jwt"
  }
  .
  {
-     "exp":1649610249,
-     "iat":1649437449,
-     "iss":"https://openid.provider.it/",
-     "sub":"https://openid.provider.it/",
-     "jwks":{
-         "keys":[
+     "exp": 1649610249,
+     "iat": 1649437449,
+     "iss": "https://openid.provider.it/",
+     "sub": "https://openid.provider.it/",
+     "jwks": {
+         "keys": [
              {
-                 "kty":"RSA",
-                 "e":"AQAB",
-                 "n":"01_4a …",
-                 "kid":"dB67gL7ck3TFiIAf7N6_7SHvqk0MDYMEQcoGGlkUAAw"
+                 "kty": "RSA",
+                 "e": "AQAB",
+                 "n": "01_4a …",
+                 "kid": "dB67gL7ck3TFiIAf7N6_7SHvqk0MDYMEQcoGGlkUAAw"
              }
          ]
      },
-     "metadata":{
-         "openid_provider":{
-             "authorization_endpoint":"https://openid.provider.it/authorization",
-             "revocation_endpoint":"https://openid.provider.it/revocation/",
-             "id_token_encryption_alg_values_supported":[
+     "metadata": {
+         "openid_provider": {
+             "authorization_endpoint": "https://openid.provider.it/authorization",
+             "revocation_endpoint": "https://openid.provider.it/revocation/",
+             "id_token_encryption_alg_values_supported": [
                  "RSA-OAEP"
              ],
-             "id_token_encryption_enc_values_supported":[
+             "id_token_encryption_enc_values_supported": [
                  "A128CBC-HS256"
              ],
-             "token_endpoint":"https://openid.provider.it/token/",
-             "userinfo_endpoint":"https://openid.provider.it/userinfo/",
-             "introspection_endpoint":"https://openid.provider.it/introspection/",
+             "token_endpoint": "https://openid.provider.it/token/",
+             "userinfo_endpoint": "https://openid.provider.it/userinfo/",
+             "introspection_endpoint": "https://openid.provider.it/introspection/",
              "claims_parameter_supported":true,
-             "contacts":[
+             "contacts": [
                  "ops@https://idp.it"
              ],
-             "client_registration_types_supported":[
+             "client_registration_types_supported": [
                  "automatic"
              ],
-             "code_challenge_methods_supported":[
+             "code_challenge_methods_supported": [
                  "S256"
              ],
-             "request_authentication_methods_supported":{
-                 "ar":[
+             "request_authentication_methods_supported": {
+                 "ar": [
                      "request_object"
                  ]
              },
-             "acr_values_supported":[
+             "acr_values_supported": [
                  "https://www.spid.gov.it/SpidL1",
                  "https://www.spid.gov.it/SpidL2",
                  "https://www.spid.gov.it/SpidL3"
              ],
-             "claims_supported":[
+             "claims_supported": [
                  "https://attributes.spid.gov.it/spidCode",
                  "https://attributes.spid.gov.it/name",
                  "https://attributes.spid.gov.it/familyName",
@@ -176,47 +176,47 @@ EN 1.2. Entity Configuration Response Openid Provider
                  "https://attributes.spid.gov.it/expirationDate",
                  "https://attributes.spid.gov.it/digitalAddress"
              ],
-             "grant_types_supported":[
+             "grant_types_supported": [
                  "authorization_code",
                  "refresh_token"
              ],
-             "id_token_signing_alg_values_supported":[
+             "id_token_signing_alg_values_supported": [
                  "RS256",
                  "ES256"
              ],
-             "issuer":"https://openid.provider.it/",
-             "jwks":{
-                 "keys":[
+             "issuer": "https://openid.provider.it/",
+             "jwks": {
+                 "keys": [
                      { 
-                         "kty":"RSA",
-                         "use":"sig",
-                         "n":"1Ta-sE …",
-                         "e":"AQAB",
-                         "kid":"FANFS3YnC9tjiCaivhWLVUJ3AxwGGz_98uRFaqMEEs"
+                         "kty": "RSA",
+                         "use": "sig",
+                         "n": "1Ta-sE …",
+                         "e": "AQAB",
+                         "kid": "FANFS3YnC9tjiCaivhWLVUJ3AxwGGz_98uRFaqMEEs"
                      }
                  ]
              },
-             "scopes_supported":[
+             "scopes_supported": [
                  "openid",
                  "offline_access"
              ],
-             "logo_uri":"https://openid.provider.it/static/svg/spid-logo-c-lb.svg",
-             "organization_name":"SPID OIDC identity provider",
-             "op_policy_uri":"https://openid.provider.it/it/website/legal-information/",
+             "logo_uri": "https://openid.provider.it/static/svg/spid-logo-c-lb.svg",
+             "organization_name": "SPID OIDC identity provider",
+             "op_policy_uri": "https://openid.provider.it/it/website/legal-information/",
              "request_parameter_supported":true,
              "request_uri_parameter_supported":true,
              "require_request_uri_registration":true,
-             "response_types_supported":[
+             "response_types_supported": [
                  "code"
              ],
-             "subject_types_supported":[
+             "subject_types_supported": [
                  "pairwise",
                  "public"
              ],
-             "token_endpoint_auth_methods_supported":[
+             "token_endpoint_auth_methods_supported": [
                  "private_key_jwt"
              ],
-             "token_endpoint_auth_signing_alg_values_supported":[
+             "token_endpoint_auth_signing_alg_values_supported": [
                  "RS256",
                  "RS384",
                  "RS512",
@@ -224,11 +224,11 @@ EN 1.2. Entity Configuration Response Openid Provider
                  "ES384",
                  "ES512"
              ],
-             "userinfo_encryption_alg_values_supported":[
+             "userinfo_encryption_alg_values_supported": [
                  "RSA-OAEP",
                  "RSA-OAEP-256"
              ],
-             "userinfo_encryption_enc_values_supported":[
+             "userinfo_encryption_enc_values_supported": [
                  "A128CBC-HS256",
                  "A192CBC-HS384",
                  "A256CBC-HS512",
@@ -236,7 +236,7 @@ EN 1.2. Entity Configuration Response Openid Provider
                  "A192GCM",
                  "A256GCM"
              ],
-             "userinfo_signing_alg_values_supported":[
+             "userinfo_signing_alg_values_supported": [
                  "RS256",
                  "RS384",
                  "RS512",
@@ -244,11 +244,11 @@ EN 1.2. Entity Configuration Response Openid Provider
                  "ES384",
                  "ES512"
              ],
-             "request_object_encryption_alg_values_supported":[
+             "request_object_encryption_alg_values_supported": [
                  "RSA-OAEP",
                  "RSA-OAEP-256"
              ],
-             "request_object_encryption_enc_values_supported":[
+             "request_object_encryption_enc_values_supported": [
                  "A128CBC-HS256",
                  "A192CBC-HS384",
                  "A256CBC-HS512",
@@ -256,7 +256,7 @@ EN 1.2. Entity Configuration Response Openid Provider
                  "A192GCM",
                  "A256GCM"
              ],
-             "request_object_signing_alg_values_supported":[
+             "request_object_signing_alg_values_supported": [
                  "RS256",
                  "RS384",
                  "RS512",
@@ -265,11 +265,11 @@ EN 1.2. Entity Configuration Response Openid Provider
                  "ES512"
              ]
          },
-         "federation_entity":{
-             "federation_resolve_endpoint":"https://openid.provider.it/resolve/"
+         "federation_entity": {
+             "federation_resolve_endpoint": "https://openid.provider.it/resolve/"
          }
      },
-     "authority_hints":[
+     "authority_hints": [
          "https://registry.agid.gov.it/"
      ]
  }
@@ -286,47 +286,50 @@ EN 1.3. Entity Configuration Response Intermediary
  Content-Type: application/entity-statement+jwt 
 
  {
-     "alg":"RS256",
-     "kid":"em3cmnZgHIYFsQ090N6B3Op7LAAqj8rghMhxGmJstqg",
-     "typ":"entity-statement+jwt"
+     "alg": "RS256",
+     "kid": "em3cmnZgHIYFsQ090N6B3Op7LAAqj8rghMhxGmJstqg",
+     "typ": "entity-statement+jwt"
  }
  .
  {
-     "exp":1649631824,
-     "iat":1649459024,
-     "iss":"https://aggregatore.it/",
-     "sub":"https://aggregatore.it/",
-     "jwks":{
-         "keys":[
+     "exp": 1649631824,
+     "iat": 1649459024,
+     "iss": "https://aggregatore.it/",
+     "sub": "https://aggregatore.it/",
+     "jwks": {
+         "keys": [
              {
-                 "kty":"RSA",
-                 "e":"AQAB",
-                 "n":"14aW …",
-                 "kid":"em3cmnZgHIYFsQ090N6B3Op7LAAqj8rghMhxGmJstqg"
+                 "kty": "RSA",
+                 "e": "AQAB",
+                 "n": "14aW …",
+                 "kid": "em3cmnZgHIYFsQ090N6B3Op7LAAqj8rghMhxGmJstqg"
              }
          ]
      },
-     "metadata":{
-         "federation_entity":{
-             "organization_name":"Soggetto Aggregatore di esempio",
-             "contacts":[
+
+     "metadata": {
+         "federation_entity": {
+             "contacts": [
                  "soggetto@aggregatore.it"
              ],
-             "homepage_uri":"https://soggetto.aggregatore.it",
-             "logo_uri":"https://aggregatore.it/static/svg/logo.svg",
-             "federation_fetch_endpoint":"https://aggregatore.it/fetch/",
-             "federation_resolve_endpoint":"https://aggregatore.it/resolve/",
-             "federation_list_endpoint":"https://aggregatore.it/list/",
-             "federation_trust_mark_status_endpoint":"https://aggregatore.it/trust_mark_status/"
+             "federation_fetch_endpoint": "https://aggregatore.it/fetch/",
+             "federation_resolve_endpoint": "https://aggregatore.it/resolve/",
+             "federation_list_endpoint": "https://aggregatore.it/list/",
+             "homepage_uri": "https://soggetto.aggregatore.it",
+             "name": "Soggetto Aggregatore di esempio"
+         },
+         "trust_mark_issuer": {
+             "federation_status_endpoint": "https://aggregatore.it/trust_mark_status/",
+
          }
      },
-     "trust_marks":[
+     "trust_marks": [
          {
-             "id":"https://registry.gov.it/federation_entity/private/",
-             "trust_mark":"eyJh …"
+             "id": "https://registry.gov.it/federation_entity/private/",
+             "trust_mark": "eyJh …"
          }
      ],
-     "authority_hints":[
+     "authority_hints": [
          "https://registry.agid.gov.it/"
      ]
  }
@@ -345,28 +348,29 @@ EN 1.4. Entity Configuration Response Trust Anchor
  Content-Type: application/entity-statement+jwt
  
  {
-     "alg":"RS256",
-     "kid":"FifYx03bnosD8m6gYQIfNHNP9cM_Sam9Tc5nLloIIrc",
-     "typ":"entity-statement+jwt"
+     "alg": "RS256",
+     "kid": "FifYx03bnosD8m6gYQIfNHNP9cM_Sam9Tc5nLloIIrc",
+     "typ": "entity-statement+jwt"
  }
  .
  {
-     "exp":1649375259,
-     "iat":1649373279,
-     "iss":"https://registry.agid.gov.it/",
-     "sub":"https://registry.agid.gov.it/",
-     "jwks":{
-         "keys":[
+     "exp": 1649375259,
+     "iat": 1649373279,
+     "iss": "https://registry.agid.gov.it/",
+     "sub": "https://registry.agid.gov.it/",
+     "jwks": {
+         "keys": [
              {
-                 "kty":"RSA",
-                 "n":"3i5vV-_ …",
-                 "e":"AQAB",
-                 "kid":"FifYx03bnosD8m6gYQIfNHNP9cM_Sam9Tc5nLloIIrc"
+                 "kty": "RSA",
+                 "n": "3i5vV-_ …",
+                 "e": "AQAB",
+                 "kid": "FifYx03bnosD8m6gYQIfNHNP9cM_Sam9Tc5nLloIIrc"
              }
          ]
      },
-     "metadata":{
+     "metadata": {
          "federation_entity": {
+
              "organization_name": "example TA"
              "contacts":[
                  "spid.tech@agid.gov.it"
@@ -379,22 +383,127 @@ EN 1.4. Entity Configuration Response Trust Anchor
              "federation_trust_mark_status_endpoint": "https://registry.agid.gov.it/trust_mark_status/"
          }
      },
-     "trust_marks_issuers":{
-         "https://registry.agid.gov.it/openid_relying_party/public/":[
+     "trust_marks_issuers": {
+         "https://registry.agid.gov.it/openid_relying_party/public/": [
              "https://registry.spid.agid.gov.it/",
              "https://public.intermediary.spid.it/"
          ],
-         "https://registry.agid.gov.it/openid_relying_party/private/":[
+         "https://registry.agid.gov.it/openid_relying_party/private/": [
              "https://registry.spid.agid.gov.it/",
              "https://private.other.intermediary.it/"
          ]
      },
-     "constraints":{
-         "max_path_length":1
+     "constraints": {
+         "max_path_length": 1
      }
  }
 
+.. _Esempio_EN1.5:
 
+EN 1.5. Trust Mark issued by TA to a RP
++++++++++++++++++++++++++++++++++++++++
+
+.. code-block:: json
+
+ {
+     "trust_marks": [
+         {
+             "id": "https://registry.interno.gov.it/openid_relying_party/public/",
+             "iss": "https://registry.interno.gov.it/",
+             "trust_mark": "$JWT"
+         }
+     ]
+ }
+
+
+Where the $JWT payload is:
+
+.. code-block:: json
+
+ {
+     "id": "https://registry.interno.gov.it/openid_relying_party/public/",
+     "iss": "https://sa.esempio.it/",
+     "sub": "https://rp.esempio.it/",
+     "iat": 1579621160,
+     "organization_type": "public",
+     "id_code": ["123456","Uff_protocollo"],
+     "email": "email_or_pec@rp.it",
+     "organization_name#it": "Denominazione del RP",
+     "ref": "https://documentazione_di_riferimento.it/"
+ }
+
+
+.. _Esempio_EN1.6:
+
+EN 1.6. Trust Mark issued by TA to a SA
++++++++++++++++++++++++++++++++++++++++
+
+.. code-block:: json
+
+ {
+     "trust_marks": [
+         {
+             "id": "https://registry.interno.gov.it/intermediary/",
+             "iss": "https://registry.interno.gov.it/",
+             "trust_mark": "$JWT"
+         }
+     ]
+ }
+
+
+Where the $JWT payload is:
+
+.. code-block:: json
+
+ {
+     "id": "https://registry.interno.gov.it/intermediary/",
+     "iss": "https://registry.interno.gov.it/",
+     "sub": "https://sa.esempio.it/",
+     "iat": 1579621160,
+     "organization_type": "private",
+     "id_code": ["1234567890"],
+     "email": "email_or_pec@intermediate.it",
+     "organization_name#it": "Denominazione del SA",
+     "sa_profile": "full",
+     "ref": "https://documentazione_di_riferimento.it/"
+ }
+
+.. _Esempio_EN1.7:
+
+EN 1.7. Trust Mark issued by SA to a RP
++++++++++++++++++++++++++++++++++++++++
+
+.. code-block:: json
+
+ {
+     "trust_marks": [
+         {
+             "id": "https://registry.interno.gov.it/openid_relying_party/public/",
+             "iss": "https://sa.esempio.it",
+             "trust_mark": "$JWT"
+         }
+     ]
+ }
+
+
+Where the $JWT payload is:
+
+.. code-block:: json
+
+ {
+     "id": "https://registry.interno.gov.it/openid_relying_party/public/",
+     "iss": "https://sa.esempio.it/",
+     "sub": "https://rp.esempio.it/",
+     "iat": 1579621160,
+     "organization_type": "public",
+     "id_code": ["987654"],
+     "email": "email_or_pec@rp.it",
+     "organization_name#it": "Denominazione del RP",
+     "ref": "https://documentazione_di_riferimento.it/"
+ }
+
+
+ 
 .. _Esempio_EN2:
 
 EN 2. Entity Statement Request
@@ -420,48 +529,48 @@ EN 2.1 Entity Statement Response
  Content-Type: application/entity-statement+jwt
  
  {
-     "alg":"RS256",
-     "kid":"FifYx03bnosD8m6gYQIfNHNP9cM_Sam9Tc5nLloIIrc",
-     "typ":"entity-statement+jwt"
+     "alg": "RS256",
+     "kid": "FifYx03bnosD8m6gYQIfNHNP9cM_Sam9Tc5nLloIIrc",
+     "typ": "entity-statement+jwt"
  }
  .
  {
-     "exp":1649623546,
-     "iat":1649450746,
-     "iss":"https://registry.agid.gov.it/",
-     "sub":"https://rp.example.it/",
-     "jwks":{
-         "keys":[
+     "exp": 1649623546,
+     "iat": 1649450746,
+     "iss": "https://registry.agid.gov.it/",
+     "sub": "https://rp.example.it/",
+     "jwks": {
+         "keys": [
              {
-                 "kty":"RSA",
-                 "n":"5s4qi …",
-                 "e":"AQAB",
-                 "kid":"2HnoFS3YnC9tjiCaivhWLVUJ3AxwGGz_98uRFaqMEEs"
+                 "kty": "RSA",
+                 "n": "5s4qi …",
+                 "e": "AQAB",
+                 "kid": "2HnoFS3YnC9tjiCaivhWLVUJ3AxwGGz_98uRFaqMEEs"
              }
          ]
      },
-     "metadata_policy":{
-         "openid_relying_party":{
-             "scope":{
-                 "superset_of":[
+     "metadata_policy": {
+         "openid_relying_party": {
+             "scope": {
+                 "superset_of": [
                      "openid"
                  ],
-                 "subset_of":[
+                 "subset_of": [
                      "openid",
                      "offline_access"
                  ]
              },
-             "contacts":{
-                 "add":[
+             "contacts": {
+                 "add": [
                      "tech@example.it"
                  ]
              }
          }
      },
-     "trust_marks":[
+     "trust_marks": [
          {
-             "id":"https://registry.agid.gov.it/openid_relying_party/public/",
-             "trust_mark":"eyJhb …"
+             "id": "https://registry.agid.gov.it/openid_relying_party/public/",
+             "trust_mark": "eyJhb …"
          }
      ]
  } 
@@ -517,58 +626,58 @@ EN 4.1. Resolve Entity Statement Endpoint Response
  Content-Type: application/entity-statement+jwt 
  
  {
-     "alg":"RS256",
-     "kid":"FifYx03bnosD8m6gYQIfNHNP9cM_Sam9Tc5nLloIIrc",
-     "typ":"entity-statement+jwt"
+     "alg": "RS256",
+     "kid": "FifYx03bnosD8m6gYQIfNHNP9cM_Sam9Tc5nLloIIrc",
+     "typ": "entity-statement+jwt"
  }
  .
  {
-     "iss":"https://registry.agid.gov.it/",
-     "sub":"https://rp.example.it/",
-     "iat":1649355587,
-     "exp":1649410329,
-     "trust_marks":[
+     "iss": "https://registry.agid.gov.it/",
+     "sub": "https://rp.example.it/",
+     "iat": 1649355587,
+     "exp": 1649410329,
+     "trust_marks": [
          {
-             "id":"https://registry.agid.gov.it/openid_relying_party/public/",
-             "trust_mark":"eyJh …"
+             "id": "https://registry.agid.gov.it/openid_relying_party/public/",
+             "trust_mark": "eyJh …"
          }
      ],
-     "metadata":{
-         "openid_relying_party":{
-             "application_type":"web",
-             "client_id":"https://rp.example.it/",
-             "client_registration_types":[
+     "metadata": {
+         "openid_relying_party": {
+             "application_type": "web",
+             "client_id": "https://rp.example.it/",
+             "client_registration_types": [
                  "automatic"
              ],
-             "jwks":{
-                 "keys":[
+             "jwks": {
+                 "keys": [
                      {
-                         "kty":"RSA",
-                         "use":"sig",
-                         "n":"…",
-                         "e":"AQAB",
-                         "kid":"5NNNoFS3YnC9tjiCaivhWLVUJ3AxwGGz_98uRFaqMEEs"
+                         "kty": "RSA",
+                         "use": "sig",
+                         "n": "…",
+                         "e": "AQAB",
+                         "kid": "5NNNoFS3YnC9tjiCaivhWLVUJ3AxwGGz_98uRFaqMEEs"
                      }
                  ]
              },
-             "client_name":"Name of an example organization",
-             "contacts":[
+             "client_name": "Name of an example organization",
+             "contacts": [
                  "ops@rp.example.it"
              ],
-             "grant_types":[
+             "grant_types": [
                  "refresh_token",
                  "authorization_code"
              ],
-             "redirect_uris":[
+             "redirect_uris": [
                  "https://rp.example.it/oidc/rp/callback/"
              ],
-             "response_types":[
+             "response_types": [
                  "code"
              ],
-             "subject_type":"pairwise"
+             "subject_type": "pairwise"
          }
      },
-     "trust_chain":[
+     "trust_chain": [
          "eyJhbGciOiJSUzI1NiIsImtpZCI6Ims1NEhRdERpYnlHY3M5WldWTWZ2aUhm ...",
          "eyJhbGciOiJSUzI1NiIsImtpZCI6IkJYdmZybG5oQU11SFIwN2FqVW1BY0JS ...",
          "eyJhbGciOiJSUzI1NiIsImtpZCI6IkJYdmZybG5oQU11SFIwN2FqVW1BY0JS ..."
@@ -627,23 +736,23 @@ EN 6. Authorization Request
 .. code-block:: python
 
   {
-      "client_id":"https://rp.spid.agid.gov.it",
-      "response_type":"code",
-      "scope":"openid",
-      "code_challenge":"qWJlMe0xdbXrKxTm72EpH659bUxAxw80",
-      "code_challenge_method":"S256",
-      "nonce":"MBzGqyf9QytD28eupyWhSqMj78WNqpc2",
-      "prompt":"login",
-      "redirect_uri":"https://rp.spid.agid.gov.it/callback1",
-      "acr_values":{
+      "client_id": "https://rp.spid.agid.gov.it",
+      "response_type": "code",
+      "scope": "openid",
+      "code_challenge": "qWJlMe0xdbXrKxTm72EpH659bUxAxw80",
+      "code_challenge_method": "S256",
+      "nonce": "MBzGqyf9QytD28eupyWhSqMj78WNqpc2",
+      "prompt": "login",
+      "redirect_uri": "https://rp.spid.agid.gov.it/callback1",
+      "acr_values": {
         "https://www.spid.gov.it/SpidL1":null,
         "https://www.spid.gov.it/SpidL2":null
       },
-      "claims":{
-        "userinfo":{
+      "claims": {
+        "userinfo": {
             "https://attributes.spid.gov.it/name":null,
             "https://attributes.spid.gov.it/familyName":null
         }
       },
-      "state":"fyZiOL9Lf2CeKuNT2JzxiLRDink0uPcd"
+      "state": "fyZiOL9Lf2CeKuNT2JzxiLRDink0uPcd"
   }

@@ -83,7 +83,7 @@ The following table defines the <entity_types> that are recognizable inside the 
     * - **openid_provider**
       - the Entity in the claim *sub* is an OP.
       - OP
-    * - **federation_entity**
+    * - **intermediary**
       - the Entity in the claim *sub* is an Intermediary.
       - SA
     * - **oauth_resource**
@@ -111,9 +111,7 @@ The following table defines the <trustmark_profiles> that are recognizable insid
 **federation_entity** Trust Mark
 --------------------------------
 
-In addition to the claims of the **public** and **private** profiles, the profile **federation_entity**
-identifies the SA and adds the extensions **full** and **light**, according to the ways of operation 
-towards the subordinate Entities.
+In addition to the claims of the **public** and **private** profiles, the profile **intermediary** identifies the SA and adds the extensions **full** and **light** in the **sa_profile** claim, according to the ways of operation towards the subordinate Entities.
 
 .. seealso::
 
@@ -158,7 +156,6 @@ All the Entities that release Trust Marks, MUST expose a Trust Mark status endpo
 .. seealso:: 
 
   - `OIDC-FED`_ Section .5.3.2.
-
 
 Trust Mark Revocation
 ---------------------
@@ -214,8 +211,7 @@ The claims defined inside the TMs are compliant with the elements defined in the
       - String. Specifies if the Entity belongs to the Italian Public Administration or the private sector (**public** or **private**)
       - |spid-icon| |cieid-icon|
     * - **id_code**
-      - String. Identification code of the Organization. Depending on the Organization type, it must be
-        indicated an IPA code (for the public Organization type) or the VAT number (for the private type).
+      - String Array. Identification code of the Organization. Depending on the Organization type, it MUST contain an IPA code (for the public Organization type) or the VAT number and/or fiscal number (for the private type).
       - |spid-icon| |cieid-icon|
     * - **email**
       - String. Institutional e-mail or PEC of the Organization.
@@ -224,9 +220,9 @@ The claims defined inside the TMs are compliant with the elements defined in the
       - String. The complete name of the service-supplying Entity.
       - |spid-icon| |cieid-icon|
 
-.. warning::
-  In case of CIE id, the public Organizations having both the IPA code and a unique AOO code, MUST include the latter one in the claim id_code, in the format
-  *<IPA_code>-<AOO_code>*.
+.. admonition:: |cieid-icon|
+
+  In case of CIE id, the public Organizations having both the IPA code and a unique AOO code, MUST include the latter one in the claim id_code. In this case the claim **id_code** MUST include the IPA Code followed by the unique AOO code.
   Furthermore, the value in the claim **exp** MUST NOT be greater than the duration of the specific 
   conventions/agreements concluded in the onboarding process, between the Trust Mark issuer and the Organizations 
   that receive the TM.
@@ -234,12 +230,7 @@ The claims defined inside the TMs are compliant with the elements defined in the
 
 .. seealso::
 
- * `OIDC-FED`_ Section 5.3.1.
+  - `OIDC-FED`_ Section 5.3.1.
+  - Non-normative example: :ref:`Trust Mark issued by TA to a RP <Esempio_EN1.5>`, :ref:`Trust Mark issued by TA to a SA <Esempio_EN1.6>`, :ref:`Trust Mark issued by SA to a RP <Esempio_EN1.7>`,
 
 
-
-.. toctree:: 
-   :maxdepth: 1
-
-   trust_marks_spid.rst
-   trust_marks_cie.rst
