@@ -12,7 +12,7 @@ In questa sezione sono elencate le differenze che intercorrono tra lo standard u
 Client Registration
 +++++++++++++++++++
 
-SPID supporta esclusivamente **automatic_client_registration**. La modalità **implicit** è da intendersi come non supportata. 
+SPID e CIE supportano esclusivamente **automatic_client_registration**. La modalità **implicit** è da intendersi come non supportata. 
 
 
 Trust Mark
