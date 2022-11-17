@@ -11,7 +11,7 @@ This section lists the differences between the official standard and the SPID / 
 Client Registration
 +++++++++++++++++++
 
-SPID and CIE support only **automatic_client_registration**. The **implicit** flow is not supported.
+SPID and CIE support only **automatic_client_registration**. The **explicit client registration** flow is not supported.
 
 
 Trust Mark
