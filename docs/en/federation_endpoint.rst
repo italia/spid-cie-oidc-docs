@@ -29,8 +29,3 @@ In addition to the Federation endpoints reported before, the Entities of type **
    (For more details, see `OIDC-FED`_ Section 7.3).
 
 An Entity of type **AA**, in addition to the common Federation endpoints like all the Entities, MUST also include the **trust mark status endpoint** for allowing the dynamic validation of the TMs, released by the AA.
-
-
-.. warning::
-  As defined in the OIDC-FED, to the **Entity listing endpoint** is added the optional claim **entity_type**, that is a filter of the Entity type of the subordinates.
-
