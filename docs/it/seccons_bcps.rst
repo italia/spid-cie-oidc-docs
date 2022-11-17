@@ -53,8 +53,3 @@ L'interoperabilità tra i partecipanti funziona mediante i Metadata ottenuti dal
 La buona pratica per evitare le interruzioni di servizio relative alle operazioni di OIDC Core è quella di aggiungere le nuove chiavi pubbliche all'interno degli oggetti *jwks* senza rimuovere i valori preesistenti. Oppure, ad esempio, i nuovi *redirect_uri*.
 
 In questa maniera dopo il limite massimo di durata delle Trust Chain, definito con il claim **exp** e pubblicato nella Entity Configuration della TA, si ha la certezza che tutti i partecipanti abbiano rinnovato le loro Trust Chain, e sarà possibile agli amministratori della Foglia rimuovere le vecchie definizioni in cima alla lista.
-
-Politica dei Metadata
-+++++++++++++++++++++
-
-L'Autorità di Federazione o il suo Intermediario PUÒ pubblicare una politica dei Metadata (vedi `OIDC-FED`_ Section 5.1) per forzare la modifica dei Metadata OIDC della Foglia, nelle parti in cui questo fosse necessario.

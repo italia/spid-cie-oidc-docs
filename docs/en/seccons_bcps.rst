@@ -59,12 +59,3 @@ The interoperability among members works through the Metadata obtained from the 
 A best practice to avoid service stops on the OIDC Core operations, is adding the new public keys inside the objects *jwks* without removing the previous values. Or, for example, the new *redirect_uri*.
 
 In this way, after exceeding the maximum duration limit of the Trust Chain, defined in the claim **exp** and published in the TA Entity Configuration, it is certain that all the members have renewed their Trust Chain and it is possible, for the Leaf administrators, to remove the old definitions from the top of the list.
-
-
-
-Metadata Policy
-+++++++++++++++
-
-The Federation Authority or its Intermediary MAY publish a Metadata policy (see `OIDC-FED`_ Section 5.1) 
-to force the change of the OIDC Metadata of the Leaf, in the parts where this might be needed.
-
