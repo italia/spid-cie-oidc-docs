@@ -28,8 +28,8 @@ La soglia **max_path_lenght** si applica per la navigazione verticale e superata
 Allo stesso tempo la specifica OIDC Federation 1.0 non definisce un limite per il numero di **authority_hints**, questo perché nessun Trust Anchor può limitare il numero di Federazioni alle quali un partecipante può aderire. Per questa ragione è utile che gli implementatori adottino un limite massimo del numero di elementi consentiti all'interno dell'Array authority_hint. Questo per evitare che un numero esagerato di URL contenuti nella lista di **authority_hints**, dovuto ad una cattiva configurazione di una Foglia, produca un consumo di risorse eccessivo.
 
 
-Resolve Entity Statement
-++++++++++++++++++++++++
+Resolve endpoint
+++++++++++++++++
 
 Questo endpoint DEVE rilasciare i Metadata, i Trust Mark e la Trust Chain già precedentemente elaborata e NON DEVE innescare una procedura di Federation Entity Discovery ad ogni richiesta pervenuta.
 

@@ -32,8 +32,8 @@ At the same time, the specifications of OIDC Federation 1.0 don't define a limit
 
 
 
-Resolve Entity Statement
-++++++++++++++++++++++++
+Resolve endpoint
+++++++++++++++++
 
 This endpoint MUST release the Metadata, the Trust Marks and the previously processed Trust Chain, and MUST
 NOT trigger a procedure of Federation Entity Discovery for each request arrival.
