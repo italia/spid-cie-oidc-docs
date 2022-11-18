@@ -23,7 +23,7 @@ In addition to the Federation endpoints reported before, the Entities of type **
 
  - **fetch Entity statement endpoint**: returns the ESs regarding a direct subordinate subject. 
    For obtaining the ES of an Entity, at least its Entity identifier is needed. (For more details, see `OIDC-FED`_ Section 7.1).
- - **trust mark status endpoint**: allows an Entity to test if a TM is still active or not. The query MUST
+ - **trust mark status endpoint**: allows an Entity to test if a TM is still active or not. The request MUST
    be sent to the subject that has released that TM. (For more details, see `OIDC-FED`_ Section 7.4).
  - **Entity listing endpoint**: returns the list of the subordinate Entities registered by the TA or an SA.
    (For more details, see `OIDC-FED`_ Section 7.3).
