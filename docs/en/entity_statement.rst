@@ -23,8 +23,7 @@ The same considerations made for the **ECs** and reported in the section :ref:`F
 Entity Statement
 ++++++++++++++++
 
-The ES issued by the TA or by an Intermediary for its own direct subordinates, contain also the following
-attributes:
+The ES issued by the TA or by an Intermediary for its own direct subordinates, MUST contain the following attributes:
 
 
 .. list-table::
@@ -34,6 +33,24 @@ attributes:
    * - **Claim**
      - **Description**
      - **Supported by**
+   * - **iss**
+     - See `OIDC-FED`_ Section 3.1 for further details.
+     - |spid-icon| |cieid-icon|
+   * - **sub**
+     - See `OIDC-FED`_ Section 3.1 for further details.
+     - |spid-icon| |cieid-icon|
+   * - **iat**
+     - See `OIDC-FED`_ Section 3.1 for further details.
+     - |spid-icon| |cieid-icon|
+   * - **exp**
+     - See `OIDC-FED`_ Section 3.1 for further details.
+     - |spid-icon| |cieid-icon|
+   * - **jwks**
+     - Federation JWKS of the *sub* entity. See `OIDC-FED`_ Section 3.1 for further details.
+     - |spid-icon| |cieid-icon|
+   * - **authority_hint**
+     - See `OIDC-FED`_ Section 3.1 for further details.
+     - |spid-icon| |cieid-icon|
    * - **metadata_policy**
      - JSON Object that describes the Metadata policy. Each key of the JSON Object represents an 
        identifier of the type of Metadata and each value MUST be a JSON Object that represents the Metadata 

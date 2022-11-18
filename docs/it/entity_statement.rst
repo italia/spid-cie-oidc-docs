@@ -20,7 +20,7 @@ Si applicano le medesime considerazioni fatte per gli **EC** e riportate nella s
 Entity Statement
 ++++++++++++++++
 
-Gli ES emessi dal TA o da un suo Intermediario per i propri diretti discendenti, contengono anche i seguenti attributi:
+Gli ES emessi dal TA o da un suo Intermediario per i propri diretti discendenti, DEVONO contenere i seguenti attributi:
 
 .. list-table::
    :widths: 20 60 20
@@ -29,6 +29,24 @@ Gli ES emessi dal TA o da un suo Intermediario per i propri diretti discendenti,
    * - **Claim**
      - **Descrizione**
      - **Supportato da**
+   * - **iss**
+     - Si rimanda alla specifica `OIDC-FED`_ Sezione 3.1 per i dettagli.
+     - |spid-icon| |cieid-icon|
+   * - **sub**
+     - Si rimanda alla specifica `OIDC-FED`_ Sezione 3.1 per i dettagli.
+     - |spid-icon| |cieid-icon|
+   * - **iat**
+     - Si rimanda alla specifica `OIDC-FED`_ Sezione 3.1 per i dettagli.
+     - |spid-icon| |cieid-icon|
+   * - **exp**
+     - Si rimanda alla specifica `OIDC-FED`_ Sezione 3.1 per i dettagli.
+     - |spid-icon| |cieid-icon|
+   * - **jwks**
+     - JWKS di Federazione dell'entità *sub*. Si rimanda alla specifica `OIDC-FED`_ Sezione 3.1 per i dettagli.
+     - |spid-icon| |cieid-icon|
+   * - **authority_hint**
+     - Si rimanda alla specifica `OIDC-FED`_ Sezione 3.1 per i dettagli.
+     - |spid-icon| |cieid-icon|
    * - **metadata_policy**
      - JSON Object che descrive un criterio di Metadata. Ogni chiave dell'oggetto JSON rappresenta un identificatore del tipo di Metadata e ogni valore DEVE essere un oggetto JSON che rappresenta la politica dei Metadata in base allo schema di quel tipo di Metadata. Si rimanda alla specifica `OIDC-FED`_ Section 5.1 per i dettagli implementativi.
      - |spid-icon| |cieid-icon|
