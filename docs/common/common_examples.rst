@@ -689,14 +689,13 @@ EN 5. Trust Mark Status Request
 
 .. code-block:: http
 
- GET /trust_mark_status/?
- id=https://registry.agid.gov.it/openid_relying_party/public/
- &sub=https://rp.example.it/ 
- 
- HTTP/1.1
+ POST /trust_mark_status HTTP/1.1
  Host: registry.agid.gov.it
-
-
+ Content-Type: application/x-www-form-urlencoded
+ 
+ id=https%3A%2F%2registry.agid.gov.it%2Fopenid_relying_party%2Fpublic%2F
+ &sub=https%3A%2F%2rp.example.it%2F
+ 
 
 EN 5.1. Trust Mark Status Response
 ++++++++++++++++++++++++++++++++++

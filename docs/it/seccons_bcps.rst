@@ -28,8 +28,8 @@ La soglia **max_path_lenght** si applica per la navigazione verticale e superata
 Allo stesso tempo la specifica OIDC Federation 1.0 non definisce un limite per il numero di **authority_hints**, questo perché nessun Trust Anchor può limitare il numero di Federazioni alle quali un partecipante può aderire. Per questa ragione è utile che gli implementatori adottino un limite massimo del numero di elementi consentiti all'interno dell'Array authority_hint. Questo per evitare che un numero esagerato di URL contenuti nella lista di **authority_hints**, dovuto ad una cattiva configurazione di una Foglia, produca un consumo di risorse eccessivo.
 
 
-Resolve Entity Statement
-++++++++++++++++++++++++
+Resolve endpoint
+++++++++++++++++
 
 Questo endpoint DEVE rilasciare i Metadata, i Trust Mark e la Trust Chain già precedentemente elaborata e NON DEVE innescare una procedura di Federation Entity Discovery ad ogni richiesta pervenuta.
 
@@ -53,8 +53,3 @@ L'interoperabilità tra i partecipanti funziona mediante i Metadata ottenuti dal
 La buona pratica per evitare le interruzioni di servizio relative alle operazioni di OIDC Core è quella di aggiungere le nuove chiavi pubbliche all'interno degli oggetti *jwks* senza rimuovere i valori preesistenti. Oppure, ad esempio, i nuovi *redirect_uri*.
 
 In questa maniera dopo il limite massimo di durata delle Trust Chain, definito con il claim **exp** e pubblicato nella Entity Configuration della TA, si ha la certezza che tutti i partecipanti abbiano rinnovato le loro Trust Chain, e sarà possibile agli amministratori della Foglia rimuovere le vecchie definizioni in cima alla lista.
-
-Politica dei Metadata
-+++++++++++++++++++++
-
-L'Autorità di Federazione o il suo Intermediario PUÒ pubblicare una politica dei Metadata (vedi `OIDC-FED`_ Section 5.1) per forzare la modifica dei Metadata OIDC della Foglia, nelle parti in cui questo fosse necessario.

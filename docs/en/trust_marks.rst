@@ -150,8 +150,7 @@ There are two ways of validating a Trust Mark:
 
  2. **Dynamic** Validation. The Federation members can query the endpoint :ref:`trust mark status<federation_endpoint>` supplied by its issuer (claim **iss**), for a real-time checking of the TMs that it has issued.
 
-All the Entities that release Trust Marks, MUST expose a Trust Mark status endpoint for allowing the 
-**dynamic** validation.
+All the Entities that release Trust Marks, MUST expose a Trust Mark status endpoint for allowing the **dynamic** validation.
 
 .. seealso:: 
 
