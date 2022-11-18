@@ -17,7 +17,7 @@ SPID and CIE support only **automatic_client_registration**. The **explicit clie
 Trust Mark
 ++++++++++
 
-In OIDC Federation international specifications the adoption of the Trust Marks are not mandatory. Rather, in the SPID and CIE id Federation it is mandatory to expose them. For more details about the reasons why the Trust Marks are required, please see the section :ref:`Security Considerations <Considerazioni_di_Sicurezza>`.
+In OIDC Federation international specifications the adoption of the Trust Marks is not mandatory. Rather, in the SPID and CIE Federation it is mandatory to expose them. For more details about the reasons why the Trust Marks are required, please see the section :ref:`Security Considerations <Considerazioni_di_Sicurezza>`.
 
 
 Unsupported Claims in the Entity Statements
