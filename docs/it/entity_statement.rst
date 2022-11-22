@@ -295,3 +295,7 @@ Di seguito vengono riportati i claim che DEVONO essere considerati nel parametro
     - Operazioni: *one_of* |br|
       Valori: DEVE contenere gli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>`
     - |spid-icon| |cieid-icon|
+
+.. seealso:: 
+
+   - :ref:`Esempi non normativi di Metadata Policy<Esempio_EN7>`

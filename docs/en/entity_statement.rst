@@ -302,3 +302,7 @@ Di seguito vengono riportati i claim che DEVONO essere considerati nel parametro
       Values: MUST contain the algorithms defined in the Section :ref:`Cryptographic Algorithms <supported_algs>`
     - |spid-icon| |cieid-icon|
 
+.. seealso:: 
+
+   - :ref:`Non-normative examples of Metadata Policy<Esempio_EN7>`
+  
