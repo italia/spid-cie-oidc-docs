@@ -305,4 +305,4 @@ Di seguito vengono riportati i claim che DEVONO essere considerati nel parametro
 .. seealso:: 
 
    - :ref:`Non-normative examples of Metadata Policy<Esempio_EN7>`
-  
+

@@ -300,3 +300,4 @@ Di seguito vengono riportati i claim che DEVONO essere considerati nel parametro
 
    - :ref:`Esempi non normativi di Metadata Policy<Esempio_EN7>`
 
+
