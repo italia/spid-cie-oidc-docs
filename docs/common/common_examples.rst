@@ -755,3 +755,194 @@ EN 6. Authorization Request
       },
       "state": "fyZiOL9Lf2CeKuNT2JzxiLRDink0uPcd"
   }
+
+.. _Esempio_EN7:
+
+EN 7. Metadata Policy
++++++++++++++++++++++
+
+The following example shows a metadata policy in the Entity Statement provided by a TA and related to an RP
+
+.. code-block:: python
+
+    "metadata_policy": {
+        "openid_relying_party": {
+            "jwks": {
+                "one_of": [{
+                    "kty": "RSA",
+                    "use": "sig",
+                    "n": "…",
+                    "e": "AQAB",
+                    "kid": "5NNNoFS3YnC9tjiCaivhWLVUJ3AxwGGz_98uRFaqMEEs"
+                }]
+            }
+            "grant_types": {
+                "one_of": ["authorization_code", "refresh_token"]
+            }
+            "id_token_signed_response_alg": {
+                "one_of": ["RS256", "RS512", "ES256", "ES512", "PS256", "PS512"]
+            }
+            "id_token_encrypted_response_alg": {
+                "one_of": ["RSA-OAEP", "RSA-OAEP-256", "ECDH-ES", "ECDH-ES+A128KW", "ECDH-ES+A256KW"]
+            }
+            "id_token_encrypted_response_enc": {
+                "one_of": ["A128CBC-HS256", "A256CBC-HS512"]
+            }
+            "userinfo_signed_response_alg": {
+                "one_of": ["RS256", "RS512", "ES256", "ES512", "PS256", "PS512"]
+            }
+            "userinfo_encrypted_response_alg": {
+                "one_of": ["RSA-OAEP", "RSA-OAEP-256", "ECDH-ES", "ECDH-ES+A128KW", "ECDH-ES+A256KW"]
+            }
+            "userinfo_encrypted_response_enc": {
+                "one_of": ["A128CBC-HS256", "A256CBC-HS512"]
+            }
+            "token_endpoint_auth_method": {
+                "one_of": ["private_key_jwt"]
+            }
+            "client_registration_types": {
+                "one_of": ["automatic"]
+            }
+        }
+    }
+
+The following example shows a metadata policy in the Entity Statement provided by a TA and related to an SA
+
+.. code-block:: python
+
+    "metadata_policy": {
+        "openid_relying_party": {
+            "grant_types": {
+                "one_of": ["authorization_code", "refresh_token"]
+            }
+            "id_token_signed_response_alg": {
+                "one_of": ["RS256", "RS512", "ES256", "ES512", "PS256", "PS512"]
+            }
+            "id_token_encrypted_response_alg": {
+                "one_of": ["RSA-OAEP", "RSA-OAEP-256", "ECDH-ES", "ECDH-ES+A128KW", "ECDH-ES+A256KW"]
+            }
+            "id_token_encrypted_response_enc": {
+                "one_of": ["A128CBC-HS256", "A256CBC-HS512"]
+            }
+            "userinfo_signed_response_alg": {
+                "one_of": ["RS256", "RS512", "ES256", "ES512", "PS256", "PS512"]
+            }
+            "userinfo_encrypted_response_alg": {
+                "one_of": ["RSA-OAEP", "RSA-OAEP-256", "ECDH-ES", "ECDH-ES+A128KW", "ECDH-ES+A256KW"]
+            }
+            "userinfo_encrypted_response_enc": {
+                "one_of": ["A128CBC-HS256", "A256CBC-HS512"]
+            }
+            "token_endpoint_auth_method": {
+                "one_of": ["private_key_jwt"]
+            }
+            "client_registration_types": {
+                "one_of": ["automatic"]
+            }
+        }
+    }
+
+
+The following example shows a metadata policy in the Entity Statement provided by a SA and related to an RP
+
+.. code-block:: python
+
+    "metadata_policy": {
+        "openid_relying_party": {
+            "jwks": {
+                "one_of": [{
+                    "kty": "RSA",
+                    "use": "sig",
+                    "n": "…",
+                    "e": "AQAB",
+                    "kid": "5NNNoFS3YnC9tjiCaivhWLVUJ3AxwGGz_98uRFaqMEEs"
+                }]
+            }
+        }
+    }
+
+The following example shows a metadata policy in the Entity Statement provided by a TA and related to an OP.
+
+.. code-block:: python
+
+    "metadata_policy": {
+        "openid_relying_party": {
+            "jwks": {
+                "one_of": [{
+                    "kty": "RSA",
+                    "use": "sig",
+                    "n": "…",
+                    "e": "AQAB",
+                    "kid": "5NNNoFS3YnC9tjiCaivhWLVUJ3AxwGGz_98uRFaqMEEs"
+                }]
+            }
+            "revocation_endpoint_auth_methods_supported": {
+                "one_of": ["private_key_jwt"]
+            }
+            "code_challenge_methods_supported": {
+                "one_of": ["authorization_code", "refresh_token"]
+            }
+            "scopes_supported": {
+                "one_of": ["openid", "offline_access", "profile", "email"]
+            }
+            "response_types_supported": {
+                "one_of": ["code"]
+            }
+            "response_modes_supported": {
+                "one_of": ["form_post", "query"]
+            }
+            "grant_types_supported": {
+                "one_of": ["authorization_code", "refresh_token"]
+            }
+            }
+            "acr_values_supported": {
+                "one_of": ["https://www.spid.gov.it/SpidL1", "https://www.spid.gov.it/SpidL2", "https://www.spid.gov.it/SpidL3"]
+            }
+            }
+            "subject_types_supported": {
+                "one_of": ["pairwise"]
+            }
+            "id_token_signing_alg_values_supported": {
+                "one_of": ["RS256", "RS512", "ES256", "ES512", "PS256", "PS512"]
+            }
+            "id_token_encryption_alg_values_supported": {
+                "one_of": ["RSA-OAEP", "RSA-OAEP-256", "ECDH-ES", "ECDH-ES+A128KW", "ECDH-ES+A256KW"]
+            }
+            "id_token_encryption_enc_values_supported": {
+                "one_of": ["A128CBC-HS256", "A256CBC-HS512"]
+            }
+            "userinfo_signing_alg_values_supported": {
+                "one_of": ["RS256", "RS512", "ES256", "ES512", "PS256", "PS512"]
+            }
+            "userinfo_encryption_alg_values_supported": {
+                "one_of": ["RSA-OAEP", "RSA-OAEP-256", "ECDH-ES", "ECDH-ES+A128KW", "ECDH-ES+A256KW"]
+            }
+            "userinfo_encryption_enc_values_supported": {
+                "one_of": ["A128CBC-HS256", "A256CBC-HS512"]
+            }
+            "token_endpoint_auth_methods_supported": {
+                "one_of": ["private_key_jwt"]
+            }
+            "token_endpoint_auth_signing_alg_values_supported": {
+                "one_of": ["RS256", "RS512", "ES256", "ES512", "PS256", "PS512"]
+            }
+            "claims_parameter_supported": {
+                "one_of": ["true"]
+            }
+            "request_parameter_supported": {
+                "one_of": ["true"]
+            }
+            "authorization_response_iss_parameter_supported": {
+                "one_of": ["true"]
+            }
+            "client_registration_types_supported": {
+                "one_of": ["automatic"]
+            }
+            "request_authentication_methods_supported": {
+                "one_of": ["request_object"]
+            }
+            "request_authentication_signing_alg_values_supported": {
+                "one_of": ["RS256", "RS512", "ES256", "ES512", "PS256", "PS512"]
+            }
+        }
+    }
