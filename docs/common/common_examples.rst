@@ -426,7 +426,10 @@ Where the $JWT payload is:
      "sub": "https://rp.esempio.it/",
      "iat": 1579621160,
      "organization_type": "public",
-     "id_code": ["123456","Uff_protocollo"],
+     "id_code": {
+        "ipa_code": "123456",
+        "aoo_code": "Uff_protocollo"
+     }
      "email": "email_or_pec@rp.it",
      "organization_name#it": "Denominazione del RP",
      "ref": "https://documentazione_di_riferimento.it/"
@@ -461,7 +464,9 @@ Where the $JWT payload is:
      "sub": "https://sa.esempio.it/",
      "iat": 1579621160,
      "organization_type": "private",
-     "id_code": ["1234567890"],
+     "id_code": {
+        "fiscal_number": "1234567890"
+     }
      "email": "email_or_pec@intermediate.it",
      "organization_name#it": "Denominazione del SA",
      "sa_profile": "full",
@@ -496,7 +501,9 @@ Where the $JWT payload is:
      "sub": "https://rp.esempio.it/",
      "iat": 1579621160,
      "organization_type": "public",
-     "id_code": ["987654"],
+     "id_code": {
+        "ipa_code": "987654",
+     }
      "email": "email_or_pec@rp.it",
      "organization_name#it": "Denominazione del RP",
      "ref": "https://documentazione_di_riferimento.it/"
