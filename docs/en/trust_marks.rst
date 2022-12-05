@@ -226,7 +226,7 @@ The claims defined inside the TMs are compliant with the elements defined in the
 
 .. warning::
 
-  The value in the claim **exp** MUST NOT be greater than the duration of the specific agreements made in the onboarding process, between the Trust Mark issuer and the Organizations receiving the TM.
+  The value in the claim **exp** MUST NOT be greater than the duration of the agreements submitted during the onboarding process, between the Trust Mark issuer and the Organizations receiving the TM.
  
 
 .. seealso::

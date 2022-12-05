@@ -203,7 +203,7 @@ Gli attributi definiti all'interno dei TM aderiscono a quanto definito all'inter
 
 .. warning:: 
 
-   Il valore contenuto nel parametro **exp** NON DEVE essere superiore alla durata delle specifiche convenzioni/accordi stipulati in fase di onboarding tra l'emettitore dei Trust Mark e le organizzazioni che ricevono il TM.  
+   Il valore contenuto nel parametro **exp** NON DEVE essere superiore alla durata delle convenzioni stipulate in fase di onboarding tra l'Entità che rilascia i Trust Mark e le organizzazioni che lo ricevono.  
 
 .. seealso::
 
