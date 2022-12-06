@@ -210,7 +210,12 @@ The claims defined inside the TMs are compliant with the elements defined in the
       - String. Specifies if the Entity belongs to the Italian Public Administration or the private sector (**public** or **private**)
       - |spid-icon| |cieid-icon|
     * - **id_code**
-      - String Array. Identification code of the Organization. Depending on the Organization type, it MUST contain an IPA code (for the public Organization type) or the VAT number and/or fiscal number (for the private type).
+      - JSON Object. It contains one or more ogranization identification codes. Available claims are: 
+        - **ipa_code**: REQUIRED for public organization.
+        - **aoo_code**: OPTIONAL.
+        - **uo_code**: OPTIONAL. 
+        - **vat_number**: REQUIRED for private organization only if *fiscal_number* is not available.
+        - **fiscal_number**: REQUIRED for private organization only if *vat_number* is not available.
       - |spid-icon| |cieid-icon|
     * - **email**
       - String. Institutional e-mail or PEC of the Organization.
@@ -219,12 +224,9 @@ The claims defined inside the TMs are compliant with the elements defined in the
       - String. The complete name of the service-supplying Entity.
       - |spid-icon| |cieid-icon|
 
-.. admonition:: |cieid-icon|
+.. warning::
 
-  In case of CIE id, the public Organizations having both the IPA code and a unique AOO code, MUST include the latter one in the claim id_code. In this case the claim **id_code** MUST include the IPA Code followed by the unique AOO code.
-  Furthermore, the value in the claim **exp** MUST NOT be greater than the duration of the specific 
-  conventions/agreements concluded in the onboarding process, between the Trust Mark issuer and the Organizations 
-  that receive the TM.
+  The value in the claim **exp** MUST NOT be greater than the duration of the agreements submitted during the onboarding process, between the Trust Mark issuer and the Organizations receiving the TM.
  
 
 .. seealso::

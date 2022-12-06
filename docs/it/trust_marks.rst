@@ -184,7 +184,12 @@ Gli attributi definiti all'interno dei TM aderiscono a quanto definito all'inter
       - String. Specifica se l'ente appartiene alla pubblica amministrazione italiana o al settore privato (**public** o **private**)
       - |spid-icon| |cieid-icon|
     * - **id_code**
-      - String Array. Codice di identificazione dell'organizzazione. A seconda del valore del tipo di organizzazione, DEVE contenere almeno: il codice IPA (per il tipo di organizzazione pubblica) o il numero di partita IVA e/o il codice fiscale (per quello privato).
+      - Oggetto JSON. Contiene uno o più codici di identificazione dell'organizzazione. I claim disponibili sono:
+        - **ipa_code**: OBBLIGATORIO nel caso di organizzazione pubblica.
+        - **aoo_code**: OPZIONALE.
+        - **uo_code**: OPZIONALE.
+        - **vat_number**: OBBLIGATORIO per organizzazione privata se non presente *fiscal_number*.
+        - **fiscal_number**: OBBLIGATORIO per organizzazione privata se non presente *vat_number*.
       - |spid-icon| |cieid-icon|
     * - **email**
       - String. Email istituzionale o PEC dell'organizzazione.
@@ -196,9 +201,9 @@ Gli attributi definiti all'interno dei TM aderiscono a quanto definito all'inter
       - String. RICHIESTO per SA. Specifica il profilo dell’Aggregatore, **full** o **light**.
       - |spid-icon| |cieid-icon|
 
-.. admonition:: |cieid-icon|
+.. warning:: 
 
-  Nel caso di CIE id, le organizzazioni pubbliche che oltre al **codice IPA** dispongono anche di un **codice univoco AOO** DEVONO riportare anche quest'ultimo all'interno del parametro **id_code**. In questo caso **id_code** DEVE contenere il **codice IPA** seguito dal **codice univoco AOO**. Inoltre, il valore contenuto nel parametro **exp** NON DEVE essere superiore alla durata delle specifiche convenzioni/accordi stipulati in fase di onboarding tra l'emettitore dei Trust Mark e le organizzazioni che ricevono il TM.  
+   Il valore contenuto nel parametro **exp** NON DEVE essere superiore alla durata delle convenzioni stipulate in fase di onboarding tra l'Entità che rilascia i Trust Mark e le organizzazioni che lo ricevono.  
 
 .. seealso::
 
