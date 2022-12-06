@@ -46,6 +46,7 @@ Indice dei contenuti
    introspection_endpoint.rst
    revocation_endpoint.rst
    cryptographic_algos.rst
+   log_management.rst
    confronto_oidc_cie_e_oidc_igov.rst
    differenze_oidc_fed.rst
    seccons_bcps.rst
