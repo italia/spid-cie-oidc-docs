@@ -210,6 +210,9 @@ UserInfo endpoint to get user attributes.
    * - **aud** 
      - It MUST match the value *client_id*. The RP MUST verify that this value matches its client ID.
      - |spid-icon| |cieid-icon|
+   * - **scope** 
+     - It MUST match the value in the authentication request.
+     - |spid-icon| |cieid-icon|
    * - **iat** 
      - UNIX Timestamp with the time of JWT generation, coded as NumericDate as indicated in :rfc:`7519`. 
      - |spid-icon| |cieid-icon|

@@ -209,6 +209,9 @@ Di seguito i claim che compongono l'Access Token.
    * - **aud** 
      - DEVE coincidere con il valore *client_id*. Il RP DEVE verificare che questo valore corrisponda al proprio client ID.
      - |spid-icon| |cieid-icon|
+   * - **scope** 
+     - DEVE coincidere con il valore presente in fase di richiesta di autenticazione.
+     - |spid-icon| |cieid-icon|
    * - **iat** 
      - UNIX Timestamp con l'istante di generazione del JWT, codificato come NumericDate come indicato in :rfc:`7519`
      - |spid-icon| |cieid-icon|
