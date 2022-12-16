@@ -11,6 +11,8 @@ For starting the authentication process, the RP redirects the user to the *Autho
 For conveying the request, the RP MAY use the methods **POST** and **GET**. With the method **POST** the parameters MUST be sent using the *Form Serialization*. 
 With the method **GET** the parameters MUST be sent using the *Query String Serialization*. For more details see `OpenID.Core#Serializations`_.
 
+Request object MUST be a signed JWT. For more details see signature :ref:`supported_algs`.
+
 .. warning::
   The parameter **scope** MUST be sent both as a parameter in the HTTP call, and inside the request object. The two values MUST be the same.
 

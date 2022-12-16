@@ -60,8 +60,8 @@
 .. _OIDC-FED#Section-7.4: https://openid.net/specs/openid-connect-federation-1_0.html#Section-7.4
 .. _OIDC-FED#Section-7.4.1: https://openid.net/specs/openid-connect-federation-1_0.html#Section-7.4.1
 .. _OIDC-FED#Section-7.5: https://openid.net/specs/openid-connect-federation-1_0.html#Section-7.5
-.. _SPID UX Guidelines: https://www.agid.gov.it/sites/default/files/repository_files/regole_tecniche/spid-notetecnicheinterfacce.pdf
-.. _Linee Guida UX SPID: https://www.agid.gov.it/sites/default/files/repository_files/regole_tecniche/spid-notetecnicheinterfacce.pdf
+.. _SPID UX Guidelines: https://www.spid.gov.it/wp-content/uploads/2021/07/agid-spid-lg-interfacce-informazioni-idp-sp.pdf
+.. _Linee Guida UX SPID: https://www.spid.gov.it/wp-content/uploads/2021/07/agid-spid-lg-interfacce-informazioni-idp-sp.pdf
 .. _AgID: https://www.agid.gov.it/
 .. _long revocable session: https://www.agid.gov.it/sites/default/files/repository_files/spid-avviso-n41-integrazione_ll.gg_._openid_connect_in_spid.pdf#page=6
 .. _sessione lunga revocabile: https://www.agid.gov.it/sites/default/files/repository_files/spid-avviso-n41-integrazione_ll.gg_._openid_connect_in_spid.pdf#page=6
