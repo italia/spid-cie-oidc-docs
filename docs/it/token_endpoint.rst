@@ -3,7 +3,7 @@
 Token Endpoint
 --------------
 
-Al termine del flusso di autenticazione descritto nel paragrafo precedente, il RP invia una richiesta al Token Endpoint inviando l'authorization code ricevuto dall'OP per ottenere un *ID Token* e un *Access Token* ed eventualmente un *Refresh Token* (se è stata avviata una `sessione lunga revocabile`_). 
+Al termine del flusso di autenticazione descritto nel paragrafo precedente, il RP invia una richiesta al Token Endpoint inviando l'authorization code ricevuto dall'OP per ottenere un *ID Token* e un *Access Token* ed eventualmente un *Refresh Token* (se è stata avviata una `sessione lunga revocabile`_). I token restituiti devono essere  JWT firmati
 
 In presenza di una `sessione lunga revocabile`_, il RP PUÒ chiamare il Token Endpoint inviando il *Refresh Token* in suo possesso per ottenere un nuovo *Access Token* e *ID Token*.
 
@@ -107,7 +107,7 @@ Di seguito i claim che DEVONO essere inseriti nella *Token Request*.
 
      - |spid-icon| |cieid-icon|
    * - **refresh_token**
-     - Obbligatorio solo se **grant_type** è **refresh_code**   
+     - Obbligatorio solo se **grant_type** è **refresh_token**   
      - |spid-icon| |cieid-icon|
  
  
@@ -165,7 +165,7 @@ La risposta DEVE contenere i seguenti claim.
 Access Token
 ++++++++++++
 
-L'Access Token è un JSON Web Token (JWT) che consente l’accesso allo
+L'Access Token è un JSON Web Token (JWT) firmato che consente l’accesso allo
 UserInfo endpoint per ottenere gli attributi dell'utente. 
 Di seguito i claim che compongono l'Access Token.
 

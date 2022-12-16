@@ -11,6 +11,8 @@ Per avviare il processo di autenticazione, il RP reindirizza l'utente all'*Autho
 Per veicolare la richiesta, il RP PUÒ utilizzare i metodi **POST** e **GET**. Mediante il metodo **POST** i parametri DEVONO essere trasmessi utilizzando la *Form Serialization*. 
 Mediante il metodo **GET** i parametri DEVONO essere trasmessi utilizzando la *Query String Serialization*. Per maggiori dettagli vedi `OpenID.Core#Serializations`_.
 
+L’oggetto request DEVE essere un token JWT firmato, vedi signature :ref:`supported_algs`.
+
 .. warning::
   Il parametro **scope** DEVE essere trasmesso sia come parametro nella chiamata HTTP sia all'interno dell'oggetto request e i loro valori DEVONO corrispondere.
 

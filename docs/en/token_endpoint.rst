@@ -4,7 +4,7 @@
 Token Endpoint
 --------------
 
-At the end of the authentication flow described at the previous section, the RP sends a request to the Token Endpoint with the authorization code received by the OP.
+At the end of the authentication flow described at the previous section, the RP sends a request to the Token Endpoint with the authorization code received by the OP. These tokens MUST be signed JWT
 
 The Token response, if succesfull, returns an *ID Token*, an *Access Token* and possibly a *Refresh Token* (if a `long revocable session`_ has been started).
 
@@ -108,7 +108,7 @@ The claims that MUST be included in the *Token Request* are given below.
 
      - |spid-icon| |cieid-icon|
    * - **refresh_token**
-     - Required only if **grant_type** is **refresh_code**.
+     - Required only if **grant_type** is **refresh_token**.
      - |spid-icon| |cieid-icon|
  
  
@@ -167,7 +167,7 @@ The response MUST contain the following claims.
 Access Token
 ++++++++++++
 
-The Access Token is a JSON Web Token (JWT) that allows access to the
+The Access Token is a signed JSON Web Token (JWT) that allows access to the
 UserInfo endpoint to get user attributes.
 
 **Access Token header and payload example:**
@@ -268,7 +268,7 @@ The claims available in the *ID Token* are given below.
      - It MUST be an HTTPS URL that uniquely identifies the OP. The client MUST verify that this value matches the called OP.
      - |spid-icon| |cieid-icon|
    * - **sub** 
-     - See `OpenID.Core#SubjectIDTypes`_. It MUST be *pairwise*. 
+     - See `OpenID.Core#SubjectIDTypes`_. It MUST be *pairwise* type. 
      - |spid-icon| |cieid-icon|
    * - **aud** 
      - It MUST match the value *client_id*. The RP MUST verify that this value matches its client ID.
