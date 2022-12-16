@@ -41,6 +41,7 @@ Index of content
    attributi_utente.rst
    introspection_endpoint.rst
    revocation_endpoint.rst
+   logout.rst
    cryptographic_algos.rst
    log_management.rst
    confronto_oidc_cie_e_oidc_igov.rst

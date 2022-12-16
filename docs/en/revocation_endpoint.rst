@@ -1,16 +1,20 @@
 .. include:: ../common/common_definitions.rst
 
+.. _Revocation_Endpoint:
+
 Revocation Endpoint
 -------------------
 
 An RP MAY request the revocation of an Access Token or a Refresh Token issued by an OP.
 
-When the user logs out, the RP MUST revoke the Access Token in its possession.
+The OP MUST to revoke the token specified in the request.
+
+The Access Token revocation MUST NOT imply revoking all the Refresh Tokens linked to it.
+
+If the token passed to the request is a Refresh Token, the OP MUST revoke the respective Access Token as well.
 
 .. note::
-  The Access Token revocation implies revoking all the Refresh Tokens linked to it.
-
-The OP will have to revoke the token specified in the request and will have to end the Single Sign-On session, if it is still active.
+  The authentication method MUST be **private_key_jwt** (see the *revocation_endpoint_auth_methods_supported* parameter in Section :ref:`Metadata OP <MetadataOP>`)
 
 .. seealso::
 
