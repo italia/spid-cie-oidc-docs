@@ -4,7 +4,7 @@
 Token Endpoint
 --------------
 
-At the end of the authentication flow described at the previous section, the RP sends a request to the Token Endpoint with the authorization code received by the OP. These tokens MUST be signed JWT
+At the end of the authentication flow described at the previous section, the RP sends a request to the Token Endpoint with the authorization code received by the OP. These tokens MUST be signed JWT.
 
 The Token response, if succesfull, returns an *ID Token*, an *Access Token* and possibly a *Refresh Token* (if a `long revocable session`_ has been started).
 
