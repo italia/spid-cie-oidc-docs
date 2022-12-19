@@ -6,7 +6,7 @@ Authorization endpoint
 Request
 +++++++
 
-For starting the authentication process, the RP redirects the user to the *Authorization Endpoint* of the selected OP, and sends an *HTTP* request with the parameter **request**, an object in signed **JWT** format that contains the *Authorization Request* signed by the RP.
+To initiate the authentication request, the RP redirects the user to the *Authorization Endpoint* of the selected OP, and sends a *HTTP* request with the parameter **request**, a signed JWT containing the *Authorization Request*.
 
 For conveying the request, the RP MAY use the methods **POST** and **GET**. With the method **POST** the parameters MUST be sent using the *Form Serialization*. 
 With the method **GET** the parameters MUST be sent using the *Query String Serialization*. For more details see `OpenID.Core#Serializations`_.
@@ -162,7 +162,7 @@ Parameters **scope** and **claims**
 
   The user attributes MAY be requested by the RP using the **claims** parameter in the Authorization Request.
 
-  SPID do not allow require the user attributes in the Token ID, they are available in the "userinfo".  
+  SPID do not allow require the user attributes in Token ID, they are available in "userinfo".  
 
 
 .. admonition:: |cieid-icon|
@@ -171,14 +171,14 @@ Parameters **scope** and **claims**
 
   When the **scope** parameter is used, the following values are supported:
 
-  - **profile**: the use of this value permits to obtain the default user profile which corresponds to the eIDAS Minimum Dataset: 
+  - **profile**: requests the user attributes equivalent to the eIDAS Minimum Dataset: 
 
       - *family_name*, 
       - *given_name*,
       - *birthdate*, 
       - *\https://attributes.eid.gov.it/fiscal_number* (National Unique Identifier).
 
-  - **email**: : this value permits to get, when they are made available by the user, the following attributes:
+  - **email**: requests the following attributes:
 
       - *email*;
       - *email_verified*.
