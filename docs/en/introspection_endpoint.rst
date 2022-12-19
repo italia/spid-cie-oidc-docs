@@ -62,7 +62,7 @@ together with a Client Assertion that allows authenticating the RP that makes th
      - |spid-icon| |cieid-icon| 
    * - **token**
      - The token about which the RP wants to obtain information.
-     - 
+     - |spid-icon| |cieid-icon|  
 
 
 Response
@@ -88,7 +88,7 @@ The Introspection Endpoint responds with a JSON Object defined as follows.
    * - **active**
      - Boolean value that indicates the token validity. If the token is expired, it has been revoked or it
        has never been issued for the calling client_id, the Introspection Endpoint must return false.
-     -  |spid-icon|
+     -  |spid-icon| |cieid-icon|
    * - **scope**
      - List of scopes required in the Authorization Request.
      -  |spid-icon|
