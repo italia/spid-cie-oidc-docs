@@ -10,7 +10,7 @@ Quando l'utente esegue il logout o quando la sua sessione presso il RP scade (in
 .. note::
   La revoca di un Access Token comporta la revoca di tutti i Refresh Token a questo collegati.
 
-L'OP DOVRÀ revocare il token specificato nella richiesta e DOVRÀ terminare la sessione di Single Sign-On se ancora attiva.
+L'OP DOVRÀ revocare il token specificato nella richiesta e DOVRÀ terminare la sessione di Single Sign-On se ancora attiva. Eventuali altri token attivi per l’utente dovranno invece essere mantenuti validi.
 
 .. seealso::
 
