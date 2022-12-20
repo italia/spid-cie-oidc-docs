@@ -177,7 +177,7 @@ UserInfo endpoint to get user attributes.
   {
     "alg": "RS256",
     "kid": "dB67gL7ck3TFiIAf7N6_7SHvqk0MDYMEQcoGGlkUAAw",
-    "type": "at+jwt"
+    "typ": "at+jwt"
   }
   .
   {
