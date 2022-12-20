@@ -96,7 +96,7 @@ The RP Metadata of type **"openid_relying_party"** MUST contain at least the fol
     - See `OIDC-FED`_ Section 4.1. The required value is **automatic**. 
     - |spid-icon| |cieid-icon|
   * - **response_types**
-    - JSON array containing a list of the OAuth 2.0 response_type values that the Client is declaring that it will restrict itself to using. MUST contain only the value **code**.
+    - JSON array containing a list of the OAuth 2.0 response_type values that the RP is declaring that it will restrict itself to using. It MUST contain only the value **code**.
     - |spid-icon| |cieid-icon|
 
 .. note:: 
