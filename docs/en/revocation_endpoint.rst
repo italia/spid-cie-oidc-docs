@@ -5,7 +5,7 @@ Revocation Endpoint
 
 An RP MAY request the revocation of an Access Token or a Refresh Token issued by an OP.
 
-When the user logs out or when his session with the RP expires (according to the policies decided by the RP) the RP MUST revoke the Access Token in its possession.
+When the user logs out or when his/her session with the RP expires (according to the policies decided by the RP) the RP MUST revoke the Access Token in its possession.
 
 .. note::
   The Access Token revocation implies revoking all the Refresh Tokens linked to it.
