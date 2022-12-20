@@ -7,7 +7,7 @@ Revocation Endpoint
 
 An RP MAY request the revocation of an Access Token or a Refresh Token issued by an OP.
 
-The OP MUST to revoke the token specified in the request.
+The OP MUST revoke the token specified in the request.
 
 The Access Token revocation MUST NOT imply revoking all the Refresh Tokens linked to it.
 
