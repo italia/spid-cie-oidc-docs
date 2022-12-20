@@ -223,7 +223,7 @@ Di seguito i claim che compongono l'Access Token.
 ID Token
 ++++++++
 
-L'ID Token è un JSON Web Token (JWT) che contiene informazioni sull'utente che ha eseguito l'autenticazione. I RP DEVONO eseguire la validazione dell'ID Token.
+L'ID Token è un JSON Web Token (JWT) firmato che contiene informazioni sull'utente che ha eseguito l'autenticazione. I RP DEVONO eseguire la validazione dell'ID Token.
 
 .. admonition:: |cieid-icon|
 
