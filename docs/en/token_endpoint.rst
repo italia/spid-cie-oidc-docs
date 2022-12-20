@@ -205,7 +205,7 @@ UserInfo endpoint to get user attributes.
      - It MUST be an HTTPS URL that uniquely identifies the OP. The client MUST verify that this value matches the called OP.
      - |spid-icon| |cieid-icon|
    * - **sub** 
-     - See `OpenID.Core#SubjectIDTypes`_. It MUST be *pairwise*. 
+     - See `OpenID.Core#SubjectIDTypes`_. It MUST be *pairwise* type. 
      - |spid-icon| |cieid-icon|
    * - **aud** 
      - It MUST match the value *client_id*. The RP MUST verify that this value matches its client ID.
