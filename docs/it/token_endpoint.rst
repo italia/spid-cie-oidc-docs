@@ -206,6 +206,9 @@ Di seguito i claim che compongono l'Access Token.
    * - **sub** 
      - Vedi `OpenID.Core#SubjectIDTypes`_. DEVE essere di tipo *pairwise*.  
      - |spid-icon| |cieid-icon|
+   * - **client_id** 
+     - DEVE essere valorizzato con un HTTPS URL che identifica univocamente il RP.  
+     - |spid-icon| |cieid-icon|
    * - **aud** 
      - DEVE coincidere con il valore *client_id*. Il RP DEVE verificare che questo valore corrisponda al proprio client ID.
      - |spid-icon| |cieid-icon|
