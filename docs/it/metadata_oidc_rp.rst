@@ -97,7 +97,7 @@ Il Metadata di tipo **"openid_relying_party"** DEVE contenere almeno i seguenti 
     - Vedi `OIDC-FED`_ Section 4.1. Il valore richiesto è **automatic**. 
     - |spid-icon| |cieid-icon|
   * - **response_types**
-    - Array dei valori di response_type previsti da OAuth 2.0 che il client userà nelle richieste di autenticazione. Deve contenere il solo valore **code**. 
+    - Array dei valori di response_type previsti da OAuth 2.0 che il RP userà nelle richieste di autenticazione. Deve contenere il solo valore **code**. 
     - |spid-icon| |cieid-icon|
 
 .. note:: 
