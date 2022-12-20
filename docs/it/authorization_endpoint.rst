@@ -131,6 +131,9 @@ Il payload del **JWT** contiene i seguenti parametri obbligatori.
    * - **aud**
      - DEVE corrispondere all'identificativo del OP (parametro *issuer* presente nel :ref:`Metadata OP <MetadataOP>`.)
      - |spid-icon| |cieid-icon|
+   * - **ui_locales**
+     - Lingue preferibili per visualizzare le pagine dell’OP. L’OP può ignorare questo parametro se non dispone di nessuna delle lingue indicate. Lista di codici RFC5646 separati da spazi.
+     - |spid-icon|
 
 .. note::
   **PKCE** è un'estensione del protocollo *OAuth 2.0* prevista anche nel profilo *iGov* (`International Government Assurance Profile for OAuth 2.0 <https://openid.net/specs/openid-igov-oauth2-1_0-03.html#Section-3.1.7>`_) e finalizzata ad evitare un potenziale attacco attuato con l'intercettazione dell'*authorization code*. Consiste nella generazione di un codice (**code verifier**) e del suo hash (**code challenge**). Il **code challenge** viene inviato all'OP nella richiesta di autenticazione. 
