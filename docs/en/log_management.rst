@@ -20,6 +20,18 @@ OPs and RPs MUST retain the following.
     - The **UserInfoResponse** related to the *UserInfoRequest*, if any.
     - **RevocationRequest** related to the *TokenRequest*, if any.
     - The **RevocationResponse** related to the *RevocationRequest*, if any.
+    
+.. admonition:: |spid-icon|
+    
+    For each message, where applicable, the following information could be indexed for research and consultation purposes:
+    
+        - authorization code
+        - client_id
+        - jti
+        - iss
+        - sub
+        - iat
+        - exp
 
 2. A federation log containing, for each *AuthenticationRequest*, the **Trust Chain** related to the entity which messages are being exchanged with. In the case of a log handled by an OP receiving an authentication request from an RP, it MUST contain the following ordered list of items:
 
