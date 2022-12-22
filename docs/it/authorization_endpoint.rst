@@ -6,17 +6,19 @@ Authorization endpoint (Authentication)
 Request
 +++++++
 
-Per avviare il processo di autenticazione, il RP reindirizza l'utente all'*Authorization Endpoint* dell'OP selezionato, inviando una richiesta *HTTP* contenente il parametro **request** un oggetto in formato **JWT** che contiene l'*Authorization Request* firmata dal RP.
+Per avviare il processo di autenticazione, il RP reindirizza l'utente all'*Authorization Endpoint* dell'OP selezionato, inviando una richiesta *HTTP* contenente il parametro **request** un oggetto in formato **JWT** firmato che contiene l'*Authorization Request* firmata dal RP.
 
 Per veicolare la richiesta, il RP PUÒ utilizzare i metodi **POST** e **GET**. Mediante il metodo **POST** i parametri DEVONO essere trasmessi utilizzando la *Form Serialization*. 
 Mediante il metodo **GET** i parametri DEVONO essere trasmessi utilizzando la *Query String Serialization*. Per maggiori dettagli vedi `OpenID.Core#Serializations`_.
 
-L’oggetto request DEVE essere un token JWT firmato, vedi signature :ref:`supported_algs`.
-
 .. warning::
   Il parametro **scope** DEVE essere trasmesso sia come parametro nella chiamata HTTP sia all'interno dell'oggetto request e i loro valori DEVONO corrispondere.
 
+  |cieid-icon|
   I parametri **client_id** e **response_type** DOVREBBERO essere trasmessi sia come parametri sulla chiamata HTTP sia all'interno dell'oggetto request.
+
+  |spid-icon|
+  I parametri **client_id** e **response_type** DEVONO essere trasmessi sia come parametri sulla chiamata HTTP sia all'interno dell'oggetto request e i loro valori DEVONO corrispondere, in ogni caso i parametri all’interno dell’oggetto request prevalgono su quelli indicati sulla chiamata HTTP.
 
 .. seealso:: 
 
@@ -148,38 +150,43 @@ Il payload del **JWT** contiene i seguenti parametri obbligatori.
 Parametri **scope** e **claims**
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Gli attributi dell'utente POSSONO essere richiesti dal RP nell'Authorization Request usando i parametri **scope** o **claims**.
-
-
-Nel caso di utilizzo del parametro **scope** i seguenti valori sono supportati:
-
-- **profile**: usando questo valore è possibile ottenere il profilo utente di default che corrisponde al Minimum Dataset eIDAS: 
-
-    - *family_name*, 
-    - *given_name*,
-    - *birthdate*, 
-    - *\https://attributes.eid.gov.it/fiscal_number* (National Unique Identifier).
-
-- **email**: questo valore permette di ottenere, se resi disponibili dall'utente, i seguenti attributi:
-
-    - *email*,
-    - *email_verified*. Solo per |cieid-icon|
-
-Il parametro **scope** PUÒ contenere uno o più valori separati da uno spazio. Ad esempio l'utilizzo congiunto di *profile* e *email* permette di ottenere l'unione degli insiemi degli attributi (Minimum Dataset eIDAS e l'email).
-Nel caso di richiesta di singoli attributi dell'utente o specifiche combinazioni di essi, Il RP DOVREBBE usare il parametro **claims**.
-Per la definizione del parametro **claims** e la modalità di utilizzo per la richiesta degli attributi dell'utente si può fare riferimento a `OpenID.Core#ClaimsParameter`_.
-
-.. note:: |cieid-icon| |spid-icon|
-
-    Gli attributi richiesti tramite il parametro **scope** sono disponibili sia nell'ID Token e sia nella risposta allo *userinfo endpoint*.
-
 .. admonition:: |spid-icon|
 
-  SPID consente gli attributi utente nell' ID Token esclusivamente se questo è criptato e se il RP destinatoraio contiene, all'interno dei suoi metadata,  i claims *id_token_encrypted_response_alg* e *id_token_encrypted_response_enc*.
+  Gli attributi dell'utente POSSONO essere richiesti dal RP nell'Authorization Request usando il parametro **claims**.
 
-.. warning::
+  Non è possibile richiedere attributi SPID nell’id_token. Gli attributi elencati sotto "userinfo" sono disponibili al momento della chiamata allo UserInfo Endpoint.
 
-  Se nel parametro **scope** vi fosse esclusivamente il valore **openid** e il parametro **claims** non fosse presente o valorizzato, la response dello userinfo endpoint non presenterebbe alcun attributo utente ma soltanto il claim *sub*.
+
+
+.. admonition:: |cieid-icon|
+
+  Gli attributi dell'utente POSSONO essere richiesti dal RP nell'Authorization Request usando i parametri **scope** o **claims**.
+
+
+  Nel caso di utilizzo del parametro **scope** i seguenti valori sono supportati:
+
+  - **profile**: usando questo valore è possibile ottenere il profilo utente di default che corrisponde al Minimum Dataset eIDAS: 
+
+      - *family_name*, 
+      - *given_name*,
+      - *birthdate*, 
+      - *\https://attributes.eid.gov.it/fiscal_number* (National Unique Identifier).
+
+  - **email**: questo valore permette di ottenere, se resi disponibili dall'utente, i seguenti attributi:
+
+      - *email*,
+      - *email_verified*.
+
+  Il parametro **scope** PUÒ contenere uno o più valori separati da uno spazio. Ad esempio l'utilizzo congiunto di *profile* e *email* permette di ottenere l'unione degli insiemi degli attributi (Minimum Dataset eIDAS e l'email).
+  Nel caso di richiesta di singoli attributi dell'utente o specifiche combinazioni di essi, Il RP DOVREBBE usare il parametro **claims**.
+
+  Gli attributi richiesti tramite il parametro **scope** sono disponibili sia nell'ID Token e sia nella risposta allo *userinfo endpoint*.
+
+  .. warning::
+
+    Se nel parametro **scope** vi fosse esclusivamente il valore **openid** e il parametro **claims** non fosse presente o valorizzato, la response dello userinfo endpoint non presenterebbe alcun attributo utente ma soltanto il claim *sub*.
+
+Per la definizione del parametro **claims** e la modalità di utilizzo per la richiesta degli attributi dell'utente si può fare riferimento a `OpenID.Core#ClaimsParameter`_.
 
 
 Response
