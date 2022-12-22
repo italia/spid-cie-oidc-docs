@@ -20,6 +20,18 @@ Gli OP e gli RP DEVONO mantenere
     - L'eventuale **UserInfoResponse** relativa alla *UserInfoRequest*
     - L'eventuale **RevocationRequest** relativa alla *TokenRequest*
     - L'eventuale **RevocationResponse** relativa alla *RevocationRequest*
+    
+.. admonition:: |spid-icon|
+    Per ogni messaggio, ove applicabili, potrebbero essere indicizzate ai fini di ricerca e consultazione le seguenti
+    informazioni:
+
+        - authorization code
+        - client_id
+        - jti
+        - iss
+        - sub
+        - iat
+        - exp
 
 2. Un registro di federazione contenente, per ogni *AuthenticationRequest*, la **Trust Chain** relativa all'entità con la quale si stanno scambiando i messaggi. Nel caso di registro mantenuto da un OP che riceve una richiesta di autenticazione da un RP, DEVE contenere la seguente lista ordinata di oggetti:
 
