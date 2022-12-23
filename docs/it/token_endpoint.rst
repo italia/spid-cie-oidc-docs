@@ -206,8 +206,14 @@ Di seguito i claim che compongono l'Access Token.
    * - **sub** 
      - Vedi `OpenID.Core#SubjectIDTypes`_. DEVE essere di tipo *pairwise*.  
      - |spid-icon| |cieid-icon|
+   * - **client_id** 
+     - DEVE essere valorizzato con un HTTPS URL che identifica univocamente il RP.  
+     - |spid-icon| |cieid-icon|
    * - **aud** 
      - DEVE coincidere con il valore *client_id*. Il RP DEVE verificare che questo valore corrisponda al proprio client ID.
+     - |spid-icon| |cieid-icon|
+   * - **scope** 
+     - L'OP DOVREBBE inserire il parametro *scope* come previsto in :rfc:`9068` Sezione 2.2.3. DEVE coincidere con il valore presente in fase di richiesta di autenticazione.
      - |spid-icon| |cieid-icon|
    * - **iat** 
      - UNIX Timestamp con l'istante di generazione del JWT, codificato come NumericDate come indicato in :rfc:`7519`
@@ -346,7 +352,7 @@ Il *Refresh Token* NON DEVE avere una validità (differenza tra *iat* e *exp*) s
 Se allo scadere del periodo di validità l'RP effettua una richiesta all'OP, quest'ultimo DEVE restituire un errore come esito della richiesta. 
 
 .. admonition:: |cieid-icon|
-  
+
   Fermo restando la validità del token, l'OP PUÒ fissare un periodo di validità relativo al consenso che l'utente ha fornito all'utilizzo dello *scope* *offline_access* e del *Refresh Token*. In prossimità del termine di validità del consenso, qualore tale termine sia previsto nelle policy dell'OP, il valore di *exp* DEVE essere calcolato come il valore minimo tra la durata di validità del token e quella del consenso. 
 
 .. note::

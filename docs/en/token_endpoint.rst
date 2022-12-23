@@ -207,8 +207,14 @@ UserInfo endpoint to get user attributes.
    * - **sub** 
      - See `OpenID.Core#SubjectIDTypes`_. It MUST be *pairwise* type. 
      - |spid-icon| |cieid-icon|
+   * - **client_id** 
+     - It MUST contain an HTTPS URL that uniquely identifies the RP. 
+     - |spid-icon| |cieid-icon|
    * - **aud** 
      - It MUST match the value *client_id*. The RP MUST verify that this value matches its client ID.
+     - |spid-icon| |cieid-icon|
+   * - **scope** 
+     - The OP SHOULD add the *scope* parameter as defined in :rfc:`9068` Section 2.2.3. It MUST match the value in the authentication request.
      - |spid-icon| |cieid-icon|
    * - **iat** 
      - UNIX Timestamp with the time of JWT generation, coded as NumericDate as indicated in :rfc:`7519`. 
@@ -347,7 +353,7 @@ The *Refresh Token* MUST NOT be valid (difference between *iat* and *exp*) for m
 If at the expiration of the validity period the RP makes a request to the OP, the OP MUST return an error as the result of the request. 
 
 .. admonition:: |cieid-icon|
-  
+
   Notwithstanding the validity of the token, the OP MAY set a validity period related to the consent the user has provided to use the *scope=offline_access* and the *Refresh Token*. Approaching the expiration of the validity period of the consensus, whenever such a period is provided for in the OP's policies, the value of *exp* MUST be calculated as the minimum value between the validity period of the token and that of the consensus.
 
 .. note::
