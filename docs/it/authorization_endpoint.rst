@@ -187,7 +187,7 @@ Parametri **scope** e **claims**
 
   .. warning::
 
-    Se nel parametro **scope** vi fosse esclusivamente il valore **openid** e il parametro **claims** non fosse presente o valorizzato, la response dello userinfo endpoint non presenterebbe alcun attributo utente ma soltanto il claim *sub*.
+    Quando il parametro **scope** contiene solo il valore **openid** e il parametro **claims** non è presente oppure non è valorizzato, la response dello userinfo endpoint NON DEVE contenere nessun attributo utente ma soltanto il claim *sub*.
 
 Per la definizione del parametro **claims** e la modalità di utilizzo per la richiesta degli attributi dell'utente si può fare riferimento a `OpenID.Core#ClaimsParameter`_.
 

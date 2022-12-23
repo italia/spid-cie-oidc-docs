@@ -720,7 +720,7 @@ EN 5.1. Trust Mark Status Response
 EN 6. Authorization Request
 ++++++++++++++++++++++++++++
 
-**Example (HTTP call):**
+**Example (HTTP request):**
 
 .. code-block:: http
 

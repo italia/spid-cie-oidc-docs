@@ -15,8 +15,6 @@ Standard di riferimento
       - OpenID Connect Federation 1.0 
     * - `iGov.OIDC`_
       - Varley, M., Grassi, P. "iGov Profile for OpenID Connect", October 2018.
-    * - `OpenID.IDA`_
-      - Lodderstedt, T., Fett, D., Haine, M., Pulido, A., "OpenID Connect for Identity Assurance 1.0", September, 2021.
     * - `LG-AA`_
       - Attribute Authority Guidelines – "Linee Guida Attribute Authority SPID" 
     * - `OpenID.Core`_

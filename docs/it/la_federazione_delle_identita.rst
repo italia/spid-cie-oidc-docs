@@ -54,5 +54,3 @@ Gli incaricati tecnici ed amministrativi della Foglia completano la procedura am
 L'Autorità di Federazione o il suo Intermediario, dopo aver effettuato tutti i controlli amministrativi e tecnici richiesti, registra le chiavi pubbliche della Foglia e rilascia una prova di adesione alla Federazione sotto forma di Trust Mark (TM).
 
 La Foglia DEVE includere il TM all'interno della propria configurazione di Federazione (Entity Configuration) come prova del buon esito del processo di onboarding. 
-
-L'Autorità di Federazione o suo Intermediario DEVE pubblicare la dichiarazione di riconoscimento della Foglia (Entity Statement) contenente le chiavi pubbliche di Federazione della Foglia e i TM a questa rilasciati. L'Autorità di Federazione o suo Intermediario PUÒ pubblicare una `politica dei metadata <https://openid.net/specs/openid-connect-federation-1_0.html#Section-5.1>`_ per forzare la modifica dei metadata OIDC del discendente, nelle parti in cui questo fosse necessario.

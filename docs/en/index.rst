@@ -4,9 +4,9 @@ SPID/CIE OpenID Connect
 
 `SPID <https://www.spid.gov.it/>`_ and `CIE id <https://www.cartaidentita.interno.gov.it/>`_ are the Italian Systems of Public Digital Identity. They adopt the standards `OpenID Connect Core <https://openid.net/specs/openid-connect-core-1_0.html>`_, `International Government Assurance Profile (iGov) for OpenID Connect 1.0 <https://openid.net/specs/openid-igov-openid-connect-1_0-03.html>`_ and `OpenID Connect Federation 1.0 <https://openid.net/specs/openid-connect-federation-1_0.html>`_.
 
-Thanks to the `digital identity <https://identitadigitale.gov.it/>`_ the Public Administration and the private service suppliers provides the keys to access the online services through unique access credentials.
+Thanks to the `digital identity <https://identitadigitale.gov.it/>`_ the public and private services provides the keys to access the online services through unique access credentials.
 
-This documentation contains the consolidated technical specifications, compliant to the National Guidelines, to improve the experience of integration in the OIDC SPID and CIE id Federations, for the public and private Service Providers (RP), Identity Providers (OP) and Intermediate Entities (SA). 
+This documentation contains the consolidated technical specifications, compliant to the national guidelines, to improve the experience of integration in the OIDC SPID and CIE id Federations, for the public and private Service Providers (RP), Identity Providers (OP) and Intermediate Entities (SA). 
 
 In this documentation you can find:
 
@@ -14,7 +14,7 @@ In this documentation you can find:
  - How to perform and automatic registration of the RPs to the OpenID Providers.
  - How an OpenID Provider recognizes and dynamically registers an RP.
  - How to use the endpoints of the Federation APIs.
- - How to authenticate a user to SPID and CIE and get his/her attributes.
+ - How to authenticate a user to SPID and CIE id.
 
 
 Index of content

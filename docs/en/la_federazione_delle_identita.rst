@@ -64,8 +64,8 @@ For further details, please read the Section about the :ref:`Entity Configuratio
 How to participate
 ++++++++++++++++++
 
-To join in the SPID and CIE id Federations, a participant must publish its configuration
-(Entity Configuration) at its own web endpoint :ref:`.well-known/openid-federation<Esempio_EN1>`.
+The participant MUST publish its configuration
+(Entity Configuration) at the webpath :ref:`.well-known/openid-federation<Esempio_EN1>`.
 
 The technical and administrative representatives complete the onboarding procedure,
 defined by the Federation Authority or by an Intermediary (SA),
@@ -78,5 +78,3 @@ The Leaf MUST include the TM inside its own Federation configuration (Entity Con
 success in the Onboarding process.
 
 The Federation Authority or an Intermediary MUST publish the Leaf Entity Statement containing the Federation public keys of the onboarded Entity and the TMs released for it.
-The Federation Authority or an Intermediary MAY publish a `Metadata policy <https://openid.net/specs/openid-connect-federation-1_0.html#Section-5.1>`_ to force the change
-to the OIDC Metadata of the subordinate Entity, in the parts where it might be needed.
