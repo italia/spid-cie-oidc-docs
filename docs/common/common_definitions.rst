@@ -63,8 +63,8 @@
 .. _SPID UX Guidelines: https://www.spid.gov.it/wp-content/uploads/2021/07/agid-spid-lg-interfacce-informazioni-idp-sp.pdf
 .. _Linee Guida UX SPID: https://www.spid.gov.it/wp-content/uploads/2021/07/agid-spid-lg-interfacce-informazioni-idp-sp.pdf
 .. _AgID: https://www.agid.gov.it/
-.. _long revocable session: https://www.agid.gov.it/sites/default/files/repository_files/linee_guida_openid_connect_in_spid.pdf
-.. _sessione lunga revocabile: https://www.agid.gov.it/sites/default/files/repository_files/linee_guida_openid_connect_in_spid.pdf
+.. _long revocable session: https://www.agid.gov.it/sites/default/files/repository_files/linee_guida_openid_connect_in_spid.pdf#page=47
+.. _sessione lunga revocabile: https://www.agid.gov.it/sites/default/files/repository_files/linee_guida_openid_connect_in_spid.pdf#page=47
 .. _EN319-412-1: https://www.etsi.org/deliver/etsi_en/319400_319499/31941202/02.02.01_60/en_31941202v020201p.pdf
 .. _DM-CIE: https://www.gazzettaufficiale.it/eli/id/2015/12/30/15A09809/sg
 .. _CAD: https://www.gazzettaufficiale.it/eli/gu/2005/05/16/112/so/93/sg/pdf
