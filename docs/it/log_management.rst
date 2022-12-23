@@ -53,7 +53,7 @@ Nel caso di registro mantenuto da un RP che effettua una richiesta di autenticaz
 Registro storico delle chiavi pubbliche di Federazione
 ------------------------------------------------------
 
-Al fine di consentire la verifica dei messaggi scambiati dalle Entità che partecipano alla federazione e delle relative Trust Chain, il TA DEVE pubblicare lo storico delle chiavi pubbliche (JWKS) di federazione all'interno di un registro reso disponibile a tutti i partecipanti tramite l'endpoint */.well-known/openid-federation-jwks*. Per ulteriori dettagli tecnici si rimanda alla Sezione 7.5 di `OIDC-FED`_. 
+Al fine di consentire la verifica dei messaggi scambiati dalle Entità che partecipano alla federazione e delle relative Trust Chain, il TA DEVE pubblicare lo storico delle proprie chiavi pubbliche (JWKS) di federazione all'interno di un registro reso disponibile a tutti i partecipanti tramite l'endpoint */.well-known/openid-federation-jwks*. Per ulteriori dettagli tecnici si rimanda alla Sezione 7.5 di `OIDC-FED`_. 
 
 .. warning::
     Le chiavi che non sono sono più attive da più di 24 mesi POSSONO essere rimosse dal registro a discrezione del TA. 
