@@ -105,7 +105,7 @@ The Introspection Endpoint responds with a JSON Object defined as follows.
      - OP identified registered in the federation in Uniform Resource Locator (URL) format. The RP MUST verify that the value is the same of the OP queried.
      -  |spid-icon|
    * - **aud**
-     - RP client ID.	The RP MUST verify that the value is the same of the own client ID.
+     - RP client ID. The RP MUST verify that the value is the same of the own client ID.
      -  |spid-icon|
 
 Error Codes

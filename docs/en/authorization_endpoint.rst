@@ -6,19 +6,21 @@ Authorization endpoint
 Request
 +++++++
 
-To initiate the authentication request, the RP redirects the user to the *Authorization Endpoint* of the selected OP, and sends a *HTTP* request with the parameter **request**, a signed JWT containing the *Authorization Request*.
+The Authorization request is initiated by the user that selects the OP with which he/she wants to be authenticated. 
+The RP redirects the user to the *Authorization Endpoint* of the selected OP, including in the request the parameter **request** that is a signed JWT containing the *Authorization Request*.
 
 For conveying the request, the RP MAY use the methods **POST** and **GET**. With the method **POST** the parameters MUST be sent using the *Form Serialization*. 
 With the method **GET** the parameters MUST be sent using the *Query String Serialization*. For more details see `OpenID.Core#Serializations`_.
 
 .. warning::
-  The parameter **scope** MUST be sent both as a parameter in the HTTP call, and inside the request object. The two values MUST be the same.
+  The parameter **scope** MUST be sent both as a parameter in the HTTP request, and inside the request object. The two values MUST be the same.
 
   |cieid-icon|
-  The parameters **client_id** and **response_type** SHOULD be sent both as parameters in the HTTP call, and inside the request object.
+  The parameters **client_id** and **response_type** SHOULD be sent both as parameters in the HTTP request, and inside the request object.
 
   |spid-icon|
-  The parameters **client_id** and **response_type** MUST be sent both as parameters in the HTTP call, and inside the request object. The two values MUST be the same, in case of mismatching the values inside the request object MUST be considered.
+  The parameters **client_id** and **response_type** MUST be sent both as parameters in the HTTP request, and inside the request object
+  and MUST be the same, in case of mismatching the values inside the request object MUST be considered.
 
 .. seealso:: 
 
@@ -163,9 +165,9 @@ Parameters **scope** and **claims**
 
 .. admonition:: |spid-icon|
 
-  The user attributes MAY be requested by the RP using the **claims** parameter in the Authorization Request.
+  The attributes of the user MAY be requested by the RP using the **claims** parameter in the Authorization Request.
 
-  SPID do not allow require the user attributes in Token ID, they are available in "userinfo".  
+  SPID do not allow require the user attributes in ID Token, they are available at the "userinfo" endpoint.  
 
 
 .. admonition:: |cieid-icon|

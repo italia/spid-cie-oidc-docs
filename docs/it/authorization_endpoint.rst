@@ -6,7 +6,7 @@ Authorization endpoint (Authentication)
 Request
 +++++++
 
-Per avviare il processo di autenticazione, il RP reindirizza l'utente all'*Authorization Endpoint* dell'OP selezionato, inviando una richiesta *HTTP* contenente il parametro **request** un oggetto in formato **JWT** firmato che contiene l'*Authorization Request* firmata dal RP.
+Per avviare il processo di autenticazione, il RP reindirizza l'utente all'*Authorization Endpoint* dell'OP selezionato, inviando una richiesta *HTTP* contenente il parametro **request** in formato **JWT** firmato e contenente l'*Authorization Request* firmata dal RP.
 
 Per veicolare la richiesta, il RP PUÒ utilizzare i metodi **POST** e **GET**. Mediante il metodo **POST** i parametri DEVONO essere trasmessi utilizzando la *Form Serialization*. 
 Mediante il metodo **GET** i parametri DEVONO essere trasmessi utilizzando la *Query String Serialization*. Per maggiori dettagli vedi `OpenID.Core#Serializations`_.
@@ -18,7 +18,7 @@ Mediante il metodo **GET** i parametri DEVONO essere trasmessi utilizzando la *Q
   I parametri **client_id** e **response_type** DOVREBBERO essere trasmessi sia come parametri sulla chiamata HTTP sia all'interno dell'oggetto request.
 
   |spid-icon|
-  I parametri **client_id** e **response_type** DEVONO essere trasmessi sia come parametri sulla chiamata HTTP sia all'interno dell'oggetto request e i loro valori DEVONO corrispondere, in ogni caso i parametri all’interno dell’oggetto request prevalgono su quelli indicati sulla chiamata HTTP.
+  I parametri **client_id** e **response_type** DEVONO essere trasmessi sia come parametri sulla chiamata HTTP sia all'interno dell'oggetto request e i loro valori DEVONO corrispondere, in caso contrario solo i parametri all’interno dell’oggetto request DEVONO essere considerati.
 
 .. seealso:: 
 
@@ -157,7 +157,7 @@ Parametri **scope** e **claims**
 
   Gli attributi dell'utente POSSONO essere richiesti dal RP nell'Authorization Request usando il parametro **claims**.
 
-  Non è possibile richiedere attributi SPID nell’id_token. Gli attributi elencati sotto "userinfo" sono disponibili al momento della chiamata allo UserInfo Endpoint.
+  Non è possibile richiedere attributi SPID nell' ID Token. Gli attributi dell'utente sono disponibili all'interno della response dello UserInfo endpoint.
 
 
 
