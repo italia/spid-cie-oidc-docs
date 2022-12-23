@@ -46,23 +46,23 @@ together with a Client Assertion that allows authenticating the RP that makes th
 
    * - **Claim**
      - **Description**
-     - **Required**
+     - **Supported by**
    * - **client_assertion**
      - JWT signed with the Relying Party's private key, containing the same parameters as documented 
        for the requests to the Token Endpoint. The OP must test the validity of all the fields that
        are present in the JWT, plus the validity of its signature, 
        with respect to the parameter **client_id**.
-     - 
+     - |spid-icon| |cieid-icon|
    * - **client_assertion_type**
      - String. Allowed values: **urn:ietf:params:oauth:clientassertion-type:jwt-bearer**
-     - 
+     - |spid-icon| |cieid-icon| 
    * - **client_id**
      - URI that unquely identifies the RP. The OP must check that the client_id is known inside the 
        Federation.
-     - 
+     - |spid-icon| |cieid-icon| 
    * - **token**
      - The token about which the RP wants to obtain information.
-     - 
+     - |spid-icon| |cieid-icon|  
 
 
 Response
@@ -84,11 +84,29 @@ The Introspection Endpoint responds with a JSON Object defined as follows.
 
    * - **Claim**
      - **Description**
-     - **Required**
+     - **Supported by**
    * - **active**
      - Boolean value that indicates the token validity. If the token is expired, it has been revoked or it
        has never been issued for the calling client_id, the Introspection Endpoint must return false.
-     - 
+     -  |spid-icon| |cieid-icon|
+   * - **scope**
+     - List of scopes required in the Authorization Request.
+     -  |spid-icon|
+   * - **exp**
+     - Token expiration.
+     -  |spid-icon|
+   * - **sub**
+     - Subject identifier. The same released in the ID Token. The RP MUST verify that the value is the same contained in the ID Token.
+     -  |spid-icon|
+   * - **client_id**
+     - URI of the RP registered in the federation. The RP MUST verify that the value is the same of the own client_id.
+     -  |spid-icon|
+   * - **iss**
+     - OP identified registered in the federation in Uniform Resource Locator (URL) format. The RP MUST verify that the value is the same of the OP queried.
+     -  |spid-icon|
+   * - **aud**
+     - RP client ID.	The RP MUST verify that the value is the same of the own client ID.
+     -  |spid-icon|
 
 Error Codes
 +++++++++++
