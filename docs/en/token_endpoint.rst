@@ -6,9 +6,11 @@ Token Endpoint
 
 At the end of the authentication flow described at the previous section, the RP sends a request to the Token Endpoint with the authorization code received by the OP. These tokens MUST be signed JWT.
 
-The Token response, if succesfull, returns an *ID Token*, an *Access Token* and possibly a *Refresh Token* (if a `long revocable session`_ has been started).
+The Token response, if succesfull, returns an *ID Token*, an *Access Token* and possibly a *Refresh Token* (if the authentication request has *scope=offline_access* and *prompt=consent*. See Section :ref:`Refresh Token <Refresh_Token>`.).
 
-In a `long revocable session`_, the RP MAY call the *Token Endpoint* sending a *Refresh Token* in its possession, for obtaining a new *Access Token* and a new *ID Token*.
+.. admonition:: |spid-icon|
+
+  In a `long revocable session`_, the RP MAY request a Token to the *Token Endpoint* sending a *Refresh Token* in its possession, for obtaining a new *Access Token* and a new *ID Token*.
 
 .. note::
   The authentication method of the RP by the Token Endpoint is the **private_key_jwt** (`OpenID.Core#ClientAuthentication`_)
@@ -83,7 +85,7 @@ The claims that MUST be included in the *Token Request* are given below.
 	 
 	 **aud**: URL of the OP Token Endpoint.
 	 
-	 **iat**: UNIX Timestamp with the time of the JWT generation, coded as NumericDate as indicated in :rfc:`7519`. 
+	 **iat**: UNIX Timestamp with the time of the JWT issuance, coded as NumericDate as indicated in :rfc:`7519`. 
 	 
 	 **exp**: UNIX Timestamp with the expiry time of the JWT, coded as NumericDate as indicated in :rfc:`7519`. 
 	 
@@ -177,7 +179,7 @@ UserInfo endpoint to get user attributes.
   {
     "alg": "RS256",
     "kid": "dB67gL7ck3TFiIAf7N6_7SHvqk0MDYMEQcoGGlkUAAw",
-    "type": "at+jwt"
+    "typ": "at+jwt"
   }
   .
   {
@@ -205,13 +207,19 @@ UserInfo endpoint to get user attributes.
      - It MUST be an HTTPS URL that uniquely identifies the OP. The client MUST verify that this value matches the called OP.
      - |spid-icon| |cieid-icon|
    * - **sub** 
-     - See `OpenID.Core#SubjectIDTypes`_. It MUST be *pairwise*. 
+     - See `OpenID.Core#SubjectIDTypes`_. It MUST be of type *pairwise*. 
+     - |spid-icon| |cieid-icon|
+   * - **client_id** 
+     - It MUST contain a HTTPS URL that uniquely identifies the RP. 
      - |spid-icon| |cieid-icon|
    * - **aud** 
      - It MUST match the value *client_id*. The RP MUST verify that this value matches its client ID.
      - |spid-icon| |cieid-icon|
+   * - **scope** 
+     - The OP SHOULD add the *scope* parameter as defined in :rfc:`9068` Section 2.2.3. It MUST match the value in the authentication request.
+     - |spid-icon| |cieid-icon|
    * - **iat** 
-     - UNIX Timestamp with the time of JWT generation, coded as NumericDate as indicated in :rfc:`7519`. 
+     - UNIX Timestamp with the time of JWT issuance, coded as NumericDate as indicated in :rfc:`7519`. 
      - |spid-icon| |cieid-icon|
    * - **exp**
      - UNIX Timestamp with the expiry time of the JWT, coded as NumericDate as indicated in :rfc:`7519`.
@@ -226,9 +234,14 @@ UserInfo endpoint to get user attributes.
 ID Token
 ++++++++
 
-The ID Token is a JSON Web Token (JWT) that contains information on the user that has executed the authentication. The RPs MUST validate the ID Token.
+The ID Token is a signed JSON Web Token (JWT) that contains information about the user that has executed the authentication. The RPs MUST validate the ID Token.
 
-If the RP exposes in its metadata the parameter **id_token_encrypted_response_alg** the OP MUST encrypt the ID Token.
+
+.. admonition:: |cieid-icon|
+  
+  If the RP exposes in its metadata the parameter **id_token_encrypted_response_alg** the OP MUST encrypt the ID Token. 
+
+
 In this case the ID Token MUST be a **nested signed and encrypted JWT** containing the *cty* (Content-Type) parameter in the JOSE header configured to *JWT* (see :rfc:`7519#section-5.2`).
 
 The claims available in the *ID Token* are given below.
@@ -280,7 +293,7 @@ The claims available in the *ID Token* are given below.
      - See `OpenID.Core#CodeIDToken`_. The client MUST verify that this value matches the *Access Token* returned with the Token ID. 
      - |spid-icon| |cieid-icon|
    * - **iat** 
-     - UNIX Timestamp with the time of JWT generation, coded as NumericDate as indicated in :rfc:`7519`. 
+     - UNIX Timestamp with the time of JWT issuance, coded as NumericDate as indicated in :rfc:`7519`. 
      - |spid-icon| |cieid-icon|
    * - **nbf** 
      - UNIX Timestamp. Time of the validity beginning of the JWT in NumericDate format, as indicated in :rfc:`7519`. MUST match with the value of **iat**.
@@ -301,6 +314,67 @@ The claims available in the *ID Token* are given below.
  - https://openid.net/specs/openid-connect-core-1_0.html#IDToken
  - https://openid.net/specs/openid-igov-openid-connect-1_0-03.html#Section-3.1
 
+
+.. _Refresh_Token:
+
+
+Refresh Token
++++++++++++++
+
+The *Refresh Token* is a signed JWT that MAY be issued by the OP and MAY be used to obtain a new *Access Token* that enables the RP to access the UserInfo endpoint without direct user interaction. To obtain a *Refresh Token*, the RP MUST include in the *scope* parameter of the authentication request the value *offline_access* and in the *prompt* parameter, the value *consent*. The use of this scope can be useful in scenarios where an RP needs to verify that an end user's digital identity is still valid (e.g., it has not been revoked) or wants to keep attributes it has previously collected during the authentication phase up-to-date, such as for sending notifications to the end user after the end user has been authenticated.
+
+The *Refresh Token* MUST be a signed JWT containing at least the following parameters.
+
+.. list-table:: 
+  :widths: 20 60 20
+  :header-rows: 1
+
+  * - **Claim**
+    - **Description**
+    - **Supported by**
+  * - **iss** 
+    - It MUST be an HTTPS URL that uniquely identifies the OP. The RP MUST verify that this value matches the called OP.
+    - |spid-icon| |cieid-icon|
+  * - **aud** 
+    - It MUST match the value client_id. The RP MUST verify that this value matches its client ID.
+    - |spid-icon| |cieid-icon|
+  * - **iat** 
+    - UNIX Timestamp with the time of JWT issuance, coded as NumericDate as indicated in :rfc:`7519`.
+    - |spid-icon| |cieid-icon|
+  * - **exp** 
+    - UNIX Timestamp with the expiry time of the JWT, coded as NumericDate as indicated in :rfc:`7519`.
+    - |spid-icon| |cieid-icon|
+  * - **jti** 
+    - It MUST be a String in uuid4 format. Unique *Refresh Token* identifier that the RP MAY use to prevent reuse by rejecting the *Refresh Token*  if already processed.
+    - |spid-icon| |cieid-icon|
+
+.. admonition:: |cieid-icon|
+  
+  **The Refresh Token MUST NOT allow the requesting RP to obtain an ID Token, neither the one previously issued during authentication nor a new ID Token. The use of the Refresh Token MUST NOT be used by RPs to obtain a new user authentication with the OP or to renew a pre-existing session, but MAY be used as a mechanism to obtain from the UserInfo endpoint only the same set of user attributes requested at the initial authentication phase and for which the user has given explicit consent.** Such consent MUST be collected by the OP at the end-user authentication phase on the consent page (it requires the ability to enable or disable this option on the consent page) and MAY be conditional on a validity period if defined by the OP according to policies on the treatment of personal data. Disabling this option by the user MUST still allow user authentication but MUST NOT release a *Refresh Token*. 
+
+  The OP who receives a request for a new *Access Token* via a *Refresh Token* MAY send a notification to the user via one of the available e-delivery services (email, sms, mobile app notification). The user who does not recognize this operation as legitimate or who wants to disable this option can request from the OP a revocation of the given consent (and therefore of the tokens issued as a result of the same) according to the procedures made known within the consent acquisition page. The notification MUST be informative only and not authorizing. Within the notification MUST be made known to the user how to revoke the consent given. The OP MUST allow the user to disable this option at any time through appropriate functionality made available by the OP itself.
+
+For security reasons, an OP MUST return, along with a new *Access Token*, also a new *Refresh Token*, invalidating all previously issued tokens (*Refresh Token Rotation*) to the RP and related to the end-user. The new *Refresh Token* MUST have the *iat* parameter valued with the time instant at which the new request was made and consequently the *exp* parameter based on the expected duration.
+
+Validity Period of a Refresh Token
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The *Refresh Token* MUST NOT be valid (difference between *iat* and *exp*) more than 30 days. 
+
+If the Refresh Token is not valid (expired or revoked) and the RP send a request of refresh to the OP, the OP MUST return an error as the result of the request. 
+
+.. admonition:: |cieid-icon|
+
+  Notwithstanding the validity of the token, the OP MAY set a validity period related to the consent the user has provided to use the *scope=offline_access* and the *Refresh Token*. Approaching the expiration of the validity period of the consensus, whenever such a period is provided for in the OP's policies, the value of *exp* MUST be calculated as the minimum value between the validity period of the token and that of the consensus.
+
+.. note::
+
+  In order to clarify the rotation mechanism, a non-normative example is given below where *Refresh Tokens* are assumed to be valid for 30 days.
+    
+  - t1: an RP authenticates with scope=offline_access, then obtains a *Refresh Token* RT1 (validity 30gg)
+  - t2 = t1 + 4gg: the RP makes a request to the Token endpoint by presenting RT1. The OP recognizes that the request is from the same RP and issues a new *Access Token* and new *Refresh Token*  RT2 with validity 30gg from t2
+  - t3 = t1 + 32gg: after 28gg from t2 the RP makes a request to the Token endpoint by submitting RT2. The OP recognizes that the request is from the same RP and issues a new *Access Token*  and new *Refresh Token* RT3 with validity 30gg from t3
+  - t4 = t1 + 64gg: after 32gg from t3 the RP makes a request to the Token endpoint by submitting RT3. This time the OP rejects the request with an error because RT3 is found to be no longer valid.
 
 .. _TOKEN_ENDPOINT_ERRORS:
 

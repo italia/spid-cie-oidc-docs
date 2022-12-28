@@ -36,7 +36,7 @@ Resolve endpoint
 ++++++++++++++++
 
 This endpoint MUST release the Metadata, the Trust Marks and the previously processed Trust Chain, and MUST
-NOT trigger a procedure of Federation Entity Discovery for each request arrival.
+NOT trigger a procedure of Federation Entity Discovery for each request arrival, unless this endpoint is secured with a client authentication mechanism, such as *private_key_jwt* [OIDC-CORE]. When using *private_key_jwt* the value in the *sub* parameter of the *private_key_jwt* MUST match the value *sub* in the request to the Resolve endpoint.
 
 
 

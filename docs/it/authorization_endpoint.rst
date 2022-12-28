@@ -6,7 +6,7 @@ Authorization endpoint (Authentication)
 Request
 +++++++
 
-Per avviare il processo di autenticazione, il RP reindirizza l'utente all'*Authorization Endpoint* dell'OP selezionato, inviando una richiesta *HTTP* contenente il parametro **request** un oggetto in formato **JWT** firmato che contiene l'*Authorization Request* firmata dal RP.
+Per avviare il processo di autenticazione, il RP reindirizza l'utente all'*Authorization Endpoint* dell'OP selezionato, inviando una richiesta *HTTP* contenente il parametro **request** in formato **JWT** firmato e contenente l'*Authorization Request* firmata dal RP.
 
 Per veicolare la richiesta, il RP PUÒ utilizzare i metodi **POST** e **GET**. Mediante il metodo **POST** i parametri DEVONO essere trasmessi utilizzando la *Form Serialization*. 
 Mediante il metodo **GET** i parametri DEVONO essere trasmessi utilizzando la *Query String Serialization*. Per maggiori dettagli vedi `OpenID.Core#Serializations`_.
@@ -18,7 +18,7 @@ Mediante il metodo **GET** i parametri DEVONO essere trasmessi utilizzando la *Q
   I parametri **client_id** e **response_type** DOVREBBERO essere trasmessi sia come parametri sulla chiamata HTTP sia all'interno dell'oggetto request.
 
   |spid-icon|
-  I parametri **client_id** e **response_type** DEVONO essere trasmessi sia come parametri sulla chiamata HTTP sia all'interno dell'oggetto request e i loro valori DEVONO corrispondere, in ogni caso i parametri all’interno dell’oggetto request prevalgono su quelli indicati sulla chiamata HTTP.
+  I parametri **client_id** e **response_type** DEVONO essere trasmessi sia come parametri sulla chiamata HTTP sia all'interno dell'oggetto request e i loro valori DEVONO corrispondere, in caso contrario solo i parametri all’interno dell’oggetto request DEVONO essere considerati.
 
 .. seealso:: 
 
@@ -58,7 +58,7 @@ Di seguito una tabella che riporta la composizione dell'header del **JWT**.
     - **Descrizione**
     - **Supportato da**
   * - **alg**
-    - Vedi :rfc:`7516#section-4.1.1`. DEVE essere valorizzato con uno dei valori presenti nel parametro **request_object_encryption_alg_values_supported** nel :ref:`Metadata OP <MetadataOP>`.
+    - Vedi :rfc:`7516#section-4.1.1`. Vedi :ref:`supported_algs`..
     - |spid-icon| |cieid-icon|
   * - **kid**
     - Vedi :rfc:`7638#section_3`. 
@@ -133,6 +133,9 @@ Il payload del **JWT** contiene i seguenti parametri obbligatori.
    * - **aud**
      - DEVE corrispondere all'identificativo del OP (parametro *issuer* presente nel :ref:`Metadata OP <MetadataOP>`.)
      - |spid-icon| |cieid-icon|
+   * - **ui_locales**
+     - Lingue preferibili per visualizzare le pagine dell’OP. L’OP può ignorare questo parametro se non dispone di nessuna delle lingue indicate. Lista di codici RFC5646 separati da spazi.
+     - |spid-icon|
 
 .. note::
   **PKCE** è un'estensione del protocollo *OAuth 2.0* prevista anche nel profilo *iGov* (`International Government Assurance Profile for OAuth 2.0 <https://openid.net/specs/openid-igov-oauth2-1_0-03.html#Section-3.1.7>`_) e finalizzata ad evitare un potenziale attacco attuato con l'intercettazione dell'*authorization code*. Consiste nella generazione di un codice (**code verifier**) e del suo hash (**code challenge**). Il **code challenge** viene inviato all'OP nella richiesta di autenticazione. 
@@ -154,7 +157,7 @@ Parametri **scope** e **claims**
 
   Gli attributi dell'utente POSSONO essere richiesti dal RP nell'Authorization Request usando il parametro **claims**.
 
-  Non è possibile richiedere attributi SPID nell’id_token. Gli attributi elencati sotto "userinfo" sono disponibili al momento della chiamata allo UserInfo Endpoint.
+  Non è possibile richiedere attributi SPID nell' ID Token. Gli attributi dell'utente sono disponibili all'interno della response dello UserInfo endpoint.
 
 
 
@@ -184,7 +187,7 @@ Parametri **scope** e **claims**
 
   .. warning::
 
-    Se nel parametro **scope** vi fosse esclusivamente il valore **openid** e il parametro **claims** non fosse presente o valorizzato, la response dello userinfo endpoint non presenterebbe alcun attributo utente ma soltanto il claim *sub*.
+    Quando il parametro **scope** contiene solo il valore **openid** e il parametro **claims** non è presente oppure non è valorizzato, la response dello userinfo endpoint NON DEVE contenere nessun attributo utente ma soltanto il claim *sub*.
 
 Per la definizione del parametro **claims** e la modalità di utilizzo per la richiesta degli attributi dell'utente si può fare riferimento a `OpenID.Core#ClaimsParameter`_.
 

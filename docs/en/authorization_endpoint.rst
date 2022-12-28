@@ -6,19 +6,21 @@ Authorization endpoint
 Request
 +++++++
 
-To initiate the authentication request, the RP redirects the user to the *Authorization Endpoint* of the selected OP, and sends a *HTTP* request with the parameter **request**, a signed JWT containing the *Authorization Request*.
+The Authorization request is initiated by the user that selects the OP for the authentication. 
+The RP redirects the user to the *Authorization Endpoint* of the selected OP, including in the request the parameter **request** that is a signed JWT containing the *Authorization Request*.
 
 For conveying the request, the RP MAY use the methods **POST** and **GET**. With the method **POST** the parameters MUST be sent using the *Form Serialization*. 
 With the method **GET** the parameters MUST be sent using the *Query String Serialization*. For more details see `OpenID.Core#Serializations`_.
 
 .. warning::
-  The parameter **scope** MUST be sent both as a parameter in the HTTP call, and inside the request object. The two values MUST be the same.
+  The parameter **scope** MUST be sent both as a parameter in the HTTP request, and inside the request object. The two values MUST be the same.
 
   |cieid-icon|
-  The parameters **client_id** and **response_type** SHOULD be sent both as parameters in the HTTP call, and inside the request object.
+  The parameters **client_id** and **response_type** SHOULD be sent both as parameters in the HTTP request, and inside the request object.
 
   |spid-icon|
-  The parameters **client_id** and **response_type** MUST be sent both as parameters in the HTTP call, and inside the request object. The two values MUST be the same, in case of mismatching the values inside the request object MUST be considered.
+  The parameters **client_id** and **response_type** MUST be sent both as parameters in the HTTP request, and inside the request object
+  and MUST be the same, in case of mismatching the values inside the request object MUST be considered.
 
 .. seealso:: 
 
@@ -61,8 +63,7 @@ In the following, a table that reports the composition of the **JWT** header.
     - **Description**
     - **Supported by**
   * - **alg**
-    - See :rfc:`7516#section-4.1.1`. It MUST have one of the values that are present in the parameter
-      **request_object_encryption_alg_values_supported** in the :ref:`Metadata OP <MetadataOP>`.
+    - See :rfc:`7516#section-4.1.1`. See :ref:`supported_algs`.
     - |spid-icon| |cieid-icon|
   * - **kid**
     - See :rfc:`7638#section_3`. 
@@ -141,6 +142,9 @@ The **JWT** payload contains the following mandatory claims:
    * - **aud**
      - It MUST correspond to the OP identifier (parameter *issuer*, present in the :ref:`Metadata OP <MetadataOP>`.)
      - |spid-icon| |cieid-icon|
+   * - **ui_locales**
+     - OPTIONAL. End-User's preferred languages and scripts for the user interface. Represented as a space-separated list of BCP47 [RFC5646].
+     - |spid-icon|
 
 .. note::
   **PKCE** is an extension of the protocol *OAuth 2.0* also provided in the profile *iGov* (`International Government Assurance Profile for OAuth 2.0 <https://openid.net/specs/openid-igov-oauth2-1_0-03.html#Section-3.1.7>`_) and aimed at avoiding possible attacks from intercepting the *authorization code*. It consists of the generation of a code (**code verifier**) and its hash (**code challenge**). The **code challenge** is sent to the OP in the authentication request.
@@ -160,9 +164,9 @@ Parameters **scope** and **claims**
 
 .. admonition:: |spid-icon|
 
-  The user attributes MAY be requested by the RP using the **claims** parameter in the Authorization Request.
+  The attributes of the user MAY be requested by the RP using the **claims** parameter in the Authorization Request.
 
-  SPID do not allow require the user attributes in Token ID, they are available in "userinfo".  
+  SPID do not allow require the user attributes in ID Token, they are available at the "userinfo" endpoint.  
 
 
 .. admonition:: |cieid-icon|

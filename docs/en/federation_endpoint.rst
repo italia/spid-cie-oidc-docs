@@ -15,7 +15,7 @@ All the Entities MUST contain the following endpoints:
 .. warning:: 
 
    - the resolve endpoint MUST NOT return TMs which are not valid at the time of the request;
-   - the resolve endpoint MUST validate the chain for the subject.
+   - the resolve endpoint MUST return the serialized Trust Chain for the subject.
 
 
 In addition to the Federation endpoints reported before, the Entities of type **TA** or **SA** MUST provide the following endpoints:

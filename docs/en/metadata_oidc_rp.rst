@@ -73,10 +73,10 @@ The RP Metadata of type **"openid_relying_party"** MUST contain at least the fol
     - |spid-icon| |cieid-icon| 
   * - **id_token_encrypted_response_alg**
     - See `OpenID.Registration#ClientMetadata`_. See key encryption :ref:`supported_algs`.
-    - |spid-icon| |cieid-icon| 
+    - |cieid-icon| 
   * - **id_token_encrypted_response_enc**
     - See `OpenID.Registration#ClientMetadata`_. This content encryption is required only if the *id_token_encrypted_response_alg* is given. See key encryption :ref:`supported_algs`.
-    - |spid-icon| |cieid-icon| 
+    - |cieid-icon| 
   * - **userinfo_signed_response_alg**
     - See `OpenID.Registration#ClientMetadata`_. See signature :ref:`supported_algs`.
     - |spid-icon| |cieid-icon| 
@@ -95,8 +95,11 @@ The RP Metadata of type **"openid_relying_party"** MUST contain at least the fol
   * - **client_registration_types**
     - See `OIDC-FED`_ Section 4.1. The required value is **automatic**. 
     - |spid-icon| |cieid-icon|
+  * - **response_types**
+    - JSON array containing a list of the OAuth 2.0 response_type values that the RP is declaring that it will restrict itself to using. It MUST contain the value **code**.
+    - |spid-icon| |cieid-icon|
 
 .. note:: 
-  The URIs contained in the claim **redirect_uris** MAY also follow possible custom schemas (e.g. myapp://) 
+  The URIs contained in the claim **redirect_uris** MAY also use possible custom schemas (e.g. myapp://) 
   in order to support mobile applications.
 

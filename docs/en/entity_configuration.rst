@@ -5,7 +5,7 @@
 Entity Configuration
 --------------------
 
-An **Entity Configuration (EC)** is a Federation Metadata in Jose format, signed by its issuing subject 
+An **Entity Configuration (EC)** is a Federation Metadata in Jose format, signed by an Entity 
 and regarding itself, published at the web endpoint **.well-known/openid-federation**.
 
 .. _firma_EC:

@@ -29,9 +29,11 @@ CIE OpenID Connect e SPID OpenID Connect sono basati su `iGov.OIDC`_ con le segu
 
  - Sezione 3.8. La registrazione dinamica di iGOV specifica che la registrazione dinamica del client è obbligatoria. Sia in CIE id che in SPID, la registrazione automatica OIDC del client è OBBLIGATORIA, mentre la registrazione dinamica OIDC del client NON DOVREBBE essere supportata.
 
- - Nella sezione 4.2 di iGOV gli scope **openid**, **offline_access**, **profile** e **email** vengono usati sia in SPID che in CIE id OpenID Connect proposal e non considerano gli altri scope raccomandatinel profilo iGov, cioè: **doc**.
+ - Nella sezione 4.2 di iGOV gli scope **openid**, **offline_access**, **profile** e **email** vengono usati in CIE id OpenID Connect proposal e non considerano gli altri scope raccomandati nel profilo iGov, cioè: **doc**.
 
- - La sezione 4.3 di iGov definisce la politica relativa all'oggetto userinfo del claim request. Sia in SPID che in CIE id, definiamo la politica per entrambi gli oggetti userinfo e ID Token.
+ - Nella sezione 4.2 di iGOV gli scope **openid**, **offline_access** vengono usati in SPID OpenID Connect proposal e non considerano gli altri scope raccomandati nel profilo iGov, cioè: **doc**.
+
+ - La sezione 4.3 di iGov definisce la politica relativa all'oggetto userinfo del claim request. In CIE id, definiamo la politica per entrambi gli oggetti userinfo e ID Token.
 
  - Nelle sezioni 3.7 e 2.5 di iGOV, i Metadata sia di SPID che di CIE id vengono distribuiti secondo le modalità definite nella sezione "3. Metadata".
 

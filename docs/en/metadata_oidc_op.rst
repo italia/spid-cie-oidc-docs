@@ -128,12 +128,12 @@ The EC of an OP MUST configure a metadata of type **"openid_provider"**, that MU
   * - **request_object_signing_alg_values_supported**
     - See `OpenID.Discovery#OP_Metadata`_. See signature :ref:`supported_algs`.
     - |spid-icon| |cieid-icon|
-  * - **request_object_encryption_alg_values_supported**
-    - See `OpenID.Discovery#OP_Metadata`_. See key encryption :ref:`supported_algs`.
-    - |spid-icon|
-  * - **request_object_encryption_enc_values_supported**
-    - See `OpenID.Discovery#OP_Metadata`_. See Content Encryption :ref:`supported_algs`.
-    - |spid-icon|
+..    * - **request_object_encryption_alg_values_supported**
+..      - Until otherwise indicated by AgID, this MUST NOT be included.
+..      - |spid-icon|
+..    * - **request_object_encryption_enc_values_supported**
+..      - Until otherwise indicated by AgID, this MUST NOT be included.
+..      - |spid-icon|
   * - **token_endpoint_auth_methods_supported**
     - See `OpenID.Discovery#OP_Metadata`_. The supported value is **private_key_jwt**
     - |spid-icon| |cieid-icon|
@@ -168,7 +168,7 @@ The EC of an OP MUST configure a metadata of type **"openid_provider"**, that MU
 
 .. warning::
   The OP Metadata of type **"openid_provider"** exposes the claim **jwks** as regulated by OID-FED instead of
-  the claim **jwks_uri** as required at `OpenID.Discovery#OP_Metadata`_.
+  the claim **jwks_uri** as required at `OpenID.Discovery#OP_Metadata`_. 
 
 .. seealso:: 
 

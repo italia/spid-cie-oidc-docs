@@ -74,10 +74,10 @@ Il Metadata di tipo **"openid_relying_party"** DEVE contenere almeno i seguenti 
     - |spid-icon| |cieid-icon| 
   * - **id_token_encrypted_response_alg**
     - Vedi `OpenID.Registration#ClientMetadata`_. Vedi key encryption :ref:`supported_algs`.
-    - |spid-icon| |cieid-icon| 
+    - |cieid-icon| 
   * - **id_token_encrypted_response_enc**
     - Vedi `OpenID.Registration#ClientMetadata`_. Obbligatorio solo nel caso sia presente anche il parametro *id_token_encrypted_response_alg*. Vedi content encryption :ref:`supported_algs`.
-    - |spid-icon| |cieid-icon| 
+    - |cieid-icon| 
   * - **userinfo_signed_response_alg**
     - Vedi `OpenID.Registration#ClientMetadata`_. Vedi signature :ref:`supported_algs`.
     - |spid-icon| |cieid-icon| 
@@ -96,7 +96,10 @@ Il Metadata di tipo **"openid_relying_party"** DEVE contenere almeno i seguenti 
   * - **client_registration_types**
     - Vedi `OIDC-FED`_ Section 4.1. Il valore richiesto è **automatic**. 
     - |spid-icon| |cieid-icon|
+  * - **response_types**
+    - Array dei valori di response_type previsti da OAuth 2.0 che il RP userà nelle richieste di autenticazione. Deve contenere il valore **code**. 
+    - |spid-icon| |cieid-icon|
 
 .. note:: 
-  Gli URI presenti nel parametro **redirect_uris** POSSONO anche seguire eventuali schemi custom (ad es. myapp://) al fine di supportare applicazioni mobili.
+  Gli URI presenti nel parametro **redirect_uris** POSSONO anche usare eventuali schemi custom (ad es. myapp://) al fine di supportare applicazioni mobili.
 

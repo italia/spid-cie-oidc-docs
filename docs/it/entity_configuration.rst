@@ -6,14 +6,14 @@
 Entity Configuration
 --------------------
 
-Un'**Entity Configuration (EC)** è un Metadata di Federazione in formato Jose e firmato dal soggetto che lo emette e riguardante se stesso, pubblicato presso il web endpoint **.well-known/openid-federation**.
+Un'**Entity Configuration (EC)** è un Metadata di Federazione in formato Jose e firmato da una Entità e riguardante se stessa, pubblicato presso il web endpoint **.well-known/openid-federation**.
 
 .. _firma_EC:
 
 Firma della Entity Configuration
 ++++++++++++++++++++++++++++++++
 
-Tutte le operazioni di verifica della firma relative agli ES, EC e TM sono eseguite con le chiavi pubbliche di Federazione. Per quanto riguarda gli algoritmi di firma supportati si veda la Sezione :ref:`Algoritmi Crittografici <supported_algs>`
+Tutte le operazioni di verifica della firma relative agli ES, EC e TM sono eseguite con le chiavi pubbliche di Federazione. Per quanto riguarda gli algoritmi di firma supportati si veda la Sezione :ref:`Algoritmi Crittografici <supported_algs>`.
 
 
 .. warning::
