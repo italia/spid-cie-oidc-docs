@@ -3,7 +3,7 @@
 Acquisire i Metadata
 --------------------
 
-In questa sezione sono illustrate le modalità di mutuo riconoscimento tra RP e OP, le modalità con le quali le foglie si riconoscono all'interno della medesima Federazione e ottengono gli uni i Metadata degli altri.
+In questa sezione sono illustrate le modalità di mutuo riconoscimento dei partecipanti all'interno della medesima federazione, le modalità con le quali i partecipanti ottengono i metadata gli uni degli altri in maniera sicura.
 
 
 Relying Party
@@ -23,7 +23,7 @@ La procedura di Federation Entity Discovery risulta semplificata per i RP, perch
 .. image:: ../../images/metadata_discovery.svg
     :width: 100%
 
-*La procedura di Federation Entity Discovery a partire dalla Foglia fino al Trust Anchor. Si noti come dall'Entity Statement rilasciato da un superiore si ottiene la chiave pubblica per la validazione dell'Entity Configuration dell'entità discendente.*
+*La procedura di Federation Entity Discovery a partire dalla Foglia fino al Trust Anchor. Dall'Entity Statement rilasciato da un superiore si ottiene la chiave pubblica per la validazione dell'Entity Configuration dell'entità discendente.*
 
 
 OpenID Provider
@@ -38,7 +38,7 @@ Quando un Provider (OP) riceve una richiesta di autorizzazione da parte di un RP
 *La registrazione di un RP dalla prospettiva di un OP che per la prima volta riceve una richiesta di autorizzazione dal RP e avvia il processo di Federation Entity Discovery e salvataggio della Trust Chain.*
 
 
-L'OP estrae l'identificativo univoco (**client_id**) dall'oggetto *request* contenuto all'interno della *Authorization Request* ed effettua una richiesta di Entity Configuration presso il :ref:`RP<Esempio_EN1.1>`. Ottiene la configurazione *self-signed* del RP e convalida la firma dei Trust Mark riconoscibili all'interno della Federazione [1]_. 
+L'OP estrae l'identificativo univoco (**client_id**) dall'oggetto *request* contenuto all'interno della *Authorization Request* ed effettua una richiesta di Entity Configuration presso il :ref:`RP<Esempio_EN1.1>`. Ottiene l'Entity Configuration del RP e convalida la firma dei Trust Mark riconoscibili all'interno della Federazione [1]_. 
 
 Se il RP non espone all'interno della sua configurazione nessun Trust Mark riconoscibile per il profilo di RP (vedi Sezione :ref:`Trust Mark<Trust_Mark>`) il Provider DEVE rifiutare l'autorizzazione con un messaggio di errore come definito nella Sezione :ref:`Gestione degli errori di Federazione <errors_federation>`.
 
@@ -46,9 +46,9 @@ Se il Provider convalida con successo almeno un Trust Mark per il profilo RP con
 
 Durante il Federation Entity Discovery, il Provider richiede ad una o più entità superiori [2]_ l'Entity Statement relativo al RP e ottiene la chiave pubblica con la quale valida la configurazione del RP, fino a giungere al Trust Anchor. Infine applica la politica dei Metadata pubblicata dal Trust Anchor e salva il risultante Metadata finale del RP associandolo ad una data di scadenza, oltre la quale rinnoverà il Metadata secondo le modalità di rinnovo della Trust Chain.
 
-Ottenuto il Metadata finale, il Provider valida la richiesta del RP secondo le modalità definite all'interno delle linee guida della Federazione. 
+Ottenuto il Metadata finale, il Provider valida la richiesta del RP secondo le modalità definite in questo documento. 
 
-Nei casi in cui un RP avesse come entità superiore un SA e non direttamente la TA, la procedura di acquisizione e validazione dell'Entity Configuration del RP avviene mediante l'Entity Statement pubblicato dal SA nei confronti del RP e mediante la convalida dell'Entity Configuration del SA con l'Entity Statement emesso dalla TA in relazione al SA. Se la soglia del massimo numero di Intermediari verticali, definita dal valore di **max_path_length**, viene superata, l'OP blocca il processo di Federation Entity Discovery e rigetta la richiesta del RP.
+Nei casi in cui un RP avesse come entità superiore un SA e non direttamente il TA, la procedura di acquisizione e validazione dell'Entity Configuration del RP avviene mediante l'Entity Statement pubblicato dal SA nei confronti del RP e mediante la convalida dell'Entity Configuration del SA con l'Entity Statement emesso dalla TA in relazione al SA. Se la soglia del massimo numero di Intermediari verticali, definita dal valore di **max_path_length**, viene superata, l'OP blocca il processo di Federation Entity Discovery e rigetta la richiesta del RP.
 
 
 .. [1] I Trust Mark di Federazione sono configurati nel claim **trust_marks_issuers** e contenuti nell'Entity Configuration del Trust Anchor.
@@ -80,7 +80,7 @@ Esempi:
 Se l'URL che identifica il soggetto non presenta il simbolo di slash finale ("/"), è necessario aggiungerlo prima di concatenare il web path della risorsa .well-known.
 
 
-Una volta che un RP viene riconosciuto come parte della Federazione, ottiene il permesso di effettuare una Richiesta di Autenticazione. L'OP che non riconosce il RP che fa la richiesta, è in grado di risolvere correttamente il Trust. L'OP inizia richiedendo la Entity Configuration del RP al .well-known endpoint del RP e, seguendo il percorso dato dall'*authority_hint*, raggiunge la radice del Trust, cioè il TA. In ogni passo della catena l'OP può eseguire tutti i controlli di sicurezza richiedendo le dichiarazioni di entità da ciascuna entità e convalidando i Trust Mark e le firme. La figura che segue dà un esempio rappresentativo di come funziona la catena del Trust.
+Una volta che un RP viene riconosciuto come parte della Federazione, ottiene il permesso di effettuare una Richiesta di Autenticazione. L'OP che non ha interagito prima d'ora con un RP che fa la richiesta, è in grado di risolvere la fiducia mediante l'API di federazione (Federation Entity Discovery e produzione della Trust Chain). L'OP inizia richiedendo la Entity Configuration del RP al .well-known endpoint del RP e, seguendo il percorso dato dall'*authority_hint*, raggiunge la radice del Trust, cioè il TA. In ogni passo della catena l'OP può eseguire tutti i controlli di sicurezza richiedendo le dichiarazioni di entità da ciascuna entità e convalidando i Trust Mark e le firme. La figura che segue dà un esempio rappresentativo di come funziona la catena del Trust.
 
 
 .. image:: ../../images/cie_esempio_trust_chain.svg
