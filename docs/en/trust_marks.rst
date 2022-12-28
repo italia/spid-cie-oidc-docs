@@ -195,7 +195,7 @@ The claims defined inside the TMs are compliant with the elements defined in the
         non-normative example: ``https://registry.interno.gov.it/openid_relying_party/public/``
       - |spid-icon| |cieid-icon|
     * - **iat**
-      - UNIX Timestamp with the JWT generation time, coded as NumericDate as indicated at :rfc:`7519`
+      - UNIX Timestamp with the JWT issuance time, coded as NumericDate as indicated at :rfc:`7519`
       - |spid-icon| |cieid-icon|
     * - **logo_uri**
       - String. An URL that points to the logo that represents the Trust Mark.

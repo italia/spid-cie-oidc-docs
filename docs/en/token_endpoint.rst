@@ -85,7 +85,7 @@ The claims that MUST be included in the *Token Request* are given below.
 	 
 	 **aud**: URL of the OP Token Endpoint.
 	 
-	 **iat**: UNIX Timestamp with the time of the JWT generation, coded as NumericDate as indicated in :rfc:`7519`. 
+	 **iat**: UNIX Timestamp with the time of the JWT issuance, coded as NumericDate as indicated in :rfc:`7519`. 
 	 
 	 **exp**: UNIX Timestamp with the expiry time of the JWT, coded as NumericDate as indicated in :rfc:`7519`. 
 	 
@@ -293,7 +293,7 @@ The claims available in the *ID Token* are given below.
      - See `OpenID.Core#CodeIDToken`_. The client MUST verify that this value matches the *Access Token* returned with the Token ID. 
      - |spid-icon| |cieid-icon|
    * - **iat** 
-     - UNIX Timestamp with the time of JWT generation, coded as NumericDate as indicated in :rfc:`7519`. 
+     - UNIX Timestamp with the time of JWT issuance, coded as NumericDate as indicated in :rfc:`7519`. 
      - |spid-icon| |cieid-icon|
    * - **nbf** 
      - UNIX Timestamp. Time of the validity beginning of the JWT in NumericDate format, as indicated in :rfc:`7519`. MUST match with the value of **iat**.
@@ -339,7 +339,7 @@ The *Refresh Token* MUST be a signed JWT containing at least the following param
     - It MUST match the value client_id. The RP MUST verify that this value matches its client ID.
     - |spid-icon| |cieid-icon|
   * - **iat** 
-    - UNIX Timestamp with the time of JWT generation, coded as NumericDate as indicated in :rfc:`7519`.
+    - UNIX Timestamp with the time of JWT issuance, coded as NumericDate as indicated in :rfc:`7519`.
     - |spid-icon| |cieid-icon|
   * - **exp** 
     - UNIX Timestamp with the expiry time of the JWT, coded as NumericDate as indicated in :rfc:`7519`.
