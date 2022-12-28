@@ -16,7 +16,7 @@ L'OP DEVE revocare il token specificato nella richiesta.
   .. note::
     La revoca di un Access Token comporta la revoca di tutti i Refresh Token non ancora scaduti a questo collegati.
 
-  L'OP DOVRÀ revocare il token specificato nella richiesta e DOVRÀ terminare la sessione di Single Sign-On se ancora attiva. Eventuali altri token attivi per l’utente dovranno invece essere mantenuti validi.
+  L'OP DEVE revocare il token specificato nella richiesta e DEVE terminare la sessione di Single Sign-On se ancora attiva. Eventuali altri token attivi per l’utente dovranno invece essere mantenuti validi.
 
 .. admonition:: |cieid-icon|
   

@@ -16,7 +16,7 @@ The OP MUST revoke the token specified in the request.
   .. note::
     The Access Token revocation implies revoking all the Refresh Tokens linked to it, if not expired yet.
 
-  The OP will have to revoke the token specified in the request and will have to end the Single Sign-On session, if it is still active. Any other active tokens for the user must be kept valid.
+  The OP MUST revoke the token specified in the request and MUST end the Single Sign-On session, if it is still active. Any other active tokens for the user must be kept valid.
 
 .. admonition:: |cieid-icon|
 
