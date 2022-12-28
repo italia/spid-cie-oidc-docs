@@ -359,7 +359,7 @@ For security reasons, an OP MUST return, along with a new *Access Token*, also a
 Validity Period of a Refresh Token
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The *Refresh Token* MUST NOT be valid (difference between *iat* and *exp*) for more than 30 days. 
+The *Refresh Token* MUST NOT be valid (difference between *iat* and *exp*) more than 30 days. 
 
 If at the expiration of the validity period the RP makes a request to the OP, the OP MUST return an error as the result of the request. 
 
