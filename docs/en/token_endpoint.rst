@@ -361,7 +361,7 @@ Validity Period of a Refresh Token
 
 The *Refresh Token* MUST NOT be valid (difference between *iat* and *exp*) more than 30 days. 
 
-If at the expiration of the validity period the RP makes a request to the OP, the OP MUST return an error as the result of the request. 
+If the Refresh Token is not valid (expired or revoked) and the RP send a request of refresh to the OP, the OP MUST return an error as the result of the request. 
 
 .. admonition:: |cieid-icon|
 
