@@ -191,7 +191,7 @@ Di seguito vengono riportati i claim che DEVONO essere considerati nel parametro
 Metadata Policy di un TA per un OP
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Di seguito vengono riportati i claim che DEVONO essere considerati nel parametro *metadata* di tipo *openid_relying_party* all'interno della policy che il TA stabilisce per un RP suo discendente diretto. 
+Di seguito vengono riportati i claim che DEVONO essere considerati nel parametro *metadata* di tipo *openid_provider* all'interno della policy che il TA stabilisce per un RP suo discendente diretto. 
 
 .. list-table::
   :widths: 20 20 20
