@@ -6,7 +6,7 @@ Authorization endpoint
 Request
 +++++++
 
-The Authorization request is initiated by the user that selects the OP with which he/she wants to be authenticated. 
+The Authorization request is initiated by the user that selects the OP for the authentication. 
 The RP redirects the user to the *Authorization Endpoint* of the selected OP, including in the request the parameter **request** that is a signed JWT containing the *Authorization Request*.
 
 For conveying the request, the RP MAY use the methods **POST** and **GET**. With the method **POST** the parameters MUST be sent using the *Form Serialization*. 

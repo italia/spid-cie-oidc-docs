@@ -11,10 +11,10 @@ L'OP DEVE revocare il token specificato nella richiesta.
 
 .. admonition:: |spid-icon|
 
-  Quando l'utente esegue il logout o quando la sua sessione presso il RP scade (in base alle policy decise da quest'ultimo) il RP DEVE chiamare questo endpoint per revocare l’access token e l’eventuale refresh token in suo possesso.
+  Quando l'utente esegue il logout o quando la sua sessione presso il RP scade (in base alle policy decise da quest'ultimo) il RP DEVE richiedere la revoca dell’Access Token e dell’eventuale Refresh Token in suo possesso, se questi non fossero già scaduti.
 
   .. note::
-    La revoca di un Access Token comporta la revoca di tutti i Refresh Token a questo collegati.
+    La revoca di un Access Token comporta la revoca di tutti i Refresh Token non ancora scaduti a questo collegati.
 
   L'OP DOVRÀ revocare il token specificato nella richiesta e DOVRÀ terminare la sessione di Single Sign-On se ancora attiva. Eventuali altri token attivi per l’utente dovranno invece essere mantenuti validi.
 
@@ -67,7 +67,7 @@ La richiesta al Revocation Endpoint consiste nell'invio del token che si vuole r
      - **Descrizione**
      - **Obbligatorio**
    * - **client_assertion**
-     - JWT firmato con la chiave privata del Relying Party contenente gli stessi parametri documentati per le richieste al 
+     - JWT firmato con la chiave privata OIDC del Relying Party contenente gli stessi parametri documentati per le richieste al 
        Token Endpoint. L'OP deve verificare la validità di tutti i campi presenti nel JWT, nonché la validità della sua firma in relazione al parametro **client_id**.
      - 
    * - **client_assertion_type**
