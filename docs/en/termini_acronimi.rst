@@ -65,45 +65,43 @@ In this section are defined all the acronyms that are used throughout the text.
     :header-rows: 0
 
     * - **SPID**
-      - Public System of Digital Identity
+      - Italian Public System of Digital Identity, whose Federation Authority is AgID (Agenzia per L'Italia Digitale).
     * - **CIEid**
-      - The Italian digital identity system based on the Electronic ID Card (CIE), whose owner is the
+      Italian Digital Identity System based on the Electronic ID Card (CIE), whose Federation Authority is the
         Ministry of the Interior. The technical and operative management is given to the State Mint and Polygraphic Institute (IPZS).
     * - **OIDC**
-      - OpenID Connect
+      - OpenID Connect.
     * - **OIDC-FED**
       - `OIDC Federation 1.0 <https://openid.net/specs/openid-connect-federation-1_0.html>`_.
-    * - **IOF**
-      - Italian OIDC Federation 1.0.
     * - **FA**
       - Federation Authority.
     * - **TA**
-      - OIDC Federation Trust Anchor
+      - OIDC Federation Trust Anchor.
     * - **AgID**
-      - Agenzia per l'Italia Digitale, FA/TA of SPID
+      - Agenzia per l'Italia Digitale, FA/TA of SPID.
     * - **MinInterno**
       - Ministry of Interior, FA/TA of CIE id.
     * - **OP**
-      - OpenID Provider (Leaf Entity)
+      - OpenID Provider (Leaf Entity).
     * - **RP**
-      - Relying Party (Leaf Entity) 
+      - Relying Party (Leaf Entity).
     * - **SA**
       - Intermediate Entity or Intermediary. An intermediate Entity that can handle all the Federation
         aspects of one or more RPs.
     * - **AA**
-      - Attribute Authority, handler of the qualified attribues (Leaf Entity)
+      - Attribute Authority, handler of the qualified attribues (Leaf Entity).
     * - **TM**
-      - Trust Mark
+      - Trust Mark.
     * - **EC**
-      - Entity Configuration
+      - Entity Configuration.
     * - **ES**
-      - Entity Statement
+      - Entity Statement.
     * - **URL**
-      - Uniform Resource Locator, it is a web address
+      - Uniform Resource Locator, it is a web address.
     * - **JWT**
       - See :rfc:`7519` Jones, M., Bradley, J. and N. Sakimura, "JSON Web Token (JWT)", RFC 7519, DOI 10.17487/RFC7519, May 2015. 
     * - **RS**
-      - OAuth Resource Server
+      - OAuth2 Resource Server
     * - **$JWT**
       - The value of a JWT (JSON Web Token).
 
@@ -117,6 +115,8 @@ The keywords "MUST", "MUST NOT", "REQUIRES", "REQUIRE", "SHOULD", "SHOULD NOT", 
 Le notations [...] and ... mean that the text has been cut off for editor's requirements.
 
 *base64url* denotes the URL-safe base64 coding without padding, defined at :rfc:`7515#section-2`.
+
+All the examples contained in this document must be considered as non-normative.
 
 .. warning::
     |warning-message-en|
