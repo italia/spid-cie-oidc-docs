@@ -101,5 +101,5 @@ Il Metadata di tipo **"openid_relying_party"** DEVE contenere almeno i seguenti 
     - |spid-icon| |cieid-icon|
 
 .. note:: 
-  Gli URI presenti nel parametro **redirect_uris** POSSONO anche seguire eventuali schemi custom (ad es. myapp://) al fine di supportare applicazioni mobili.
+  Gli URI presenti nel parametro **redirect_uris** POSSONO anche usare eventuali schemi custom (ad es. myapp://) al fine di supportare applicazioni mobili.
 
