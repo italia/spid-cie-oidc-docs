@@ -3,17 +3,17 @@
 Metadata retrieval
 ------------------
 
-This section explains the ways of mutual recognition between RP and OP, the ways for the Leaves to recognize each other inside the same Federation and get each other's Metadata.
+This section explains the ways the participants of a federation have to establish the trust among them, the ways for the Leaves to recognize each other inside the same federation and get each other's Metadata.
 
 
 Relying Party
 +++++++++++++
 
 The RP gets the list of the OPs in JSON format by querying the :ref:`endpoint list<federation_endpoint>`, 
-available by the :ref:`Trust Anchor<Esempio_EN3>`. For each subject contained in the :ref:`JSON response<Esempio_EN3.1>` and corresponding to an OP, the RP :ref:`requests<Esempio_EN2>` the self-signed Entity Configuration by the OP.
+available by the :ref:`Trust Anchor<Esempio_EN3>`. For each subject contained in the :ref:`JSON response<Esempio_EN3.1>` and corresponding to an OP, the RP :ref:`requests<Esempio_EN2>` the Entity Configuration of the OP.
 
-For each EC of the OPs, the RP validates the signature by using the public key obtained in the Entity
-Statement released by the Trust Anchor. After validating the Entity Configuration signature with the TA's public key, RP establishes the trust with the OP.
+For each EC of the OPs, the RP validates the signature of the OP Entity Configuration using the public key obtained in the Entity
+Statement released by the Trust Anchor for that OP. After validating the Entity Configuration signature, the RP establishes the trust with the OP.
 
 Finally, the RP applies the policies published by the Trust Anchor on the OP's Metadata and saves the resulting
 Metadata by associating it to an expiry date (claim **exp**). The expiry date corresponds to the lowest 
@@ -47,7 +47,7 @@ request from the RP and starts the Federation Entity Discovery process and the T
 
 
 The OP extracts the unique identifier (**client_id**) from the object *request* contained in the 
-*Authorization Request* and carries out an Entity Configuration request (:ref:`RP<Esempio_EN1.1>`).
+*Authorization Request* and sends an Entity Configuration request (:ref:`RP<Esempio_EN1.1>`).
 The OP obtains the Entity Configuration of the RP and validates the signatures of Trust Mark that are
 recognized inside the Federation [1]_. 
 
@@ -64,7 +64,7 @@ the Trust Anchor. Then it applies the Metadata policy published by the Trust Anc
 resulting final RP Metadata, associating them to an expiry date. After that date, it will
 renew the RP Metadata, according to the Trust Chain renewal procedure.
 
-After obtaining the final Metadata, the Provider validates the RP request.
+After obtaining the final Metadata, the Provider validates the request sent by RP.
 
 In case an RP has a SA as a superior Entity and not directly the TA, the procedure of achieving and validating the Entity Configuration of the RP occurs through the Entity Statement published
 by the SA towards the RP and through validating the Entity Configuration of the SA with the Entity Statement issued by the TA towards the SA. If the threshold of the maximum number of vertical Intermediaries, 
@@ -88,7 +88,7 @@ Access to the Entity Configuration
 
 This section describes how to identify the URL :rfc:`3986` in order to download the Entity Configuration of a given subject.
 
-The web path ``.well-known/openid-federation`` is the resource by which a member publishes its configuration (Entity Configuration). This web path MUST be appended to the URL which identifies the subject.
+The web path ``.well-known/openid-federation`` is the resource by which an Entity publishes its configuration (Entity Configuration). This web path MUST be appended to the URL which identifies the subject.
 
 Examples:
 
@@ -102,7 +102,7 @@ Examples:
 In case of subject identifier URLs lacking the ending slash mark "/", this must be added between the URL and the appended web path resource.
 
 Once the RP is recognized as part in the Federation, it gets the permission to make an Authentication Request.
-The OP that doesn't recognize the RP that makes the request, has to resolve the trust for that RP. The OP starts
+The OP that doesn't recognize the RP that sent the request, has to resolve the trust for that RP. The OP starts
 requesting the Entity Configuration of the RP at the .well-known endpoint of the RP and, following the path
 provided by the *authority_hint*, reaches the TA. At each chain step, the OP can perform all the security controls by requesting the Entity Statements to each Entity and validating the Trust Marks and the signatures. The following picture is a representative example of how the Trust Chain works.
 
