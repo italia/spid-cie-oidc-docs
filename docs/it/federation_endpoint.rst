@@ -11,7 +11,7 @@ Tutte le entità DEVONO contenere i seguenti endpoint:
  - **resolve entity statement endpoint**: fornisce il metadata finale, la Trust Chain e i Trust Mark relativi ad un altro soggetto. Per maggiori dettagli vedi `OIDC-FED`_ Section 7.2.
 
 .. warning::
-  Il **resolve entity statement endpoint** non DEVE restituire alcuna informazione relativa ad un soggetto del quale non ha precedentemente raccolto gli statement e calcolato la Trust Chain. Nel caso in cui i TM non siano più validi al momento della richiesta, questi non DEVONO essere inclusi nella risposta.
+  Il **resolve entity statement endpoint** NON DEVE restituire alcuna informazione relativa ad un soggetto del quale non ha precedentemente raccolto gli statement e calcolato la Trust Chain. Nel caso in cui i TM non siano più validi al momento della richiesta, questi NON DEVONO essere inclusi nella risposta.
 
 
 Le Entità di tipo **TA** o **SA** DEVONO offrire i seguenti endpoint, in aggiunta agli endpoint di federazione sopra riportati:
