@@ -102,7 +102,7 @@ The following claims MUST be considered in the *metadata* parameter of type *ope
   * - **id_token_encrypted_response_alg**
     - Operations: *subset_of* |br|
       Values: MUST contain the algorithms defined in the Section :ref:`Cryptographic Algorithms <supported_algs>`
-    - |spid-icon| |cieid-icon|
+    - |cieid-icon|
   * - **id_token_encrypted_response_enc**
     - Operations: *subset_of* |br|
       Values: MUST contain the algorithms defined in the Section :ref:`Cryptographic Algorithms <supported_algs>`
@@ -152,7 +152,7 @@ The following claims MUST be considered in the *metadata* parameter of type *ope
   * - **id_token_encrypted_response_alg**
     - Operations: *subset_of* |br|
       Values: MUST contain the algorithms defined in the Section :ref:`Cryptographic Algorithms <supported_algs>`
-    - |spid-icon| |cieid-icon|
+    - |cieid-icon|
   * - **id_token_encrypted_response_enc**
     - Operations: *subset_of* |br|
       Values: MUST contain the algorithms defined in the Section :ref:`Cryptographic Algorithms <supported_algs>`

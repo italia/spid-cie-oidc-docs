@@ -94,7 +94,7 @@ Di seguito vengono riportati i claim che DEVONO essere considerati nel parametro
   * - **id_token_encrypted_response_alg**
     - Operazioni: *subset_of* |br|
       Valori: DEVE contenere gli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>`
-    - |spid-icon| |cieid-icon|
+    - |cieid-icon|
   * - **id_token_encrypted_response_enc**
     - Operazioni: *subset_of* |br|
       Valori: DEVE contenere gli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>`
@@ -146,7 +146,7 @@ Di seguito vengono riportati i claim che DEVONO essere considerati nel parametro
   * - **id_token_encrypted_response_alg**
     - Operazioni: *subset_of* |br|
       Valori: DEVE contenere gli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>`
-    - |spid-icon| |cieid-icon|
+    - |cieid-icon|
   * - **id_token_encrypted_response_enc**
     - Operazioni: *subset_of* |br|
       Valori: DEVE contenere gli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>`

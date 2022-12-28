@@ -74,10 +74,10 @@ Il Metadata di tipo **"openid_relying_party"** DEVE contenere almeno i seguenti 
     - |spid-icon| |cieid-icon| 
   * - **id_token_encrypted_response_alg**
     - Vedi `OpenID.Registration#ClientMetadata`_. Vedi key encryption :ref:`supported_algs`.
-    - |spid-icon| |cieid-icon| 
+    - |cieid-icon| 
   * - **id_token_encrypted_response_enc**
     - Vedi `OpenID.Registration#ClientMetadata`_. Obbligatorio solo nel caso sia presente anche il parametro *id_token_encrypted_response_alg*. Vedi content encryption :ref:`supported_algs`.
-    - |spid-icon| |cieid-icon| 
+    - |cieid-icon| 
   * - **userinfo_signed_response_alg**
     - Vedi `OpenID.Registration#ClientMetadata`_. Vedi signature :ref:`supported_algs`.
     - |spid-icon| |cieid-icon| 
