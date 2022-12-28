@@ -6,12 +6,11 @@ Entity Statements
 -----------------
 
 The basic component for building a Trust Chain is the **Entity Statement (ES)**, a signed JWT that
-contains the signing keys of the subordinate Entities and further data used to control the
+contains the Federation public keys of a subordinate Entity (subject) and further data used to control the
 process of Trust Chain resolution.
 
 An Entity publishes an **ES** related to a subordinate, at its :ref:`Fetch Endpoint<Esempio_EN2>`. 
-The superior Entity MAY define the Metadata policy of the subordinate subjects 
-and publishes the TMs that it has issued for them.
+The superior Entity MAY define the Metadata policy for a subject and publishes the TMs that it has issued for it.
 
 
 Entity Statement Signature
@@ -56,6 +55,9 @@ The ES issued by the TA or by an Intermediary for its own direct subordinates, M
      - |spid-icon| |cieid-icon|
    * - **trust_marks**
      - JSON Array containing the Trust Marks issued by itself for the subordinate subject.
+     - |spid-icon| |cieid-icon|
+   * - **constraints**
+     - It MAY contain the **allowed_leaf_entity_types**, that restricts what types of metadata a subject is allowed to publish.
      - |spid-icon| |cieid-icon|
 
 
