@@ -167,7 +167,7 @@ L'EC di un OP DEVE configurare un metadata di tipo **"openid_provider"** DEVE co
 
 
 .. warning::
-  Il Metadata **"openid_provider"** espone il parametro **jwks** o **signed_jwks_uri** come normato da OID-FED invece del parametro **jwks_uri** come richiesto in `OpenID.Discovery#OP_Metadata`_.
+  Il Metadata **"openid_provider"** DEVE adottare il parametro **jwks** o **signed_jwks_uri** come normato da OID-FED invece del parametro **jwks_uri** come richiesto in `OpenID.Discovery#OP_Metadata`_. Tuttavia per questioni di interoperabilità PUÒ esporre anche il parametro **jwks_uri**.
 
 .. seealso:: 
 
