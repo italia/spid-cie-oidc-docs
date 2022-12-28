@@ -22,7 +22,7 @@ the Metadata of all the OPs, renewing their related Trust Chain.
 
 After obtaining the final Metadata of all the OpenID Connect Providers, the RP generates the **SPID button** or **CIE button** and publishes it inside its authentication page.
 
-The procedure of Federation Entity Discovery for the SPID RPs gets simplified because, inside the Federation, the existence of Intermediaries between the OPs and their Trust Anchor is not allowed.
+The procedure of Federation Entity Discovery for the RPs gets simplified because, inside the Federation, the existence of Intermediaries between the OPs and their Trust Anchor is not allowed.
 
 
 .. image:: ../../images/metadata_discovery.svg
