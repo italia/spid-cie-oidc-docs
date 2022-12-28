@@ -53,7 +53,8 @@ Terms used by `OIDC-FED#Section_1.2`_ and this documentation.
       - Registration Procedure of a new Entity inside the SPID and CIE Federations.
     * - **Federation Endpoint**
       - Endpoints defined in OIDC Federation 1.0, used to fetch and resolve Entity statements, query a list of all the subordinate Entities and check the trust mark status.
-
+..      * - **Individual session**
+..        - Session established between a web service (RP) and web browser (user-agent) in control of the user, after the user has been authenticated.
 
 Acronyms
 ++++++++

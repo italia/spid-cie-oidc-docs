@@ -44,6 +44,9 @@ Seguono i termini utilizzati da `OIDC-FED#Section_1.2`_ e in questo documento.
       - Procedura di registrazione di una nuova entità all'interno della Federazione SPID e CIE
     * - **Federation Endpoint**
       - Endpoint definit in OIDC Federation 1.0, usati per prendere e risolvere gli statement delle entità, interrogare una lista di tutte le entità subordinate e verificare lo stato dei Trust Mark.
+..      * - **Sessione individuale**
+..        - Sessione che un fornitore di servizio (RP) può instaurare con un utente al fine di erogare un particolare servizio.
+
 
 Acronimi 
 ++++++++
