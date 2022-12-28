@@ -217,7 +217,7 @@ UserInfo endpoint to get user attributes.
      - The OP SHOULD add the *scope* parameter as defined in :rfc:`9068` Section 2.2.3. It MUST match the value in the authentication request.
      - |spid-icon| |cieid-icon|
    * - **iat** 
-     - UNIX Timestamp with the time of JWT generation, coded as NumericDate as indicated in :rfc:`7519`. 
+     - UNIX Timestamp with the time of JWT issuance, coded as NumericDate as indicated in :rfc:`7519`. 
      - |spid-icon| |cieid-icon|
    * - **exp**
      - UNIX Timestamp with the expiry time of the JWT, coded as NumericDate as indicated in :rfc:`7519`.
@@ -232,7 +232,7 @@ UserInfo endpoint to get user attributes.
 ID Token
 ++++++++
 
-The ID Token is a signed JSON Web Token (JWT) that contains information on the user that has executed the authentication. The RPs MUST validate the ID Token.
+The ID Token is a signed JSON Web Token (JWT) that contains information about the user that has executed the authentication. The RPs MUST validate the ID Token.
 
 If the RP exposes in its metadata the parameter **id_token_encrypted_response_alg** the OP MUST encrypt the ID Token.
 In this case the ID Token MUST be a **nested signed and encrypted JWT** containing the *cty* (Content-Type) parameter in the JOSE header configured to *JWT* (see :rfc:`7519#section-5.2`).
