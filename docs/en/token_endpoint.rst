@@ -10,7 +10,7 @@ The Token response, if succesfull, returns an *ID Token*, an *Access Token* and 
 
 .. admonition:: |spid-icon|
 
-  In a `long revocable session`_, the RP MAY call the *Token Endpoint* sending a *Refresh Token* in its possession, for obtaining a new *Access Token* and a new *ID Token*.
+  In a `long revocable session`_, the RP MAY request a Token to the *Token Endpoint* sending a *Refresh Token* in its possession, for obtaining a new *Access Token* and a new *ID Token*.
 
 .. note::
   The authentication method of the RP by the Token Endpoint is the **private_key_jwt** (`OpenID.Core#ClientAuthentication`_)
