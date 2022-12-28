@@ -17,25 +17,24 @@ SPID e CIE id implementano OpenID Connect Federation 1.0 e ne estendono alcune f
 OpenID Connect Federation
 +++++++++++++++++++++++++
 
-La Federazione OIDC è un modello gerarchico:
+La Federazione OIDC produce una infrastruttura della fiducia che è:
 
- - **Dinamico**. La fiducia può essere stabilita dinamicamente durante la prima richiesta di autenticazione. 
+ - **Dinamica**. La fiducia può essere stabilita dinamicamente durante la prima richiesta di autenticazione. 
    Le Autorità della Federazione espongono un endpoint che fornisce "dichiarazioni" firmate riguardanti le entità discendenti. Queste contengono le chiavi pubbliche dei discendenti e la politica dei Metadata. Le Autorità della Federazione possono disabilitare un'entità nella Federazione in qualsiasi momento, semplicemente smettendo di emettere le dichiarazioni inerenti a questa.
- - **Distribuito**. La fiducia viene distribuita fra molte parti. È il verificatore che decide quale percorso prendere per risolvere la fiducia (molte parti e due Autorità di Federazione).
  - **Scalabile**. Riduce significativamente i costi di onboarding, in accordo al principio di delega, con l'istituzione di entità intermediarie (SA).
- - **Trasparente**. Qualsiasi entità coinvolta nella Federazione può in ciascun momento costruire la fiducia autonomamente e in modo sicuro. Inoltre, la composizione della Federazione, in tutte le sue parti, diventa navigabile mediante la sua API, in tempo reale.
+ - **Trasparente**. Qualsiasi Entità coinvolta nella Federazione può in ogni momento costruire la fiducia autonomamente e in modo sicuro. Inoltre, la composizione della Federazione, in tutte le sue parti, diventa navigabile mediante la sua API, in tempo reale.
 
 .. image:: ../../images/spid_cie_oidc_federation_model.svg
     :width: 100%
 
-*Schema ad albero che rappresenta la struttura delle Federazioni SPID e CIE id. Alla Base le Autorità di Federazione SPID e CIE id e, salendo, gli OP che non hanno Intermediari, gli RP e gli Intermediari che a loro volta Aggregano altri RP.*
+*Schema ad albero con le Autorità di Federazione SPID e CIE id e, salendo, gli OP che non hanno Intermediari, gli RP e gli Intermediari che a loro volta Aggregano altri RP.*
 
 Configurazione della Federazione
 ++++++++++++++++++++++++++++++++
 
 La configurazione della Federazione è pubblicata dal Trust Anchor all'interno della sua :ref:`Entity Configuration<entity_configuration_ta>`, disponibile presso un web path ben noto e corrispondente a **.well-known/openid-federation**.
 
-Tutti i partecipanti DEVONO ottenere, prima della fase di esercizio, la configurazione della Federazione e mantenerla aggiornata su base giornaliera. All'interno della Configurazione della Federazione è presente la chiave pubblica del Trust Anchor usata per le operazioni di firma, il numero massimo di Intermediari consentiti tra una Foglia e il Trust Anchor (**max_path length**) e le autorità abilitate all'emissione dei Trust Mark (**trust_marks_issuers**).
+Tutti i partecipanti DEVONO ottenere, prima della fase di esercizio, la configurazione della Federazione e mantenerla aggiornata su base giornaliera. All'interno della configurazione della Federazione sono pubblicate le chiave pubbliche del Trust Anchor usate per le operazioni di firma, il numero massimo di Intermediari consentiti tra una Foglia e il Trust Anchor (**max_path length**) e le autorità abilitate all'emissione dei Trust Mark (**trust_marks_issuers**).
 
 
 Si veda qui un esempio non normativo di :ref:`Entity Configuration response Trust Anchor<Esempio_EN1.4>`
@@ -49,7 +48,7 @@ Modalità di partecipazione
 
 Per aderire alle Federazioni SPID e CIE id un partecipante deve pubblicare la propria configurazione (Entity Configuration) presso il proprio web endpoint :ref:`.well-known/openid-federation<Esempio_EN1>`.
 
-Gli incaricati tecnici ed amministrativi della Foglia completano la procedura amministrativa per la registrazione di una nuova entità o l'aggiornamento di un'entità preesistente definita dalla Autorità di Federazione o da un suo Intermediario (SA).
+Gli incaricati tecnici ed amministrativi della Foglia completano la procedura amministrativa per la registrazione di una nuova Entità o l'aggiornamento di un'Entità preesistente definita dalla Autorità di Federazione o da un suo Intermediario (SA).
 
 L'Autorità di Federazione o il suo Intermediario, dopo aver effettuato tutti i controlli amministrativi e tecnici richiesti, registra le chiavi pubbliche della Foglia e rilascia una prova di adesione alla Federazione sotto forma di Trust Mark (TM).
 

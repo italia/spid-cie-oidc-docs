@@ -9,10 +9,10 @@ stipulating conventions and getting accreditation by one or more authorities and
 adopting standards of interoperability.
 
 This configuration establishes the levels of assurance and security that are appropriate for an 
-individual, in order to authenticate on a web service (Service Provider) using their own digital identity, released 
+individual in order to authenticate on a web service (Service Provider) using their own digital identity, released 
 by another web service (Identity Provider).
 
-The members (RP or OP) who are recognized inside the same Federation, obtain Metadata from each
+The participants (RP or OP) who are recognized inside the same Federation, obtain Metadata from each
 other. The Metadata contains the public keys for the operations of digital signature and encryption, 
 and the information needed for the data interchange.
 
@@ -26,26 +26,24 @@ standard please refer to the official specifications `OIDC-FED`_ and the section
 OpenID Connect Federation
 +++++++++++++++++++++++++
 
-The OIDC Federation is a hierarchical model:
+The OIDC Federation produces an infrastructure of trust that is:
 
  - **Dynamic**. The trust may be dynamically established during the first authentication request.
    The Federation Authorities expose an endpoint that supplies signed statements about the subordinate
    Entities. These statements contain the public keys of the subordinate Entities and the Metadata policy.
    The Federation Authorities can disable an Entity in the Federation at every moment, simply by 
    stopping supplying statements about it.
- - **Distributed**. The trust is distributed among several parties. It is up to the verifier to decide
-   what path to take for solving the trust (many parties and two Federation Authorities).
  - **Scalable**. It reduces significantly the onboarding costs, according to the delegation principle, with
    the institution of Intermediate Entities (SA).
- - **Transparent**. Any Entity involved in the Federation can always build the trust independently and
-   securely. Furthermore, the Federation composition, in all its parts, becomes navigable in real time 
-   through its API.
+ - **Transparent**. Any Entity involved in the Federation can always build the trust towards an Entity
+   securely. Furthermore, the federation composition, in all its parts, becomes navigable in real time 
+   through the Federation API.
 
 .. image:: ../../images/spid_cie_oidc_federation_model.svg
     :width: 100%
 
-*Tree scheme representing the structure of the SPID and CIE id Federations. At the base there are the Federation Authorities of SPID and CIE id and, going up, the OPs that have no Intermediaries, the RPs and the 
-Intermediaries that, in turn, aggregate othe RPs.*
+*At the base of the trees there are the Federation Authorities of SPID and CIE id and, going up, the OPs that have no Intermediaries, the RPs and the 
+Intermediaries that, in turn, aggregate other RPs.*
 
 Configuration of the Federation 
 +++++++++++++++++++++++++++++++
@@ -55,11 +53,11 @@ The configuration of the Federation is published by the Trust Anchor inside its 
 
 All the members MUST obtain the Federation configuration before the operational phase and they
 MUST keep it up-to-date on a daily basis. The Federation configuration contains the Trust Anchor
-public key for the signature operations, the maximum number of Intermediaries allowed between a Leaf and the Trust Anchor (**max_path length**) and the authorities who are enabled to issue the Trust Marks (**trust_marks_issuers**).
+public keys for the signature operations, the maximum number of Intermediaries allowed between a Leaf and the Trust Anchor (**max_path length**) and the authorities who are enabled to issue the Trust Marks (**trust_marks_issuers**).
 
-Please read this non-normative example of :ref:`Entity Configuration response Trust Anchor<Esempio_EN1.4>` here.
+Here a non-normative example of :ref:`Entity Configuration response Trust Anchor<Esempio_EN1.4>` here.
 
-For further details, please read the Section about the :ref:`Entity Configuration<Entity_Configuration>`.
+For further details, please read the section about the :ref:`Entity Configuration<Entity_Configuration>`.
 
 How to participate
 ++++++++++++++++++
