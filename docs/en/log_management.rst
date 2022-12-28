@@ -6,11 +6,18 @@ Retention Policy
 ================
 
 Log management of a OP and an RP
-------------------------------------
+--------------------------------
 
 OPs and RPs MUST retain the following. 
 
 1. A transaction log containing the exchanged messages. The messages stored in the log MUST be at least the following:
+    
+    - **Trust Chain** related to the Entity which messages are being exchanged with, composed as follows:
+        
+        1. The **Entity Configuration** of the Entity which messages are being exchanged with.
+        2. [Only for OP] The **Entity Statement** of the SA referring to the RP, if any.
+        3. The **Entity Statement** of the TA referring to the descendant Entity.
+        4. The **Entity Configuration** of the TA.
 
     - **AuthenticationRequest**
     - **AuthenticationResponse** related to the *AuthenticationRequest**.
@@ -32,19 +39,6 @@ OPs and RPs MUST retain the following.
         - sub
         - iat
         - exp
-
-2. A federation log containing, for each *AuthenticationRequest*, the **Trust Chain** related to the entity which messages are being exchanged with. In the case of a log handled by an OP receiving an authentication request from an RP, it MUST contain the following ordered list of items:
-
-    - The **Entity Configuration** of the requesting RP.
-    - The **Entity Statement** of the SA referring to the RP, if any.
-    - The **Entity Statement** of the TA referring to the RP (or to the SA, if any).
-    - The **Entity Configuration** of the TA.
-
-In the case of a registry handled by an RP making an authentication request to a OP, the registry MUST contain the following ordered list of items:
-
-    - The **Entity Configuration** of the OP.
-    - The **Entity Statement** of the TA referring to the OP.
-    - The **Entity Configuration** of the TA.
 
 .. warning::
     The information stored in the logs MUST be retained and managed for not less than 24 months in full compliance with national and european privacy regulations. Access to the data MUST be restricted to designated personnel. In order to ensure confidentiality data encryption mechanisms or employed database systems (DBMS) that realize encrypted persistence of information MUST be adopted. Integrity e non-repudiation properties MUST be ensured.
