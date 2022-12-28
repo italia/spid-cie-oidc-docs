@@ -23,7 +23,7 @@ Gli OP e gli RP DEVONO mantenere
     
 .. admonition:: |spid-icon|
     
-    Per ogni messaggio, ove applicabili, potrebbero essere indicizzate ai fini di ricerca e consultazione le seguenti
+    Per ogni messaggio POSSONO essere indicizzate ai fini di ricerca e consultazione le seguenti
     informazioni:
 
         - authorization code
