@@ -128,12 +128,12 @@ L'EC di un OP DEVE configurare un metadata di tipo **"openid_provider"** DEVE co
   * - **request_object_signing_alg_values_supported**
     - Vedi `OpenID.Discovery#OP_Metadata`_. Vedi signature :ref:`supported_algs`.
     - |spid-icon| |cieid-icon|
-  * - **request_object_encryption_alg_values_supported**
-    - Fino a diversa indicazione di AgID, non deve essere incluso.
-    - |spid-icon|
-  * - **request_object_encryption_enc_values_supported**
-    - Fino a diversa indicazione di AgID, non deve essere incluso.
-    - |spid-icon|
+..    * - **request_object_encryption_alg_values_supported**
+..      - Fino a diversa indicazione di AgID, non deve essere incluso.
+..      - |spid-icon|
+..    * - **request_object_encryption_enc_values_supported**
+..      - Fino a diversa indicazione di AgID, non deve essere incluso.
+..      - |spid-icon|
   * - **token_endpoint_auth_methods_supported**
     - Vedi `OpenID.Discovery#OP_Metadata`_. Il valore supportato è **private_key_jwt**
     - |spid-icon| |cieid-icon|

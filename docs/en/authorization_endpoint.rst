@@ -63,8 +63,7 @@ In the following, a table that reports the composition of the **JWT** header.
     - **Description**
     - **Supported by**
   * - **alg**
-    - See :rfc:`7516#section-4.1.1`. It MUST have one of the values that are present in the parameter
-      **request_object_encryption_alg_values_supported** in the :ref:`Metadata OP <MetadataOP>`.
+    - See :rfc:`7516#section-4.1.1`. See :ref:`supported_algs`.
     - |spid-icon| |cieid-icon|
   * - **kid**
     - See :rfc:`7638#section_3`. 
