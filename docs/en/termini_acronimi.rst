@@ -67,7 +67,7 @@ In this section are defined all the acronyms that are used throughout the text.
     * - **SPID**
       - Italian Public System of Digital Identity, whose Federation Authority is AgID (Agenzia per L'Italia Digitale).
     * - **CIEid**
-      Italian Digital Identity System based on the Electronic ID Card (CIE), whose Federation Authority is the
+      - Italian Digital Identity System based on the Electronic ID Card (CIE), whose Federation Authority is the
         Ministry of the Interior. The technical and operative management is given to the State Mint and Polygraphic Institute (IPZS).
     * - **OIDC**
       - OpenID Connect.
