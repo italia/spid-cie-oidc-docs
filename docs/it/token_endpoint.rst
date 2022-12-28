@@ -3,9 +3,13 @@
 Token Endpoint
 --------------
 
-Al termine del flusso di autenticazione descritto nel paragrafo precedente, il RP invia una richiesta al Token Endpoint inviando l'authorization code ricevuto dall'OP per ottenere un *ID Token* e un *Access Token* ed eventualmente un *Refresh Token* (se è stata avviata una `sessione lunga revocabile`_). I token restituiti devono essere JWT firmati.
+Al termine del flusso di autenticazione descritto nel paragrafo precedente, il RP invia una richiesta al Token Endpoint inviando l'authorization code ricevuto dall'OP per ottenere un *ID Token* e un *Access Token* ed eventualmente un *Refresh Token* (se è stata effettuata una richiesta di autenticazione con *scope=offline_access* e *prompt=consent*. Vedi la Sezione :ref:`Refresh Token <Refresh_Token>`). 
 
-In presenza di una `sessione lunga revocabile`_, il RP PUÒ chiamare il Token Endpoint inviando il *Refresh Token* in suo possesso per ottenere un nuovo *Access Token* e *ID Token*.
+I token restituiti devono essere JWT firmati.
+
+.. admonition:: |spid-icon|
+
+  In presenza di una `sessione lunga revocabile`_, il RP PUÒ chiamare il Token Endpoint inviando il *Refresh Token* in suo possesso per ottenere un nuovo *Access Token* e *ID Token*.
 
 .. note::
   Il metodo di autenticazione del RP presso il token endpoint è il **private_key_jwt** (`OpenID.Core#ClientAuthentication`_).
@@ -304,6 +308,8 @@ Di seguito i claim disponibili nell'ID Token.
 
  - https://openid.net/specs/openid-connect-core-1_0.html#IDToken
  - https://openid.net/specs/openid-igov-openid-connect-1_0-03.html#Section-3.1
+
+.. _Refresh_Token:
 
 Refresh Token
 +++++++++++++
