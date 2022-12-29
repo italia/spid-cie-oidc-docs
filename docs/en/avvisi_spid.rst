@@ -1,5 +1,3 @@
-.. include:: ../common/common_definitions.rst
-
 SPID regulatory references
 ++++++++++++++++++++++++++
 
