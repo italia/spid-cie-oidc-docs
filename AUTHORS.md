@@ -1,8 +1,6 @@
 # Authors
 
-We list here the main contributors to this specification
-
-## [Italian Digital Transformation Team](https://teamdigitale.governo.it)
+We list here the main contributors to this specification:
 
 * Stefano Pullini <stefano.pullini@smc.it>
 * Giuseppe De Marco <giuseppe.demarco@teamdigitale.governo.it>
