@@ -169,7 +169,7 @@ La risposta DEVE contenere i seguenti claim.
 Access Token
 ++++++++++++
 
-L'Access Token è un JSON Web Token (JWT) firmato che consente l’accesso allo
+L'Access Token è un JSON Web Token (JWT) firmato che consente l'accesso allo
 UserInfo endpoint per ottenere gli attributi dell'utente. 
 Di seguito i claim che compongono l'Access Token.
 
@@ -314,7 +314,7 @@ Di seguito i claim disponibili nell'ID Token.
 Refresh Token
 +++++++++++++
 
-Il *Refresh Token* è un JWT che PUÒ essere rilasciato dall'OP e che PUÒ essere usato per ottenere un nuovo *Access Token* che abilita il RP ad accedere allo *UserInfo endpoint* senza interazione diretta dell'utente. Per ottenere un *Refresh Token*, il RP DEVE includere nel parametro *scope* della richiesta di autenticazione il valore *offline_access* e nel parametro *prompt* il valore *consent*. L'utilizzo di questo *scope* può essere utile in scenari nei quali un RP ha la necessità di verificare che l'identità digitale di un utente finale sia ancora valida (ad es. non revocata) o vuole mantenere aggiornati gli attributi che ha precedentemente raccolto durante la fase di autenticazione, ad esempio per l'invio di notifiche all'utente finale successive all'autenticazione dello stesso.
+Il *Refresh Token* è un JWT che PUÒ essere rilasciato dall'OP e che PUÒ essere usato per ottenere un nuovo *Access Token* che abilita il RP ad accedere allo *UserInfo endpoint* senza interazione diretta dell'utente. 
 
 Il *Refresh Token* DEVE essere rilasciato in formato JWT, firmato, e contenere almeno i seguenti parametri.
 
@@ -343,11 +343,23 @@ Il *Refresh Token* DEVE essere rilasciato in formato JWT, firmato, e contenere a
 
 .. admonition:: |cieid-icon|
 
+  Per ottenere un *Refresh Token*, il RP DEVE includere nel parametro *scope* della richiesta di autenticazione il valore *offline_access* e nel parametro *prompt* il valore *consent*. L'utilizzo di questo *scope* può essere utile in scenari nei quali un RP ha la necessità di verificare che l'identità digitale di un utente finale sia ancora valida o vuole mantenere aggiornati gli attributi che ha precedentemente raccolto durante la fase di autenticazione, ad esempio per l'invio di notifiche all'utente finale successive all'autenticazione dello stesso.
   **Il Refresh Token NON DEVE consentire al RP richiedente di ottenere un ID Token, nè quello precedentemente rilasciato in fase di autenticazione nè un nuovo ID Token. L'utilizzo del Refresh Token NON DEVE essere utilizzato dagli RP per ottenere una nuova autenticazione dell'utente con l'OP o rinnovare una sessione preesistente, ma PUÒ essere utilizzato come meccanismo per ottenere dallo UserInfo endpoint esclusivamente il medesimo set di attributi dell'utente richiesti in fase di autenticazione iniziale e per il quale l'utente ha espresso il consenso esplicito.** Tale consenso DEVE essere raccolto dall'OP in fase autenticazione dell'utente finale nella pagina di consenso. L'utente finale DEVE avere la possibilità di abilitare o disabilitare questa opzione prima di inviare il consenso che PUÒ essere soggetto ad un periodo di validità se definito dall'OP in base alle policy sul trattamento dei dati personali. 
 
-  L’OP che riceve una richiesta di un nuovo *Access Token* tramite un *Refresh Token* PUÒ inviare una notifica all’utente tramite uno dei recapiti digitali disponibili (email, sms, notifica mobile app). L’utente che non riconosce legittima questa operazione o che vuole disabilitare questa opzione può richiedere all’OP una revoca del consenso dato (e quindi dei token emessi a seguito dello stesso) secondo le modalità rese note all'interno della pagina di raccolta del consenso. La notifica DEVE avere solo carattere informativo e non autorizzativo. All’interno della notifica DEVE essere reso noto all’utente le modalità di revoca del consenso dato. L'OP DEVE consentire all'utente di disabilitare in qualsiasi momento questa opzione tramite apposita funzionalità messa a disposizione dall'OP stesso.
+  L'OP che riceve una richiesta di un nuovo *Access Token* tramite un *Refresh Token* PUÒ inviare una notifica all'utente tramite uno dei recapiti digitali disponibili (email, sms, notifica mobile app). L'utente che non riconosce legittima questa operazione o che vuole disabilitare questa opzione PUÒ richiedere all'OP una revoca del consenso dato (e quindi dei token emessi a seguito dello stesso) secondo le modalità rese note all'interno della pagina di raccolta del consenso. La notifica DEVE avere solo carattere informativo e non autorizzativo. All'interno della notifica DEVE essere reso noto all'utente le modalità di revoca del consenso dato. L'OP DEVE consentire all'utente di disabilitare in qualsiasi momento questa opzione tramite apposita funzionalità messa a disposizione dall'OP stesso.
 
-Per ragioni di sicurezza, un OP DEVE restituire, insieme ad un nuovo *Access Token*, anche un nuovo *Refresh Token*, invalidando tutti i token precedentemente rilasciati (*Refresh Token Rotation*) al RP e in relazione al soggetto interessato (utente finale). Il nuovo *Refresh Token* DEVE avere il parametro *iat* valorizzato con l'istante temporale nel quale è stata effettuata la nuova richiesta e conseguentemente il parametro *exp* in base alla durata prevista. 
+  Per ragioni di sicurezza, un OP DEVE restituire, insieme ad un nuovo *Access Token*, anche un nuovo *Refresh Token*, invalidando tutti i token precedentemente rilasciati (*refresh token rotation*) al RP e in relazione al soggetto interessato (utente finale). Il nuovo *Refresh Token* DEVE avere il parametro *exp* non superiore alla durata prevista. 
+
+.. admonition:: |spid-icon|
+
+  Per applicazioni mobili in cui il RP intenda offrire un'esperienza utente che non richieda il reinserimento delle credenziali SPID ad ogni utilizzo dell'applicazione, si POSSONO utilizzare le sessioni lunghe revocabili utilizzando il Refresh Token come normato nelle `LL.GG. OpenID Connect in SPID <https://www.agid.gov.it/sites/default/files/repository_files/linee_guida_openid_connect_in_spid.pdf>`_ e nell' `Avviso n.41 <https://www.agid.gov.it/sites/default/files/repository_files/spid-avviso-n41-integrazione_ll.gg_._openid_connect_in_spid.pdf>`_ .
+  Il *Token endpoint* verifica la validità del Refresh Token e, se nella richiesta di autenticazione originaria era presente nell' *acr_values* il valore *https://www.spid.gov.it/SpidL1*, rilascia un nuovo *ID Token* valido esclusivamente per il livello 1 SPID.
+  Per maggiori dettagli sull'utilizzo del Refresh Token nel contesto SPID, si vedano i seguenti documenti normativi: 
+  
+    - `LL.GG. OpenID Connect in SPID <https://www.agid.gov.it/sites/default/files/repository_files/linee_guida_openid_connect_in_spid.pdf>`_
+    - `Avviso n.41 - Integrazione LL.GG. OpenID Connect in SPID <https://www.agid.gov.it/sites/default/files/repository_files/spid-avviso-n41-integrazione_ll.gg_._openid_connect_in_spid.pdf>`_ 
+
+  
 
 
 Periodo di validità di un Refresh Token
@@ -355,19 +367,19 @@ Periodo di validità di un Refresh Token
 
 Il *Refresh Token* NON DEVE avere una validità (differenza tra *iat* e *exp*) superiore a 30 giorni. 
 
-Se allo scadere del periodo di validità l'RP effettua una richiesta all'OP, quest'ultimo DEVE restituire un errore come esito della richiesta. 
+Se allo scadere del periodo di validità l'RP effettua una richiesta all'OP, quest'ultimo DEVE restituire un errore nella risposta (Vedi :ref:`Codici di Errore <codici_errore>`).
 
 .. admonition:: |cieid-icon|
 
-  Fermo restando la validità del token, l'OP PUÒ fissare un periodo di validità relativo al consenso che l'utente ha fornito all'utilizzo dello *scope* *offline_access* e del *Refresh Token*. In prossimità del termine di validità del consenso, qualore tale termine sia previsto nelle policy dell'OP, il valore di *exp* DEVE essere calcolato come il valore minimo tra la durata di validità del token e quella del consenso. 
+  Fermo restando la validità del token, l'OP PUÒ fissare un periodo di validità relativo al consenso che l'utente ha fornito all'utilizzo dello *scope* *offline_access* e del *Refresh Token*. In prossimità del termine di validità del consenso, qualora tale termine sia previsto nelle policy dell'OP, il valore di *exp* DEVE essere calcolato come il valore minimo tra la durata di validità del token e quella del consenso. 
 
-.. note::
-  Al fine di chiarire il meccanismo di rotazione si riporta di seguito un esempio non normativo dove si descrive l’emissione e il lifecyle del *Refresh Token* con validità di 30 giorni.
-  
-  - t1: un RP effettua un autenticazione con *scope=offline_access*, quindi ottiene *Refresh Token* RT1 (validità 30gg)
-  - t2 = t1 + 4gg: l'RP fa richiesta al *Token endpoint* presentando RT1. L'OP riconosce che la richiesta proviene dallo stesso RP e rilascia un nuovo *Access Token* e nuovo *Refresh Token* RT2 con validità 30gg a partire da t2
-  - t3 = t1 + 32gg: dopo 28gg da t2 l'RP fa richiesta al *Token endpoint* presentando RT2. L'OP riconosce che la richiesta proviene dallo stesso RP e rilascia un nuovo *Access Token* e nuovo *Refresh Token* RT3 con validità 30gg da t3
-  - t4 = t1 + 64gg: dopo 32gg da t3 l'RP fa richiesta al *Token endpoint* presentando RT3. Questa volta l'OP rifiuta la richiesta con un errore perchè RT3 risulta non più valido. 
+  .. note::
+    Al fine di chiarire il meccanismo di rotazione si riporta di seguito un esempio non normativo dove si descrive l'emissione e il lifecyle del *Refresh Token* con validità di 30 giorni.
+    
+    - t1: un RP effettua un autenticazione con *scope=offline_access*, quindi ottiene *Refresh Token* RT1 (validità 30gg)
+    - t2 = t1 + 4gg: l'RP fa richiesta al *Token endpoint* presentando RT1. L'OP riconosce che la richiesta proviene dallo stesso RP e rilascia un nuovo *Access Token* e nuovo *Refresh Token* RT2 con validità 30gg a partire da t2
+    - t3 = t1 + 32gg: dopo 28gg da t2 l'RP fa richiesta al *Token endpoint* presentando RT2. L'OP riconosce che la richiesta proviene dallo stesso RP e rilascia un nuovo *Access Token* e nuovo *Refresh Token* RT3 con validità 30gg da t3
+    - t4 = t1 + 64gg: dopo 32gg da t3 l'RP fa richiesta al *Token endpoint* presentando RT3. Questa volta l'OP rifiuta la richiesta con un errore perchè RT3 risulta non più valido. 
 
 .. _TOKEN_ENDPOINT_ERRORS:
 
@@ -404,11 +416,11 @@ Codici di errore
     - |spid-icon| |cieid-icon|
 
   * - *server_error*
-    - L’OP ha riscontrato un problema interno (:rfc:`6749#section-5.2`).
+    - L'OP ha riscontrato un problema interno (:rfc:`6749#section-5.2`).
     - *400 Bad Request*
     - |spid-icon| |cieid-icon|
 
   * - *temporarily_unavailable*
-    - L’OP ha riscontrato un problema interno temporaneo (:rfc:`6749#section-5.2`).
+    - L'OP ha riscontrato un problema interno temporaneo (:rfc:`6749#section-5.2`).
     - *400 Bad Request*
     - |spid-icon| |cieid-icon|

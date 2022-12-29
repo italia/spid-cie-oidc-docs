@@ -112,10 +112,10 @@ The EC of an OP MUST configure a metadata of type **"openid_provider"**, that MU
     - |spid-icon| |cieid-icon|
   * - **id_token_encryption_alg_values_supported**
     - See `OpenID.Discovery#OP_Metadata`_. See key encryption :ref:`supported_algs`.
-    - |spid-icon| |cieid-icon|
+    - |cieid-icon|
   * - **id_token_encryption_enc_values_supported**
     - See `OpenID.Discovery#OP_Metadata`_. See content encryption :ref:`supported_algs`.
-    - |spid-icon| |cieid-icon|
+    - |cieid-icon|
   * - **userinfo_signing_alg_values_supported**
     - See `OpenID.Discovery#OP_Metadata`_. See signature :ref:`supported_algs`.
     - |spid-icon| |cieid-icon|

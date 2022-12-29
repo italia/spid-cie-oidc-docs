@@ -1,5 +1,7 @@
 .. include:: ../common/common_definitions.rst
 
+.. _introspection_endpoint:
+
 Introspection Endpoint (verifica validità token) 
 ------------------------------------------------
 

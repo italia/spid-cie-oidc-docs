@@ -44,6 +44,7 @@ Index of content
    logout.rst
    cryptographic_algos.rst
    log_management.rst
+   differenze_spid_cie.rst
    confronto_oidc_cie_e_oidc_igov.rst
    differenze_oidc_fed.rst
    seccons_bcps.rst

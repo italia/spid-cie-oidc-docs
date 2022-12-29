@@ -321,7 +321,7 @@ The claims available in the *ID Token* are given below.
 Refresh Token
 +++++++++++++
 
-The *Refresh Token* is a signed JWT that MAY be issued by the OP and MAY be used to obtain a new *Access Token* that enables the RP to access the UserInfo endpoint without direct user interaction. To obtain a *Refresh Token*, the RP MUST include in the *scope* parameter of the authentication request the value *offline_access* and in the *prompt* parameter, the value *consent*. The use of this scope can be useful in scenarios where an RP needs to verify that an end user's digital identity is still valid (e.g., it has not been revoked) or wants to keep attributes it has previously collected during the authentication phase up-to-date, such as for sending notifications to the end user after the end user has been authenticated.
+The *Refresh Token* is a signed JWT that MAY be issued by the OP and MAY be used to obtain a new *Access Token* that enables the RP to access the UserInfo endpoint without requiring any direct user interaction. 
 
 The *Refresh Token* MUST be a signed JWT containing at least the following parameters.
 
@@ -350,18 +350,29 @@ The *Refresh Token* MUST be a signed JWT containing at least the following param
 
 .. admonition:: |cieid-icon|
   
+  To obtain a *Refresh Token*, the RP MUST include in the *scope* parameter of the authentication request the value *offline_access* and in the *prompt* parameter, the value *consent*. The use of this scope can be useful in scenarios where an RP needs to verify that an end user's digital identity is still valid or wants to keep attributes it has previously collected during the authentication phase up-to-date, such as for sending notifications to the end user after the end user has been authenticated.
   **The Refresh Token MUST NOT allow the requesting RP to obtain an ID Token, neither the one previously issued during authentication nor a new ID Token. The use of the Refresh Token MUST NOT be used by RPs to obtain a new user authentication with the OP or to renew a pre-existing session, but MAY be used as a mechanism to obtain from the UserInfo endpoint only the same set of user attributes requested at the initial authentication phase and for which the user has given explicit consent.** Such consent MUST be collected by the OP at the end-user authentication phase on the consent page (it requires the ability to enable or disable this option on the consent page) and MAY be conditional on a validity period if defined by the OP according to policies on the treatment of personal data. Disabling this option by the user MUST still allow user authentication but MUST NOT release a *Refresh Token*. 
 
   The OP who receives a request for a new *Access Token* via a *Refresh Token* MAY send a notification to the user via one of the available e-delivery services (email, sms, mobile app notification). The user who does not recognize this operation as legitimate or who wants to disable this option can request from the OP a revocation of the given consent (and therefore of the tokens issued as a result of the same) according to the procedures made known within the consent acquisition page. The notification MUST be informative only and not authorizing. Within the notification MUST be made known to the user how to revoke the consent given. The OP MUST allow the user to disable this option at any time through appropriate functionality made available by the OP itself.
 
-For security reasons, an OP MUST return, along with a new *Access Token*, also a new *Refresh Token*, invalidating all previously issued tokens (*Refresh Token Rotation*) to the RP and related to the end-user. The new *Refresh Token* MUST have the *iat* parameter valued with the time instant at which the new request was made and consequently the *exp* parameter based on the expected duration.
+  For security reasons, an OP MUST return, along with a new *Access Token*, also a new *Refresh Token*, invalidating all previously issued tokens (*refresh token rotation*) to the RP and related to the end-user. The new *Refresh Token* MUST have the *exp* parameter according to the expected duration.
+
+.. admonition:: |spid-icon|
+
+  In a mobile application scenario, to prevent the user from entering credentials every time, an RP MAY use the Refresh Token to enable revocable long sessions as defined in `LL.GG. OpenID Connect in SPID <https://www.agid.gov.it/sites/default/files/repository_files/linee_guida_openid_connect_in_spid.pdf>`_ and `Avviso n.41 <https://www.agid.gov.it/sites/default/files/repository_files/spid-avviso-n41-integrazione_ll.gg_._openid_connect_in_spid.pdf>`_ .   
+  The *Token endpoint* verifies the validity of the Refresh Token and, if the the original authentication request included *https://www.spid.gov.it/SpidL1* in the *acr_values*, a new *ID Token* valid only for the SPID level 1 is issued.
+  For more details on the Refresh Token in SPID, please refer to the following documentation: 
+  
+    - `LL.GG. OpenID Connect in SPID <https://www.agid.gov.it/sites/default/files/repository_files/linee_guida_openid_connect_in_spid.pdf>`_
+    - `Avviso n.41 - Integrazione LL.GG. OpenID Connect in SPID <https://www.agid.gov.it/sites/default/files/repository_files/spid-avviso-n41-integrazione_ll.gg_._openid_connect_in_spid.pdf>`_ 
 
 Validity Period of a Refresh Token
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+
 The *Refresh Token* MUST NOT be valid (difference between *iat* and *exp*) more than 30 days. 
 
-If the Refresh Token is not valid (expired or revoked) and the RP send a request of refresh to the OP, the OP MUST return an error as the result of the request. 
+If the Refresh Token is not valid (expired or revoked) and the RP sends a Token refresh request to the OP, the OP MUST return an error in the response (see :ref:`Error codes <codici_errore>`). 
 
 .. admonition:: |cieid-icon|
 
