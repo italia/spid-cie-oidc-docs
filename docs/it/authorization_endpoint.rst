@@ -148,7 +148,7 @@ Il payload del **JWT** contiene i seguenti parametri obbligatori.
    :language: python
 
 
-.. parametri_scope_claims:
+.. _parametri_scope_claims:
 
 Parametri **scope** e **claims**
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
