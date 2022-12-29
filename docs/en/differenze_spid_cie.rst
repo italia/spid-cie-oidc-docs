@@ -5,7 +5,7 @@
 Differences between SPID e CIE id
 ---------------------------------
 
-This section provides the main differences between SPID and CIE id profiles.
+This section provides the main differences between SPID and CIE id.
 
 Metadata
 ++++++++
@@ -19,7 +19,7 @@ Moreover, CIE id requires the parameter *revocation_endpoint_auth_methods_suppor
 Authorization Endpoint
 ++++++++++++++++++++++
 
-SPID profile requires the parameters *client_id* and *response_type* in the HTTP request as mandatory, while in CIE id they are recommended. 
+SPID requires the parameters *client_id* and *response_type* in the HTTP request as mandatory, while in CIE id they are recommended. 
 
 Moreover, in CIE id the response requires the presence of the *iss* parameter as mitigation against the mix-up attacks `I-D.ietf-OAuth-Security-BCP`_. SPID does not require it. 
 

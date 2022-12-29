@@ -17,8 +17,8 @@ Inoltre, il metadata OP per CIE id richiede anche il parametro *revocation_endpo
 Authorization Endpoint
 ++++++++++++++++++++++
 
-Il profilo SPID, al contrario di CIE id, prevede l'inserimento obbligatorio dei parametri *client_id* e *response_type* nella richiesta HTTP. 
-Inoltre, il profilo CIE id prevede come obbligatorio il parametro *iss* nella response per mitigare gli attacchi di tipo mix-up `I-D.ietf-OAuth-Security-BCP`_.
+SPID, al contrario di CIE id, prevede l'inserimento obbligatorio dei parametri *client_id* e *response_type* nella richiesta HTTP. 
+Inoltre, CIE id prevede come obbligatorio il parametro *iss* nella response per mitigare gli attacchi di tipo mix-up `I-D.ietf-OAuth-Security-BCP`_.
 
 
 Parametri Scope e Claims
