@@ -64,19 +64,19 @@ The request to the Revocation Endpoint consists of sending the token to be revok
 
    * - **Claim**
      - **Description**
-     - **Required**
+     - **Supported by**
    * - **client_assertion**
-     - JWT signed with the Relying Party's private key, containing the same parameters as from the documentation of the Token Endpoint requests. The OP must test the validity of all the fields in the JWT, plus the validity of its signature, according to the parameter **client_id**.
-     - 
+     - JWT signed with the Relying Party's private key, containing the same parameters included in the Token Endpoint request. The OP must check the validity of all the fields in the JWT, and the validity of its signature, according to the parameter **client_id**.
+     - |spid-icon| |cieid-icon|
    * - **client_assertion_type**
      - String. **urn:ietf:params:oauth:clientassertion-type:jwt-bearer**
-     - 
+     - |spid-icon| |cieid-icon|
    * - **client_id**
      - URL HTTPS that uniquely identifies the RP. 
-     - 
+     - |spid-icon| |cieid-icon|
    * - **token**
      - The token about which the RP requests information.
-     - 
+     - |spid-icon| |cieid-icon|
 	 
 
 Response
