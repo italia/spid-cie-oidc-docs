@@ -360,7 +360,7 @@ The *Refresh Token* MUST be a signed JWT containing at least the following param
 .. admonition:: |spid-icon|
 
   In a mobile application scenario, to prevent the user from entering credentials every time, it is possible to use the Refresh Token to enable revocable long sessions as defined in `LL.GG. OpenID Connect in SPID <https://www.agid.gov.it/sites/default/files/repository_files/linee_guida_openid_connect_in_spid.pdf>`_ and `Avviso n.41 <https://www.agid.gov.it/sites/default/files/repository_files/spid-avviso-n41-integrazione_ll.gg_._openid_connect_in_spid.pdf>`_ .   
-  The *Token endpoint* verifies the validity of the Refresh Token and, if the the original authentication request included *SPID1* level in the *acr_values*, a new *ID Token* valid only for the *SPID1* level is issued.
+  The *Token endpoint* verifies the validity of the Refresh Token and, if the the original authentication request included *https://www.spid.gov.it/SpidL1* in the *acr_values*, a new *ID Token* valid only for the SPID level 1 is issued.
   For more details on the Refresh Token in SPID, please refer to the following documentation: 
   
     - `LL.GG. OpenID Connect in SPID <https://www.agid.gov.it/sites/default/files/repository_files/linee_guida_openid_connect_in_spid.pdf>`_

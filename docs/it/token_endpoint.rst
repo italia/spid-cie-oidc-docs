@@ -353,7 +353,7 @@ Il *Refresh Token* DEVE essere rilasciato in formato JWT, firmato, e contenere a
 .. admonition:: |spid-icon|
 
   Per applicazioni mobili in cui il RP intenda offrire un'esperienza utente che non passi per il reinserimento delle credenziali SPID ad ogni avvio, è possibile beneficiare di sessioni lunghe revocabili utilizzando il Refresh token come normato nelle `LL.GG. OpenID Connect in SPID <https://www.agid.gov.it/sites/default/files/repository_files/linee_guida_openid_connect_in_spid.pdf>`_ e nell' `Avviso n.41 <https://www.agid.gov.it/sites/default/files/repository_files/spid-avviso-n41-integrazione_ll.gg_._openid_connect_in_spid.pdf>`_ .
-  Il *Token endpoint* verifica la validità del Refresh Token e, se nella richiesta di autenticazione originaria era presente nell' *acr_values* il livello *SPID1*, rilascia un nuovo *ID Token* valido esclusivamente per il livello *SPID1*.
+  Il *Token endpoint* verifica la validità del Refresh Token e, se nella richiesta di autenticazione originaria era presente nell' *acr_values* il valore *https://www.spid.gov.it/SpidL1*, rilascia un nuovo *ID Token* valido esclusivamente per il livello 1 SPID.
   Per maggiori dettagli sull'utilizzo del Refresh Token nel contesto SPID, si vedano i seguenti documenti normativi: 
   
     - `LL.GG. OpenID Connect in SPID <https://www.agid.gov.it/sites/default/files/repository_files/linee_guida_openid_connect_in_spid.pdf>`_
