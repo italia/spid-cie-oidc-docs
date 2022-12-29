@@ -14,7 +14,7 @@ The **Full** SAs arrange building an authentication and federation interface, on
     - **.well-known/openid-federation**, containing the Leaf's Entity Configuration;
     - Authorization callback endpoint for obtaining the auth code by the OP (**redirect_uri**).
 
-The **Full** type SAs MUST add the **id_code** (as defined in the Section :ref:`Trust Mark Composition <ComposizioneTM>`) inside the web path, which in turn is inside the client_id that identifies the subordinate Entity ``<SA_domain>/<id_code>/``.
+The **Full** type SAs MUST add at least one of the available identification code in the **id_code** (as defined in the Section :ref:`Trust Mark Composition <ComposizioneTM>`) inside the web path, which in turn is inside the client_id that identifies the subordinate Entity ``<SA_domain>/<id_code>/``. If more than one identification code is available, the SA MAY include them in the web path as in the following example: ``<SA_domain>/ipa_code/aoo_code/``.
 
 The following table contains some non-normative examples for outlining the differences between the SAs of
 types Light and Full:
