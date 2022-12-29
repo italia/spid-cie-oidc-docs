@@ -28,7 +28,7 @@ Il profilo CIE id consente di richiedere gli attributi dell'utente sia tramite i
 
 Il profilo SPID non consente l'utilizzo di *profile* e *email* nel parametro *scope*. 
 
-Per ulteriori dettagli vedi la sezione :ref:`Parametri Scope e claims <parametri_scope_claims>`
+Per ulteriori dettagli vedi la sezione :ref:`Parametri Scope e claims <parametri_scope_claims>`.
 
 
 ID Token
@@ -43,7 +43,7 @@ Refresh Token
 
 Il profilo SPID prevede l'utilizzo del Refresh Token per abilitare le sessioni lunghe rinnovabili così come definito nelle `LL.GG. OpenID Connect in SPID <https://www.agid.gov.it/sites/default/files/repository_files/linee_guida_openid_connect_in_spid.pdf>`_ e nell' `Avviso n.41 <https://www.agid.gov.it/sites/default/files/repository_files/spid-avviso-n41-integrazione_ll.gg_._openid_connect_in_spid.pdf>`_ . Consente, infatti, di ottenere, oltre all'Access Token, l'ID Token valido esclusivamente per SPID livello 1. 
 In CIE id il Refresh Token non consente di ottenere l'ID Token e non è utilizzabile dagli RP per ottenere una nuova autenticazione dell'utente con l'OP o rinnovare una sessione preesistente. Può essere usato come meccanismo per ottenere dallo UserInfo endpoint esclusivamente il medesimo set di attributi dell'utente richiesti in fase di autenticazione iniziale e per il quale l'utente ha espresso il consenso esplicito.
-Per ulteriori dettagli si veda la sezione :ref:`Refresh Token <Refresh_Token>`
+Per ulteriori dettagli si veda la sezione :ref:`Refresh Token <Refresh_Token>`.
 
 UserInfo Endpoint
 +++++++++++++++++
@@ -54,11 +54,12 @@ Il profilo SPID consente solo l'utilizzo del metodo HTTP GET.
 Introspection Endpoint
 ++++++++++++++++++++++
 
-Il profilo CIE id prevede il solo parametro *active* nella risposta all'Introspection endpoint. SPID aggiunge ulteriori parametri come specificato nella sezione :ref:`Introspection Endpoint <introspection_endpoint>` 
+Il profilo CIE id prevede il solo parametro *active* nella risposta all'Introspection endpoint. SPID aggiunge ulteriori parametri come specificato nella sezione :ref:`Introspection Endpoint <introspection_endpoint>`.
 
 
 Revocation Endpoint e Logout
 ++++++++++++++++++++++++++++
+
 Entrambi i profili SPID e CIE id prevedono che il RP effettui una richiesta di revoca dell'Access Token in fase di logout dell'utente. 
 In SPID la revoca di un Access Token implica anche la revoca dell'eventuale Refresh Token ancora attivo ad esso collegato e la rimozione della sessione di Single Sign-On se ancora attiva. 
 In CIE id, invece, la revoca di un Access Token non prevede la revoca del relativo Refresh Token. La richiesta di revoca di un Refresh Token determina anche la revoca di tutti i relativi token ancora attivi. 
