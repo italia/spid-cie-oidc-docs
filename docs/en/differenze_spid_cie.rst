@@ -24,8 +24,8 @@ SPID profile requires the parameters *client_id* and *response_type* in the HTTP
 Moreover, in CIE id the response contains the *iss* parameter to mitigate mix-up attacks `I-D.ietf-OAuth-Security-BCP`_. SPID does not require it. 
 
 
-Parametri Scope e Claims
-++++++++++++++++++++++++
+Parameters Scope and Claims
++++++++++++++++++++++++++++
 
 CIE id profile allows an RP to request user attributes using both the *claims* parameter and the *scope* parameter enabling *profile* and *email* values. 
 
@@ -68,8 +68,8 @@ In CIE id, only the parameter *active* is given in the introspection response.
 SPID includes additional parameters as defined in section :ref:`Introspection Endpoint <introspection_endpoint>`.
 
 
-Revocation Endpoint e Logout
-++++++++++++++++++++++++++++
+Revocation Endpoint and Logout
+++++++++++++++++++++++++++++++
 
 SPID and CIE id require the RP to request an Access Token revocation during user logout. 
 In SPID the Access Token revocation implies the Refresh Token revocation, if any or still active, and the end of the Single Sign-On session if still active.
