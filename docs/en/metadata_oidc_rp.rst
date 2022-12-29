@@ -50,7 +50,7 @@ The OP Metadata of type **"federation_entity"** MUST contain at least the follow
 
 
 
-The RP Metadata of type **"openid_relying_party"** MUST contain at least the following mandatory paramaters:
+The RP Metadata of type **"openid_relying_party"** MUST contain at least the following mandatory parameters:
 
 .. list-table:: 
   :widths: 20 60 20
