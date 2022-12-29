@@ -365,11 +365,11 @@ Il *Refresh Token* DEVE essere rilasciato in formato JWT, firmato, e contenere a
 Periodo di validità di un Refresh Token
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Il *Refresh Token* NON DEVE avere una validità (differenza tra *iat* e *exp*) superiore a 30 giorni. 
+
+Se allo scadere del periodo di validità l'RP effettua una richiesta all'OP, quest'ultimo DEVE restituire un errore nella risposta (Vedi :ref:`Codici di Errore <codici_errore>`).
+
 .. admonition:: |cieid-icon|
-
-  Il *Refresh Token* NON DEVE avere una validità (differenza tra *iat* e *exp*) superiore a 30 giorni. 
-
-  Se allo scadere del periodo di validità l'RP effettua una richiesta all'OP, quest'ultimo DEVE restituire un errore come esito della richiesta. 
 
   Fermo restando la validità del token, l'OP PUÒ fissare un periodo di validità relativo al consenso che l'utente ha fornito all'utilizzo dello *scope* *offline_access* e del *Refresh Token*. In prossimità del termine di validità del consenso, qualora tale termine sia previsto nelle policy dell'OP, il valore di *exp* DEVE essere calcolato come il valore minimo tra la durata di validità del token e quella del consenso. 
 

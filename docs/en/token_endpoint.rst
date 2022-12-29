@@ -369,11 +369,12 @@ The *Refresh Token* MUST be a signed JWT containing at least the following param
 Validity Period of a Refresh Token
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+
+The *Refresh Token* MUST NOT be valid (difference between *iat* and *exp*) more than 30 days. 
+
+If the Refresh Token is not valid (expired or revoked) and the RP sends a Token refresh request to the OP, the OP MUST return an error in the response (see :ref:`Error codes <codici_errore>`). 
+
 .. admonition:: |cieid-icon|
-
-  The *Refresh Token* MUST NOT be valid (difference between *iat* and *exp*) more than 30 days. 
-
-  If the Refresh Token is not valid (expired or revoked) and the RP send a request of refresh to the OP, the OP MUST return an error as the result of the request. 
 
   Notwithstanding the validity of the token, the OP MAY set a validity period related to the consent the user has provided to use the *scope=offline_access* and the *Refresh Token*. Approaching the expiration of the validity period of the consensus, whenever such a period is provided for in the OP's policies, the value of *exp* MUST be calculated as the minimum value between the validity period of the token and that of the consensus.
 
