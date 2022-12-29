@@ -4,7 +4,7 @@
 Become a service provider
 -------------------------
 
-Official links of the SPID and CIE onboarding procedures, that is for becoming a service supplier.
+Official links of the SPID and CIE onboarding systems.
 
  - `How to become SPID service provider <https://www.spid.gov.it/cos-e-spid/diventa-fornitore-di-servizi/>`_
 
