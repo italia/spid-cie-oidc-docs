@@ -321,7 +321,7 @@ The claims available in the *ID Token* are given below.
 Refresh Token
 +++++++++++++
 
-The *Refresh Token* is a signed JWT that MAY be issued by the OP and MAY be used to obtain a new *Access Token* that enables the RP to access the UserInfo endpoint without direct user interaction. 
+The *Refresh Token* is a signed JWT that MAY be issued by the OP and MAY be used to obtain a new *Access Token* that enables the RP to access the UserInfo endpoint without requiring any direct user interaction. 
 
 The *Refresh Token* MUST be a signed JWT containing at least the following parameters.
 
