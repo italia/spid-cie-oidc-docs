@@ -1,7 +1,7 @@
 .. include:: ../common/common_definitions.rst
 
 Riferimenti normativi  SPID
----------------------------
++++++++++++++++++++++++++++
 
 L'avvio del **Sistema SPID**, per sua natura e complessità, può richiedere di intervenire su diversi aspetti con specificazioni, chiarimenti, note informative e casi esemplificativi, al fine di dare supporto ad una migliore applicazione e comprensione dei Regolamenti SPID già emanati dall'AgID in conformità con quanto prescritto dall'art.4 del DPCM 24 ottobre 2014.
 

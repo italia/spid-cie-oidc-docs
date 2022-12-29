@@ -1,16 +1,9 @@
 .. include:: ../common/common_definitions.rst
 
-Standard di riferimento
------------------------
-
 .. list-table::
     :widths: 25 75
     :header-rows: 0
 
-    * - `SPID-OIDC-CORE`_
-      - Linee Guida per OpenID Connect in SPID 
-    * - `DM-CIE`_
-      - DM 23 December 2015 n.210: "Modalità tecniche di emissione della Carta d'identità elettronica." (15A09809) (GU Serie Generale n.302 30-12-2015)
     * - `OIDC-FED`_
       - OpenID Connect Federation 1.0 
     * - `iGov.OIDC`_

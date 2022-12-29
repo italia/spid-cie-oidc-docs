@@ -1,7 +1,7 @@
 .. include:: ../common/common_definitions.rst
 
 SPID regulatory references
---------------------------
+++++++++++++++++++++++++++
 
 The **SPID System** start-up, for its nature and complexity, can require interventions on different aspects
 with specifyings, clarifications, information notes and case studies, in order to provide support for a better

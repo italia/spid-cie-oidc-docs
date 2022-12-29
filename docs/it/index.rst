@@ -52,6 +52,5 @@ Indice dei contenuti
    differenze_oidc_fed.rst
    seccons_bcps.rst
    esempi.rst
-   avvisi_spid.rst
    diventa_fornitore.rst
    come_contribuire.rst
