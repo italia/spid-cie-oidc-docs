@@ -144,7 +144,7 @@ The **JWT** payload contains the following mandatory claims:
      - |spid-icon| |cieid-icon|
    * - **ui_locales**
      - OPTIONAL. End-User's preferred languages and scripts for the user interface. Represented as a space-separated list of BCP47 [RFC5646].
-     - |spid-icon|
+     - |spid-icon| |cieid-icon|
 
 .. note::
   **PKCE** is an extension of the protocol *OAuth 2.0* also provided in the profile *iGov* (`International Government Assurance Profile for OAuth 2.0 <https://openid.net/specs/openid-igov-oauth2-1_0-03.html#Section-3.1.7>`_) and aimed at avoiding possible attacks from intercepting the *authorization code*. It consists of the generation of a code (**code verifier**) and its hash (**code challenge**). The **code challenge** is sent to the OP in the authentication request.
