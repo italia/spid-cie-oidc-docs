@@ -55,7 +55,7 @@ SPID consente solo l'utilizzo del metodo HTTP GET.
 Introspection Endpoint
 ++++++++++++++++++++++
 
-CIE id prevede il solo parametro *active* nella risposta all'Introspection endpoint. SPID aggiunge ulteriori parametri come specificato nella sezione :ref:`Introspection Endpoint <introspection_endpoint>`.
+CIE id prevede il solo parametro *active* nella risposta dell'Introspection endpoint. SPID aggiunge ulteriori parametri come specificato nella sezione :ref:`Introspection Endpoint <introspection_endpoint>`.
 
 
 Revocation Endpoint e Logout
