@@ -34,3 +34,7 @@ The present technical rules implement the following SPID announcements:
     * - Determina SPID OpenID Connect Federation
       - `Regole tecniche per il funzionamento della Federazione SPID OpenID Connect - Integrazione LL.GG. OpenID Connect in SPID.pdf  - <https://www.agid.gov.it/sites/default/files/repository_files/regolamento-spid_openid_connect_federation_1.0.pdf>`_
       - 14/09/2022 
+
+    * - Linee Guida Attribute Authority SPID
+      - Attribute Authority Guidelines - `LG-AA`_ 
+      - 18/07/2022
