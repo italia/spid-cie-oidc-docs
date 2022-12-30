@@ -26,7 +26,7 @@
 .. _OIDC-FED: https://openid.net/specs/openid-connect-federation-1_0.html
 .. _OIDC-FED#RP_metadata: https://openid.net/specs/openid-connect-federation-1_0.html#Section-4.1
 .. _OIDC-FED#Federation_Entity: https://openid.net/specs/openid-connect-federation-1_0.html#Section-4.6
-.. _LG-AA: https://docs.italia.it/AgID/documenti-in-consultazione/lg-spid-attribute-authority-docs/it/master/index.html
+.. _LG-AA: https://www.agid.gov.it/sites/default/files/repository_files/llgg_attribute_authorities_0.pdf
 .. _OpenID.Core: https://openid.net/specs/openid-connect-core-1_0-27.html
 .. _OpenID.Core#ClaimsParameter: https://openid.net/specs/openid-connect-core-1_0.html#ClaimsParameter
 .. _OpenID.Core#Serializations: https://openid.net/specs/openid-connect-core-1_0.html#Serializations
