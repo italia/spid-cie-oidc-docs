@@ -50,7 +50,7 @@ The OP Metadata of type **"federation_entity"** MUST contain at least the follow
 
 
 
-The RP Metadata of type **"openid_relying_party"** MUST contain at least the following mandatory paramaters:
+The RP Metadata of type **"openid_relying_party"** MUST contain at least the following mandatory parameters:
 
 .. list-table:: 
   :widths: 20 60 20
@@ -100,6 +100,6 @@ The RP Metadata of type **"openid_relying_party"** MUST contain at least the fol
     - |spid-icon| |cieid-icon|
 
 .. note:: 
-  The URIs contained in the claim **redirect_uris** MAY also use possible custom schemas (e.g. myapp://) 
+  The URIs contained in the claim **redirect_uris** MAY also use custom schemas (e.g. myapp://) 
   in order to support mobile applications.
 

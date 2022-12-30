@@ -1,22 +1,16 @@
 .. include:: ../common/common_definitions.rst
 
-Standard di riferimento
------------------------
+Standards
++++++++++
 
 .. list-table::
     :widths: 25 75
     :header-rows: 0
 
-    * - `SPID-OIDC-CORE`_
-      - Linee Guida per OpenID Connect in SPID 
-    * - `DM-CIE`_
-      - DM 23 December 2015 n.210: "Modalità tecniche di emissione della Carta d'identità elettronica." (15A09809) (GU Serie Generale n.302 30-12-2015)
     * - `OIDC-FED`_
       - OpenID Connect Federation 1.0 
     * - `iGov.OIDC`_
       - Varley, M., Grassi, P. "iGov Profile for OpenID Connect", October 2018.
-    * - `LG-AA`_
-      - Attribute Authority Guidelines – "Linee Guida Attribute Authority SPID" 
     * - `OpenID.Core`_
       - Sakimura, N., Bradley, J., Jones, M., de Medeiros, B. and C. Mortimore, "OpenID Connect Core 1.0", August 2015.
     * - `OpenID.Registration`_

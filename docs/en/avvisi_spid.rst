@@ -1,7 +1,5 @@
-.. include:: ../common/common_definitions.rst
-
 SPID regulatory references
---------------------------
+++++++++++++++++++++++++++
 
 The **SPID System** start-up, for its nature and complexity, can require interventions on different aspects
 with specifyings, clarifications, information notes and case studies, in order to provide support for a better
@@ -36,3 +34,7 @@ The present technical rules implement the following SPID announcements:
     * - Determina SPID OpenID Connect Federation
       - `Regole tecniche per il funzionamento della Federazione SPID OpenID Connect - Integrazione LL.GG. OpenID Connect in SPID.pdf  - <https://www.agid.gov.it/sites/default/files/repository_files/regolamento-spid_openid_connect_federation_1.0.pdf>`_
       - 14/09/2022 
+
+    * - Linee Guida Attribute Authority SPID
+      - `SPID Attribute Authority Guidelines <https://www.agid.gov.it/sites/default/files/repository_files/llgg_attribute_authorities_0.pdf>`_ 
+      - 18/07/2022

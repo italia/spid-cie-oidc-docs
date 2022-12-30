@@ -1,7 +1,5 @@
-.. include:: ../common/common_definitions.rst
-
 Riferimenti normativi  SPID
----------------------------
++++++++++++++++++++++++++++
 
 L'avvio del **Sistema SPID**, per sua natura e complessità, può richiedere di intervenire su diversi aspetti con specificazioni, chiarimenti, note informative e casi esemplificativi, al fine di dare supporto ad una migliore applicazione e comprensione dei Regolamenti SPID già emanati dall'AgID in conformità con quanto prescritto dall'art.4 del DPCM 24 ottobre 2014.
 
@@ -33,3 +31,7 @@ Le presenti regole tecniche implementano i seguenti avvisi SPID:
     * - Determina SPID OpenID Connect Federation
       - `Regole tecniche per il funzionamento della Federazione SPID OpenID Connect - Integrazione LL.GG. OpenID Connect in SPID.pdf  - <https://www.agid.gov.it/sites/default/files/repository_files/regolamento-spid_openid_connect_federation_1.0.pdf>`_
       - 14/09/2022 
+
+    * - Linee Guida Attribute Authority SPID
+      - `Linee guida recanti le regole tecniche dei gestori di attributi qualificati <https://www.agid.gov.it/sites/default/files/repository_files/llgg_attribute_authorities_0.pdf>`_ 
+      - 18/07/2022
