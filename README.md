@@ -19,7 +19,7 @@
 
 ## Intro
 
-This repository hosts the sphinx project tree of SPID/CIE OpenID Connect technical specifications, published to [Docs Italia](https://docs.italia.it/docs/spid-cie-oidc-docs/).
+This repository hosts the sphinx project tree of SPID/CIE OpenID Connect technical specifications, published to [Docs Italia](https://docs.italia.it/docs/spid-cie-oidc-docs/) and [Github pages](https://italia.github.io/spid-cie-oidc-docs/).
 
 ## Documentation
 
