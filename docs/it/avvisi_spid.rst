@@ -33,5 +33,5 @@ Le presenti regole tecniche implementano i seguenti avvisi SPID:
       - 14/09/2022 
 
     * - Linee Guida Attribute Authority SPID
-      - `Attribute Authority Guidelines - <https://www.agid.gov.it/sites/default/files/repository_files/llgg_attribute_authorities_0.pdf>`_ 
+      - `Linee guida recanti le regole tecniche dei gestori di attributi qualificati <https://www.agid.gov.it/sites/default/files/repository_files/llgg_attribute_authorities_0.pdf>`_ 
       - 18/07/2022

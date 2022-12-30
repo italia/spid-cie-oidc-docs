@@ -36,5 +36,5 @@ The present technical rules implement the following SPID announcements:
       - 14/09/2022 
 
     * - Linee Guida Attribute Authority SPID
-      - `Attribute Authority Guidelines - <https://www.agid.gov.it/sites/default/files/repository_files/llgg_attribute_authorities_0.pdf>`_ 
+      - `SPID Attribute Authority Guidelines <https://www.agid.gov.it/sites/default/files/repository_files/llgg_attribute_authorities_0.pdf>`_ 
       - 18/07/2022
