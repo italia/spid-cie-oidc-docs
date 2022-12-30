@@ -98,7 +98,7 @@ Di seguito vengono riportati i claim che DEVONO essere considerati nel parametro
   * - **id_token_encrypted_response_enc**
     - Operazioni: *subset_of* |br|
       Valori: DEVE contenere gli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>`
-    - |spid-icon| |cieid-icon|
+    - |cieid-icon|
   * - **userinfo_signed_response_alg**
     - Operazioni: *subset_of* |br|
       Valori: DEVE contenere gli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>`
@@ -217,7 +217,7 @@ Di seguito vengono riportati i claim che DEVONO essere considerati nel parametro
     - |spid-icon| |cieid-icon|
   * - **scopes_supported**
     - Operazioni: *subset_of* |br|
-      Valori: DEVE essere *openid*, *offline_access*, *profile*, *email*.
+      Valori: DEVE contenere *openid*, *offline_access*. Per CIE id PUÒ contenere anche *profile*, *email*.
     - |spid-icon| |cieid-icon|
   * - **response_types_supported**
     - Operazioni: *one_of* |br|
