@@ -85,7 +85,7 @@ L'EC di un OP DEVE configurare un metadata di tipo **"openid_provider"** DEVE co
     - Vedi :rfc:`8414#page-4`. L'OP DEVE supportare S256 (vedi :rfc:`7636#section-4.3`).
     - |spid-icon| |cieid-icon|
   * - **scopes_supported**
-    - Vedi `OpenID.Discovery#OP_Metadata`_. I valori supportati sono *openid*, *offline_access*, *profile*, *email*. Per maggiori dettagli vedi :ref:`Sezione User Claims <user_claims_scopes>`.
+    - Vedi `OpenID.Discovery#OP_Metadata`_. I valori supportati sono *openid* e *offline_access*. CIE id supporta anche *profile*, *email*. Per maggiori dettagli vedi :ref:`Sezione User Claims <user_claims_scopes>`.
     - |spid-icon| |cieid-icon|
   * - **response_types_supported**
     - Vedi `OpenID.Discovery#OP_Metadata`_. Il valore supportato è **code**. 
