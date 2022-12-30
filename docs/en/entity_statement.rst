@@ -222,7 +222,7 @@ Di seguito vengono riportati i claim che DEVONO essere considerati nel parametro
     - |spid-icon| |cieid-icon|
   * - **scopes_supported**
     - Operarations: *subset_of* |br|
-      Values: MUST contain *openid*, *offline_access*. CIE id MAY contain *profile*, *email*.
+      Values: MUST contain *openid*, *offline_access*. CIE id MAY also contain *profile*, *email*.
     - |spid-icon| |cieid-icon|
   * - **response_types_supported**
     - Operarations: *one_of* |br|
