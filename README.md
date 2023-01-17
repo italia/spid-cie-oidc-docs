@@ -1,4 +1,4 @@
-# SPID/CIE OpenID Connect tecnhical specifications
+# SPID/CIE OpenID Connect technical specifications
 
 [![GitHub release](https://img.shields.io/github/release/italia/spid-cie-oidc-docs.svg?style=plastic)](https://github.com/italia/spid-cie-oidc-docs/releases)
 [![Join the #spid openid](https://img.shields.io/badge/Slack%20channel-%23spid%20openid-blue.svg)](https://developersitalia.slack.com/archives/C7E85ED1N/)
