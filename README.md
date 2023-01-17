@@ -57,17 +57,10 @@ This project participates in the versioning model  [*Semantic
 Versioning*](https://semver.org/).
 
 Furthermore, this project uses the git *branches* and *tags* in the following way:
-* the branch `master` contains the last stable version of the standard;
-* the branch `development` contains the proposed updates to be discussed in the next version of the standard;
+* the branch `versione-corrente` contains the last stable version of the standard;
+* the branch `dev` contains the proposed updates to be discussed in the next version of the standard;
 * The [release page](https://github.com/italia/publiccode.yml/releases) of
   GitHub contains all the released versions of the standard. For the sake of coherence, the *releases* are made according to the tag names.
-
-Since this repository contains both the `core` schema and the schemas with the extensions for each country,
-a more refined versioning strategy must be adopted. For this reason, each update of the core and/or the specific country extensions, will be tagged as follows:
-
-> core-x.y.z;cc-a.b.c
-
-where cc represents the country code in the key `countryExtensionVersion` of the changed schema.
 
 ## How to contribute
 
