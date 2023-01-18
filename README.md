@@ -19,7 +19,10 @@
 
 ## Intro
 
-This repository hosts the sphinx project tree of SPID/CIE OpenID Connect technical specifications, published to [Docs Italia](https://docs.italia.it/docs/spid-cie-oidc-docs/) and [Github pages](https://italia.github.io/spid-cie-oidc-docs/).
+This repository is mantained by the Department for Digital Transformation, 
+the Agency for Digital Italy (AgID), the State Mint and Printing Institute 
+(IPZS) and hosts the sphinx project tree of SPID/CIE OpenID Connect technical specifications, 
+published to [Docs Italia](https://docs.italia.it/docs/spid-cie-oidc-docs/) and [Github pages](https://italia.github.io/spid-cie-oidc-docs/).
 
 ## Documentation
 
@@ -51,7 +54,6 @@ pandoc -o spid-cie-oidc-docs.odt index.html
 ````
 
 ## Versioning
-
 
 This project participates in the versioning model  [*Semantic
 Versioning*](https://semver.org/).
