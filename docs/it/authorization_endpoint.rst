@@ -26,7 +26,7 @@ Mediante il metodo **GET** i parametri DEVONO essere trasmessi utilizzando la *Q
 
 Di seguito i parametri obbligatori nella richiesta di autenticazione *HTTP*.
 
-.. _tabella_parametri_http_req:
+.. _tabella_parametri_authz_req: Authorization request
 
 .. list-table:: 
   :widths: 20 60 20
@@ -50,6 +50,8 @@ Di seguito i parametri obbligatori nella richiesta di autenticazione *HTTP*.
 
 Di seguito una tabella che riporta la composizione dell'header del **JWT**.
 
+.. _tabella_jwt_header_authz_req: Authorization request JWT header
+
 .. list-table:: 
   :widths: 20 60 20
   :header-rows: 1
@@ -70,6 +72,7 @@ Di seguito una tabella che riporta la composizione dell'header del **JWT**.
 
 Il payload del **JWT** contiene i seguenti parametri obbligatori.
 
+.. _tabella_jwt_payload_authz_req: Authorization request
 
 .. list-table:: 
    :widths: 20 60 20
@@ -207,7 +210,7 @@ autenticazione. L'OP reindirizzerà l'utente all'url contenuto nel parametro red
 Se l'autenticazione è avvenuta con successo, l'OpenID Provider (OP),
 reindirizza l'utente aggiungendo i seguenti parametri obbligatori come query parameters al *redirect_uri* (come definito in `OpenID.Core#AuthResponse`_):
 
-
+.. _tabella_authz_res: Authorization response
 
 .. list-table:: 
    :widths: 20 60 20
@@ -241,6 +244,7 @@ Gestione degli errori
 In caso di errore, l'OP o il RP rappresentano i messaggi di anomalia relativi agli scambi OpenID
 Connect, come descritti nelle relative tabelle definite dalle `Linee Guida UX SPID`_.
 
+.. _tabella_authz_errs_res: Authorization response errors
 
 .. list-table:: 
    :widths: 20 60 20
@@ -265,6 +269,9 @@ Connect, come descritti nelle relative tabelle definite dalle `Linee Guida UX SP
 
 Codici di errore
 ^^^^^^^^^^^^^^^^
+
+.. _tabella_authz_errs: Authorization errors
+
 
 .. list-table:: 
   :widths: 20 20 20 20
