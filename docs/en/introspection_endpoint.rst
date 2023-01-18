@@ -22,7 +22,10 @@ together with a Client Assertion that allows authenticating the RP that makes th
 
 .. code-block:: http
 
- POST /introspection?
+ POST /introspection HTTP/1.1
+ Host: https://op.spid.agid.gov.it
+ Content-Type: application/x-www-form-urlencoded
+
  client_assertion=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiw
  ibmFtZSI6IlNQSUQiLCJhZG1pbiI6dHJ1ZX0.LVyRDPVJm0S9q7oiXcYVIIqGWY0wWQlqxvFGYswLF88…
  &
@@ -36,9 +39,6 @@ together with a Client Assertion that allows authenticating the RP that makes th
  RkYtyVTLWlff6S5gKciYf3b0bAdjoQEHd_IvssIPH3xuBJkmtkrTlfWR0Q0pdpeyVePkMSI28XZvDaGnxA4j7QI5loZYeyzGR9
  h70xQLVzqwwl1P0-F_0JaDFMJFO1yl4IexfpoZZsB3HhF2vFdL6D_lLeHRyH2g2OzF59eMIsM_Ccs4G47862w…
 
- Host: https://op.spid.agid.gov.it
- HTTP/1.1
- 
 
 .. list-table:: 
    :widths: 20 60 20
