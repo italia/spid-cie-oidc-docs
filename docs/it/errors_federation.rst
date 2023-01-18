@@ -38,7 +38,7 @@ Codici di errore di Federation
     - **Supportato da**
   * - *temporarily_unavailable*
     - Uno degli endpoint di well-known o di Federation non è raggiungibile.
-    - *302 Found*/*400 Bad Request*
+    - *302 Found* or *400 Bad Request*
     - |spid-icon| |cieid-icon|
   * - *invalid_client*
     - Il Client non è autorizzato perchè la validazione della Trust Chain fallisce.

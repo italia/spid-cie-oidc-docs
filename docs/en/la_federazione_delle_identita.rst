@@ -8,8 +8,8 @@ participate in the same regulatory framework for building a mechanism of trust, 
 stipulating conventions and getting accreditation by one or more authorities and technological by 
 adopting standards of interoperability.
 
-This configuration establishes the levels of assurance and security that are appropriate for an 
-individual in order to authenticate on a web service (Service Provider) using their own digital identity, released 
+This configuration establishes the levels of assurance and security that are appropriate for the
+citizens in order to authenticate on a web service (Service Provider) using their own digital identity, released 
 by another web service (Identity Provider).
 
 The participants (RP or OP) who are recognized inside the same Federation, obtain Metadata from each
@@ -55,7 +55,7 @@ All the members MUST obtain the Federation configuration before the operational 
 MUST keep it up-to-date on a daily basis. The Federation configuration contains the Trust Anchor
 public keys for the signature operations, the maximum number of Intermediaries allowed between a Leaf and the Trust Anchor (**max_path length**) and the authorities who are enabled to issue the Trust Marks (**trust_marks_issuers**).
 
-Here a non-normative example of :ref:`Entity Configuration response Trust Anchor<Esempio_EN1.4>` here.
+Here a non-normative example of :ref:`Entity Configuration response Trust Anchor<Esempio_EN1.4>`.
 
 For further details, please read the section about the :ref:`Entity Configuration<Entity_Configuration>`.
 
