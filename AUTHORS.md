@@ -9,5 +9,8 @@ We list here the main contributors to this specification:
 * Nunzio Napolitano <nunzio.napolitano@agid.gov.it>
 * Antonio Florio <florio@agid.gov.it>
 * Stefano Pullini <stefano.pullini@smc.it>
+* Giada Sciarretta giada.sciarretta@fbk.eu
+* Amir Sharif asharif@fbk.eu
+
 
 We'd also like to thank the the #spid-openid participants of developers italia slack.
