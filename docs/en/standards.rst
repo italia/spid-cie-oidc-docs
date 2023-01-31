@@ -4,7 +4,7 @@ References
 .. include:: ../common/standards.rst
 
 
-National and community legislation
+National and European legislation
 ----------------------------------
 
 .. list-table::

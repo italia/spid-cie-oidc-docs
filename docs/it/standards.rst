@@ -4,7 +4,7 @@ Riferimenti
 .. include:: ../common/standards.rst
 
 
-Normativa Nazionale e comunitaria
+Normativa Nazionale ed Europea
 ---------------------------------
 
 .. list-table::
