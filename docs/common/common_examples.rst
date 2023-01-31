@@ -784,31 +784,31 @@ The following example shows a Metadata policy in the Entity Statement provided b
                     "kid": "5NNNoFS3YnC9tjiCaivhWLVUJ3AxwGGz_98uRFaqMEEs"
                 }]
               }]
-            }
+            },
             "grant_types": {
                 "subset_of": ["authorization_code", "refresh_token"]
-            }
+            },
             "id_token_signed_response_alg": {
-                "subset_of": ["RS256", "RS512", "ES256", "ES512", "PS256", "PS512"]
-            }
+                "one_of": ["RS256", "RS512", "ES256", "ES512", "PS256", "PS512"]
+            },
             "id_token_encrypted_response_alg": {
-                "subset_of": ["RSA-OAEP", "RSA-OAEP-256", "ECDH-ES", "ECDH-ES+A128KW", "ECDH-ES+A256KW"]
-            }
+                "one_of": ["RSA-OAEP", "RSA-OAEP-256", "ECDH-ES", "ECDH-ES+A128KW", "ECDH-ES+A256KW"]
+            },
             "id_token_encrypted_response_enc": {
-                "subset_of": ["A128CBC-HS256", "A256CBC-HS512"]
-            }
+                "one_of": ["A128CBC-HS256", "A256CBC-HS512"]
+            },
             "userinfo_signed_response_alg": {
-                "subset_of": ["RS256", "RS512", "ES256", "ES512", "PS256", "PS512"]
-            }
+                "one_of": ["RS256", "RS512", "ES256", "ES512", "PS256", "PS512"]
+            },
             "userinfo_encrypted_response_alg": {
-                "subset_of": ["RSA-OAEP", "RSA-OAEP-256", "ECDH-ES", "ECDH-ES+A128KW", "ECDH-ES+A256KW"]
-            }
+                "one_of": ["RSA-OAEP", "RSA-OAEP-256", "ECDH-ES", "ECDH-ES+A128KW", "ECDH-ES+A256KW"]
+            },
             "userinfo_encrypted_response_enc": {
-                "subset_of": ["A128CBC-HS256", "A256CBC-HS512"]
-            }
+                "one_of": ["A128CBC-HS256", "A256CBC-HS512"]
+            },
             "token_endpoint_auth_method": {
                 "one_of": ["private_key_jwt"]
-            }
+            },
             "client_registration_types": {
                 "one_of": ["automatic"]
             }
@@ -825,23 +825,23 @@ The following example shows a Metadata policy in the Entity Statement provided b
                 "subset_of": ["authorization_code", "refresh_token"]
             }
             "id_token_signed_response_alg": {
-                "subset_of": ["RS256", "RS512", "ES256", "ES512", "PS256", "PS512"]
-            }
+                "one_of": ["RS256", "RS512", "ES256", "ES512", "PS256", "PS512"]
+            },
             "id_token_encrypted_response_alg": {
-                "subset_of": ["RSA-OAEP", "RSA-OAEP-256", "ECDH-ES", "ECDH-ES+A128KW", "ECDH-ES+A256KW"]
-            }
+                "one_of": ["RSA-OAEP", "RSA-OAEP-256", "ECDH-ES", "ECDH-ES+A128KW", "ECDH-ES+A256KW"]
+            },
             "id_token_encrypted_response_enc": {
-                "subset_of": ["A128CBC-HS256", "A256CBC-HS512"]
-            }
+                "one_of": ["A128CBC-HS256", "A256CBC-HS512"]
+            },
             "userinfo_signed_response_alg": {
-                "subset_of": ["RS256", "RS512", "ES256", "ES512", "PS256", "PS512"]
-            }
+                "one_of": ["RS256", "RS512", "ES256", "ES512", "PS256", "PS512"]
+            },
             "userinfo_encrypted_response_alg": {
-                "subset_of": ["RSA-OAEP", "RSA-OAEP-256", "ECDH-ES", "ECDH-ES+A128KW", "ECDH-ES+A256KW"]
-            }
+                "one_of": ["RSA-OAEP", "RSA-OAEP-256", "ECDH-ES", "ECDH-ES+A128KW", "ECDH-ES+A256KW"]
+            },
             "userinfo_encrypted_response_enc": {
-                "subset_of": ["A128CBC-HS256", "A256CBC-HS512"]
-            }
+                "one_of": ["A128CBC-HS256", "A256CBC-HS512"]
+            },
             "token_endpoint_auth_method": {
                 "one_of": ["private_key_jwt"]
             }
@@ -912,28 +912,28 @@ The following example shows a Metadata policy in the Entity Statement provided b
                 "one_of": ["pairwise"]
             }
             "id_token_signing_alg_values_supported": {
-                "subset_of": ["RS256", "RS512", "ES256", "ES512", "PS256", "PS512"]
+                "one_of": ["RS256", "RS512", "ES256", "ES512", "PS256", "PS512"]
             }
             "id_token_encryption_alg_values_supported": {
-                "subset_of": ["RSA-OAEP", "RSA-OAEP-256", "ECDH-ES", "ECDH-ES+A128KW", "ECDH-ES+A256KW"]
+                "one_of": ["RSA-OAEP", "RSA-OAEP-256", "ECDH-ES", "ECDH-ES+A128KW", "ECDH-ES+A256KW"]
             }
             "id_token_encryption_enc_values_supported": {
-                "subset_of": ["A128CBC-HS256", "A256CBC-HS512"]
+                "one_of": ["A128CBC-HS256", "A256CBC-HS512"]
             }
             "userinfo_signing_alg_values_supported": {
-                "subset_of": ["RS256", "RS512", "ES256", "ES512", "PS256", "PS512"]
+                "one_of": ["RS256", "RS512", "ES256", "ES512", "PS256", "PS512"]
             }
             "userinfo_encryption_alg_values_supported": {
-                "subset_of": ["RSA-OAEP", "RSA-OAEP-256", "ECDH-ES", "ECDH-ES+A128KW", "ECDH-ES+A256KW"]
+                "one_of": ["RSA-OAEP", "RSA-OAEP-256", "ECDH-ES", "ECDH-ES+A128KW", "ECDH-ES+A256KW"]
             }
             "userinfo_encryption_enc_values_supported": {
-                "subset_of": ["A128CBC-HS256", "A256CBC-HS512"]
+                "one_of": ["A128CBC-HS256", "A256CBC-HS512"]
             }
             "token_endpoint_auth_methods_supported": {
                 "one_of": ["private_key_jwt"]
             }
             "token_endpoint_auth_signing_alg_values_supported": {
-                "subset_of": ["RS256", "RS512", "ES256", "ES512", "PS256", "PS512"]
+                "one_of": ["RS256", "RS512", "ES256", "ES512", "PS256", "PS512"]
             }
             "claims_parameter_supported": {
                 "one_of": ["true"]
