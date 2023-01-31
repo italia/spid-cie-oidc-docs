@@ -2,12 +2,15 @@
 
 We list here the main contributors to this specification:
 
-* Stefano Pullini <stefano.pullini@smc.it>
 * Giuseppe De Marco <giuseppe.demarco@teamdigitale.governo.it>
-* Michele D'Amico <>
-* Francesco Antonio Marino <>
-* Antonio Colella <>
-* Nunzio Napolitano <>
-* Antonio Florio <>
+* Michele D'Amico <michele.damico@agid.gov.it>
+* Francesco Antonio Marino <fa.marino@ipzs.it>
+* Antonio Colella <colella@agid.gov.it>
+* Nunzio Napolitano <nunzio.napolitano@agid.gov.it>
+* Antonio Florio <florio@agid.gov.it>
+* Stefano Pullini <stefano.pullini@smc.it>
+* Giada Sciarretta <giada.sciarretta@fbk.eu>
+* Amir Sharif <asharif@fbk.eu>
+
 
 We'd also like to thank the the #spid-openid participants of developers italia slack.

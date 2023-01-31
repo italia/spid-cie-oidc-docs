@@ -33,7 +33,10 @@ The claims that MUST be included in the *Token Request* are given below.
 
   .. code-block:: http
 
-    POST /token?
+    POST /token HTTP/1.1
+    Host: https://op.spid.agid.gov.it
+    Content-Type: application/x-www-form-urlencoded
+
     client_id=https://rp.spid.agid.gov.it&
     client_assertion=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiw
     ibmFtZSI6IlNQSUQiLCJhZG1pbiI6dHJ1ZX0.LVyRDPVJm0S9q7oiXcYVIIqGWY0wWQlqxvFGYswL…&
@@ -41,9 +44,6 @@ The claims that MUST be included in the *Token Request* are given below.
     code=usDwMnEzJPpG5oaV8x3j&
     code_verifier=9g8S40MozM3NSqjHnhi7OnsE38jklFv2&
     grant_type=authorization_code
-
-    Host: https://op.spid.agid.gov.it
-    HTTP/1.1
 
 
 .. seealso::
@@ -54,16 +54,16 @@ The claims that MUST be included in the *Token Request* are given below.
 
   .. code-block:: http
 
-    POST /token?
+    POST /token HTTP/1.1
+    Host: https://op.spid.agid.gov.it
+    Content-Type: application/x-www-form-urlencoded
+
     client_id=https://rp.spid.agid.gov.it&
     client_assertion=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiw
     ibmFtZSI6IlNQSUQiLCJhZG1pbiI6dHJ1ZX0.LVyRDPVJm0S9q7oiXcYVIIqGWY0wWQlqxvFGYswL…&
     client_assertion_type=urn%3Aietf%3Aparams%3Aoauth%3Aclient-assertion-type%3Ajwtbearer&
     grant_type=refresh_token&
     refresh_token=8xLOxBtZp8
-
-    Host: https://op.spid.agid.gov.it
-    HTTP/1.1
 
  
 .. list-table:: 

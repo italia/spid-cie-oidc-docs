@@ -60,7 +60,6 @@ Entity Configuration - claim comuni
        - federation_entity
        - oauth_authorization_server
        - oauth_resource
-       - trust_mark_issuer
      - |spid-icon| |cieid-icon|
 
 .. warning::

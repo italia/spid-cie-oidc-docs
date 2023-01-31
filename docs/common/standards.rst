@@ -65,12 +65,6 @@ Standards
       - Lodderstedt, T., Bradley, J., Labunets, A., Fett, D., “OAuth 2.0 Security Best Current Practice”, Draft-19, December 2021.
     * - `EN319-412-1`_
       - Electronic Signatures and Infrastructures (ESI); Certificate Profiles;
-    * - `CAD`_
-      - DL 7 March 2005 n.82: "Codice dell'amministrazione digitale." (GU Serie Generale n.112 16-05-2005 - Suppl. Ordinario n. 93)
-    * - `DL-SEMPLIFICAZIONI`_
-      - DL 16 July 2020 n.76: "Misure urgenti per la semplificazione e l'innovazione digitale." (20A04921) (GU Serie Generale n.228 14-09-2020 - Suppl. Ordinario n. 33) and its conversion into Law, with amendments, Law 11 September 2020 n. 120.
-    * - `EIDAS`_
-      - Regulation (Eu) No 910/2014 of the European Parliament and of the Council 23 July 2014 "on electronic identification and trust services for electronic transactions in the internal market and repealing Directive 1999/93/EC."
     * - `E164`_
       - International Telecommunication Union, "E.164: The international public telecommunication numbering plan," 2010.
     * - `ISO8601-2004`_

@@ -33,7 +33,10 @@ Di seguito i claim che DEVONO essere inseriti nella *Token Request*.
 
   .. code-block:: json
 
-    POST /token?
+    POST /token HTTP/1.1
+    Host: https://op.spid.agid.gov.it
+    Content-Type: application/x-www-form-urlencoded
+
     client_id=https://rp.spid.agid.gov.it&
     client_assertion=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiw
     ibmFtZSI6IlNQSUQiLCJhZG1pbiI6dHJ1ZX0.LVyRDPVJm0S9q7oiXcYVIIqGWY0wWQlqxvFGYswL…&
@@ -41,10 +44,6 @@ Di seguito i claim che DEVONO essere inseriti nella *Token Request*.
     code=usDwMnEzJPpG5oaV8x3j&
     code_verifier=9g8S40MozM3NSqjHnhi7OnsE38jklFv2&
     grant_type=authorization_code
-
-    Host: https://op.spid.agid.gov.it
-    HTTP/1.1
-
 
 .. seealso::
 
@@ -55,7 +54,10 @@ Di seguito i claim che DEVONO essere inseriti nella *Token Request*.
 
   .. code-block:: json
 
-    POST /token?
+    POST /token HTTP/1.1
+    Host: https://op.spid.agid.gov.it
+    Content-Type: application/x-www-form-urlencoded
+    
     client_id=https://rp.spid.agid.gov.it&
     client_assertion=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiw
     ibmFtZSI6IlNQSUQiLCJhZG1pbiI6dHJ1ZX0.LVyRDPVJm0S9q7oiXcYVIIqGWY0wWQlqxvFGYswL…&
@@ -63,10 +65,7 @@ Di seguito i claim che DEVONO essere inseriti nella *Token Request*.
     grant_type=refresh_token&
     refresh_token=8xLOxBtZp8
 
-    Host: https://op.spid.agid.gov.it
-    HTT/P1.1
 
- 
 .. list-table:: 
    :widths: 20 60 20
    :header-rows: 1

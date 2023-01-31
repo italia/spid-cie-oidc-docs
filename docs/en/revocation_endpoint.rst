@@ -41,7 +41,10 @@ The request to the Revocation Endpoint consists of sending the token to be revok
 
 .. code-block:: http
 
- POST /revoke?
+ POST /revoke HTTP/1.1
+ Host: https://op.spid.agid.gov.it
+ Content-Type: application/x-www-form-urlencoded
+ 
  client_assertion=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiw
  ibmFtZSI6IlNQSUQiLCJhZG1pbiI6dHJ1ZX0.LVyRDPVJm0S9q7oiXcYVIIqGWY0wWQlqxvFGYswLF88&
  client_assertion_type=urn%3Aietf%3Aparams%3Aoauth%3Aclient-assertion-type%3Ajwtbearer&
@@ -53,9 +56,6 @@ The request to the Revocation Endpoint consists of sending the token to be revok
  RJUbdjmFFfRRW23cMbpGQCIk7Nq4L012X_1J4IewOQXXMLTyWQQ_BcBMjcW3MtPrY1AoOcfBOJPx1k2jw
  RkYtyVTLWlff6S5gKciYf3b0bAdjoQEHd_IvssIPH3xuBJkmtkrTlfWR0Q0pdpeyVePkMSI28XZvDaGnxA4j7QI5loZYeyzGR9
  h70xQLVzqwwl1P0-F_0JaDFMJFO1yl4IexfpoZZsB3HhF2vFdL6D_lLeHRyH2g2OzF59eMIsM_Ccs4G47862w
-
- Host: https://op.spid.agid.gov.it
- HTTP/1.1
 
 
 .. list-table:: 
