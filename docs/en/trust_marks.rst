@@ -57,7 +57,7 @@ They are essential elements for starting the Metadata resolution.
 In their absence, an Entity is not recognized as a member inside the Federation.
 
 Inside the SPID Federation, the Trust Marks have unique identifiers (claim id) in URL format, that adopt 
-the following structure: **https:// <domain> / <entity_type> / <trustmark_profile> / [extension /]**
+the following structure: **https:// <domain> / <trustmark_entity_type> / <trustmark_profile> / [extension /]**
 
 In the following, some non-normative examples:
 
@@ -67,7 +67,7 @@ In the following, some non-normative examples:
  - TM AA: **\https://registry.agid.gov.it/oauth_resource/public/**
 
 
-The following table defines the <entity_types> that are recognizable inside the SPID and CIE id Federations:
+The following table defines the <trustmark_entity_type> that are recognizable inside the SPID and CIE id Federations:
 
 
 .. list-table::
