@@ -22,7 +22,7 @@ The same considerations made for the **ECs** and reported in the section :ref:`F
 Entity Statement
 ++++++++++++++++
 
-The ES issued by the TA or by an Intermediary for its own direct subordinates, MUST contain the following attributes:
+The ES issued by the TA or by an Intermediate for its own direct subordinates, MUST contain the following attributes:
 
 
 .. list-table::
@@ -72,7 +72,7 @@ The ES issued by the TA or by an Intermediary for its own direct subordinates, M
 Metadata Policy
 +++++++++++++++
 
-Trust Anchors and Intermediaries (SAs) MUST publish a policy regarding their respective descendants in the Entity Statement referring to them. The Metadata Policy MUST cascade to all descendants. 
+Trust Anchors and Intermediates (SAs) MUST publish a policy regarding their respective descendants in the Entity Statement referring to them. The Metadata Policy MUST cascade to all descendants. 
 
 TA Metadata Policy for RP
 ^^^^^^^^^^^^^^^^^^^^^^^^^

@@ -2,7 +2,7 @@
 
 .. _MetadataTA:
 
-Trust Anchor (TA) and Intermediary (SA) Metadata
+Trust Anchor (TA) and Intermediate (SA) Metadata
 ++++++++++++++++++++++++++++++++++++++++++++++++
 
 A TA and a SA MUST publish in the EC a Metadata of type *federation_entity*, as reported in the following example:

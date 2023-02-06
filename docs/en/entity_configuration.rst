@@ -67,8 +67,8 @@ Entity Configuration - common claims
   Inside the EC the claims **iss** e **sub** contain the same value (URL).
 
 
-Entity Configuration Leaves and Intermediaries
-++++++++++++++++++++++++++++++++++++++++++++++
+Entity Configuration Leaves and Intermediates
++++++++++++++++++++++++++++++++++++++++++++++
 
 In addition to the previously defined claims, the EC of the Leaf and Intermediate Entities, contain also
 the following claims:
@@ -94,7 +94,7 @@ the following claims:
 
    - :ref:`Non-normative example of EC of an OP<Esempio_EN1.2>`
    - :ref:`Non-normative example of EC of a RP<Esempio_EN1.1>`
-   - :ref:`Non-normative example of EC of a Federation Intermediary (SA)<Esempio_EN1.3>`
+   - :ref:`Non-normative example of EC of a Federation Intermediate (SA)<Esempio_EN1.3>`
 
 .. _entity_configuration_ta:
 

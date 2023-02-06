@@ -42,8 +42,8 @@ The OIDC Federation produces an infrastructure of trust that is:
 .. image:: ../../images/spid_cie_oidc_federation_model.svg
     :width: 100%
 
-*At the base of the trees there are the Federation Authorities of SPID and CIE id and, going up, the OPs that have no Intermediaries, the RPs and the 
-Intermediaries that, in turn, aggregate other RPs.*
+*At the base of the trees there are the Federation Authorities of SPID and CIE id and, going up, the OPs that have no Intermediates, the RPs and the 
+Intermediates that, in turn, aggregate other RPs.*
 
 Configuration of the Federation 
 +++++++++++++++++++++++++++++++
@@ -53,7 +53,7 @@ The configuration of the Federation is published by the Trust Anchor inside its 
 
 All the members MUST obtain the Federation configuration before the operational phase and they
 MUST keep it up-to-date on a daily basis. The Federation configuration contains the Trust Anchor
-public keys for the signature operations, the maximum number of Intermediaries allowed between a Leaf and the Trust Anchor (**max_path length**) and the authorities who are enabled to issue the Trust Marks (**trust_marks_issuers**).
+public keys for the signature operations, the maximum number of Intermediates allowed between a Leaf and the Trust Anchor (**max_path length**) and the authorities who are enabled to issue the Trust Marks (**trust_marks_issuers**).
 
 Here a non-normative example of :ref:`Entity Configuration response Trust Anchor<Esempio_EN1.4>`.
 
@@ -66,13 +66,13 @@ The participant MUST publish its configuration
 (Entity Configuration) at the webpath :ref:`.well-known/openid-federation<Esempio_EN1>`.
 
 The technical and administrative representatives complete the onboarding procedure,
-defined by the Federation Authority or by an Intermediary (SA),
+defined by the Federation Authority or by an Intermediate (SA),
 in order to register a new Entity or for updating a preexisting one. 
 
-The Federation Authority or an Intermediary, after doing all the required technical and administrative controls, registers the public keys of the onboarded Entity and releases a proof of Federation membership, 
+The Federation Authority or an Intermediate, after doing all the required technical and administrative controls, registers the public keys of the onboarded Entity and releases a proof of Federation membership, 
 in the form of Trust Mark (TM).
 
 The Leaf MUST include the TM inside its own Federation configuration (Entity Configuration) as proof of
 success in the Onboarding process.
 
-The Federation Authority or an Intermediary MUST publish the Leaf Entity Statement containing the Federation public keys of the onboarded Entity and the TMs released for it.
+The Federation Authority or an Intermediate MUST publish the Leaf Entity Statement containing the Federation public keys of the onboarded Entity and the TMs released for it.
