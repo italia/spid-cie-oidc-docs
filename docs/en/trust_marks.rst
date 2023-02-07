@@ -14,11 +14,11 @@ Typical examples include the Entity's national or international identification c
 by the issuing subject.
 
 During the registration process of a new Leaf Entity (onboarding), the TMs are issued and signed by the TA
-or its Intermediaries (SA) or by Attribute Authorities (AA), if they are defined inside the attribute **trust_mark_issuers**, published inside the TA's Entity Configuration.
+or its Intermediates (SA) or by Attribute Authorities (AA), if they are defined inside the attribute **trust_mark_issuers**, published inside the TA's Entity Configuration.
 
 Each member Entity MUST expose, in its own configuration (EC), the TMs released by the issuing authorities.
 
-In the CIE / SPID scenario, a TM is signed by the TA **MinInterno** / **Agid** or their Intermediaries (SA) or by Attribute Authorities (AA).
+In the CIE / SPID scenario, a TM is signed by the TA **MinInterno** / **Agid** or their Intermediates (SA) or by Attribute Authorities (AA).
 
 The TA defines the subjects who are enabled to issue TMs that are recognizable inside the Federation,
 and this is done by the claim **trust_marks_issuers**, contained in its own Entity Configuration. 
@@ -33,18 +33,18 @@ In the following, a non-normative example of the object **trust_marks_issuers** 
      "trust_marks_issuers":{
          "https://registry.agid.gov.it/openid_relying_party/public/":[
              "https://registry.spid.agid.gov.it/",
-             "https://public.intermediary.spid.it/"
+             "https://public.intermediate.spid.it/"
          ],
          "https://registry.agid.gov.it/openid_relying_party/private/":[
              "https://registry.spid.agid.gov.it/",
-             "https://private.other.intermediary.it/"
+             "https://private.other.intermediate.it/"
          ]
      }
  }
 
 Each member Entity MUST expose in its configuration (EC), the TMs released by the issuing authority.
 
-In the CIE / SPID scenario, a TM is signed by the TA **MinInterno** / **Agid** or their Intermediaries (SA) or
+In the CIE / SPID scenario, a TM is signed by the TA **MinInterno** / **Agid** or their Intermediates (SA) or
 Attribute Authorities (AA).
 
 The TA defines the subjects that are enabled to issue TMs that are recognizable inside the Federation,
@@ -83,8 +83,8 @@ The following table defines the <entity_role> that are recognizable inside the S
     * - **openid_provider**
       - the Entity in the claim *sub* is an OP.
       - OP
-    * - **intermediary**
-      - the Entity in the claim *sub* is an Intermediary.
+    * - **intermediate**
+      - the Entity in the claim *sub* is an Intermediate.
       - SA
     * - **oauth_resource**
       - the Entity in the claim *sub* is an Attribute Authority.
@@ -111,7 +111,7 @@ The following table defines the <trustmark_profile> that are recognizable inside
 **federation_entity** Trust Mark
 --------------------------------
 
-In addition to the claims of the **public** and **private** profiles, the profile **intermediary** identifies the SA and adds the extensions **full** and **light** in the **sa_profile** claim, according to the ways of operation towards the subordinate Entities.
+In addition to the claims of the **public** and **private** profiles, the profile **intermediate** identifies the SA and adds the extensions **full** and **light** in the **sa_profile** claim, according to the ways of operation towards the subordinate Entities.
 
 .. seealso::
 

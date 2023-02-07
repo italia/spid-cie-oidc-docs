@@ -234,16 +234,7 @@ The following table shows the list of user attributes supported by SPID and/or C
        ``"$PREFIX/eid_exp_date":"2002-09-24"``
      - |spid-icon|
    * - **address** |br| Category: extra registry
-     - Physical home address |br|
-       ZIP code  |br|
-       City  |br|
-       Province  |br|
-       Country  |br|.
-       JSON Object (address):
-       Formatted, **street_address**
-       (**mandatory**), locality, region, postal_code, country, country_code
-       The attribute contains the address type (via, viale, piazza …), the address and the house number.
-       The three informations are preferably sorted as in the specific countries.
+     - JSON Object (address):
 
         - "**street_address**": The attribute contains the address type (via, viale, piazza …), the address and the house number. The three informations are preferably sorted as in the specific countries.
        
@@ -253,7 +244,7 @@ The following table shows the list of user attributes supported by SPID and/or C
 
         - "**region**": Province 
 
-        - "**country_code**" : Country
+        - "**country_code**": Country
 
        Example: 
        

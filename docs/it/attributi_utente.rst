@@ -236,26 +236,17 @@ La seguente tabella riporta l'elenco degli attributi utente supportati da SPID e
        ``"$PREFIX/eid_exp_date":"2002-09-24"``
      - |spid-icon|
    * - **address** |br| Categoria: extra anagrafica 
-     - Indirizzo domicilio fisico |br|
-       CAP domicilio fisico |br|
-       Comune domicilio fisico |br|
-       Provincia domicilio fisico |br|
-       Nazione domicilio fisico |br|.
-       JSON Object (address):
-       Formatted, **street_address**
-       (**obbigatorio**),locality, region, postal_code,country, country_code
-       L'attributo contiene la tipologia (via, viale, piazza …), l'indirizzo e il numero civico. 
-       Le tre informazioni sono preferibilmente ordinate come d'uso per lo specifico Stato. 
+     - JSON Object (address):
 
-        - "**street_address**":L'attributo contiene la tipologia (via, viale, piazza …), l'indirizzo e il numero civico. Le tre informazioni sono preferibilmente ordinate come d'uso per lo specifico Stato. 
+        - "**street_address**": L'attributo contiene la tipologia (via, viale, piazza …), l'indirizzo e il numero civico. Le tre informazioni sono preferibilmente ordinate come d'uso per lo specifico Stato. 
        
         - "**postal_code**": CAP 
 
-        - "**locality**":Comune
+        - "**locality**": Comune
 
         - "**region**": Provincia 
 
-        - "**country_code**" : Nazione
+        - "**country_code**": Nazione
 
        Esempio: 
        
