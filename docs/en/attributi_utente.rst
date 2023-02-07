@@ -235,12 +235,8 @@ The following table shows the list of user attributes supported by SPID and/or C
      - |spid-icon|
    * - **address** |br| Category: extra registry
      - JSON Object (address):
-       Formatted, **street_address**
-       (**mandatory**), locality, region, postal_code, country, country_code
-       The attribute contains the address type (via, viale, piazza …), the address and the house number.
-       The three informations are preferably sorted as in the specific countries.
 
-        - "**street_address**": The attribute contains the address type (via, viale, piazza …), the address and the house number. The three informations are preferably sorted as in the specific countries.
+        - "**street_address (**mandatory**)**": The attribute contains the address type (via, viale, piazza …), the address and the house number. The three informations are preferably sorted as in the specific countries.
        
         - "**postal_code**": ZIP 
 
