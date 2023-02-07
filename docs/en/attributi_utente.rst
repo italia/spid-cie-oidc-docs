@@ -244,7 +244,7 @@ The following table shows the list of user attributes supported by SPID and/or C
 
         - "**region**": Province 
 
-        - "**country_code**" : Country
+        - "**country_code**": Country
 
        Example: 
        
