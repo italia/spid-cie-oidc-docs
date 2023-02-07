@@ -45,7 +45,7 @@ Alcuni esempi non normativi sono di seguito riportati:
 
 
  - TM RP public: **\https://registry.agid.gov.it/openid_relying_party/public/**
- - TM SA private: **\https://registry.agid.gov.it/federation_entity/private/**
+ - TM SA private: **\https://registry.agid.gov.it/intermediate/private/**
  - TM AA: **\https://registry.agid.gov.it/oauth_resource/public/**
 
 
