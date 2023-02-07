@@ -90,7 +90,7 @@ The following table defines the <entity_role> that are recognizable inside the S
       - the Entity in the claim *sub* is an Attribute Authority.
       - AA
 
-The following table defines the <trustmark_profiles> that are recognizable inside the SPID and CIE id Federations:
+The following table defines the <trustmark_profile> that are recognizable inside the SPID and CIE id Federations:
 
 
 .. list-table::
