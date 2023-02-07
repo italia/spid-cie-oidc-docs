@@ -57,17 +57,17 @@ They are essential elements for starting the Metadata resolution.
 In their absence, an Entity is not recognized as a member inside the Federation.
 
 Inside the SPID Federation, the Trust Marks have unique identifiers (claim id) in URL format, that adopt 
-the following structure: **https:// <domain> / <entity_type> / <trustmark_profile> / [extension /]**
+the following structure: **https:// <domain> / <entity_role> / <trustmark_profile> / [extension /]**
 
 In the following, some non-normative examples:
 
 
  - TM RP public: **\https://registry.agid.gov.it/openid_relying_party/public/**
- - TM SA private: **\https://registry.agid.gov.it/federation_entity/private/full/**
+ - TM SA private: **\https://registry.agid.gov.it/intermediate/private/full/**
  - TM AA: **\https://registry.agid.gov.it/oauth_resource/public/**
 
 
-The following table defines the <entity_types> that are recognizable inside the SPID and CIE id Federations:
+The following table defines the <entity_role> that are recognizable inside the SPID and CIE id Federations:
 
 
 .. list-table::
@@ -90,7 +90,7 @@ The following table defines the <entity_types> that are recognizable inside the 
       - the Entity in the claim *sub* is an Attribute Authority.
       - AA
 
-The following table defines the <trustmark_profiles> that are recognizable inside the SPID and CIE id Federations:
+The following table defines the <trustmark_profile> that are recognizable inside the SPID and CIE id Federations:
 
 
 .. list-table::
