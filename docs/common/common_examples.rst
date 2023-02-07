@@ -446,7 +446,7 @@ EN 1.6. Trust Mark issued by TA to a SA
  {
      "trust_marks": [
          {
-             "id": "https://registry.interno.gov.it/intermediary/",
+             "id": "https://registry.interno.gov.it/intermediate/private/full",
              "iss": "https://registry.interno.gov.it/",
              "trust_mark": "$JWT"
          }
@@ -459,7 +459,7 @@ Where the $JWT payload is:
 .. code-block:: json
 
  {
-     "id": "https://registry.interno.gov.it/intermediary/",
+     "id": "https://registry.interno.gov.it/intermediate/private/full",
      "iss": "https://registry.interno.gov.it/",
      "sub": "https://sa.esempio.it/",
      "iat": 1579621160,
