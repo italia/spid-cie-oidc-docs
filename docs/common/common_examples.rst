@@ -325,7 +325,7 @@ EN 1.3. Entity Configuration Response Intermediary
      },
      "trust_marks": [
          {
-             "id": "https://registry.gov.it/intermediate/private/",
+             "id": "https://registry.gov.it/intermediate/private/full/",
              "trust_mark": "eyJh …"
          }
      ],
@@ -446,7 +446,7 @@ EN 1.6. Trust Mark issued by TA to a SA
  {
      "trust_marks": [
          {
-             "id": "https://registry.interno.gov.it/intermediate/private/full",
+             "id": "https://registry.interno.gov.it/intermediate/private/full/",
              "iss": "https://registry.interno.gov.it/",
              "trust_mark": "$JWT"
          }
@@ -459,7 +459,7 @@ Where the $JWT payload is:
 .. code-block:: json
 
  {
-     "id": "https://registry.interno.gov.it/intermediate/private/full",
+     "id": "https://registry.interno.gov.it/intermediate/private/full/",
      "iss": "https://registry.interno.gov.it/",
      "sub": "https://sa.esempio.it/",
      "iat": 1579621160,
