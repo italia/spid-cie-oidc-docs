@@ -63,7 +63,7 @@ In the following, some non-normative examples:
 
 
  - TM RP public: **\https://registry.agid.gov.it/openid_relying_party/public/**
- - TM SA private: **\https://registry.agid.gov.it/federation_entity/private/full/**
+ - TM SA private: **\https://registry.agid.gov.it/intermediate/private/full/**
  - TM AA: **\https://registry.agid.gov.it/oauth_resource/public/**
 
 
