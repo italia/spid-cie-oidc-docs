@@ -39,7 +39,7 @@ Il TA definisce i soggetti abilitati all'emissione dei TM riconoscibili all'inte
 
 I Trust Mark rappresentano il primo filtro per l'instaurazione della fiducia tra le parti, sono elementi indispensabili per avviare la risoluzione dei metadati. In loro assenza una entità non è riconoscibile come partecipante all’interno della Federazione.
 
-All’interno della Federazione SPID i Trust Mark presentano degli identificativi univoci (claim id) in formato URL che adottano la seguente struttura: **https:// <domain> / <trustmark_entity_type> / [<trustmark_profile> /] [estensione /]**
+All’interno della Federazione SPID i Trust Mark presentano degli identificativi univoci (claim id) in formato URL che adottano la seguente struttura: **https:// <domain> / <entity_role> / [<trustmark_profile> /] [estensione /]**
 
 Alcuni esempi non normativi sono di seguito riportati:
 
@@ -49,7 +49,7 @@ Alcuni esempi non normativi sono di seguito riportati:
  - TM AA: **\https://registry.agid.gov.it/oauth_resource/public/**
 
 
-La tabella seguente definisce i <trustmark_entity_type> riconoscibili all'interno delle Federazioni SPID e CIE id:
+La tabella seguente definisce i <entity_role> riconoscibili all'interno delle Federazioni SPID e CIE id:
 
 
 .. list-table::
