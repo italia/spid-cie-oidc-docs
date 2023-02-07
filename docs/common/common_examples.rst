@@ -325,7 +325,7 @@ EN 1.3. Entity Configuration Response Intermediary
      },
      "trust_marks": [
          {
-             "id": "https://registry.gov.it/federation_entity/private/",
+             "id": "https://registry.gov.it/intermediate/private/",
              "trust_mark": "eyJh …"
          }
      ],
