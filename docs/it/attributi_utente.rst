@@ -237,12 +237,8 @@ La seguente tabella riporta l'elenco degli attributi utente supportati da SPID e
      - |spid-icon|
    * - **address** |br| Categoria: extra anagrafica 
      - JSON Object (address):
-       Formatted, **street_address**
-       (**obbigatorio**),locality, region, postal_code,country, country_code
-       L'attributo contiene la tipologia (via, viale, piazza …), l'indirizzo e il numero civico. 
-       Le tre informazioni sono preferibilmente ordinate come d'uso per lo specifico Stato. 
 
-        - "**street_address**":L'attributo contiene la tipologia (via, viale, piazza …), l'indirizzo e il numero civico. Le tre informazioni sono preferibilmente ordinate come d'uso per lo specifico Stato. 
+        - "**street_address** (**obbligatorio**)":L'attributo contiene la tipologia (via, viale, piazza …), l'indirizzo e il numero civico. Le tre informazioni sono preferibilmente ordinate come d'uso per lo specifico Stato. 
        
         - "**postal_code**": CAP 
 
