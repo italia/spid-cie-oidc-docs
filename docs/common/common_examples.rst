@@ -266,7 +266,8 @@ EN 1.2. Entity Configuration Response Openid Provider
              ]
          },
          "federation_entity": {
-             "federation_resolve_endpoint": "https://openid.provider.it/resolve/"
+             "federation_resolve_endpoint": "https://openid.provider.it/resolve/",
+             "organization_name": "SPID OIDC identity provider"
          }
      },
      "authority_hints": [
@@ -370,7 +371,6 @@ EN 1.4. Entity Configuration Response Trust Anchor
      },
      "metadata": {
          "federation_entity": {
-
              "organization_name": "example TA"
              "contacts":[
                  "spid.tech@agid.gov.it"
