@@ -77,7 +77,8 @@ EN 1.1. Entity Configuration Response Relying Party
              "subject_type": "pairwise"
          },
          "federation_entity": {
-             "federation_resolve_endpoint": "https://rp.example.it/resolve/"
+             "federation_resolve_endpoint": "https://rp.example.it/resolve/",
+             "organization_name": "PA OIDC Service Provider"
          }
      },
      "trust_marks": [
