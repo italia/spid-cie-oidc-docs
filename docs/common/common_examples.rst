@@ -250,18 +250,6 @@ EN 1.2. Entity Configuration Response Openid Provider
                  "ES384",
                  "ES512"
              ],
-..               "request_object_encryption_alg_values_supported": [
-..                   "RSA-OAEP",
-..                   "RSA-OAEP-256"
-..               ],
-..               "request_object_encryption_enc_values_supported": [
-..                   "A128CBC-HS256",
-..                   "A192CBC-HS384",
-..                   "A256CBC-HS512",
-..                   "A128GCM",
-..                   "A192GCM",
-..                   "A256GCM"
-..               ],
              "request_object_signing_alg_values_supported": [
                  "RS256",
                  "RS384",
@@ -319,7 +307,6 @@ EN 1.3. Entity Configuration Response Intermediary
              }
          ]
      },
-
      "metadata": {
          "federation_entity": {
              "contacts": [
