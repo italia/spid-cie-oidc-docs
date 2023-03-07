@@ -159,23 +159,22 @@ EN 1.2. Entity Configuration Response Openid Provider
                  "https://www.spid.gov.it/SpidL3"
              ],
              "claims_supported": [
-                 "https://attributes.spid.gov.it/spidCode",
-                 "https://attributes.spid.gov.it/name",
-                 "https://attributes.spid.gov.it/familyName",
-                 "https://attributes.spid.gov.it/placeOfBirth",
-                 "https://attributes.spid.gov.it/countyOfBirth",
-                 "https://attributes.spid.gov.it/dateOfBirth",
-                 "https://attributes.spid.gov.it/gender",
-                 "https://attributes.spid.gov.it/companyName",
-                 "https://attributes.spid.gov.it/registeredOffice",
-                 "https://attributes.spid.gov.it/fiscalNumber",
-                 "https://attributes.spid.gov.it/ivaCode",
-                 "https://attributes.spid.gov.it/idCard",
-                 "https://attributes.spid.gov.it/mobilePhone",
-                 "https://attributes.spid.gov.it/email",
-                 "https://attributes.spid.gov.it/address",
-                 "https://attributes.spid.gov.it/expirationDate",
-                 "https://attributes.spid.gov.it/digitalAddress"
+                 "https://attributes.spid.gov.it/spid_code",
+                 "given_name",
+                 "family_name",
+                 "place_of_birth",
+                 "birthdate",
+                 "gender",
+                 "https://attributes.spid.gov.it/company_name",
+                 "https://attributes.spid.gov.it/registered_office",
+                 "https://attributes.spid.gov.it/fiscal_number",
+                 "https://attributes.spid.gov.it/vat_number",
+                 "https://attributes.spid.gov.it/document_details",
+                 "phone_number",
+                 "email",
+                 "address",
+                 "https://attributes.spid.gov.it/eid_exp_date",
+                 "https://attributes.spid.gov.it/e_delivery_service"
              ],
              "grant_types_supported": [
                  "authorization_code",
@@ -757,8 +756,8 @@ EN 6. Authorization Request
       },
       "claims": {
         "userinfo": {
-            "https://attributes.spid.gov.it/name":null,
-            "https://attributes.spid.gov.it/familyName":null
+            "given_name":null,
+            "family_name":null
         }
       },
       "state": "fyZiOL9Lf2CeKuNT2JzxiLRDink0uPcd"
