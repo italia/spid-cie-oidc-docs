@@ -78,7 +78,13 @@ EN 1.1. Entity Configuration Response Relying Party
          },
          "federation_entity": {
              "federation_resolve_endpoint": "https://rp.example.it/resolve/",
-             "organization_name": "PA OIDC Service Provider"
+             "organization_name": "PA OIDC Service Provider",
+             "homepage_uri": "https://rp.example.it",
+             "policy_uri": "https://rp.example.it/policy",
+             "logo_uri": "https://rp.example.it/static/logo.svg",
+             "contacts": [
+                "tech@example.it"
+              ]
          }
      },
      "trust_marks": [
@@ -267,7 +273,13 @@ EN 1.2. Entity Configuration Response Openid Provider
          },
          "federation_entity": {
              "federation_resolve_endpoint": "https://openid.provider.it/resolve/",
-             "organization_name": "SPID OIDC identity provider"
+             "organization_name": "SPID OIDC identity provider",
+             "homepage_uri": "https://provider.it",
+             "policy_uri": "https://provider.it/policy",
+             "logo_uri": "https://provider.it/static/logo.svg",
+             "contacts": [
+                "tech@provider.it"
+              ]
          }
      },
      "authority_hints": [
@@ -375,6 +387,7 @@ EN 1.4. Entity Configuration Response Trust Anchor
              "contacts":[
                  "spid.tech@agid.gov.it"
              ],
+             "policy_uri": "https://registry.agid.gov.it/policy",
              "homepage_uri": "https://registry.agid.gov.it/",
              "logo_uri":"https://registry.agid.gov.it/static/svg/logo.svg",
              "federation_fetch_endpoint": "https://registry.agid.gov.it/fetch/",
