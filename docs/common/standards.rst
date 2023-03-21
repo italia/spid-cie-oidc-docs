@@ -1,7 +1,7 @@
 .. include:: ../common/common_definitions.rst
 
-Standards
-+++++++++
+Technical references
+++++++++++++++++++++
 
 .. list-table::
     :widths: 25 75
@@ -63,6 +63,8 @@ Standards
       - Selhausen, K. M. Z. and D. Fett, "OAuth 2.0 Authorization Server Issuer Identification", Work in Progress, Internet-Draft, Draft-5, January 2022.
     * - `I-D.ietf-OAuth-Security-BCP`_
       - Lodderstedt, T., Bradley, J., Labunets, A., Fett, D., “OAuth 2.0 Security Best Current Practice”, Draft-19, December 2021.
+    * - `draft-yusef-oauth-nested-jwt`_
+      - Shekh-Yusef, R., Hardt, D., De Marco, G., “JSON Web Token (JWT) Embedded Tokens”, Draft-06, December 2022.
     * - `EN319-412-1`_
       - Electronic Signatures and Infrastructures (ESI); Certificate Profiles;
     * - `E164`_
