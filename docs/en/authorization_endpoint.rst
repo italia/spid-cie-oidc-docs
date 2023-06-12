@@ -166,7 +166,7 @@ Parameters **scope** and **claims**
 
   The attributes of the user MAY be requested by the RP using the **claims** parameter in the Authorization Request.
 
-  SPID do not allow require the user attributes in ID Token, they are available at the "userinfo" endpoint.  
+  SPID doesn't allow the user attributes in ID Token, they are only available at the "userinfo" endpoint.  
 
 
 .. admonition:: |cieid-icon|
