@@ -762,6 +762,11 @@ EN 6. Authorization Request
 .. code-block:: python
 
   {
+  "alg": "RS256",
+  "kid": "2HnoFS3YnC9tjiCaivhWLVUJ3AxwGGz_98uRFaqMEEs"
+  }
+  .
+  {
       "client_id": "https://rp.spid.agid.gov.it",
       "response_type": "code",
       "scope": "openid",
