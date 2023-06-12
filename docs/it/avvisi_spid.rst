@@ -21,7 +21,7 @@ Le presenti regole tecniche implementano i seguenti avvisi SPID:
       - 24/11/2021
 
     * - Avviso n.41
-      - `Avviso n.41 - Integrazione LL.GG. OpenID Connect in SPID.pdf <https://www.agid.gov.it/sites/default/files/repository_files/spid-avviso-n41-integrazione_ll.gg_._openid_connect_in_spid.pdf>`_
+      - `Avviso n.41 - Integrazione LL.GG. OpenID Connect in SPID.pdf <https://www.agid.gov.it/sites/default/files/repository_files/spid-avviso-n41_v2_integrazioni_llgg._openid_connect_in_spid_f.pdf>`_
       - 06/05/2022 
 
     * - Tabella Attributi utente v1.3
