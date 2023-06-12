@@ -281,7 +281,7 @@ Di seguito i claim disponibili nell'ID Token.
      - DEVE coincidere con il valore *client_id*. Il RP DEVE verificare che questo valore corrisponda al proprio client ID.
      - |spid-icon| |cieid-icon|
    * - **acr** 
-     - Livello di autenticazione effettivo. PUÒ essere uguale o superiore a quello richiesto dal RP nella Authentication Request.
+     - Livello di autenticazione effettivo. DEVE essere uguale o superiore a quello richiesto dal RP nella Authentication Request.
      - |spid-icon| |cieid-icon|
    * - **at_hash** 
      - Vedi `OpenID.Core#CodeIDToken`_. Il client DEVE verificare che questo valore corrisponda all'*Access Token* restituito insieme all'ID Token.
