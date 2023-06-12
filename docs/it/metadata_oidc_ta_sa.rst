@@ -47,7 +47,7 @@ L'EC di un TA e di SA DEVE configurare un metadata di tipo **"federation_entity"
   * - **federation_list_endpoint**
     - Vedi Sezione :ref:`Endpoint di Federazione <federation_endpoint>` e `OIDC-FED`_ Section 4.8
     - |spid-icon| |cieid-icon|
-  * - **federation_trust_mark_status**
+  * - **federation_trust_mark_status_endpoint**
     - Vedi Sezione :ref:`Endpoint di Federazione <federation_endpoint>` e `OIDC-FED`_ Section 4.8
     - |spid-icon| |cieid-icon|
   * - **federation_resolve_endpoint**
