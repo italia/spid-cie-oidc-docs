@@ -284,7 +284,7 @@ Di seguito i claim disponibili nell'ID Token.
      - Livello di autenticazione effettivo. PUÒ essere uguale o superiore a quello richiesto dal RP nella Authentication Request.
      - |spid-icon| |cieid-icon|
    * - **at_hash** 
-     - Vedi `OpenID.Core#CodeIDToken`_. Il client DEVE verificare che questo valore corrisponda all'*Access Token* restituito insieme all'ID Token.
+     - Vedi `OpenID.Core#CodeIDToken`_. Il suo valore è la codifica base64url della prima metà dell'hash calcolato sulla rappresentazione ASCII dell'*Access Token*, usando l'algoritmo di hashing indicato in **alg** nell'header dell'ID Token. Il client DEVE verificare che questo valore corrisponda applicando la medesima funzione all'*Access Token* restituito insieme all'ID Token.
      - |spid-icon| |cieid-icon|
    * - **iat** 
      - UNIX Timestamp con l'istante di generazione del JWT, codificato come NumericDate come indicato in :rfc:`7519`
