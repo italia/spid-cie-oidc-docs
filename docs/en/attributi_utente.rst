@@ -122,7 +122,7 @@ The following table shows the list of user attributes supported by SPID and/or C
    * - **$PREFIX/fiscal_number** |br| Category:registry
      - Fiscal number of the natural person. String. For the format, please refer to the coding of the attribute
        CF for the certificates, proposed in the Draft ETSI EN 319 412-1, that implies, in the specific case, the following format:
-       TINIT-<FiscalNumber>
+       TINIT-<fiscal_number>
         
        Example:
 
@@ -133,7 +133,7 @@ The following table shows the list of user attributes supported by SPID and/or C
      - Fiscal number of the legal person. String. For the format, please refer to the coding of the attribute
        CF for the certificates, proposed in the Draft ETSI EN 319 412-1, that implies, in the specific case, the following format:
 
-       ``TINIT-<FiscalNumber>``
+       ``TINIT-<fiscal_number>``
 
        Example:
 

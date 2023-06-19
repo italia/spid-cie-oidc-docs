@@ -67,7 +67,7 @@ Lo UserInfo Endpoint restituisce gli attributi utente esplicitamente richiesti t
      "sub": "OP-1234567890",
      "name": "Mario",
      "family_name": "Rossi",
-     "https://attributes.spid.gov.it/fiscalNumber": "MROXXXXXXXXXXXXX"
+     "https://attributes.spid.gov.it/fiscal_number": "MROXXXXXXXXXXXXX"
   }
 
 

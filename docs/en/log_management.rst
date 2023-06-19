@@ -47,7 +47,7 @@ OPs and RPs MUST retain the following.
 Federation Historical Key registry
 ----------------------------------
 
-In order to enable the verification of messages exchanged by Entities participating in the federation and their Trust Chains, the TA MUST publish its federation public key history (JWKS) within a registry made available to all participants via the */.well-known/openid-federation-jwks* endpoint. For further technical details, please refer to Section 7.5 of `OIDC-FED`_. 
+In order to enable the verification of messages exchanged by Entities participating in the federation and their Trust Chains, the TA MUST publish its federation public key history (JWKS) within a registry made available to all participants via the */.well-known/openid-federation-historical-jwks* endpoint. For further technical details, please refer to Section 7.5 of `OIDC-FED`_. 
 
 .. warning::
     Keys that have not been active more than 24 months MAY be removed from the registry at the TA's convenience. 
