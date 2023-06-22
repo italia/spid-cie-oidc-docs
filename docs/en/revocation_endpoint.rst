@@ -75,7 +75,7 @@ The request to the Revocation Endpoint consists of sending the token to be revok
      - URL HTTPS that uniquely identifies the RP. 
      - |spid-icon| |cieid-icon|
    * - **token**
-     - The token about which the RP requests information.
+     - The token which the RP is asking to revoke.
      - |spid-icon| |cieid-icon|
 	 
 
