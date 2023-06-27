@@ -65,7 +65,7 @@ The UserInfo Endpoint returns user attributes explicitly requested through the *
      "https://attributes.spid.gov.it/fiscalNumber": "MROXXXXXXXXXXXXX"
   }
 
-The JWE header MUST contains the parameter below:
+The JWE header MUST contain the parameter below:
 
 .. list-table:: 
    :widths: 20 60 20
