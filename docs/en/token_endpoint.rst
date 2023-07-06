@@ -423,10 +423,10 @@ Error codes
 
   * - *server_error*
     - The OP encountered an internal problem.
-    - *400 Bad Request*
+    - *500 internal server error*
     - |spid-icon| |cieid-icon|
 
   * - *temporarily_unavailable*
     - The OP encountered a temporary internal problem.
-    - *400 Bad Request*
+    - *503 Service Unavailable*
     - |spid-icon| |cieid-icon|

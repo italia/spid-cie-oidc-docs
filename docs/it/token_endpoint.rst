@@ -416,10 +416,10 @@ Codici di errore
 
   * - *server_error*
     - L'OP ha riscontrato un problema interno (:rfc:`6749#section-5.2`).
-    - *400 Bad Request*
+    - *500 Internal Server Error*
     - |spid-icon| |cieid-icon|
 
   * - *temporarily_unavailable*
     - L'OP ha riscontrato un problema interno temporaneo (:rfc:`6749#section-5.2`).
-    - *400 Bad Request*
+    - *503 Service Unavailable*
     - |spid-icon| |cieid-icon|
