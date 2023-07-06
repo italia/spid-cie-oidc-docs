@@ -290,7 +290,7 @@ The claims available in the *ID Token* are given below.
      - Effective authentication level. It MUST be equal or greater than the one requested by the client in the Authentication Request.
      - |spid-icon| |cieid-icon|
    * - **at_hash** 
-     - See `OpenID.Core#CodeIDToken`_. The client MUST verify that this value matches the *Access Token* returned with the Token ID. 
+     - See `OpenID.Core#CodeIDToken`_. Its value is the base64url encoding of the left-most half of the hash of the octets of the ASCII representation of the *Access Token* value, where the hash algorithm used is the hash algorithm used in the alg Header Parameter of the ID Token's JOSE Header. The client MUST verify this value by applying the same function to the *Access Token* returned with the Token ID.
      - |spid-icon| |cieid-icon|
    * - **iat** 
      - UNIX Timestamp with the time of JWT issuance, coded as NumericDate as indicated in :rfc:`7519`. 
