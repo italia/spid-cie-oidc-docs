@@ -287,7 +287,7 @@ The claims available in the *ID Token* are given below.
      - It MUST match the value *client_id*. The RP MUST verify that this value matches its client ID.
      - |spid-icon| |cieid-icon|
    * - **acr** 
-     - Effective authentication level. It MAY be equal or greater than the one requested by the client in the Authentication Request.
+     - Effective authentication level. It MUST be equal or greater than the one requested by the client in the Authentication Request.
      - |spid-icon| |cieid-icon|
    * - **at_hash** 
      - See `OpenID.Core#CodeIDToken`_. The client MUST verify that this value matches the *Access Token* returned with the Token ID. 

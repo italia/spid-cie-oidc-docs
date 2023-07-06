@@ -65,8 +65,29 @@ The UserInfo Endpoint returns user attributes explicitly requested through the *
      "https://attributes.spid.gov.it/fiscalNumber": "MROXXXXXXXXXXXXX"
   }
 
+The JWE header MUST contain the parameter below:
 
-The JWT payload is a JSON containing the following parameters:
+.. list-table:: 
+   :widths: 20 60 20
+   :header-rows: 1
+
+   * - **Claim**
+     - **Descrizione**
+     - **Supportato da**
+   * - **alg**
+     - String. See :ref:`supported_algs`..
+     - |spid-icon| |cieid-icon|
+   * - **kid**
+     - See :rfc:`7638#section_3`. 
+     - |spid-icon| |cieid-icon|
+   * - **enc**
+     - String. See :ref:`supported_algs`..
+     - |spid-icon| |cieid-icon|
+   * - **cty**
+     - String. It MUST contain the value "JWT".
+     - |spid-icon| |cieid-icon|
+
+The JWE payload is a JWS containing the following parameters:
 
 .. list-table:: 
    :widths: 20 60 20
@@ -79,6 +100,12 @@ The JWT payload is a JSON containing the following parameters:
      - String. Subject identifier, equal to the identifier already released in the ID Token.
        The RP MUST check that the value is equal to the one, contained in the ID Token.
      - |spid-icon| |cieid-icon|
+   * - **iat**
+     - UNIX Timestamp with the time of the JWT issuance, coded as NumericDate as indicated in :rfc:`7519`. 
+     - |spid-icon| |cieid-icon|
+   * - **exp**
+     - UNIX Timestamp with the expiry time of the JWT, coded as NumericDate as indicated in :rfc:`7519`. 
+     - |spid-icon| |cieid-icon|
    * - **aud**
      - String. Subject Identifier of the response recipient (RP).
        The RP MUST check that the value is equal to its own client_id.
@@ -90,6 +117,24 @@ The JWT payload is a JSON containing the following parameters:
      - The requested user claims.
      - |spid-icon| |cieid-icon|
 
+The JWS header MUST contains the parameters below:
+
+.. list-table:: 
+   :widths: 20 60 20
+   :header-rows: 1
+
+   * - **Claim**
+     - **Descrizione**
+     - **Supportato da**
+   * - **alg**
+     - String. See :ref:`supported_algs`..
+     - |spid-icon| |cieid-icon|
+   * - **kid**
+     - See :rfc:`7638#section_3`. 
+     - |spid-icon| |cieid-icon|
+   * - **cty**
+     - String. It MUST contain the value "JWT".
+     - |spid-icon| |cieid-icon|
 
 Error codes
 +++++++++++

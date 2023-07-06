@@ -48,7 +48,7 @@ mandatory parameters:
   * - **federation_list_endpoint**
     - See Section :ref:`Federation Endpoint <federation_endpoint>` and `OIDC-FED`_ Section 4.8.
     - |spid-icon| |cieid-icon|
-  * - **federation_trust_mark_status**
+  * - **federation_trust_mark_status_endpoint**
     - See Section :ref:`Federation Endpoint <federation_endpoint>` and `OIDC-FED`_ Section 4.8.
     - |spid-icon| |cieid-icon|
   * - **federation_resolve_endpoint**

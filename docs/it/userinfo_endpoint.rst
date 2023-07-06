@@ -70,8 +70,30 @@ Lo UserInfo Endpoint restituisce gli attributi utente esplicitamente richiesti t
      "https://attributes.spid.gov.it/fiscalNumber": "MROXXXXXXXXXXXXX"
   }
 
+L'intestazione del JWE DEVE contenere i seguenti parametri:
 
-Il payload del JWT è un JSON contenente i seguenti parametri:
+.. list-table:: 
+   :widths: 20 60 20
+   :header-rows: 1
+
+   * - **Claim**
+     - **Descrizione**
+     - **Supportato da**
+   * - **alg**
+     - String. Vedi :ref:`supported_algs`..
+     - |spid-icon| |cieid-icon|
+   * - **kid**
+     - Vedi :rfc:`7638#section_3`. 
+     - |spid-icon| |cieid-icon|
+   * - **enc**
+     - String. Vedi :ref:`supported_algs`..
+     - |spid-icon| |cieid-icon|
+   * - **cty**
+     - String. DEVE essere valorizzato con "JWT".
+     - |spid-icon| |cieid-icon|
+
+
+Il payload del JWE è un JWS contenente all'interno del suo payload i seguenti parametri:
 
 .. list-table:: 
    :widths: 20 60 20
@@ -84,6 +106,12 @@ Il payload del JWT è un JSON contenente i seguenti parametri:
      - String. Identificatore del soggetto, coincidente con quello già rilasciato nell'ID Token.
        Il RP DEVE verificare che il valore coincida con quello contenuto nell'ID Token.
      - |spid-icon| |cieid-icon|
+   * - **iat**
+     - UNIX Timestamp con l'istante di generazione del JWT, codificato come NumericDate come indicato in :rfc:`7519`. 
+     - |spid-icon| |cieid-icon|
+   * - **exp**
+     - UNIX Timestamp con l'istante di scadenza del JWT, codificato come NumericDate come indicato in :rfc:`7519`.
+     - |spid-icon| |cieid-icon|
    * - **aud**
      - String. Identificatore del soggetto destinatario della response (RP).
        Il RP DEVE verificare che il valore coincida con il proprio client_id.
@@ -95,6 +123,24 @@ Il payload del JWT è un JSON contenente i seguenti parametri:
      - I claim richiesti al momento dell'autenticazione.
      - |spid-icon| |cieid-icon|
 
+L'intestazione del JWS DEVE contenere i seguenti parametri:
+
+.. list-table:: 
+   :widths: 20 60 20
+   :header-rows: 1
+
+   * - **Claim**
+     - **Descrizione**
+     - **Supportato da**
+   * - **alg**
+     - String. Vedi :ref:`supported_algs`..
+     - |spid-icon| |cieid-icon|
+   * - **kid**
+     - Vedi :rfc:`7638#section_3`. 
+     - |spid-icon| |cieid-icon|
+   * - **cty**
+     - String. DEVE essere valorizzato con "JWT".
+     - |spid-icon| |cieid-icon|
 
 Codici di errore
 ++++++++++++++++
