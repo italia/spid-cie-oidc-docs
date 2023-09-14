@@ -327,8 +327,11 @@ Il *Refresh Token* DEVE essere rilasciato in formato JWT, firmato, e contenere a
    * - **iss** 
      - DEVE essere valorizzato con un HTTPS URL che identifica univocamente l'OP. Il RP DEVE verificare che questo valore corrisponda all'OP chiamato.
      - |spid-icon| |cieid-icon|
-   * - **aud** 
+   * - **client_id** 
      - DEVE coincidere con il valore *client_id*. Il RP DEVE verificare che questo valore corrisponda al proprio client ID.
+     - |spid-icon| |cieid-icon|
+   * - **aud** 
+     - DEVE contenere il *Token Endpoint* dell'OP.
      - |spid-icon| |cieid-icon|
    * - **iat** 
      - UNIX Timestamp con l'istante di generazione del JWT, codificato come NumericDate come indicato in :rfc:`7519`

@@ -335,8 +335,11 @@ The *Refresh Token* MUST be a signed JWT containing at least the following param
   * - **iss** 
     - It MUST be an HTTPS URL that uniquely identifies the OP. The RP MUST verify that this value matches the called OP.
     - |spid-icon| |cieid-icon|
-  * - **aud** 
+  * - **client_id** 
     - It MUST match the value client_id. The RP MUST verify that this value matches its client ID.
+    - |spid-icon| |cieid-icon|
+  * - **aud** 
+    - It MUST contain the OP *Token Endpoint*.
     - |spid-icon| |cieid-icon|
   * - **iat** 
     - UNIX Timestamp with the time of JWT issuance, coded as NumericDate as indicated in :rfc:`7519`.
