@@ -183,10 +183,10 @@ UserInfo endpoint to get user attributes.
   }
   .
   {
-    "iss":"https://op.spid.agid.gov.it/",
+    "iss":"https://op.spid.agid.gov.it",
     "sub": "9sd798asd98asui23hiuds89y798sfyg",
     "aud": [
-    "https://rp.spid.example.it"
+    "https://op.spid.agid.gov.it/userinfo"
     ],
     "client_id": "https://rp.spid.example.it",
     "scope": "openid",
@@ -213,7 +213,7 @@ UserInfo endpoint to get user attributes.
      - It MUST contain a HTTPS URL that uniquely identifies the RP. 
      - |spid-icon| |cieid-icon|
    * - **aud** 
-     - It MUST match the value *client_id*. The RP MUST verify that this value matches its client ID.
+     - It MUST contain a list of Resource Servers referring to token consuming party. It MUST contain at least the *UserInfo Endpoint*. 
      - |spid-icon| |cieid-icon|
    * - **scope** 
      - The OP SHOULD add the *scope* parameter as defined in :rfc:`9068` Section 2.2.3. It MUST match the value in the authentication request.

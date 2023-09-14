@@ -183,10 +183,10 @@ Di seguito i claim che compongono l'Access Token.
   }
   .
   {
-    "iss":"https://op.spid.agid.gov.it/",
+    "iss":"https://op.spid.agid.gov.it",
     "sub": "9sd798asd98asui23hiuds89y798sfyg",
     "aud": [
-    "https://rp.spid.example.it"
+    "https://op.spid.agid.gov.it/userinfo"
     ],
     "client_id": "https://rp.spid.example.it",
     "scope": "openid",
@@ -213,7 +213,7 @@ Di seguito i claim che compongono l'Access Token.
      - DEVE essere valorizzato con un HTTPS URL che identifica univocamente il RP.  
      - |spid-icon| |cieid-icon|
    * - **aud** 
-     - DEVE coincidere con il valore *client_id*. Il RP DEVE verificare che questo valore corrisponda al proprio client ID.
+     - DEVE contenere un elenco di Resource Server che consumano l'AT. DEVE contenere almeno lo *UserInfo Endpoint*.
      - |spid-icon| |cieid-icon|
    * - **scope** 
      - L'OP DOVREBBE inserire il parametro *scope* come previsto in :rfc:`9068` Sezione 2.2.3. DEVE coincidere con il valore presente in fase di richiesta di autenticazione.
