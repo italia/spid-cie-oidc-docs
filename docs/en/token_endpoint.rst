@@ -93,7 +93,7 @@ The claims that MUST be included in the *Token Request* are given below.
      - |spid-icon| |cieid-icon|
    * - **client_assertion_type**
      - It must get the following value: |br|
-       **urn:ietf:params:oauth:client-assertion-type:jwtbearer**.
+       **urn:ietf:params:oauth:client-assertion-type:jwt-bearer**.
      - |spid-icon| |cieid-icon|
    * - **code**
      - Authorization code returned in the Authentication Response. Required only if **grant_type** is **authorization_code**.
