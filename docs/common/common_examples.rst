@@ -800,15 +800,23 @@ The following example shows a Metadata policy in the Entity Statement provided b
     "metadata_policy": {
         "openid_relying_party": {
             "jwks": {
-              "keys": [{
-                "value": [{
-                    "kty": "RSA",
-                    "use": "sig",
-                    "n": "…",
-                    "e": "AQAB",
-                    "kid": "5NNNoFS3YnC9tjiCaivhWLVUJ3AxwGGz_98uRFaqMEEs"
-                }]
-              }]
+                "value": {
+                    "keys": [
+                        {
+                            "kty": "RSA",
+                            "e": "AQAB",
+                            "use": "sig",
+                            "kid": "....",
+                            "n": "....."
+                        },
+                        {
+                            "kty": "RSA",
+                            "e": "AQAB",
+                            "use": "enc",
+                            "kid": "....",
+                            "n": "....."
+                        }
+                    ]
             },
             "grant_types": {
                 "subset_of": ["authorization_code", "refresh_token"]
@@ -884,14 +892,24 @@ The following example shows a Metadata policy in the Entity Statement provided b
     "metadata_policy": {
         "openid_relying_party": {
             "jwks": {
-                "value": [{
-                    "kty": "RSA",
-                    "use": "sig",
-                    "n": "…",
-                    "e": "AQAB",
-                    "kid": "5NNNoFS3YnC9tjiCaivhWLVUJ3AxwGGz_98uRFaqMEEs"
-                }]
-            }
+                "value": {
+                    "keys": [
+                        {
+                            "kty": "RSA",
+                            "e": "AQAB",
+                            "use": "sig",
+                            "kid": "....",
+                            "n": "....."
+                        },
+                        {
+                            "kty": "RSA",
+                            "e": "AQAB",
+                            "use": "enc",
+                            "kid": "....",
+                            "n": "....."
+                        }
+                    ]
+            },
         }
     }
 
@@ -902,13 +920,23 @@ The following example shows a Metadata policy in the Entity Statement provided b
     "metadata_policy": {
         "openid_relying_party": {
             "jwks": {
-                "value": [{
-                    "kty": "RSA",
-                    "use": "sig",
-                    "n": "…",
-                    "e": "AQAB",
-                    "kid": "5NNNoFS3YnC9tjiCaivhWLVUJ3AxwGGz_98uRFaqMEEs"
-                }]
+                "value": {
+                    "keys": [
+                        {
+                            "kty": "RSA",
+                            "e": "AQAB",
+                            "use": "sig",
+                            "kid": "....",
+                            "n": "....."
+                        },
+                        {
+                            "kty": "RSA",
+                            "e": "AQAB",
+                            "use": "enc",
+                            "kid": "....",
+                            "n": "....."
+                        }
+                    ]
             },
             "revocation_endpoint_auth_methods_supported": {
                 "one_of": ["private_key_jwt"]
