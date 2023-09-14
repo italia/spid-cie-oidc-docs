@@ -801,7 +801,7 @@ The following example shows a Metadata policy in the Entity Statement provided b
         "openid_relying_party": {
             "jwks": {
               "keys": [{
-                "subset_of": [{
+                "value": [{
                     "kty": "RSA",
                     "use": "sig",
                     "n": "…",
@@ -884,7 +884,7 @@ The following example shows a Metadata policy in the Entity Statement provided b
     "metadata_policy": {
         "openid_relying_party": {
             "jwks": {
-                "subset_of": [{
+                "value": [{
                     "kty": "RSA",
                     "use": "sig",
                     "n": "…",
@@ -902,7 +902,7 @@ The following example shows a Metadata policy in the Entity Statement provided b
     "metadata_policy": {
         "openid_relying_party": {
             "jwks": {
-                "subset_of": [{
+                "value": [{
                     "kty": "RSA",
                     "use": "sig",
                     "n": "…",
