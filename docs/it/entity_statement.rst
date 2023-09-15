@@ -89,29 +89,29 @@ Di seguito vengono riportati i claim che DEVONO essere considerati nel parametro
     - |spid-icon| |cieid-icon|
   * - **id_token_signed_response_alg**
     - Operazioni: *one_of* |br|
-      Valori: DEVE contenere gli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>`
+      Valori: DEVE contenere uno degli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>`
     - |spid-icon| |cieid-icon|
   * - **id_token_encrypted_response_alg**
     - Operazioni: *one_of* |br|
-      Valori: DEVE contenere gli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>` |br|
+      Valori: DEVE contenere uno degli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>` |br|
       *essential = false*
     - |cieid-icon|
   * - **id_token_encrypted_response_enc**
     - Operazioni: *one_of* |br|
-      Valori: DEVE contenere gli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>` |br|
+      Valori: DEVE contenere uno degli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>` |br|
       *essential = false*
     - |cieid-icon|
   * - **userinfo_signed_response_alg**
     - Operazioni: *one_of* |br|
-      Valori: DEVE contenere gli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>`
+      Valori: DEVE contenere uno degli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>`
     - |spid-icon| |cieid-icon|
   * - **userinfo_encrypted_response_alg**
     - Operazioni: *one_of* |br|
-      Valori: DEVE contenere gli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>`
+      Valori: DEVE contenere uno degli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>`
     - |spid-icon| |cieid-icon|
   * - **userinfo_encrypted_response_enc**
     - Operazioni: *one_of* |br|
-      Valori: DEVE contenere gli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>`
+      Valori: DEVE contenere uno degli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>`
     - |spid-icon| |cieid-icon|
   * - **token_endpoint_auth_method**
     - Operazioni: *one_of* |br|
@@ -143,7 +143,7 @@ Di seguito vengono riportati i claim che DEVONO essere considerati nel parametro
     - |spid-icon| |cieid-icon|
   * - **id_token_signed_response_alg**
     - Operazioni: *one_of* |br|
-      Valori: DEVE contenere gli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>`
+      Valori: DEVE contenere uno degli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>`
     - |spid-icon| |cieid-icon|
   * - **id_token_encrypted_response_alg**
     - Operazioni: *one_of* |br|
@@ -152,20 +152,20 @@ Di seguito vengono riportati i claim che DEVONO essere considerati nel parametro
     - |cieid-icon|
   * - **id_token_encrypted_response_enc**
     - Operazioni: *one_of* |br|
-      Valori: DEVE contenere gli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>` |br|
+      Valori: DEVE contenere uno degli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>` |br|
       *essential = false*
     - |cieid-icon|
   * - **userinfo_signed_response_alg**
     - Operazioni: *one_of* |br|
-      Valori: DEVE contenere gli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>`
+      Valori: DEVE contenere uno degli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>`
     - |spid-icon| |cieid-icon|
   * - **userinfo_encrypted_response_alg**
     - Operazioni: *one_of* |br|
-      Valori: DEVE contenere gli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>`
+      Valori: DEVE contenere uno degli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>`
     - |spid-icon| |cieid-icon|
   * - **userinfo_encrypted_response_enc**
     - Operazioni: *one_of* |br|
-      Valori: DEVE contenere gli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>`
+      Valori: DEVE contenere uno degli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>`
     - |spid-icon| |cieid-icon|
   * - **token_endpoint_auth_method**
     - Operazioni: *one_of* |br|
