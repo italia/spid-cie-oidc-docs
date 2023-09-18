@@ -185,9 +185,7 @@ Di seguito i claim che compongono l'Access Token.
   {
     "iss":"https://op.spid.agid.gov.it",
     "sub": "9sd798asd98asui23hiuds89y798sfyg",
-    "aud": [
-    "https://op.spid.agid.gov.it/userinfo"
-    ],
+    "aud": "https://op.spid.agid.gov.it/userinfo",
     "client_id": "https://rp.spid.example.it",
     "scope": "openid",
     "jti": "9ea42af0-594c-4486-9602-8a1f8dde42d3",
