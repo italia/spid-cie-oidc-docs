@@ -86,7 +86,7 @@ Di seguito vengono riportati i claim che DEVONO essere considerati nel parametro
     - |spid-icon| |cieid-icon|
   * - **grant_types**
     - Operazioni: *subset_of*, *super_set* |br|
-      Valori: DEVE essere *authorization_code* e *refresh_token* |br|
+      Valori: DEVE contenere *authorization_code* e *refresh_token* |br|
       *essential = true*
     - |spid-icon| |cieid-icon|
   * - **id_token_signed_response_alg**
@@ -160,7 +160,7 @@ Di seguito vengono riportati i claim che DEVONO essere considerati nel parametro
     - **Supportato da**
   * - **grant_types**
     - Operazioni: *subset_of*, *superset_of* |br|
-      Valori: DEVE essere *authorization_code* e *refresh_token* |br|
+      Valori: DEVE contenere *authorization_code* e *refresh_token* |br|
       *essential = true*
     - |spid-icon| |cieid-icon|
   * - **id_token_signed_response_alg**
@@ -270,23 +270,23 @@ Di seguito vengono riportati i claim che DEVONO essere considerati nel parametro
       *essential = true*
     - |spid-icon| |cieid-icon|
   * - **response_types_supported**
-    - Operazioni: *one_of* |br|
+    - Operazioni: *subset_of* |br|
       Valori: DEVE essere *code*. |br|
       *essential = true*
     - |spid-icon| |cieid-icon|
   * - **response_modes_supported**
     - Operazioni: *subset_of*, *superset_of* |br|
-      Valori: DEVE essere *form_post*, *query*. |br|
+      Valori: DEVE contenere *form_post*, *query*. |br|
       *essential = true*
     - |spid-icon| |cieid-icon|
   * - **grant_types_supported**
     - Operazioni: *subset_of*, *superset_of* |br|
-      Valori: DEVE essere *refresh_token*, *authorization_code*. |br|
+      Valori: DEVE contenere *refresh_token*, *authorization_code*. |br|
       *essential = true*
     - |spid-icon| |cieid-icon|
   * - **acr_values_supported**
     - Operazioni: *subset_of*, *superset_of* |br|
-      Valori: DEVE essere |br| *https://www.spid.gov.it/SpidL1*, |br| *https://www.spid.gov.it/SpidL2*, |br| *https://www.spid.gov.it/SpidL3*.  |br|
+      Valori: DEVE contenere |br| *https://www.spid.gov.it/SpidL1*, |br| *https://www.spid.gov.it/SpidL2*, |br| *https://www.spid.gov.it/SpidL3*.  |br|
       *essential = true*
     - |spid-icon| |cieid-icon|
   * - **subject_types_supported**

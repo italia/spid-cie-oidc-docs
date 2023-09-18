@@ -94,7 +94,7 @@ The following claims MUST be considered in the *metadata* parameter of type *ope
     - |spid-icon| |cieid-icon|
   * - **grant_types**
     - Operations: *subset_of*, *superset_of* |br|
-      Values: MUST be *authorization_code*, *refresh_token* |br|
+      Values: MUST contain *authorization_code*, *refresh_token* |br|
       *essential = true*
     - |spid-icon| |cieid-icon|
   * - **id_token_signed_response_alg**
@@ -166,7 +166,7 @@ The following claims MUST be considered in the *metadata* parameter of type *ope
     - **Supported by**
   * - **grant_types**
     - Operations: *subset_of*, *superset_of* |br|
-      Values: MUST be *authorization_code*, *refresh_token* |br|
+      Values: MUST contain *authorization_code*, *refresh_token* |br|
       *essential = true*
     - |spid-icon| |cieid-icon|
   * - **id_token_signed_response_alg**
@@ -275,23 +275,23 @@ Di seguito vengono riportati i claim che DEVONO essere considerati nel parametro
       *essential = true*
     - |spid-icon| |cieid-icon|
   * - **response_types_supported**
-    - Operarations: *one_of* |br|
+    - Operarations: *subset_of* |br|
       Values: MUST be *code*. |br|
       *essential = true*
     - |spid-icon| |cieid-icon|
   * - **response_modes_supported**
     - Operarations: *subset_of*, *superset_of* |br|
-      Values: MUST be *form_post*, *query*. |br|
+      Values: MUST contain *form_post*, *query*. |br|
       *essential = true*
     - |spid-icon| |cieid-icon|
   * - **grant_types_supported**
     - Operarations: *subset_of*, *superset_of* |br|
-      Values: MUST be *refresh_token*, *authorization_code*. |br|
+      Values: MUST contain *refresh_token*, *authorization_code*. |br|
       *essential = true*
     - |spid-icon| |cieid-icon|
   * - **acr_values_supported**
     - Operarations: *subset_of*, *superset_of* |br|
-      Values: MUST be |br| *https://www.spid.gov.it/SpidL1*, |br| *https://www.spid.gov.it/SpidL2*, |br| *https://www.spid.gov.it/SpidL3*. |br|
+      Values: MUST contain |br| *https://www.spid.gov.it/SpidL1*, |br| *https://www.spid.gov.it/SpidL2*, |br| *https://www.spid.gov.it/SpidL3*. |br|
       *essential = true*
     - |spid-icon| |cieid-icon|
   * - **subject_types_supported**
