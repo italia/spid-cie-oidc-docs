@@ -8,7 +8,7 @@ OpenID Connect Provider Metadata (OP)
 An OP MUST publish in its EC a Metadata of type *federation_entity* and a Metadata of type *openid_provider*, as 
 reported in the following example:
 
-.. code-block:: json
+.. code-block:: 
 
  {
     "metadata":{
@@ -159,6 +159,12 @@ The EC of an OP MUST configure a metadata of type **"openid_provider"**, that MU
     - See `OIDC-FED`_ Section 4.2. See signature :ref:`supported_algs`.
     - |spid-icon| |cieid-icon|
 
+..    * - **request_object_encryption_alg_values_supported**
+..      - Until otherwise indicated by AgID, this MUST NOT be included.
+..      - |spid-icon|
+..    * - **request_object_encryption_enc_values_supported**
+..      - Until otherwise indicated by AgID, this MUST NOT be included.
+..      - |spid-icon|
 
 .. warning::
   The OP Metadata of type **"openid_provider"** exposes the claim **jwks** as regulated by OID-FED instead of

@@ -7,7 +7,7 @@ OpenID Connect Provider Metadata (OP)
 
 Un OP DEVE pubblicare all'interno del suo EC un Metadata da *federation_entity* e uno da *openid_provider* come riportato nel seguente esempio:
 
-.. code-block:: json
+.. code-block:: 
 
  {
     "metadata":{
@@ -159,6 +159,12 @@ L'EC di un OP DEVE configurare un metadata di tipo **"openid_provider"** DEVE co
     - Vedi `OIDC-FED`_ Section 4.2. Vedi signature :ref:`supported_algs`.
     - |spid-icon| |cieid-icon|
 
+..    * - **request_object_encryption_alg_values_supported**
+..      - Fino a diversa indicazione di AgID, non deve essere incluso.
+..      - |spid-icon|
+..    * - **request_object_encryption_enc_values_supported**
+..      - Fino a diversa indicazione di AgID, non deve essere incluso.
+..      - |spid-icon|
 
 .. warning::
   Il Metadata **"openid_provider"** DEVE adottare il parametro **jwks** o **signed_jwks_uri** come normato da OID-FED invece del parametro **jwks_uri** come richiesto in `OpenID.Discovery#OP_Metadata`_. 
