@@ -7,7 +7,7 @@ Metadata di Trust Anchor (TA) e Intermediari (SA)
 
 Un TA e un SA DEVONO pubblicare all'interno del loro EC un Metadata da *federation_entity* come riportato nel seguente esempio:
 
-.. code-block:: json
+.. code-block:: 
 
  {
     "metadata":{

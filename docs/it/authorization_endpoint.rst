@@ -26,7 +26,7 @@ Mediante il metodo **GET** i parametri DEVONO essere trasmessi utilizzando la *Q
 
 Di seguito i parametri obbligatori nella richiesta di autenticazione *HTTP*.
 
-.. _tabella_parametri_authz_req: Authorization request
+.. _tabella_parametri_authz_req:
 
 .. list-table:: 
   :widths: 20 60 20
@@ -85,10 +85,10 @@ Il payload del **JWT** contiene i seguenti parametri obbligatori.
      - Vedi `OpenID.Registration`_. DEVE essere valorizzato con un HTTPS URL che identifica univocamente il RP.
      - |spid-icon| |cieid-icon|
    * - **code_challenge**
-     - Come definito nella  :ref:`Tabella dei parametri HTTP <tabella_parametri_http_req>`.
+     - Come definito nella  :ref:`Tabella dei parametri HTTP <tabella_parametri_authz_req>`.
      - |spid-icon| |cieid-icon|
    * - **code_challenge_method**
-     - Come definito nella  :ref:`Tabella dei parametri HTTP <tabella_parametri_http_req>`.
+     - Come definito nella  :ref:`Tabella dei parametri HTTP <tabella_parametri_authz_req>`.
      - |spid-icon| |cieid-icon|
    * - **nonce**
      - Vedi `OpenID.Core#AuthRequest`_. DEVE essere una stringa casuale di almeno 32 caratteri alfanumerici. Questo valore sarà restituito nell'ID Token fornito dal Token Endpoint, in modo da consentire al client di verificare che sia uguale a quello inviato nella richiesta di autenticazione.
@@ -111,7 +111,7 @@ Il payload del **JWT** contiene i seguenti parametri obbligatori.
      - Vedi `OpenID.Core#AuthRequest`_. Come definito dal parametro **response_types_supported** nel :ref:`Metadata OP <MetadataOP>`.
      - |spid-icon| |cieid-icon|
    * - **scope**
-     - Come definito nella  :ref:`Tabella dei parametri HTTP <tabella_parametri_http_req>`.
+     - Come definito nella  :ref:`Tabella dei parametri HTTP <tabella_parametri_authz_req>`.
      - |spid-icon| |cieid-icon|
    * - **acr_values**
      - Vedi `OpenID.Core#AuthRequest`_. Come definito dal parametro **acr_values_supported** nel :ref:`Metadata OP <MetadataOP>`.
@@ -233,7 +233,7 @@ reindirizza l'utente aggiungendo i seguenti parametri obbligatori come query par
 
 Esempio di Authorization Response dell'OP:
 
-  .. code-block:: http
+  .. code-block:: 
 
     http://rp-test.it/oidc/rp/callback/?code=a032faf23d986353019ff8eda96cadce2ea1c368f04bf4c5e1759d559dda1c08056c7c4d4e8058cb002a0c8fa9a920272350aa102548523a8aff4ccdb44cb3fa&state=2Ujz3tbBHWQEL4XPFSJ5ANSjkhd7IlfC&iss=http%3A%2F%2Fop-test%2Foidc%2Fop%2F
 

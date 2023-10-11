@@ -31,7 +31,7 @@ Di seguito i claim che DEVONO essere inseriti nella *Token Request*.
 
 **Esempio di richiesta con authorization code (caso 1)**
 
-  .. code-block:: json
+  .. code-block:: 
 
     POST /token HTTP/1.1
     Host: https://op.spid.agid.gov.it
@@ -52,7 +52,7 @@ Di seguito i claim che DEVONO essere inseriti nella *Token Request*.
 
 **Esempio di richiesta con Refresh Token (caso 2):**
 
-  .. code-block:: json
+  .. code-block:: 
 
     POST /token HTTP/1.1
     Host: https://op.spid.agid.gov.it
@@ -174,7 +174,7 @@ Di seguito i claim che compongono l'Access Token.
 
 **Esempio del contenuto di intestazione di payload di un Access Token:**
 
-.. code-block:: json
+.. code-block:: 
 
   {
     "alg": "RS256",
@@ -241,7 +241,7 @@ Di seguito i claim disponibili nell'ID Token.
 
  **Esempio del contenuto di intestazione e di payload di un ID Token:**
 
-.. code-block:: json
+.. code-block:: 
 
   {
     "alg": "RS256",
