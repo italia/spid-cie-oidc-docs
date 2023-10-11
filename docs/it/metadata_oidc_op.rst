@@ -159,6 +159,10 @@ L'EC di un OP DEVE configurare un metadata di tipo **"openid_provider"** DEVE co
     - Vedi `OIDC-FED`_ Section 4.2. Vedi signature :ref:`supported_algs`.
     - |spid-icon| |cieid-icon|
 
+.. admonition:: |spid-icon|
+
+  Fino a diversa indicazione di AgID, i parametri **request_object_encryption_alg_values_supported** e **request_object_encryption_enc_values_supported**, NON DEVONO essere inclusi nel Metadata OP SPID.
+
 ..    * - **request_object_encryption_alg_values_supported**
 ..      - Fino a diversa indicazione di AgID, non deve essere incluso.
 ..      - |spid-icon|
