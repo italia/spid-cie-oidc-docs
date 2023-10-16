@@ -203,7 +203,7 @@ La seguente tabella riporta l'elenco degli attributi utente supportati da SPID e
    * - **phone_number** |br| Categoria: extra anagrafica
      - Numero di telefono mobile. String. Stringa numerica senza spazi intermedi |br|
        Esempio: |br|
-       ``"phone_number":"VATIT-12345678901"``
+       ``"phone_number":"12345678901"``
      - |spid-icon| |cieid-icon|
    * - **phone_number_verified** |br| Categoria: extra anagrafica
      - Valore Booleano che indica se il numero di telefono mobile dell'utente è stato verificato dall'OP. 
@@ -211,7 +211,7 @@ La seguente tabella riporta l'elenco degli attributi utente supportati da SPID e
    * - **$PREFIX/landline_number** |br| Categoria: extra anagrafica
      - Numero di telefono fisso. String. Stringa numerica senza spazi intermedi |br|
        Esempio: |br|
-       ``"$PREFIX/landline_number":"VATIT-12345678901"``
+       ``"$PREFIX/landline_number":"12345678901"``
      - |cieid-icon|
    * - **email** |br| Categoria: extra anagrafica
      - Indirizzo di posta elettronica. String. Formato standard indirizzo di posta elettronica |br|
