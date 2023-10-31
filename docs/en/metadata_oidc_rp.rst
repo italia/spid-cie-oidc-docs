@@ -68,6 +68,9 @@ The RP Metadata of type **"openid_relying_party"** MUST contain at least the fol
   * - **jwks**
     - See `OpenID.Registration#ClientMetadata`_ and `JWK`_.
     - |spid-icon| |cieid-icon| 
+  * - **signed_jwks_uri**
+    - See `OIDC-FED`_.
+    - |spid-icon|
   * - **id_token_signed_response_alg**
     - See `OpenID.Registration#ClientMetadata`_. See signature :ref:`supported_algs`.
     - |spid-icon| |cieid-icon| 
@@ -102,4 +105,12 @@ The RP Metadata of type **"openid_relying_party"** MUST contain at least the fol
 .. note:: 
   The URIs contained in the claim **redirect_uris** MAY also use custom schemas (e.g. myapp://) 
   in order to support mobile applications.
+
+.. admonition:: |cieid-icon|
+
+  The RP Metadata **"openid_relying_party"** MUST use the **jwks** parameter.
+
+.. admonition:: |spid-icon|
+  
+  The RP Metadata **"openid_relying_party"** MUST use the **jwks** or **signed_jwks_uri**.
 

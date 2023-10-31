@@ -69,6 +69,9 @@ Il Metadata di tipo **"openid_relying_party"** DEVE contenere almeno i seguenti 
   * - **jwks**
     - Vedi `OpenID.Registration#ClientMetadata`_ e `JWK`_.
     - |spid-icon| |cieid-icon| 
+  * - **signed_jwks_uri**
+    - Vedi `OIDC-FED`_.
+    - |spid-icon|
   * - **id_token_signed_response_alg**
     - Vedi `OpenID.Registration#ClientMetadata`_. Vedi signature :ref:`supported_algs`.
     - |spid-icon| |cieid-icon| 
@@ -102,4 +105,12 @@ Il Metadata di tipo **"openid_relying_party"** DEVE contenere almeno i seguenti 
 
 .. note:: 
   Gli URI presenti nel parametro **redirect_uris** POSSONO anche usare eventuali schemi custom (ad es. myapp://) al fine di supportare applicazioni mobili.
+
+.. admonition:: |cieid-icon|
+  
+  Il Metadata **"openid_relying_party"** DEVE adottare il parametro **jwks**.
+
+.. admonition:: |spid-icon|
+
+  Il Metadata **"openid_relying_party"** DEVE adottare il parametro **jwks** o **signed_jwks_uri**.
 
