@@ -116,7 +116,7 @@ The ECs of a TA, other than the common claims of all the other members, contains
        
        It MAY contain also **allowed_leaf_entity_types**, that restricts what types of Leaf Entities that MAY appear beneath the entity described in this Entity Statement
      - |spid-icon| |cieid-icon|
-   * - **trust_marks_issuers**
+   * - **trust_mark_issuers**
      - JSON Array that indicates which Federation authorities are considered trustworthy
        for issuing specific TMs, assigned with their unique identifiers.
      - |spid-icon| |cieid-icon|

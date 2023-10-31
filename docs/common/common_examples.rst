@@ -383,7 +383,7 @@ EN 1.4. Entity Configuration Response Trust Anchor
              "federation_trust_mark_status_endpoint": "https://registry.agid.gov.it/trust_mark_status/"
          }
      },
-     "trust_marks_issuers": {
+     "trust_mark_issuers": {
          "https://registry.agid.gov.it/openid_relying_party/public/": [
              "https://registry.spid.agid.gov.it/",
              "https://public.intermediary.spid.it/"

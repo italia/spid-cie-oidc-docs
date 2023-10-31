@@ -71,7 +71,7 @@ by the SA towards the RP and through validating the Entity Configuration of the 
 defined by the value **max_path_length**, is exceeded, the OP stops the process of Federation Entity Discovery and rejects the RP request.
 
 
-.. [1] The Federation Trust Marks are configured in the claim **trust_marks_issuers** and contained in the Entity Configuration of the Trust Anchor.
+.. [1] The Federation Trust Marks are configured in the claim **trust_mark_issuers** and contained in the Entity Configuration of the Trust Anchor.
 
 .. [2] An RP can expose more than one superior Entity inside its own claim **authority_hints**. An example is an RP that takes part both in the SPID and in the CIE Federation. Besides, an RP can result as a subordinate of more than one Intermediates, either of SPID or CIE.
 

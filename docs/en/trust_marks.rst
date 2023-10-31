@@ -14,23 +14,23 @@ Typical examples include the Entity's national or international identification c
 by the issuing subject.
 
 During the registration process of a new Leaf Entity (onboarding), the TMs are issued and signed by the TA
-or its Intermediates (SA) or by Attribute Authorities (AA), if they are defined inside the attribute **trust_marks_issuers**, published inside the TA's Entity Configuration.
+or its Intermediates (SA) or by Attribute Authorities (AA), if they are defined inside the attribute **trust_mark_issuers**, published inside the TA's Entity Configuration.
 
 Each member Entity MUST expose, in its own configuration (EC), the TMs released by the issuing authorities.
 
 In the CIE / SPID scenario, a TM is signed by the TA **MinInterno** / **Agid** or their Intermediates (SA) or by Attribute Authorities (AA).
 
 The TA defines the subjects who are enabled to issue TMs that are recognizable inside the Federation,
-and this is done by the claim **trust_marks_issuers**, contained in its own Entity Configuration. 
-The value of the claim **trust_marks_issuers** is composed by a JSON Object having as keys the TM identifiers, and as values the list of identifiers (URLs) or the Entities who are enabled to issue them.
+and this is done by the claim **trust_mark_issuers**, contained in its own Entity Configuration. 
+The value of the claim **trust_mark_issuers** is composed by a JSON Object having as keys the TM identifiers, and as values the list of identifiers (URLs) or the Entities who are enabled to issue them.
 
-In the following, a non-normative example of the object **trust_marks_issuers** inside the TA's Entity Configuration.
+In the following, a non-normative example of the object **trust_mark_issuers** inside the TA's Entity Configuration.
 
 
 .. code-block:: json
 
  {
-     "trust_marks_issuers":{
+     "trust_mark_issuers":{
          "https://registry.agid.gov.it/openid_relying_party/public/":[
              "https://registry.spid.agid.gov.it/",
              "https://public.intermediate.spid.it/"
@@ -48,8 +48,8 @@ In the CIE / SPID scenario, a TM is signed by the TA **MinInterno** / **Agid** o
 Attribute Authorities (AA).
 
 The TA defines the subjects that are enabled to issue TMs that are recognizable inside the Federation,
-and it does it with the claim **trust_marks_issuers**, that is present in its Entity Configuration. 
-The value of the attribute **trust_marks_issuers** is composed by a JSON Object whose keys are the TM identifiers and whose values are the list of the identifiers (URLs) of the Entities enabled 
+and it does it with the claim **trust_mark_issuers**, that is present in its Entity Configuration. 
+The value of the attribute **trust_mark_issuers** is composed by a JSON Object whose keys are the TM identifiers and whose values are the list of the identifiers (URLs) of the Entities enabled 
 to issue them.
 
 The Trust Marks represent the first filter for establishing the trust among the parties. 
