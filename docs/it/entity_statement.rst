@@ -80,44 +80,67 @@ Di seguito vengono riportati i claim che DEVONO essere considerati nel parametro
     - **Operazioni** / **Valori**
     - **Supportato da**
   * - **jwks**
-    - Operazioni: *subset_of* |br|
-      Valori: DEVE contenere i JWKS del RP relativi alle operazioni di Core
+    - Operazioni: *value* |br|
+      Valori: DEVE contenere i JWKS del RP relativi alle operazioni di Core |br|
+      *essential = true*
     - |spid-icon| |cieid-icon|
   * - **grant_types**
-    - Operazioni: *subset_of* |br|
-      Valori: DEVE essere *authorization_code* e *refresh_token*
+    - Operazioni: *subset_of*, *super_set* |br|
+      Valori: DEVE contenere *authorization_code* e *refresh_token* |br|
+      *essential = true*
     - |spid-icon| |cieid-icon|
   * - **id_token_signed_response_alg**
-    - Operazioni: *subset_of* |br|
-      Valori: DEVE contenere gli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>`
+    - Operazioni: *one_of* |br|
+      Valori: DEVE contenere uno degli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>` |br|
+      *essential = true*
     - |spid-icon| |cieid-icon|
   * - **id_token_encrypted_response_alg**
-    - Operazioni: *subset_of* |br|
-      Valori: DEVE contenere gli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>`
+    - Operazioni: *one_of* |br|
+      Valori: DEVE contenere uno degli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>` |br|
+      *essential = false*
     - |cieid-icon|
   * - **id_token_encrypted_response_enc**
-    - Operazioni: *subset_of* |br|
-      Valori: DEVE contenere gli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>`
+    - Operazioni: *one_of* |br|
+      Valori: DEVE contenere uno degli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>` |br|
+      *essential = false*
     - |cieid-icon|
   * - **userinfo_signed_response_alg**
-    - Operazioni: *subset_of* |br|
-      Valori: DEVE contenere gli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>`
+    - Operazioni: *one_of* |br|
+      Valori: DEVE contenere uno degli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>` |br|
+      *essential = true*
     - |spid-icon| |cieid-icon|
   * - **userinfo_encrypted_response_alg**
-    - Operazioni: *subset_of* |br|
-      Valori: DEVE contenere gli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>`
+    - Operazioni: *one_of* |br|
+      Valori: DEVE contenere uno degli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>` |br|
+      *essential = true*
     - |spid-icon| |cieid-icon|
   * - **userinfo_encrypted_response_enc**
-    - Operazioni: *subset_of* |br|
-      Valori: DEVE contenere gli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>`
+    - Operazioni: *one_of* |br|
+      Valori: DEVE contenere uno degli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>` |br|
+      *essential = true*
     - |spid-icon| |cieid-icon|
   * - **token_endpoint_auth_method**
     - Operazioni: *one_of* |br|
-      Valori: DEVE essere *private_key_jwt*
+      Valori: DEVE essere *private_key_jwt* |br|
+      *essential = true*
     - |spid-icon| |cieid-icon|
   * - **client_registration_types**
-    - Operazioni: *one_of* |br|
-      Valori: DEVE essere *automatic*
+    - Operazioni: *subset_of* |br|
+      Valori: DEVE essere *automatic* |br|
+      *essential = true*
+    - |spid-icon| |cieid-icon|
+  * - **redirect_uris**
+    - Operazioni: |br|
+      *essential = true*
+    - |spid-icon| |cieid-icon|
+  * - **client_id**
+    - Operazioni: |br|
+      *essential = true*
+    - |spid-icon| |cieid-icon|
+  * - **response_types**
+    - Operazioni: *value* |br|
+      Valori: DEVE essere *code* |br|
+      *essential = true*
     - |spid-icon| |cieid-icon|
   
 
@@ -136,40 +159,62 @@ Di seguito vengono riportati i claim che DEVONO essere considerati nel parametro
     - **Operazioni** / **Valori**
     - **Supportato da**
   * - **grant_types**
-    - Operazioni: *subset_of* |br|
-      Valori: DEVE essere *authorization_code* e *refresh_token*
+    - Operazioni: *subset_of*, *superset_of* |br|
+      Valori: DEVE contenere *authorization_code* e *refresh_token* |br|
+      *essential = true*
     - |spid-icon| |cieid-icon|
   * - **id_token_signed_response_alg**
-    - Operazioni: *subset_of* |br|
-      Valori: DEVE contenere gli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>`
+    - Operazioni: *one_of* |br|
+      Valori: DEVE contenere uno degli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>` |br|
+      *essential = true*
     - |spid-icon| |cieid-icon|
   * - **id_token_encrypted_response_alg**
-    - Operazioni: *subset_of* |br|
-      Valori: DEVE contenere gli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>`
+    - Operazioni: *one_of* |br|
+      Valori: DEVE contenere gli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>` |br|
+      *essential = false*
     - |cieid-icon|
   * - **id_token_encrypted_response_enc**
-    - Operazioni: *subset_of* |br|
-      Valori: DEVE contenere gli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>`
+    - Operazioni: *one_of* |br|
+      Valori: DEVE contenere uno degli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>` |br|
+      *essential = false*
     - |cieid-icon|
   * - **userinfo_signed_response_alg**
-    - Operazioni: *subset_of* |br|
-      Valori: DEVE contenere gli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>`
+    - Operazioni: *one_of* |br|
+      Valori: DEVE contenere uno degli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>` |br|
+      *essential = true*
     - |spid-icon| |cieid-icon|
   * - **userinfo_encrypted_response_alg**
-    - Operazioni: *subset_of* |br|
-      Valori: DEVE contenere gli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>`
+    - Operazioni: *one_of* |br|
+      Valori: DEVE contenere uno degli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>` |br|
+      *essential = true*
     - |spid-icon| |cieid-icon|
   * - **userinfo_encrypted_response_enc**
-    - Operazioni: *subset_of* |br|
-      Valori: DEVE contenere gli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>`
+    - Operazioni: *one_of* |br|
+      Valori: DEVE contenere uno degli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>` |br|
+      *essential = true*
     - |spid-icon| |cieid-icon|
   * - **token_endpoint_auth_method**
     - Operazioni: *one_of* |br|
-      Valori: DEVE essere *private_key_jwt*
+      Valori: DEVE essere *private_key_jwt* |br|
+      *essential = true*
     - |spid-icon| |cieid-icon|
   * - **client_registration_types**
-    - Operazioni: *one_of* |br|
-      Valori: DEVE essere *automatic*
+    - Operazioni: *subset_of* |br|
+      Valori: DEVE essere *automatic* |br|
+      *essential = true*
+    - |spid-icon| |cieid-icon|
+  * - **redirect_uris**
+    - Operazioni: |br|
+      *essential = true*
+    - |spid-icon| |cieid-icon|
+  * - **client_id**
+    - Operazioni: |br|
+      *essential = true*
+    - |spid-icon| |cieid-icon|
+  * - **response_types**
+    - Operazioni: *value* |br|
+      Valori: DEVE essere *code* |br|
+      *essential = true*
     - |spid-icon| |cieid-icon|
 
 
@@ -186,8 +231,9 @@ Di seguito vengono riportati i claim che DEVONO essere considerati nel parametro
     - **Operazioni** / **Valori**
     - **Supportato da**
   * - **jwks**
-    - Operazioni: *subset_of* |br|
-      Valori: DEVE contenere i JWKS del RP relativi alle operazioni di Core
+    - Operazioni: *value* |br|
+      Valori: DEVE contenere i JWKS del RP relativi alle operazioni di Core |br|
+      *essential = true*
     - |spid-icon| |cieid-icon|
 
 
@@ -204,96 +250,148 @@ Di seguito vengono riportati i claim che DEVONO essere considerati nel parametro
     - **Operazioni** / **Valori**
     - **Supportato da**
   * - **jwks**
-    - Operazioni: *subset_of* |br|
-      Valori: DEVE contenere i JWKS del OP relativi alle operazioni di Core
+    - Operazioni: *value* |br|
+      Valori: DEVE contenere i JWKS del OP relativi alle operazioni di Core |br|
+      *essential = true*
     - |spid-icon| |cieid-icon|
   * - **revocation_endpoint_auth_methods_supported**
-    - Operazioni: *one_of* |br|
-      Valori: DEVE essere *private_key_jwt*
+    - Operazioni: *subset_of* |br|
+      Valori: DEVE essere *private_key_jwt* |br|
+      *essential = true*
     - |spid-icon| |cieid-icon|
   * - **code_challenge_methods_supported**
     - Operazioni: *subset_of* |br|
-      Valori: DEVE essere *S256*
+      Valori: DEVE essere *S256* |br|
+      *essential = true*
     - |spid-icon| |cieid-icon|
   * - **scopes_supported**
-    - Operazioni: *subset_of* |br|
-      Valori: DEVE contenere *openid*, *offline_access*. Per CIE id PUÒ contenere anche *profile*, *email*.
+    - Operazioni: *subset_of*, *superset_of* |br|
+      Valori: DEVE contenere *openid*, *offline_access*. Per CIE id PUÒ contenere anche *profile*, *email*. |br|
+      *essential = true*
     - |spid-icon| |cieid-icon|
   * - **response_types_supported**
-    - Operazioni: *one_of* |br|
-      Valori: DEVE essere *code*.
+    - Operazioni: *subset_of* |br|
+      Valori: DEVE essere *code*. |br|
+      *essential = true*
     - |spid-icon| |cieid-icon|
   * - **response_modes_supported**
-    - Operazioni: *subset_of* |br|
-      Valori: DEVE essere *form_post*, *query*.
+    - Operazioni: *subset_of*, *superset_of* |br|
+      Valori: DEVE contenere *form_post*, *query*. |br|
+      *essential = true*
     - |spid-icon| |cieid-icon|
   * - **grant_types_supported**
-    - Operazioni: *subset_of* |br|
-      Valori: DEVE essere *refresh_token*, *authorization_code*.
+    - Operazioni: *subset_of*, *superset_of* |br|
+      Valori: DEVE contenere *refresh_token*, *authorization_code*. |br|
+      *essential = true*
     - |spid-icon| |cieid-icon|
   * - **acr_values_supported**
-    - Operazioni: *subset_of* |br|
-      Valori: DEVE essere |br| *https://www.spid.gov.it/SpidL1*, |br| *https://www.spid.gov.it/SpidL2*, |br| *https://www.spid.gov.it/SpidL3*.
+    - Operazioni: *subset_of*, *superset_of* |br|
+      Valori: DEVE contenere |br| *https://www.spid.gov.it/SpidL1*, |br| *https://www.spid.gov.it/SpidL2*, |br| *https://www.spid.gov.it/SpidL3*.  |br|
+      *essential = true*
     - |spid-icon| |cieid-icon|
   * - **subject_types_supported**
-    - Operazioni: *one_of* |br|
-      Valori: DEVE essere *pairwise*.
+    - Operazioni: *subset_of* |br|
+      Valori: DEVE essere *pairwise*. |br|
+      *essential = true*
     - |spid-icon| |cieid-icon|
   * - **id_token_signing_alg_values_supported**
-    - Operazioni: *subset_of* |br|
-      Valori: DEVE contenere gli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>`
+    - Operazioni: *subset_of*, *superset_of* |br|
+      Valori: DEVE contenere gli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>` |br|
+      *essential = true*
     - |spid-icon| |cieid-icon|
   * - **id_token_encryption_alg_values_supported**
-    - Operazioni: *subset_of* |br|
-      Valori: DEVE contenere gli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>`
-    - |spid-icon| |cieid-icon|
+    - Operazioni: *subset_of*, *superset_of* |br|
+      Valori: DEVE contenere gli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>` |br|
+      *essential = true*
+    - |cieid-icon|
   * - **id_token_encryption_enc_values_supported**
-    - Operazioni: *subset_of* |br|
-      Valori: DEVE contenere gli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>`
-    - |spid-icon| |cieid-icon|
+    - Operazioni: *subset_of*, *superset_of* |br|
+      Valori: DEVE contenere gli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>` |br|
+      *essential = true*
+    - |cieid-icon|
   * - **userinfo_signing_alg_values_supported**
-    - Operazioni: *subset_of* |br|
-      Valori: DEVE contenere gli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>`
+    - Operazioni: *subset_of*, *superset_of* |br|
+      Valori: DEVE contenere gli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>` |br|
+      *essential = true*
     - |spid-icon| |cieid-icon|
   * - **userinfo_encryption_alg_values_supported**
-    - Operazioni: *subset_of* |br|
-      Valori: DEVE contenere gli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>`
+    - Operazioni: *subset_of*, *superset_of* |br|
+      Valori: DEVE contenere gli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>` |br|
+      *essential = true*
     - |spid-icon| |cieid-icon|
   * - **userinfo_encryption_enc_values_supported**
-    - Operazioni: *subset_of* |br|
-      Valori: DEVE contenere gli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>`
+    - Operazioni: *subset_of*, *superset_of* |br|
+      Valori: DEVE contenere gli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>` |br|
+      *essential = true*
     - |spid-icon| |cieid-icon|
   * - **token_endpoint_auth_methods_supported**
-    - Operazioni: *one_of* |br|
-      Valori: DEVE essere *private_key_jwt*
+    - Operazioni: *subset_of* |br|
+      Valori: DEVE essere *private_key_jwt* |br|
+      *essential = true*
     - |spid-icon| |cieid-icon|
   * - **token_endpoint_auth_signing_alg_values_supported**
-    - Operazioni: *subset_of* |br|
-      Valori: DEVE contenere gli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>`
+    - Operazioni: *subset_of*, *superset_of* |br|
+      Valori: DEVE contenere gli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>` |br|
+      *essential = true*
     - |spid-icon| |cieid-icon|
   * - **claims_parameter_supported**
-    - Operazioni: *one_of* |br|
-      Valori: DEVE essere *true*
+    - Operazioni: *value* |br|
+      Valori: DEVE essere *true* |br|
+      *essential = true*
     - |spid-icon| |cieid-icon|
   * - **request_parameter_supported**
-    - Operazioni: *one_of* |br|
-      Valori: DEVE essere *true*
+    - Operazioni: *value* |br|
+      Valori: DEVE essere *true* |br|
+      *essential = true*
     - |spid-icon| |cieid-icon|
   * - **authorization_response_iss_parameter_supported**
-    - Operazioni: *one_of* |br|
-      Valori: DEVE essere *true*
+    - Operazioni: *value* |br|
+      Valori: DEVE essere *true* |br|
+      *essential = true*
     - |spid-icon| |cieid-icon|
   * - **client_registration_types_supported**
-    - Operazioni: *one_of* |br|
-      Valori: DEVE essere *automatic*
+    - Operazioni: *subset_of* |br|
+      Valori: DEVE essere *automatic* |br|
+      *essential = true*
     - |spid-icon| |cieid-icon|
   * - **request_authentication_methods_supported**
-    - Operazioni: *one_of* |br|
-      Valori: DEVE essere *request_object*
+    - Operazioni: *value* |br|
+      Valori: DEVE essere *request_object* |br|
+      *essential = true*
     - |spid-icon| |cieid-icon|
   * - **request_authentication_signing_alg_values_supported**
-    - Operazioni: *subset_of* |br|
-      Valori: DEVE contenere gli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>`
+    - Operazioni: *subset_of*, *superset_of* |br|
+      Valori: DEVE contenere gli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>` |br|
+      *essential = true*
+    - |spid-icon| |cieid-icon|
+  * - **request_object_signing_alg_values_supported**
+    - Operazioni: *subset_of*, *superset_of* |br|
+      Valori: DEVE contenere gli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>` |br|
+      *essential = true*
+    - |spid-icon| |cieid-icon|
+  * - **issuer**
+    - Operazioni: |br|
+      *essential = true*
+    - |spid-icon| |cieid-icon|
+  * - **authorization_endpoint**
+    - Operazioni: |br|
+      *essential = true*
+    - |spid-icon| |cieid-icon|
+  * - **token_endpoint**
+    - Operazioni: |br|
+      *essential = true*
+    - |spid-icon| |cieid-icon|
+  * - **userinfo_endpoint**
+    - Operazioni: |br|
+      *essential = true*
+    - |spid-icon| |cieid-icon|
+  * - **introspection_endpoint**
+    - Operazioni: |br|
+      *essential = true*
+    - |spid-icon| |cieid-icon|
+  * - **revocation_endpoint**
+    - Operazioni: |br|
+      *essential = true*
     - |spid-icon| |cieid-icon|
 
 .. seealso:: 

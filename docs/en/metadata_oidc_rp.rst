@@ -7,7 +7,7 @@ OpenID Connect Relying Party Metadata (RP)
 
 An RP MUST publish in its EC a Metadata of type *federation_entity* and a Metadata of type *openid_relying_party*, as reported in the following example:
 
-.. code-block:: json
+.. code-block:: 
 
  {
     "metadata":{
@@ -68,11 +68,14 @@ The RP Metadata of type **"openid_relying_party"** MUST contain at least the fol
   * - **jwks**
     - See `OpenID.Registration#ClientMetadata`_ and `JWK`_.
     - |spid-icon| |cieid-icon| 
+  * - **signed_jwks_uri**
+    - See `OIDC-FED`_.
+    - |spid-icon|
   * - **id_token_signed_response_alg**
     - See `OpenID.Registration#ClientMetadata`_. See signature :ref:`supported_algs`.
     - |spid-icon| |cieid-icon| 
   * - **id_token_encrypted_response_alg**
-    - See `OpenID.Registration#ClientMetadata`_. See key encryption :ref:`supported_algs`.
+    - OPTIONAL. If it is contained in the RP Metadata, the ID Token MUST be a nested signed and encrypted JWT. See `OpenID.Registration#ClientMetadata`_. See key encryption :ref:`supported_algs`.
     - |cieid-icon| 
   * - **id_token_encrypted_response_enc**
     - See `OpenID.Registration#ClientMetadata`_. This content encryption is required only if the *id_token_encrypted_response_alg* is given. See key encryption :ref:`supported_algs`.
@@ -102,4 +105,12 @@ The RP Metadata of type **"openid_relying_party"** MUST contain at least the fol
 .. note:: 
   The URIs contained in the claim **redirect_uris** MAY also use custom schemas (e.g. myapp://) 
   in order to support mobile applications.
+
+.. admonition:: |cieid-icon|
+
+  The RP Metadata **"openid_relying_party"** MUST use the **jwks** parameter.
+
+.. admonition:: |spid-icon|
+  
+  The RP Metadata **"openid_relying_party"** MUST use the **jwks** or **signed_jwks_uri**.
 

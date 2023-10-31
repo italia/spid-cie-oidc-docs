@@ -234,7 +234,7 @@ If the authentication is successful the OpenID Provider (OP) redirects the user 
 
 Authorization Response example:
 
-  .. code-block:: http
+  .. code-block:: 
 
     http://rp-test.it/oidc/rp/callback/?code=a032faf23d986353019ff8eda96cadce2ea1c368f04bf4c5e1759d559dda1c08056c7c4d4e8058cb002a0c8fa9a920272350aa102548523a8aff4ccdb44cb3fa&state=2Ujz3tbBHWQEL4XPFSJ5ANSjkhd7IlfC&iss=http%3A%2F%2Fop-test%2Foidc%2Fop%2F
 

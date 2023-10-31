@@ -29,3 +29,14 @@ In addition to the Federation endpoints reported before, the Entities of type **
    (For more details, see `OIDC-FED`_ Section 7.3).
 
 An Entity of type **AA**, in addition to the common Federation endpoints like all the Entities, MUST also include the **trust mark status endpoint** for allowing the dynamic validation of the TMs, released by the AA.
+
+.. admonition:: |cieid-icon|
+
+  Federation endpoint webpaths MUST be defined as follows:
+
+  - \*/.well-known/openid-federation
+  - \*/fetch 
+  - \*/resolve
+  - \*/trust_mark_status
+  - \*/list
+

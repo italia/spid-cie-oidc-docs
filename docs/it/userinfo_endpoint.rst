@@ -17,7 +17,7 @@ Request
   Lo UserInfo Endpoint DEVE supportare l'uso dei metodi HTTP GET e POST :rfc:`2616` e DEVE accettare e validare l'Access Token inviato all'interno del campo Authorization dell'Header, di tipo Bearer :rfc:`6750`. 
 
 
-.. code-block::  http
+.. code-block::  
 
   GET https://op.spid.agid.gov.it/userinfo
   Authorization: Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRCNjdnTDdja ...

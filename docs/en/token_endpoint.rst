@@ -93,7 +93,7 @@ The claims that MUST be included in the *Token Request* are given below.
      - |spid-icon| |cieid-icon|
    * - **client_assertion_type**
      - It must get the following value: |br|
-       **urn:ietf:params:oauth:client-assertion-type:jwtbearer**.
+       **urn:ietf:params:oauth:client-assertion-type:jwt-bearer**.
      - |spid-icon| |cieid-icon|
    * - **code**
      - Authorization code returned in the Authentication Response. Required only if **grant_type** is **authorization_code**.
@@ -174,7 +174,7 @@ UserInfo endpoint to get user attributes.
 
 **Access Token header and payload example:**
 
-.. code-block:: json
+.. code-block:: 
 
   {
     "alg": "RS256",
@@ -183,11 +183,9 @@ UserInfo endpoint to get user attributes.
   }
   .
   {
-    "iss":"https://op.spid.agid.gov.it/",
+    "iss":"https://op.spid.agid.gov.it",
     "sub": "9sd798asd98asui23hiuds89y798sfyg",
-    "aud": [
-    "https://rp.spid.example.it"
-    ],
+    "aud": "https://op.spid.agid.gov.it/userinfo",
     "client_id": "https://rp.spid.example.it",
     "scope": "openid",
     "jti": "9ea42af0-594c-4486-9602-8a1f8dde42d3",
@@ -213,7 +211,7 @@ UserInfo endpoint to get user attributes.
      - It MUST contain a HTTPS URL that uniquely identifies the RP. 
      - |spid-icon| |cieid-icon|
    * - **aud** 
-     - It MUST match the value *client_id*. The RP MUST verify that this value matches its client ID.
+     - It MUST contain a list of Resource Servers referring to token consuming party. It MUST contain at least the *UserInfo Endpoint*. 
      - |spid-icon| |cieid-icon|
    * - **scope** 
      - The OP SHOULD add the *scope* parameter as defined in :rfc:`9068` Section 2.2.3. It MUST match the value in the authentication request.
@@ -248,7 +246,7 @@ The claims available in the *ID Token* are given below.
 
 **Example of header and payload of an ID Token:**
 
-.. code-block:: json
+.. code-block:: 
 
 
   {
@@ -335,8 +333,11 @@ The *Refresh Token* MUST be a signed JWT containing at least the following param
   * - **iss** 
     - It MUST be an HTTPS URL that uniquely identifies the OP. The RP MUST verify that this value matches the called OP.
     - |spid-icon| |cieid-icon|
-  * - **aud** 
+  * - **client_id** 
     - It MUST match the value client_id. The RP MUST verify that this value matches its client ID.
+    - |spid-icon| |cieid-icon|
+  * - **aud** 
+    - It MUST contain the OP *Token Endpoint*.
     - |spid-icon| |cieid-icon|
   * - **iat** 
     - UNIX Timestamp with the time of JWT issuance, coded as NumericDate as indicated in :rfc:`7519`.

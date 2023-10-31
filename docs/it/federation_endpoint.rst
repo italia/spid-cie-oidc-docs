@@ -21,3 +21,15 @@ Le Entità di tipo **TA** o **SA** DEVONO offrire i seguenti endpoint, in aggiun
  - **entity listing endpoint**: fornisce la lista delle entità discendenti registrate presso il TA o un SA (per maggiori dettagli vedi `OIDC-FED`_ Section 7.3)
 
 Un'entità di tipo **AA**, oltre agli endpoint di Federazione comuni a tutte le entità, DEVE riportare anche il **trust mark status endpoint** per consentire la validazione dinamica dei TM rilasciati dall'AA.
+
+.. admonition:: |cieid-icon|
+
+  I webpath degli endpoint di Federazione DEVONO essere definiti nel modo seguente:
+
+  - \*/.well-known/openid-federation
+  - \*/fetch 
+  - \*/resolve
+  - \*/trust_mark_status
+  - \*/list
+
+

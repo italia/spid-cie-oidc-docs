@@ -516,7 +516,7 @@ Where the $JWT payload is:
 EN 2. Entity Statement Request
 ++++++++++++++++++++++++++++++
 
-.. code-block:: http
+.. code-block:: 
 
  GET /fetch?sub=https://rp.example.it/
  HTTP/1.1
@@ -589,7 +589,7 @@ EN 2.1 Entity Statement Response
 EN 3. Entity List Request
 +++++++++++++++++++++++++
 
-.. code-block:: http
+.. code-block:: 
 
  GET /list?entity_type=openid_provider
  HTTP/1.1
@@ -602,7 +602,7 @@ EN 3. Entity List Request
 EN 3.1. Entity List Response
 ++++++++++++++++++++++++++++
 
-.. code-block:: http
+.. code-block:: 
 
  HTTP/1.1 200 OK
  Last-Modified: Wed, 22 Jul 2018 19:15:56 GMT
@@ -615,7 +615,7 @@ EN 3.1. Entity List Response
 EN 4. Resolve Entity Statement Endpoint Request
 +++++++++++++++++++++++++++++++++++++++++++++++
 
-.. code-block:: http
+.. code-block:: 
 
  GET /resolve/?sub=https://openid.provider.it/&anchor=https://registry.agid.gov.it/
  HTTP/1.1
@@ -722,7 +722,7 @@ EN 6. Authorization Request
 
 **Example (HTTP request):**
 
-.. code-block:: http
+.. code-block:: 
 
   GET /auth?client_id=https://rp.spid.agid.gov.it&
   response_type=code&scope=openid& code_challenge=qWJlMe0xdbXrKxTm72EpH659bUxAxw80&
@@ -800,42 +800,111 @@ The following example shows a Metadata policy in the Entity Statement provided b
     "metadata_policy": {
         "openid_relying_party": {
             "jwks": {
-              "keys": [{
-                "subset_of": [{
-                    "kty": "RSA",
-                    "use": "sig",
-                    "n": "…",
-                    "e": "AQAB",
-                    "kid": "5NNNoFS3YnC9tjiCaivhWLVUJ3AxwGGz_98uRFaqMEEs"
-                }]
-              }]
+                "value": {
+                    "keys": [
+                        {
+                            "kty": "RSA",
+                            "e": "AQAB",
+                            "use": "sig",
+                            "kid": "....",
+                            "n": "....."
+                        },
+                        {
+                            "kty": "RSA",
+                            "e": "AQAB",
+                            "use": "enc",
+                            "kid": "....",
+                            "n": "....."
+                        }
+                    ]
             },
             "grant_types": {
-                "subset_of": ["authorization_code", "refresh_token"]
+                "subset_of": [
+                    "authorization_code",
+                    "refresh_token"
+                ],
+                "superset_of": [
+                    "authorization_code"
+                ]
             },
             "id_token_signed_response_alg": {
-                "one_of": ["RS256", "RS512", "ES256", "ES512", "PS256", "PS512"]
+                "one_of": [
+                    "RS256",
+                    "RS512",
+                    "ES256",
+                    "ES512",
+                    "PS256",
+                    "PS512"
+                ],
+                "essential": true
             },
             "id_token_encrypted_response_alg": {
-                "one_of": ["RSA-OAEP", "RSA-OAEP-256", "ECDH-ES", "ECDH-ES+A128KW", "ECDH-ES+A256KW"]
+                "one_of": [
+                    "RSA-OAEP",
+                    "RSA-OAEP-256",
+                    "ECDH-ES",
+                    "ECDH-ES+A128KW",
+                    "ECDH-ES+A256KW"
+                ],
+                "essential": false
             },
             "id_token_encrypted_response_enc": {
-                "one_of": ["A128CBC-HS256", "A256CBC-HS512"]
+                "one_of": [
+                    "A128CBC-HS256",
+                    "A256CBC-HS512"
+                ],
+                "essential": false
             },
             "userinfo_signed_response_alg": {
-                "one_of": ["RS256", "RS512", "ES256", "ES512", "PS256", "PS512"]
+                "one_of": [
+                    "RS256",
+                    "RS512",
+                    "ES256",
+                    "ES512",
+                    "PS256",
+                    "PS512"
+                ],
+                "essential": true
             },
             "userinfo_encrypted_response_alg": {
-                "one_of": ["RSA-OAEP", "RSA-OAEP-256", "ECDH-ES", "ECDH-ES+A128KW", "ECDH-ES+A256KW"]
+                "one_of": [
+                    "RSA-OAEP",
+                    "RSA-OAEP-256",
+                    "ECDH-ES",
+                    "ECDH-ES+A128KW",
+                    "ECDH-ES+A256KW"
+                ],
+                "essential": true
             },
             "userinfo_encrypted_response_enc": {
-                "one_of": ["A128CBC-HS256", "A256CBC-HS512"]
+                "one_of": [
+                    "A128CBC-HS256",
+                    "A256CBC-HS512"
+                ],
+                "essential": true
             },
             "token_endpoint_auth_method": {
-                "one_of": ["private_key_jwt"]
+                "one_of": [
+                    "private_key_jwt"
+                ],
+                "essential": true
             },
             "client_registration_types": {
-                "one_of": ["automatic"]
+                "subset_of": [
+                    "automatic"
+                ],
+                "essential": true
+            },
+            "redirect_uris": {
+                "essential": true
+            },
+            "client_id": {
+                "essential": true
+            },
+            "response_types": {
+                "value": [
+                    "code"
+                ]
             }
         }
     }
@@ -847,31 +916,92 @@ The following example shows a Metadata policy in the Entity Statement provided b
     "metadata_policy": {
         "openid_relying_party": {
             "grant_types": {
-                "subset_of": ["authorization_code", "refresh_token"]
-            }
+                "subset_of": [
+                    "authorization_code",
+                    "refresh_token"
+                ],
+                "superset_of": [
+                    "authorization_code"
+                ]
+            },
             "id_token_signed_response_alg": {
-                "one_of": ["RS256", "RS512", "ES256", "ES512", "PS256", "PS512"]
+                "one_of": [
+                    "RS256",
+                    "RS512",
+                    "ES256",
+                    "ES512",
+                    "PS256",
+                    "PS512"
+                ],
+                "essential": true
             },
             "id_token_encrypted_response_alg": {
-                "one_of": ["RSA-OAEP", "RSA-OAEP-256", "ECDH-ES", "ECDH-ES+A128KW", "ECDH-ES+A256KW"]
+                "one_of": [
+                    "RSA-OAEP",
+                    "RSA-OAEP-256",
+                    "ECDH-ES",
+                    "ECDH-ES+A128KW",
+                    "ECDH-ES+A256KW"
+                ],
+                "essential": false
             },
             "id_token_encrypted_response_enc": {
-                "one_of": ["A128CBC-HS256", "A256CBC-HS512"]
+                "one_of": [
+                    "A128CBC-HS256",
+                    "A256CBC-HS512"
+                ],
+                "essential": false
             },
             "userinfo_signed_response_alg": {
-                "one_of": ["RS256", "RS512", "ES256", "ES512", "PS256", "PS512"]
+                "one_of": [
+                    "RS256",
+                    "RS512",
+                    "ES256",
+                    "ES512",
+                    "PS256",
+                    "PS512"
+                ],
+                "essential": true
             },
             "userinfo_encrypted_response_alg": {
-                "one_of": ["RSA-OAEP", "RSA-OAEP-256", "ECDH-ES", "ECDH-ES+A128KW", "ECDH-ES+A256KW"]
+                "one_of": [
+                    "RSA-OAEP",
+                    "RSA-OAEP-256",
+                    "ECDH-ES",
+                    "ECDH-ES+A128KW",
+                    "ECDH-ES+A256KW"
+                ],
+                "essential": true
             },
             "userinfo_encrypted_response_enc": {
-                "one_of": ["A128CBC-HS256", "A256CBC-HS512"]
+                "one_of": [
+                    "A128CBC-HS256",
+                    "A256CBC-HS512"
+                ],
+                "essential": true
             },
             "token_endpoint_auth_method": {
-                "one_of": ["private_key_jwt"]
+                "one_of": [
+                    "private_key_jwt"
+                ],
+                "essential": true
             },
             "client_registration_types": {
-                "one_of": ["automatic"]
+                "subset_of": [
+                    "automatic"
+                ],
+                "essential": true
+            },
+            "redirect_uris": {
+                "essential": true
+            },
+            "client_id": {
+                "essential": true
+            },
+            "response_types": {
+                "value": [
+                    "code"
+                ]
             }
         }
     }
@@ -884,14 +1014,24 @@ The following example shows a Metadata policy in the Entity Statement provided b
     "metadata_policy": {
         "openid_relying_party": {
             "jwks": {
-                "subset_of": [{
-                    "kty": "RSA",
-                    "use": "sig",
-                    "n": "…",
-                    "e": "AQAB",
-                    "kid": "5NNNoFS3YnC9tjiCaivhWLVUJ3AxwGGz_98uRFaqMEEs"
-                }]
-            }
+                "value": {
+                    "keys": [
+                        {
+                            "kty": "RSA",
+                            "e": "AQAB",
+                            "use": "sig",
+                            "kid": "....",
+                            "n": "....."
+                        },
+                        {
+                            "kty": "RSA",
+                            "e": "AQAB",
+                            "use": "enc",
+                            "kid": "....",
+                            "n": "....."
+                        }
+                    ]
+            },
         }
     }
 
@@ -902,79 +1042,291 @@ The following example shows a Metadata policy in the Entity Statement provided b
     "metadata_policy": {
         "openid_relying_party": {
             "jwks": {
-                "subset_of": [{
-                    "kty": "RSA",
-                    "use": "sig",
-                    "n": "…",
-                    "e": "AQAB",
-                    "kid": "5NNNoFS3YnC9tjiCaivhWLVUJ3AxwGGz_98uRFaqMEEs"
-                }]
+                "value": {
+                    "keys": [
+                        {
+                            "kty": "RSA",
+                            "e": "AQAB",
+                            "use": "sig",
+                            "kid": "....",
+                            "n": "....."
+                        },
+                        {
+                            "kty": "RSA",
+                            "e": "AQAB",
+                            "use": "enc",
+                            "kid": "....",
+                            "n": "....."
+                        }
+                    ]
             },
             "revocation_endpoint_auth_methods_supported": {
-                "one_of": ["private_key_jwt"]
+                "subset_of": [
+                    "private_key_jwt"
+                ],
+                "essential": true
             },
             "code_challenge_methods_supported": {
-                "subset_of": ["authorization_code", "refresh_token"]
+                "subset_of": [
+                    "S256"
+                ],
+                "essential": true
             },
             "scopes_supported": {
-                "subset_of": ["openid", "offline_access", "profile", "email"]
+                "subset_of": [
+                    "openid",
+                    "offline_access",
+                    "profile",
+                    "email"
+                ],
+                "superset_of": [
+                    "openid",
+                    "offline_access"
+                ]
             },
             "response_types_supported": {
-                "one_of": ["code"]
+                "subset_of": [
+                    "code"
+                ],
+                "essential": true
             },
             "response_modes_supported": {
-                "subset_of": ["form_post", "query"]
+                "subset_of": [
+                    "form_post",
+                    "query"
+                ],
+                "superset_of": [
+                    "form_post",
+                    "query"
+                ],
+                "essential": true
             },
             "grant_types_supported": {
-                "subset_of": ["authorization_code", "refresh_token"]
+                "subset_of": [
+                    "authorization_code",
+                    "refresh_token"
+                ],
+                "superset_of": [
+                    "authorization_code",
+                    "refresh_token"
+                ],
+                "essential": true
             },
             "acr_values_supported": {
-                "subset_of": ["https://www.spid.gov.it/SpidL1", "https://www.spid.gov.it/SpidL2", "https://www.spid.gov.it/SpidL3"]
+                "subset_of": [
+                    "https://www.spid.gov.it/SpidL1",
+                    "https://www.spid.gov.it/SpidL2",
+                    "https://www.spid.gov.it/SpidL3"
+                ],
+                "superset_of": [
+                    "https://www.spid.gov.it/SpidL1",
+                    "https://www.spid.gov.it/SpidL2",
+                    "https://www.spid.gov.it/SpidL3"
+                ],
+                "essential": true
             },
             "subject_types_supported": {
-                "one_of": ["pairwise"]
+                "subset_of": [
+                    "pairwise"
+                ],
+                "essential": true
             },
             "id_token_signing_alg_values_supported": {
-                "one_of": ["RS256", "RS512", "ES256", "ES512", "PS256", "PS512"]
+                "subset_of": [
+                    "RS256",
+                    "RS512",
+                    "ES256",
+                    "ES512",
+                    "PS256",
+                    "PS512"
+                ],
+                "superset_of": [
+                    "RS256",
+                    "RS512",
+                    "ES256",
+                    "ES512",
+                    "PS256",
+                    "PS512"
+                ],
+                "essential": true
             },
             "id_token_encryption_alg_values_supported": {
-                "one_of": ["RSA-OAEP", "RSA-OAEP-256", "ECDH-ES", "ECDH-ES+A128KW", "ECDH-ES+A256KW"]
+                "subset_of": [
+                    "RSA-OAEP",
+                    "RSA-OAEP-256",
+                    "ECDH-ES",
+                    "ECDH-ES+A128KW",
+                    "ECDH-ES+A256KW"
+                ],
+                "superset_of": [
+                    "RSA-OAEP",
+                    "RSA-OAEP-256",
+                    "ECDH-ES",
+                    "ECDH-ES+A128KW",
+                    "ECDH-ES+A256KW"
+                ],
+                "essential": true
             },
             "id_token_encryption_enc_values_supported": {
-                "one_of": ["A128CBC-HS256", "A256CBC-HS512"]
+                "subset_of": [
+                    "A128CBC-HS256",
+                    "A256CBC-HS512"
+                ],
+                "superset_of": [
+                    "A128CBC-HS256",
+                    "A256CBC-HS512"
+                ],
+                "essential": true
             },
             "userinfo_signing_alg_values_supported": {
-                "one_of": ["RS256", "RS512", "ES256", "ES512", "PS256", "PS512"]
+                "subset_of": [
+                    "RS256",
+                    "RS512",
+                    "ES256",
+                    "ES512",
+                    "PS256",
+                    "PS512"
+                ],
+                "superset_of": [
+                    "RS256",
+                    "RS512",
+                    "ES256",
+                    "ES512",
+                    "PS256",
+                    "PS512"
+                ],
+                "essential": true
             },
             "userinfo_encryption_alg_values_supported": {
-                "one_of": ["RSA-OAEP", "RSA-OAEP-256", "ECDH-ES", "ECDH-ES+A128KW", "ECDH-ES+A256KW"]
+                "subset_of": [
+                    "RSA-OAEP",
+                    "RSA-OAEP-256",
+                    "ECDH-ES",
+                    "ECDH-ES+A128KW",
+                    "ECDH-ES+A256KW"
+                ],
+                "superset_of": [
+                    "RSA-OAEP",
+                    "RSA-OAEP-256",
+                    "ECDH-ES",
+                    "ECDH-ES+A128KW",
+                    "ECDH-ES+A256KW"
+                ],
+                "essential": true
             },
             "userinfo_encryption_enc_values_supported": {
-                "one_of": ["A128CBC-HS256", "A256CBC-HS512"]
+                "subset_of": [
+                    "A128CBC-HS256",
+                    "A256CBC-HS512"
+                ],
+                "superset_of": [
+                    "A128CBC-HS256",
+                    "A256CBC-HS512"
+                ],
+                "essential": true
             },
             "token_endpoint_auth_methods_supported": {
-                "one_of": ["private_key_jwt"]
+                "subset_of": [
+                    "private_key_jwt"
+                ],
+                "essential": true
             },
             "token_endpoint_auth_signing_alg_values_supported": {
-                "one_of": ["RS256", "RS512", "ES256", "ES512", "PS256", "PS512"]
+                "subset_of": [
+                    "RS256",
+                    "RS512",
+                    "ES256",
+                    "ES512",
+                    "PS256",
+                    "PS512"
+                ],
+                "superset_of": [
+                    "RS256",
+                    "RS512",
+                    "ES256",
+                    "ES512",
+                    "PS256",
+                    "PS512"
+                ],
+                "essential": true
             },
             "claims_parameter_supported": {
-                "one_of": ["true"]
+                "value": true
             },
             "request_parameter_supported": {
-                "one_of": ["true"]
+                "value": true
             },
             "authorization_response_iss_parameter_supported": {
-                "one_of": ["true"]
+                "value": true
             },
             "client_registration_types_supported": {
-                "one_of": ["automatic"]
+                "subset_of": [
+                    "automatic"
+                ],
+                "essential": true
             },
             "request_authentication_methods_supported": {
-                "one_of": ["request_object"]
+                "value": {
+                    "authorization_endpoint": [
+                        "request_object"
+                    ]
+                }
             },
             "request_authentication_signing_alg_values_supported": {
-                "subset_of": ["RS256", "RS512", "ES256", "ES512", "PS256", "PS512"]
+                "subset_of": [
+                    "RS256",
+                    "RS512",
+                    "ES256",
+                    "ES512",
+                    "PS256",
+                    "PS512"
+                ],
+                "superset_of": [
+                    "RS256",
+                    "RS512",
+                    "ES256",
+                    "ES512",
+                    "PS256",
+                    "PS512"
+                ],
+                "essential": true
+            },
+            "request_object_signing_alg_values_supported": {
+                "subset_of": [
+                    "RS256",
+                    "RS512",
+                    "ES256",
+                    "ES512",
+                    "PS256",
+                    "PS512"
+                ],
+                "superset_of": [
+                    "RS256",
+                    "RS512",
+                    "ES256",
+                    "ES512",
+                    "PS256",
+                    "PS512"
+                ],
+                "essential": true
+            },
+            "issuer": {
+                "essential": true
+            },
+            "authorization_endpoint": {
+                "essential": true
+            },
+            "token_endpoint": {
+                "essential": true
+            },
+            "userinfo_endpoint": {
+                "essential": true
+            },
+            "introspection_endpoint": {
+                "essential": true
+            },
+            "revocation_endpoint": {
+                "essential": true
             }
         }
     }

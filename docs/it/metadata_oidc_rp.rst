@@ -7,7 +7,7 @@ OpenID Connect Relying Party Metadata (RP)
 
 Un RP DEVE pubblicare all'interno del suo EC un Metadata di tipo *federation_entity* e uno di tipo *openid_relying_party* come riportato nel seguente esempio:
 
-.. code-block:: json
+.. code-block:: 
 
  {
     "metadata":{
@@ -69,11 +69,14 @@ Il Metadata di tipo **"openid_relying_party"** DEVE contenere almeno i seguenti 
   * - **jwks**
     - Vedi `OpenID.Registration#ClientMetadata`_ e `JWK`_.
     - |spid-icon| |cieid-icon| 
+  * - **signed_jwks_uri**
+    - Vedi `OIDC-FED`_.
+    - |spid-icon|
   * - **id_token_signed_response_alg**
     - Vedi `OpenID.Registration#ClientMetadata`_. Vedi signature :ref:`supported_algs`.
     - |spid-icon| |cieid-icon| 
   * - **id_token_encrypted_response_alg**
-    - Vedi `OpenID.Registration#ClientMetadata`_. Vedi key encryption :ref:`supported_algs`.
+    - OPZIONALE. Se presente, l'OP DEVE restituire l'ID Token firmato e cifrato. Vedi `OpenID.Registration#ClientMetadata`_. Vedi key encryption :ref:`supported_algs`.
     - |cieid-icon| 
   * - **id_token_encrypted_response_enc**
     - Vedi `OpenID.Registration#ClientMetadata`_. Obbligatorio solo nel caso sia presente anche il parametro *id_token_encrypted_response_alg*. Vedi content encryption :ref:`supported_algs`.
@@ -102,4 +105,12 @@ Il Metadata di tipo **"openid_relying_party"** DEVE contenere almeno i seguenti 
 
 .. note:: 
   Gli URI presenti nel parametro **redirect_uris** POSSONO anche usare eventuali schemi custom (ad es. myapp://) al fine di supportare applicazioni mobili.
+
+.. admonition:: |cieid-icon|
+  
+  Il Metadata **"openid_relying_party"** DEVE adottare il parametro **jwks**.
+
+.. admonition:: |spid-icon|
+
+  Il Metadata **"openid_relying_party"** DEVE adottare il parametro **jwks** o **signed_jwks_uri**.
 

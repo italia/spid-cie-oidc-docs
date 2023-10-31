@@ -31,7 +31,7 @@ Di seguito i claim che DEVONO essere inseriti nella *Token Request*.
 
 **Esempio di richiesta con authorization code (caso 1)**
 
-  .. code-block:: json
+  .. code-block:: 
 
     POST /token HTTP/1.1
     Host: https://op.spid.agid.gov.it
@@ -52,7 +52,7 @@ Di seguito i claim che DEVONO essere inseriti nella *Token Request*.
 
 **Esempio di richiesta con Refresh Token (caso 2):**
 
-  .. code-block:: json
+  .. code-block:: 
 
     POST /token HTTP/1.1
     Host: https://op.spid.agid.gov.it
@@ -93,7 +93,7 @@ Di seguito i claim che DEVONO essere inseriti nella *Token Request*.
      - |spid-icon| |cieid-icon|
    * - **client_assertion_type**
      - Deve assumere il seguente valore: |br|
-       **urn:ietf:params:oauth:client-assertion-type:jwtbearer**
+       **urn:ietf:params:oauth:client-assertion-type:jwt-bearer**
      - |spid-icon| |cieid-icon|
    * - **code**
      - Codice di autorizzazione restituito nell'Authentication response. Obbligatorio solo se **grant_type** è **authorization_code**
@@ -174,7 +174,7 @@ Di seguito i claim che compongono l'Access Token.
 
 **Esempio del contenuto di intestazione di payload di un Access Token:**
 
-.. code-block:: json
+.. code-block:: 
 
   {
     "alg": "RS256",
@@ -183,11 +183,9 @@ Di seguito i claim che compongono l'Access Token.
   }
   .
   {
-    "iss":"https://op.spid.agid.gov.it/",
+    "iss":"https://op.spid.agid.gov.it",
     "sub": "9sd798asd98asui23hiuds89y798sfyg",
-    "aud": [
-    "https://rp.spid.example.it"
-    ],
+    "aud": "https://op.spid.agid.gov.it/userinfo",
     "client_id": "https://rp.spid.example.it",
     "scope": "openid",
     "jti": "9ea42af0-594c-4486-9602-8a1f8dde42d3",
@@ -213,7 +211,7 @@ Di seguito i claim che compongono l'Access Token.
      - DEVE essere valorizzato con un HTTPS URL che identifica univocamente il RP.  
      - |spid-icon| |cieid-icon|
    * - **aud** 
-     - DEVE coincidere con il valore *client_id*. Il RP DEVE verificare che questo valore corrisponda al proprio client ID.
+     - DEVE contenere un elenco di Resource Server che consumano l'AT. DEVE contenere almeno lo *UserInfo Endpoint*.
      - |spid-icon| |cieid-icon|
    * - **scope** 
      - L'OP DOVREBBE inserire il parametro *scope* come previsto in :rfc:`9068` Sezione 2.2.3. DEVE coincidere con il valore presente in fase di richiesta di autenticazione.
@@ -243,7 +241,7 @@ Di seguito i claim disponibili nell'ID Token.
 
  **Esempio del contenuto di intestazione e di payload di un ID Token:**
 
-.. code-block:: json
+.. code-block:: 
 
   {
     "alg": "RS256",
@@ -327,8 +325,11 @@ Il *Refresh Token* DEVE essere rilasciato in formato JWT, firmato, e contenere a
    * - **iss** 
      - DEVE essere valorizzato con un HTTPS URL che identifica univocamente l'OP. Il RP DEVE verificare che questo valore corrisponda all'OP chiamato.
      - |spid-icon| |cieid-icon|
-   * - **aud** 
+   * - **client_id** 
      - DEVE coincidere con il valore *client_id*. Il RP DEVE verificare che questo valore corrisponda al proprio client ID.
+     - |spid-icon| |cieid-icon|
+   * - **aud** 
+     - DEVE contenere il *Token Endpoint* dell'OP.
      - |spid-icon| |cieid-icon|
    * - **iat** 
      - UNIX Timestamp con l'istante di generazione del JWT, codificato come NumericDate come indicato in :rfc:`7519`
