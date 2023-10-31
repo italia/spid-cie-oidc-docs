@@ -1,0 +1,1352 @@
+<!DOCTYPE html>
+<html lang="it" class="no-js" prefix="og: http://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SPID/CIE OIDC - Regole Tecniche version: latest documentazione | Come contribuire</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css">
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css">
+
+  <!-- Relations -->
+  <link rel="index" title="Indice" href="index.html">
+  <link rel="top" title="SPID/CIE OIDC - Regole Tecniche version: latest documentazione" href="index.html">
+  <link rel="prev" title="Diventa fornitore di servizi" href="diventa_fornitore.html">
+
+  
+  
+  <!-- No Index - keep if out of docs.italia.it -->
+  
+  <meta name="robots" content="noindex, nofollow">
+  
+</head>
+
+<body class="docs-italia">
+  <script>
+	if (document.location.href.indexOf('?payload=') >= 0)
+		document.body.className += ' loading';
+</script>
+  <header class="container-fluid container-fluid--desktop px-0 header">
+  <nav class="navbar navbar-expand-lg primary-bg-a7 navbar-dark slim-header justify-content-start p-0 pl-lg-4 pr-lg-5">
+    <span class="navbar-brand ml-4"><a class="text-white" href="https://www.agid.gov.it">AGID</a> + <a class="text-white" href="https://teamdigitale.governo.it">Team Digitale</a></span>
+    <button class="navbar-toggler collapsed text-white px-2 py-0 mr-3"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation">
+    <span class="navbar__icon it-expand my-auto ml-1"></span></button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item px-lg-2 pl-3">
+          <a class="nav-link" href="http://pianotriennale-ict.italia.it">Piano Triennale</a>
+        </li>
+        <li role="separator" class="nav-item divider ml-lg-0 ml-3"></li>
+        <li class="nav-item nav-text px-lg-2 pl-3 d-lg-none ">
+          <span class="nav-text text-uppercase text-white">Le community</span>
+        </li>
+        <li class="nav-item px-lg-2 pl-3">
+          <a class="nav-link" href="https://developers.italia.it">Developers</a>
+        </li>
+        <li class="nav-item px-lg-2 pl-3">
+          <a class="nav-link" href="https://designers.italia.it">Designers</a>
+        </li>
+        <li role="separator" class="nav-item divider ml-lg-0 ml-3"></li>
+        <li class="nav-item nav-text px-lg-2 pl-3 d-lg-none ">
+          <span class="nav-text text-uppercase text-white">Gli strumenti</span>
+        </li>
+        <li class="nav-item px-lg-2 pl-3">
+          <a class="nav-link" href="https://forum.italia.it">Forum</a>
+        </li>
+        <li class="nav-item px-lg-2 pl-3 active">
+          <a class="nav-link" href="https://docs.italia.it">Docs</a>
+        </li>
+        <li class="nav-item px-lg-2 pl-3">
+          <a class="nav-link" href="https://github.com/italia">GitHub</a>
+        </li>
+      </ul>
+    </div>
+    
+    <div class="ml-auto">
+      
+    </div>
+  </nav>
+
+  <div class="row p-4 px-lg-5 m-0 bg-primary--dark align-items-center">
+    <div class="row w-100">
+      <div class="logo--header">
+        <a href="/" tabindex="-1" aria-hidden="true" class="d-block">
+          <svg class="svg--header align-bottom" xmlns="http://www.w3.org/2000/svg" height="78.187" width="97.387" viewBox="0 0 91.300002 73.300002"><g fill="#fff"><path d="M31.799 71.9V15.7h15.1V72h-15.1zM91.099 28.5h-13.8v23.1c0 2.3.1 3.8.2 4.8.1.9.5 1.7 1.2 2.4s1.8 1 3.3 1l8.6-.2.7 12c-5 1.1-8.9 1.7-11.5 1.7-6.8 0-11.4-1.5-13.8-4.6-2.5-3-3.7-8.6-3.7-16.8V0h15.1v15.6h13.8v12.9zM9.099 32.8c-2.6 0-4.8-.9-6.5-2.7s-2.6-4-2.6-6.6.9-4.8 2.5-6.6c1.7-1.8 3.9-2.6 6.5-2.6s4.8.9 6.5 2.7 2.5 4 2.5 6.7-.8 4.8-2.5 6.6c-1.6 1.6-3.7 2.5-6.4 2.5z"/></g></svg>
+        </a>
+      </div>
+      <div class="col pl-3 pl-sm-4">
+        <h1 class="h1--header mb-1">
+          <a href="/" class="site-title text-white">
+            Docs Italia
+            
+              <span class="badge badge-pill bg-primary--mid-dark align-middle">beta</span>
+            
+          </a>
+        </h1>
+        <h2 class="text-white mb-0 h2--header">Documenti pubblici, digitali.</h2>
+      </div>
+    </div>
+    <div class="row mt-4 w-100 docs__document-info">
+      <div class="col-md-6">
+        <i class="docs-icon-document docs__document-info__icon"></i>
+        <a href="index.html" class="text-white font-weight-normal">
+          SPID/CIE OIDC - Regole Tecniche version: latest documentazione
+        </a>
+      </div>
+      <div class="docs__document-info__ownership col-md-5 offset-md-1 mt-3 mt-md-0">
+        
+        <div class="w-100">
+          <i class="docs-icon-project docs__document-info__icon"></i>
+          <span class="docs__document-info__label ml-1">Progetto:</span>
+          <a href="/organizzazione-demo/progetto-demo" class="text-white font-weight-normal">
+            <u>Progetto demo</u>
+          </a>
+        </div>
+        
+        
+        <div class="w-100 mt-1">
+          <i class="docs-icon-publisher docs__document-info__icon"></i>
+          <span class="docs__document-info__label ml-1">Amministrazione:</span>
+          <a href="/organizzazione-demo/" class="text-white font-weight-normal">
+            <u>Organizzazione demo</u>
+          </a>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</header>
+<div class="doc-header container-fluid container-fluid--desktop bg-white">
+  <div class="row py-3 px-4 px-lg-5 align-items-center flex-nowrap justify-content-between">
+    <div class="col-auto d-md-none d-flex align-items-center order-1">
+      <a href="#" class="btn p-2" role="button" id="searchbox-toggle" data-toggle="collapse" data-target="#searchbox" aria-controls="searchbox" aria-expanded="false" aria-label="Toggle searchbox">
+        <span class="docs-icon-search d-inline-block">
+          <span class="sr-only">Cerca nel documento</span>
+        </span>
+      </a>
+    </div>
+    <div class="col-3 d-none d-md-flex pl-0">
+      
+  <div class="w-100" role="search">
+    <form class="mr-md-3" id="rtd-search-form" action="search.html" method="get">
+      <div class="input-group" role="search">
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+        <input type="text" class="p-2 text-grey form-control" style="" required="" id="cerca" name="q" placeholder="Cerca nel documento...">
+				<span class="input-group-append">
+					<button type="submit" class="btn btn-default text-primary px-3 py-2" role="search">
+            <span class="docs-icon-search d-block my-auto">
+							<span class="sr-only">Cerca nel documento</span>
+						</span>
+					</button>
+				</span>
+			</div>
+    </form>
+  </div>
+    </div>
+    <div class="col-auto d-flex align-items-center justify-content-center flex-md-grow-1 order-0 order-md-1 pl-0">
+      
+      <a href="#" role="button" class="btn p-2" data-toggle="modal" data-target="#document-info">
+        <span class="docs-icon-info"></span>
+        <span class="d-none d-md-inline align-middle">Informazioni</span>
+      </a>
+      
+    </div>
+    <div class="col-4 col-sm-auto d-flex flex-md-grow-1 align-items-center justify-content-center order-1">
+      <div id="rst-menu" class="px-2">
+        <div class="dropdown" id="version-list">
+            <button class="btn btn-primary dropdown-toggle badge badge-pill bg-primary text-nowrap px-3 py-2" type="button" id="dropdownVersionButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span class="current-version">bozza</span>
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownVersionButton">
+              <div class="version-list-wrapper"></div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-auto d-none d-md-flex flex-grow-1 align-items-center order-1">
+      <div class="document-actions d-flex flex-column flex-md-row justify-content-around w-100 p-2 p-md-0 text-blue">
+  <div class="dropdown p-3 px-md-2 py-md-0 d-flex flex-wrap">
+    <a class="btn dropdown-toggle p-2 flex-grow-1 text-left" href="#" id="downloads-dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <span class="docs-icon-download align-middle"></span>
+      <span class="align-middle">Scarica</span>
+    </a>
+    <div class="dropdown-menu w-100" aria-labelledby="downloads-dropdown" aria-disabled="false">
+      <div class="link-list-wrapper">
+        <ul class="link-list">
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  <div class="p-3 px-md-2 py-md-0">
+    <a href="#" role="button" class="btn p-2 disabled" aria-disabled="true">
+        <span class="docs-icon-github"></span>
+        <span class="align-middle">Sorgente</span>
+    </a>
+  </div>
+</div>
+    </div>
+    
+    <div class="col-auto pr-0 d-md-none d-flex align-items-center justify-content-end order-1">
+      <a href="#" role="button" class="btn py-2 px-0" data-toggle="modal" data-target="#document-actions">
+        <span class="docs-icon-more"></span>
+        <span class="sr-only">Azioni</span>
+      </a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="progress-container">
+      <div class="progress-bar" id="scrollprogressBar"></div>
+    </div>
+  </div>
+</div>
+
+	<!--
+  Forum Italia comments templates
+-->
+
+<script id="forum-italia-comments" type="text/template">
+  <div class="block-comments" id="accordion-comments-{{ topicId }}" data-topic="{{ topicId }}">
+    <!-- Top header -->
+    <div class="block-comments__header d-flex border-top border-bottom border-width-2 pt-3 pb-3 align-items-center justify-content-between">
+      <h6 class="col-auto text-uppercase mb-0">{{ commentsCount }} Commenti</h6>
+      <button class="col-auto block-comments__toggle-btn rounded-circle border border-medium-blue border-width-2 collapsed" data-toggle="collapse" data-target="#comments-{{ topicId }}" aria-expanded="false">
+        <span class="docs-icon-plus"></span>
+        <span class="docs-icon-minus"></span>
+      </button>
+    </div>
+  </div>
+  <div class="block-comments__body collapse" data-parent="#accordion-comments-{{ topicId }}" id="comments-{{ topicId }}">
+    <!-- Input row -->
+    <div class="d-flex align-items-center mb-4 block-comments__input">
+      <div class="box-comment {{ canPost }}" data-topic="{{ topicId }}"></div>
+    </div>
+    <div class="row">
+      <div class="block-comments__container col">
+        <div class="row mt-4">
+          <ul class="block-comments__list col items mb-0" id="accordion-comment-item" data-topic="{{ topicId }}"></ul>
+        </div>
+      </div>
+    </div>
+    <div class="block-comments__header d-flex border-bottom border-width-2 pt-3 pb-3 mb-4 align-items-center justify-content-end">
+      <button class="col-auto block-comments__toggle-btn rounded-circle border border-medium-blue border-width-2 collapsed" data-toggle="collapse" data-target="#comments-{{ topicId }}" aria-expanded="false">
+        <span class="docs-icon-plus"></span>
+        <span class="docs-icon-minus"></span>
+      </button>
+    </div>
+  </div>
+</script>
+
+<script id="forum-italia__comment" type="text/template">
+  <li id="comment-{{ post.id }}" class="row mb-4 block-comments__item {{ hidden }} {{ isNew }}"
+      data-topic="{{ post.topic_id }}" data-comment="{{ post.id }}">
+    <div id="reply-to-{{ post.id }}" class="block-comments__reply-anchor"></div>
+    <figure class="col-auto mb-0">
+      <img class="block-comments__img rounded-circle" src="{{ avatarUrl }}">
+    </figure>
+    <div class="col block-comments__content">
+      <div class="row align-items-center justify-content-between" id="comment-heading-1">
+        <div class="col-auto">
+          <span class="block-comments__name text-capitalize mb-0">{{ displayName }}</span>
+        </div>
+        <div class="col-auto">
+          <p class="d-inline-block mr-2 block-comments__date mb-0">{{ date }}</p>
+          <button class="block-comments__item-btn" data-toggle="collapse"
+                  data-target="#collapse-{{ post.id }}">
+            <i class="it-collapse"></i>
+            <i class="it-expand"></i>
+          </button>
+        </div>
+      </div>
+      <p class="text-uppercase block-comments__role">{{ publicUserField }}</p>
+      <div class="my-3">{{ replyLink }}</div>
+      <div id="collapse-{{ post.id }}" class="block-comments__paragraph pl-3 border-left collapse show"
+           aria-labelledby="comment-heading-1">
+        {{ post.cooked }}
+      </div>
+      <div class="block-comments__actions mb-2 mt-3">
+        {{ postActions }}
+      </div>
+    </div>
+  </li>
+</script>
+
+<script id="forum-italia__like-button" type="text/template">
+  <small>
+      <button id="{{ buttonAction }}-like-{{ post.id }}" type="button" class="btn btn-primary btn-sm mr-2 px-2 py-1">
+        {{ likeCount }}
+        <i class="it-favorite ml-1 mr-0"></i>
+      </button>
+      {{ likeDone }}
+    </small>
+</script>
+
+<script id="forum-italia__like-info" type="text/template">
+  <small>
+      <span id="like-{{ post.id }}" class="border rounded btn-sm mr-2 px-2 py-1">
+        {{ likeCount }}
+        <i class="it-favorite ml-1 mr-0"></i>
+      </span>
+      {{ likeDone }}
+    </small>
+</script>
+
+<script id="forum-italia__reply-link" type="text/template">
+  <div>
+    <small>In risposta al 
+      <a class="reply-to-post" href="#reply-to-{{ replyDest.id }}">
+        commento di {{ replyDest.name }}
+      </a>
+    </small>
+  </div>
+</script>
+
+<script id="forum__login" type="text/template">
+  <div class="box-comment__user-image box-comment__user-image--anon">
+    <i class="docs-icon-user"></i>
+  </div>
+  <div class="box-comment__login">
+    <div><button class="login-button btn-link p-0 border-0 align-baseline">Accedi al Forum</button> per commentare</div>
+  </div>
+</script>
+
+<script id="forum__comment" type="text/template">
+  <div class="form group">
+    <div class="box-comment__errors-box"></div>
+    <!-- Write -->
+    <div class="d-flex align-items-center mt-4 mb-4 block-comments__input box-comment__write">
+      <figure class="col-auto mb-0">
+        <img class="block-comments__img box-comment__figure rounded-circle" src="">
+          <figcaption>
+            <a href="#logout" class="block-comments__logout-link block-comments__logout-link--visible" data-toggle="modal" data-target="#logout-modal" title="Logout" alt="Logout">Logout</a>
+          </figcaption>
+      </figure>
+      <textarea class="form-control box-comment__body col ml-2 p-2" id="comments-input" placeholder="Scrivi qui un commento. Per formattare il testo puoi usare Markdown. Clicca sul bottone 'suggerimenti' per vedere alcuni esempi." rows="4"></textarea>
+    </div>
+    <!-- Buttons -->
+    <div class="box-comment__buttons">
+      <button type="button" class="btn btn-primary btn-sm box-comment__submit mr-2" disabled="true"><div>invia</div></button>
+      <button type="button" class="btn btn-sm btn-secondary new-comment__suggestions" data-container="body" data-toggle="popover" data-content="html">suggerimenti</button><span class="loading no-bg">&nbsp;</span>
+    </div>
+    <div class="box-comment__required">
+      <span>Scrivi almeno altri <span class="required-chars">20</span> caratteri</span>
+    </div>
+  </div>
+</script>
+
+<script id="forum-italia__missing_permission" type="text/template">
+	<div class="pl-2 block-comments__input missing_permission error error--{{ errorCode }} row">
+		<figure class="col-auto mb-0 mr-2">
+			<img class="block-comments__img new-comment__figure rounded-circle" src="">
+			<figcaption>
+				<a href="#logout" class="block-comments__logout-link block-comments__logout-link--visible" data-toggle="modal" data-target="#logout-modal" title="Logout" alt="Logout">Logout</a>
+			</figcaption>
+		</figure>
+
+		<div class="missing_permission__text col pt-2">{{ errorText }}</div>
+	</div>
+</script>
+
+<script id="forum__logout--modal" type="text/template">
+  <div class="modal logout-modal" id="logout-modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Logout</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Dopo il logout non sarà possibile scrivere nuovi commenti. Sicuro di voler procedere?</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal" id="logout-modal__submit">Conferma</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal" id="logout-modal__cancel">Annulla</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</script>
+
+<script id="forum-italia__markup__tooltip" type="text/template">
+  <div class="tooltip tooltip--active doc-tooltip box-comment__suggestions__tooltip" role="tooltip">
+    <div class="tooltip__wrap">
+      Markdown per la formattazione del testo:
+      <ul class="tooltip__content">
+        <li><b>Grassetto:</b> __testo__ (o **testo**)</li>
+        <li><i>Corsivo</i>: _testo_</li>
+        <li>Link: [Testo](http://example.com)</li>
+        <li>Citazione: &gt; Testo citazione</li>
+      </ul>
+    </div>
+  </div>
+</script>
+
+<script id="forum-italia__silenced" type="text/template">
+  <div class="error error__silenced">
+    Il tuo account è stato temporaneamente sospeso, scopri di più leggendo
+    <a href="{{ notificationsUrl }}" target="_blank">le tue notifiche</a> su Forum Italia.
+    <br>
+  </div>
+</script>
+
+<script id="forum-italia__closedTopic" type="text/template">
+  <div class="error error__closed">
+    Questa discussione è in sola lettura.
+    <br>
+  </div>
+</script>
+
+<script id="section_navigation__comments" type="text/template">
+  <li class="chapter-nav__item">
+      <span class="it-comment mr-2 align-middle"></span>
+      <a href="#forum-italia-comments-{{ topicId }}" class="chapter-link chapter-link--expand">
+          {{ postsCount }} commenti
+      </a>
+  </li>
+</script>
+
+
+<!--
+  markup_modifier templates
+-->
+
+<script id="markup_modifier__chapter-header" type="text/template"> <div class="chapter-header clearfix"><div class="title-wrap"> </script>
+
+<script id="markup_modifier__icon" type="text/template">
+	<span class="docs-icon-{{ i }}"></span>
+</script>
+
+<script id="markup_modifier__note-action" type="text/template">
+	<div class='note-action'>
+		<button type='button' class='note-close-btn'>×</button>
+		<button type='button' class='note-back-btn'><i class='it-arrow-up'></i> {{ text }} </button>
+	</div>
+</script>
+
+<script id="markup_modifier__admonition" type="text/template">
+	<div class='admonition__toggle-wrap'>
+		<button type='button' class='admonition__toggle-btn'>
+			<span class='admonition__toggle-show-more'>
+				{{ more }} <span class='docs-icon-plus'></span>
+			</span>
+			<span class='admonition__toggle-show-less'>
+				{{ less }} <span class='docs-icon-minus'></span>
+			</span>
+		</button>
+	</div>
+</script>
+
+
+<!--
+  glossary_page templates
+-->
+
+<script id="glossary__btn" type="text/template">
+	<button class='glossary-page__btn collapsed border-top border-grey-light border-width-2 pt-3 pb-3' data-toggle='collapse' data-target='#glossary-{{ id }}' aria-expanded='true' aria-controls='glossary-{{ id }}'>
+		<span class='docs-icon-plus mr-3'> </span>
+		<span class='docs-icon-minus mr-3'> </span>
+		{{ text }}
+	</button>
+</script>
+
+<script id="glossary__copy-link" type="text/template">
+	<div class='glossary-page__copy-link-wrap mt-3'>
+		<i class='it-link mr-2 align-middle'></i>
+		<button type='button' class='glossary-page__copy-link'> {{ copyLink }} </button>
+	</div>
+</script>
+
+
+<!--
+  searchbox_collapse templates
+-->
+
+<script id="searchbox-collapse" type="text/template">
+	<div class="row p-2"><div class="col"></div></div>
+</script>
+
+
+<!--
+  section_navigation templates
+-->
+
+<script id="section_navigation__nav" type="text/template">
+    <div class="chapter-nav">
+        <div class="chapter-nav__wrap">
+            <ul class="chapter-nav__list chapter-nav__list--visible">
+                <li class="chapter-nav__item">
+                    <span class="it-more-items mr-2 align-middle"></span>
+                    <button type="button" data-toggle="modal"
+                        class="chapter-link chapter-link--expand">{{ seeActions }}</button>
+                </li>
+            </ul>
+            <div class="{{ modalClass }} chapter-nav__list--hidden" tabindex="-1" role="dialog"
+                     aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                <div class="{{ modalContainerClass }}">
+                    <div class="{{ modalContentClass }} chapter-nav__list-wrap">
+                        <div class="chapter-nav__title"> {{ title }} </div>
+                        <ul class="chapter-nav__list">
+                            <li class="chapter-nav__item">
+                                <i class="it-link mr-2 align-middle"></i>
+                                <button type="button" class="chapter-link">{{ copyLink }}</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+
+
+<!--
+  tooltip templates
+-->
+
+<script id="tooltip__main" type="text/template">
+	<div class='tooltip tooltip--active doc-tooltip' role='tooltip'>
+		<div class='tooltip__wrap'>
+			<button type='button' role='button' class='tooltip__close-btn' data-ref="{{ item.ref }}"></button>
+			<h2 class='tooltip__title'>{{ item.title }}</h2>
+			<p class='tooltip__content'>{{ item.body }}</p>
+		</div>
+	</div>
+</script>
+
+<script id="tooltip__glossary" type="text/template">
+	<div class='tooltip tooltip--active doc-tooltip' role='tooltip'>
+		<div class='tooltip__wrap'>
+			<button type='button' role='button' class='tooltip__close-btn' data-ref="{{ item.ref }}"></button>
+			<h2 class='tooltip__title'>{{ item.title }}</h2>
+			<p class='tooltip__content'>{{ trimmedSummary }}</p> {{ btnToGlossary }}
+		</div>
+	</div>
+</script>
+
+<script id="tooltip__note" type="text/template">
+	<div class='tooltip tooltip--active doc-tooltip doc-tooltip--note' role='tooltip'>
+		<div class='tooltip__wrap'>
+			<button type='button' role='button' class='tooltip__close-btn' data-ref="{{ item.ref }}"></button>
+			<h2 class='tooltip__title'>{{ item.title }}</h2>
+			<p class='tooltip__content'> {{ item.body }}</p>
+		</div>
+	</div>
+</script>
+
+
+  <div id="main" role="document">
+    <div class="container-fluid container-fluid--desktop main-container">
+      <div class="row">
+        <nav class="col--nav">
+          <section class="docs-menu">
+  <div id="desktop-menu" class="sidebar-nav">
+    <a class=""
+      aria-controls="desktop-menu" aria-label="esci dalla navigazione" title="esci dalla navigazione" href="#">
+      <span class="" aria-hidden="true"></span>
+    </a>
+
+    <button data-toggle="collapse" data-target="#content-index" aria-expanded="true" class="sidebar-btn p-3 sidebar-btn--desktop" type="button" aria-controls="content-index">
+      indice dei contenuti
+      <span class="it-collapse float-right"></span>
+      <span class="it-expand float-right"></span>
+    </button>
+    <div id="content-index" class="content-index--menu sidebar-list--wrapper sidebar-accordion-content collapse show">
+      <ul class="">
+        <li class="toctree-l1 ">
+          <a href='index.html'>Sommario</a>
+        </li>
+      </ul>
+      
+      <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="standards.html">Riferimenti</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="standards.html#technical-references">Technical references</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="standards.html#normativa-nazionale-ed-europea">Normativa Nazionale ed Europea</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="standards.html#riferimenti-normativi-spid">Riferimenti normativi  SPID</a></li>
+<li class="toctree-l2"><a class="reference internal" href="standards.html#riferimenti-normativi-cie-id">Riferimenti normativi CIE id</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="termini_acronimi.html">Termini e Acronimi</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="termini_acronimi.html#termini">Termini</a></li>
+<li class="toctree-l2"><a class="reference internal" href="termini_acronimi.html#acronimi">Acronimi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="termini_acronimi.html#convenzioni-e-termini-normativi">Convenzioni e Termini normativi</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="la_federazione_delle_identita.html">Le Federazioni eID Italiane</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="la_federazione_delle_identita.html#openid-connect-federation">OpenID Connect Federation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="la_federazione_delle_identita.html#configurazione-della-federazione">Configurazione della Federazione</a></li>
+<li class="toctree-l2"><a class="reference internal" href="la_federazione_delle_identita.html#modalita-di-partecipazione">Modalità di partecipazione</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="entity_configuration.html">Entity Configuration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="entity_configuration.html#firma-della-entity-configuration">Firma della Entity Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="entity_configuration.html#entity-configuration-claim-comuni">Entity Configuration - claim comuni</a></li>
+<li class="toctree-l2"><a class="reference internal" href="entity_configuration.html#entity-configuration-foglia-e-intermediari">Entity Configuration Foglia e intermediari</a></li>
+<li class="toctree-l2"><a class="reference internal" href="entity_configuration.html#entity-configuration-trust-anchor">Entity Configuration Trust Anchor</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="entity_statement.html">Entity Statement</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="entity_statement.html#firma-di-entity-statement">Firma di Entity Statement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="entity_statement.html#id2">Entity Statement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="entity_statement.html#metadata-policy">Metadata Policy</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="trust_marks.html">Trust Mark</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="trust_marks.html#federation-entity-trust-mark">federation_entity Trust Mark</a></li>
+<li class="toctree-l2"><a class="reference internal" href="trust_marks.html#oauth-resource-trust-mark">oauth_resource  Trust Mark</a></li>
+<li class="toctree-l2"><a class="reference internal" href="trust_marks.html#validazione-dei-trust-mark">Validazione dei Trust Mark</a></li>
+<li class="toctree-l2"><a class="reference internal" href="trust_marks.html#revoca-dei-trust-mark">Revoca dei Trust Mark</a></li>
+<li class="toctree-l2"><a class="reference internal" href="trust_marks.html#composizione-dei-trust-mark">Composizione dei Trust Mark</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="soggetti_aggregatori.html">Soggetti Aggregatori</a></li>
+<li class="toctree-l1"><a class="reference internal" href="trust_negotiation.html">Acquisire i Metadata</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="trust_negotiation.html#relying-party">Relying Party</a></li>
+<li class="toctree-l2"><a class="reference internal" href="trust_negotiation.html#openid-provider">OpenID Provider</a></li>
+<li class="toctree-l2"><a class="reference internal" href="trust_negotiation.html#accesso-alla-entity-configuration">Accesso alla Entity Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="federation_endpoint.html">Endpoint di Federazione</a></li>
+<li class="toctree-l1"><a class="reference internal" href="errors_federation.html">Gestione degli errori di federazione</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="errors_federation.html#codici-di-errore-di-federation">Codici di errore di Federation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="metadata_oidc.html">Metadata</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="metadata_oidc_op.html">OpenID Connect Provider Metadata (OP)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="metadata_oidc_rp.html">OpenID Connect Relying Party Metadata (RP)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="metadata_oidc_ta_sa.html">Metadata di Trust Anchor (TA) e Intermediari (SA)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="metadata_aa.html">Metadata Attribute Authority</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="flusso_autenticazione.html">Flusso di autenticazione</a></li>
+<li class="toctree-l1"><a class="reference internal" href="authorization_endpoint.html">Authorization endpoint (Authentication)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="authorization_endpoint.html#request">Request</a></li>
+<li class="toctree-l2"><a class="reference internal" href="authorization_endpoint.html#response">Response</a></li>
+<li class="toctree-l2"><a class="reference internal" href="authorization_endpoint.html#gestione-degli-errori">Gestione degli errori</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="token_endpoint.html">Token Endpoint</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="token_endpoint.html#request">Request</a></li>
+<li class="toctree-l2"><a class="reference internal" href="token_endpoint.html#response">Response</a></li>
+<li class="toctree-l2"><a class="reference internal" href="token_endpoint.html#access-token">Access Token</a></li>
+<li class="toctree-l2"><a class="reference internal" href="token_endpoint.html#id-token">ID Token</a></li>
+<li class="toctree-l2"><a class="reference internal" href="token_endpoint.html#refresh-token">Refresh Token</a></li>
+<li class="toctree-l2"><a class="reference internal" href="token_endpoint.html#codici-di-errore">Codici di errore</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="userinfo_endpoint.html">UserInfo Endpoint</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="userinfo_endpoint.html#request">Request</a></li>
+<li class="toctree-l2"><a class="reference internal" href="userinfo_endpoint.html#response">Response</a></li>
+<li class="toctree-l2"><a class="reference internal" href="userinfo_endpoint.html#codici-di-errore">Codici di errore</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="attributi_utente.html">Tabella attributi utente</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="attributi_utente.html#esempi">Esempi</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="introspection_endpoint.html">Introspection Endpoint (verifica validità token)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="introspection_endpoint.html#request">Request</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introspection_endpoint.html#response">Response</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introspection_endpoint.html#codici-di-errore">Codici di errore</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="revocation_endpoint.html">Revocation Endpoint</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="revocation_endpoint.html#request">Request</a></li>
+<li class="toctree-l2"><a class="reference internal" href="revocation_endpoint.html#response">Response</a></li>
+<li class="toctree-l2"><a class="reference internal" href="revocation_endpoint.html#codici-di-errore">Codici di errore</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="logout.html">Logout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cryptographic_algos.html">Algoritmi crittografici</a></li>
+<li class="toctree-l1"><a class="reference internal" href="log_management.html">Retention Policy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="log_management.html#gestione-dei-log-di-un-op-e-di-un-rp">Gestione dei Log di un OP e di un RP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="log_management.html#registro-storico-delle-chiavi-pubbliche-di-federazione">Registro storico delle chiavi pubbliche di Federazione</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="differenze_spid_cie.html">Differenze tra SPID e CIE id</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="differenze_spid_cie.html#metadata">Metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="differenze_spid_cie.html#authorization-endpoint">Authorization Endpoint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="differenze_spid_cie.html#parametri-scope-e-claims">Parametri Scope e Claims</a></li>
+<li class="toctree-l2"><a class="reference internal" href="differenze_spid_cie.html#id-token">ID Token</a></li>
+<li class="toctree-l2"><a class="reference internal" href="differenze_spid_cie.html#refresh-token">Refresh Token</a></li>
+<li class="toctree-l2"><a class="reference internal" href="differenze_spid_cie.html#userinfo-endpoint">UserInfo Endpoint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="differenze_spid_cie.html#introspection-endpoint">Introspection Endpoint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="differenze_spid_cie.html#revocation-endpoint-e-logout">Revocation Endpoint e Logout</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="confronto_oidc_cie_e_oidc_igov.html">Differenze con OIDC iGov</a></li>
+<li class="toctree-l1"><a class="reference internal" href="differenze_oidc_fed.html">Differenze con OIDC Federation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="differenze_oidc_fed.html#client-registration">Client Registration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="differenze_oidc_fed.html#trust-mark">Trust Mark</a></li>
+<li class="toctree-l2"><a class="reference internal" href="differenze_oidc_fed.html#claim-non-supportati-negli-entity-statement">Claim non supportati negli Entity Statement</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="seccons_bcps.html">Considerazioni di Sicurezza</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="seccons_bcps.html#trust-mark-come-deterrente-contro-gli-abusi">Trust Mark come deterrente contro gli abusi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seccons_bcps.html#numero-massimo-di-authority-hints">Numero Massimo di authority_hints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seccons_bcps.html#resolve-endpoint">Resolve endpoint</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="seccons_bcps.html#buone-pratiche">Buone Pratiche</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="seccons_bcps.html#specializzare-le-chiavi-pubbliche-openid-core-e-federation">Specializzare le chiavi pubbliche OpenID Core e Federation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seccons_bcps.html#modalita-di-aggiornamento-dei-metadata-openid-core">Modalità di aggiornamento dei Metadata OpenID Core</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="esempi.html">Esempi</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="esempi.html#en-1-entity-configuration-request">EN 1. Entity Configuration Request</a></li>
+<li class="toctree-l2"><a class="reference internal" href="esempi.html#en-1-1-entity-configuration-response-relying-party">EN 1.1. Entity Configuration Response Relying Party</a></li>
+<li class="toctree-l2"><a class="reference internal" href="esempi.html#en-1-2-entity-configuration-response-openid-provider">EN 1.2. Entity Configuration Response Openid Provider</a></li>
+<li class="toctree-l2"><a class="reference internal" href="esempi.html#en-1-3-entity-configuration-response-intermediary">EN 1.3. Entity Configuration Response Intermediary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="esempi.html#en-1-4-entity-configuration-response-trust-anchor">EN 1.4. Entity Configuration Response Trust Anchor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="esempi.html#en-1-5-trust-mark-issued-by-ta-to-a-rp">EN 1.5. Trust Mark issued by TA to a RP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="esempi.html#en-1-6-trust-mark-issued-by-ta-to-a-sa">EN 1.6. Trust Mark issued by TA to a SA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="esempi.html#en-1-7-trust-mark-issued-by-sa-to-a-rp">EN 1.7. Trust Mark issued by SA to a RP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="esempi.html#en-2-entity-statement-request">EN 2. Entity Statement Request</a></li>
+<li class="toctree-l2"><a class="reference internal" href="esempi.html#en-2-1-entity-statement-response">EN 2.1 Entity Statement Response</a></li>
+<li class="toctree-l2"><a class="reference internal" href="esempi.html#en-3-entity-list-request">EN 3. Entity List Request</a></li>
+<li class="toctree-l2"><a class="reference internal" href="esempi.html#en-3-1-entity-list-response">EN 3.1. Entity List Response</a></li>
+<li class="toctree-l2"><a class="reference internal" href="esempi.html#en-4-resolve-entity-statement-endpoint-request">EN 4. Resolve Entity Statement Endpoint Request</a></li>
+<li class="toctree-l2"><a class="reference internal" href="esempi.html#en-4-1-resolve-entity-statement-endpoint-response">EN 4.1. Resolve Entity Statement Endpoint Response</a></li>
+<li class="toctree-l2"><a class="reference internal" href="esempi.html#en-5-trust-mark-status-request">EN 5. Trust Mark Status Request</a></li>
+<li class="toctree-l2"><a class="reference internal" href="esempi.html#en-5-1-trust-mark-status-response">EN 5.1. Trust Mark Status Response</a></li>
+<li class="toctree-l2"><a class="reference internal" href="esempi.html#en-6-authorization-request">EN 6. Authorization Request</a></li>
+<li class="toctree-l2"><a class="reference internal" href="esempi.html#en-7-metadata-policy">EN 7. Metadata Policy</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="diventa_fornitore.html">Diventa fornitore di servizi</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Come contribuire</a></li>
+</ul>
+
+      
+    </div>
+
+    
+
+    
+
+    
+  </div>
+</section>
+          <!-- Toggle -->
+<div class="navbar-toggler--wrap navbar-toggler--wrap--bottom p-3">
+  <div class="navbar-toggler navbar-toggler--open p-0 border-0 ml-auto">
+    <div class="navbar-toggler-bottom__chapter align-middle text-truncate">
+      <span class="it-list mr-2"></span>Come contribuire
+    </div>
+  </div>
+</div>
+
+<div class="sidebar-tabs">
+
+  <!-- Back button. -->
+  <div class="row">
+    <div class="col">
+      <button class="navbar-toggler navbar-toggler--back border-0 ml-auto" type="button" data-toggle="offcanvas">
+        <span class="it-arrow-left align-middle"></span>
+        <span class="navbar-toggler__chapter align-middle ml-2">
+          indici e glossario
+        </span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Tab -->
+  <ul class="row ml-3 mr-3 nav nav-tabs" role="tablist">
+    <li class="col text-center active">
+      <a id="content-index-mobile-tab" data-toggle="tab" href="#content-index-mobile" aria-controls="content-index-mobile" role="tab" aria-selected="true" class="sidebar-btn p-2 sidebar-btn--mobile active show">
+        contenuti
+      </a>
+    </li>
+    <li class="col text-center">
+      <a id="figures-index-mobile-tab" data-toggle="tab" href="#figures-index-mobile" aria-controls="figures-index-mobile" role="tab" aria-selected="false" class="col sidebar-btn p-2 sidebar-btn--mobile">
+        figure
+      </a>
+    </li>
+    <li class="col text-center">
+      <a id="table-index-mobile-tab" data-toggle="tab" href="#table-index-mobile" aria-controls="table-index-mobile" role="tab" aria-selected="false" class="col sidebar-btn p-2 sidebar-btn--mobile">
+        tabelle
+      </a>
+    </li>
+    <li class="col text-center">
+      <a id="glossary-index-mobile-tab" data-toggle="tab" href="#glossary-index-mobile" aria-controls="glossary-index-mobile" role="tab" aria-selected="false" class="col sidebar-btn p-2 sidebar-btn--mobile">
+        glossario
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+<!-- Off canvas -->
+<section class="docs-offcanvas-menu" id="sidebar-nav">
+  <div class="tab-content sidebar-nav">
+
+      <div id="content-index-mobile" class="content-index--menu tab-pane sidebar-list--wrapper fade show active" role="tabpanel" aria-labelledby="content-index-mobile-tab">
+        <ul class="">
+          <li class="toctree-l1 ">
+            <a href='index.html'>Sommario</a>
+          </li>
+        </ul>
+        
+        <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="standards.html">Riferimenti</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="standards.html#technical-references">Technical references</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="standards.html#normativa-nazionale-ed-europea">Normativa Nazionale ed Europea</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="standards.html#riferimenti-normativi-spid">Riferimenti normativi  SPID</a></li>
+<li class="toctree-l2"><a class="reference internal" href="standards.html#riferimenti-normativi-cie-id">Riferimenti normativi CIE id</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="termini_acronimi.html">Termini e Acronimi</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="termini_acronimi.html#termini">Termini</a></li>
+<li class="toctree-l2"><a class="reference internal" href="termini_acronimi.html#acronimi">Acronimi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="termini_acronimi.html#convenzioni-e-termini-normativi">Convenzioni e Termini normativi</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="la_federazione_delle_identita.html">Le Federazioni eID Italiane</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="la_federazione_delle_identita.html#openid-connect-federation">OpenID Connect Federation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="la_federazione_delle_identita.html#configurazione-della-federazione">Configurazione della Federazione</a></li>
+<li class="toctree-l2"><a class="reference internal" href="la_federazione_delle_identita.html#modalita-di-partecipazione">Modalità di partecipazione</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="entity_configuration.html">Entity Configuration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="entity_configuration.html#firma-della-entity-configuration">Firma della Entity Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="entity_configuration.html#entity-configuration-claim-comuni">Entity Configuration - claim comuni</a></li>
+<li class="toctree-l2"><a class="reference internal" href="entity_configuration.html#entity-configuration-foglia-e-intermediari">Entity Configuration Foglia e intermediari</a></li>
+<li class="toctree-l2"><a class="reference internal" href="entity_configuration.html#entity-configuration-trust-anchor">Entity Configuration Trust Anchor</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="entity_statement.html">Entity Statement</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="entity_statement.html#firma-di-entity-statement">Firma di Entity Statement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="entity_statement.html#id2">Entity Statement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="entity_statement.html#metadata-policy">Metadata Policy</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="trust_marks.html">Trust Mark</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="trust_marks.html#federation-entity-trust-mark">federation_entity Trust Mark</a></li>
+<li class="toctree-l2"><a class="reference internal" href="trust_marks.html#oauth-resource-trust-mark">oauth_resource  Trust Mark</a></li>
+<li class="toctree-l2"><a class="reference internal" href="trust_marks.html#validazione-dei-trust-mark">Validazione dei Trust Mark</a></li>
+<li class="toctree-l2"><a class="reference internal" href="trust_marks.html#revoca-dei-trust-mark">Revoca dei Trust Mark</a></li>
+<li class="toctree-l2"><a class="reference internal" href="trust_marks.html#composizione-dei-trust-mark">Composizione dei Trust Mark</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="soggetti_aggregatori.html">Soggetti Aggregatori</a></li>
+<li class="toctree-l1"><a class="reference internal" href="trust_negotiation.html">Acquisire i Metadata</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="trust_negotiation.html#relying-party">Relying Party</a></li>
+<li class="toctree-l2"><a class="reference internal" href="trust_negotiation.html#openid-provider">OpenID Provider</a></li>
+<li class="toctree-l2"><a class="reference internal" href="trust_negotiation.html#accesso-alla-entity-configuration">Accesso alla Entity Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="federation_endpoint.html">Endpoint di Federazione</a></li>
+<li class="toctree-l1"><a class="reference internal" href="errors_federation.html">Gestione degli errori di federazione</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="errors_federation.html#codici-di-errore-di-federation">Codici di errore di Federation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="metadata_oidc.html">Metadata</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="metadata_oidc_op.html">OpenID Connect Provider Metadata (OP)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="metadata_oidc_rp.html">OpenID Connect Relying Party Metadata (RP)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="metadata_oidc_ta_sa.html">Metadata di Trust Anchor (TA) e Intermediari (SA)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="metadata_aa.html">Metadata Attribute Authority</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="flusso_autenticazione.html">Flusso di autenticazione</a></li>
+<li class="toctree-l1"><a class="reference internal" href="authorization_endpoint.html">Authorization endpoint (Authentication)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="authorization_endpoint.html#request">Request</a></li>
+<li class="toctree-l2"><a class="reference internal" href="authorization_endpoint.html#response">Response</a></li>
+<li class="toctree-l2"><a class="reference internal" href="authorization_endpoint.html#gestione-degli-errori">Gestione degli errori</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="token_endpoint.html">Token Endpoint</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="token_endpoint.html#request">Request</a></li>
+<li class="toctree-l2"><a class="reference internal" href="token_endpoint.html#response">Response</a></li>
+<li class="toctree-l2"><a class="reference internal" href="token_endpoint.html#access-token">Access Token</a></li>
+<li class="toctree-l2"><a class="reference internal" href="token_endpoint.html#id-token">ID Token</a></li>
+<li class="toctree-l2"><a class="reference internal" href="token_endpoint.html#refresh-token">Refresh Token</a></li>
+<li class="toctree-l2"><a class="reference internal" href="token_endpoint.html#codici-di-errore">Codici di errore</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="userinfo_endpoint.html">UserInfo Endpoint</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="userinfo_endpoint.html#request">Request</a></li>
+<li class="toctree-l2"><a class="reference internal" href="userinfo_endpoint.html#response">Response</a></li>
+<li class="toctree-l2"><a class="reference internal" href="userinfo_endpoint.html#codici-di-errore">Codici di errore</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="attributi_utente.html">Tabella attributi utente</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="attributi_utente.html#esempi">Esempi</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="introspection_endpoint.html">Introspection Endpoint (verifica validità token)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="introspection_endpoint.html#request">Request</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introspection_endpoint.html#response">Response</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introspection_endpoint.html#codici-di-errore">Codici di errore</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="revocation_endpoint.html">Revocation Endpoint</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="revocation_endpoint.html#request">Request</a></li>
+<li class="toctree-l2"><a class="reference internal" href="revocation_endpoint.html#response">Response</a></li>
+<li class="toctree-l2"><a class="reference internal" href="revocation_endpoint.html#codici-di-errore">Codici di errore</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="logout.html">Logout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cryptographic_algos.html">Algoritmi crittografici</a></li>
+<li class="toctree-l1"><a class="reference internal" href="log_management.html">Retention Policy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="log_management.html#gestione-dei-log-di-un-op-e-di-un-rp">Gestione dei Log di un OP e di un RP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="log_management.html#registro-storico-delle-chiavi-pubbliche-di-federazione">Registro storico delle chiavi pubbliche di Federazione</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="differenze_spid_cie.html">Differenze tra SPID e CIE id</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="differenze_spid_cie.html#metadata">Metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="differenze_spid_cie.html#authorization-endpoint">Authorization Endpoint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="differenze_spid_cie.html#parametri-scope-e-claims">Parametri Scope e Claims</a></li>
+<li class="toctree-l2"><a class="reference internal" href="differenze_spid_cie.html#id-token">ID Token</a></li>
+<li class="toctree-l2"><a class="reference internal" href="differenze_spid_cie.html#refresh-token">Refresh Token</a></li>
+<li class="toctree-l2"><a class="reference internal" href="differenze_spid_cie.html#userinfo-endpoint">UserInfo Endpoint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="differenze_spid_cie.html#introspection-endpoint">Introspection Endpoint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="differenze_spid_cie.html#revocation-endpoint-e-logout">Revocation Endpoint e Logout</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="confronto_oidc_cie_e_oidc_igov.html">Differenze con OIDC iGov</a></li>
+<li class="toctree-l1"><a class="reference internal" href="differenze_oidc_fed.html">Differenze con OIDC Federation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="differenze_oidc_fed.html#client-registration">Client Registration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="differenze_oidc_fed.html#trust-mark">Trust Mark</a></li>
+<li class="toctree-l2"><a class="reference internal" href="differenze_oidc_fed.html#claim-non-supportati-negli-entity-statement">Claim non supportati negli Entity Statement</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="seccons_bcps.html">Considerazioni di Sicurezza</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="seccons_bcps.html#trust-mark-come-deterrente-contro-gli-abusi">Trust Mark come deterrente contro gli abusi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seccons_bcps.html#numero-massimo-di-authority-hints">Numero Massimo di authority_hints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seccons_bcps.html#resolve-endpoint">Resolve endpoint</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="seccons_bcps.html#buone-pratiche">Buone Pratiche</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="seccons_bcps.html#specializzare-le-chiavi-pubbliche-openid-core-e-federation">Specializzare le chiavi pubbliche OpenID Core e Federation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seccons_bcps.html#modalita-di-aggiornamento-dei-metadata-openid-core">Modalità di aggiornamento dei Metadata OpenID Core</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="esempi.html">Esempi</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="esempi.html#en-1-entity-configuration-request">EN 1. Entity Configuration Request</a></li>
+<li class="toctree-l2"><a class="reference internal" href="esempi.html#en-1-1-entity-configuration-response-relying-party">EN 1.1. Entity Configuration Response Relying Party</a></li>
+<li class="toctree-l2"><a class="reference internal" href="esempi.html#en-1-2-entity-configuration-response-openid-provider">EN 1.2. Entity Configuration Response Openid Provider</a></li>
+<li class="toctree-l2"><a class="reference internal" href="esempi.html#en-1-3-entity-configuration-response-intermediary">EN 1.3. Entity Configuration Response Intermediary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="esempi.html#en-1-4-entity-configuration-response-trust-anchor">EN 1.4. Entity Configuration Response Trust Anchor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="esempi.html#en-1-5-trust-mark-issued-by-ta-to-a-rp">EN 1.5. Trust Mark issued by TA to a RP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="esempi.html#en-1-6-trust-mark-issued-by-ta-to-a-sa">EN 1.6. Trust Mark issued by TA to a SA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="esempi.html#en-1-7-trust-mark-issued-by-sa-to-a-rp">EN 1.7. Trust Mark issued by SA to a RP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="esempi.html#en-2-entity-statement-request">EN 2. Entity Statement Request</a></li>
+<li class="toctree-l2"><a class="reference internal" href="esempi.html#en-2-1-entity-statement-response">EN 2.1 Entity Statement Response</a></li>
+<li class="toctree-l2"><a class="reference internal" href="esempi.html#en-3-entity-list-request">EN 3. Entity List Request</a></li>
+<li class="toctree-l2"><a class="reference internal" href="esempi.html#en-3-1-entity-list-response">EN 3.1. Entity List Response</a></li>
+<li class="toctree-l2"><a class="reference internal" href="esempi.html#en-4-resolve-entity-statement-endpoint-request">EN 4. Resolve Entity Statement Endpoint Request</a></li>
+<li class="toctree-l2"><a class="reference internal" href="esempi.html#en-4-1-resolve-entity-statement-endpoint-response">EN 4.1. Resolve Entity Statement Endpoint Response</a></li>
+<li class="toctree-l2"><a class="reference internal" href="esempi.html#en-5-trust-mark-status-request">EN 5. Trust Mark Status Request</a></li>
+<li class="toctree-l2"><a class="reference internal" href="esempi.html#en-5-1-trust-mark-status-response">EN 5.1. Trust Mark Status Response</a></li>
+<li class="toctree-l2"><a class="reference internal" href="esempi.html#en-6-authorization-request">EN 6. Authorization Request</a></li>
+<li class="toctree-l2"><a class="reference internal" href="esempi.html#en-7-metadata-policy">EN 7. Metadata Policy</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="diventa_fornitore.html">Diventa fornitore di servizi</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Come contribuire</a></li>
+</ul>
+
+        
+      </div>
+
+      <div id="figures-index-mobile" class="figures-index--menu tab-pane sidebar-list--wrapper fade" role="tabpanel" aria-labelledby="figures-index-mobile-tab">
+        None
+      </div>
+
+      <div id="table-index-mobile" class="table-index--menu tab-pane sidebar-list--wrapper fade" role="tabpanel" aria-labelledby="table-index-mobile-tab">
+        None
+      </div>
+
+      <div id="glossary-index-mobile" class="glossary-mobile--menu tab-pane sidebar-list--wrapper fade" role="tabpanel" aria-labelledby="glossary-index-mobile-tab">
+        None
+      </div>
+
+  </div>
+</section>
+        </nav>
+        <div id="doc-content" class="col-content">
+          <!--<div class="doc-content__consultation">
+            <span class="it-icon-edit"></span>
+            in consultazione
+          </div>-->
+          
+            <div class="footer-buttons footer-buttons--prev" role="navigation" aria-label="footer navigation">
+                <a href="diventa_fornitore.html" class="" title="Diventa fornitore di servizi" accesskey="p" rel="prev"> Torna a Diventa fornitore di servizi</a>
+            </div>
+          
+          
+  <section id="come-contribuire">
+<h1>Come contribuire<a class="headerlink" href="#come-contribuire" title="Permalink to this heading">¶</a></h1>
+<p>Per contribuire clicca in alto a destra sulla icona di GitHub, alla voce &quot;Sorgente&quot; e accedi al repository pubblico.</p>
+<p>Se trovi una inesattezza o desideri risolvere un dubbio o semplicemente notificare qualcosa per migliorare questa documentazione, apri una nuova Issue.</p>
+<p>A seguito dell'apertura della Issue e dei riscontri ottenuti dalla comunità di Developers italia potrai aprire una nuova Pull Request contenente la modifica o la correzione da te proposta.</p>
+</section>
+
+
+          
+          </div>
+
+        </div>
+      </div>
+  </div>
+  <footer class="footer container-fluid container-fluid--desktop">
+  <div class="px-3 pt-md-3 pb-md-2 mx-md-5 mb-4 mb-md-0">
+    <div class="row align-items-center d-flex">
+      <div class="col-xs-12 col-sm-6 col-lg-4 pt-4 pt-sm-5">
+        <a href="http://teamdigitale.governo.it/" target="_blank" class="d-inline-block" rel="noopener">
+          <div class="d-flex align-items-center">
+            <div class="px-2">
+              <img class="team-logo--icon" src="_static/images/team-digitale-logo.svg" alt="Team per la Trasformazione Digitale">
+            </div>
+            <div class="px-2 border-white border-left team-logo--text text-white">
+              Team per la Trasformazione Digitale
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-lg-4">
+        <span class="d-block m-2 in-collaboration">in collaborazione con</span>
+        <a href="https://www.agid.gov.it/" target="_blank" class="d-inline-block" rel="noopener">
+          <div class="d-flex align-items-center">
+            <div class="px-2">
+              <img class="agid-logo--icon" src="_static/images/agid-logo.svg" alt="Agenzia per l'Italia Digitale">
+            </div>
+            <span class="agid-logo--separator border-white border-left"></span>
+            <div class="px-2 agid-logo--text text-white">
+              Agenzia per l'Italia Digitale
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-sm-12 col-lg-4 pt-4 pt-sm-5">
+        <div class="text-center text-lg-right social d-flex align-items-center justify-content-center justify-content-lg-end flex-column flex-lg-row">
+          <div class="mr-lg-1 mb-2 mb-lg-0">Seguici su</div>
+          <div>
+            <a href="https://github.com/italia/" class="d-inline-flex small-prints mx-1 social__link"><i class="d-inline-block it-github"></i></a>
+            <a href="https://twitter.com/teamdigitaleIT" class="d-inline-flex small-prints mx-1 social__link"><i class="d-inline-block it-twitter"></i></a>
+            <a href="https://www.linkedin.com/company/teamdigitale/" class="d-finline-lex small-prints mx-1 social__link"><i class="d-inline-block it-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--/row-->
+
+    <div class="row pb-4 colophon mt-md-5 mt-sm-3 pt-3 pt-sm-2">
+      <ul class="col list-inline small">
+        
+        <li class="list-inline-item">
+          <strong><a class="footer-menu__link text-light-blue small-prints" href="/privacy-policy/">Privacy policy</a></strong>
+        </li>
+        
+        <li class="list-inline-item">
+          <strong><a class="footer-menu__link text-light-blue small-prints" href="/cookies-policy">Cookie policy</a></strong>
+        </li>
+        
+        <li class="list-inline-item">
+          <strong><a class="footer-menu__link text-light-blue small-prints" href="/note-legali">Note legali</a></strong>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</footer>
+  <script type="text/javascript">
+var t = {
+  this : "it",
+  locale : "it_IT",
+  about_these_documents : "Informazioni su questi documenti",
+  active_lang : "lingua attiva",
+  cookiebar_accept : "Accetto",
+  cookiebar_msg : "Questo sito utilizza cookie tecnici, analytics e di terze parti. Proseguendo nella navigazione accetti l’utilizzo dei cookie.",
+  cookiebar_privacy_policy : "Cookie policy",
+  copyright : "Copyright",
+  documents : "Documentazione",
+  download : "Scarica",
+  footer_link_privacy_policy : "Privacy policy",
+  footer_link_cookies : "Cookie policy",
+  footer_link_legal_notes : "Note legali",
+  go_to : "Vai a",
+  index : "Indice",
+  last_updated : "Più recenti",
+  most_viewed_this_month : "Più visti questo mese",
+  navigation_menu_label : "Menu di navigazione",
+  navigation_menu_esc : "esci dalla navigazione",
+  search : "Cerca",
+  search_form_label : "Cerca nel documento",
+  search_form_off : "disattiva il form di ricerca",
+  search_form_on : "attiva il form di ricerca",
+  search_form_start : "avvia la ricerca",
+  search_results : "Risultati della ricerca",
+  search_no_results : "La tua ricerca non ha prodotto documenti. Assicurati di non aver commesso errori di digitazione.",
+  site_subtitle : "Documenti pubblici, digitali.",
+  site_title : "Docs Italia",
+  share_msg : "condividi",
+  skiplink_goto_content : "vai ai contenuti",
+  skiplink_goto_navigation : "vai alla navigazione del sito",
+  toggle_menu_label : "accedi al menu",
+  version : "versione",
+  compare : "Confronta",
+  copy_link : "copia link",
+  copied_link : "link copiato",
+  see_actions : "vedi azioni",
+  other_actions : "altre azioni",
+  comments : "commenti",
+  back_to_text : "torna al testo",
+  glossary_empty : "informazione non trovata",
+  glossary : "glossario",
+  go_to_glossary : "vai al glossario",
+  deepening : "approfondimento",
+  example : "esempio",
+  must : "si deve",
+  must_not : "non si deve",
+  should : "si dovrebbe",
+  should_not : "non si dovrebbe",
+  may : "si può",
+  use : "usa",
+  use_not : "non usare",
+  consultation : "consultazione",
+  show_more : "mostra tutto",
+  show_less : "mostra meno",
+  content_index : "indice dei contenuti",
+  table_index : "indice delle tabelle",
+  figures_index : "indice delle figure",
+  figures : "figure",
+  tables : "tabelle",
+  contents : "contenuti",
+  in_consultation : "in consultazione",
+  indices_and_glossary : "indici e glossario",
+  note : "nota",
+  no_description : "nessuna descrizione",
+  no_content : "nessuna sezione",
+  no_glossary : "nessun glossario",
+  no_figures : "nessuna figura",
+  no_tables : "nessuna tabella",
+  summary : "sommario",
+  project : "Progetto",
+  administration : "Amministrazione",
+  info : "Informazioni",
+  related : "Documenti correlati",
+  actions : "Azioni",
+  tags : "Tag",
+  view_source : "Sorgente",
+  previous : "precedente",
+  next : "successivo",
+  in_collaboration_with : "in collaborazione con",
+  follow_us : "seguici su",
+  header_link_trasformazione : "Piano Triennale",
+  header_link_piattaforme : "Piattaforme",
+  header_link_software : "Software",
+  header_link_api : "API",
+  header_link_community : "Le community",
+  header_link_developers : "Developers",
+  header_link_design : "Designers",
+  header_link_tools : "Gli strumenti",
+  header_link_forum : "Forum",
+  header_link_docs : "Docs",
+  header_link_github : "GitHub",
+  header_link_secondary_who_we_are : "Chi siamo",
+  header_link_projects : "Progetti",
+  header_link_documents : "Documenti",
+  header_link_administrations : "Amministrazioni",
+  header_link_whatis : "Che cos'è",
+}
+</script>
+  <a href="#" aria-hidden="true" data-attribute="return-to-top" class="return-to-top">
+  <i class="it-collapse"></i>
+</a>
+  
+  <script type="text/javascript">
+var PRODUCTION_DOMAIN = 'localhost';
+var DOCSITALIA_DATA = {
+  publisher_slug: 'organizzazione-demo',
+  publisher_project_slug: 'progetto-demo'
+}
+
+LOCAL = true;
+READTHEDOCS_DATA = {
+  project: 'demo-document',
+  version: 'bozza',
+  language: 'it',
+  api_host: '//' + PRODUCTION_DOMAIN
+}
+
+var DOCUMENTATION_OPTIONS = {
+    URL_ROOT: './',
+    VERSION: 'version: latest',
+    LANGUAGE: 'it',
+    COLLAPSE_INDEX: false,
+    FILE_SUFFIX: '.html',
+    HAS_SOURCE: true,
+    SOURCELINK_SUFFIX: '.txt'
+};
+</script>
+<script src="_static/js/theme.js"></script>
+<script type="text/javascript" src="_static/documentation_options.js"></script>
+<script type="text/javascript" src="_static/underscore.js"></script>
+<script type="text/javascript" src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+<script type="text/javascript" src="_static/doctools.js"></script>
+<script type="text/javascript" src="_static/translations.js"></script>
+  
+  <script type="text/javascript">
+  <!-- Google analytics -->
+  (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+  $(document).ready(function() {
+    var sendGaPageview = function() {
+      ga('create', '', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+      
+    };
+    if ($.fn['cookiebar'].Constructor._getCookieEU()) {
+      sendGaPageview();
+    } else {
+      $(document).on('close.bs.cookiebar', sendGaPageview);
+    }
+  });
+  <!-- End Google analytics -->
+  <!-- Matomo -->
+  /*
+  var _paq = _paq || [];
+  _paq.push(['setSiteId', '']);
+  (function () {
+    var u = '//italia.piwikpro.com/';
+    _paq.push(['setTrackerUrl', u + 'piwik.php']);
+    var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+    g.type = 'text/javascript'; g.async = true; g.defer = true; g.src = u + 'piwik.js'; s.parentNode.insertBefore(g, s);
+  })();
+
+  $(document).ready(function() {
+    var sendMatomoPageview = function() {
+      _paq.push(['setDocumentTitle', document.domain + '/' + document.title]);
+      _paq.push(['enableLinkTracking']);
+      _paq.push(['setDoNotTrack', 1]);
+      _paq.push(['trackPageView']);
+    };
+    if ($.fn['cookiebar'].Constructor._getCookieEU()) {
+      sendMatomoPageview();
+    } else {
+      $(document).on('close.bs.cookiebar', sendMatomoPageview);
+    }
+  });*/
+  <!-- End Matomo -->
+</script>
+  
+    <div class="cookiebar bg-dark p-4 hide" aria-hidden="true">
+  <div class="container">
+    <div class="row d-flex align-items-center">
+      <div class="col-12 col-md-7">
+        <span class="text-white">Questo sito utilizza cookie tecnici, analytics e di terze parti. Proseguendo nella navigazione accetti l’utilizzo dei cookie.</span>
+      </div>
+      <div class="col-12 col-md-5 mt-2 mt-md-0 text-right">
+        <a class="btn btn-link" href="/cookies-policy/">Cookie policy</a>
+        <button class="btn btn-sm btn-primary mr-2" data-accept="cookiebar">Accetto</button>
+      </div>
+    </div>
+  </div>
+</div>
+  
+  
+  <div class="modal fade modal-sm-full" id="document-info" tabindex="-1" role="dialog" aria-labelledby="document-title" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content rounded">
+      <div class="modal-header">
+        <h4 class="modal-title" id="document-title">Titolo del documento non impostato</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p></p>
+        <p class="text-sans-serif">
+          <i class="docs-icon-project font-weight-bold"></i>
+          <span class="font-weight-bold ml-1 align-middle">Progetto:</span>
+          <a href="/organizzazione-demo/progetto-demo" class="align-middle">
+            Progetto demo
+          </a>
+        </p>
+        <p class="text-sans-serif">
+          <i class="docs-icon-publisher font-weight-bold"></i>
+          <span class="font-weight-bold ml-1 align-middle">Amministrazione:</span>
+          <a href="/organizzazione-demo/" class="align-middle">
+            Organizzazione demo
+          </a>
+        </p>
+        <div class="d-flex text-sans-serif my-4">
+          <div class="d-flex font-weight-bold align-items-center"><span class="mr-2">Tag:</span></div>
+          <div class="d-flex flex-wrap">
+            
+            <span class="border border-primary rounded m-1 py-1 px-2 tag"><a href="#">demo</a></span>
+            
+            <span class="border border-primary rounded m-1 py-1 px-2 tag"><a href="#">docs italia</a></span>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" tabindex="-1" role="dialog" id="document-actions" aria-hidden="true">
+  <div class="modal-dialog mt-5" role="document">
+     <div class="modal-content rounded">
+        <div class="modal-body p-1">
+          <div class="document-actions d-flex flex-column flex-md-row justify-content-around w-100 p-2 p-md-0 text-blue">
+  <div class="dropdown p-3 px-md-2 py-md-0 d-flex flex-wrap">
+    <a class="btn dropdown-toggle p-2 flex-grow-1 text-left" href="#" id="downloads-dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <span class="docs-icon-download align-middle"></span>
+      <span class="align-middle">Scarica</span>
+    </a>
+    <div class="dropdown-menu w-100" aria-labelledby="downloads-dropdown" aria-disabled="false">
+      <div class="link-list-wrapper">
+        <ul class="link-list">
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  <div class="p-3 px-md-2 py-md-0">
+    <a href="#" role="button" class="btn p-2 disabled" aria-disabled="true">
+        <span class="docs-icon-github"></span>
+        <span class="align-middle">Sorgente</span>
+    </a>
+  </div>
+</div>
+        </div>
+     </div>
+  </div>
+</div>
+
+  
+</body>
+</html>
