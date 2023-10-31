@@ -11,7 +11,7 @@ Lo scopo principale dei TM è quello di esporre alcune informazioni non richiest
 
 Esempi tipici includono il codice di identificazione nazionale o internazionale dell'entità (Codice Fiscale, IPA Code, Partita IVA, VAT Number), i contatti istituzionali e altro, come definito in `OIDC-FED`_. Ulteriori dati possono essere aggiunti dal soggetto che li emette.
 
-I TM sono emessi e firmati, durante il processo di registrazione di una nuova entità di tipo Foglia (Onboarding), dal (TA) o suoi Intermediari (SA) o da Gestori Qualificati di Attributi (AA), se definiti all'interno dell'attributo **trust_mark_issuers**, pubblicato all'interno dell'Entity Configuration del TA. 
+I TM sono emessi e firmati, durante il processo di registrazione di una nuova entità di tipo Foglia (Onboarding), dal (TA) o suoi Intermediari (SA) o da Gestori Qualificati di Attributi (AA), se definiti all'interno dell'attributo **trust_marks_issuers**, pubblicato all'interno dell'Entity Configuration del TA. 
 
 Di seguito un esempio non normativo dell'oggetto **trust_marks_issuers** all'interno della Entity Configuration del TA.
 
@@ -21,11 +21,11 @@ Di seguito un esempio non normativo dell'oggetto **trust_marks_issuers** all'int
      "trust_marks_issuers":{
          "https://registry.agid.gov.it/openid_relying_party/public/":[
              "https://registry.spid.agid.gov.it/",
-             "https://public.intermediary.spid.it/"
+             "https://public.intermediate.spid.it/"
          ],
          "https://registry.agid.gov.it/openid_relying_party/private/":[
              "https://registry.spid.agid.gov.it/",
-             "https://private.other.intermediary.it/"
+             "https://private.other.intermediate.it/"
          ]
      }
  }
@@ -65,7 +65,7 @@ La tabella seguente definisce i <entity_role> riconoscibili all'interno delle Fe
     * - **openid_provider**
       - l'entità nel claim *sub* è un OP.
       - OP
-    * - **intermediary**
+    * - **intermediate**
       - l'entità nel claim *sub* è un Soggetto Aggregatore.
       - SA
     * - **oauth_resource**
@@ -93,7 +93,7 @@ La tabella seguente definisce i <trustmark_profile> riconoscibili all'interno de
 federation_entity Trust Mark
 --------------------------------
 
-In aggiunta ai claim dei profili **public** e **private**, il profilo **intermediary** individua i SA e aggiunge le estensioni **full** e **light** all'interno del claim **sa_profile**, a seconda della modalità con cui operano rispetto ai Soggetti Aggregati
+In aggiunta ai claim dei profili **public** e **private**, il profilo **intermediate** individua i SA e aggiunge le estensioni **full** e **light** all'interno del claim **sa_profile**, a seconda della modalità con cui operano rispetto ai Soggetti Aggregati
 
 .. seealso::
 
