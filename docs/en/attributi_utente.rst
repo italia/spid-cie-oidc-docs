@@ -201,7 +201,7 @@ The following table shows the list of user attributes supported by SPID and/or C
    * - **phone_number** |br| Category: extra registry
      - Mobile phone name. String. Numeric string without internal spaces |br|
        Example: |br|
-       ``"phone_number": "VATIT-12345678901"``
+       ``"phone_number": "12345678901"``
      - |spid-icon| |cieid-icon|
    * - **phone_number_verified** |br| Category: extra registry
      - Boolean value indicating whether the user's mobile phone number has been verified by the OP. 
@@ -209,7 +209,7 @@ The following table shows the list of user attributes supported by SPID and/or C
    * - **$PREFIX/landline_number** |br| Category: extra registry
      - Landline number. String. Numeric string without internal spaces |br|
        Example: |br|
-       ``"$PREFIX/landline_number":"VATIT-12345678901"``
+       ``"$PREFIX/landline_number":"12345678901"``
      - |cieid-icon|
    * - **email** |br| Category: extra registry
      - E-mail address. String. Standard e-mail address |br|
