@@ -51,7 +51,7 @@ Ottenuto il Metadata finale, il Provider valida la richiesta del RP secondo le m
 Nei casi in cui un RP avesse come entità superiore un SA e non direttamente il TA, la procedura di acquisizione e validazione dell'Entity Configuration del RP avviene mediante l'Entity Statement pubblicato dal SA nei confronti del RP e mediante la convalida dell'Entity Configuration del SA con l'Entity Statement emesso dalla TA in relazione al SA. Se la soglia del massimo numero di Intermediari verticali, definita dal valore di **max_path_length**, viene superata, l'OP blocca il processo di Federation Entity Discovery e rigetta la richiesta del RP.
 
 
-.. [1] I Trust Mark di Federazione sono configurati nel claim **trust_marks_issuers** e contenuti nell'Entity Configuration del Trust Anchor.
+.. [1] I Trust Mark di Federazione sono configurati nel claim **trust_mark_issuers** e contenuti nell'Entity Configuration del Trust Anchor.
 
 .. [2] Un RP può esporre più di una entità superiore all'interno del proprio claim di **authority_hints**. Si pensi ad un RP che partecipa sia alla Federazione SPID che a quella CIE. Inoltre un RP può risultare come aggregato di molteplici Intermediari, sia questi SPID o CIE.
 

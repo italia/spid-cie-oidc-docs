@@ -165,22 +165,22 @@ EN 1.2. Entity Configuration Response Openid Provider
                  "https://www.spid.gov.it/SpidL3"
              ],
              "claims_supported": [
-                 "https://attributes.spid.gov.it/spid_code",
+                 "https://attributes.eid.gov.it/spid_code",
                  "given_name",
                  "family_name",
                  "place_of_birth",
                  "birthdate",
                  "gender",
-                 "https://attributes.spid.gov.it/company_name",
-                 "https://attributes.spid.gov.it/registered_office",
-                 "https://attributes.spid.gov.it/fiscal_number",
-                 "https://attributes.spid.gov.it/vat_number",
-                 "https://attributes.spid.gov.it/document_details",
+                 "https://attributes.eid.gov.it/company_name",
+                 "https://attributes.eid.gov.it/registered_office",
+                 "https://attributes.eid.gov.it/fiscal_number",
+                 "https://attributes.eid.gov.it/vat_number",
+                 "https://attributes.eid.gov.it/document_details",
                  "phone_number",
                  "email",
                  "address",
-                 "https://attributes.spid.gov.it/eid_exp_date",
-                 "https://attributes.spid.gov.it/e_delivery_service"
+                 "https://attributes.eid.gov.it/eid_exp_date",
+                 "https://attributes.eid.gov.it/e_delivery_service"
              ],
              "grant_types_supported": [
                  "authorization_code",

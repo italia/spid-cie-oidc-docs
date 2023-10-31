@@ -34,7 +34,7 @@ Configurazione della Federazione
 
 La configurazione della Federazione è pubblicata dal Trust Anchor all'interno della sua :ref:`Entity Configuration<entity_configuration_ta>`, disponibile presso un web path ben noto e corrispondente a **.well-known/openid-federation**.
 
-Tutti i partecipanti DEVONO ottenere, prima della fase di esercizio, la configurazione della Federazione e mantenerla aggiornata su base giornaliera. All'interno della configurazione della Federazione sono pubblicate le chiave pubbliche del Trust Anchor usate per le operazioni di firma, il numero massimo di Intermediari consentiti tra una Foglia e il Trust Anchor (**max_path length**) e le autorità abilitate all'emissione dei Trust Mark (**trust_marks_issuers**).
+Tutti i partecipanti DEVONO ottenere, prima della fase di esercizio, la configurazione della Federazione e mantenerla aggiornata su base giornaliera. All'interno della configurazione della Federazione sono pubblicate le chiave pubbliche del Trust Anchor usate per le operazioni di firma, il numero massimo di Intermediari consentiti tra una Foglia e il Trust Anchor (**max_path length**) e le autorità abilitate all'emissione dei Trust Mark (**trust_mark_issuers**).
 
 
 Si veda qui un esempio non normativo di :ref:`Entity Configuration response Trust Anchor<Esempio_EN1.4>`

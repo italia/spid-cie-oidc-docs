@@ -13,19 +13,19 @@ Esempi tipici includono il codice di identificazione nazionale o internazionale 
 
 I TM sono emessi e firmati, durante il processo di registrazione di una nuova entità di tipo Foglia (Onboarding), dal (TA) o suoi Intermediari (SA) o da Gestori Qualificati di Attributi (AA), se definiti all'interno dell'attributo **trust_mark_issuers**, pubblicato all'interno dell'Entity Configuration del TA. 
 
-Di seguito un esempio non normativo dell'oggetto **trust_marks_issuers** all'interno della Entity Configuration del TA.
+Di seguito un esempio non normativo dell'oggetto **trust_mark_issuers** all'interno della Entity Configuration del TA.
 
 .. code-block:: json
 
  {
-     "trust_marks_issuers":{
+     "trust_mark_issuers":{
          "https://registry.agid.gov.it/openid_relying_party/public/":[
              "https://registry.spid.agid.gov.it/",
-             "https://public.intermediary.spid.it/"
+             "https://public.intermediate.spid.it/"
          ],
          "https://registry.agid.gov.it/openid_relying_party/private/":[
              "https://registry.spid.agid.gov.it/",
-             "https://private.other.intermediary.it/"
+             "https://private.other.intermediate.it/"
          ]
      }
  }
@@ -35,7 +35,7 @@ Ogni entità partecipante DEVE esporre nella propria configurazione (EC) i TM ri
 
 Nello scenario CIE / SPID, un TM viene firmato dal TA **MinInterno** / **Agid** o loro Intermediari (SA) o Gestori Qualificati di Attributi (AA). 
 
-Il TA definisce i soggetti abilitati all'emissione dei TM riconoscibili all'interno della Federazione, mediante il claim **trust_marks_issuers**, presente all'interno del proprio Entity Configuration. Il valore dell'attributo **trust_marks_issuers** è composto da un oggetto JSON avente come chiavi gli identificativi dei TM e come valori la lista degli identificativi (URL) delle entità abilitate ad emetterli.
+Il TA definisce i soggetti abilitati all'emissione dei TM riconoscibili all'interno della Federazione, mediante il claim **trust_mark_issuers**, presente all'interno del proprio Entity Configuration. Il valore dell'attributo **trust_mark_issuers** è composto da un oggetto JSON avente come chiavi gli identificativi dei TM e come valori la lista degli identificativi (URL) delle entità abilitate ad emetterli.
 
 I Trust Mark rappresentano il primo filtro per l'instaurazione della fiducia tra le parti, sono elementi indispensabili per avviare la risoluzione dei metadati. In loro assenza una entità non è riconoscibile come partecipante all’interno della Federazione.
 
@@ -65,7 +65,7 @@ La tabella seguente definisce i <entity_role> riconoscibili all'interno delle Fe
     * - **openid_provider**
       - l'entità nel claim *sub* è un OP.
       - OP
-    * - **intermediary**
+    * - **intermediate**
       - l'entità nel claim *sub* è un Soggetto Aggregatore.
       - SA
     * - **oauth_resource**
@@ -93,7 +93,7 @@ La tabella seguente definisce i <trustmark_profile> riconoscibili all'interno de
 federation_entity Trust Mark
 --------------------------------
 
-In aggiunta ai claim dei profili **public** e **private**, il profilo **intermediary** individua i SA e aggiunge le estensioni **full** e **light** all'interno del claim **sa_profile**, a seconda della modalità con cui operano rispetto ai Soggetti Aggregati
+In aggiunta ai claim dei profili **public** e **private**, il profilo **intermediate** individua i SA e aggiunge le estensioni **full** e **light** all'interno del claim **sa_profile**, a seconda della modalità con cui operano rispetto ai Soggetti Aggregati
 
 .. seealso::
 

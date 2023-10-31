@@ -14,7 +14,7 @@ Typical examples include the Entity's national or international identification c
 by the issuing subject.
 
 During the registration process of a new Leaf Entity (onboarding), the TMs are issued and signed by the TA
-or its Intermediates (SA) or by Attribute Authorities (AA), if they are defined inside the attribute **trust_mark_issuers**, published inside the TA's Entity Configuration.
+or its Intermediates (SA) or by Attribute Authorities (AA), if they are defined inside the attribute **trust_marks_issuers**, published inside the TA's Entity Configuration.
 
 Each member Entity MUST expose, in its own configuration (EC), the TMs released by the issuing authorities.
 
