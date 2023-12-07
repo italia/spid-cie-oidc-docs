@@ -775,10 +775,7 @@ EN 6. Authorization Request
       "nonce": "MBzGqyf9QytD28eupyWhSqMj78WNqpc2",
       "prompt": "login",
       "redirect_uri": "https://rp.spid.agid.gov.it/callback1",
-      "acr_values": {
-        "https://www.spid.gov.it/SpidL1":null,
-        "https://www.spid.gov.it/SpidL2":null
-      },
+      "acr_values": "https://www.spid.gov.it/SpidL1 https://www.spid.gov.it/SpidL2",
       "claims": {
         "userinfo": {
             "given_name":null,
