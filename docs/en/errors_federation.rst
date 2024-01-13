@@ -38,15 +38,15 @@ Federation error codes
     - **Supported by**
   * - *temporarily_unavailable*
     - well-known or Federation endpoint is unreachable.
-    - *302 Found*/*400 Bad Request*
+    - *503 Service Unavailable*
     - |spid-icon| |cieid-icon|
   * - *invalid_client*
     - The Trust Chain validation fails and the Client is not authorized.
-    - *302 Found*
+    - *401 Unauthorized*
     - |spid-icon| |cieid-icon|
   * - *unauthorized_client*
     - Applying the metadata policy results in a metadata not compliant or no valid Trust Mark for the requested profile is present within the configuration.  
-    - *302 Found*
+    - *401 Unauthorized*
     - |spid-icon| |cieid-icon|
   * - *invalid_request*
     - The request is incomplete or does not comply with current specifications.
