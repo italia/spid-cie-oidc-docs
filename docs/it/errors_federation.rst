@@ -15,10 +15,10 @@ In caso di errore durante le operazioni di federazione, le entità DEVONO rappre
    * - **Claim**
      - **Descrizione**
      - **Supportato da**
-   * - **Errore**
+   * - **error**
      - Vedi :ref:`Codici di errori <codici_errore_federation>`
      - |spid-icon| |cieid-icon|
-   * - **Descrizione dell'errore**
+   * - **error_description**
      - Descrizione più dettagliata dell'errore, finalizzata ad aiutare lo sviluppatore per eventuale debugging. 
      - |spid-icon| |cieid-icon|
 
@@ -38,15 +38,15 @@ Codici di errore di Federation
     - **Supportato da**
   * - *temporarily_unavailable*
     - Uno degli endpoint di well-known o di Federation non è raggiungibile.
-    - *302 Found* or *400 Bad Request*
+    - *503 Service Unavailable*
     - |spid-icon| |cieid-icon|
   * - *invalid_client*
     - Il Client non è autorizzato perchè la validazione della Trust Chain fallisce.
-    - *302 Found*
+    - *401 Unauthorized*
     - |spid-icon| |cieid-icon|
   * - *unauthorized_client*
     - L'applicazione del metadata policy produce un metadata non conforme o nessun Trust Mark valido per il profilo richiesto è presente all'interno della configurazione.
-    - *302 Found*
+    - *401 Unauthorized*
     - |spid-icon| |cieid-icon|
   * - *invalid_request*
     - La richiesta non è completa o non è conforme a quanto definito dalle presenti specifiche tecniche.
