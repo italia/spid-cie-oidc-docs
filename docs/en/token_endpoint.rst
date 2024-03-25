@@ -112,7 +112,9 @@ The claims that MUST be included in the *Token Request* are given below.
    * - **refresh_token**
      - Required only if **grant_type** is **refresh_token**.
      - |spid-icon| |cieid-icon|
- 
+   * - **redirect_uri**
+     - Required. It must be one of the values declared into the claim **redirect_uris** in the metadata of the RP and it must be identical to the value of the claim **redirect_uri** included in the authorization request.
+     - |spid-icon| |cieid-icon|
  
 Response
 ++++++++
