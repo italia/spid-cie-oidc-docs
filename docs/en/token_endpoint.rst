@@ -44,7 +44,7 @@ The claims that MUST be included in the *Token Request* are given below.
     code=usDwMnEzJPpG5oaV8x3j&
     code_verifier=9g8S40MozM3NSqjHnhi7OnsE38jklFv2&
     grant_type=authorization_code&
-    redirect_uri=https://rp.spid.agid.gov.it/redirect
+    redirect_uri=https%3A%2F%2Frp.spid.agid.gov.it%2Fredirect
 
 
 .. seealso::
