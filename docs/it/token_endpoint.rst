@@ -43,7 +43,8 @@ Di seguito i claim che DEVONO essere inseriti nella *Token Request*.
     client_assertion_type=urn%3Aietf%3Aparams%3Aoauth%3Aclient-assertion-type%3Ajwtbearer&
     code=usDwMnEzJPpG5oaV8x3j&
     code_verifier=9g8S40MozM3NSqjHnhi7OnsE38jklFv2&
-    grant_type=authorization_code
+    grant_type=authorization_code&
+    redirect_uri=https%3A%2F%2Frp.spid.agid.gov.it%2Fredirect
 
 .. seealso::
 
@@ -63,7 +64,8 @@ Di seguito i claim che DEVONO essere inseriti nella *Token Request*.
     ibmFtZSI6IlNQSUQiLCJhZG1pbiI6dHJ1ZX0.LVyRDPVJm0S9q7oiXcYVIIqGWY0wWQlqxvFGYswL…&
     client_assertion_type=urn%3Aietf%3Aparams%3Aoauth%3Aclient-assertion-type%3Ajwtbearer&
     grant_type=refresh_token&
-    refresh_token=8xLOxBtZp8
+    refresh_token=8xLOxBtZp8&
+    redirect_uri=https://rp.spid.agid.gov.it/redirect
 
 
 .. list-table:: 
@@ -112,7 +114,9 @@ Di seguito i claim che DEVONO essere inseriti nella *Token Request*.
    * - **refresh_token**
      - Obbligatorio solo se **grant_type** è **refresh_token**   
      - |spid-icon| |cieid-icon|
- 
+   * - **redirect_uri**
+     - Obbligatorio. DEVE essere uno dei valori dichiarati all'interno del claim **redirect_uris** nel metadata del RP e DEVE essere identico al valore del claim **redirect_uri** incluso nella authorization request.
+     - |spid-icon| |cieid-icon|
  
 Response
 ++++++++
