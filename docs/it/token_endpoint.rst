@@ -115,7 +115,7 @@ Di seguito i claim che DEVONO essere inseriti nella *Token Request*.
      - Obbligatorio solo se **grant_type** è **refresh_token**   
      - |spid-icon| |cieid-icon|
    * - **redirect_uri**
-     - Obbligatorio. Deve essere uno dei valori dichiarati all'interno del claim **redirect_uris** nel metadata del RP e deve essere identico al valore del claim **redirect_uri** incluso nella authorization request.
+     - Obbligatorio. DEVE essere uno dei valori dichiarati all'interno del claim **redirect_uris** nel metadata del RP e DEVE essere identico al valore del claim **redirect_uri** incluso nella authorization request.
      - |spid-icon| |cieid-icon|
  
 Response
