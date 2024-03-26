@@ -65,7 +65,7 @@ The claims that MUST be included in the *Token Request* are given below.
     client_assertion_type=urn%3Aietf%3Aparams%3Aoauth%3Aclient-assertion-type%3Ajwtbearer&
     grant_type=refresh_token&
     refresh_token=8xLOxBtZp8&
-    redirect_uri=https://rp.spid.agid.gov.it/redirect
+    redirect_uri=https%3A%2F%2Frp.spid.agid.gov.it%2Fredirect
 
  
 .. list-table:: 
