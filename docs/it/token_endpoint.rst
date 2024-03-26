@@ -43,7 +43,8 @@ Di seguito i claim che DEVONO essere inseriti nella *Token Request*.
     client_assertion_type=urn%3Aietf%3Aparams%3Aoauth%3Aclient-assertion-type%3Ajwtbearer&
     code=usDwMnEzJPpG5oaV8x3j&
     code_verifier=9g8S40MozM3NSqjHnhi7OnsE38jklFv2&
-    grant_type=authorization_code
+    grant_type=authorization_code&
+    redirect_uri=https://rp.spid.agid.gov.it/redirect
 
 .. seealso::
 
@@ -63,7 +64,8 @@ Di seguito i claim che DEVONO essere inseriti nella *Token Request*.
     ibmFtZSI6IlNQSUQiLCJhZG1pbiI6dHJ1ZX0.LVyRDPVJm0S9q7oiXcYVIIqGWY0wWQlqxvFGYswL…&
     client_assertion_type=urn%3Aietf%3Aparams%3Aoauth%3Aclient-assertion-type%3Ajwtbearer&
     grant_type=refresh_token&
-    refresh_token=8xLOxBtZp8
+    refresh_token=8xLOxBtZp8&
+    redirect_uri=https://rp.spid.agid.gov.it/redirect
 
 
 .. list-table:: 
