@@ -80,67 +80,56 @@ Di seguito vengono riportati i claim che DEVONO essere considerati nel parametro
     - **Operazioni** / **Valori**
     - **Supportato da**
   * - **jwks**
-    - Operazioni: *value* |br|
-      Valori: DEVE contenere i JWKS del RP relativi alle operazioni di Core |br|
-      *essential = true*
+    - Operazioni: *value*, *essential* |br|
+      Valori: value è un JSON Object che DEVE contenere keys, un JSON Array di JSON Web Key del RP relativi alle operazioni di Core, e essential è un boolean impostato a *true*.
     - |spid-icon| |cieid-icon|
   * - **grant_types**
-    - Operazioni: *subset_of*, *super_set* |br|
-      Valori: DEVE contenere *authorization_code* e *refresh_token* |br|
-      *essential = true*
+    - Operazioni: *subset_of*, *superset_of*, *essential* |br|
+      Valori: superset_of è un array che DEVE contenere authorization_code, subset_of è un array che DEVE contenere authorization_code e refresh_token, e essential è un boolean impostato a *true*.
     - |spid-icon| |cieid-icon|
   * - **id_token_signed_response_alg**
-    - Operazioni: *one_of* |br|
-      Valori: DEVE contenere uno degli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>` |br|
-      *essential = true*
+    - Operazioni: *one_of*, *essential* |br|
+      Valori: one_of è un array che DEVE contenere uno degli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>`, e essential è un boolean impostato a *true*.
     - |spid-icon| |cieid-icon|
   * - **id_token_encrypted_response_alg**
-    - Operazioni: *one_of* |br|
-      Valori: DEVE contenere uno degli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>` |br|
-      *essential = false*
+    - Operazioni: *one_of*, *essential* |br|
+      Valori: one_of è un array che DEVE contenere uno degli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>`, e essential è un boolean impostato a *false*.
     - |cieid-icon|
   * - **id_token_encrypted_response_enc**
-    - Operazioni: *one_of* |br|
-      Valori: DEVE contenere uno degli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>` |br|
-      *essential = false*
+    - Operazioni: *one_of*, *essential* |br|
+      Valori: one_of è un array che DEVE contenere uno degli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>`, e essential è un boolean impostato a *false*.
     - |cieid-icon|
   * - **userinfo_signed_response_alg**
-    - Operazioni: *one_of* |br|
-      Valori: DEVE contenere uno degli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>` |br|
-      *essential = true*
+    - Operazioni: *one_of*, *essential* |br|
+      Valori: one_of è un array che DEVE contenere uno degli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>`, e essential è un boolean impostato a *true*.
     - |spid-icon| |cieid-icon|
   * - **userinfo_encrypted_response_alg**
-    - Operazioni: *one_of* |br|
-      Valori: DEVE contenere uno degli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>` |br|
-      *essential = true*
+    - Operazioni: *one_of*, *essential* |br|
+      Valori: one_of è un array che DEVE contenere uno degli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>`, e essential è un boolean impostato a *true*.
     - |spid-icon| |cieid-icon|
   * - **userinfo_encrypted_response_enc**
-    - Operazioni: *one_of* |br|
-      Valori: DEVE contenere uno degli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>` |br|
-      *essential = true*
+    - Operazioni: *one_of*, *essential* |br|
+      Valori: one_of è un array che DEVE contenere uno degli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>`, e essential è un boolean impostato a *true*.
     - |spid-icon| |cieid-icon|
   * - **token_endpoint_auth_method**
-    - Operazioni: *one_of* |br|
-      Valori: DEVE essere *private_key_jwt* |br|
-      *essential = true*
+    - Operazioni: *one_of*, *essential* |br|
+      Valori: one_of è un array che DEVE essere *private_key_jwt*, e essential è un boolean impostato a *true*.
     - |spid-icon| |cieid-icon|
   * - **client_registration_types**
-    - Operazioni: *subset_of* |br|
-      Valori: DEVE essere *automatic* |br|
-      *essential = true*
+    - Operazioni: *subset_of*, *essential* |br|
+      Valori: subset_of è un array che DEVE avere valore *automatic*, e essential è un boolean impostato a *true*.
     - |spid-icon| |cieid-icon|
   * - **redirect_uris**
-    - Operazioni: |br|
-      *essential = true*
+    - Operazioni: *essential* |br|
+      Valori: essential è un boolean impostato a *true*.
     - |spid-icon| |cieid-icon|
   * - **client_id**
-    - Operazioni: |br|
-      *essential = true*
+    - Operazioni: *essential* |br|
+      Valori: essential è un boolean impostato a *true*.
     - |spid-icon| |cieid-icon|
   * - **response_types**
-    - Operazioni: *value* |br|
-      Valori: DEVE essere *code* |br|
-      *essential = true*
+    - Operazioni: *value*, *essential* |br|
+      Valori: value è un array che DEVE essere *code*, e essential è un boolean impostato a *true*.
     - |spid-icon| |cieid-icon|
   
 
@@ -159,62 +148,52 @@ Di seguito vengono riportati i claim che DEVONO essere considerati nel parametro
     - **Operazioni** / **Valori**
     - **Supportato da**
   * - **grant_types**
-    - Operazioni: *subset_of*, *superset_of* |br|
-      Valori: DEVE contenere *authorization_code* e *refresh_token* |br|
-      *essential = true*
+    - Operazioni: *subset_of*, *superset_of*, *essential* |br|
+      Valori: superset_of è un array che DEVE contenere *authorization_code*, subset_of è un array che DEVE contenere *authorization_code* e *refresh_token*, e essential è un boolean impostato a *true*.
     - |spid-icon| |cieid-icon|
   * - **id_token_signed_response_alg**
-    - Operazioni: *one_of* |br|
-      Valori: DEVE contenere uno degli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>` |br|
-      *essential = true*
+    - Operazioni: *one_of*, *essential* |br|
+      Valori: one_of è un array che DEVE contenere uno degli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>`, e essential è un boolean impostato a *true*.
     - |spid-icon| |cieid-icon|
   * - **id_token_encrypted_response_alg**
-    - Operazioni: *one_of* |br|
-      Valori: DEVE contenere gli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>` |br|
-      *essential = false*
+    - Operazioni: *one_of*, *essential* |br|
+      Valori: one_of è un array che DEVE contenere gli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>`, e essential è un boolean impostato a *false*.
     - |cieid-icon|
   * - **id_token_encrypted_response_enc**
-    - Operazioni: *one_of* |br|
-      Valori: DEVE contenere uno degli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>` |br|
-      *essential = false*
+    - Operazioni: *one_of*, *essential* |br|
+      Valori: one_of è un array che DEVE contenere uno degli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>`, e essential è un boolean impostato a *false*.
     - |cieid-icon|
   * - **userinfo_signed_response_alg**
-    - Operazioni: *one_of* |br|
-      Valori: DEVE contenere uno degli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>` |br|
-      *essential = true*
+    - Operazioni: *one_of*, *essential* |br|
+      Valori: one_of è un array che DEVE contenere uno degli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>`, e essential è un boolean impostato a *true*.
     - |spid-icon| |cieid-icon|
   * - **userinfo_encrypted_response_alg**
-    - Operazioni: *one_of* |br|
-      Valori: DEVE contenere uno degli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>` |br|
-      *essential = true*
+    - Operazioni: *one_of*, *essential* |br|
+      Valori: one_of è un array che DEVE contenere uno degli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>`, e essential è un boolean impostato a *true*.
     - |spid-icon| |cieid-icon|
   * - **userinfo_encrypted_response_enc**
-    - Operazioni: *one_of* |br|
-      Valori: DEVE contenere uno degli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>` |br|
-      *essential = true*
+    - Operazioni: *one_of*, *essential* |br|
+      Valori: one_of è un array che DEVE contenere uno degli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>`, e essential è un boolean impostato a *true*.
     - |spid-icon| |cieid-icon|
   * - **token_endpoint_auth_method**
-    - Operazioni: *one_of* |br|
-      Valori: DEVE essere *private_key_jwt* |br|
-      *essential = true*
+    - Operazioni: *one_of*, *essential* |br|
+      Valori: one_of è un array che DEVE essere *private_key_jwt*, e essential è un boolean impostato a *true*.
     - |spid-icon| |cieid-icon|
   * - **client_registration_types**
-    - Operazioni: *subset_of* |br|
-      Valori: DEVE essere *automatic* |br|
-      *essential = true*
+    - Operazioni: *subset_of*, *essential* |br|
+      Valori: subset_of è un array che DEVE essere *automatic*, e essential è un boolean impostato a *true*.
     - |spid-icon| |cieid-icon|
   * - **redirect_uris**
-    - Operazioni: |br|
-      *essential = true*
+    - Operazioni: *essential* |br|
+      Valori: essential è un boolean impostato a *true*.
     - |spid-icon| |cieid-icon|
   * - **client_id**
-    - Operazioni: |br|
-      *essential = true*
+    - Operazioni: *essential* |br|
+      Valori: essential è un boolean impostato a *true*.
     - |spid-icon| |cieid-icon|
   * - **response_types**
-    - Operazioni: *value* |br|
-      Valori: DEVE essere *code* |br|
-      *essential = true*
+    - Operazioni: *value*, *essential* |br|
+      Valori: value è un array che DEVE essere *code*, e essential è un boolean impostato a *true*.
     - |spid-icon| |cieid-icon|
 
 
@@ -231,9 +210,8 @@ Di seguito vengono riportati i claim che DEVONO essere considerati nel parametro
     - **Operazioni** / **Valori**
     - **Supportato da**
   * - **jwks**
-    - Operazioni: *value* |br|
-      Valori: DEVE contenere i JWKS del RP relativi alle operazioni di Core |br|
-      *essential = true*
+    - Operazioni: *value*, *essential* |br|
+      Valori: value è un JSON Object che DEVE contenere keys, un JSON Array di JSON Web Key del RP relativi alle operazioni di Core, e essential è un boolean impostato a *true*.
     - |spid-icon| |cieid-icon|
 
 
@@ -250,148 +228,125 @@ Di seguito vengono riportati i claim che DEVONO essere considerati nel parametro
     - **Operazioni** / **Valori**
     - **Supportato da**
   * - **jwks**
-    - Operazioni: *value* |br|
-      Valori: DEVE contenere i JWKS del OP relativi alle operazioni di Core |br|
-      *essential = true*
+    - Operazioni: *value*, *essential* |br|
+      Valori: value è un JSON Object che DEVE contenere keys, un JSON Array di JSON Web Key del OP relativi alle operazioni di Core, e essential è un boolean impostato a *true*.
     - |spid-icon| |cieid-icon|
   * - **revocation_endpoint_auth_methods_supported**
-    - Operazioni: *subset_of* |br|
-      Valori: DEVE essere *private_key_jwt* |br|
-      *essential = true*
+    - Operazioni: *subset_of*, *essential* |br|
+      Valori: subset_of è un array che DEVE essere *private_key_jwt*, e essential è un boolean impostato a *true*.
     - |spid-icon| |cieid-icon|
   * - **code_challenge_methods_supported**
-    - Operazioni: *subset_of* |br|
-      Valori: DEVE essere *S256* |br|
-      *essential = true*
+    - Operazioni: *subset_of*, *essential* |br|
+      Valori: subset_of è un array che DEVE essere *S256*, e essential è un boolean impostato a *true*.
     - |spid-icon| |cieid-icon|
   * - **scopes_supported**
-    - Operazioni: *subset_of*, *superset_of* |br|
-      Valori: DEVE contenere *openid*, *offline_access*. Per CIE id PUÒ contenere anche *profile*, *email*. |br|
-      *essential = true*
+    - Operazioni: *subset_of*, *superset_of*, *essential* |br|
+      Valori: superset_of e subset_of sono array che DEVONO contenere *openid* e *offline_access*, essential è un boolean impostato a *true*. Per CIE id subset_of PUÒ contenere anche *profile*, *email*.
     - |spid-icon| |cieid-icon|
   * - **response_types_supported**
-    - Operazioni: *subset_of* |br|
-      Valori: DEVE essere *code*. |br|
-      *essential = true*
+    - Operazioni: *subset_of*, *essential* |br|
+      Valori: subset_of è un array che DEVE essere *code*, e essential è un boolean impostato a *true*.
     - |spid-icon| |cieid-icon|
   * - **response_modes_supported**
-    - Operazioni: *subset_of*, *superset_of* |br|
-      Valori: DEVE contenere *form_post*, *query*. |br|
-      *essential = true*
+    - Operazioni: *subset_of*, *superset_of*, *essential* |br|
+      Valori: superset_of e subset_of sono array che DEVONO contenere *form_post* e *query*, e essential è un boolean impostato a *true*.
     - |spid-icon| |cieid-icon|
   * - **grant_types_supported**
-    - Operazioni: *subset_of*, *superset_of* |br|
-      Valori: DEVE contenere *refresh_token*, *authorization_code*. |br|
-      *essential = true*
+    - Operazioni: *subset_of*, *superset_of*, *essential* |br|
+      Valori: superset_of e subset_of sono array che DEVONO contenere *refresh_token* e *authorization_code*, e essential è un boolean impostato a *true*.
     - |spid-icon| |cieid-icon|
   * - **acr_values_supported**
-    - Operazioni: *subset_of*, *superset_of* |br|
+    - Operazioni: *subset_of*, *superset_of*, *essential* |br|
       Valori: DEVE contenere |br| *https://www.spid.gov.it/SpidL1*, |br| *https://www.spid.gov.it/SpidL2*, |br| *https://www.spid.gov.it/SpidL3*.  |br|
       *essential = true*
     - |spid-icon| |cieid-icon|
   * - **subject_types_supported**
-    - Operazioni: *subset_of* |br|
-      Valori: DEVE essere *pairwise*. |br|
-      *essential = true*
+    - Operazioni: *subset_of*, *essential* |br|
+      Valori: subset_of è un array che DEVE essere *pairwise*, e essential è un boolean impostato a *true*.
     - |spid-icon| |cieid-icon|
   * - **id_token_signing_alg_values_supported**
-    - Operazioni: *subset_of*, *superset_of* |br|
-      Valori: DEVE contenere gli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>` |br|
-      *essential = true*
+    - Operazioni: *subset_of*, *superset_of*, *essential* |br|
+      Valori: superset_of è un array che DEVE contenere gli algoritmi OBBLIGATORI sulle operazioni di Signature, subset_of è un array che DEVE contenere sia gli algoritmi OBBLIGATORI che RACCOMANDATI, e essential è un boolean impostato a *true*. Gli algoritmi di Signature sono definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>`.
     - |spid-icon| |cieid-icon|
   * - **id_token_encryption_alg_values_supported**
-    - Operazioni: *subset_of*, *superset_of* |br|
-      Valori: DEVE contenere gli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>` |br|
-      *essential = true*
+    - Operazioni: *subset_of*, *superset_of*, *essential* |br|
+      Valori: superset_of è un array che DEVE contenere gli algoritmi OBBLIGATORI sulle operazioni di Key Encryption, subset_of è un array che DEVE contenere sia gli algoritmi OBBLIGATORI che RACCOMANDATI e essential è un boolean impostato a *true*. Gli algoritmi di Key Encryption sono definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>`.
     - |cieid-icon|
   * - **id_token_encryption_enc_values_supported**
-    - Operazioni: *subset_of*, *superset_of* |br|
-      Valori: DEVE contenere gli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>` |br|
-      *essential = true*
+    - Operazioni: *subset_of*, *superset_of*, *essential* |br|
+      Valori: superset_of è un array che DEVE contenere gli algoritmi OBBLIGATORI sulle operazioni di Content Encryption, subset_of è un array che DEVE contenere sia gli algoritmi OBBLIGATORI che RACCOMANDATI e essential è un boolean impostato a *true*. Gli algoritmi di Content Encryption sono definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>`.
     - |cieid-icon|
   * - **userinfo_signing_alg_values_supported**
-    - Operazioni: *subset_of*, *superset_of* |br|
-      Valori: DEVE contenere gli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>` |br|
-      *essential = true*
+    - Operazioni: *subset_of*, *superset_of*, *essential* |br|
+      Valori: superset_of è un array che DEVE contenere gli algoritmi OBBLIGATORI sulle operazioni di Signature, subset_of è un array che DEVE contenere sia gli algoritmi OBBLIGATORI che RACCOMANDATI e essential è un boolean impostato a *true*. Gli algoritmi di Signature sono definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>`.
     - |spid-icon| |cieid-icon|
   * - **userinfo_encryption_alg_values_supported**
-    - Operazioni: *subset_of*, *superset_of* |br|
-      Valori: DEVE contenere gli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>` |br|
-      *essential = true*
+    - Operazioni: *subset_of*, *superset_of*, *essential* |br|
+      Valori: superset_of è un array che DEVE contenere gli algoritmi OBBLIGATORI sulle operazioni di Key Encryption, subset_of è un array che DEVE contenere sia gli algoritmi OBBLIGATORI che RACCOMANDATI e essential è un boolean impostato a *true*. Gli algoritmi di Key Encryption sono definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>`.
     - |spid-icon| |cieid-icon|
   * - **userinfo_encryption_enc_values_supported**
-    - Operazioni: *subset_of*, *superset_of* |br|
-      Valori: DEVE contenere gli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>` |br|
-      *essential = true*
+    - Operazioni: *subset_of*, *superset_of*, *essential* |br|
+      Valori: superset_of è un array che DEVE contenere gli algoritmi OBBLIGATORI sulle operazioni di Content Encryption, subset_of è un array che DEVE contenere sia gli algoritmi OBBLIGATORI che RACCOMANDATI e essential è un boolean impostato a *true*. Gli algoritmi di Content Encryption sono definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>`.
     - |spid-icon| |cieid-icon|
   * - **token_endpoint_auth_methods_supported**
-    - Operazioni: *subset_of* |br|
-      Valori: DEVE essere *private_key_jwt* |br|
-      *essential = true*
+    - Operazioni: *subset_of*, *essential* |br|
+      Valori: subset_of è un array che DEVE essere *private_key_jwt*, e essential è un boolean impostato a *true*.
     - |spid-icon| |cieid-icon|
   * - **token_endpoint_auth_signing_alg_values_supported**
-    - Operazioni: *subset_of*, *superset_of* |br|
-      Valori: DEVE contenere gli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>` |br|
-      *essential = true*
+    - Operazioni: *subset_of*, *superset_of*, *essential* |br|
+      Valori: superset_of è un array che DEVE contenere gli algoritmi OBBLIGATORI sulle operazioni di Signature, subset_of è un array che DEVE contenere sia gli algoritmi OBBLIGATORI che RACCOMANDATI e essential è un boolean impostato a *true*. Gli algoritmi di Signature sono definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>`.
     - |spid-icon| |cieid-icon|
   * - **claims_parameter_supported**
-    - Operazioni: *value* |br|
-      Valori: DEVE essere *true* |br|
-      *essential = true*
+    - Operazioni: *value*, *essential* |br|
+      Valori: value è un boolean che DEVE essere *true*, e essential è un boolean impostato a *true*.
     - |spid-icon| |cieid-icon|
   * - **request_parameter_supported**
-    - Operazioni: *value* |br|
-      Valori: DEVE essere *true* |br|
-      *essential = true*
+    - Operazioni: *value*, *essential* |br|
+      Valori: value è un boolean che DEVE essere *true*, e essential è un boolean impostato a *true*.
     - |spid-icon| |cieid-icon|
   * - **authorization_response_iss_parameter_supported**
-    - Operazioni: *value* |br|
-      Valori: DEVE essere *true* |br|
-      *essential = true*
+    - Operazioni: *value*, *essential* |br|
+      Valori: value è un boolean che DEVE essere *true*, e essential è un boolean impostato a *true*.
     - |spid-icon| |cieid-icon|
   * - **client_registration_types_supported**
-    - Operazioni: *subset_of* |br|
-      Valori: DEVE essere *automatic* |br|
-      *essential = true*
+    - Operazioni: *subset_of*, *essential* |br|
+      Valori: subset_of è un array che DEVE essere *automatic*, e essential è un boolean impostato a *true*.
     - |spid-icon| |cieid-icon|
   * - **request_authentication_methods_supported**
-    - Operazioni: *value* |br|
-      Valori: DEVE essere *request_object* |br|
-      *essential = true*
+    - Operazioni: *value*, *essential* |br|
+      Valori: value è un oggetto JSON contenente un array *authorization_endpoint* che DEVE essere *request_object*, e essential è un boolean impostato a *true*.
     - |spid-icon| |cieid-icon|
   * - **request_authentication_signing_alg_values_supported**
-    - Operazioni: *subset_of*, *superset_of* |br|
-      Valori: DEVE contenere gli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>` |br|
-      *essential = true*
+    - Operazioni: *subset_of*, *superset_of*, *essential* |br|
+      Valori: superset_of è un array che DEVE contenere gli algoritmi OBBLIGATORI sulle operazioni di Signature, subset_of è un array che DEVE contenere sia gli algoritmi OBBLIGATORI che RACCOMANDATI e essential è un boolean impostato a *true*. Gli algoritmi di Signature sono definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>`.
     - |spid-icon| |cieid-icon|
   * - **request_object_signing_alg_values_supported**
-    - Operazioni: *subset_of*, *superset_of* |br|
-      Valori: DEVE contenere gli algoritmi definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>` |br|
-      *essential = true*
+    - Operazioni: *subset_of*, *superset_of*, *essential* |br|
+      Valori: superset_of è un array che DEVE contenere gli algoritmi OBBLIGATORI sulle operazioni di Signature, subset_of è un array che DEVE contenere sia gli algoritmi OBBLIGATORI che RACCOMANDATI e essential è un boolean impostato a *true*. Gli algoritmi di Signature sono definiti nella Sezione :ref:`Algoritmi Crittografici <supported_algs>`.
     - |spid-icon| |cieid-icon|
   * - **issuer**
-    - Operazioni: |br|
-      *essential = true*
+    - Operazioni: *essential* |br|
+      Valori: essential è un boolean impostato a *true*.
     - |spid-icon| |cieid-icon|
   * - **authorization_endpoint**
-    - Operazioni: |br|
-      *essential = true*
+    - Operazioni: *essential* |br|
+      Valori: essential è un boolean impostato a *true*.
     - |spid-icon| |cieid-icon|
   * - **token_endpoint**
-    - Operazioni: |br|
-      *essential = true*
+    - Operazioni: *essential* |br|
+      Valori: essential è un boolean impostato a *true*.
     - |spid-icon| |cieid-icon|
   * - **userinfo_endpoint**
-    - Operazioni: |br|
-      *essential = true*
+    - Operazioni: *essential* |br|
+      Valori: essential è un boolean impostato a *true*.
     - |spid-icon| |cieid-icon|
   * - **introspection_endpoint**
-    - Operazioni: |br|
-      *essential = true*
+    - Operazioni: *essential* |br|
+      Valori: essential è un boolean impostato a *true*.
     - |spid-icon| |cieid-icon|
   * - **revocation_endpoint**
-    - Operazioni: |br|
-      *essential = true*
+    - Operazioni: *essential* |br|
+      Valori: essential è un boolean impostato a *true*.
     - |spid-icon| |cieid-icon|
 
 .. seealso:: 
