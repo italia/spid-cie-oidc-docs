@@ -73,7 +73,7 @@ In this section are defined all the acronyms that are used throughout the text.
     * - **OIDC**
       - OpenID Connect.
     * - **OIDC-FED**
-      - `OIDC Federation 1.0 <https://openid.net/specs/openid-connect-federation-1_0.html>`_.
+      - `OIDC Federation 1.0 <https://openid.net/specs/openid-connect-federation-1_0-26.html>`_.
     * - **FA**
       - Federation Authority.
     * - **TA**

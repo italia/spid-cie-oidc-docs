@@ -64,7 +64,7 @@ In questa sezione sono definiti tutti gli acronimi utilizzati all'interno del te
     * - **OIDC**
       - OpenID Connect.
     * - **OIDC-FED**
-      - `OIDC Federation 1.0 <https://openid.net/specs/openid-connect-federation-1_0.html>`_.
+      - `OIDC Federation 1.0 <https://openid.net/specs/openid-connect-federation-1_0-26.html>`_.
     * - **FA**
       - Autorità di Federazione (Federation Authority).
     * - **TA**

@@ -3,7 +3,7 @@ SPID/CIE OpenID Connect
 =======================
 
 `SPID <https://www.spid.gov.it/>`_ e `CIE id <https://www.cartaidentita.interno.gov.it/>`_ sono i Sistemi Pubblici di Identità Digitale Italiani e 
-adottano gli standard `OpenID Connect Core <https://openid.net/specs/openid-connect-core-1_0.html>`_, `International Government Assurance Profile (iGov) for OpenID Connect 1.0 <https://openid.net/specs/openid-igov-openid-connect-1_0-03.html>`_ e `OpenID Connect Federation 1.0 <https://openid.net/specs/openid-connect-federation-1_0.html>`_.
+adottano gli standard `OpenID Connect Core <https://openid.net/specs/openid-connect-core-1_0.html>`_, `International Government Assurance Profile (iGov) for OpenID Connect 1.0 <https://openid.net/specs/openid-igov-openid-connect-1_0-03.html>`_ e `OpenID Connect Federation 1.0 - draft 26 <https://openid.net/specs/openid-connect-federation-1_0-26.html>`_.
 
 Grazie all'`identità digitale <https://identitadigitale.gov.it/>`_, la Pubblica Amministrazione e i fornitori di servizi privati forniscono 
 la chiave per accedere ai servizi online attraverso una credenziale unica.

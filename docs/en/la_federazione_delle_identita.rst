@@ -18,7 +18,7 @@ and the information needed for the data interchange.
 
 The Metadata are certified by a trusted party who is AgID in the SPID Federation and the Ministry of Interior in the CIE Federation. They both correspond to the Federation Authorities.
 
-Both SPID and CIE id implement OpenID Connect Federation 1.0 and extend some functionalities, achieving
+Both SPID and CIE id implement OpenID Connect Federation 1.0 - draft 26 and extend some functionalities, achieving
 a solid implementation and producing the good practices for its adoption. For more details about the 
 standard please refer to the official specifications `OIDC-FED`_ and the section :ref:`Differences with OIDC Federation 1.0<differenze_con_oidc_federation>`. 
 

@@ -8,7 +8,7 @@ Technical references
     :header-rows: 0
 
     * - `OIDC-FED`_
-      - OpenID Connect Federation 1.0 
+      - OpenID Connect Federation 1.0 - draft 26 
     * - `iGov.OIDC`_
       - Varley, M., Grassi, P. "iGov Profile for OpenID Connect", October 2018.
     * - `OpenID.Core`_

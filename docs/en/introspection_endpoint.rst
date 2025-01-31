@@ -11,7 +11,7 @@ about a token in their possession, as for example its validity.
 .. seealso::
 
  - https://tools.ietf.org/html/rfc7662
- - https://openid.net/specs/openid-igov-oauth2-1_0-03.html#Section-3.2.2
+ - https://openid.net/specs/openid-igov-oauth2-1_0-03.html#rfc.section.3.2.2
 
 Request
 +++++++

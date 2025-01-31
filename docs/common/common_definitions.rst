@@ -23,9 +23,9 @@
 .. |warning-message-en| replace:: All the examples contained in this documentation are meant to be non-normative
 
 
-.. _OIDC-FED: https://openid.net/specs/openid-connect-federation-1_0.html
-.. _OIDC-FED#RP_metadata: https://openid.net/specs/openid-connect-federation-1_0.html#Section-4.1
-.. _OIDC-FED#Federation_Entity: https://openid.net/specs/openid-connect-federation-1_0.html#Section-4.6
+.. _OIDC-FED: https://openid.net/specs/openid-connect-federation-1_0-26.html
+.. _OIDC-FED#RP_metadata: https://openid.net/specs/openid-connect-federation-1_0-26.html#section-4.1
+.. _OIDC-FED#Federation_Entity: https://openid.net/specs/openid-connect-federation-1_0-26.html#section-4.6
 .. _LG-AA: https://www.agid.gov.it/sites/default/files/repository_files/llgg_attribute_authorities_0.pdf
 .. _OpenID.Core: https://openid.net/specs/openid-connect-core-1_0-27.html
 .. _OpenID.Core#ClaimsParameter: https://openid.net/specs/openid-connect-core-1_0.html#ClaimsParameter
@@ -43,23 +43,23 @@
 .. _OpenID.Discovery: https://openid.net/specs/openid-connect-discovery-1_0.html
 .. _OpenID.Discovery#OP_metadata: https://openid.net/specs/openid-connect-discovery-1_0.html#ProviderMetadata
 .. _OpenID Connect Core: https://openid.net/specs/openid-connect-core-1_0.html
-.. _OIDC-FED#Section_1.2: https://openid.net/specs/openid-connect-federation-1_0.html#Section-1.2
-.. _OIDC-FED#Section_3.1: https://openid.net/specs/openid-connect-federation-1_0.html#Section-3.1
-.. _OIDC-FED#Section-4.1: https://openid.net/specs/openid-connect-federation-1_0.html#Section-4.1
-.. _OIDC-FED#Section-4.2: https://openid.net/specs/openid-connect-federation-1_0.html#Section-4.2
-.. _OIDC-FED#Section-4.5: https://openid.net/specs/openid-connect-federation-1_0.html#Section-4.5
-.. _OIDC-FED#Section-4.6: https://openid.net/specs/openid-connect-federation-1_0.html#Section-4.6
-.. _OIDC-FED#Section-5.1: https://openid.net/specs/openid-connect-federation-1_0.html#Section-5.1
-.. _OIDC-FED#Section-5.3.1: https://openid.net/specs/openid-connect-federation-1_0.html#Section-5.3.1
-.. _OIDC-FED#Section-5.3.2: https://openid.net/specs/openid-connect-federation-1_0.html#Section-5.3.2
-.. _OIDC-FED#Section-6: https://openid.net/specs/openid-connect-federation-1_0.html#Section-6
-.. _OIDC-FED#Section-7.1: https://openid.net/specs/openid-connect-federation-1_0.html#Section-7.1
-.. _OIDC-FED#Section-7.1.1: https://openid.net/specs/openid-connect-federation-1_0.html#Section-7.1.1
-.. _OIDC-FED#Section-7.2: https://openid.net/specs/openid-connect-federation-1_0.html#Section-7.2
-.. _OIDC-FED#Section-7.3: https://openid.net/specs/openid-connect-federation-1_0.html#Section-7.3
-.. _OIDC-FED#Section-7.4: https://openid.net/specs/openid-connect-federation-1_0.html#Section-7.4
-.. _OIDC-FED#Section-7.4.1: https://openid.net/specs/openid-connect-federation-1_0.html#Section-7.4.1
-.. _OIDC-FED#Section-7.5: https://openid.net/specs/openid-connect-federation-1_0.html#Section-7.5
+.. _OIDC-FED#Section_1.2: https://openid.net/specs/openid-connect-federation-1_0-26.html#section-1.2
+.. _OIDC-FED#Section_3.1: https://openid.net/specs/openid-connect-federation-1_0-26.html#section-3.1
+.. _OIDC-FED#Section-4.1: https://openid.net/specs/openid-connect-federation-1_0-26.html#section-4.1
+.. _OIDC-FED#Section-4.2: https://openid.net/specs/openid-connect-federation-1_0-26.html#section-4.2
+.. _OIDC-FED#Section-4.5: https://openid.net/specs/openid-connect-federation-1_0-26.html#section-4.5
+.. _OIDC-FED#Section-4.6: https://openid.net/specs/openid-connect-federation-1_0-26.html#section-4.6
+.. _OIDC-FED#Section-5.1: https://openid.net/specs/openid-connect-federation-1_0-26.html#section-5.1
+.. _OIDC-FED#Section-5.3.1: https://openid.net/specs/openid-connect-federation-1_0-26.html#section-5.3.1
+.. _OIDC-FED#Section-5.3.2: https://openid.net/specs/openid-connect-federation-1_0-26.html#section-5.3.2
+.. _OIDC-FED#Section-6: https://openid.net/specs/openid-connect-federation-1_0-26.html#section-6
+.. _OIDC-FED#Section-7.1: https://openid.net/specs/openid-connect-federation-1_0-26.html#section-7.1
+.. _OIDC-FED#Section-7.1.1: https://openid.net/specs/openid-connect-federation-1_0-26.html#section-7.1.1
+.. _OIDC-FED#Section-7.2: https://openid.net/specs/openid-connect-federation-1_0-26.html#section-7.2
+.. _OIDC-FED#Section-7.3: https://openid.net/specs/openid-connect-federation-1_0-26.html#section-7.3
+.. _OIDC-FED#Section-7.4: https://openid.net/specs/openid-connect-federation-1_0-26.html#section-7.4
+.. _OIDC-FED#Section-7.4.1: https://openid.net/specs/openid-connect-federation-1_0-26.html#section-7.4.1
+.. _OIDC-FED#Section-7.5: https://openid.net/specs/openid-connect-federation-1_0-26.html#section-7.5
 .. _SPID UX Guidelines: https://www.spid.gov.it/wp-content/uploads/2021/07/agid-spid-lg-interfacce-informazioni-idp-sp.pdf
 .. _Linee Guida UX SPID: https://www.spid.gov.it/wp-content/uploads/2021/07/agid-spid-lg-interfacce-informazioni-idp-sp.pdf
 .. _AgID: https://www.agid.gov.it/

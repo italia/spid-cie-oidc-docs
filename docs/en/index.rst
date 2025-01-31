@@ -2,7 +2,7 @@
 SPID/CIE OpenID Connect
 =======================
 
-`SPID <https://www.spid.gov.it/>`_ and `CIE id <https://www.cartaidentita.interno.gov.it/>`_ are the Italian Systems of Public Digital Identity. They adopt the standards `OpenID Connect Core <https://openid.net/specs/openid-connect-core-1_0.html>`_, `International Government Assurance Profile (iGov) for OpenID Connect 1.0 <https://openid.net/specs/openid-igov-openid-connect-1_0-03.html>`_ and `OpenID Connect Federation 1.0 <https://openid.net/specs/openid-connect-federation-1_0.html>`_.
+`SPID <https://www.spid.gov.it/>`_ and `CIE id <https://www.cartaidentita.interno.gov.it/>`_ are the Italian Systems of Public Digital Identity. They adopt the standards `OpenID Connect Core <https://openid.net/specs/openid-connect-core-1_0.html>`_, `International Government Assurance Profile (iGov) for OpenID Connect 1.0 <https://openid.net/specs/openid-igov-openid-connect-1_0-03.html>`_ and `OpenID Connect Federation 1.0 - draft 26 <https://openid.net/specs/openid-connect-federation-1_0-26.html>`_.
 
 Thanks to the `digital identity <https://identitadigitale.gov.it/>`_ the public and private services provides the keys to access the online services through unique access credentials.
 
