@@ -80,16 +80,16 @@ L'intestazione del JWE DEVE contenere i seguenti parametri:
      - **Descrizione**
      - **Supportato da**
    * - **alg**
-     - String. Vedi :ref:`supported_algs`..
+     - OBBLIGATORIO. String. Vedi :ref:`supported_algs`..
      - |spid-icon| |cieid-icon|
    * - **kid**
-     - Vedi :rfc:`7638#section_3`. 
+     - OBBLIGATORIO. Vedi :rfc:`7638#section_3`. 
      - |spid-icon| |cieid-icon|
    * - **enc**
-     - String. Vedi :ref:`supported_algs`..
+     - OBBLIGATORIO. String. Vedi :ref:`supported_algs`..
      - |spid-icon| |cieid-icon|
    * - **cty**
-     - String. DEVE essere valorizzato con "JWT".
+     - OBBLIGATORIO. String. DEVE essere valorizzato con "JWT".
      - |spid-icon| |cieid-icon|
 
 
@@ -103,23 +103,23 @@ Il payload del JWE è un JWS contenente all'interno del suo payload i seguenti p
      - **Descrizione**
      - **Supportato da**
    * - **sub**
-     - String. Identificatore del soggetto, coincidente con quello già rilasciato nell'ID Token.
+     - OBBLIGATORIO. String. Identificatore del soggetto, coincidente con quello già rilasciato nell'ID Token.
        Il RP DEVE verificare che il valore coincida con quello contenuto nell'ID Token.
      - |spid-icon| |cieid-icon|
    * - **iat**
-     - UNIX Timestamp con l'istante di generazione del JWT, codificato come NumericDate come indicato in :rfc:`7519`. 
+     - OBBLIGATORIO. UNIX Timestamp con l'istante di generazione del JWT, codificato come NumericDate come indicato in :rfc:`7519`. 
      - |spid-icon| |cieid-icon|
    * - **exp**
-     - UNIX Timestamp con l'istante di scadenza del JWT, codificato come NumericDate come indicato in :rfc:`7519`.
+     - OBBLIGATORIO. UNIX Timestamp con l'istante di scadenza del JWT, codificato come NumericDate come indicato in :rfc:`7519`.
      - |spid-icon| |cieid-icon|
    * - **aud**
-     - String. Identificatore del soggetto destinatario della response (RP).
+     - OBBLIGATORIO. String. Identificatore del soggetto destinatario della response (RP).
        Il RP DEVE verificare che il valore coincida con il proprio client_id.
      - |spid-icon| |cieid-icon|
    * - **iss**
-     - String. URI che identifica univocamente l'OP.
+     - OBBLIGATORIO. String. URI che identifica univocamente l'OP.
      - |spid-icon| |cieid-icon|
-   * - **<attributo>**
+   * - **<attributo>** //TODO:OBBLIGATORIO o OPZIONALE? se non richiede nulla dovrebbe tornare il minimo
      - I claim richiesti al momento dell'autenticazione.
      - |spid-icon| |cieid-icon|
 
@@ -133,13 +133,13 @@ L'intestazione del JWS DEVE contenere i seguenti parametri:
      - **Descrizione**
      - **Supportato da**
    * - **alg**
-     - String. Vedi :ref:`supported_algs`..
+     - OBBLIGATORIO. String. Vedi :ref:`supported_algs`..
      - |spid-icon| |cieid-icon|
    * - **kid**
-     - Vedi :rfc:`7638#section_3`. 
+     - OBBLIGATORIO. Vedi :rfc:`7638#section_3`. 
      - |spid-icon| |cieid-icon|
    * - **cty**
-     - String. DEVE essere valorizzato con "JWT".
+     - OBBLIGATORIO. String. DEVE essere valorizzato con "JWT".
      - |spid-icon| |cieid-icon|
 
 Codici di errore

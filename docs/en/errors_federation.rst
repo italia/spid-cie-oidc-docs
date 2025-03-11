@@ -16,10 +16,10 @@ In case of errors during Federation operations, entities MUST give anomaly messa
      - **Description**
      - **Supported by**
    * - **error**
-     - See :ref:`Federation error codes <codici_errore_federation>`
+     - REQUIRED. See :ref:`Federation error codes <codici_errore_federation>`
      - |spid-icon| |cieid-icon|
    * - **error_description**
-     - Error description.
+     - REQUIRED. Error description.
      - |spid-icon| |cieid-icon|
 
 

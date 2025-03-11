@@ -36,16 +36,16 @@ Di seguito i parametri obbligatori nella richiesta di autenticazione *HTTP*.
     - **Descrizione**
     - **Supportato da**
   * - **scope**
-    - Riporta di valori di *scope* supportati dall'OP e definiti dal parametro **scopes_supported** nel :ref:`Metadata OP <MetadataOP>`. DEVE essere presente almeno il valore *openid*.
+    - OBBLIGATORIO. Riporta di valori di *scope* supportati dall'OP e definiti dal parametro **scopes_supported** nel :ref:`Metadata OP <MetadataOP>`. DEVE essere presente almeno il valore *openid*.
     - |spid-icon| |cieid-icon|
   * - **code_challenge**
-    - Vedi :rfc:`7636#section-4.2`.
+    - OBBLIGATORIO. Vedi :rfc:`7636#section-4.2`.
     - |spid-icon| |cieid-icon|
   * - **code_challenge_method**
-    - Come definito dal parametro **code_challenge_methods_supported** nel :ref:`Metadata OP <MetadataOP>`.
+    - OBBLIGATORIO. Come definito dal parametro **code_challenge_methods_supported** nel :ref:`Metadata OP <MetadataOP>`.
     - |spid-icon| |cieid-icon|
   * - **request**
-    - Vedi `OpenID.Core#JWTRequests`_. DEVE essere un **JWT** firmato.
+    - OBBLIGATORIO. Vedi `OpenID.Core#JWTRequests`_. DEVE essere un **JWT** firmato.
     - |spid-icon| |cieid-icon|
 
 Di seguito una tabella che riporta la composizione dell'header del **JWT**.
@@ -60,10 +60,10 @@ Di seguito una tabella che riporta la composizione dell'header del **JWT**.
     - **Descrizione**
     - **Supportato da**
   * - **alg**
-    - Vedi :rfc:`7516#section-4.1.1`. Vedi :ref:`supported_algs`..
+    - OBBLIGATORIO. Vedi :rfc:`7516#section-4.1.1`. Vedi :ref:`supported_algs`..
     - |spid-icon| |cieid-icon|
   * - **kid**
-    - Vedi :rfc:`7638#section_3`. 
+    - OBBLIGATORIO. Vedi :rfc:`7638#section_3`. 
     - |spid-icon| |cieid-icon|
 
 .. note::
@@ -82,19 +82,19 @@ Il payload del **JWT** contiene i seguenti parametri obbligatori.
      - **Descrizione**
      - **Supportato da**
    * - **client_id**
-     - Vedi `OpenID.Registration`_. DEVE essere valorizzato con un HTTPS URL che identifica univocamente il RP.
+     - OBBLIGATORIO. Vedi `OpenID.Registration`_. DEVE essere valorizzato con un HTTPS URL che identifica univocamente il RP.
      - |spid-icon| |cieid-icon|
    * - **code_challenge**
-     - Come definito nella  :ref:`Tabella dei parametri HTTP <tabella_parametri_authz_req>`.
+     - OBBLIGATORIO. Come definito nella  :ref:`Tabella dei parametri HTTP <tabella_parametri_authz_req>`.
      - |spid-icon| |cieid-icon|
    * - **code_challenge_method**
-     - Come definito nella  :ref:`Tabella dei parametri HTTP <tabella_parametri_authz_req>`.
+     - OBBLIGATORIO. Come definito nella  :ref:`Tabella dei parametri HTTP <tabella_parametri_authz_req>`.
      - |spid-icon| |cieid-icon|
    * - **nonce**
-     - Vedi `OpenID.Core#AuthRequest`_. DEVE essere una stringa casuale di almeno 32 caratteri alfanumerici. Questo valore sarà restituito nell'ID Token fornito dal Token Endpoint, in modo da consentire al client di verificare che sia uguale a quello inviato nella richiesta di autenticazione.
+     - OBBLIGATORIO. Vedi `OpenID.Core#AuthRequest`_. DEVE essere una stringa casuale di almeno 32 caratteri alfanumerici. Questo valore sarà restituito nell'ID Token fornito dal Token Endpoint, in modo da consentire al client di verificare che sia uguale a quello inviato nella richiesta di autenticazione.
      - |spid-icon| |cieid-icon|
    * - **prompt**
-     - Vedi `OpenID.Core#AuthRequest`_. I valori consentiti sono:
+     - OBBLIGATORIO. Vedi `OpenID.Core#AuthRequest`_. I valori consentiti sono:
        
        **consent**: Se non è già attiva una sessione di Single Sign-On, 
        l'OP fa una richiesta di autenticazione all'utente.
@@ -105,39 +105,39 @@ Il payload del **JWT** contiene i seguenti parametri obbligatori.
 
      - |spid-icon| |cieid-icon|
    * - **redirect_uri**
-     - Vedi `OpenID.Core#AuthRequest`_. DEVE essere una URL indicata nel :ref:`Metadata RP <MetadataRP>`. 
+     - OBBLIGATORIO. Vedi `OpenID.Core#AuthRequest`_. DEVE essere una URL indicata nel :ref:`Metadata RP <MetadataRP>`. 
      - |spid-icon| |cieid-icon|
    * - **response_type**
-     - Vedi `OpenID.Core#AuthRequest`_. Come definito dal parametro **response_types_supported** nel :ref:`Metadata OP <MetadataOP>`.
+     - OBBLIGATORIO. Vedi `OpenID.Core#AuthRequest`_. Come definito dal parametro **response_types_supported** nel :ref:`Metadata OP <MetadataOP>`.
      - |spid-icon| |cieid-icon|
    * - **scope**
-     - Come definito nella  :ref:`Tabella dei parametri HTTP <tabella_parametri_authz_req>`.
+     - OBBLIGATORIO. Come definito nella  :ref:`Tabella dei parametri HTTP <tabella_parametri_authz_req>`.
      - |spid-icon| |cieid-icon|
    * - **acr_values**
-     - Vedi `OpenID.Core#AuthRequest`_. Come definito dal parametro **acr_values_supported** nel :ref:`Metadata OP <MetadataOP>`.
+     - OBBLIGATORIO. Vedi `OpenID.Core#AuthRequest`_. Come definito dal parametro **acr_values_supported** nel :ref:`Metadata OP <MetadataOP>`.
        Valori di riferimento della classe di contesto dell'Authentication Request. 
        DEVE essere una stringa separata da uno spazio, che specifica i valori "acr" richiesti in ordine di preferenza. L'OP PUÒ utilizzare un'autenticazione ad un livello più alto di quanto richiesto. Tale scelta non DEVE comportare un esito negativo della richiesta.
      - |spid-icon| |cieid-icon|
    * - **claims**
-     - Vedi `OpenID.Core#ClaimsRequestParameter`_. Vedi Sezione "Parametri scope e claims".
+     - OBBLIGATORIO. Vedi `OpenID.Core#ClaimsRequestParameter`_. Vedi Sezione "Parametri scope e claims".
      - |spid-icon| |cieid-icon|
    * - **state**
-     - Vedi `OpenID.Core#AuthRequest`_. DEVE essere una stringa casuale di almeno 32 caratteri alfanumerici. Identificativo univoco della sessione lato RP. Questo valore verrà restituito al client nella risposta al termine dell'autenticazione.
+     - OBBLIGATORIO. Vedi `OpenID.Core#AuthRequest`_. DEVE essere una stringa casuale di almeno 32 caratteri alfanumerici. Identificativo univoco della sessione lato RP. Questo valore verrà restituito al client nella risposta al termine dell'autenticazione.
      - |spid-icon| |cieid-icon|
    * - **exp**
-     - UNIX Timestamp con l'istante di scadenza del JWT, codificato come NumericDate come indicato in :rfc:`7519`
+     - OBBLIGATORIO. UNIX Timestamp con l'istante di scadenza del JWT, codificato come NumericDate come indicato in :rfc:`7519`
      - |spid-icon| |cieid-icon|
    * - **iat**
-     - UNIX Timestamp con l'istante di generazione del JWT, codificato come NumericDate come indicato in :rfc:`7519`
+     - OBBLIGATORIO. UNIX Timestamp con l'istante di generazione del JWT, codificato come NumericDate come indicato in :rfc:`7519`
      - |spid-icon| |cieid-icon|
    * - **iss**
-     - DEVE corrispondere al *client_id*. 
+     - OBBLIGATORIO. DEVE corrispondere al *client_id*. 
      - |spid-icon| |cieid-icon|
    * - **aud**
-     - DEVE corrispondere all'identificativo del OP (parametro *issuer* presente nel :ref:`Metadata OP <MetadataOP>`.)
+     - OBBLIGATORIO. DEVE corrispondere all'identificativo del OP (parametro *issuer* presente nel :ref:`Metadata OP <MetadataOP>`.)
      - |spid-icon| |cieid-icon|
    * - **ui_locales**
-     - Lingue preferibili per visualizzare le pagine dell’OP. L’OP può ignorare questo parametro se non dispone di nessuna delle lingue indicate. Lista di codici RFC5646 separati da spazi.
+     - OPZIONALE. Lingue preferibili per visualizzare le pagine dell’OP. L’OP può ignorare questo parametro se non dispone di nessuna delle lingue indicate. Lista di codici RFC5646 separati da spazi.
      - |spid-icon| |cieid-icon|
 
 .. note::
@@ -220,13 +220,13 @@ reindirizza l'utente aggiungendo i seguenti parametri obbligatori come query par
      - **Descrizione**
      - **Supportato da**
    * - **code**
-     - Codice univoco di autorizzazione (*Authorization Code*) che il client può passare al Token Endpoint per ottenere un ID Token e un Access Token. Questo ha il vantaggio di non esporre alcun token allo User Agent o a malware che controllano questo. 
+     - OBBLIGATORIO. Codice univoco di autorizzazione (*Authorization Code*) che il client può passare al Token Endpoint per ottenere un ID Token e un Access Token. Questo ha il vantaggio di non esporre alcun token allo User Agent o a malware che controllano questo. 
      - |spid-icon| |cieid-icon|
    * - **state**
-     - Valore state incluso nell'*Authentication Request*. Il client è tenuto a verificarne la corrispondenza. Deve essere lo stesso valore indicato dal client nella Authorization Request.
+     - OBBLIGATORIO. Valore state incluso nell'*Authentication Request*. Il client è tenuto a verificarne la corrispondenza. Deve essere lo stesso valore indicato dal client nella Authorization Request.
      - |spid-icon| |cieid-icon|
    * - **iss**
-     - Identificatore univoco dell'OP che ha creato l'Authentication Response. Il RP DEVE validare 
+     - OBBLIGATORIO. Identificatore univoco dell'OP che ha creato l'Authentication Response. Il RP DEVE validare 
        questo parametro e NON DEVE permettere a più OP di usare lo stesso identificatore.
      - |cieid-icon|
 
@@ -254,14 +254,14 @@ Connect, come descritti nelle relative tabelle definite dalle `Linee Guida UX SP
      - **Descrizione**
      - **Supportato da**
    * - **Errore**
-     - Vedi :ref:`Codici di errori <codici_errore>`
+     - OBBLIGATORIO. Vedi :ref:`Codici di errori <codici_errore>`
      - |spid-icon| |cieid-icon|
    * - **Descrizione dell'errore**
-     - Descrizione più dettagliata dell'errore, finalizzata ad aiutare lo sviluppatore per eventuale debugging. Questo messaggio non è 
+     - OBBLIGATORIO. Descrizione più dettagliata dell'errore, finalizzata ad aiutare lo sviluppatore per eventuale debugging. Questo messaggio non è 
        destinato ad essere visualizzato all'utente (a tal fine si faccia riferimento alle `Linee Guida UX SPID`_)
      - |spid-icon| |cieid-icon|
    * - **state**
-     - Parametro obbligatorio solo nel caso di risposta di errore alla *Authentication Request* e DEVE essere uguale al valore *state* incluso nella *Authentication Request*.  Il RP DEVE verificare che corrisponda a quello inviato nella *Authentication Request*.
+     -  è una risposta di errore alla *Authentication Request* e DEVE essere uguale al valore *state* incluso nella *Authentication Request*.  Il RP DEVE verificare che corrisponda a quello inviato nella *Authentication Request*.
      - |spid-icon| |cieid-icon|
 
 

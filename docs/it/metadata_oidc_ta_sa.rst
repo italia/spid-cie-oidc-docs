@@ -26,7 +26,7 @@ L'EC di un TA e di SA DEVE configurare un metadata di tipo **"federation_entity"
   * - **Claim**
     - **Descrizione**
     - **Supportato da**
-  * - **organization_name**
+  * - **organization_name** //TODO: non presenti fino a contacts, capire se opzionali
     - Vedi Sezione 4.8 di `OIDC-FED`_
     - |spid-icon| |cieid-icon|
   * - **homepage_uri**
@@ -42,16 +42,16 @@ L'EC di un TA e di SA DEVE configurare un metadata di tipo **"federation_entity"
     - PEC istituzionale dell'ente. Vedi Sezione 4.8 di `OIDC-FED`_
     - |spid-icon| |cieid-icon|
   * - **federation_fetch_endpoint**
-    - Vedi Sezione :ref:`Endpoint di Federazione <federation_endpoint>` e `OIDC-FED`_ Section 4.8
+    - OBBLIGATORIO. Vedi Sezione :ref:`Endpoint di Federazione <federation_endpoint>` e `OIDC-FED`_ Section 4.8
     - |spid-icon| |cieid-icon|
   * - **federation_list_endpoint**
-    - Vedi Sezione :ref:`Endpoint di Federazione <federation_endpoint>` e `OIDC-FED`_ Section 4.8
+    - OBBLIGATORIO. Vedi Sezione :ref:`Endpoint di Federazione <federation_endpoint>` e `OIDC-FED`_ Section 4.8
     - |spid-icon| |cieid-icon|
   * - **federation_trust_mark_status_endpoint**
-    - Vedi Sezione :ref:`Endpoint di Federazione <federation_endpoint>` e `OIDC-FED`_ Section 4.8
+    - OBBLIGATORIO. Vedi Sezione :ref:`Endpoint di Federazione <federation_endpoint>` e `OIDC-FED`_ Section 4.8
     - |spid-icon| |cieid-icon|
   * - **federation_resolve_endpoint**
-    - Vedi Sezione :ref:`Endpoint di Federazione <federation_endpoint>` e `OIDC-FED`_ Section 4.8
+    - OBBLIGATORIO. Vedi Sezione :ref:`Endpoint di Federazione <federation_endpoint>` e `OIDC-FED`_ Section 4.8
     - |spid-icon| |cieid-icon|
 
 
