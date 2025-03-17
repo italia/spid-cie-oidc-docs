@@ -15,7 +15,7 @@ In caso di errore durante le operazioni di federazione, le entità DEVONO rappre
    * - **Claim**
      - **Descrizione**
      - **Supportato da**
-   * - **Errore**//TODO:sono usati i nomi inglesi come parametri
+   * - **Errore**
      - OBBLIGATORIO. Vedi :ref:`Codici di errori <codici_errore_federation>`
      - |spid-icon| |cieid-icon|
    * - **Descrizione dell'errore**

@@ -70,7 +70,7 @@ Trust Anchors e Intermediari (SA) DEVONO pubblicare una policy relativa ai rispe
 Metadata Policy di un TA per un RP
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Di seguito vengono riportati i claim che DEVONO essere considerati nel parametro *metadata* di tipo *openid_realying_party* //TODO:typo. all'interno della policy che il TA stabilisce per un RP suo discendente diretto. 
+Di seguito vengono riportati i claim che DEVONO essere considerati nel parametro *metadata* di tipo *openid_realying_party* all'interno della policy che il TA stabilisce per un RP suo discendente diretto. 
 
 .. list-table::
   :widths: 20 20 20
@@ -85,7 +85,7 @@ Di seguito vengono riportati i claim che DEVONO essere considerati nel parametro
       *essential = true*
     - |spid-icon| |cieid-icon|
   * - **grant_types**
-    - OBBLIGATORIO. Operazioni: *subset_of*, *super_set* |br| //TODO:typo
+    - OBBLIGATORIO. Operazioni: *subset_of*, *super_set* |br|
       Valori: DEVE contenere *authorization_code* e *refresh_token* |br|
       *essential = true*
     - |spid-icon| |cieid-icon|
