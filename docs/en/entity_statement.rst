@@ -2,7 +2,7 @@
 
 .. _Entity_Statement:
 
-Entity Statements
+Entity Statement
 -----------------
 
 The basic component for building a Trust Chain is the **Entity Statement (ES)**, a signed JWT that

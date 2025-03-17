@@ -223,6 +223,9 @@ The claims defined inside the TMs are compliant with the elements defined in the
     * - **organization_name**
       - String. The complete name of the service-supplying Entity.
       - |spid-icon| |cieid-icon|
+    * - **sa_profile**
+      - String. REQUIRED for SA. Specifies the Aggregator Profile, **full** or **light**.
+      - |spid-icon| |cieid-icon|
 
 .. warning::
 
