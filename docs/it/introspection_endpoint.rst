@@ -85,22 +85,22 @@ L'Introspection Endpoint risponde con un oggetto JSON definito come segue.
      - OBBLIGATORIO. Valore booleano che indica la validità del token. Se il token è scaduto, è revocato o non è mai stato emesso per il client_id chiamante, l'Introspection Endpoint deve restituire false.
      -  |spid-icon| |cieid-icon|
    * - **scope**
-     - OBBLIGATORIO. Lista degli scope richiesti al momento dell’Authorization Request.
+     - OPZIONALE. Lista degli scope richiesti al momento dell’Authorization Request.
      -  |spid-icon|
    * - **exp**
-     - OBBLIGATORIO. Scadenza del token.
+     - OPZIONALE. Scadenza del token.
      -  |spid-icon|
    * - **sub**
-     - OBBLIGATORIO. Identificatore del soggetto, coincidente con quello già rilasciato nell’ID Token. Il RP deve verificare che il valore coincida con quello contenuto nell’ID Token.
+     - OPZIONALE. Identificatore del soggetto, coincidente con quello già rilasciato nell’ID Token. Il RP deve verificare che il valore coincida con quello contenuto nell’ID Token.
      -  |spid-icon|
    * - **client_id**
-     - OBBLIGATORIO. URI che identifica univocamente il RP come da Registro SPID. Il RP deve verificare che il valore coincida con il proprio client_id.
+     - OPZIONALE. URI che identifica univocamente il RP come da Registro SPID. Il RP deve verificare che il valore coincida con il proprio client_id.
      -  |spid-icon|
    * - **iss**
-     - OBBLIGATORIO. Identificatore dell’OP che lo contraddistingue univocamente nella federazione nel formato Uniform Resource Locator (URL). Il client è tenuto a verificare che questo valore corrisponda all’OP chiamato.
+     - OPZIONALE. Identificatore dell’OP che lo contraddistingue univocamente nella federazione nel formato Uniform Resource Locator (URL). Il client è tenuto a verificare che questo valore corrisponda all’OP chiamato.
      -  |spid-icon|
    * - **aud**
-     - OBBLIGATORIO. Contiene il client ID.	Il client è tenuto a verificare che questo valore corrisponda al proprio client ID.
+     - OPZIONALE. Contiene il client ID.	Il client è tenuto a verificare che questo valore corrisponda al proprio client ID.
      -  |spid-icon|
 
 Codici di errore

@@ -78,8 +78,8 @@ Gli EC delle entità Foglia e intermediari, in aggiunta ai claim precedentemente
    * - **Claim**
      - **Descrizione**
      - **Supportato da**
-   * - **authority_hints** //TODO: non presente nel EC dal TA riportato OPZIONALE?
-     - Array di URL. Contiene una lista di URL delle entità superiori, quali TA o SA che POSSONO emettere un ES relativo a questo soggetto. 
+   * - **authority_hints**
+     - OBBLIGATORIO QUANDO il partecipante non è il Trust Anchor. Array di URL. Contiene una lista di URL delle entità superiori, quali TA o SA che POSSONO emettere un ES relativo a questo soggetto. 
      - |spid-icon| |cieid-icon|
    * - **trust_marks**
      - OBBLIGATORIO QUANDO il partecipante non è il Trust Anchor. Un array JSON contenente i Trust Mark. Vedere la Sezione :ref:`Trust Mark <Trust_Mark>`.

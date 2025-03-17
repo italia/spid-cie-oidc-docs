@@ -35,8 +35,8 @@ Entity Configuration - common claims
    * - **sub**
      - REQUIRED. String. Identifier of the Entity to which it is referred.
      - |spid-icon| |cieid-icon|
-   * - REQUIRED. **iat**
-     - UNIX Timestamp with the time of generation of the JWT, coded as NumericDate as indicated at :rfc:`7519`
+   * - **iat**
+     - REQUIRED. UNIX Timestamp with the time of generation of the JWT, coded as NumericDate as indicated at :rfc:`7519`
      - |spid-icon| |cieid-icon| 
    * - **exp**
      - REQUIRED. UNIX Timestamp with the expiry time of the JWT, coded as NumericDate as indicated at :rfc:`7519`.
@@ -81,7 +81,7 @@ the following claims:
      - **Description**
      - **Supported by**
    * - **authority_hints**
-     - Array if URLs. It contains a list of URLs of the superior Entities, such as TA or SA, 
+     - REQUIRED WHEN the member is not the TA. Array if URLs. It contains a list of URLs of the superior Entities, such as TA or SA, 
        that MAY issue an ES related to this subject.
      - |spid-icon| |cieid-icon|
    * - **trust_marks**

@@ -92,22 +92,22 @@ The Introspection Endpoint responds with a JSON Object defined as follows.
        has never been issued for the calling client_id, the Introspection Endpoint must return false.
      -  |spid-icon| |cieid-icon|
    * - **scope**
-     - REQUIRED. List of scopes required in the Authorization Request.
+     - OPTIONAL. List of scopes required in the Authorization Request.
      -  |spid-icon|
    * - **exp**
-     - REQUIRED. Token expiration.
+     - OPTIONAL. Token expiration.
      -  |spid-icon|
    * - **sub**
-     - REQUIRED. Subject identifier. The same released in the ID Token. The RP MUST verify that the value is the same contained in the ID Token.
+     - OPTIONAL. Subject identifier. The same released in the ID Token. The RP MUST verify that the value is the same contained in the ID Token.
      -  |spid-icon|
    * - **client_id**
-     - REQUIRED. URI of the RP registered in the federation. The RP MUST verify that the value is the same of the own client_id.
+     - OPTIONAL. URI of the RP registered in the federation. The RP MUST verify that the value is the same of the own client_id.
      -  |spid-icon|
    * - **iss**
-     - REQUIRED. OP identified registered in the federation in Uniform Resource Locator (URL) format. The RP MUST verify that the value is the same of the OP queried.
+     - OPTIONAL. OP identified registered in the federation in Uniform Resource Locator (URL) format. The RP MUST verify that the value is the same of the OP queried.
      -  |spid-icon|
    * - **aud**
-     - REQUIRED. RP client ID. The RP MUST verify that the value is the same of the own client ID.
+     - OPTIONAL. RP client ID. The RP MUST verify that the value is the same of the own client ID.
      -  |spid-icon|
 
 Error Codes
