@@ -198,19 +198,19 @@ The claims defined inside the TMs are compliant with the elements defined in the
       - REQUIRED. UNIX Timestamp with the JWT issuance time, coded as NumericDate as indicated at :rfc:`7519`
       - |spid-icon| |cieid-icon|
     * - **logo_uri**
-      - String. An URL that points to the logo that represents the Trust Mark.
+      - {{TO_VERIFY}}. String. An URL that points to the logo that represents the Trust Mark.
       - |spid-icon| |cieid-icon|
     * - **exp**
       - REQUIRED. UNIX Timestamp with the JWT expiry time, coded as NumericDate as indicated at :rfc:`7519`
       - |spid-icon| |cieid-icon|
     * - **ref**
-      - String. URL that points to public web information, about this Trust Mark
+      - {{TO_VERIFY}}. String. URL that points to public web information, about this Trust Mark
       - |spid-icon| |cieid-icon|
     * - **organization_type**
       - REQUIRED. String. Specifies if the Entity belongs to the Italian Public Administration or the private sector (**public** or **private**)
       - |spid-icon| |cieid-icon|
     * - **id_code**
-      - JSON Object. It contains one or more ogranization identification codes. Available claims are: 
+      - {{TO_VERIFY}}. JSON Object. It contains one or more ogranization identification codes. Available claims are: 
         - **ipa_code**: REQUIRED WHEN is a public organization.
         - **aoo_code**: OPTIONAL.
         - **uo_code**: OPTIONAL. 
@@ -218,13 +218,13 @@ The claims defined inside the TMs are compliant with the elements defined in the
         - **fiscal_number**: REQUIRED WHEN is a private organization and *vat_number* is not available.
       - |spid-icon| |cieid-icon|
     * - **email**
-      - String. Institutional e-mail or PEC of the Organization.
+      - {{TO_VERIFY}}. String. Institutional e-mail or PEC of the Organization.
       - |spid-icon| |cieid-icon|
     * - **organization_name**
-      - String. The complete name of the service-supplying Entity.
+      - {{TO_VERIFY}}. String. The complete name of the service-supplying Entity.
       - |spid-icon| |cieid-icon|
 
-//TODO: Discrepanza, manca sa_profile
+{{TO_VERIFY, missing sa_profile in the italian version}}
 
 .. warning::
 

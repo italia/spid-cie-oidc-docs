@@ -154,7 +154,7 @@ Gli attributi definiti all'interno dei TM aderiscono a quanto definito all'inter
     :widths: 20 60 20
     :header-rows: 1
 
-    * - **Claim** //TODO:controllare opzionali
+    * - **Claim**
       - **Descrizione**
       - **Supportato da**
     * - **iss**
@@ -172,19 +172,19 @@ Gli attributi definiti all'interno dei TM aderiscono a quanto definito all'inter
       - OBBLIGATORIO. UNIX Timestamp con l'istante di generazione del JWT, codificato come NumericDate come indicato in :rfc:`7519`
       - |spid-icon| |cieid-icon|
     * - **logo_uri**
-      - String. Un URL che punta al logo rappresentante il Trust Mark.
+      - {{TO_VERIFY}}. String. Un URL che punta al logo rappresentante il Trust Mark.
       - |spid-icon| |cieid-icon|
     * - **exp**
       - OBBLIGATORIO. UNIX Timestamp con l'istante di scadenza del JWT, codificato come NumericDate come indicato in :rfc:`7519`
       - |spid-icon| |cieid-icon|
     * - **ref**
-      - String. URL che punta a informazioni presenti sul web relative a questo Trust Mark.
+      - {{TO_VERIFY}}. String. URL che punta a informazioni presenti sul web relative a questo Trust Mark.
       - |spid-icon| |cieid-icon|
     * - **organization_type**
       - OBBLIGATORIO. String. Specifica se l'ente appartiene alla pubblica amministrazione italiana o al settore privato (**public** o **private**)
       - |spid-icon| |cieid-icon|
     * - **id_code**
-      - Oggetto JSON. Contiene uno o più codici di identificazione dell'organizzazione. I claim disponibili sono:
+      - {{TO_VERIFY}}. Oggetto JSON. Contiene uno o più codici di identificazione dell'organizzazione. I claim disponibili sono:
         - **ipa_code**: OBBLIGATORIO QUANDO è organizzazione pubblica.
         - **aoo_code**: OPZIONALE.
         - **uo_code**: OPZIONALE.
@@ -192,10 +192,10 @@ Gli attributi definiti all'interno dei TM aderiscono a quanto definito all'inter
         - **fiscal_number**: OBBLIGATORIO QUANDO è organizzazione privata e non è presente *vat_number*.
       - |spid-icon| |cieid-icon|
     * - **email**
-      - String. Email istituzionale o PEC dell'organizzazione.
+      - {{TO_VERIFY}}. String. Email istituzionale o PEC dell'organizzazione.
       - |spid-icon| |cieid-icon|
     * - **organization_name**
-      - String. Il nome completo dell'entità che fornisce i servizi
+      - {{TO_VERIFY}}. String. Il nome completo dell'entità che fornisce i servizi
       - |spid-icon| |cieid-icon|
     * - **sa_profile**
       - OBBLIGATORIO QUANDO SA. String. Specifica il profilo dell’Aggregatore, **full** o **light**.

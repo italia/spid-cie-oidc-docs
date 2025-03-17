@@ -26,20 +26,20 @@ L'EC di un TA e di SA DEVE configurare un metadata di tipo **"federation_entity"
   * - **Claim**
     - **Descrizione**
     - **Supportato da**
-  * - **organization_name** //TODO: non presenti fino a contacts, capire se opzionali
-    - Vedi Sezione 4.8 di `OIDC-FED`_
+  * - **organization_name**
+    - {{TO_VERIFY}}. Vedi Sezione 4.8 di `OIDC-FED`_
     - |spid-icon| |cieid-icon|
   * - **homepage_uri**
-    - Vedi Sezione 4.8 di `OIDC-FED`_
+    - {{TO_VERIFY}}Vedi Sezione 4.8 di `OIDC-FED`_
     - |spid-icon| |cieid-icon|
   * - **policy_uri**
-    - Vedi Sezione 4.8 di `OIDC-FED`_
+    - {{TO_VERIFY}}Vedi Sezione 4.8 di `OIDC-FED`_
     - |spid-icon| |cieid-icon|
   * - **logo_uri**
-    - URL del logo dell'entità; DEVE essere in formato SVG. Vedi Sezione 4.8 di `OIDC-FED`_
+    - {{TO_VERIFY}}URL del logo dell'entità; DEVE essere in formato SVG. Vedi Sezione 4.8 di `OIDC-FED`_
     - |spid-icon| |cieid-icon|
   * - **contacts**
-    - PEC istituzionale dell'ente. Vedi Sezione 4.8 di `OIDC-FED`_
+    - {{TO_VERIFY}}PEC istituzionale dell'ente. Vedi Sezione 4.8 di `OIDC-FED`_
     - |spid-icon| |cieid-icon|
   * - **federation_fetch_endpoint**
     - OBBLIGATORIO. Vedi Sezione :ref:`Endpoint di Federazione <federation_endpoint>` e `OIDC-FED`_ Section 4.8

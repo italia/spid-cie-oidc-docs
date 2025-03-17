@@ -119,8 +119,8 @@ Il payload del JWE è un JWS contenente all'interno del suo payload i seguenti p
    * - **iss**
      - OBBLIGATORIO. String. URI che identifica univocamente l'OP.
      - |spid-icon| |cieid-icon|
-   * - **<attributo>** //TODO:OBBLIGATORIO o OPZIONALE? se non richiede nulla dovrebbe tornare il minimo
-     - I claim richiesti al momento dell'autenticazione.
+   * - **<attributo>**
+     - {{TO_VERIFY}}. I claim richiesti al momento dell'autenticazione.
      - |spid-icon| |cieid-icon|
 
 L'intestazione del JWS DEVE contenere i seguenti parametri:

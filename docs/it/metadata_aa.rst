@@ -98,7 +98,7 @@ Il Metadata di tipo **"oauth_authorization_server"** DEVE contenere almeno i seg
     - OBBLIGATORIO. Vedi :rfc:`8414#page-6`.
     - |spid-icon| |cieid-icon|
   * - **dpop_signing_alg_values_supported**
-    - OBBLIGATORIO. Vedi `OAuth-DPoP`_. Vedi signature :ref:`supported_algs`. //TODO: D_POP da tenere?
+    - OBBLIGATORIO. Vedi `OAuth-DPoP`_. Vedi signature :ref:`supported_algs`.
     - |spid-icon| |cieid-icon|
 
 

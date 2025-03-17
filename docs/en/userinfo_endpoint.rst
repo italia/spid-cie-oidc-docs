@@ -114,7 +114,7 @@ The JWE payload is a JWS containing the following parameters:
      - REQUIRED. String. URI that uniquely identifies the OP.
      - |spid-icon| |cieid-icon|
    * - **<user claims>**
-     - The requested user claims.
+     - {{TO_VERIFY}}. The requested user claims.
      - |spid-icon| |cieid-icon|
 
 The JWS header MUST contains the parameters below:
