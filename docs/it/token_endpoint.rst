@@ -90,7 +90,6 @@ Di seguito i claim che DEVONO essere inseriti nella *Token Request*.
 	 **exp**: OBBLIGATORIO. UNIX Timestamp con l'istante di scadenza del JWT, codificato come NumericDate come indicato in :rfc:`7519`
 	 
 	 **jti**: OBBLIGATORIO. Identificatore univoco per questa richiesta di autenticazione, generato dal client. Ad esempio in formato *uuid4*.
-   {{TO_VERIFY, keep here or move outside?}}
      - |spid-icon| |cieid-icon|
    * - **client_assertion_type**
      - OBBLIGATORIO. Deve assumere il seguente valore: |br|
@@ -226,7 +225,7 @@ Di seguito i claim che compongono l'Access Token.
    * - **jti** 
      - OBBLIGATORIO. DEVE essere una Stringa in formato *uuid4*. Identificatore unico dell'ID Token che il RP PUÒ utilizzare per prevenirne il riuso, rifiutando l'ID Token se già processato.
      - |spid-icon| |cieid-icon|
-{{TO_VERIFY, MISSING NONCE WHICH IS PRESENT IN THE ENGLISH VERSION}}
+{{TO_VERIFY, in this version compared to the english one: NONCE is missing}}
 
 ID Token
 ++++++++

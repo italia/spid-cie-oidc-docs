@@ -224,7 +224,6 @@ The claims defined inside the TMs are compliant with the elements defined in the
       - {{TO_VERIFY}}. String. The complete name of the service-supplying Entity.
       - |spid-icon| |cieid-icon|
 
-{{TO_VERIFY, missing sa_profile in the italian version}}
 
 .. warning::
 
