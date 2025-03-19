@@ -253,10 +253,10 @@ Connect, come descritti nelle relative tabelle definite dalle `Linee Guida UX SP
    * - **Claim**
      - **Descrizione**
      - **Supportato da**
-   * - **Errore**
+   * - **error**
      - Vedi :ref:`Codici di errori <codici_errore>`
      - |spid-icon| |cieid-icon|
-   * - **Descrizione dell'errore**
+   * - **error_description**
      - Descrizione più dettagliata dell'errore, finalizzata ad aiutare lo sviluppatore per eventuale debugging. Questo messaggio non è 
        destinato ad essere visualizzato all'utente (a tal fine si faccia riferimento alle `Linee Guida UX SPID`_)
      - |spid-icon| |cieid-icon|

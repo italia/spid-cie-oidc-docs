@@ -111,10 +111,10 @@ L'EC di un OP DEVE configurare un metadata di tipo **"openid_provider"** DEVE co
     - Vedi `OpenID.Discovery#OP_Metadata`_. Vedi signature :ref:`supported_algs`.
     - |spid-icon| |cieid-icon|
   * - **id_token_encryption_alg_values_supported**
-    - See `OpenID.Discovery#OP_Metadata`_. Vedi key encryption :ref:`supported_algs`.
+    - Vedi `OpenID.Discovery#OP_Metadata`_. Vedi key encryption :ref:`supported_algs`.
     - |cieid-icon|
   * - **id_token_encryption_enc_values_supported**
-    - See `OpenID.Discovery#OP_Metadata`_.  Vedi content encryption :ref:`supported_algs`.
+    - Vedi `OpenID.Discovery#OP_Metadata`_.  Vedi content encryption :ref:`supported_algs`.
     - |cieid-icon|
   * - **userinfo_signing_alg_values_supported**
     - Vedi `OpenID.Discovery#OP_Metadata`_. Vedi signature :ref:`supported_algs`.

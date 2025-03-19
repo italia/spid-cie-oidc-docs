@@ -15,10 +15,10 @@ In caso di errore durante le operazioni di federazione, le entità DEVONO rappre
    * - **Claim**
      - **Descrizione**
      - **Supportato da**
-   * - **Errore**
+   * - **error**
      - Vedi :ref:`Codici di errori <codici_errore_federation>`
      - |spid-icon| |cieid-icon|
-   * - **Descrizione dell'errore**
+   * - **error_description**
      - Descrizione più dettagliata dell'errore, finalizzata ad aiutare lo sviluppatore per eventuale debugging. 
      - |spid-icon| |cieid-icon|
 
