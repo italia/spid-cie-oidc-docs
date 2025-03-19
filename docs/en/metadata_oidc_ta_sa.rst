@@ -28,31 +28,31 @@ mandatory parameters:
     - **Description**
     - **Supported by**
   * - **organization_name**
-    - See `OIDC-FED`_ Section 4.8
+    - {{TO_VERIFY}}. See `OIDC-FED`_ Section 4.8
     - |spid-icon| |cieid-icon|
   * - **homepage_uri**
-    - See `OIDC-FED`_ Section 4.8
+    - {{TO_VERIFY}}. See `OIDC-FED`_ Section 4.8
     - |spid-icon| |cieid-icon|
   * - **policy_uri**
-    - See `OIDC-FED`_ Section 4.8
+    - {{TO_VERIFY}}. See `OIDC-FED`_ Section 4.8
     - |spid-icon| |cieid-icon|
   * - **logo_uri**
-    - URL of the entity's logo; it MUST be in SVG format. See `OIDC-FED`_ Section 4.8
+    - {{TO_VERIFY}}. URL of the entity's logo; it MUST be in SVG format. See `OIDC-FED`_ Section 4.8
     - |spid-icon| |cieid-icon|
   * - **contacts**
-    - Institutional certified email address (PEC) of the entity. See `OIDC-FED`_ Section 4.8
+    - {{TO_VERIFY}}. Institutional certified email address (PEC) of the entity. See `OIDC-FED`_ Section 4.8
     - |spid-icon| |cieid-icon|
   * - **federation_fetch_endpoint**
-    - See Section :ref:`Federation Endpoint <federation_endpoint>` and `OIDC-FED`_ Section 4.8.
+    - REQUIRED. See Section :ref:`Federation Endpoint <federation_endpoint>` and `OIDC-FED`_ Section 4.8.
     - |spid-icon| |cieid-icon|
   * - **federation_list_endpoint**
-    - See Section :ref:`Federation Endpoint <federation_endpoint>` and `OIDC-FED`_ Section 4.8.
+    - REQUIRED. See Section :ref:`Federation Endpoint <federation_endpoint>` and `OIDC-FED`_ Section 4.8.
     - |spid-icon| |cieid-icon|
   * - **federation_trust_mark_status_endpoint**
-    - See Section :ref:`Federation Endpoint <federation_endpoint>` and `OIDC-FED`_ Section 4.8.
+    - REQUIRED. See Section :ref:`Federation Endpoint <federation_endpoint>` and `OIDC-FED`_ Section 4.8.
     - |spid-icon| |cieid-icon|
   * - **federation_resolve_endpoint**
-    - See Section :ref:`Federation Endpoint <federation_endpoint>` and `OIDC-FED`_ Section 4.8.
+    - REQUIRED. See Section :ref:`Federation Endpoint <federation_endpoint>` and `OIDC-FED`_ Section 4.8.
     - |spid-icon| |cieid-icon|
 
 

@@ -74,35 +74,35 @@ Di seguito i claim che DEVONO essere inseriti nella *Token Request*.
      - **Descrizione**
      - **Supportato da**
    * - **client_id**
-     - Vedi `OpenID.Registration`_. DEVE essere valorizzato con un HTTPS URL che identifica univocamente il RP. 
+     - OBBLIGATORIO. Vedi `OpenID.Registration`_. DEVE essere valorizzato con un HTTPS URL che identifica univocamente il RP. 
      - |spid-icon| |cieid-icon|
    * - **client_assertion**
-     - JWT firmato con la chiave privata del Relying Party contenente i seguenti parametri: 
+     - OBBLIGATORIO. JWT firmato con la chiave privata del Relying Party contenente i seguenti parametri: 
 	 
-	 **iss**: DEVE corrispondere al valore *client_id* 
+	 **iss**: OBBLIGATORIO. DEVE corrispondere al valore *client_id* 
 	 
-	 **sub**: DEVE corrispondere al valore *iss* 
+	 **sub**: OBBLIGATORIO. DEVE corrispondere al valore *iss* 
 	 
-	 **aud**: URL del Token Endpoint dell'OP
+	 **aud**: OBBLIGATORIO. URL del Token Endpoint dell'OP
 	 
-	 **iat**: UNIX Timestamp con l'istante di generazione del JWT, codificato come NumericDate come indicato in :rfc:`7519`. 
+	 **iat**: OBBLIGATORIO. UNIX Timestamp con l'istante di generazione del JWT, codificato come NumericDate come indicato in :rfc:`7519`. 
 	 
-	 **exp**: UNIX Timestamp con l'istante di scadenza del JWT, codificato come NumericDate come indicato in :rfc:`7519`
+	 **exp**: OBBLIGATORIO. UNIX Timestamp con l'istante di scadenza del JWT, codificato come NumericDate come indicato in :rfc:`7519`
 	 
-	 **jti**: Identificatore univoco per questa richiesta di autenticazione, generato dal client. Ad esempio in formato *uuid4*.
+	 **jti**: OBBLIGATORIO. Identificatore univoco per questa richiesta di autenticazione, generato dal client. Ad esempio in formato *uuid4*.
      - |spid-icon| |cieid-icon|
    * - **client_assertion_type**
-     - Deve assumere il seguente valore: |br|
+     - OBBLIGATORIO. Deve assumere il seguente valore: |br|
        **urn:ietf:params:oauth:client-assertion-type:jwt-bearer**
      - |spid-icon| |cieid-icon|
    * - **code**
-     - Codice di autorizzazione restituito nell'Authentication response. Obbligatorio solo se **grant_type** è **authorization_code**
+     - OBBLIGATORIO QUANDO **grant_type** è **authorization_code**. Codice di autorizzazione restituito nell'Authentication response.
      - |spid-icon| |cieid-icon|
    * - **code_verifier**
-     - Codice di verifica del code_challenge. Obbligatorio solo se **grant_type** è **authorization_code** 
+     - OBBLIGATORIO QUANDO **grant_type** è **authorization_code**. Codice di verifica del code_challenge.
      - |spid-icon| |cieid-icon|
    * - **grant_type**
-     - Tipo di credenziale presentata dal RP per la richiesta corrente.
+     - OBBLIGATORIO. Tipo di credenziale presentata dal RP per la richiesta corrente.
        PUÒ assumere uno dei seguenti valori: 
 	 
 	   - **authorization_code**
@@ -110,7 +110,7 @@ Di seguito i claim che DEVONO essere inseriti nella *Token Request*.
 
      - |spid-icon| |cieid-icon|
    * - **refresh_token**
-     - Obbligatorio solo se **grant_type** è **refresh_token**   
+     - OBBLIGATORIO QUANDO **grant_type** è **refresh_token**.
      - |spid-icon| |cieid-icon|
  
  
@@ -150,19 +150,19 @@ La risposta DEVE contenere i seguenti claim.
      - **Descrizione**
      - **Supportato da**
    * - **access_token**
-     - L'Access Token, in formato JWT firmato, consente l'accesso allo UserInfo endpoint per ottenere gli attributi.
+     - OBBLIGATORIO. L'Access Token, in formato JWT firmato, consente l'accesso allo UserInfo endpoint per ottenere gli attributi.
      - |spid-icon| |cieid-icon|
    * - **token_type**
-     - Tipo di *Access Token* restituito. DEVE essere valorizzato sempre con **Bearer**
+     - OBBLIGATORIO. Tipo di *Access Token* restituito. DEVE essere valorizzato sempre con **Bearer**
      - |spid-icon| |cieid-icon|
    * - **refresh_token**
-     - Disponibile sono nel caso di `sessione lunga revocabile`_. Il *Refresh Token*, in formato JWT firmato, consente di chiamare nuovamente il Token Endpoint per ottenere un nuovo *Access Token* e un nuovo *ID Token*.
+     - OBBLIGATORIO QUANDO è disponibile una `sessione lunga revocabile`_. Il *Refresh Token*, in formato JWT firmato, consente di chiamare nuovamente il Token Endpoint per ottenere un nuovo *Access Token* e un nuovo *ID Token*.
      - |spid-icon| |cieid-icon|
    * - **expires_in**
-     - Scadenza dell'*Access Token* in secondi.
+     - OBBLIGATORIO. Scadenza dell'*Access Token* in secondi.
      - |spid-icon| |cieid-icon|
    * - **id_token**
-     - ID Token in formato JWT (vedi paragrafo successivo)
+     - OBBLIGATORIO. ID Token in formato JWT (vedi paragrafo successivo)
      - |spid-icon| |cieid-icon|
 
 Access Token
@@ -202,30 +202,30 @@ Di seguito i claim che compongono l'Access Token.
      - **Descrizione**
      - **Supportato da**
    * - **iss** 
-     - DEVE essere valorizzato con un HTTPS URL che identifica univocamente l'OP. Il client DEVE verificare che questo valore corrisponda all'OP chiamato.
+     - OBBLIGATORIO. DEVE essere valorizzato con un HTTPS URL che identifica univocamente l'OP. Il client DEVE verificare che questo valore corrisponda all'OP chiamato.
      - |spid-icon| |cieid-icon|
    * - **sub** 
-     - Vedi `OpenID.Core#SubjectIDTypes`_. DEVE essere di tipo *pairwise*.  
+     - OBBLIGATORIO. Vedi `OpenID.Core#SubjectIDTypes`_. DEVE essere di tipo *pairwise*.  
      - |spid-icon| |cieid-icon|
    * - **client_id** 
-     - DEVE essere valorizzato con un HTTPS URL che identifica univocamente il RP.  
+     - OBBLIGATORIO. DEVE essere valorizzato con un HTTPS URL che identifica univocamente il RP.  
      - |spid-icon| |cieid-icon|
    * - **aud** 
-     - DEVE contenere un elenco di Resource Server che consumano l'AT. DEVE contenere almeno lo *UserInfo Endpoint*.
+     - OBBLIGATORIO. DEVE contenere un elenco di Resource Server che consumano l'AT. DEVE contenere almeno lo *UserInfo Endpoint*.
      - |spid-icon| |cieid-icon|
    * - **scope** 
-     - L'OP DOVREBBE inserire il parametro *scope* come previsto in :rfc:`9068` Sezione 2.2.3. DEVE coincidere con il valore presente in fase di richiesta di autenticazione.
+     - OBBLIGATORIO. L'OP DOVREBBE inserire il parametro *scope* come previsto in :rfc:`9068` Sezione 2.2.3. DEVE coincidere con il valore presente in fase di richiesta di autenticazione.
      - |spid-icon| |cieid-icon|
    * - **iat** 
-     - UNIX Timestamp con l'istante di generazione del JWT, codificato come NumericDate come indicato in :rfc:`7519`
+     - OBBLIGATORIO. UNIX Timestamp con l'istante di generazione del JWT, codificato come NumericDate come indicato in :rfc:`7519`
      - |spid-icon| |cieid-icon|
    * - **exp**
-     - UNIX Timestamp con l'istante di scadenza del JWT, codificato come NumericDate come indicato in :rfc:`7519`
+     - OBBLIGATORIO. UNIX Timestamp con l'istante di scadenza del JWT, codificato come NumericDate come indicato in :rfc:`7519`
      - |spid-icon| |cieid-icon|
    * - **jti** 
-     - DEVE essere una Stringa in formato *uuid4*. Identificatore unico dell'ID Token che il RP PUÒ utilizzare per prevenirne il riuso, rifiutando l'ID Token se già processato.
+     - OBBLIGATORIO. DEVE essere una Stringa in formato *uuid4*. Identificatore unico dell'ID Token che il RP PUÒ utilizzare per prevenirne il riuso, rifiutando l'ID Token se già processato.
      - |spid-icon| |cieid-icon|
-
+{{TO_VERIFY, in this version compared to the english one: NONCE is missing}}
 
 ID Token
 ++++++++
@@ -270,34 +270,34 @@ Di seguito i claim disponibili nell'ID Token.
      - **Descrizione**
      - **Supportato da**
    * - **iss** 
-     - DEVE essere valorizzato con un HTTPS URL che identifica univocamente l'OP. Il client DEVE verificare che questo valore corrisponda all'OP chiamato.
+     - OBBLIGATORIO. DEVE essere valorizzato con un HTTPS URL che identifica univocamente l'OP. Il client DEVE verificare che questo valore corrisponda all'OP chiamato.
      - |spid-icon| |cieid-icon|
    * - **sub** 
-     - Vedi `OpenID.Core#SubjectIDTypes`_. DEVE essere di tipo *pairwise*.  
+     - OBBLIGATORIO. Vedi `OpenID.Core#SubjectIDTypes`_. DEVE essere di tipo *pairwise*.  
      - |spid-icon| |cieid-icon|
    * - **aud** 
-     - DEVE coincidere con il valore *client_id*. Il RP DEVE verificare che questo valore corrisponda al proprio client ID.
+     - OBBLIGATORIO. DEVE coincidere con il valore *client_id*. Il RP DEVE verificare che questo valore corrisponda al proprio client ID.
      - |spid-icon| |cieid-icon|
    * - **acr** 
-     - Livello di autenticazione effettivo. DEVE essere uguale o superiore a quello richiesto dal RP nella Authentication Request.
+     - OBBLIGATORIO. Livello di autenticazione effettivo. DEVE essere uguale o superiore a quello richiesto dal RP nella Authentication Request.
      - |spid-icon| |cieid-icon|
    * - **at_hash** 
-     - Vedi `OpenID.Core#CodeIDToken`_. Il suo valore è la codifica base64url della prima metà dell'hash calcolato sulla rappresentazione ASCII dell'*Access Token*, usando l'algoritmo di hashing indicato in **alg** nell'header dell'ID Token. Il client DEVE verificare che questo valore corrisponda applicando la medesima funzione all'*Access Token* restituito insieme all'ID Token.
+     - OBBLIGATORIO. Vedi `OpenID.Core#CodeIDToken`_. Il suo valore è la codifica base64url della prima metà dell'hash calcolato sulla rappresentazione ASCII dell'*Access Token*, usando l'algoritmo di hashing indicato in **alg** nell'header dell'ID Token. Il client DEVE verificare che questo valore corrisponda applicando la medesima funzione all'*Access Token* restituito insieme all'ID Token.
      - |spid-icon| |cieid-icon|
    * - **iat** 
-     - UNIX Timestamp con l'istante di generazione del JWT, codificato come NumericDate come indicato in :rfc:`7519`
+     - OBBLIGATORIO. UNIX Timestamp con l'istante di generazione del JWT, codificato come NumericDate come indicato in :rfc:`7519`
      - |spid-icon| |cieid-icon|
    * - **nbf** 
-     - UNIX Timestamp. Istante di inizio validità del JWT in formato NumericDate, come indicato in :rfc:`7519`. DEVE corrispondere con il valore di **iat**.
+     - OBBLIGATORIO. UNIX Timestamp. Istante di inizio validità del JWT in formato NumericDate, come indicato in :rfc:`7519`. DEVE corrispondere con il valore di **iat**.
      - |spid-icon| 
    * - **exp**
-     - UNIX Timestamp con l'istante di scadenza del JWT, codificato come NumericDate come indicato in :rfc:`7519`
+     - OBBLIGATORIO. UNIX Timestamp con l'istante di scadenza del JWT, codificato come NumericDate come indicato in :rfc:`7519`
      - |spid-icon| |cieid-icon|
    * - **jti** 
-     - DEVE essere una Stringa in formato *uuid4*. Identificatore unico dell'ID Token che il RP PUÒ utilizzare per prevenirne il riuso, rifiutando l'ID Token se già processato.
+     - OBBLIGATORIO. DEVE essere una Stringa in formato *uuid4*. Identificatore unico dell'ID Token che il RP PUÒ utilizzare per prevenirne il riuso, rifiutando l'ID Token se già processato.
      - |spid-icon| |cieid-icon|
    * - **nonce** 
-     - Vedi `OpenID.Core#AuthRequest`_. DEVE essere una stringa casuale di almeno 32 caratteri alfanumerici. Questo valore DEVE coincidere con quello inviato dal RP nella richiesta di autenticazione.
+     - OBBLIGATORIO. Vedi `OpenID.Core#AuthRequest`_. DEVE essere una stringa casuale di almeno 32 caratteri alfanumerici. Questo valore DEVE coincidere con quello inviato dal RP nella richiesta di autenticazione.
      - |spid-icon| |cieid-icon|
 
 
@@ -323,22 +323,22 @@ Il *Refresh Token* DEVE essere rilasciato in formato JWT, firmato, e contenere a
      - **Descrizione**
      - **Supportato da**
    * - **iss** 
-     - DEVE essere valorizzato con un HTTPS URL che identifica univocamente l'OP. Il RP DEVE verificare che questo valore corrisponda all'OP chiamato.
+     - OBBLIGATORIO. DEVE essere valorizzato con un HTTPS URL che identifica univocamente l'OP. Il RP DEVE verificare che questo valore corrisponda all'OP chiamato.
      - |spid-icon| |cieid-icon|
    * - **client_id** 
-     - DEVE coincidere con il valore *client_id*. Il RP DEVE verificare che questo valore corrisponda al proprio client ID.
+     - OBBLIGATORIO. DEVE coincidere con il valore *client_id*. Il RP DEVE verificare che questo valore corrisponda al proprio client ID.
      - |spid-icon| |cieid-icon|
    * - **aud** 
-     - DEVE contenere il *Token Endpoint* dell'OP.
+     - OBBLIGATORIO. DEVE contenere il *Token Endpoint* dell'OP.
      - |spid-icon| |cieid-icon|
    * - **iat** 
-     - UNIX Timestamp con l'istante di generazione del JWT, codificato come NumericDate come indicato in :rfc:`7519`
+     - OBBLIGATORIO. UNIX Timestamp con l'istante di generazione del JWT, codificato come NumericDate come indicato in :rfc:`7519`
      - |spid-icon| |cieid-icon|
    * - **exp**
-     - UNIX Timestamp con l'istante di scadenza del JWT, codificato come NumericDate come indicato in :rfc:`7519`
+     - OBBLIGATORIO. UNIX Timestamp con l'istante di scadenza del JWT, codificato come NumericDate come indicato in :rfc:`7519`
      - |spid-icon| |cieid-icon|
    * - **jti** 
-     - DEVE essere una Stringa in formato *uuid4*. Identificatore unico del *Refresh Token* che il RP PUÒ utilizzare per prevenirne il riuso, rifiutando il *Refresh Token* se già processato.
+     - OBBLIGATORIO. DEVE essere una Stringa in formato *uuid4*. Identificatore unico del *Refresh Token* che il RP PUÒ utilizzare per prevenirne il riuso, rifiutando il *Refresh Token* se già processato.
      - |spid-icon| |cieid-icon|
 
 .. admonition:: |cieid-icon|

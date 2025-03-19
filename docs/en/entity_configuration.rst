@@ -13,8 +13,7 @@ and regarding itself, published at the web endpoint **.well-known/openid-federat
 Entity Configuration Signature
 ++++++++++++++++++++++++++++++
 
-All the signature-check operations regarding the ESs, ECs and TMs,
-are carried out with the Federation public keys. For the supported algorithms refer to Section :ref:`Cryptografic Algorithm <supported_algs>`
+All the signature-check operations regarding the ESs, ECs and TMs, are carried out with the Federation public keys. For the supported algorithms refer to Section :ref:`Cryptografic Algorithm <supported_algs>`
 
 .. warning::
   The Federation keys SHOULD be different from the OIDC Core ones. The latter ones are contained in the OIDC Metadata. An EC contains both the Federation public keys and the OIDC Metadata. 
@@ -31,23 +30,23 @@ Entity Configuration - common claims
      - **Description**
      - **Supported by**
    * - **iss**
-     - String. Identifier of the issuing Entity.
+     - REQUIRED. String. Identifier of the issuing Entity.
      - |spid-icon| |cieid-icon|
    * - **sub**
-     - String. Identifier of the Entity to which it is referred.
+     - REQUIRED. String. Identifier of the Entity to which it is referred.
      - |spid-icon| |cieid-icon|
    * - **iat**
-     - UNIX Timestamp with the time of generation of the JWT, coded as NumericDate as indicated at :rfc:`7519`
+     - REQUIRED. UNIX Timestamp with the time of generation of the JWT, coded as NumericDate as indicated at :rfc:`7519`
      - |spid-icon| |cieid-icon| 
    * - **exp**
-     - UNIX Timestamp with the expiry time of the JWT, coded as NumericDate as indicated at :rfc:`7519`.
+     - REQUIRED. UNIX Timestamp with the expiry time of the JWT, coded as NumericDate as indicated at :rfc:`7519`.
      - |spid-icon| |cieid-icon|
    * - **jwks**
-     - A JSON Web Key Set (JWKS) :rfc:`7517` that represents the public part of the signing keys of the 
+     - REQUIRED. A JSON Web Key Set (JWKS) :rfc:`7517` that represents the public part of the signing keys of the 
        Entity at issue. Each JWK in the JWK set MUST have a key ID (claim kid).
      - |spid-icon| |cieid-icon|
    * - **metadata**
-     - JSON Object. Each key of the JSON Object represents an identifier of the type of
+     - REQUIRED. JSON Object. Each key of the JSON Object represents an identifier of the type of
        :ref:`Metadata<metadata_oidc>` and each value MUST be a JSON Object that represents
        the Metadata, according to the Metadata schema of that type.
 
@@ -82,12 +81,11 @@ the following claims:
      - **Description**
      - **Supported by**
    * - **authority_hints**
-     - Array if URLs. It contains a list of URLs of the superior Entities, such as TA or SA, 
+     - REQUIRED WHEN the member is not the TA. Array if URLs. It contains a list of URLs of the superior Entities, such as TA or SA, 
        that MAY issue an ES related to this subject.
      - |spid-icon| |cieid-icon|
    * - **trust_marks**
-     - A JSON Array containing the Trust Marks. See the Section :ref:`Trust Mark <Trust_Mark>`. 
-       Required for all the members except the Trust Anchor.
+     - REQUIRED WHEN the member is not the TA. A JSON Array containing the Trust Marks. See the Section :ref:`Trust Mark <Trust_Mark>`.
      - |spid-icon| |cieid-icon|
 
 .. seealso:: 
@@ -111,13 +109,13 @@ The ECs of a TA, other than the common claims of all the other members, contains
      - **Description**
      - **Supported by**
    * - **constraints**
-     - JSON Object that describes the Trust Chain bounds and MUST contain the attribute **max_path_length**.
+     - REQUIRED. JSON Object that describes the Trust Chain bounds and MUST contain the attribute **max_path_length**.
        It represents the maximum number of SAs between a Leaf and the TA.
        
        It MAY contain also **allowed_leaf_entity_types**, that restricts what types of Leaf Entities that MAY appear beneath the entity described in this Entity Statement
      - |spid-icon| |cieid-icon|
    * - **trust_mark_issuers**
-     - JSON Array that indicates which Federation authorities are considered trustworthy
+     - REQUIRED. JSON Array that indicates which Federation authorities are considered trustworthy
        for issuing specific TMs, assigned with their unique identifiers.
      - |spid-icon| |cieid-icon|
 

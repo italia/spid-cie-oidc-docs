@@ -111,13 +111,13 @@ In aggiunta ai claim dei profili **public** e **private**, il profilo **oauth_re
     * - **Claim**
       - **Descrizione**
     * - **policy_uri**
-      - URL dove è disponibile la privacy policy dell'AA. 
+      - OBBLIGATORIO. URL dove è disponibile la privacy policy dell'AA. 
     * - **tos_uri**
-      - URL dove è disponibile la info policy dell'AA. 
+      - OBBLIGATORIO. URL dove è disponibile la info policy dell'AA. 
     * - **claims**
-      - Lista di JSON Object che definiscono gli attributi dell’utente richiesti dall'AA. Esempio: |br| ``{"https://attributes.eid.gov.it/fiscal_number":{"essential":true},`` |br| ``"email":{"essential":true},}``
+      - OBBLIGATORIO. Lista di JSON Object che definiscono gli attributi dell’utente richiesti dall'AA. Esempio: |br| ``{"https://attributes.eid.gov.it/fiscal_number":{"essential":true},`` |br| ``"email":{"essential":true},}``
     * - **service_documentation**
-      - URL dove è disponibile il documento OAS3 che descrive il funzionamento dei servizi dell'AA.
+      - OBBLIGATORIO. URL dove è disponibile il documento OAS3 che descrive il funzionamento dei servizi dell'AA.
 
 Validazione dei Trust Mark
 --------------------------
@@ -158,47 +158,47 @@ Gli attributi definiti all'interno dei TM aderiscono a quanto definito all'inter
       - **Descrizione**
       - **Supportato da**
     * - **iss**
-      - String. URL che identifica univocamente l'Autorità che lo ha emesso.
+      - OBBLIGATORIO. String. URL che identifica univocamente l'Autorità che lo ha emesso.
       - |spid-icon| |cieid-icon|
     * - **sub**
-      - String. URL che identifica univocamente il soggetto per il quale il Trust Mark è stato emesso.
+      - OBBLIGATORIO. String. URL che identifica univocamente il soggetto per il quale il Trust Mark è stato emesso.
       - |spid-icon| |cieid-icon|
     * - **id**
-      - String. Identificativo univoco del Trust Mark. È un URL con la seguente struttura: |br|
+      - OBBLIGATORIO. String. Identificativo univoco del Trust Mark. È un URL con la seguente struttura: |br|
         **<TA domain>/<entity_type>/<trustmark_profile>/** |br|
         es. non normativo: ``https://registry.interno.gov.it/openid_relying_party/public/``
       - |spid-icon| |cieid-icon|
     * - **iat**
-      - UNIX Timestamp con l'istante di generazione del JWT, codificato come NumericDate come indicato in :rfc:`7519`
+      - OBBLIGATORIO. UNIX Timestamp con l'istante di generazione del JWT, codificato come NumericDate come indicato in :rfc:`7519`
       - |spid-icon| |cieid-icon|
     * - **logo_uri**
-      - String. Un URL che punta al logo rappresentante il Trust Mark.
+      - {{TO_VERIFY}}. String. Un URL che punta al logo rappresentante il Trust Mark.
       - |spid-icon| |cieid-icon|
     * - **exp**
-      - UNIX Timestamp con l'istante di scadenza del JWT, codificato come NumericDate come indicato in :rfc:`7519`
+      - OBBLIGATORIO. UNIX Timestamp con l'istante di scadenza del JWT, codificato come NumericDate come indicato in :rfc:`7519`
       - |spid-icon| |cieid-icon|
     * - **ref**
-      - String. URL che punta a informazioni presenti sul web relative a questo Trust Mark.
+      - {{TO_VERIFY}}. String. URL che punta a informazioni presenti sul web relative a questo Trust Mark.
       - |spid-icon| |cieid-icon|
     * - **organization_type**
-      - String. Specifica se l'ente appartiene alla pubblica amministrazione italiana o al settore privato (**public** o **private**)
+      - OBBLIGATORIO. String. Specifica se l'ente appartiene alla pubblica amministrazione italiana o al settore privato (**public** o **private**)
       - |spid-icon| |cieid-icon|
     * - **id_code**
-      - Oggetto JSON. Contiene uno o più codici di identificazione dell'organizzazione. I claim disponibili sono:
-        - **ipa_code**: OBBLIGATORIO nel caso di organizzazione pubblica.
+      - {{TO_VERIFY}}. Oggetto JSON. Contiene uno o più codici di identificazione dell'organizzazione. I claim disponibili sono:
+        - **ipa_code**: OBBLIGATORIO QUANDO è organizzazione pubblica.
         - **aoo_code**: OPZIONALE.
         - **uo_code**: OPZIONALE.
-        - **vat_number**: OBBLIGATORIO per organizzazione privata se non presente *fiscal_number*.
-        - **fiscal_number**: OBBLIGATORIO per organizzazione privata se non presente *vat_number*.
+        - **vat_number**: OBBLIGATORIO QUANDO è organizzazione privata e non è presente *fiscal_number*.
+        - **fiscal_number**: OBBLIGATORIO QUANDO è organizzazione privata e non è presente *vat_number*.
       - |spid-icon| |cieid-icon|
     * - **email**
-      - String. Email istituzionale o PEC dell'organizzazione.
+      - {{TO_VERIFY}}. String. Email istituzionale o PEC dell'organizzazione.
       - |spid-icon| |cieid-icon|
     * - **organization_name**
-      - String. Il nome completo dell'entità che fornisce i servizi
+      - {{TO_VERIFY}}. String. Il nome completo dell'entità che fornisce i servizi
       - |spid-icon| |cieid-icon|
     * - **sa_profile**
-      - String. RICHIESTO per SA. Specifica il profilo dell’Aggregatore, **full** o **light**.
+      - OBBLIGATORIO QUANDO SA. String. Specifica il profilo dell’Aggregatore, **full** o **light**.
       - |spid-icon| |cieid-icon|
 
 .. warning:: 

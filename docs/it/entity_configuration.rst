@@ -32,22 +32,22 @@ Entity Configuration - claim comuni
      - **Descrizione**
      - **Supportato da**
    * - **iss**
-     - String. Identificativo dell'entità che lo emette. 
+     - OBBLIGATORIO. String. Identificativo dell'entità che lo emette. 
      - |spid-icon| |cieid-icon|
    * - **sub**
-     - String. Identificativo del soggetto a cui è riferito. 
+     - OBBLIGATORIO. String. Identificativo del soggetto a cui è riferito. 
      - |spid-icon| |cieid-icon|
    * - **iat**
-     - UNIX Timestamp con l'istante di generazione del JWT, codificato come NumericDate come indicato in :rfc:`7519`
+     - OBBLIGATORIO. UNIX Timestamp con l'istante di generazione del JWT, codificato come NumericDate come indicato in :rfc:`7519`
      - |spid-icon| |cieid-icon| 
    * - **exp**
-     - UNIX Timestamp con l'istante di scadenza del JWT, codificato come NumericDate come indicato in :rfc:`7519`.
+     - OBBLIGATORIO. UNIX Timestamp con l'istante di scadenza del JWT, codificato come NumericDate come indicato in :rfc:`7519`.
      - |spid-icon| |cieid-icon|
    * - **jwks**
-     - Un JSON Web Key Set (JWKS) :rfc:`7517` che rappresenta la parte pubblica delle chiavi di firma dell'entità interessata. Ogni JWK nel set JWK DEVE avere un ID di chiave (claim kid).
+     - OBBLIGATORIO. Un JSON Web Key Set (JWKS) :rfc:`7517` che rappresenta la parte pubblica delle chiavi di firma dell'entità interessata. Ogni JWK nel set JWK DEVE avere un ID di chiave (claim kid).
      - |spid-icon| |cieid-icon|
    * - **metadata**
-     - JSON Object. Ogni chiave dell'oggetto JSON rappresenta un identificatore del tipo 
+     - OBBLIGATORIO. JSON Object. Ogni chiave dell'oggetto JSON rappresenta un identificatore del tipo 
        di :ref:`Metadata<metadata_oidc>` e ogni valore DEVE essere un oggetto JSON 
        che rappresenta i Metadata secondo lo schema di Metadata di quel tipo. 
 
@@ -79,11 +79,10 @@ Gli EC delle entità Foglia e intermediari, in aggiunta ai claim precedentemente
      - **Descrizione**
      - **Supportato da**
    * - **authority_hints**
-     - Array di URL. Contiene una lista di URL delle entità superiori, quali TA o SA che POSSONO emettere un ES relativo a questo soggetto. 
+     - OBBLIGATORIO QUANDO il partecipante non è il Trust Anchor. Array di URL. Contiene una lista di URL delle entità superiori, quali TA o SA che POSSONO emettere un ES relativo a questo soggetto. 
      - |spid-icon| |cieid-icon|
    * - **trust_marks**
-     - Un array JSON contenente i Trust Mark. Vedere la Sezione :ref:`Trust Mark <Trust_Mark>`. 
-       Obbligatorio per tutti i partecipanti fatta esclusione del Trust Anchor. 
+     - OBBLIGATORIO QUANDO il partecipante non è il Trust Anchor. Un array JSON contenente i Trust Mark. Vedere la Sezione :ref:`Trust Mark <Trust_Mark>`.
      - |spid-icon| |cieid-icon|
 
 .. seealso:: 
@@ -107,11 +106,11 @@ Gli EC di un TA, in aggiunta ai claim comuni a tutti i partecipanti, contengono 
      - **Descrizione**
      - **Supportato da**
    * - **constraints**
-     - JSON Object che descrive un insieme di vincoli della Trust Chain e che DEVE contenere l'attributo **max_path_length**. Rappresenta il numero massimo di SA tra una Foglia e il TA.
+     - OBBLIGATORIO. JSON Object che descrive un insieme di vincoli della Trust Chain e che DEVE contenere l'attributo **max_path_length**. Rappresenta il numero massimo di SA tra una Foglia e il TA.
        PUÒ anche contenere il claim **allowed_leaf_entity_types**, che restringe i tipi di Entità riconoscobili come suoi discendenti.
      - |spid-icon| |cieid-icon|
    * - **trust_mark_issuers**
-     - JSON Array che indica quali autorità sono considerate attendibili nella Federazione per l'emissione di specifici TM, questi assegnati mediante il proprio identificativo univoco.
+     - OBBLIGATORIO. JSON Array che indica quali autorità sono considerate attendibili nella Federazione per l'emissione di specifici TM, questi assegnati mediante il proprio identificativo univoco.
      - |spid-icon| |cieid-icon|
 
 

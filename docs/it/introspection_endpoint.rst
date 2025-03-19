@@ -1,4 +1,4 @@
-.. include:: ../common/common_definitions.rst
+OBBLIGATORIO. OBBLIGATORIO. .. include:: ../common/common_definitions.rst
 
 .. _introspection_endpoint:
 
@@ -47,17 +47,17 @@ La richiesta all'Introspection Endpoint consiste nell'invio del token su cui si 
      - **Descrizione**
      - **Supportato da**
    * - **client_assertion**
-     - JWT firmato con la chiave privata del Relying Party contenente gli stessi parametri documentati per le richieste al 
+     - OBBLIGATORIO. JWT firmato con la chiave privata del Relying Party contenente gli stessi parametri documentati per le richieste al 
        Token Endpoint. L'OP deve verificare la validità di tutti i campi presenti nel JWT, nonché la validità della sua firma in relazione al parametro **client_id**.
      - |spid-icon| |cieid-icon|
    * - **client_assertion_type**
-     - String. Valori ammessi: **urn:ietf:params:oauth:clientassertion-type:jwt-bearer**
+     - OBBLIGATORIO. String. Valori ammessi: **urn:ietf:params:oauth:clientassertion-type:jwt-bearer**
      - |spid-icon| |cieid-icon|
    * - **client_id**
-     - URI che identifica univocamente il RP. L'OP deve verificare che il client_id sia noto all'interno della Federazione.
+     - OBBLIGATORIO. URI che identifica univocamente il RP. L'OP deve verificare che il client_id sia noto all'interno della Federazione.
      - |spid-icon| |cieid-icon|
    * - **token**
-     - Il token su cui il RP vuole ottenere informazioni.
+     - OBBLIGATORIO. Il token su cui il RP vuole ottenere informazioni.
      - |spid-icon| |cieid-icon|
 
 
@@ -82,25 +82,25 @@ L'Introspection Endpoint risponde con un oggetto JSON definito come segue.
      - **Descrizione**
      - **Supportato da**
    * - **active**
-     - Valore booleano che indica la validità del token. Se il token è scaduto, è revocato o non è mai stato emesso per il client_id chiamante, l'Introspection Endpoint deve restituire false.
+     - OBBLIGATORIO. Valore booleano che indica la validità del token. Se il token è scaduto, è revocato o non è mai stato emesso per il client_id chiamante, l'Introspection Endpoint deve restituire false.
      -  |spid-icon| |cieid-icon|
    * - **scope**
-     - Lista degli scope richiesti al momento dell’Authorization Request.
+     - OPZIONALE. Lista degli scope richiesti al momento dell’Authorization Request.
      -  |spid-icon|
    * - **exp**
-     - Scadenza del token.
+     - OPZIONALE. Scadenza del token.
      -  |spid-icon|
    * - **sub**
-     - Identificatore del soggetto, coincidente con quello già rilasciato nell’ID Token. Il RP deve verificare che il valore coincida con quello contenuto nell’ID Token.
+     - OPZIONALE. Identificatore del soggetto, coincidente con quello già rilasciato nell’ID Token. Il RP deve verificare che il valore coincida con quello contenuto nell’ID Token.
      -  |spid-icon|
    * - **client_id**
-     - URI che identifica univocamente il RP come da Registro SPID. Il RP deve verificare che il valore coincida con il proprio client_id.
+     - OPZIONALE. URI che identifica univocamente il RP come da Registro SPID. Il RP deve verificare che il valore coincida con il proprio client_id.
      -  |spid-icon|
    * - **iss**
-     - Identificatore dell’OP che lo contraddistingue univocamente nella federazione nel formato Uniform Resource Locator (URL). Il client è tenuto a verificare che questo valore corrisponda all’OP chiamato.
+     - OPZIONALE. Identificatore dell’OP che lo contraddistingue univocamente nella federazione nel formato Uniform Resource Locator (URL). Il client è tenuto a verificare che questo valore corrisponda all’OP chiamato.
      -  |spid-icon|
    * - **aud**
-     - Contiene il client ID.	Il client è tenuto a verificare che questo valore corrisponda al proprio client ID.
+     - OPZIONALE. Contiene il client ID.	Il client è tenuto a verificare che questo valore corrisponda al proprio client ID.
      -  |spid-icon|
 
 Codici di errore

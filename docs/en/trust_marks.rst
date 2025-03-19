@@ -131,14 +131,14 @@ identifies the AA and adds the following mandatory claims:
     * - **Claim**
       - **Description**
     * - **policy_uri**
-      - URL where the AA privacy policy is available.
+      - REQUIRED. URL where the AA privacy policy is available.
     * - **tos_uri**
-      - URL where the AA info policy is available.
+      - REQUIRED. URL where the AA info policy is available.
     * - **claims**
-      - List of JSON Objects that define the user's attributes, required by the AA. 
+      - REQUIRED. List of JSON Objects that define the user's attributes, required by the AA. 
         Example: |br| ``{"https://attributes.eid.gov.it/fiscal_number":{"essential":true},`` |br| ``"email":{"essential":true},}``
     * - **service_documentation**
-      - URL where the OAS3 document, that describes how the AA services works, is available.
+      - REQUIRED. URL where the OAS3 document, that describes how the AA services works, is available.
 
 
 Trust Mark Validation
@@ -184,45 +184,46 @@ The claims defined inside the TMs are compliant with the elements defined in the
       - **Description**
       - **Supported by**
     * - **iss**
-      - String. URL that uniquely identifies its issuing Authority.
+      - REQUIRED. String. URL that uniquely identifies its issuing Authority.
       - |spid-icon| |cieid-icon|
     * - **sub**
-      - String. URL that uniquely identifies the subject for which the Trust Mark has been issued.
+      - REQUIRED. String. URL that uniquely identifies the subject for which the Trust Mark has been issued.
       - |spid-icon| |cieid-icon|
     * - **id**
-      - String. Unique identifier of the Trust Mark. It is an URL with the following structure: |br|
+      - REQUIRED. String. Unique identifier of the Trust Mark. It is an URL with the following structure: |br|
         **<TA domain>/<entity_type>/<trustmark_profile>/** |br|
         non-normative example: ``https://registry.interno.gov.it/openid_relying_party/public/``
       - |spid-icon| |cieid-icon|
     * - **iat**
-      - UNIX Timestamp with the JWT issuance time, coded as NumericDate as indicated at :rfc:`7519`
+      - REQUIRED. UNIX Timestamp with the JWT issuance time, coded as NumericDate as indicated at :rfc:`7519`
       - |spid-icon| |cieid-icon|
     * - **logo_uri**
-      - String. An URL that points to the logo that represents the Trust Mark.
+      - {{TO_VERIFY}}. String. An URL that points to the logo that represents the Trust Mark.
       - |spid-icon| |cieid-icon|
     * - **exp**
-      - UNIX Timestamp with the JWT expiry time, coded as NumericDate as indicated at :rfc:`7519`
+      - REQUIRED. UNIX Timestamp with the JWT expiry time, coded as NumericDate as indicated at :rfc:`7519`
       - |spid-icon| |cieid-icon|
     * - **ref**
-      - String. URL that points to public web information, about this Trust Mark
+      - {{TO_VERIFY}}. String. URL that points to public web information, about this Trust Mark
       - |spid-icon| |cieid-icon|
     * - **organization_type**
-      - String. Specifies if the Entity belongs to the Italian Public Administration or the private sector (**public** or **private**)
+      - REQUIRED. String. Specifies if the Entity belongs to the Italian Public Administration or the private sector (**public** or **private**)
       - |spid-icon| |cieid-icon|
     * - **id_code**
-      - JSON Object. It contains one or more ogranization identification codes. Available claims are: 
-        - **ipa_code**: REQUIRED for public organization.
+      - {{TO_VERIFY}}. JSON Object. It contains one or more ogranization identification codes. Available claims are: 
+        - **ipa_code**: REQUIRED WHEN is a public organization.
         - **aoo_code**: OPTIONAL.
         - **uo_code**: OPTIONAL. 
-        - **vat_number**: REQUIRED for private organization only if *fiscal_number* is not available.
-        - **fiscal_number**: REQUIRED for private organization only if *vat_number* is not available.
+        - **vat_number**: REQUIRED WHEN is a private organization and *fiscal_number* is not available.
+        - **fiscal_number**: REQUIRED WHEN is a private organization and *vat_number* is not available.
       - |spid-icon| |cieid-icon|
     * - **email**
-      - String. Institutional e-mail or PEC of the Organization.
+      - {{TO_VERIFY}}. String. Institutional e-mail or PEC of the Organization.
       - |spid-icon| |cieid-icon|
     * - **organization_name**
-      - String. The complete name of the service-supplying Entity.
+      - {{TO_VERIFY}}. String. The complete name of the service-supplying Entity.
       - |spid-icon| |cieid-icon|
+
 
 .. warning::
 

@@ -75,16 +75,16 @@ The JWE header MUST contain the parameter below:
      - **Descrizione**
      - **Supportato da**
    * - **alg**
-     - String. See :ref:`supported_algs`..
+     - REQUIRED. String. See :ref:`supported_algs`..
      - |spid-icon| |cieid-icon|
    * - **kid**
-     - See :rfc:`7638#section_3`. 
+     - REQUIRED. See :rfc:`7638#section_3`. 
      - |spid-icon| |cieid-icon|
    * - **enc**
-     - String. See :ref:`supported_algs`..
+     - REQUIRED. String. See :ref:`supported_algs`..
      - |spid-icon| |cieid-icon|
    * - **cty**
-     - String. It MUST contain the value "JWT".
+     - REQUIRED. String. It MUST contain the value "JWT".
      - |spid-icon| |cieid-icon|
 
 The JWE payload is a JWS containing the following parameters:
@@ -97,24 +97,24 @@ The JWE payload is a JWS containing the following parameters:
      - **Description**
      - **Supported by**
    * - **sub**
-     - String. Subject identifier, equal to the identifier already released in the ID Token.
+     - REQUIRED. String. Subject identifier, equal to the identifier already released in the ID Token.
        The RP MUST check that the value is equal to the one, contained in the ID Token.
      - |spid-icon| |cieid-icon|
    * - **iat**
-     - UNIX Timestamp with the time of the JWT issuance, coded as NumericDate as indicated in :rfc:`7519`. 
+     - REQUIRED. UNIX Timestamp with the time of the JWT issuance, coded as NumericDate as indicated in :rfc:`7519`. 
      - |spid-icon| |cieid-icon|
    * - **exp**
-     - UNIX Timestamp with the expiry time of the JWT, coded as NumericDate as indicated in :rfc:`7519`. 
+     - REQUIRED. UNIX Timestamp with the expiry time of the JWT, coded as NumericDate as indicated in :rfc:`7519`. 
      - |spid-icon| |cieid-icon|
    * - **aud**
-     - String. Subject Identifier of the response recipient (RP).
+     - REQUIRED. String. Subject Identifier of the response recipient (RP).
        The RP MUST check that the value is equal to its own client_id.
      - |spid-icon| |cieid-icon|
    * - **iss**
-     - String. URI that uniquely identifies the OP.
+     - REQUIRED. String. URI that uniquely identifies the OP.
      - |spid-icon| |cieid-icon|
    * - **<user claims>**
-     - The requested user claims.
+     - {{TO_VERIFY}}. The requested user claims.
      - |spid-icon| |cieid-icon|
 
 The JWS header MUST contains the parameters below:
@@ -127,13 +127,13 @@ The JWS header MUST contains the parameters below:
      - **Descrizione**
      - **Supportato da**
    * - **alg**
-     - String. See :ref:`supported_algs`..
+     - REQUIRED. String. See :ref:`supported_algs`..
      - |spid-icon| |cieid-icon|
    * - **kid**
-     - See :rfc:`7638#section_3`. 
+     - REQUIRED. See :rfc:`7638#section_3`. 
      - |spid-icon| |cieid-icon|
    * - **cty**
-     - String. It MUST contain the value "JWT".
+     - REQUIRED. String. It MUST contain the value "JWT".
      - |spid-icon| |cieid-icon|
 
 Error codes

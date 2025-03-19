@@ -16,10 +16,10 @@ In caso di errore durante le operazioni di federazione, le entità DEVONO rappre
      - **Descrizione**
      - **Supportato da**
    * - **Errore**
-     - Vedi :ref:`Codici di errori <codici_errore_federation>`
+     - OBBLIGATORIO. Vedi :ref:`Codici di errori <codici_errore_federation>`
      - |spid-icon| |cieid-icon|
    * - **Descrizione dell'errore**
-     - Descrizione più dettagliata dell'errore, finalizzata ad aiutare lo sviluppatore per eventuale debugging. 
+     - OBBLIGATORIO. Descrizione più dettagliata dell'errore, finalizzata ad aiutare lo sviluppatore per eventuale debugging. 
      - |spid-icon| |cieid-icon|
 
 
