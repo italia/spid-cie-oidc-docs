@@ -422,7 +422,7 @@ Where the $JWT payload is:
 
  {
      "id": "https://registry.interno.gov.it/openid_relying_party/public/",
-     "iss": "https://sa.esempio.it/",
+     "iss": "https://registry.interno.gov.it/",
      "sub": "https://rp.esempio.it/",
      "iat": 1579621160,
      "organization_type": "public",
