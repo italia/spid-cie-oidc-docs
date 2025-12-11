@@ -1040,7 +1040,7 @@ The following example shows a Metadata policy in the Entity Statement provided b
 .. code-block:: python
 
     "metadata_policy": {
-        "openid_relying_party": {
+        "openid_provider": {
             "jwks": {
                 "value": {
                     "keys": [
@@ -1059,6 +1059,7 @@ The following example shows a Metadata policy in the Entity Statement provided b
                             "n": "....."
                         }
                     ]
+                }
             },
             "revocation_endpoint_auth_methods_supported": {
                 "subset_of": [
